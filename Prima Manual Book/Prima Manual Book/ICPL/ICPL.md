@@ -2,8 +2,6 @@ ICPL atau Price List adalah fitur untuk mengelola dan menyimpan informasi harga 
 
 ICPL menjadi dasar perhitungan harga pada setiap transaksi. Sistem hanya dapat mengisi harga otomatis pada Sales Order maupun Purchase Order jika price list sudah dikonfigurasi dengan benar.
 
-Price list
-
 ### Manfaat ICPL
 
 1. Menstandarkan harga produk secara terpusat sehingga user tidak perlu menginput harga secara manual pada setiap transaksi.
