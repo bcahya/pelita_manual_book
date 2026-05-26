@@ -1,0 +1,248 @@
+{
+  "main": {
+    "id": "c08e4cf15e76aaf8",
+    "type": "split",
+    "children": [
+      {
+        "id": "4efdbf5acb773f6e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "069fb2af657edcc7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Prima Manual Book/Cost Adjustment/Adjustment.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Adjustment"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "32866ae93a2dc2ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "1baff0baa470205b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b205d49b5e27cc7a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Penjelajah berkas"
+            }
+          },
+          {
+            "id": "a5e881fb001744f4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": true,
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Penelusuran"
+            }
+          },
+          {
+            "id": "0484f2b6a2c6335b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Penanda"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "78bdfa099edf1b2e",
+    "type": "split",
+    "children": [
+      {
+        "id": "c6816a8e8146ef25",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e1d30319cb62a02",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Prima Manual Book/Cost Adjustment/Adjustment.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlink pada Adjustment"
+            }
+          },
+          {
+            "id": "cb1871f008fc3eb3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02 - Konfigurasi Sebelum Menentukan Product Varian.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Tautan keluar dari 02 - Konfigurasi Sebelum Menentukan Product Varian"
+            }
+          },
+          {
+            "id": "868a37dd135e0a8d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tag"
+            }
+          },
+          {
+            "id": "266970232e88125f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Semua properti"
+            }
+          },
+          {
+            "id": "c2ba814f2670ec5d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02 - Konfigurasi Sebelum Menentukan Product Varian.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Kerangka dari 02 - Konfigurasi Sebelum Menentukan Product Varian"
+            }
+          },
+          {
+            "id": "99e9886b87bf6dad",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "switcher:Buka peralih cepat": false,
+      "graph:Buka tampilan grafik": false,
+      "canvas:Buat kanvas baru": false,
+      "daily-notes:Buka catatan hari ini": false,
+      "templates:Masukkan template": false,
+      "command-palette:Buka palet perintah": false,
+      "bases:Buat basis baru": false
+    }
+  },
+  "active": "069fb2af657edcc7",
+  "lastOpenFiles": [
+    "Prima Manual Book/Master Production Schedule/MPS.md",
+    "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Asset.md",
+    "Prima Manual Book/Purchase Price Contract/Price Contract.md",
+    "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset",
+    "Prima Manual Book/POP, BoM dan MO/Production Order Planning Subcon (CMT).md",
+    "Prima Manual Book/Purchase Price Contract",
+    "Pasted image 20260525162052.png",
+    "Pasted image 20260525162027.png",
+    "Pasted image 20260525161948.png",
+    "Pasted image 20260525161938.png",
+    "Pasted image 20260525161924.png",
+    "Prima Manual Book/POP, BoM dan MO/Production Order Planning (POP).md",
+    "Pasted image 20260525161744.png",
+    "Pasted image 20260525161735.png",
+    "Pasted image 20260525161716.png",
+    "Pasted image 20260525161645.png",
+    "Pasted image 20260525161631.png",
+    "Prima Manual Book/POP, BoM dan MO/Manufacturing Order (MO).md",
+    "Prima Manual Book/POP, BoM dan MO/Bill of Material (BoM).md",
+    "Prima Manual Book/Routing/Routing.md",
+    "Prima Manual Book/Product Varian/5. Regenerate Product Varian.md",
+    "Prima Manual Book/Product Varian/4. Generate Product Varian.md",
+    "Prima Manual Book/Product Varian/3. Product Template.md",
+    "Prima Manual Book/Product Varian/2. Konfigurasi Sebelum Menentukan Product Varian.md",
+    "Prima Manual Book/Product Varian/1. Fitur Product Varian.md",
+    "Prima Manual Book/Request Distribution Order/RDO.md",
+    "Prima Manual Book/Item Type Product/Implementasi Item Type di Product.md",
+    "Prima Manual Book/Item Type Product/Item Type Product.md",
+    "Prima Manual Book/Item Type Product/Product Segment.md",
+    "Prima Manual Book/Cost Adjustment/Adjustment.md",
+    "Prima Manual Book/Cost of Production/Costing.md",
+    "Prima Manual Book/ICPL/ICPL.md",
+    "Prima Manual Book/Cost Adjustment",
+    "Prima Manual Book/Cost of Production/Tanpa judul",
+    "Prima Manual Book/Cost of Production",
+    "Prima Manual Book/ICPL/Tanpa judul",
+    "Prima Manual Book/Unit of Measure Conversion/2. UoM Conversion.md",
+    "Prima Manual Book/ICPL",
+    "Prima Manual Book/Request Distribution Order",
+    "Prima Manual Book/Master Production Schedule",
+    "Prima Manual Book/POP, BoM dan MO",
+    "Prima Manual Book/Unit of Measure Conversion/5. Implementasi di Movement.md",
+    "Prima Manual Book/Unit of Measure Conversion/4. Implementasi di Purchase Order.md",
+    "Prima Manual Book/Unit of Measure Conversion/3. Implementasi di Requisition.md",
+    "Prima Manual Book/Unit of Measure Conversion/1. Unit of Measure (UoM).md",
+    "Pasted image 20260522171505.png[[.md",
+    "Tanpa judul.canvas"
+  ]
+}

@@ -1,0 +1,58 @@
+Production Order Planning (POP) adalah dasar perencanaan produksi yang digunakan untuk menentukan produk yang akan diproduksi.
+
+Dalam satu POP, user dapat memproduksi beberapa produk atau beberapa line sekaligus. POP mengacu pada:
+
+- Master data produk
+- Routing
+
+Karena itu, routing harus dikonfigurasi terlebih dahulu sebelum membuat POP.
+### Fungsi Production Order Planning
+
+Dalam satu POP line, sistem dapat menghasilkan beberapa Manufacturing Order tergantung jumlah dan jenis produk.
+
+POP juga berfungsi untuk:
+- Menghitung kebutuhan bahan baku
+- Menyiapkan inventory movement
+- Menjadi dasar penarikan material dari gudang ke area produksi
+
+### Langkah Production Order Planning di Sistem
+
+1. Buka menu **SIS Production Order Planning**
+2. Masuk ke Tab **Line**
+3. Input:
+	- Produk yang akan diproduksi
+	- Quantity produksi
+	- BoM yang digunakan
+4. Jalankan proses **SIS Generate POP BoM**. Sistem akan menampilkan struktur BoM produk tersebut.
+	![[Pasted image 20260525161601.png]]
+5. Klik **SIS Generate MO**. Sistem akan membuat Manufacturing Order secara otomatis.
+	![[Pasted image 20260525161613.png]]
+6. Masuk ke menu **Manufacturing Order**. Setelah proses Generate MO selesai, sistem otomatis membuat dokumen berikut:
+	- Back Order
+	- Movement
+	- Requisition
+	- Production
+	- Child
+	- Production Report Quantity
+	
+	Dokumen **Requisition** hanya muncul jika stok material tidak mencukupi.
+	![[Pasted image 20260525161645.png]]
+7. Lakukan proses requisition untuk komponen raw material yang dibutuhkan. Alur proses:
+	- Requisition Complete
+	- Purchase Order Complete
+	- Material Receipt
+8. Klik Tab **Movement** dan lakukan movement sesuai urutan proses
+9. Setelah movement selesai dan stok tersedia, jalankan proses produksi pada tab **Production Report Quantity**:
+	- Isi quantity produksi
+	- Jika terdapat produk defect, isi quantity defect
+	- Centang field **Defect** untuk produk defect
+	
+	Produk defect akan diproses movement manual ke locator sesuai konfigurasi pada BoM.
+	![[Pasted image 20260525161716.png]]
+10. Setelah quantity ditentukan, lakukan **Complete Document MO**. Sistem akan menjalankan proses production secara otomatis di belakang layar dan mengkonsumsi:
+	- Raw Material
+	- Semi Finished Goods
+	
+	![[Pasted image 20260525161735.png]]
+	
+	![[Pasted image 20260525161744.png]]
