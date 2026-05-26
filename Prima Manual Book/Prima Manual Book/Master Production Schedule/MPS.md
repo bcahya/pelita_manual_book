@@ -15,6 +15,7 @@ Sebelum menjalankan proses Master Production Schedule, pastikan beberapa hal ber
 2. Product yang akan dijadwalkan produksinya
 3. Date schedule sebagai acuan tanggal rencana produksi
 
+![[Pasted image 20260526134941.png]]
 #### Konfigurasi Document MPS
 
 Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS terlebih dahulu.
@@ -24,23 +25,35 @@ Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS t
 	- POP 1 -> Non System 01
 	- POP 2 -> System 01
 
+![[Pasted image 20260526135006.png]]
+
 #### Langkah Proses Master Production Schedule
 
 1. Buka menu **Generate MPS**
 2. Pilih organisasi yang akan digunakan
-3. Pilih file CSV sebagai sumber data produksi
+3. Pilih file **CSV** sebagai sumber data produksi
 4. Tentukan nilai Distribute (%) untuk mengatur distribusi produksi antara:
 	- Non System 01
 	- System 01
 	Sisa persentase dari distribusi Non System 01 akan otomatis dialokasikan ke System 01.
+	![[Pasted image 20260526135515.png]]
+	
 5. Jalankan proses **Generate MPS**.
 6. Setelah proses berhasil, sistem akan membentuk dokumen MPS berdasarkan:
 	- Tanggal produksi
 	- Quantity produk
 	- Mapping data pada file CSV
+
+	![[Pasted image 20260526135613.png]]
+	
 7. Setelah dokumen MPS di-Complete, sistem otomatis membentuk: POP 1 dan POP 2
+
+	![[Pasted image 20260526135706.png]]
+
+	![[Pasted image 20260526135729.png]]
+	
 8. Document Date pada POP yang terbentuk akan mengikuti Date Schedule yang telah ditentukan sebelumnya.
-9. Dokumen POP yang terbentuk memiliki status Draft dan dapat di-Complete secara manual sesuai kebutuhan
+9. Dokumen POP yang terbentuk memiliki status **Draft** dan dapat di-Complete secara manual sesuai kebutuhan
 
 Proses MPS akan menghasilkan dua dokumen Production Order Planning (POP):
 

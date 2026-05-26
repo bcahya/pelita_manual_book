@@ -17,11 +17,19 @@ ICPL menjadi dasar harga yang digunakan dalam Purchase Price Contract.
 
 Ikuti langkah berikut untuk membuat Purchase Price Contract:
 1. Buka menu **SIS Purchase Price Contract**
-2. Masuk ke tab SIS Purchase Price Contract **Line**
-3. Input **Nama Produk**
-4. Input **Harga Produk**
-5. Input **Quantity Produk**
-6. Klik **complete**
+2. Input nama **Business Partner**
+3. Input **Valid From** dan **Valid To** - tentukan periode waktu kontrak berjalan
+
+	![[Pasted image 20260526141350.png]]
+	
+4. Masuk ke tab **SIS Purchase Price Contract Line**
+5. Input **Nama Produk**
+6. Input **Harga Produk**
+7. Input **Quantity Produk**
+	
+	![[Pasted image 20260526141717.png]]
+	
+8. Klik **complete**
 
 Setelah dokumen di-complete, sistem akan menjalankan beberapa proses otomatis:
 - Sistem membuat **ICPL Update** dengan status **Complete** pada ICPL yang sudah di-setting di Business Partner.

@@ -1,4 +1,5 @@
 Cost Adjustment adalah proses penyesuaian nilai valuasi produk atau barang yang sudah tercatat di sistem. Penyesuaian ini dilakukan karena:
+
 - Perbedaan harga
 - Kesalahan pencatatan sebelumnya
 
@@ -24,7 +25,7 @@ Ikuti langkah berikut untuk melakukan Cost Adjustment:
 5. Masuk ke tab **Cost Adjustment Line**
 6. Pilih produk yang akan disesuaikan
 7. Input nilai harga baru pada field **New Cost Price**
-8. Input **Charge** jika diperlukan
+8. Input **Charge**
 	![[Pasted image 20260525160247.png]]
 9. Klik **save**
 10. Klik **complete**

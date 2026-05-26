@@ -24,8 +24,12 @@ Pada konfigurasi Document Type RDO, terdapat beberapa field utama yang wajib dii
 
 1. Lakukan assign produk melalui fitur **Generate Product** pada menu **Product Access**.
 2. Buka menu Request Distribution Order (**RDO**).
+	![[Pasted image 20260526141955.png]]
+	
 3. Jalankan proses **Generate RDO Line** untuk menampilkan daftar produk yang sudah dikonfigurasi.
 4. Pilih produk yang akan didistribusikan sesuai kebutuhan.
+	![[Pasted image 20260526142032.png]]
+	
 5. Validasi quantity distribusi.
 6. Klik **Complete Document** untuk menyelesaikan proses RDO.
 Setelah dokumen di-complete, sistem akan otomatis membuat dokumen:

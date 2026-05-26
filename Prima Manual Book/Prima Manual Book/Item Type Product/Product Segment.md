@@ -31,15 +31,15 @@ Dalam satu segment, sistem dapat menampung beberapa tipe sekaligus. Jika perusah
 Sistem akan mengelompokkan kode artikel sesuai kategori yang ditentukan sehingga penyusunan kode artikel menjadi lebih rapi, konsisten, dan mudah dikelola.
 ### Langkah Pengaturan Product Segment Type
 
-1. Buka Menu SIS Product Segment Type
-2. Klik New
+1. Buka menu **SIS Product Segment Type**
+2. Klik **New**
 3. Isi Field
-	- Search Key
-	- Name -> Nama Segment Type
+	- **Search Key**
+	- **Name** -> Nama Segment Type
 	
 	![[Pasted image 20260523120403.png]]
 
-4. Klik Save
+1. Klik **Save**
 
 Setelah pengelompokan segment berdasarkan kategori selesai dilakukan, lanjutkan konfigurasi pada menu **Product Segment**.
 ### Langkah Pengaturan Product Segment di Sistem
@@ -51,7 +51,7 @@ Setelah pengelompokan segment berdasarkan kategori selesai dilakukan, lanjutkan 
 	- **Name** -> Nama Segment
 	
 	Contoh 10 untuk Barang Jadi dan 59 untuk Brand Polo ![[Pasted image 20260522135201.png]]
-1. Klik **Save**
+4. Klik **Save**
 
 Setelah Product Segment selesai dikonfigurasi, langkah berikutnya adalah mengatur **Item Type**. Item Type berfungsi untuk menyusun kode artikel berdasarkan segment yang sudah dibuat.
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Charge Stock Opname/Stock Opname Charging.md",
+                "file": "Request Distribution Order/RDO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stock Opname Charging"
+              "title": "RDO"
             }
           }
         ]
@@ -196,23 +196,43 @@
   },
   "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
-    "Pasted image 20260526114828.png",
-    "Pasted image 20260526114713.png",
+    "Pasted image 20260526142032.png",
+    "Pasted image 20260526141955.png",
+    "Purchase Price Contract/Price Contract.md",
+    "Pasted image 20260526141717.png",
+    "Pasted image 20260526141350.png",
+    "Routing/Routing.md",
+    "Request Distribution Order/RDO.md",
+    "Product Varian/5. Regenerate Product Varian.md",
+    "Product Varian/4. Generate Product Varian.md",
+    "Product Varian/3. Product Template.md",
+    "Product Varian/2. Konfigurasi Sebelum Menentukan Product Varian.md",
+    "Product Varian/1. Fitur Product Varian.md",
+    "POP, BoM dan MO/Production Order Planning Subcon (CMT).md",
+    "POP, BoM dan MO/Production Order Planning (POP).md",
+    "POP, BoM dan MO/Manufacturing Order (MO).md",
+    "POP, BoM dan MO/Bill of Material (BoM).md",
+    "Master Production Schedule/MPS.md",
+    "Manajemen Penyusutan dan Disposal Asset/Asset.md",
+    "Item Type Product/Product Segment.md",
     "ICPL/ICPL.md",
+    "Item Type Product/Item Type Product.md",
+    "Item Type Product/Implementasi Item Type di Product.md",
+    "Cost of Production/Costing.md",
     "Cost Adjustment/Adjustment.md",
     "Charge Stock Opname/Stock Opname Charging.md",
+    "Pasted image 20260526135729.png",
+    "Pasted image 20260526135717.png",
+    "Pasted image 20260526135706.png",
+    "Pasted image 20260526135613.png",
+    "Pasted image 20260526135515.png",
+    "Pasted image 20260526135506.png",
+    "Pasted image 20260526135006.png",
+    "Unit of Measure Conversion/2. UoM Conversion.md",
+    "Unit of Measure Conversion/3. Implementasi di Requisition.md",
+    "Unit of Measure Conversion/4. Implementasi di Purchase Order.md",
+    "Unit of Measure Conversion/1. Unit of Measure (UoM).md",
     "Charge Stock Opname",
-    "Tanpa judul.md",
-    "Cost Adjustment/Tanpa judul",
-    "Cuplikan layar 2026-05-20 114625.png",
-    "Requisition_2026-05-19_193101.png",
-    "Requisition_2026-05-19_193101 1.png",
-    "Requisition_2026-05-19.png",
-    "Requisition_2026-05-19 1.png",
-    "Pasted image 20260525162052.png",
-    "Pasted image 20260525162027.png",
-    "Pasted image 20260525161948.png",
-    "Pasted image 20260525161938.png",
-    "Pasted image 20260522171505.png[[.md"
+    "Cost Adjustment/Tanpa judul"
   ]
 }

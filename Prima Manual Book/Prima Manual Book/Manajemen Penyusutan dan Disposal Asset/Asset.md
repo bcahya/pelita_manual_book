@@ -4,6 +4,9 @@ Penyusutan aset adalah proses mengalokasikan biaya aset secara sistematis selama
 
 Sebelum melakukan penyusutan, pastikan konfigurasi berikut telah selesai:
 1. Product Category — Gunakan costing method **Average PO** dan costing level **Batch/Lot**.
+
+	![[Pasted image 20260526133825.png]]
+	
 2. Attribute Set — Pilih **Lot Control** dengan pengaturan berikut:
 	a.	Mandatory Type: **Always**
 	b.	Attribute Set Type: Material Management System
@@ -11,6 +14,9 @@ Sebelum melakukan penyusutan, pastikan konfigurasi berikut telah selesai:
 	-	C_OrderLine – Sales Order Line
 	-	M_InOutLine – Shipment/Receipt Line
 	d.	Un-check field **Sales Transaction**
+
+	![[Pasted image 20260526133959.png]]
+
 3. Master Data Asset Type — Tentukan klasifikasi aset, metode penyusutan, dan GL Document Type.
 4. Set Product — Atur Product Type ke **Item**.
 5. Attribute Set — Sesuaikan dengan kategori aset.
@@ -30,6 +36,9 @@ Setelah proses penerimaan selesai, sistem otomatis membentuk data aset berdasark
 
 Lakukan penyusutan aset melalui langkah-langkah berikut:
 1. Akses menu **SIS Asset**.
+	
+	![[Pasted image 20260526134248.png]]
+	
 2. Generate aset — Data awal akan berstatus Draft.
 3. Evaluasi aset — Lakukan evaluasi terhadap aset yang berstatus Draft.
 4. Konfirmasi aset — Validasi aset sebelum digunakan.
@@ -55,15 +64,19 @@ Disposal adalah proses penghapusan aset dari catatan perusahaan secara permanen.
 Disposal aset dapat dilakukan melalui dua mekanisme:
 
 1. Sales order
-	a.	Buka menu Sales Order, pastikan Document Type menggunakan Standard Order.
-	b.	Pilih aset berdasarkan ASI yang sesuai.
+	a.	Buka menu **Sales Order,** pastikan Document Type menggunakan **Standard Order**.
+	b.	Pilih aset berdasarkan **ASI** yang sesuai.
+		![[Pasted image 20260526134647.png]]
+		
 	c.	Proses Shipment, lalu buat Invoice Customer (AR).
 2. Physical Inventory (Internal Use)
-	a.	Buka menu Inventory Decrease/Increase.
-	b.	Pilih Document Type Internal Use Inventory.
-	c.	Masuk ke Internal Use Line.
-	d.	Pilih aset yang akan didisposal berdasarkan ASI.
-	e.	Tentukan Charge sebagai beban disposal
+	a.	Buka menu **Inventory Decrease/Increase**.
+	b.	Pilih Document Type **Internal Use Inventory**.
+	c.	Masuk ke **Internal Use Line**.
+	d.	Pilih aset yang akan didisposal berdasarkan **ASI**.
+		![[Pasted image 20260526134840.png]]
+		
+	e.	Tentukan **Charge** sebagai beban disposal
 
 Setelah proses disposal selesai — baik melalui Sales Order maupun Internal Use — sistem otomatis memperbarui status disposal pada data aset dan men-generate jurnal disposal.
 
