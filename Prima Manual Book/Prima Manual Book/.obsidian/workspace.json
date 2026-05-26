@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Request Distribution Order/RDO.md",
+                "file": "Unit of Measure Conversion/2. UoM Conversion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RDO"
+              "title": "2. UoM Conversion"
             }
           }
         ]
@@ -196,13 +196,14 @@
   },
   "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
+    "Unit of Measure Conversion/1. Unit of Measure (UoM).md",
+    "Routing/Routing.md",
+    "Request Distribution Order/RDO.md",
     "Pasted image 20260526142032.png",
     "Pasted image 20260526141955.png",
     "Purchase Price Contract/Price Contract.md",
     "Pasted image 20260526141717.png",
     "Pasted image 20260526141350.png",
-    "Routing/Routing.md",
-    "Request Distribution Order/RDO.md",
     "Product Varian/5. Regenerate Product Varian.md",
     "Product Varian/4. Generate Product Varian.md",
     "Product Varian/3. Product Template.md",
@@ -227,11 +228,9 @@
     "Pasted image 20260526135613.png",
     "Pasted image 20260526135515.png",
     "Pasted image 20260526135506.png",
-    "Pasted image 20260526135006.png",
     "Unit of Measure Conversion/2. UoM Conversion.md",
     "Unit of Measure Conversion/3. Implementasi di Requisition.md",
     "Unit of Measure Conversion/4. Implementasi di Purchase Order.md",
-    "Unit of Measure Conversion/1. Unit of Measure (UoM).md",
     "Charge Stock Opname",
     "Cost Adjustment/Tanpa judul"
   ]
