@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unit of Measure Conversion/2. UoM Conversion.md",
+                "file": "Item Type Product/Product Segment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. UoM Conversion"
+              "title": "Product Segment"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 267.5
   },
   "right": {
     "id": "b322e54367580c7f",
@@ -196,14 +196,41 @@
   },
   "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
+    "quarkdown-output/preview-main-3293899820/media/Product-Segment@1414550017.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Product-Segment@1414550017.png",
+    "Item Type Product/Item Type Product.md",
+    "Item Type Product/Product Segment.md",
+    "Item Type Product/Implementasi Item Type di Product.md",
+    "quarkdown-output/preview-main-3293899820/media/ItemType@-598539623.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/ItemType@-598539623.png",
+    "quarkdown-output/preview-main-3293899820/media/Segment-Type@-913081890.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Segment-Type@-913081890.png",
+    "ItemType.png",
+    "quarkdown-output/preview-main-3293899820/media/ProdukVarian@-319053978.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/ProdukVarian@-319053978.png",
+    "ProdukVarian.png",
+    "quarkdown-output/preview-main-3293899820/media/ItemVarian@-815213620.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/ItemVarian@-815213620.png",
+    "ItemVarian.png",
+    "ItemTypeLine.png",
+    "SIS_Item_Type.png",
+    "quarkdown-output/preview-main-3293899820/media/ItemTypeLine@1614048237.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Contoh_Item_Type@588218492.png.checksum",
+    "main.md",
+    "quarkdown-output/preview-main-3293899820/lib/highlightjs-copy.checksum",
+    "quarkdown-output/preview-main-3293899820/lib/highlightjs-copy/highlightjs-copy.min.js",
+    "quarkdown-output/preview-main-3293899820/lib/highlightjs-copy/highlightjs-copy.min.css",
+    "quarkdown-output/preview-main-3293899820/lib/highlightjs-copy",
+    "Cuplikan.md",
+    "ITP/Implementasi Item Type di Product.md",
+    "Unit of Measure Conversion/4. Implementasi di Purchase Order.md",
+    "Unit of Measure Conversion/5. Implementasi di Movement.md",
+    "Unit of Measure Conversion/3. Implementasi di Requisition.md",
     "Unit of Measure Conversion/1. Unit of Measure (UoM).md",
+    "Unit of Measure Conversion/2. UoM Conversion.md",
     "Routing/Routing.md",
     "Request Distribution Order/RDO.md",
-    "Pasted image 20260526142032.png",
-    "Pasted image 20260526141955.png",
     "Purchase Price Contract/Price Contract.md",
-    "Pasted image 20260526141717.png",
-    "Pasted image 20260526141350.png",
     "Product Varian/5. Regenerate Product Varian.md",
     "Product Varian/4. Generate Product Varian.md",
     "Product Varian/3. Product Template.md",
@@ -214,24 +241,6 @@
     "POP, BoM dan MO/Manufacturing Order (MO).md",
     "POP, BoM dan MO/Bill of Material (BoM).md",
     "Master Production Schedule/MPS.md",
-    "Manajemen Penyusutan dan Disposal Asset/Asset.md",
-    "Item Type Product/Product Segment.md",
-    "ICPL/ICPL.md",
-    "Item Type Product/Item Type Product.md",
-    "Item Type Product/Implementasi Item Type di Product.md",
-    "Cost of Production/Costing.md",
-    "Cost Adjustment/Adjustment.md",
-    "Charge Stock Opname/Stock Opname Charging.md",
-    "Pasted image 20260526135729.png",
-    "Pasted image 20260526135717.png",
-    "Pasted image 20260526135706.png",
-    "Pasted image 20260526135613.png",
-    "Pasted image 20260526135515.png",
-    "Pasted image 20260526135506.png",
-    "Unit of Measure Conversion/2. UoM Conversion.md",
-    "Unit of Measure Conversion/3. Implementasi di Requisition.md",
-    "Unit of Measure Conversion/4. Implementasi di Purchase Order.md",
-    "Charge Stock Opname",
-    "Cost Adjustment/Tanpa judul"
+    "Manajemen Penyusutan dan Disposal Asset/Asset.md"
   ]
 }
