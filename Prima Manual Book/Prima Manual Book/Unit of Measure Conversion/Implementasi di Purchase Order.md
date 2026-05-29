@@ -1,0 +1,40 @@
+# Implementasi di Purchase Order
+
+Setelah requisition dikonfirmasi, user membuat Purchase Order melalui proses "Generate PO From Requisition". Sistem membaca requisition line yang memenuhi kriteria tertentu — seperti Warehouse dan Business Partner — lalu membuat Purchase Order secara otomatis.
+
+Sistem mengambil data berikut dari dokumen Requisition ke header Purchase Order:
+
+- Organisation
+- Date Promised
+- Price List
+- Warehouse
+- Business Partner
+
+![Purchase](../Purchase_Order.png) {#Figure11}
+
+## Purchase Order Line
+
+Dalam Purchase Order, sistem menggunakan satuan pembelian yang telah disepakati dengan vendor, yang biasanya berbeda dari Base UoM. Sistem mencatat:
+
+- Quantity dalam satuan UoM Conversion (misalnya karton)
+- Harga per satuan UoM Conversion (misalnya Rp100.000/karton)
+- Konversi ke Base UoM secara otomatis di latar belakang
+
+Hal ini penting karena vendor umumnya memberikan harga dalam satuan karton atau dus, bukan per pcs.
+
+![Purchase Order Line](../PO_Line.png) {#Figure12}
+
+Berdasarkan data konversi tersebut, sistem menghitung unit cost dalam Base UoM. Contoh: harga Rp120.000 per karton dengan isi 10 pcs akan dikonversi menjadi Rp12.000 per pcs untuk keperluan valuasi inventori.
+
+Berikut field pada Purchase Order line yang perlu dipahami:
+
+- Qty Entered — Menampilkan jumlah produk dalam satuan UoM Conversion. Nilai ini otomatis menyesuaikan rate UoM Conversion.
+- PO Quantity — Menampilkan jumlah produk dalam satuan Base UoM. Nilai ini otomatis menyesuaikan rate UoM Conversion.
+- Unit Price — Menampilkan harga produk per satuan Base UoM, mengikuti price yang telah dikonfigurasi di level Business Partner.
+- Price — Menampilkan harga produk per satuan UoM Conversion, dihitung berdasarkan rate UoM Conversion.
+
+## Penentuan Price
+
+Price pada Purchase Order ditentukan berdasarkan vendor atau business partner yang dikontrak. Konfigurasi price dilakukan di level Business Partner, karena setiap business partner dapat memiliki price list yang berbeda.
+
+Jika produk tidak memiliki vendor yang dikontrak, sistem menggunakan Price List yang telah dikonfigurasi sebelumnya. Penentuan dasar harga yang digunakan mengikuti kebijakan perusahaan.

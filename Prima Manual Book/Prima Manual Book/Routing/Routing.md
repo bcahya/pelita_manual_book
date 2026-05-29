@@ -1,12 +1,14 @@
+# Routing
+
 Routing adalah konfigurasi yang menentukan alur proses suatu produk, mulai dari bahan baku, tahapan produksi, hingga menjadi produk jadi. Routing juga mengatur lokasi setiap proses dijalankan dan lokasi penyimpanan hasil proses tersebut.
 
 Tanpa routing, proses produksi tetap dapat berjalan, tetapi perpindahan stok tidak tercatat secara otomatis dan alurnya menjadi tidak terstruktur. Kondisi ini dapat menyebabkan bahan baku tersimpan di lokasi yang salah dan hasil produksi tidak tercatat dengan benar.
-### Pengaturan Warehouse & Locator
+## Pengaturan Warehouse & Locator
 
 Sebelum membuat routing, pastikan konfigurasi **Warehouse** dan **Locator** sudah sesuai.
 
 Warehouse merepresentasikan area penyimpanan fisik produk atau gudang. Di dalam warehouse terdapat struktur lokasi yang disebut Locator untuk menentukan posisi penyimpanan secara lebih detail, seperti rak, baris, atau bin.
-#### Langkah Pengaturan Warehouse & Locator
+### Langkah Pengaturan Warehouse & Locator
 
 1. Buka Menu **Warehouse & Locator**
 2. Klik **New**
@@ -31,7 +33,7 @@ Di dalam warehouse terdapat line bernama Locator. Locator harus dibuat terlebih 
 5. Klik **Save**
 
 Jika satu produk diproduksi di lebih dari satu gudang, misalnya Jakarta dan Surabaya, buat konfigurasi BoM (Bill of Material) terpisah sesuai lokasi produksi masing-masing. Routing nantinya akan mengikuti konfigurasi BoM tersebut.
-### Jenis Action Routing
+## Jenis Action Routing
  
 Routing memiliki beberapa jenis action yang digunakan untuk menentukan alur perpindahan barang.
 
@@ -47,7 +49,7 @@ Routing memiliki beberapa jenis action yang digunakan untuk menentukan alur perp
 	Menggunakan action **Pull From**, dimulai dari proses pembelian atau proses sebelumnya hingga ke area pre-production.
 - Finished Goods
 	Menggunakan action **Push To** dengan tujuan gudang induk atau gudang penjualan.
-### Jenis Operation Routing
+## Jenis Operation Routing
 
 Routing memiliki tiga jenis operation:
 
@@ -57,16 +59,18 @@ Routing memiliki tiga jenis operation:
 | Take from stock Trigger another rules | Mengambil dari stok, lalu menjalankan aturan lain jika stok tidak mencukupi |
 | Trigger another rules                 | Langsung menjalankan aturan lain tanpa pengecekan stok                      |
 
-### Langkah Pengaturan Routing di Sistem
+## Langkah Pengaturan Routing di Sistem
 
 1. Buka Menu **SIS Routing**
 2. Klik **New**
 3. Isi Field **Search Key** dan **Nama** pada Header
-4. Ssimpan header terlebih dahulu sebelum menambahkan line routing
+4. Simpan header terlebih dahulu sebelum menambahkan line routing
 5. Klik tab **Line**
 6. Isi setiap field sesuai konfigurasi berikut:
 
-	![[Pasted image 20260523134516.png]]
+![Routing Line](../Routing_Line.png) {#Figure64}
+
+	Berikut field yang harus dikonfigurasi:
 
 | Field          | Keterangan                                      |
 | -------------- | ----------------------------------------------- |
@@ -80,28 +84,32 @@ Routing memiliki tiga jenis operation:
 7. Ulangi untuk setiap tahapan proses dan pastikan **Line No** berurutan
 8. Simpan setiap line sebelum menambahkan ke lin berikutnya
 9. Klik **Save**
-### Implementasi Routing
+## Implementasi Routing
 
 Setiap jenis produk, seperti Raw Material, Semi Finished Goods, dan Finished Goods, umumnya memiliki routing yang berbeda karena proses produksinya dilakukan di warehouse yang berbeda.
 
 Sebelum menjalankan produksi, lakukan konfigurasi routing pada level Product Category. Pastikan routing setiap produk sudah sesuai dengan alur produksi yang berlaku.
 
 Satu routing dapat digunakan untuk beberapa produk selama proses produksi dan perpindahan barang menggunakan warehouse serta locator yang sama.
-#### Langkah Implementasi Routing di Product Category
+### Langkah Implementasi Routing di Product Category
 
 1. Buka Menu **Product Category**
-	![[Pasted image 20260523140723.png]]
-2. Pada Tab **Routing**, lakukan konfigurasi sesuai dengan alur produksi. 
+
+	![Routing Product Category](../Routing_ProductCategory.png) {#Figure65}
+
+2. Pada Tab **Routing**, lakukan konfigurasi sesuai dengan alur produksi.
 3. Klik **Save**
 
 Routing juga dapat dikonfigurasi langsung pada level produk. Berikut langkah implementasi routing di Product:
 
 1. Buka Menu **Product**
-	![[Pasted image 20260523140848.png]]
+
+	![Routing Product](../Routing_Product.png) {#Figure66}
+
 2. Pada Tab **Routing**, konfigurasi sesuai dengan alur produksi. 
 3. Klik **Save**
 
-#### Manufacturing Order
+### Manufacturing Order
 
 Manufacturing Order adalah dokumen perintah produksi yang terhubung langsung dengan routing.
 

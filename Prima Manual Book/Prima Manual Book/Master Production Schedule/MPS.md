@@ -1,3 +1,5 @@
+# Master Production Schedule
+
 Master Production Schedule (MPS) adalah rencana produksi utama yang menentukan produk apa yang akan diproduksi, kapan diproduksi dan berapa jumlah yang diproduksi.
 
 Master Production Schedule (MPS) ini menjadi penghubung antara forecast permintaan, sales order, kapasitas produksi dan kebutuhan material. 
@@ -8,15 +10,15 @@ Fungsi adanya MPS di sistem iDempiere adalah untuk:
 3. Mengontrol kapasitas produksi
 4. Menghindari overstock maupun kekurangan stock
 
-#### Konfigurasi Sebelum Proses MPS
+## Konfigurasi Sebelum Proses MPS
 
 Sebelum menjalankan proses Master Production Schedule, pastikan beberapa hal berikut sudah disiapkan:
 1. Template CSV sebagai sumber data produksi
 2. Product yang akan dijadwalkan produksinya
 3. Date schedule sebagai acuan tanggal rencana produksi
 
-![[Pasted image 20260526134941.png]]
-#### Konfigurasi Document MPS
+	![Konfigurasi MP](../MPS_1.png) {#Figure25}
+## Konfigurasi Document MPS
 
 Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS terlebih dahulu.
 1. Nama Document Type MPS
@@ -25,9 +27,9 @@ Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS t
 	- POP 1 -> Non System 01
 	- POP 2 -> System 01
 
-![[Pasted image 20260526135006.png]]
+	![Document MPS](../Doc_MPS.png) {#Figure26}
 
-#### Langkah Proses Master Production Schedule
+## Langkah Proses Master Production Schedule
 
 1. Buka menu **Generate MPS**
 2. Pilih organisasi yang akan digunakan
@@ -36,7 +38,8 @@ Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS t
 	- Non System 01
 	- System 01
 	Sisa persentase dari distribusi Non System 01 akan otomatis dialokasikan ke System 01.
-	![[Pasted image 20260526135515.png]]
+	
+	![Generate MPS](../SIS_MPS.png) {#Figure27}
 	
 5. Jalankan proses **Generate MPS**.
 6. Setelah proses berhasil, sistem akan membentuk dokumen MPS berdasarkan:
@@ -44,14 +47,16 @@ Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS t
 	- Quantity produk
 	- Mapping data pada file CSV
 
-	![[Pasted image 20260526135613.png]]
+
+		![MPS](../MPS_2.png) {#Figure28}
+
+
 	
 7. Setelah dokumen MPS di-Complete, sistem otomatis membentuk: POP 1 dan POP 2
 
-	![[Pasted image 20260526135706.png]]
 
-	![[Pasted image 20260526135729.png]]
-	
+	![MPS](../MPS_3.png) {#Figure29}
+
 8. Document Date pada POP yang terbentuk akan mengikuti Date Schedule yang telah ditentukan sebelumnya.
 9. Dokumen POP yang terbentuk memiliki status **Draft** dan dapat di-Complete secara manual sesuai kebutuhan
 

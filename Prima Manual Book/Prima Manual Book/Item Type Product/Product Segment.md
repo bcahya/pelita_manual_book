@@ -9,7 +9,7 @@ Product Segment adalah kode identifikasi produk yang otomatis digunakan pada set
 | 10           | Barang Jadi Kemeja  |
 | 20           | Bahan Baku Knitting |
 | 21           | Bahan Baku Woven    |
-
+"Product Segment"{#Tabel1}
 Tanpa Product Segment, sistem hanya menghasilkan nomor urut seperti 0001 atau 0002 yang tidak memberikan informasi mengenai jenis produk. Dengan Product Segment, user dapat langsung mengenali kategori produk hanya dari kode artikel yang ditampilkan.
 
 ## Manfaat Product Segment
@@ -18,8 +18,6 @@ Tanpa Product Segment, sistem hanya menghasilkan nomor urut seperti 0001 atau 00
 2. Menghindari Duplikasi Kode Antar Kategori. Tanpa adanya segment, produk dari kategori berbeda dapat memiliki nomor urut yang sama, misalnya 0001 untuk bahan baku dan 0001 untuk barang jadi. Dengan segment, setiap kode menjadi unik, seperti: RM-0001 dan FG-0001. Kedua kode tersebut berbeda dan tidak saling bertabrakan
 3. Mendukung Konsistensi Data. Segment yang ditentukan sejak awal implementasi membantu seluruh tim menggunakan pola penamaan yang sama. Dengan begitu, proses pencarian data dan pembuatan laporan menjadi lebih terstruktur dan konsisten.
 	
-
-
 Dalam satu segment, sistem dapat menampung beberapa tipe sekaligus. Jika perusahaan membutuhkan pengelompokan segment berdasarkan kategori tertentu, seperti jenis artikel bahan jadi, bahan baku, gramasi, benang, brand, dan kategori lainnya, lakukan pengaturan pada Menu **Product Segment Type**.
 
 Sistem akan mengelompokkan kode artikel sesuai kategori yang ditentukan sehingga penyusunan kode artikel menjadi lebih rapi, konsisten, dan mudah dikelola.
@@ -30,7 +28,8 @@ Sistem akan mengelompokkan kode artikel sesuai kategori yang ditentukan sehingga
 2. Klik **New**
 3. Isi Field **Search Key** dan **Name**
 
-![Segment Type](../Segment-Type.png)
+![Segment Type](../Segment-Type.png "Segment Type") {#Figure1}
+
 4. Klik **Save**
 
 Setelah pengelompokan segment berdasarkan kategori selesai dilakukan, lanjutkan konfigurasi pada menu **Product Segment**.
@@ -38,12 +37,10 @@ Setelah pengelompokan segment berdasarkan kategori selesai dilakukan, lanjutkan 
 
 1. Buka Menu **SIS Product Segment**
 2. Klik **New**
-3. Isi field **Search Key** dan **Name**. Contoh 10 untuk Barang Jadi dan 59 untuk Brand Polo
+3. Isi field **Search Key**, **Name** dan **Product Segment Type**. Contoh 10 untuk Barang Jadi dan 59 untuk Brand Polo
 
-![Segment_Sistem](../Product-Segment.png)
+![Product Segment](../SIS_Product_Segment.png) {#Figure2}
 
 4. Klik **Save**
 
 Setelah Product Segment selesai dikonfigurasi, langkah berikutnya adalah mengatur **Item Type**. Item Type berfungsi untuk menyusun kode artikel berdasarkan segment yang sudah dibuat.
-
-

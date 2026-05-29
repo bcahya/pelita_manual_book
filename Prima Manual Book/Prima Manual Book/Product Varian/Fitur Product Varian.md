@@ -1,0 +1,3 @@
+# Fitur Product Varian
+
+Sistem iDempiere menggunakan Varian Attribute untuk mengelola variasi produk. Dengan fitur ini, perusahaan dapat mengelola satu produk dalam berbagai varian, seperti warna dan ukuran. Fitur Product Varian dapat diterapkan pada semua artikel: Raw Material, Semi Finished Goods, dan Finished Goods.
