@@ -13,7 +13,7 @@ Sistem akan membentuk kode artikel secara otomatis berdasarkan urutan segment pa
 | 20010TR91200660ZP091 | Bahan Baku Knitting |
 "Kode Artikel Product"{#Tabel2}
 
-![Item Type](../Contoh_Item_Type.png) {#Figure3}
+![Item Type](../Contoh_Item_Type.png "Kode Artikel Product") {#Figure3}
 
 ## Konfigurasi Item Type
 

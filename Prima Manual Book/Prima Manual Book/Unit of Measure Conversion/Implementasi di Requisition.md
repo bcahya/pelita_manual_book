@@ -4,7 +4,7 @@
 Di tahap requisition, user mengajukan kebutuhan barang. Fitur UoM Conversion memungkinkan user memasukkan permintaan dalam satuan yang lebih familiar, seperti karton atau pack. Sistem lalu otomatis mengonversi jumlah tersebut ke Base UoM (misalnya Pcs) untuk keperluan pengecekan stok dan perencanaan pengadaan.
 ### Requisition Line
 
-![Requisition Line](../UoM_Requisition.png) {#Figure10}
+![Requisition Line](../UoM_Requisition.png "UoM di Requisition") {#Figure10}
 
 UoM pada requisition line terbentuk dari konversi Base UoM. Berikut field quantity dan harga yang perlu dipahami:
 

@@ -4,12 +4,9 @@ Cost of Production adalah biaya yang dikeluarkan untuk memproduksi barang. Biaya
 
 Di iDempiere, Cost of Production terdiri dari tiga elemen utama:
 
-1. Biaya Bahan Baku Langsung
-	Biaya bahan yang langsung digunakan dalam proses produksi, seperti tepung, kain, atau bahan utama lainnya.
-2. Biaya Tenaga Kerja Langsung
-	Biaya tenaga kerja yang langsung mengerjakan proses produksi, seperti upah operator mesin.
-3. Biaya Overhead Pabrik
-	Biaya tidak langsung yang mendukung proses produksi, seperti listrik pabrik dan depresiasi mesin.
+1. Biaya Bahan Baku Langsung. Biaya bahan yang langsung digunakan dalam proses produksi, seperti tepung, kain, atau bahan utama lainnya.
+2. Biaya Tenaga Kerja Langsung. Biaya tenaga kerja yang langsung mengerjakan proses produksi, seperti upah operator mesin.
+3. Biaya Overhead Pabrik. Biaya tidak langsung yang mendukung proses produksi, seperti listrik pabrik dan depresiasi mesin.
 
 ## Metode Perhitungan Biaya di iDempiere
 
@@ -42,9 +39,10 @@ Variance adalah selisih antara biaya standar dan biaya aktual. Perusahaan dapat 
 - Analisis efisiensi produksi
 
 Komponen variance dapat mencakup:
-a. FOH (Factory Overhead)
-b. Biaya tambahan lainnya
 
+a. FOH (Factory Overhead)
+
+b. Biaya tambahan lainnya
 ## Konfigurasi Costing
 
 Sebelum melakukan transaksi, tentukan costing method untuk setiap kategori produk. User dapat melakukan konfigurasi di Product Category. Ikuti langkah berikut untuk mengatur costing pada Product Category:
@@ -54,13 +52,13 @@ Sebelum melakukan transaksi, tentukan costing method untuk setiap kategori produ
 3. Isi field **Name**, contoh Raw Material
 4. Isi field **Material Policy**
 
-![Konfigurasi Costing 1](../Costing_Product_Category.png) {#Figure40}
+![Konfigurasi Costing 1](../Costing_Product_Category.png "Konfigurasi di Level Product Category") {#Figure40}
 
 5. Masuk ke tab **Accounting**
 6. Klik **Accounting Schema**
 7. Pilih **Costing Method** dan **Costing Level** sesuai kebijakan perusahaan
 
-![Konfigurasi Costing 2](../Costing_Acc.png) {#Figure41}
+![Konfigurasi Costing 2](../Costing_Acc.png "Konfigurasi Costing") {#Figure41}
 
 8. Klik **Save**
 

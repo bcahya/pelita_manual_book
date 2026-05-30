@@ -10,6 +10,7 @@ Product Segment adalah kode identifikasi produk yang otomatis digunakan pada set
 | 20           | Bahan Baku Knitting |
 | 21           | Bahan Baku Woven    |
 "Product Segment"{#Tabel1}
+
 Tanpa Product Segment, sistem hanya menghasilkan nomor urut seperti 0001 atau 0002 yang tidak memberikan informasi mengenai jenis produk. Dengan Product Segment, user dapat langsung mengenali kategori produk hanya dari kode artikel yang ditampilkan.
 
 ## Manfaat Product Segment
@@ -28,7 +29,7 @@ Sistem akan mengelompokkan kode artikel sesuai kategori yang ditentukan sehingga
 2. Klik **New**
 3. Isi Field **Search Key** dan **Name**
 
-![Segment Type](../Segment-Type.png "Segment Type") {#Figure1}
+![Segment Type](../Segment-Type.png "Product Segment Type") {#Figure1}
 
 4. Klik **Save**
 
@@ -39,7 +40,7 @@ Setelah pengelompokan segment berdasarkan kategori selesai dilakukan, lanjutkan 
 2. Klik **New**
 3. Isi field **Search Key**, **Name** dan **Product Segment Type**. Contoh 10 untuk Barang Jadi dan 59 untuk Brand Polo
 
-![Product Segment](../SIS_Product_Segment.png) {#Figure2}
+![Product Segment](../SIS_Product_Segment.png "Product Segment") {#Figure2}
 
 4. Klik **Save**
 

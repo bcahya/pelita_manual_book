@@ -32,7 +32,7 @@
 .include {Product Varian/Product Template.md}
 .include {Product Varian/Generate Product Varian.md}
 .include {Product Varian/Regenerate Product Varian.md}
-.include {Unit of Measure Conversion/Unit of Measure (UoM).md}
+.include {Unit of Measure Conversion/Unit of Measure.md}
 .include {Unit of Measure Conversion/UoM Conversion.md}
 .include {Unit of Measure Conversion/Implementasi di Requisition.md}
 .include {Unit of Measure Conversion/Implementasi di Purchase Order.md}

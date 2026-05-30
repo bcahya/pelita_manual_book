@@ -4,7 +4,7 @@ Regenerate Product Varian adalah proses memperbarui data pada produk varian berd
 
 Setelah Generate Product Varian pertama kali dijalankan, setiap produk varian akan memiliki konfigurasi **Allow Update When Regenerate** pada tab **BoM, Purchasing, Routing, Replenish, Replenish RDO, dan UoM Conversion**.
 
-![Allow](../Allow_Update.png) {#Figure61}
+![Allow](../Allow_Update.png "Field Allow Update When Regenerate") {#Figure61}
 
 Gunakan konfigurasi ini untuk mengontrol produk varian mana yang perlu diperbarui saat Regenerate dijalankan, tanpa harus mengubah konfigurasi sistem:
 
@@ -17,6 +17,6 @@ Jika ingin menambahkan raw material atau komponen hanya untuk varian tertentu, i
 
 Contoh: Jika ingin menambahkan material Gula untuk varian Coffee dan Matcha, input komponen Gula untuk varian Coffee dan Matcha secara terpisah.
 
-![Varian](../BOM_Varian.png) {#Figure62}
+![Varian](../BOM_Varian.png "Contoh Komponen Varian Product") {#Figure62}
 
 Ketentuan ini juga berlaku jika setiap varian memiliki komponen atau material dengan gramasi, komposisi, atau quantity yang berbeda. Input setiap varian secara terpisah sesuai detail masing-masing.

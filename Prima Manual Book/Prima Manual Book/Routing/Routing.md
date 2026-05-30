@@ -13,23 +13,49 @@ Warehouse merepresentasikan area penyimpanan fisik produk atau gudang. Di dalam 
 1. Buka Menu **Warehouse & Locator**
 2. Klik **New**
 3. Isi data Warehouse:
+
 	- **Nama Warehouse**, contoh: WH-Bahan Baku
+
+
 	- **Alamat Warehouse**, contoh: Jakarta
 
+
 Di dalam warehouse terdapat line bernama Locator. Locator harus dibuat terlebih dahulu sebelum digunakan pada routing.  Ikuti langkah dibawah untuk mengatur locator:
-	1. Klik tab **Line Locator**
-	2. Klik **New**
-	3. Isi nama locator gudang
-	4. Isi field X, Y, Z sesuai kebutuhan operasional:
+
+	a. Klik tab **Line Locator**
+	
+	b. Klik **New**
+
+
+	c. Isi nama locator gudang
+
+
+	d. Isi field X, Y, Z sesuai kebutuhan operasional:
+
+
 		- X untuk kolom rak
+
+
 		- Y untuk baris rak
+
+
 		- Z untuk slot dalam satu baris
-	5. Centang **Default** untuk locator utama gudang
+
+
+	 e. Centang **Default** untuk locator utama gudang
+
+
 4. Isi field berikut sesuai locator yang digunakan
+
 	- Locator Stock
+
 	- Locator Pre Manufacture
+
 	- Locator Post Manufacture
+
 	- Reservation Locator
+
+
 5. Klik **Save**
 
 Jika satu produk diproduksi di lebih dari satu gudang, misalnya Jakarta dan Surabaya, buat konfigurasi BoM (Bill of Material) terpisah sesuai lokasi produksi masing-masing. Routing nantinya akan mengikuti konfigurasi BoM tersebut.
@@ -43,11 +69,16 @@ Routing memiliki beberapa jenis action yang digunakan untuk menentukan alur perp
 | Manufacture | Proses memproduksi artikel                          |
 | Pull From   | Menarik barang dari gudang sebelumnya (alur mundur) |
 | Push To     | Mengirim barang ke gudang berikutnya (alur maju)    |
+"Action Routing"{#Tabel4}
 
 **Penggunaan Action Berdasarkan Jenis Produk**
 - Raw Material dan Semi Finished Goods
+
+
 	Menggunakan action **Pull From**, dimulai dari proses pembelian atau proses sebelumnya hingga ke area pre-production.
 - Finished Goods
+	
+	
 	Menggunakan action **Push To** dengan tujuan gudang induk atau gudang penjualan.
 ## Jenis Operation Routing
 
@@ -58,7 +89,7 @@ Routing memiliki tiga jenis operation:
 | Take from stock                       | Mengambil langsung dari stok yang tersedia                                  |
 | Take from stock Trigger another rules | Mengambil dari stok, lalu menjalankan aturan lain jika stok tidak mencukupi |
 | Trigger another rules                 | Langsung menjalankan aturan lain tanpa pengecekan stok                      |
-
+"Operation Routing"{#Tabel5}
 ## Langkah Pengaturan Routing di Sistem
 
 1. Buka Menu **SIS Routing**
@@ -68,7 +99,7 @@ Routing memiliki tiga jenis operation:
 5. Klik tab **Line**
 6. Isi setiap field sesuai konfigurasi berikut:
 
-![Routing Line](../Routing_Line.png) {#Figure64}
+![Routing Line](../Routing_Line.png "Konfigurasi Routing") {#Figure64}
 
 	Berikut field yang harus dikonfigurasi:
 
@@ -80,6 +111,7 @@ Routing memiliki tiga jenis operation:
 | Operation Type | Jenis operasi yang menentukan logika proses     |
 | Warehouse To   | Gudang tujuan hasil produksi                    |
 | Locator To     | Lokasi penyimpanan hasil produksi               |
+"Field Routing Line"{#Tabel6}
 
 7. Ulangi untuk setiap tahapan proses dan pastikan **Line No** berurutan
 8. Simpan setiap line sebelum menambahkan ke lin berikutnya
@@ -95,7 +127,7 @@ Satu routing dapat digunakan untuk beberapa produk selama proses produksi dan pe
 
 1. Buka Menu **Product Category**
 
-	![Routing Product Category](../Routing_ProductCategory.png) {#Figure65}
+	![Routing Product Category](../Routing_ProductCategory.png "Konfigurasi di Product Category") {#Figure65}
 
 2. Pada Tab **Routing**, lakukan konfigurasi sesuai dengan alur produksi.
 3. Klik **Save**
@@ -104,7 +136,7 @@ Routing juga dapat dikonfigurasi langsung pada level produk. Berikut langkah imp
 
 1. Buka Menu **Product**
 
-	![Routing Product](../Routing_Product.png) {#Figure66}
+	![Routing Product](../Routing_Product.png "Konfigurasi di Level Product") {#Figure66}
 
 2. Pada Tab **Routing**, konfigurasi sesuai dengan alur produksi. 
 3. Klik **Save**

@@ -9,19 +9,31 @@ Sebelum melakukan penyusutan, pastikan konfigurasi berikut telah selesai:
 
 
 		
-		![Costing](../Product_Category_Acc.png) {#Figure46}
+		![Costing](../Product_Category_Acc.png "Konfigurasi Costing") {#Figure46}
 
 
 2. Attribute Set — Pilih **Lot Control** dengan pengaturan berikut:
+
 	a.	Mandatory Type: **Always**
+
+
 	b.	Attribute Set Type: Material Management System
+
+	
 	c.	Exclude:
+
+
 	-	C_OrderLine – Sales Order Line
+
+	
 	-	M_InOutLine – Shipment/Receipt Line
+
+
 	d.	Un-check field **Sales Transaction**
 
 
-		![Attibute Set](../Attribute_Set.png) {#Figure47}
+
+		![Attibute Set](../Attribute_Set.png "Setting Attribute Set") {#Figure47}
 
 
 3. Master Data Asset Type — Tentukan klasifikasi asset, metode penyusutan, dan GL Document Type.
@@ -32,9 +44,13 @@ Sebelum melakukan penyusutan, pastikan konfigurasi berikut telah selesai:
 ### Proses Pengadaan Asset
 
 Pengadaan asset dilakukan melalui tahapan berikut:
+
 1.	Purchase order
+
 2.	Material receipt
+
 3.	Invoice
+
 4.	Matching invoice
 
 Setelah proses penerimaan selesai, sistem otomatis membentuk data asset berdasarkan ASI (Attribute Set Instance). Data asset tersebut dapat diakses melalui menu SIS Asset.
@@ -45,16 +61,22 @@ Lakukan penyusutan asset melalui langkah-langkah berikut:
 1. Akses menu **SIS Asset**.
 
 
-	![SIS Asset](../SIS_Aset.png) {#Figure48}
+	![SIS Asset](../SIS_Aset.png "SIS Asset") {#Figure48}
 
 
 2. Generate asset — Data awal akan berstatus Draft.
 3. Evaluasi asset — Lakukan evaluasi terhadap asset yang berstatus Draft.
 4. Konfirmasi asset — Validasi asset sebelum digunakan.
 5. Sistem menampilkan:
+
 	a.	Daftar asset berdasarkan ASI
+
+
 	b.	Proposal depresiasi sesuai masa manfaat asset
+
+
 6. Penyusutan berjalan sesuai konfigurasi Asset Type.
+
 
 Jurnal penyusutan di-generate secara otomatis, berdasarkan permintaan user atau jadwal automation scheduler yang berjalan setiap bulan.
 
@@ -72,26 +94,43 @@ Disposal adalah proses penghapusan asset dari catatan perusahaan secara permanen
 
 Disposal asset dapat dilakukan melalui dua mekanisme:
 
-1. Sales order
+1. **Sales order**
+
 	a.	Buka menu **Sales Order,** pastikan Document Type menggunakan **Standard Order**.
+
+
 	b.	Pilih asset berdasarkan **ASI** yang sesuai.
+
+
+	
 		
 		
-		![Sales Order](../Sales_Order.png) {#Figure49}
+		![Sales Order](../Sales_Order.png "Penyusutan dengan Sales Order") {#Figure49}
+
+
 
 
 	c.	Proses Shipment, lalu buat Invoice Customer (AR).
-2. Physical Inventory (Internal Use)
+
+	
+2. **Physical Inventory (Internal Use)**
+
 	a.	Buka menu **Inventory Decrease/Increase**.
+
 	b.	Pilih Document Type **Internal Use Inventory**.
+
+
 	c.	Masuk ke **Internal Use Line**.
+
+
 	d.	Pilih asset yang akan didisposal berdasarkan **ASI**.
 
 
-	![Internal Use](../Internal_Use_Line.png) {#Figure50}
+	![Internal Use](../Internal_Use_Line.png "Penyusutan dengan Internal Use") {#Figure50}
 
 
 		
+	
 	e.	Tentukan **Charge** sebagai beban disposal
 
 Setelah proses disposal selesai — baik melalui Sales Order maupun Internal Use — sistem otomatis memperbarui status disposal pada data asset dan men-generate jurnal disposal.

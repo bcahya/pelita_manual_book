@@ -22,53 +22,65 @@ Setelah produksi Semi Finished Goods selesai dan stok tersedia di warehouse, pro
 1. Buka menu **SIS Production Order Planning**
 2. Masuk ke Tab **Line**
 3. Input:
+
 	- Produk yang akan diproduksi
+
 	- Quantity produksi
+
 	- BoM yang digunakan
+
+
 4. Jalankan proses **SIS Generate POP BoM**
 
 
 	
-	![Generate POP Subcon](../Generate_POP_BOM.png) {#Figure22}
+	![Generate POP Subcon](../Generate_POP_BOM.png "SIS Generate POP BoM") {#Figure22}
 	
 
 
 5. Klik **SIS Generate MO**
 
 
-	![Generate MO Subcon](../Generate_MO.png) {#Figure23}
+	![Generate MO Subcon](../Generate_MO.png "SIS Generate MO") {#Figure23}
 
 
 	
-6. Masuk ke menu **Manufacturing Order**. Setelah proses Generate MO selesai, sistem otomatis membuat dokumen berikut:
-	- Back Order
-	- Movement
-	- Requisition
-	- Production
-	- Child
-	- Production Report Quantity
+6. Masuk ke menu **Manufacturing Order**. Setelah proses Generate MO selesai, sistem otomatis membuat dokumen berikut **Back Order, Movement, Requisition, Production, Child** dan **Production Report Quantity**.
+
 7. Lakukan proses **Requisition** untuk material subcon. Alur proses:
+
 	- Requisition Complete
+
+
 	- Purchase Order Complete
+
+	
 	- Material Receipt
+
+
 	Sistem akan membuat POP baru untuk Semi Finished Goods yang diproduksi secara inhouse.
 
 
-	![POP Subcon](../POP_Subcon.png) {#Figure24}
+	![POP Subcon](../POP_Subcon.png "Production Order Planning Subcon") {#Figure24}
 
 
 
-6. Jalankan proses produksi Semi Finished Goods hingga selesai
-7. Setelah Semi Finished Goods tersedia di Warehouse, lakukan **Movement** sesuai urutan proses
-8. Klik tab **Movement** dan lakukan movement sesuai urutan
-9. Setelah stok tersedia, jalankan proses produksi pada tab **Production Report Quantity**:
+8. Jalankan proses produksi Semi Finished Goods hingga selesai
+9. Setelah Semi Finished Goods tersedia di Warehouse, lakukan **Movement** sesuai urutan proses
+10. Klik tab **Movement** dan lakukan movement sesuai urutan
+11. Setelah stok tersedia, jalankan proses produksi pada tab **Production Report Quantity**:
 
 	- Isi quantity produksi
+
+
 	- Isi quantity defect, **jika ada**
+
+
 	- Centang field **Defect** untuk produk defect
-	
+
+
 	Produk defect akan diproses movement manual ke locator sesuai konfigurasi BoM.
-10. Setelah quantity ditentukan, lakukan **Complete Document MO**. Sistem akan menjalankan proses production secara otomatis dan mengkonsumsi:
+12. Setelah quantity ditentukan, lakukan **Complete Document MO**. Sistem akan menjalankan proses production secara otomatis dan mengkonsumsi:
 
 	- Raw Material
 	- Semi Finished Goods

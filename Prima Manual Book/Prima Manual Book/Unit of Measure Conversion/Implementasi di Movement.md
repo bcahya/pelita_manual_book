@@ -4,7 +4,7 @@
 Setelah produk jadi diterima, perpindahan stok (antar gudang, antar lokasi) dicatat melalui Inventory Move. Sistem mencatat quantity berdasarkan konfigurasi UoM yang diatur di level Product. Konfigurasi ini tersedia di tab **"UoM Conversion"** pada halaman Product.
 ## Field "Movement"
 
-![Movement](../Field_Movement.png) {#Figure13}
+![Movement](../Field_Movement.png "Field Movement") {#Figure13}
 
 Field **Movement** menentukan bagaimana sistem mencatat quantity saat penerimaan barang:
 
@@ -13,7 +13,7 @@ Field **Movement** menentukan bagaimana sistem mencatat quantity saat penerimaan
 
 ## Implementasi UoM Conversion di Movement
 
-![Movement](../UOM_Move_Line.png) {#Figure14}
+![Movement](../UOM_Move_Line.png "Contoh UoM di Movement") {#Figure14}
 
 UoM yang digunakan di level Movement mengikuti konfigurasi UoM Conversion pada level Product. Jika field Is Movement dicentang, sistem akan mencatat transaksi movement dalam satuan UoM Conversion, termasuk quantity yang digunakan.
 Berikut field pada movement line yang perlu dipahami:
@@ -26,10 +26,10 @@ Berikut field pada movement line yang perlu dipahami:
 
 Konfigurasi di level Product
 
-![Movement Product](../Field_Movement.png) {#Figure15}
+![Movement Product](../Field_Movement.png "Konfigurasi UoM Movement di Level Product") {#Figure15}
 
 Di level Movement
 
-![Movement Line](../UoM_Movement_Line.png) {#Figure16}
+![Movement Line](../UoM_Movement_Line.png "UoM di Movement") {#Figure16}
 
 Karena field **Movement** tidak dicentang, sistem mencatat movement dalam satuan Base UoM.

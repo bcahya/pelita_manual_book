@@ -22,7 +22,7 @@ Ikuti langkah berikut untuk membuat Purchase Price Contract:
 2. Input nama **Business Partner**
 3. Input **Valid From** dan **Valid To** - tentukan periode waktu kontrak berjalan
 
-	![Purchase Price Contract](../Purchase_Price_Contract.png) {#Figure44}
+	![Purchase Price Contract](../Purchase_Price_Contract.png "Purchase Price Contract") {#Figure44}
 
 
 4. Masuk ke tab **SIS Purchase Price Contract Line**
@@ -30,7 +30,7 @@ Ikuti langkah berikut untuk membuat Purchase Price Contract:
 5. Input **Produk**, **Harga Produk** dan **Quantity Produk**
 
 
-	![Line](../Purchase_Price_Contract_Line.png) {#Figure45}
+	![Line](../Purchase_Price_Contract_Line.png "Purchase Price Contract Line") {#Figure45}
 
 
 6. Klik **complete**
@@ -48,15 +48,22 @@ Sebelum Purchase Order di-complete, pastikan data berikut sesuai dengan Purchase
 - Business Partner pada PO sama dengan Business Partner pada Purchase Price Contract.
 - Product pada PO sama dengan product pada Price Contract Line.
 - Tanggal pembelian masih berada dalam periode kontrak:
+
 	- Valid From
+
+
 	- Valid To
+	
 - Warehouse penerimaan sesuai dengan warehouse pada Purchase Price Contract
 
 Setelah Purchase Order di-complete, sistem akan menjalankan proses berikut:
 
 - Sistem membuat PO Line yang sesuai dengan Price Contract Line.
 - Sistem memperbarui nilai:
+
 	- Qty Realization
+
+
 	- Total Contract Realization
 
 Update ini membantu perusahaan memonitor realisasi pembelian terhadap kontrak yang sudah disepakati.

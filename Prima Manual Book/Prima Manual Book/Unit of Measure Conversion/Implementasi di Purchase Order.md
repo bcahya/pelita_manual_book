@@ -10,7 +10,7 @@ Sistem mengambil data berikut dari dokumen Requisition ke header Purchase Order:
 - Warehouse
 - Business Partner
 
-![Purchase](../Purchase_Order.png) {#Figure11}
+![Purchase](../Purchase_Order.png "Informasi data di Purchase Order") {#Figure11}
 
 ## Purchase Order Line
 
@@ -22,7 +22,7 @@ Dalam Purchase Order, sistem menggunakan satuan pembelian yang telah disepakati 
 
 Hal ini penting karena vendor umumnya memberikan harga dalam satuan karton atau dus, bukan per pcs.
 
-![Purchase Order Line](../PO_Line.png) {#Figure12}
+![Purchase Order Line](../PO_Line.png "UoM di Purchase Order") {#Figure12}
 
 Berdasarkan data konversi tersebut, sistem menghitung unit cost dalam Base UoM. Contoh: harga Rp120.000 per karton dengan isi 10 pcs akan dikonversi menjadi Rp12.000 per pcs untuk keperluan valuasi inventori.
 

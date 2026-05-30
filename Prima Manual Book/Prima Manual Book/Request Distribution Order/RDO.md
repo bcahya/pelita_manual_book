@@ -28,20 +28,24 @@ Pada konfigurasi Document Type RDO, terdapat beberapa field utama yang wajib dii
 2. Buka menu Request Distribution Order (**RDO**).
 
 
-	![RDO](../RDO_1.png) {#Figure30}
+	![RDO](../RDO_1.png "RDO") {#Figure30}
 
 
 	
 3. Jalankan proses **Generate RDO Line** untuk menampilkan daftar produk yang sudah dikonfigurasi.
+
 4. Pilih produk yang akan didistribusikan sesuai kebutuhan.
 
 
-	![Generate RDO](../Generate_RDO_Line.png) {#Figure31}
+	![Generate RDO](../Generate_RDO_Line.png "Generate RDO Line") {#Figure31}
 
 
-	
+
+
 5. Validasi quantity distribusi.
+
 6. Klik **Complete Document** untuk menyelesaikan proses RDO.
+
 Setelah dokumen di-complete, sistem akan otomatis membuat dokumen:
 
 - Inventory Move Delivery

@@ -24,14 +24,14 @@ Ikuti langkah berikut untuk melakukan Cost Adjustment:
 3. Pilih **Costing Method** pada produk
 4. Pilih **Movement Date**
 
-![Cost Adjustment](../Cost_Adjus.png) {#Figure42}
+![Cost Adjustment](../Cost_Adjus.png "Cost Adjustment") {#Figure42}
 
 5. Masuk ke tab **Cost Adjustment Line**
 6. Pilih produk yang akan disesuaikan
 7. Input nilai harga baru pada field **New Cost Price**
 8. Input **Charge**
 
-![Cost Adjustment Line](../Cost_Adjs_Line.png) {#Figure43}
+![Cost Adjustment Line](../Cost_Adjs_Line.png "Cost Adjustment Line") {#Figure43}
 
 8. Klik **save**
 9. Klik **complete**

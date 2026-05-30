@@ -19,50 +19,62 @@ Ikuti langkah berikut untuk membuat ICPL Base:
 1. Buka Menu **SIS ICPL**
 2. Klik **New**
 3. Isi semua field
-	- ICPL Type
-		Tentukan jenis harga yang digunakan, seperti online, offline, intercompany, atau stock opname.
-	- Price include tax
-		Tentukan apakah harga sudah termasuk pajak.
-	- Valid from
-		Tentukan tanggal mulai berlaku harga.
-	- Sales transaction
-		Aktifkan jika ICPL digunakan untuk transaksi penjualan.
-	- Set lucky number
-		Aktifkan jika diperlukan untuk perhitungan tambahan.
-	- Calculate type
-		Tentukan metode perhitungan:
-		- Add (+)
-		- Subtract (-)
-		- Multiply ()
-		- Divide (/)
+
+	- ICPL Type. Tentukan jenis harga yang digunakan, seperti online, offline, intercompany, atau stock opname.
+
+
+	- Price include tax. Tentukan apakah harga sudah termasuk pajak.
+
+	- Valid from. Tentukan tanggal mulai berlaku harga.
+
+
+	- Sales transaction. Aktifkan jika ICPL digunakan untuk transaksi penjualan.
+
+	- Set lucky number. Opsional, jika diperlukan untuk perhitungan tambahan dapat diaktifkan.
+
+
+	- Calculate type. Tentukan metode perhitungan:
+
+
+		a. Add (+)
+
+
+		b. Subtract (-)
+
+		
+		c. Multiply ()
+
+
+		d. Divide (/)
 	
 
 
-		![ICPL Base](../ICPL_Base.png) {#Figure32}
+		![ICPL Base](../ICPL_Base.png "ICPL  Base") {#Figure32}
 
 
-4. Klik Save
+4. Klik **Save**
 ### Menambahkan Produk ke ICPL Base
 
 Setelah header ICPL tersimpan, tambahkan daftar harga produk melalui tab **Line**.
+
 5. Buka tab **Line**
 6. Klik tombol **New**
 7. Pilih **Product**
 8. Input **Base Price** produk
 
 
-		![Base Price](../ICPL_Product.png) {#Figure33}
+		![Base Price](../ICPL_Product.png "Product di ICPL Base") {#Figure33}
 
 
-5. Klik **save**
-6. Ulangi langkah di atas untuk seluruh produk
-7. Klik **complete**
-8. Jalankan proses **Generate PLV** (Price List Version).
+9. Klik **save**
+10. Ulangi langkah di atas untuk seluruh produk
+11. Klik **complete**
+12. Jalankan proses **Generate PLV** (Price List Version).
 	
-		![Generate PLV](../ICPL_PLV.png) {#Figure34}
+		![Generate PLV](../ICPL_PLV.png "Generate Price List Version") {#Figure34}
 
 
-9. Sistem akan menyimpan data header dan menyiapkan versi harga.
+13. Sistem akan menyimpan data header dan menyiapkan versi harga.
 
 ## ICPL With Reference
 
@@ -77,7 +89,7 @@ ICPL With Reference digunakan untuk membuat versi harga baru berdasarkan ICPL Ba
 	
 
 
-![Reference](../Ref_ICPL.png) {#Figure35}
+![Reference](../Ref_ICPL.png "ICPL Reference") {#Figure35}
 
 
 5. Klik **save**
@@ -85,9 +97,7 @@ ICPL With Reference digunakan untuk membuat versi harga baru berdasarkan ICPL Ba
 7. Jalankan proses **Generate PLV (Price List Version)**.
 8. Sistem akan menampilkan produk beserta harga yang dihitung otomatis berdasarkan harga ICPL Base + (Rate %) 
 
-User tidak perlu membuat ICPL Line secara manual karena sistem akan membuat data otomatis saat proses Generate PLV dijalankan.
-
-ICPL With Reference juga dapat digunakan sebagai referensi untuk ICPL turunan lainnya.
+User tidak perlu membuat ICPL Line secara manual karena sistem akan membuat data otomatis saat proses Generate PLV dijalankan. ICPL With Reference juga dapat digunakan sebagai referensi untuk ICPL turunan lainnya.
 ## Update ICPL
 
 Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat mengubah langsung dokumen ICPL dengan status Complete. Hanya ICPL Base yang dapat diperbarui.
@@ -98,7 +108,7 @@ Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat 
 3. Input tanggal baru pada field **Valid From**
 	
 	
-	![ICPL Update](../ICPL_Update.png) {#Figure36}
+	![ICPL Update](../ICPL_Update.png "ICPL Update") {#Figure36}
 
 
 4. Masuk ke tab **Line**
@@ -107,7 +117,7 @@ Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat 
 
 
 
-	![Line](../ICPL_Update_Line.png) {#Figure37}
+	![Line](../ICPL_Update_Line.png "Product & Price ICPL Update") {#Figure37}
 	
 
 
@@ -120,21 +130,18 @@ Saat ICPL Base diperbarui, seluruh ICPL turunan akan ikut ter-update secara otom
 ### ICPL Pada Warehouse
 
 Setiap warehouse atau outlet harus memiliki ICPL yang digunakan dalam transaksi. Satu warehouse dapat memiliki 4 jenis ICPL:
+
 - ICPL Online
 - ICPL Offline
 - ICPL Intercompany
 - ICPL Stock Opname
 
-![ICPL Warehouse](../ICPL_WH.png) {#Figure38}
+![ICPL Warehouse](../ICPL_WH.png "Konfigurasi ICPL di Warehouse") {#Figure38}
 
-Selain itu, menu **Warehouse & Locator** memiliki tab **Listing ICPL for Warehouse** untuk menampilkan histori perubahan harga.
-
-Jika tidak ada perubahan harga, tab tersebut tidak akan menampilkan data.
+Selain itu, menu **Warehouse & Locator** memiliki tab **Listing ICPL for Warehouse** untuk menampilkan histori perubahan harga. Jika tidak ada perubahan harga, tab tersebut tidak akan menampilkan data.
 ### ICPL Pada Purchase Order
 
-ICPL dapat digunakan untuk menentukan harga pembelian dari vendor. Setiap vendor dapat memiliki price list yang berbeda sesuai kesepakatan harga atau kontrak pembelian.
-
-Satu vendor hanya dapat menggunakan satu ICPL Purchase.
+ICPL dapat digunakan untuk menentukan harga pembelian dari vendor. Setiap vendor dapat memiliki price list yang berbeda sesuai kesepakatan harga atau kontrak pembelian. Satu vendor hanya dapat menggunakan satu ICPL Purchase.
 #### Setup ICPL Purchase pada Vendor
 
 1. Buka menu **Business Partner**
@@ -143,7 +150,7 @@ Satu vendor hanya dapat menggunakan satu ICPL Purchase.
 
 	
 	
-	![ICPL Vendor](../ICPL_Vendor.png) {#Figure39}
+	![ICPL Vendor](../ICPL_Vendor.png "Konfigurasi ICPL di Business Partner") {#Figure39}
 
 
 		

@@ -14,14 +14,18 @@ Satu produk dapat memiliki lebih dari satu BoM sesuai kebutuhan produksi.
 
 Beberapa pengaturan yang perlu dikonfigurasi pada BoM:
 1. Type BoM
-	a. Manufacturing Produt -> Produksi dilakukan secara inhouse oleh perusahaan
-	b. Subcontracting -> Produksi dilakukan di luar perusahaan melalui vendor
-2. Component
-	Komponen atau material yang digunakan dalam proses produksi.
-3. BoM Reference
-	BoM referensi yang digunakan untuk artikel Semi Finished Goods yang memiliki struktur BoM dan komponen tersendiri.
-4. Valid from
-	Periode mulai berlakunya BoM untuk produk tersebut.
+
+	- Manufacturing Produt -> Produksi dilakukan secara inhouse oleh perusahaan
+
+
+	- Subcontracting -> Produksi dilakukan di luar perusahaan melalui vendor
+
+
+2. Component. Komponen atau material yang digunakan dalam proses produksi.
+	
+3. BoM Reference. BoM referensi yang digunakan untuk artikel Semi Finished Goods yang memiliki struktur BoM dan komponen tersendiri.
+	
+4. Valid from. Periode mulai berlakunya BoM untuk produk tersebut.
 
 **Contoh Bill of Material**
 

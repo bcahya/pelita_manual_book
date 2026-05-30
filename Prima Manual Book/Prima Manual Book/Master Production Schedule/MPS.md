@@ -17,17 +17,21 @@ Sebelum menjalankan proses Master Production Schedule, pastikan beberapa hal ber
 2. Product yang akan dijadwalkan produksinya
 3. Date schedule sebagai acuan tanggal rencana produksi
 
-	![Konfigurasi MP](../MPS_1.png) {#Figure25}
+	![Konfigurasi MP](../MPS_1.png "Template csv Production Schedule") {#Figure25}
 ## Konfigurasi Document MPS
 
 Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS terlebih dahulu.
 1. Nama Document Type MPS
 2. Document Base MPS
 3. Document Type POP, dibedakan menjadi 2, yaitu:
-	- POP 1 -> Non System 01
-	- POP 2 -> System 01
 
-	![Document MPS](../Doc_MPS.png) {#Figure26}
+	- POP 1 -> Non System 01
+
+
+	- POP 2 -> System 01
+	
+
+	![Document MPS](../Doc_MPS.png "Konfigurasi Document MPS") {#Figure26}
 
 ## Langkah Proses Master Production Schedule
 
@@ -35,27 +39,42 @@ Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS t
 2. Pilih organisasi yang akan digunakan
 3. Pilih file **CSV** sebagai sumber data produksi
 4. Tentukan nilai Distribute (%) untuk mengatur distribusi produksi antara:
+
 	- Non System 01
+
+
 	- System 01
+
+
 	Sisa persentase dari distribusi Non System 01 akan otomatis dialokasikan ke System 01.
-	
-	![Generate MPS](../SIS_MPS.png) {#Figure27}
+
+
+	![Generate MPS](../SIS_MPS.png "SIS Generate MPS") {#Figure27}
+
+
 	
 5. Jalankan proses **Generate MPS**.
+
 6. Setelah proses berhasil, sistem akan membentuk dokumen MPS berdasarkan:
+
 	- Tanggal produksi
+
+
 	- Quantity produk
+
+	
 	- Mapping data pada file CSV
 
 
-		![MPS](../MPS_2.png) {#Figure28}
+
+		![MPS](../MPS_2.png "Hasil Generate MPS") {#Figure28}
 
 
 	
 7. Setelah dokumen MPS di-Complete, sistem otomatis membentuk: POP 1 dan POP 2
 
 
-	![MPS](../MPS_3.png) {#Figure29}
+	![MPS](../MPS_3.png "Hasil Generate MPS untuk Masing-Masing POP") {#Figure29}
 
 8. Document Date pada POP yang terbentuk akan mengikuti Date Schedule yang telah ditentukan sebelumnya.
 9. Dokumen POP yang terbentuk memiliki status **Draft** dan dapat di-Complete secara manual sesuai kebutuhan
