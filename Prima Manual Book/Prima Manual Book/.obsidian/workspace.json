@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Report Stock/Report Stock per Warehouse.md",
+                "file": "Report Stock/Report Stock per Artikel.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Report Stock per Warehouse"
+              "title": "Report Stock per Artikel"
             }
           }
         ]
@@ -196,9 +196,17 @@
   },
   "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
-    "Report Stock/Report Stock per Artikel.md",
-    "Contract Management/Contract Management.md",
     "Report Stock/Report Stock per Warehouse.md",
+    "ReportStock_20260530133832.xlsx",
+    "Report Stock/Report Stock per Artikel.md",
+    "ReportStockArtikel_20260530180208.xlsx",
+    "quarkdown-output/preview-main-3293899820/media/Stock_Exc@1562838579.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Stock_Exc@1562838579.png",
+    "Stock_Exc.png",
+    "quarkdown-output/preview-main-3293899820/media/Stock_Artikel@95688623.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Stock_Artikel@95688623.png",
+    "Stock_Artikel.png",
+    "Contract Management/Contract Management.md",
     "quarkdown-output/preview-main-3293899820/media/Stock_WH@-283039292.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/Stock_WH@-283039292.png",
     "Stock_WH.png",
@@ -208,21 +216,13 @@
     "quarkdown-output/preview-main-3293899820/media/Report_Stock@-253230569.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/Report_Stock@-253230569.png",
     "Report_Stock 1.png",
-    "Report_Stock.png",
     "main.md",
     "quarkdown-output/preview-main-3293899820/media/Contract_Manaj_Line@323669417.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Contract_Manaj_Line@323669417.png",
-    "Contract_Manaj_Line.png",
     "quarkdown-output/preview-main-3293899820/media/Header_Contract_Management@1834284808.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Header_Contract_Management@1834284808.png",
     "quarkdown-output/preview-main-3293899820/media/AP_Sch_Line@-500316265.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/GL_Amor@354446069.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Generate_GL_Amor@1581271819.png.checksum",
     "Product Varian/Generate Product Varian.md",
     "Product Varian/Fitur Product Varian.md",
-    "Report Stock",
     "Tanpa judul.md",
-    "Contract Management",
     "Cost of Production/Cost of Production.md",
     "Stock Opname Charging/Stock Opname Charging.md",
     "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",

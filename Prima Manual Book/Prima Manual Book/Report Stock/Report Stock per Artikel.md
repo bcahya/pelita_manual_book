@@ -5,5 +5,12 @@ Laporan ini menampilkan posisi stok yang dikelompokkan berdasarkan produk/artike
 Ikuti langkah berikut untuk mengakses Report Stock per Artikel di iDempiere:
 1. Buka menu **SIS Report Stock per Artikel**
 2. Input **tanggal pelaporan**, **Locator** & **Product**.
+
+![Report Stock](../Stock_Artikel.png "Report Stock per Artikel") {#Figure71}
+
 3. Klik **Ok**
 4. Sistem menampilkan Report Stock dalam format **Excel**.
+
+![Report Excel](../Stock_Exc.png "Report Stock dalam Format Excel") {#Figure72}
+
+[Contoh Report Stock per Artikel](![[ReportStockArtikel_20260530180208.xlsx]])
