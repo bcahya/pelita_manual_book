@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Contract Management/Contract Management.md",
+                "file": "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Contract Management"
+              "title": "Manajemen Asset"
             }
           }
         ],
@@ -211,6 +211,9 @@
   },
   "active": "269ba9ac8fa868b2",
   "lastOpenFiles": [
+    "POP, BoM dan MO/Production Order Planning.md",
+    "Routing/Routing.md",
+    "Contract Management/Contract Management.md",
     "Report Stock/Report Stock per Warehouse.md",
     "Report Stock/Report Stock per Artikel.md",
     "Stock Opname Charging/Stock Opname Charging.md",
@@ -221,10 +224,8 @@
     "ICPL/ICPL.md",
     "Master Production Schedule/MPS.md",
     "POP, BoM dan MO/Production Order Planning Subcon.md",
-    "POP, BoM dan MO/Production Order Planning.md",
     "POP, BoM dan MO/Manufacturing Order.md",
     "POP, BoM dan MO/Bill of Material.md",
-    "Routing/Routing.md",
     "main.md",
     "ReportStock_20260530133832.xlsx",
     "ReportStockArtikel_20260530180208.xlsx",
@@ -234,7 +235,6 @@
     "quarkdown-output/preview-main-3293899820/media/Stock_Artikel@95688623.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/Stock_Artikel@95688623.png",
     "Stock_Artikel.png",
-    "Contract Management/Contract Management.md",
     "quarkdown-output/preview-main-3293899820/media/Stock_WH@-283039292.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/Stock_WH@-283039292.png",
     "Stock_WH.png",

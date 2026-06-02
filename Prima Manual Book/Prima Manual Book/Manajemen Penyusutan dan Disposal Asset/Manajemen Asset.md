@@ -1,28 +1,23 @@
 # Manajemen Asset
-
 ## Manajemen Penyusutan dan Disposal Asset
 
-Penyusutan asset adalah proses mengalokasikan biaya asset secara sistematis selama masa manfaatnya. Setiap periode, sistem mencatat beban penyusutan dan mengurangi nilai buku asset.
+Penyusutan asset adalah proses mengalokasikan biaya asset secara sistematis selama masa manfaatnya. Setiap periode, sistem mencatat beban penyusutan dan mengurangi nilai buku asset. Sebelum melakukan penyusutan, pastikan konfigurasi berikut telah selesai:
 
-Sebelum melakukan penyusutan, pastikan konfigurasi berikut telah selesai:
 1. Product Category — Gunakan costing method **Average PO** dan costing level **Batch/Lot**.
 
-
-	
-	![Costing](../Product_Category_Acc.png "Konfigurasi Costing") {#Figure46}
-
+	!(80%)[Costing](../Product_Category_Acc.png "Konfigurasi Costing") {#Figure46}
 
 2. Attribute Set — Pilih **Lot Control** dengan pengaturan berikut:
   - Mandatory Type: **Always**
   - Attribute Set Type: Material Management System
   - Exclude:
-    + C_OrderLine – Sales Order Line
-    + M_InOutLine – Shipment/Receipt Line
+
+        * C_OrderLine – Sales Order Line
+        * M_InOutLine – Shipment/Receipt Line
+
   - Un-check field **Sales Transaction**
 
-
 ![Attibute Set](../Attribute_Set.png "Setting Attribute Set") {#Figure47}
-
 
 3. Master Data Asset Type — Tentukan klasifikasi asset, metode penyusutan, dan GL Document Type.
 4. Set Product — Atur Product Type ke **Item**.
