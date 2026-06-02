@@ -13,49 +13,25 @@ Warehouse merepresentasikan area penyimpanan fisik produk atau gudang. Di dalam 
 1. Buka Menu **Warehouse & Locator**
 2. Klik **New**
 3. Isi data Warehouse:
-
-	- **Nama Warehouse**, contoh: WH-Bahan Baku
-
-
-	- **Alamat Warehouse**, contoh: Jakarta
-
+  - **Nama Warehouse**, contoh: WH-Bahan Baku
+  - **Alamat Warehouse**, contoh: Jakarta
 
 Di dalam warehouse terdapat line bernama Locator. Locator harus dibuat terlebih dahulu sebelum digunakan pada routing.  Ikuti langkah dibawah untuk mengatur locator:
 
-	a. Klik tab **Line Locator**
-	
-	b. Klik **New**
-
-
-	c. Isi nama locator gudang
-
-
-	d. Isi field X, Y, Z sesuai kebutuhan operasional:
-
-
-		- X untuk kolom rak
-
-
-		- Y untuk baris rak
-
-
-		- Z untuk slot dalam satu baris
-
-
-	 e. Centang **Default** untuk locator utama gudang
-
+  - Klik tab **Line Locator**
+  - Klik **New**
+  - Isi nama locator gudang
+  - Isi field X, Y, Z sesuai kebutuhan operasional:
+    * X untuk kolom rak
+    * Y untuk baris rak
+    * Z untuk slot dalam satu baris
+  - Centang **Default** untuk locator utama gudang
 
 4. Isi field berikut sesuai locator yang digunakan
-
-	- Locator Stock
-
-	- Locator Pre Manufacture
-
-	- Locator Post Manufacture
-
-	- Reservation Locator
-
-
+  - Locator Stock
+  - Locator Pre Manufacture
+  - Locator Post Manufacture
+  - Reservation Locator
 5. Klik **Save**
 
 Jika satu produk diproduksi di lebih dari satu gudang, misalnya Jakarta dan Surabaya, buat konfigurasi BoM (Bill of Material) terpisah sesuai lokasi produksi masing-masing. Routing nantinya akan mengikuti konfigurasi BoM tersebut.
@@ -72,14 +48,8 @@ Routing memiliki beberapa jenis action yang digunakan untuk menentukan alur perp
 "Action Routing"{#Tabel4}
 
 **Penggunaan Action Berdasarkan Jenis Produk**
-- Raw Material dan Semi Finished Goods
-
-
-	Menggunakan action **Pull From**, dimulai dari proses pembelian atau proses sebelumnya hingga ke area pre-production.
-- Finished Goods
-	
-	
-	Menggunakan action **Push To** dengan tujuan gudang induk atau gudang penjualan.
+- Raw Material dan Semi Finished Goods. Menggunakan action **Pull From**, dimulai dari proses pembelian atau proses sebelumnya hingga ke area pre-production.
+- Finished Goods. Menggunakan action **Push To** dengan tujuan gudang induk atau gudang penjualan.
 ## Jenis Operation Routing
 
 Routing memiliki tiga jenis operation:

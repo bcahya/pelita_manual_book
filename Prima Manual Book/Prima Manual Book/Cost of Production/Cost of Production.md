@@ -39,10 +39,8 @@ Variance adalah selisih antara biaya standar dan biaya aktual. Perusahaan dapat 
 - Analisis efisiensi produksi
 
 Komponen variance dapat mencakup:
-
-a. FOH (Factory Overhead)
-
-b. Biaya tambahan lainnya
+  - FOH (Factory Overhead)
+  - Biaya tambahan lainnya
 ## Konfigurasi Costing
 
 Sebelum melakukan transaksi, tentukan costing method untuk setiap kategori produk. User dapat melakukan konfigurasi di Product Category. Ikuti langkah berikut untuk mengatur costing pada Product Category:

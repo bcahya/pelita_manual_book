@@ -15,13 +15,28 @@
               "state": {
                 "file": "Report Stock/Report Stock per Artikel.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Report Stock per Artikel"
             }
+          },
+          {
+            "id": "269ba9ac8fa868b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Contract Management/Contract Management.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Contract Management"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,11 +209,24 @@
       "bases:Buat basis baru": false
     }
   },
-  "active": "89ed2bd7ac895bb7",
+  "active": "269ba9ac8fa868b2",
   "lastOpenFiles": [
     "Report Stock/Report Stock per Warehouse.md",
-    "ReportStock_20260530133832.xlsx",
     "Report Stock/Report Stock per Artikel.md",
+    "Stock Opname Charging/Stock Opname Charging.md",
+    "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
+    "Test Bulleting.md",
+    "Purchase Price Contract/Purchase Price Contract.md",
+    "Cost of Production/Cost of Production.md",
+    "ICPL/ICPL.md",
+    "Master Production Schedule/MPS.md",
+    "POP, BoM dan MO/Production Order Planning Subcon.md",
+    "POP, BoM dan MO/Production Order Planning.md",
+    "POP, BoM dan MO/Manufacturing Order.md",
+    "POP, BoM dan MO/Bill of Material.md",
+    "Routing/Routing.md",
+    "main.md",
+    "ReportStock_20260530133832.xlsx",
     "ReportStockArtikel_20260530180208.xlsx",
     "quarkdown-output/preview-main-3293899820/media/Stock_Exc@1562838579.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/Stock_Exc@1562838579.png",
@@ -216,26 +244,13 @@
     "quarkdown-output/preview-main-3293899820/media/Report_Stock@-253230569.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/Report_Stock@-253230569.png",
     "Report_Stock 1.png",
-    "main.md",
     "quarkdown-output/preview-main-3293899820/media/Contract_Manaj_Line@323669417.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/Header_Contract_Management@1834284808.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/AP_Sch_Line@-500316265.png.checksum",
     "Product Varian/Generate Product Varian.md",
     "Product Varian/Fitur Product Varian.md",
-    "Tanpa judul.md",
-    "Cost of Production/Cost of Production.md",
-    "Stock Opname Charging/Stock Opname Charging.md",
-    "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
-    "Purchase Price Contract/Purchase Price Contract.md",
     "Cost Adjustment/Cost Adjustment.md",
-    "ICPL/ICPL.md",
     "Request Distribution Order/RDO.md",
-    "Master Production Schedule/MPS.md",
-    "POP, BoM dan MO/Production Order Planning Subcon.md",
-    "POP, BoM dan MO/Production Order Planning.md",
-    "POP, BoM dan MO/Manufacturing Order.md",
-    "Routing/Routing.md",
-    "POP, BoM dan MO/Bill of Material.md",
     "Unit of Measure Conversion/UoM Conversion.md",
     "Unit of Measure Conversion/Unit of Measure.md",
     "Unit of Measure Conversion/Implementasi di Requisition.md",

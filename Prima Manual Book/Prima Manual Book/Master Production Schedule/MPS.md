@@ -24,12 +24,8 @@ Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS t
 1. Nama Document Type MPS
 2. Document Base MPS
 3. Document Type POP, dibedakan menjadi 2, yaitu:
-
-	- POP 1 -> Non System 01
-
-
-	- POP 2 -> System 01
-	
+  - POP 1 -> Non System 01
+  - POP 2 -> System 01
 
 	![Document MPS](../Doc_MPS.png "Konfigurasi Document MPS") {#Figure26}
 
@@ -39,12 +35,8 @@ Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS t
 2. Pilih organisasi yang akan digunakan
 3. Pilih file **CSV** sebagai sumber data produksi
 4. Tentukan nilai Distribute (%) untuk mengatur distribusi produksi antara:
-
-	- Non System 01
-
-
-	- System 01
-
+  - Non System 01
+  - System 01
 
 	Sisa persentase dari distribusi Non System 01 akan otomatis dialokasikan ke System 01.
 
@@ -56,16 +48,9 @@ Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS t
 5. Jalankan proses **Generate MPS**.
 
 6. Setelah proses berhasil, sistem akan membentuk dokumen MPS berdasarkan:
-
-	- Tanggal produksi
-
-
-	- Quantity produk
-
-	
-	- Mapping data pada file CSV
-
-
+  - Tanggal produksi
+  - Quantity produk
+  - Mapping data pada file CSV
 
 		![MPS](../MPS_2.png "Hasil Generate MPS") {#Figure28}
 
@@ -80,6 +65,5 @@ Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS t
 9. Dokumen POP yang terbentuk memiliki status **Draft** dan dapat di-Complete secara manual sesuai kebutuhan
 
 Proses MPS akan menghasilkan dua dokumen Production Order Planning (POP):
-
-1. POP 1 → untuk pendistribusian Non System 01
-2. POP 2 → untuk pendistribusian System 01
+- POP 1 → untuk pendistribusian Non System 01
+- POP 2 → untuk pendistribusian System 01

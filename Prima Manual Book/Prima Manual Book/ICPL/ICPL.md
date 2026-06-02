@@ -19,35 +19,12 @@ Ikuti langkah berikut untuk membuat ICPL Base:
 1. Buka Menu **SIS ICPL**
 2. Klik **New**
 3. Isi semua field
-
-	- ICPL Type. Tentukan jenis harga yang digunakan, seperti online, offline, intercompany, atau stock opname.
-
-
-	- Price include tax. Tentukan apakah harga sudah termasuk pajak.
-
-	- Valid from. Tentukan tanggal mulai berlaku harga.
-
-
-	- Sales transaction. Aktifkan jika ICPL digunakan untuk transaksi penjualan.
-
-	- Set lucky number. Opsional, jika diperlukan untuk perhitungan tambahan dapat diaktifkan.
-
-
-	- Calculate type. Tentukan metode perhitungan:
-
-
-		a. Add (+)
-
-
-		b. Subtract (-)
-
-		
-		c. Multiply ()
-
-
-		d. Divide (/)
-	
-
+  - ICPL Type. Tentukan jenis harga yang digunakan, seperti online, offline, intercompany, atau stock opname.
+  - Price include tax. Tentukan apakah harga sudah termasuk pajak.
+  - Valid from. Tentukan tanggal mulai berlaku harga.
+  - Sales transaction. Aktifkan jika ICPL digunakan untuk transaksi penjualan.
+  - Set lucky number. Opsional, jika diperlukan untuk perhitungan tambahan dapat diaktifkan.
+  - Calculate type. Tentukan metode perhitungan seperti Add (+), Subtract (-), Multiply (*) atau Divide (/)
 
 		![ICPL Base](../ICPL_Base.png "ICPL  Base") {#Figure32}
 

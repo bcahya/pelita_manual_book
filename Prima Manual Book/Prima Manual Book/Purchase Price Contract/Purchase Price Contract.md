@@ -48,22 +48,15 @@ Sebelum Purchase Order di-complete, pastikan data berikut sesuai dengan Purchase
 - Business Partner pada PO sama dengan Business Partner pada Purchase Price Contract.
 - Product pada PO sama dengan product pada Price Contract Line.
 - Tanggal pembelian masih berada dalam periode kontrak:
-
-	- Valid From
-
-
-	- Valid To
-	
+  * Valid From
+  * Valid To
 - Warehouse penerimaan sesuai dengan warehouse pada Purchase Price Contract
 
 Setelah Purchase Order di-complete, sistem akan menjalankan proses berikut:
 
 - Sistem membuat PO Line yang sesuai dengan Price Contract Line.
 - Sistem memperbarui nilai:
-
-	- Qty Realization
-
-
-	- Total Contract Realization
+  * Qty Realization
+  * Total Contract Realization
 
 Update ini membantu perusahaan memonitor realisasi pembelian terhadap kontrak yang sudah disepakati.
