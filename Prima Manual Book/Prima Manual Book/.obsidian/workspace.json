@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "main.md",
+                "file": "Contract Management versi Old/Contract Management versi Old.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "main"
+              "title": "Contract Management versi Old"
             }
           }
         ]
@@ -194,11 +194,22 @@
       "bases:Buat basis baru": false
     }
   },
-  "active": "89ed2bd7ac895bb7",
+  "active": "45ebc8d7585cd891",
   "lastOpenFiles": [
-    "Konfigurasi Attribute Set Instance/Attribute Set Instance.md",
     "main.md",
+    "Test Bulleting.md",
+    "Konfigurasi Attribute Set Instance/Attribute Set Instance.md",
     "Posting Matched Invoice/Posting Matched Invoice.md",
+    "quarkdown-output/preview-main-3293899820/media/Guarantee_Date@725779665.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Guarantee_Date@725779665.png",
+    "quarkdown-output/preview-main-3293899820/media/Exclude@-1168343292.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Exclude@-1168343292.png",
+    "quarkdown-output/preview-main-3293899820/media/Attribute_Set_New@1388721866.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Attribute_Set_New@1388721866.png",
+    "quarkdown-output/preview-main-3293899820/media/Scheduler@-486850201.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Scheduler@-486850201.png",
+    "quarkdown-output/preview-main-3293899820/media/SysConfig_API@-1081165964.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/SysConfig_API@-1081165964.png",
     "Stock Opname Charging/Stock Opname Charging.md",
     "SysConfig_API.png",
     "Guarantee_Date.png",
@@ -206,18 +217,13 @@
     "Attribute_Set 1.png",
     "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Exclude 2.png",
-    "Exclude 1.png",
-    "Exclude.png",
-    "Pasted image 20260608180323.png",
     "Report Stock/Report Stock per Artikel.md",
-    "Attribute_Set.png",
     "Konfigurasi Attribute Set Instance",
-    "Contract Management/Contract Management.md",
+    "Contract Management versi Old/Contract Management versi Old.md",
     "Purchase Price Contract/Purchase Price Contract.md",
     "Cost Adjustment/Cost Adjustment.md",
     "Cost of Production/Cost of Production.md",
     "POP, BoM dan MO/Production Order Planning Subcon.md",
-    "Allow_Update.png",
     "POP, BoM dan MO/Production Order Planning.md",
     "Purchase Price Contract/Tanpa judul.md",
     "Tanpa judul.md",
@@ -233,14 +239,8 @@
     "Routing/Routing.md",
     "Product Varian/Generate Product Varian.md",
     "Product Varian/Fitur Product Varian.md",
-    "Product Varian/Konfigurasi Sebelum Menentukan Product Varian.md",
     "ReportStock_20260530133832.xlsx",
     "ReportStockArtikel_20260530180208.xlsx",
-    "quarkdown-output/preview-main-3293899820/media/Stock_Exc@1562838579.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Stock_Artikel@95688623.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Stock_WH@-283039292.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Report_Stock_WH_Excel@703255017.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Report_Stock@-253230569.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Contract_Manaj_Line@323669417.png.checksum"
+    "quarkdown-output/preview-main-3293899820/media/Stock_Exc@1562838579.png.checksum"
   ]
 }
