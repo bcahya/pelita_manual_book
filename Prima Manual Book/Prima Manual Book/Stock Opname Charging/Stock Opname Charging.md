@@ -23,9 +23,24 @@ Di SCI, terdapat 4 tipe charging untuk stock opname:
 4. **Tipe 4** — Stock Opname Charge Minus Mutlak Berdasarkan Kategori
   - Category charge dibedakan menjadi dua: **Dibebankan** dan **Tidak Dibebankan**.
   - Konfigurasi sequence harus mengikuti urutan berikut: **Charge → Non Charge**.
+5. **Tipe 5** — Stock Opname Charge Khusus Brand (PPG). Tipe ini adalah tipe charging khusus untuk Brand yang diterapkan untuk tim PPG. Mekanisme perhitungannya adalah sebagai berikut:
+  - Perhitungan 1 — Jumlahkan seluruh selisih Total Bruto (ICPL). Nilai bruto diambil dari ICPL.
+  - Perhitungan 2 — Kurangi hasil perhitungan 1 dengan Total Bruto tertinggi.
+  - Perhitungan 3 — Kalikan hasil perhitungan 2 dengan 50% untuk menentukan varian selisih.
+  - Perhitungan 4 — Jika hasil perhitungan 3 bernilai **minus (negatif)**, tambahkan Total Netto tertinggi. Jika bernilai **positif**, penambahan Total Netto tertinggi tidak diperlukan.
+  - Nilai hilang barang diambil dari **Total Netto tertinggi**.
+## Konfigurasi API
+Konfigurasi API ini bertujuan untuk mengambil data harga netto produk yang digunakan dalam stock opname, bersumber dari aplikasi Sky. Ikuti langkah berikut untuk melakukan konfigurasi API di System Configurator:
+1. Buka menu **System Configurator**
+2. Klik **New**
+3. Input nama configurator: **SIS_BASEURI_SERVICE_INVENTORY**
+4. Pada field **Configured Value**, input: http://localhost:8019
+5. Klik **save**
 
+![API](../SysConfig_API.png "Sys Config") {#Figure77}
+
+Setelah konfigurasi selesai, sistem akan menampilkan data harga netto produk melalui API di tab **SIS Inventory Charge Log** setiap kali stock opname charging dijalankan. Jika produk tidak memiliki harga netto, sistem otomatis menggunakan harga default sebesar 75% dari ICPL.
 ## Proses Stock Opname di Sistem
-
 Ikuti langkah-langkah berikut untuk membuat dokumen stock opname:
 
 1. Buka menu **Physical Inventory**

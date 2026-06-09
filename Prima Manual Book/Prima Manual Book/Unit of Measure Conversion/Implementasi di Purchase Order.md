@@ -4,7 +4,7 @@ Setelah requisition dikonfirmasi, user membuat Purchase Order melalui proses "Ge
 
 Sistem mengambil data berikut dari dokumen Requisition ke header Purchase Order:
 
-- Organisation
+- Organization
 - Date Promised
 - Price List
 - Warehouse

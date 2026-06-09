@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Report Stock/Report Stock per Artikel.md",
+                "file": "main.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Report Stock per Artikel"
-            }
-          },
-          {
-            "id": "269ba9ac8fa868b2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Manajemen Asset"
+              "title": "main"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.5
+    "width": 200
   },
   "right": {
     "id": "b322e54367580c7f",
@@ -209,52 +194,53 @@
       "bases:Buat basis baru": false
     }
   },
-  "active": "269ba9ac8fa868b2",
+  "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
-    "POP, BoM dan MO/Production Order Planning.md",
-    "Routing/Routing.md",
-    "Contract Management/Contract Management.md",
-    "Report Stock/Report Stock per Warehouse.md",
-    "Report Stock/Report Stock per Artikel.md",
-    "Stock Opname Charging/Stock Opname Charging.md",
-    "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
-    "Test Bulleting.md",
-    "Purchase Price Contract/Purchase Price Contract.md",
-    "Cost of Production/Cost of Production.md",
-    "ICPL/ICPL.md",
-    "Master Production Schedule/MPS.md",
-    "POP, BoM dan MO/Production Order Planning Subcon.md",
-    "POP, BoM dan MO/Manufacturing Order.md",
-    "POP, BoM dan MO/Bill of Material.md",
+    "Konfigurasi Attribute Set Instance/Attribute Set Instance.md",
     "main.md",
+    "Posting Matched Invoice/Posting Matched Invoice.md",
+    "Stock Opname Charging/Stock Opname Charging.md",
+    "SysConfig_API.png",
+    "Guarantee_Date.png",
+    "Attribute_Set_New.png",
+    "Attribute_Set 1.png",
+    "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
+    "Exclude 2.png",
+    "Exclude 1.png",
+    "Exclude.png",
+    "Pasted image 20260608180323.png",
+    "Report Stock/Report Stock per Artikel.md",
+    "Attribute_Set.png",
+    "Konfigurasi Attribute Set Instance",
+    "Contract Management/Contract Management.md",
+    "Purchase Price Contract/Purchase Price Contract.md",
+    "Cost Adjustment/Cost Adjustment.md",
+    "Cost of Production/Cost of Production.md",
+    "POP, BoM dan MO/Production Order Planning Subcon.md",
+    "Allow_Update.png",
+    "POP, BoM dan MO/Production Order Planning.md",
+    "Purchase Price Contract/Tanpa judul.md",
+    "Tanpa judul.md",
+    "Posting Matched Invoice",
+    "ICPL/ICPL.md",
+    "Request Distribution Order/RDO.md",
+    "Master Production Schedule/MPS.md",
+    "Unit of Measure Conversion/UoM Conversion.md",
+    "Unit of Measure Conversion/Implementasi di Requisition.md",
+    "Unit of Measure Conversion/Implementasi di Purchase Order.md",
+    "Unit of Measure Conversion/Implementasi di Movement.md",
+    "Unit of Measure Conversion/Unit of Measure.md",
+    "Routing/Routing.md",
+    "Product Varian/Generate Product Varian.md",
+    "Product Varian/Fitur Product Varian.md",
+    "Product Varian/Konfigurasi Sebelum Menentukan Product Varian.md",
     "ReportStock_20260530133832.xlsx",
     "ReportStockArtikel_20260530180208.xlsx",
     "quarkdown-output/preview-main-3293899820/media/Stock_Exc@1562838579.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Stock_Exc@1562838579.png",
-    "Stock_Exc.png",
     "quarkdown-output/preview-main-3293899820/media/Stock_Artikel@95688623.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Stock_Artikel@95688623.png",
-    "Stock_Artikel.png",
     "quarkdown-output/preview-main-3293899820/media/Stock_WH@-283039292.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Stock_WH@-283039292.png",
-    "Stock_WH.png",
     "quarkdown-output/preview-main-3293899820/media/Report_Stock_WH_Excel@703255017.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Report_Stock_WH_Excel@703255017.png",
-    "Report_Stock_WH_Excel.png",
     "quarkdown-output/preview-main-3293899820/media/Report_Stock@-253230569.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Report_Stock@-253230569.png",
-    "Report_Stock 1.png",
-    "quarkdown-output/preview-main-3293899820/media/Contract_Manaj_Line@323669417.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Header_Contract_Management@1834284808.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/AP_Sch_Line@-500316265.png.checksum",
-    "Product Varian/Generate Product Varian.md",
-    "Product Varian/Fitur Product Varian.md",
-    "Cost Adjustment/Cost Adjustment.md",
-    "Request Distribution Order/RDO.md",
-    "Unit of Measure Conversion/UoM Conversion.md",
-    "Unit of Measure Conversion/Unit of Measure.md",
-    "Unit of Measure Conversion/Implementasi di Requisition.md",
-    "Unit of Measure Conversion/Implementasi di Purchase Order.md",
-    "Unit of Measure Conversion/Implementasi di Movement.md"
+    "quarkdown-output/preview-main-3293899820/media/Contract_Manaj_Line@323669417.png.checksum"
   ]
 }

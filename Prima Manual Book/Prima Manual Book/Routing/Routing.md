@@ -84,7 +84,7 @@ Routing memiliki tiga jenis operation:
 "Field Routing Line"{#Tabel6}
 
 7. Ulangi untuk setiap tahapan proses dan pastikan **Line No** berurutan
-8. Simpan setiap line sebelum menambahkan ke lin berikutnya
+8. Simpan setiap line sebelum menambahkan ke line berikutnya
 9. Klik **Save**
 ## Implementasi Routing
 

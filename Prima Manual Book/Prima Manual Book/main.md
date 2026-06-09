@@ -53,4 +53,6 @@
 .include {Contract Management/Contract Management.md}
 .include {Report Stock/Report Stock per Warehouse.md}
 .include {Report Stock/Report Stock per Artikel.md}
+.include {Posting Matched Invoice/Posting Matched Invoice.md}
+.include {Konfigurasi Attribute Set Instance/Attribute Set Instance.md}
 .include {Test Bulleting.md}
