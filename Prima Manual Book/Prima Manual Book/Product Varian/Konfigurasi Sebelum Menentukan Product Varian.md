@@ -1,6 +1,6 @@
-# Konfigurasi Sebelum Menentukan Product Varian
+## Konfigurasi Sebelum Menentukan Product Varian
 Sebelum membuat produk varian, lakukan tiga konfigurasi berikut:
-## Master Varian Attribute
+### Master Varian Attribute
 
 Buat Master Varian Attribute terlebih dahulu sebelum menentukan produk varian. Berikut langkah-langkah untuk membuat Varian Attribute:
 
@@ -14,7 +14,7 @@ Buat Master Varian Attribute terlebih dahulu sebelum menentukan produk varian. B
 
 	![Value](../Value_Varian.png "Value Varian Attribute") {#Figure54}
 	
-## Product Type
+### Product Type
 
 Setelah Master Varian Attribute selesai, konfigurasikan Product Type dengan langkah berikut:
 1. Pada field **Product Type**, pilih **SIS Template** sebagai product template
@@ -26,7 +26,7 @@ Setelah Master Varian Attribute selesai, konfigurasikan Product Type dengan lang
 
 	![Varian Attribute2](../Varian_Product.png "Konfigurasi Varian Attribute di Product") {#Figure56}
 		
-## Konfigurasi Sistem
+### Konfigurasi Sistem
 
 Sistem menyediakan parameter **SIS_VARIAN_ALLOW_UPDATE** di **System Configurator** untuk menentukan data mana saja yang akan diperbarui saat Regenerate dijalankan. Berikut parameter yang perlu dikonfigurasi:
 

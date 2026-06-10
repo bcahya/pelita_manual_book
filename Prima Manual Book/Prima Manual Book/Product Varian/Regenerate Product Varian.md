@@ -1,4 +1,4 @@
-# Regenerate Product Varian
+## Regenerate Product Varian
 
 Regenerate Product Varian adalah proses memperbarui data pada produk varian berdasarkan perubahan yang dilakukan di product template. Apabila ada perubahan pada tab **BoM, Purchasing, Routing, Replenish, Replenish RDO, atau UoM Conversion** di product template, jalankan proses Regenerate agar perubahan tersebut otomatis diterapkan ke seluruh produk varian terkait.
 

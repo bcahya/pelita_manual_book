@@ -1,4 +1,7 @@
-# Generate Product Varian
+# Finalisasi Pembuatan Item/Artikel/Product
+Berikut ini adalah langkah langkah dalam melakukan proses finalisasi pembuatan Item/Artikel/Product
+
+## Generate Product Varian
 
 Setelah Varian Attribute selesai dikonfigurasi, jalankan fitur Generate Product Varian melalui langkah berikut:
 
