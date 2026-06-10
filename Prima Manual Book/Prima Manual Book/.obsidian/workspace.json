@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "main.md",
+                "file": "Item Type Product/Product Segment.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "main"
+              "title": "Product Segment"
             }
           }
         ]
@@ -196,6 +196,7 @@
   },
   "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
+    "main.md",
     "Pelita POP Visual Data/Pelita POP Visual Data.md",
     "quarkdown-output/preview-main-3293899820/media/Visual_POP@1147844892.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/Visual_POP@1147844892.png",
@@ -203,7 +204,6 @@
     "quarkdown-output/preview-main-3293899820/media/Visual2_POP@-1956776786.png",
     "Visual2_POP.png",
     "Visual_POP.png",
-    "main.md",
     "Contract Management versi Old/Contract Management versi Old.md",
     "quarkdown-output/preview-main-3293899820/media/POP@1581219357.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/POP@1581219357.png",
