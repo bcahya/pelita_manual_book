@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Contract Management versi Old/Contract Management versi Old.md",
+                "file": "Pelita POP Visual Data/Pelita POP Visual Data.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Contract Management versi Old"
+              "title": "Pelita POP Visual Data"
             }
           }
         ]
@@ -194,9 +194,17 @@
       "bases:Buat basis baru": false
     }
   },
-  "active": "45ebc8d7585cd891",
+  "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
+    "POP.png",
+    "Master Production Schedule/MPS.md",
+    "Product Varian/Generate Product Varian.md",
+    "POP, BoM dan MO/Production Order Planning.md",
+    "Pelita POP Visual Data/Pelita POP Visual Data.md",
     "main.md",
+    "Pelita POP Visual Data",
+    "POP, BoM dan MO/Tanpa judul",
+    "Contract Management versi Old/Contract Management versi Old.md",
     "Test Bulleting.md",
     "Konfigurasi Attribute Set Instance/Attribute Set Instance.md",
     "Posting Matched Invoice/Posting Matched Invoice.md",
@@ -219,28 +227,20 @@
     "Exclude 2.png",
     "Report Stock/Report Stock per Artikel.md",
     "Konfigurasi Attribute Set Instance",
-    "Contract Management versi Old/Contract Management versi Old.md",
     "Purchase Price Contract/Purchase Price Contract.md",
     "Cost Adjustment/Cost Adjustment.md",
     "Cost of Production/Cost of Production.md",
     "POP, BoM dan MO/Production Order Planning Subcon.md",
-    "POP, BoM dan MO/Production Order Planning.md",
     "Purchase Price Contract/Tanpa judul.md",
     "Tanpa judul.md",
     "Posting Matched Invoice",
     "ICPL/ICPL.md",
     "Request Distribution Order/RDO.md",
-    "Master Production Schedule/MPS.md",
     "Unit of Measure Conversion/UoM Conversion.md",
     "Unit of Measure Conversion/Implementasi di Requisition.md",
     "Unit of Measure Conversion/Implementasi di Purchase Order.md",
     "Unit of Measure Conversion/Implementasi di Movement.md",
     "Unit of Measure Conversion/Unit of Measure.md",
-    "Routing/Routing.md",
-    "Product Varian/Generate Product Varian.md",
-    "Product Varian/Fitur Product Varian.md",
-    "ReportStock_20260530133832.xlsx",
-    "ReportStockArtikel_20260530180208.xlsx",
-    "quarkdown-output/preview-main-3293899820/media/Stock_Exc@1562838579.png.checksum"
+    "ReportStock_20260530133832.xlsx"
   ]
 }
