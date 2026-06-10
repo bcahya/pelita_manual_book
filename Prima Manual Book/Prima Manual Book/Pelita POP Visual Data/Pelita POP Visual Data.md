@@ -16,7 +16,12 @@ Sistem menampilkan visualisasi Production Order Planning yang dipilih. Setiap ta
 Berikut ketentuan perubahan warna pada visualisasi:
 
 - Abu-abu — Dokumen sudah di-complete (berlaku untuk Movement, MO, Requisition, PO, dan MR).
+
+![Visual POP](../Visual2_POP.png "Visual Document Complete") {#Figure80}
+
 - Warna sesuai konfigurasi — Dokumen belum di-complete (berlaku untuk Movement, MO, Requisition, PO, dan MR).
+
+![Visual POP](../Visual_POP.png "Visual Document Draft") {#Figure81}
 
 Untuk dokumen selain Movement, MO, Requisition, PO, dan MR, warna pada visualisasi tidak berubah — baik saat status dokumen masih draft maupun sudah complete.
 

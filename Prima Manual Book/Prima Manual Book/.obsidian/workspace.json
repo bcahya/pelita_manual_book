@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "main.md",
+                "file": "Pelita POP Visual Data/Pelita POP Visual Data.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "main"
+              "title": "Pelita POP Visual Data"
             }
           }
         ]
@@ -196,11 +196,13 @@
   },
   "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
-    "Contract Management versi Old/Contract Management versi Old.md",
+    "Visual2_POP.png",
+    "Visual_POP.png",
+    "Pelita POP Visual Data/Pelita POP Visual Data.md",
     "main.md",
+    "Contract Management versi Old/Contract Management versi Old.md",
     "quarkdown-output/preview-main-3293899820/media/POP@1581219357.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/POP@1581219357.png",
-    "Pelita POP Visual Data/Pelita POP Visual Data.md",
     "POP.png",
     "Master Production Schedule/MPS.md",
     "Product Varian/Generate Product Varian.md",
@@ -223,7 +225,6 @@
     "Stock Opname Charging/Stock Opname Charging.md",
     "SysConfig_API.png",
     "Guarantee_Date.png",
-    "Attribute_Set_New.png",
     "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Report Stock/Report Stock per Artikel.md",
     "Konfigurasi Attribute Set Instance",
