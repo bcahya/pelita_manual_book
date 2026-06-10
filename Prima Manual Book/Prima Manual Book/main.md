@@ -42,6 +42,7 @@
 .include {POP, BoM dan MO/Manufacturing Order.md}
 .include {POP, BoM dan MO/Production Order Planning.md}
 .include {POP, BoM dan MO/Production Order Planning Subcon.md}
+.include {Pelita POP Visual Data/Pelita POP Visual Data.md}
 .include {Master Production Schedule/MPS.md}
 .include {Request Distribution Order/RDO.md}
 .include {ICPL/ICPL.md}
@@ -50,7 +51,7 @@
 .include {Purchase Price Contract/Purchase Price Contract.md}
 .include {Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md}
 .include {Stock Opname Charging/Stock Opname Charging.md}
-.include {Contract Management/Contract Management.md}
+.include {Contract Management versi Old/Contract Management versi Old.md}
 .include {Report Stock/Report Stock per Warehouse.md}
 .include {Report Stock/Report Stock per Artikel.md}
 .include {Posting Matched Invoice/Posting Matched Invoice.md}

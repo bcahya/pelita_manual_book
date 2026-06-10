@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pelita POP Visual Data/Pelita POP Visual Data.md",
+                "file": "main.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Pelita POP Visual Data"
+              "title": "main"
             }
           }
         ]
@@ -196,15 +196,17 @@
   },
   "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
+    "Contract Management versi Old/Contract Management versi Old.md",
+    "main.md",
+    "quarkdown-output/preview-main-3293899820/media/POP@1581219357.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/POP@1581219357.png",
+    "Pelita POP Visual Data/Pelita POP Visual Data.md",
     "POP.png",
     "Master Production Schedule/MPS.md",
     "Product Varian/Generate Product Varian.md",
     "POP, BoM dan MO/Production Order Planning.md",
-    "Pelita POP Visual Data/Pelita POP Visual Data.md",
-    "main.md",
     "Pelita POP Visual Data",
     "POP, BoM dan MO/Tanpa judul",
-    "Contract Management versi Old/Contract Management versi Old.md",
     "Test Bulleting.md",
     "Konfigurasi Attribute Set Instance/Attribute Set Instance.md",
     "Posting Matched Invoice/Posting Matched Invoice.md",
@@ -222,9 +224,7 @@
     "SysConfig_API.png",
     "Guarantee_Date.png",
     "Attribute_Set_New.png",
-    "Attribute_Set 1.png",
     "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
-    "Exclude 2.png",
     "Report Stock/Report Stock per Artikel.md",
     "Konfigurasi Attribute Set Instance",
     "Purchase Price Contract/Purchase Price Contract.md",
@@ -240,7 +240,6 @@
     "Unit of Measure Conversion/Implementasi di Requisition.md",
     "Unit of Measure Conversion/Implementasi di Purchase Order.md",
     "Unit of Measure Conversion/Implementasi di Movement.md",
-    "Unit of Measure Conversion/Unit of Measure.md",
-    "ReportStock_20260530133832.xlsx"
+    "Unit of Measure Conversion/Unit of Measure.md"
   ]
 }
