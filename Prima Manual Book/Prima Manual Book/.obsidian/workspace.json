@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pelita POP Visual Data/Pelita POP Visual Data.md",
+                "file": "main.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Pelita POP Visual Data"
+              "title": "main"
             }
           }
         ]
@@ -196,9 +196,13 @@
   },
   "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
+    "Pelita POP Visual Data/Pelita POP Visual Data.md",
+    "quarkdown-output/preview-main-3293899820/media/Visual_POP@1147844892.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Visual_POP@1147844892.png",
+    "quarkdown-output/preview-main-3293899820/media/Visual2_POP@-1956776786.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/Visual2_POP@-1956776786.png",
     "Visual2_POP.png",
     "Visual_POP.png",
-    "Pelita POP Visual Data/Pelita POP Visual Data.md",
     "main.md",
     "Contract Management versi Old/Contract Management versi Old.md",
     "quarkdown-output/preview-main-3293899820/media/POP@1581219357.png.checksum",
@@ -221,20 +225,15 @@
     "quarkdown-output/preview-main-3293899820/media/Scheduler@-486850201.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/Scheduler@-486850201.png",
     "quarkdown-output/preview-main-3293899820/media/SysConfig_API@-1081165964.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/SysConfig_API@-1081165964.png",
     "Stock Opname Charging/Stock Opname Charging.md",
-    "SysConfig_API.png",
-    "Guarantee_Date.png",
     "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Report Stock/Report Stock per Artikel.md",
-    "Konfigurasi Attribute Set Instance",
     "Purchase Price Contract/Purchase Price Contract.md",
     "Cost Adjustment/Cost Adjustment.md",
     "Cost of Production/Cost of Production.md",
     "POP, BoM dan MO/Production Order Planning Subcon.md",
     "Purchase Price Contract/Tanpa judul.md",
     "Tanpa judul.md",
-    "Posting Matched Invoice",
     "ICPL/ICPL.md",
     "Request Distribution Order/RDO.md",
     "Unit of Measure Conversion/UoM Conversion.md",

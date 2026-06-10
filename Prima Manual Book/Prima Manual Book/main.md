@@ -23,6 +23,7 @@
 
 .captionposition {bottom} tables:{bottom}
 .tableofcontents maxdepth:{4}
+.css { h1 { font-size: 1.5em; margin-bottom:0.4em;} h2 { font-size: 1.25em; margin-top: 0.8em; margin-bottom:0.5em; } h3 { font-size: 1.1em; margin-top: 0.8em; margin-bottom:0.5em; } p { margin-top:0.5em; margin-bottom:0.5em;}}
 
 .include {Item Type Product/Product Segment.md}
 .include {Item Type Product/Item Type Product.md}
