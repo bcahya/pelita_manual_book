@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Item Type Product/Product Segment.md",
+                "file": "Stock Opname Charging/Stock Opname Charging.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Product Segment"
+              "title": "Stock Opname Charging"
             }
           }
         ]
@@ -196,6 +196,10 @@
   },
   "active": "89ed2bd7ac895bb7",
   "lastOpenFiles": [
+    "cover.png",
+    "Item Type Product/Product Segment.md",
+    "quarkdown-output/preview-main-3293899820/media/cover@-1658561437.png.checksum",
+    "quarkdown-output/preview-main-3293899820/media/cover@-1658561437.png",
     "main.md",
     "Pelita POP Visual Data/Pelita POP Visual Data.md",
     "quarkdown-output/preview-main-3293899820/media/Visual_POP@1147844892.png.checksum",
@@ -221,10 +225,7 @@
     "quarkdown-output/preview-main-3293899820/media/Exclude@-1168343292.png.checksum",
     "quarkdown-output/preview-main-3293899820/media/Exclude@-1168343292.png",
     "quarkdown-output/preview-main-3293899820/media/Attribute_Set_New@1388721866.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Attribute_Set_New@1388721866.png",
     "quarkdown-output/preview-main-3293899820/media/Scheduler@-486850201.png.checksum",
-    "quarkdown-output/preview-main-3293899820/media/Scheduler@-486850201.png",
-    "quarkdown-output/preview-main-3293899820/media/SysConfig_API@-1081165964.png.checksum",
     "Stock Opname Charging/Stock Opname Charging.md",
     "Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Report Stock/Report Stock per Artikel.md",
@@ -239,7 +240,6 @@
     "Unit of Measure Conversion/UoM Conversion.md",
     "Unit of Measure Conversion/Implementasi di Requisition.md",
     "Unit of Measure Conversion/Implementasi di Purchase Order.md",
-    "Unit of Measure Conversion/Implementasi di Movement.md",
-    "Unit of Measure Conversion/Unit of Measure.md"
+    "Unit of Measure Conversion/Implementasi di Movement.md"
   ]
 }

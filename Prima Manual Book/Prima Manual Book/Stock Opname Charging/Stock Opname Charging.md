@@ -29,7 +29,9 @@ Di SCI, terdapat 4 tipe charging untuk stock opname:
   - Perhitungan 3 — Kalikan hasil perhitungan 2 dengan 50% untuk menentukan varian selisih.
   - Perhitungan 4 — Jika hasil perhitungan 3 bernilai **minus (negatif)**, tambahkan Total Netto tertinggi. Jika bernilai **positif**, penambahan Total Netto tertinggi tidak diperlukan.
   - Nilai hilang barang diambil dari **Total Netto tertinggi**.
+  
 ## Konfigurasi API
+
 Konfigurasi API ini bertujuan untuk mengambil data harga netto produk yang digunakan dalam stock opname, bersumber dari aplikasi Sky. Ikuti langkah berikut untuk melakukan konfigurasi API di System Configurator:
 1. Buka menu **System Configurator**
 2. Klik **New**
@@ -40,9 +42,10 @@ Konfigurasi API ini bertujuan untuk mengambil data harga netto produk yang digun
 ![API](../SysConfig_API.png "Sys Config") {#Figure77}
 
 Setelah konfigurasi selesai, sistem akan menampilkan data harga netto produk melalui API di tab **SIS Inventory Charge Log** setiap kali stock opname charging dijalankan. Jika produk tidak memiliki harga netto, sistem otomatis menggunakan harga default sebesar 75% dari ICPL.
-## Proses Stock Opname di Sistem
-Ikuti langkah-langkah berikut untuk membuat dokumen stock opname:
 
+## Proses Stock Opname di Sistem
+
+Ikuti langkah-langkah berikut untuk membuat dokumen stock opname:
 1. Buka menu **Physical Inventory**
 2. Klik **New**
 3. Input **Warehouse** yang akan diopname
