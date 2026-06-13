@@ -52,7 +52,13 @@ Langkah Import File MT940:
 
 ![Import Data MT940](../Import_MT940.png "Import Data MT940") {#Figure83}
 
-4. Sistem iDempiere akan membuat dokumen Bank Statement dengan status Draft atau In Progress.
+4. Jika import berhasil, file otomatis berpindah ke folder **done**
+
+![Done Import Data MT940](../Import_Bank_Done.png "Done Import Data MT940") {#Figure87}
+
+5. Dokumen **Bank Statement** akan menampilkan bank tersebut sebagai pilihan pada field **Bank Account**.
+
+![Bank Statement](../Deliver_Bank.png "Bank Statement") {#Figure88}
 
 ## Import Data PO Kecil
 
@@ -64,4 +70,10 @@ Langkah Import File PO Kecil:
 
 ![Import Data PO Kecil](../Import_PO.png "Import Data PO Kecil") {#Figure84}
 
-4. Sistem iDempiere akan membuat dokumen PO dengan status Draft atau In Progress, yang selanjutnya dapat di-confirm sesuai kebutuhan operasional.
+4. Jika import berhasil, file otomatis berpindah ke folder **done**
+
+![Done Import PO](../PO_Done.png "Done Import PO") {#Figure89}
+
+5. Sistem iDempiere akan membuat dokumen PO dengan status Draft atau In Progress, yang selanjutnya dapat di-confirm sesuai kebutuhan operasional.
+
+![Purchase Order](../Hasil_Import_PO.png "Hasil Import Purchase Order") {#Figure88}
