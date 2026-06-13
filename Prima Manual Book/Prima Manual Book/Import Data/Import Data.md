@@ -76,4 +76,4 @@ Langkah Import File PO Kecil:
 
 5. Sistem iDempiere akan membuat dokumen PO dengan status Draft atau In Progress, yang selanjutnya dapat di-confirm sesuai kebutuhan operasional.
 
-![Purchase Order](../Hasil_Import_PO.png "Hasil Import Purchase Order") {#Figure88}
+![Purchase Order](../Hasil_Import_PO.png "Hasil Import Purchase Order") {#Figure90}
