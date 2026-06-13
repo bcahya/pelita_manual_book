@@ -60,3 +60,4 @@
 .include {Report Stock/Report Stock per Artikel.md}
 .include {Posting Matched Invoice/Posting Matched Invoice.md}
 .include {Konfigurasi Attribute Set Instance/Attribute Set Instance.md}
+.include {Import Data/Import Data.md}

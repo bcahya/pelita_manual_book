@@ -32,6 +32,8 @@ Guarantee Date digunakan untuk:
   - M_MovementLine_Move Line
   - Un-check field **Sales Transaction**
 
+  Fitur exclude bertujuan untuk memberikan pengecualian atas tabel yang dipilih terhadap mandatory Attribute Set yang dikonfigurasi di level 2 header. Apabila suatu transaksi dikecualikan, maka field Attribute Set tidak wajib diinput saat melakukan transaksi tersebut.
+
   ![Exclude](../Exclude.png "Exclude") {#Figure76}
   
 9. Klik **Save**
@@ -55,3 +57,19 @@ Guarantee Date digunakan untuk:
 8. Klik **complete** dokumen material receipt
 
 Pada report Material Receipt, sistem menampilkan expired date yang merupakan Guarantee Date untuk masing-masing produk dan ASI.
+
+Jika user perlu melakukan breakdown quantity pada attribute set lines, gunakan fitur Generate ASI untuk membagi quantity sesuai kebutuhan. Quantity hasil generate masih dapat diedit dan disesuaikan dengan quantity aktual penerimaan barang. Ikuti langkah berikut untuk melakukan generate Attribute Set Instance:
+
+1. Masuk ke tab Material Receipt, lalu masuk ke Receipt Line.
+2. Klik tombol setting, kemudian klik SIS Generate Distribute Attribute.
+
+![Generate Distribute Attribute](../SIS_Generate_ASI.png "SIS Generate Attribute") {#Figure85}
+
+3. Input total line dari ASI yang dibutuhkan.
+
+![Distribute ASI](../Generate_ASI.png "Distribute ASI") {#Figure86}
+
+4. Klik ok
+5. Sistem otomatis membentuk line ASI sesuai konfigurasi yang diinput.
+
+![Hasil Generate ASI](../Hasil_Generate_ASI.png "Hasil Generate ASI") {#Figure87}
