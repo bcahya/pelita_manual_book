@@ -31,9 +31,10 @@
 .include {Item Type Product/Product Segment.md}
 .include {Item Type Product/Item Type Product.md}
 .include {Item Type Product/Implementasi Item Type di Product.md}
+.include {Product Varian/Product Template.md}
+.include {Konfigurasi Attribute Set Instance/Attribute Set Instance.md}
 .include {Product Varian/Fitur Product Varian.md}
 .include {Product Varian/Konfigurasi Sebelum Menentukan Product Varian.md}
-.include {Product Varian/Product Template.md}
 .include {Product Varian/Generate Product Varian.md}
 .include {Product Varian/Regenerate Product Varian.md}
 .include {Unit of Measure Conversion/Unit of Measure.md}
@@ -59,5 +60,4 @@
 .include {Report Stock/Report Stock per Warehouse.md}
 .include {Report Stock/Report Stock per Artikel.md}
 .include {Posting Matched Invoice/Posting Matched Invoice.md}
-.include {Konfigurasi Attribute Set Instance/Attribute Set Instance.md}
 .include {Import Data/Import Data.md}

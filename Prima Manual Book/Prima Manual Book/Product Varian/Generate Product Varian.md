@@ -3,7 +3,7 @@ Berikut ini adalah langkah langkah dalam melakukan proses finalisasi pembuatan I
 
 ## Generate Product Varian
 
-Setelah Varian Attribute selesai dikonfigurasi, jalankan fitur Generate Product Varian melalui langkah berikut:
+Setelah Product Template, Item Type, Attribute Set dan Varian Attribute selesai dikonfigurasi, jalankan fitur Generate Product Varian melalui langkah berikut:
 
 1. Buka menu **Product**.
 2. Klik ikon **Setting** (⚙).
