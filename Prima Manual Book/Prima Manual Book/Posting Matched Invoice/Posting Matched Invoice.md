@@ -1,6 +1,8 @@
-# Posting Matched Invoice
+# Scheduler Posting Matched Invoice
 
-Sebelum melakukan posting jurnal matched invoice, lakukan konfigurasi Scheduler terlebih dahulu. Ikuti langkah berikut:
+ Proses auto Invoice Vendor yang di lakukan saat melakukan proses complete dokumen Material Receipt/BPB, saat ini jurnal yang terkait dengan Matched Invoices menampilkan informasi Journal Error. Untuk menyelesaikan issue tersebut, saat ini disediakan suatu mekanisme untuk melakukan re-posting jurnal secara otomatis dan tanpa intervensi user/pengguna.
+ 
+ Ikuti langkah langkah dibawah ini untuk melakukan konfigurasi scheduling re-posting jurnal matched invoice:
 
 1. Buka menu **Scheduler**.
 2. Klik **New**.
