@@ -62,7 +62,7 @@ Langkah Import File MT940:
 
 ## Import Data PO Kecil
 
-Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi, value product/search key pada product, dan tahun bulan transaksi. Berikut contoh format file yang digunakan untuk import data PO Kecil ![[Furniture_10000002_202512.csv]]. 
+Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi, value product/search key pada product, dan tahun bulan transaksi. Berikut contoh format file yang digunakan untuk import data PO Kecil [Format Import PO Kecil](![[Furniture_10000002_202512.csv]]).
 
 Langkah Import File PO Kecil:
 1. Siapkan file PO Kecil dalam format csv
