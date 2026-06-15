@@ -34,7 +34,21 @@ FileZilla adalah aplikasi transfer file open source yang digunakan untuk meminda
 
 ## Import Data MT940
 
-MT940 adalah format standar SWIFT (Society for Worldwide Interbank Financial Telecommunication) untuk rekening koran elektronik (electronic bank statement). File MT940 berisi informasi transaksi perbankan mencakup saldo awal, daftar debit/kredit, dan saldo akhir yang dikirim bank kepada nasabah korporat. Di iDempiere, MT940 digunakan dalam modul Bank Statement.
+MT940 adalah format standar SWIFT (Society for Worldwide Interbank Financial Telecommunication) untuk rekening koran elektronik (electronic bank statement). File MT940 berisi informasi transaksi perbankan mencakup saldo awal, daftar debit/kredit, dan saldo akhir yang dikirim bank kepada nasabah korporat. Di iDempiere, MT940 digunakan dalam modul Bank Statement. Berikut contoh format file yang digunakan untuk import data Bank Statement.
+
+
+
+    
+   ![Format Bank Statement](../Format_MT940.png "Format MT940") {#Figure91}
+
+
+
+
+
+
+
+
+
 
 Langkah Import File MT940:
 1. Siapkan file MT940 dari bank. File MT940 menggunakan format **TXT**.
@@ -62,7 +76,13 @@ Langkah Import File MT940:
 
 ## Import Data PO Kecil
 
-Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi, value product/search key pada product, dan tahun bulan transaksi. Berikut contoh format file yang digunakan untuk import data PO Kecil [Format Import PO Kecil](![[Furniture_10000002_202512.csv]]).
+Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi, value product/search key pada product, dan tahun bulan transaksi. Berikut contoh format file yang digunakan untuk import data PO Kecil.
+
+
+   ![Format PO](../Format-POKecil.png "Format PO Kecil") {#Figure90}
+
+
+
 
 Langkah Import File PO Kecil:
 1. Siapkan file PO Kecil dalam format csv

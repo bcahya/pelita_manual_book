@@ -42,7 +42,54 @@ Konfigurasi API ini bertujuan untuk mengambil data harga netto produk yang digun
 ![API](../SysConfig_API.png "Sys Config") {#Figure77}
 
 Setelah konfigurasi selesai, sistem akan menampilkan data harga netto produk melalui API di tab **SIS Inventory Charge Log** setiap kali stock opname charging dijalankan. Jika produk tidak memiliki harga netto, sistem otomatis menggunakan harga default sebesar 75% dari ICPL.
+## Konfigurasi Product untuk Stock Opname
 
+Tidak semua product dilakukan stock opname — hanya product tertentu yang telah dipilah oleh perusahaan. Sebelum menjalankan stock opname, lakukan konfigurasi product beserta charge type-nya terlebih dahulu.
+
+Perusahaan menggunakan 5 tipe charge. Sebelum mengkonfigurasi product charge stock opname, pastikan Charge Category dan Charge Sub Category sudah dikonfigurasi terlebih dahulu.
+### Konfigurasi Master Charge Category
+
+1. Buka menu **SIS Charge Category**
+2. Klik New
+3. Tentukan **Charge Type** sesuai kebutuhan
+4. Input nama **Charge Category**
+5. Tentukan UoM sesuai kebutuhan
+6. Klik save
+
+![Category Charge](../Charge_Category.png "Category Charge") {#Figure91}
+
+
+### Konfigurasi Master Charge Sub Category
+
+Charge Sub Category digunakan untuk perhitungan charge stock opname **Tipe 1**. Ikuti langkah berikut:
+
+1. Buka menu **SIS Charge Sub Category**
+2. Klik New
+3. Tentukan **Charge Category**
+4. Input nama **Charge Sub Category**
+5. Klik save
+
+
+![Sub Category](../Charge_SubCategory.png "Charge Sub Category"){#Figure92}
+
+### Konfigurasi Charge Type pada Product
+
+Setelah Charge Category dan Charge Sub Category selesai dikonfigurasi, lakukan konfigurasi charge type pada masing-masing product. Ikuti langkah berikut:
+
+1. Buka menu Product
+2. Isi field-field yang dibutuhkan
+3. Pada field **Charge Type** tentukan tipe sesuai kebijakan
+4. Pada field **SIS Charge Category** pilih kategory sesuai kebijakan
+5. Pada field **SIS Charge Sub Category** pilih sub kategori sesuai kebijakan
+6. Pada field **Charge Multiply Rate** tentukan nilai sesuai kebijakan
+7. Pada field **Charge Tolerance** tentukan nilai sesuai kebijakan
+8. Klik save
+
+
+![Product](../Product_Opname.png "Konfigurasi Product") {#Figure93}
+
+
+Product yang telah dikonfigurasi siap digunakan untuk charge stock opname sesuai kebutuhan operasional perusahaan.
 ## Proses Stock Opname di Sistem
 
 Ikuti langkah-langkah berikut untuk membuat dokumen stock opname:

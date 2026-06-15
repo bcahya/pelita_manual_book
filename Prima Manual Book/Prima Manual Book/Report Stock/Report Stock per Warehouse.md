@@ -13,5 +13,4 @@ Ikuti langkah berikut untuk mengakses Report Stock per Warehouse di iDempiere:
 
 ![Report Excel](../Report_Stock_WH_Excel.png "Laporan Stock dalam Format Excel") {#Figure69}
 
-
-[Contoh Report Stock per Warehouse](![[ReportStock_20260530133832.xlsx]])
+![Report Excel](../Stock_WH.png "Contoh Report Stock per Warehouse") {#Figure70}
