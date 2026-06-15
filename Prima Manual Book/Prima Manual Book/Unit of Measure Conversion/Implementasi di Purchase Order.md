@@ -1,4 +1,4 @@
-# Implementasi di Purchase Order
+## Implementasi di Purchase Order
 
 Setelah requisition dikonfirmasi, user membuat Purchase Order melalui proses "Generate PO From Requisition". Sistem membaca requisition line yang memenuhi kriteria tertentu — seperti Warehouse dan Business Partner — lalu membuat Purchase Order secara otomatis.
 
@@ -12,7 +12,7 @@ Sistem mengambil data berikut dari dokumen Requisition ke header Purchase Order:
 
 ![Purchase](../Purchase_Order.png "Informasi data di Purchase Order") {#Figure11}
 
-## Purchase Order Line
+### Purchase Order Line
 
 Dalam Purchase Order, sistem menggunakan satuan pembelian yang telah disepakati dengan vendor, yang biasanya berbeda dari Base UoM. Sistem mencatat:
 
@@ -33,7 +33,7 @@ Berikut field pada Purchase Order line yang perlu dipahami:
 - Unit Price — Menampilkan harga produk per satuan Base UoM, mengikuti price yang telah dikonfigurasi di level Business Partner.
 - Price — Menampilkan harga produk per satuan UoM Conversion, dihitung berdasarkan rate UoM Conversion.
 
-## Penentuan Price
+### Penentuan Price
 
 Price pada Purchase Order ditentukan berdasarkan vendor atau business partner yang dikontrak. Konfigurasi price dilakukan di level Business Partner, karena setiap business partner dapat memiliki price list yang berbeda.
 
