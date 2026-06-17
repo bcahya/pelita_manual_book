@@ -121,3 +121,35 @@ Ikuti langkah-langkah berikut untuk membuat dokumen stock opname:
 13. Klik **Save**
 14. Jalankan **SIS Generate Inventory Charge Amount** — sistem menghitung dan menampilkan kalkulasi charge amount untuk seluruh produk.
 15. Klik **Complete**
+
+Setelah dokumen stock opname selesai dibuat, gunakan tab **SIS Inventory Charge Log** untuk melihat detail perhitungan charge amount per tipe. Ikuti langkah berikut:
+
+1. Buka menu **Physical Inventory**
+2. Pilih **warehouse** sesuai konfigurasi
+3. Tentukan tanggal stock opname pada field **Movement Date**
+4. Masuk ke Tab **Inventory Count Line**
+5. Pilih produk yang akan diproses
+6. Tentukan quantity produk yang akan diproses
+7. Pada field **Inventory Type** tentukan sesuai kebutuhan
+8. Klik **save**
+9. Jalankan **SIS Generate Inventory Charge Amount**
+10. Masuk ke tab S**IS Inventory Charge Log**
+11. Pilih Log sequence pertama
+12. Sistem akan menampilkan perhitungan charge stock opname untuk masing-masing tipe
+
+Sistem juga menampilkan harga netto untuk produk yang dilakukan stock opname. Harga netto produk bersumber dari aplikasi **Sky** dan dapat dilihat melalui tab **SIS Inventory Charge Log** di iDempiere. Ikuti langkah berikut:
+
+1. Buka menu **Physical Inventory**
+2. Pilih **warehouse** sesuai konfigurasi
+3. Tentukan tanggal stock opname pada field **Movement Date**
+4. Masuk ke tab **Inventory Count Line**
+5. Pilih produk yang akan diproses
+6. Tentukan quantity produk yang akan diproses
+7. Pada field **Inventory Type** tentukan sesuai kebutuhan
+8. Klik **save**
+9. Jalankan **SIS Generate Inventory Charge Amount**
+10. Masuk ke tab **SIS Inventory Charge Log**
+11. Pilih Log sequence kedua
+12. Sistem akan menampilkan harga netto untuk artikel yang dipilih
+
+Jika produk tidak memiliki harga netto, sistem otomatis menggunakan harga default sebesar **75% dari ICPL**.
