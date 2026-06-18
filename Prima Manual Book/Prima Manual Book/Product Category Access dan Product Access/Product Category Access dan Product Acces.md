@@ -1,4 +1,4 @@
-## Product Category dan Product Access
+# Product Category dan Product Access
 
 **Product Category Access** membatasi produk yang dapat diproses dalam suatu transaksi berdasarkan kategori produk yang telah dikonfigurasi di level Product Category. Jika kategori produk dikonfigurasi pada document type tertentu, hanya produk dalam kategori tersebut yang dapat diproses — produk di luar kategori tidak akan bisa digunakan.
 
