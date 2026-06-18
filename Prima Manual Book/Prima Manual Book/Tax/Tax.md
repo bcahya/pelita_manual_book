@@ -17,6 +17,7 @@ Ikuti langkah berikut untuk mengkonfigurasi tax rate tim SCI:
   - Valid from
   - Centang field **Tax Not Credited**
   - Tax Not Credited Rate
+  
   ![Konfigurasi Tax](../Tax_SCI.png "Konfigurasi Tax") {#Figure94}
   
 4. Masuk ke tab **Accounting**
@@ -46,7 +47,8 @@ Ikuti langkah berikut untuk menerapkan tax pada transaksi Purchase Order:
 2. Input **Business Partner**
 3. Input **warehouse** untuk penempatan produk
 4. Tentukan **tax** yang akan digunakan
-![Tax](../Tax_PO.png "Tax") {#Figure91}
+
+!(90%)[Tax](../Tax_PO.png "Tax") {#Figure91}
 
 5. Masuk ke tab **PO Line**
 6. Pilih **product** yang akan diproses
@@ -56,7 +58,9 @@ Ikuti langkah berikut untuk menerapkan tax pada transaksi Purchase Order:
 
 Berikut report Purchase Order untuk masing-masing skenario PPN:
 - Report Tim PPG
-![Report PO](../Report_PO_PPG.png "Report PO PPG") {#Figure92}
+
+!(70%)[Report PO](../Report_PO_PPG.png "Report PO PPG") {#Figure92}
 
 - Report Tim SCI
-![Report PO](../Report_PO_SCI.png "Report PO PPG") {#Figure93}
+
+!(70%)[Report PO](../Report_PO_SCI.png "Report PO PPG") {#Figure93}

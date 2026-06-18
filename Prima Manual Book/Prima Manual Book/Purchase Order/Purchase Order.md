@@ -46,6 +46,7 @@ Jika terdapat perubahan tujuan gudang pada Purchase Order, lakukan perubahan mel
 ![SIS Change WH](../Change_WH.png "SIS Change Warehouse") {#Figure96}
 
 4. Pilih **Warehouse** baru sebagai tujuan penerimaan barang.
+
 ![Change Warehouse](../SIS_Change_WH.png "Change Warehouse Order"){#Figure95}
 
 5. Klik **ok**

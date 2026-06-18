@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/main.md",
+                "file": "Prima Manual Book/Purchase Order/Purchase Order.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "main"
+              "title": "Purchase Order"
             }
           }
         ]
@@ -196,6 +196,8 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/Tax/Tax.md",
+    "Prima Manual Book/main.md",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/PO_Delete@-242043951.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/PO_Delete@-242043951.png",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/SIS_Delete_PO@913386263.png.checksum",
@@ -216,9 +218,7 @@
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/BP_Change@97870215.png",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/SIS_Change_BP@-260761055.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/SIS_Change_BP@-260761055.png",
-    "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Report_PO_SCI@-1801166456.png.checksum",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
-    "Prima Manual Book/Tax/Tax.md",
     "Prima Manual Book/Product Varian/Product Template.md",
     "Prima Manual Book/Product Varian/Regenerate Product Varian.md",
     "Prima Manual Book/Product Varian/Generate Product Varian.md",
@@ -227,7 +227,6 @@
     "Prima Manual Book/Import Data/Import Data.md",
     "Prima Manual Book/Tanpa judul.md",
     "Prima Manual Book/Contract Management Final/Contract Management Final.md",
-    "Prima Manual Book/main.md",
     "Prima Manual Book/Forecast Report/Forecast Report.md",
     "Prima Manual Book/Contract Management versi Old/Contract Management versi Old.md",
     "Tanpa judul.md",
