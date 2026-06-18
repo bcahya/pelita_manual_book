@@ -1,4 +1,4 @@
-# Product Category dan Product Access
+# Product dan Category Access
 
 **Product Category Access** membatasi produk yang dapat diproses dalam suatu transaksi berdasarkan kategori produk yang telah dikonfigurasi di level Product Category. Jika kategori produk dikonfigurasi pada document type tertentu, hanya produk dalam kategori tersebut yang dapat diproses — produk di luar kategori tidak akan bisa digunakan.
 
@@ -77,8 +77,8 @@ Ulangi langkah di atas untuk setiap document type lain yang memerlukan konfigura
 3. Tentukan **Locator** dan **Locator To** untuk penempatan produk.
 
 
-	![RDO](../RDO_1.png "RDO") {#Figure30
-	
+	![RDO](../RDO_1.png "RDO") {#Figure30}
+
 4. Jalankan **Generate RDO Line** — sistem menampilkan daftar produk yang telah dikonfigurasi.
 5. Pilih produk yang akan didistribusikan sesuai kebutuhan.
 
