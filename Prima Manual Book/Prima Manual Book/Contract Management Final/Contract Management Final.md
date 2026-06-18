@@ -13,6 +13,9 @@ Sebelum memulai transaksi Contract Management, siapkan master data berikut:
 Ikuti langkah berikut untuk membuat master data Cost Center:
 1. Buka menu **Cost Center**
 2. Input **Search Key** dan Name **sesuai** kebutuhan operasional
+
+![Cost Center](../Cost_Center.png "Cost Center") {#Figure66}
+
 3. Klik **save**
 
 ## Konfigurasi Product Biaya
@@ -94,7 +97,7 @@ Jika terdapat biaya deposit yang dapat diklaim, pastikan invoice atas biaya depo
 
 Sistem otomatis membentuk **Payment AR Receipt** atas klaim yang di-generate dan field **Claimed** akan tercentang secara otomatis.
 
-## Langkah Setting Kompensasi
+## Langkah Proses Kompensasi
 
 Jika terdapat kompensasi, proses kompensasi dapat dilakukan atas kontrak lain melalui field **Add Compensation**. Ikuti langkah berikut:
 

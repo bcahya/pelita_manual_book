@@ -57,7 +57,6 @@
 .include {Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md}
 .include {Stock Opname Charging/Stock Opname Charging.md}
 .include {Contract Management Final/Contract Management Final.md}
-.include {Contract Management versi Old/Contract Management versi Old.md}
 .include {Report Stock/Report Stock per Warehouse.md}
 .include {Report Stock/Report Stock per Artikel.md}
 .include {Posting Matched Invoice/Posting Matched Invoice.md}
