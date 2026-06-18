@@ -62,3 +62,5 @@
 .include {Posting Matched Invoice/Posting Matched Invoice.md}
 .include {Import Data/Import Data.md}
 .include {Forecast Report/Forecast Report.md}
+.include {Tax/Tax.md}
+.include {Purchase Order/Purchase Order.md}

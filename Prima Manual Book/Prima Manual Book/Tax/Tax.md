@@ -15,7 +15,7 @@ Ikuti langkah berikut untuk mengkonfigurasi tax rate tim SCI:
   - Name
   - Tax Category
   - Valid from
-  - Centang field Tax Not Credited
+  - Centang field **Tax Not Credited**
   - Tax Not Credited Rate
   ![Konfigurasi Tax](../Tax_SCI.png "Konfigurasi Tax") {#Figure94}
   
