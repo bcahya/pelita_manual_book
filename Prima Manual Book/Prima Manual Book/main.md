@@ -65,3 +65,4 @@
 .include {Tax/Tax.md}
 .include {Purchase Order/Purchase Order.md}
 .include {Product dan Category Access/Product dan Category Access.md}
+.include {Tools/Tools.md}
