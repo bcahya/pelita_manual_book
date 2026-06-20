@@ -23,7 +23,7 @@ Berikut ketentuan perubahan warna pada visualisasi:
 
 ![Visual Dokumen](../Visual_POP.png "Visual Document Draft") {#Figure81}
 
-Untuk dokumen selain Movement, MO, Requisition, PO, dan MR, warna pada visualisasi tidak berubah — baik saat status dokumen masih draft maupun sudah complete.
+Untuk dokumen selain Movement, Requisition, Purchase Order, dan Material Receipt, warna pada visualisasi tidak berubah — baik saat status dokumen masih draft maupun sudah complete.
 
 Berikut interaksi yang tersedia pada visualisasi:
 
