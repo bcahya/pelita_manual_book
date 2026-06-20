@@ -25,4 +25,6 @@ Ikuti langkah berikut untuk melakukan konfigurasi:
 
 6. Klik **save**.
 
-Ulangi langkah di atas untuk document type lain yang memerlukan konfigurasi serupa. Setelah konfigurasi selesai, sistem akan menampilkan pilihan-pilihan document type tersebut saat user melakukan report pada document yang bersangkutan.
+![Report PO](../Print_PO.png "Report PO") {#Figure102}
+
+Ulangi langkah di atas untuk document type lain yang memerlukan konfigurasi serupa. Setelah konfigurasi selesai, sistem akan menampilkan pilihan format report tersebut saat user melakukan report pada document yang bersangkutan.

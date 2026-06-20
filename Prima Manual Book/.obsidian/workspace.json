@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
+                "file": "Prima Manual Book/Format Report/Format Report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pelita POP Visual Data"
+              "title": "Format Report"
             }
           }
         ]
@@ -196,9 +196,13 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Format Report/Format Report.md",
-    "Report_Access.png",
+    "Print_PO.png",
+    "Prima Manual Book/Print_PO.png",
     "Prima Manual Book/Report_Access.png",
+    "Report_Access.png",
+    "Prima Manual Book/POP, BoM dan MO/Production Order Planning Subcon.md",
+    "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
+    "Prima Manual Book/Format Report/Format Report.md",
     "Tanpa judul.md",
     "Prima Manual Book/Format Report",
     "Prima Manual Book/Tools/Tools.md",
@@ -211,7 +215,6 @@
     "Complete_Bank_Stat.png",
     "Success_Delete_Bank.png",
     "SIS_Complete_Bank_Stat.png",
-    "SIS_Delete_Bank_Stat.png",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
     "Prima Manual Book/Tax/Tax.md",
     "Prima Manual Book/Tools",
@@ -239,8 +242,6 @@
     "Prima Manual Book/Report Stock/Report Stock per Artikel.md",
     "![[ReportStock_20260530133832.xlsx]].md",
     "![[Furniture_10000002_202512.csv]].md",
-    "Prima Manual Book/Unit of Measure Conversion/Implementasi di Movement.md",
-    "Prima Manual Book/Unit of Measure Conversion/Implementasi di Purchase Order.md",
     "Tanpa judul.canvas"
   ]
 }
