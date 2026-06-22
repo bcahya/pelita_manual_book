@@ -32,7 +32,7 @@ Jika perlu menghapus dokumen Bank Statement yang tidak diperlukan atau merupakan
 
 Sistem otomatis menghapus seluruh dokumen dalam rentang waktu yang dikonfigurasi.
 
->**Catatan:** Proses Delete hanya dapat dilakukan pada Bank/Cash Statement berstatus **Draft**.
+>**Catatan:** Proses Delete hanya dapat dilakukan pada dokumen Bank/Cash Statement berstatus **Draft**.
 
 ## Complete Movement
 
@@ -65,8 +65,36 @@ Jika perlu menghapus dokumen Inventory Move yang tidak diperlukan atau merupakan
 
 Sistem otomatis menghapus seluruh dokumen dalam rentang waktu yang dikonfigurasi.
 
+>**Catatan:** Proses Delete hanya dapat dilakukan pada dokumen Inventory Move berstatus **Draft**.
 ## Complete Physical Inventory
 
+Jika perlu meng-complete dokumen Physical Inventory dalam jumlah banyak gunakan tools **SIS Complete Physical Inventory**. Ikuti langkah berikut:
 
+1. Buka menu **SIS Complete Physical Inventory**
+2. Input **Movement Date**
+3. Pilih **Document Type**
+
+![SIS Complete](../SIS_Complete_PhysInven.png "SIS Complete Physical Inventory"){#Figure107}
+
+4. Klik ok
+
+![Complete](../Complete_Phys_Inven.png "Berhasil Complete") {#Figure108}
+
+Sistem otomatis meng-complete seluruh dokumen dalam rentang waktu yang dikonfigurasi.
 ## Delete Physical Inventory
 
+Jika perlu menghapus dokumen Physical Inventory yang tidak diperlukan atau merupakan duplikat, gunakan tools **SIS Delete Physical Inventory**. Ikuti langkah berikut:
+
+1. Buka menu **SIS Delete Physical Inventory**
+2. Input **Movement Date**
+3. Pilih **Document Type**
+
+![SIS Delete](../SIS_Del_PhysInven.png "SIS Delete Physical Inventory") {#Figure109}
+
+4. Klik **ok**
+
+![Delete|406](../Delete_PhysInven.png "Berhasil Delete Physical Inventory") {#Figure110}
+
+Sistem otomatis menghapus seluruh dokumen dalam rentang waktu yang dikonfigurasi.
+
+>**Catatan:** Proses Delete hanya dapat dilakukan pada dokumen Physical Inventory yang berstatus **Draft**.
