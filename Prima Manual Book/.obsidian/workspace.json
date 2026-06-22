@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Format Report/Format Report.md",
+                "file": "Prima Manual Book/Tools/Tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Format Report"
+              "title": "Tools"
             }
           }
         ]
@@ -196,25 +196,25 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Print_PO.png",
-    "Prima Manual Book/Print_PO.png",
-    "Prima Manual Book/Report_Access.png",
-    "Report_Access.png",
+    "Prima Manual Book/SIS_Complete_Move.png",
+    "Prima Manual Book/Move_Complete.png",
+    "Prima Manual Book/SIS_Delete_Move.png",
+    "Prima Manual Book/Succes_Delete_Move.png",
+    "Succes_Delete_Move.png",
+    "Move_Complete.png",
+    "SIS_Delete_Move.png",
+    "SIS_Complete_Move.png",
+    "SIS_Complete_Bank.png",
+    "SIS_Delete_Bank.png",
+    "Prima Manual Book/SIS_Delete_Bank.png",
+    "Prima Manual Book/Format Report/Format Report.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning Subcon.md",
     "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
-    "Prima Manual Book/Format Report/Format Report.md",
     "Tanpa judul.md",
     "Prima Manual Book/Format Report",
     "Prima Manual Book/Tools/Tools.md",
     "Tanpa judul",
     "Prima Manual Book/main.md",
-    "Prima Manual Book/SIS_Complete_Bank_Stat.png",
-    "Prima Manual Book/SIS_Delete_Bank_Stat.png",
-    "Prima Manual Book/Success_Delete_Bank.png",
-    "Prima Manual Book/Complete_Bank_Stat.png",
-    "Complete_Bank_Stat.png",
-    "Success_Delete_Bank.png",
-    "SIS_Complete_Bank_Stat.png",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
     "Prima Manual Book/Tax/Tax.md",
     "Prima Manual Book/Tools",
