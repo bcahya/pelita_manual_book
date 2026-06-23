@@ -32,16 +32,34 @@ Di SCI, terdapat 4 tipe charging untuk stock opname:
   
 ## Konfigurasi API
 
+### Harga Netto Produk
+
 Konfigurasi API ini bertujuan untuk mengambil data harga netto produk yang digunakan dalam stock opname, bersumber dari aplikasi Sky. Ikuti langkah berikut untuk melakukan konfigurasi API di System Configurator:
 1. Buka menu **System Configurator**
 2. Klik **New**
-3. Input nama configurator: **SIS_BASEURI_SERVICE_INVENTORY**
-4. Pada field **Configured Value**, input: http://localhost:8019
+3. Input nama configurator: **SIS_INVENTORY_CHARGE5_URL**
+4. Pada field **Configured Value**, input: https://36.94.102.63:5599
 5. Klik **save**
 
-![API](../SysConfig_API.png "Sys Config") {#Figure77}
+![API](../SIS_Type5.png "Sys Config") {#Figure77}
 
 Setelah konfigurasi selesai, sistem akan menampilkan data harga netto produk melalui API di tab **SIS Inventory Charge Log** setiap kali stock opname charging dijalankan. Jika produk tidak memiliki harga netto, sistem otomatis menggunakan harga default sebesar 75% dari ICPL.
+### Toleransi Charge
+
+Konfigurasi ini bertujuan untuk mengambil data quantity penjualan dari POS yang bersumber dari aplikasi di luar sistem. Data tersebut digunakan untuk perhitungan toleransi charge stock opname tipe 1–4 untuk tim SCI.
+
+Ikuti langkah berikut untuk melakukan konfigurasi API di System Configurator:
+
+1. Buka menu **System Configurator**
+2. Klik **New**
+3. Input nama configurator: **SIS_INVENTORY_EXT_URL**
+4. Pada field **Configured Value**, input: http://36.95.119.12:5558
+
+![Konfigurasi](../SIS_Tolerance.png "Konfigurasi Sistem") {#Figure90}
+
+5. Klik **save**
+
+Karena data quantity penjualan bersumber dari POS di luar sistem, konfigurasi ini diperlukan agar sistem dapat mengambil dan memperhitungkan data tersebut dalam kalkulasi toleransi charge stock opname.
 ## Konfigurasi Product untuk Stock Opname
 
 Tidak semua product dilakukan stock opname — hanya product tertentu yang telah dipilah oleh perusahaan. Sebelum menjalankan stock opname, lakukan konfigurasi product beserta charge type-nya terlebih dahulu.
@@ -112,11 +130,8 @@ Ikuti langkah-langkah berikut untuk membuat dokumen stock opname:
 
 
 	![Line](../Stock_Opname_Line.png "Inventory Count Line") {#Figure52}
-
-
 	
 11. Sistem otomatis menampilkan **Quantity Book**
-
 12. Ulangi langkah 7-11 untuk setiap produk
 13. Klik **Save**
 14. Jalankan **SIS Generate Inventory Charge Amount** — sistem menghitung dan menampilkan kalkulasi charge amount untuk seluruh produk.
@@ -125,31 +140,21 @@ Ikuti langkah-langkah berikut untuk membuat dokumen stock opname:
 Setelah dokumen stock opname selesai dibuat, gunakan tab **SIS Inventory Charge Log** untuk melihat detail perhitungan charge amount per tipe. Ikuti langkah berikut:
 
 1. Buka menu **Physical Inventory**
-2. Pilih **warehouse** sesuai konfigurasi
-3. Tentukan tanggal stock opname pada field **Movement Date**
-4. Masuk ke Tab **Inventory Count Line**
-5. Pilih produk yang akan diproses
-6. Tentukan quantity produk yang akan diproses
-7. Pada field **Inventory Type** tentukan sesuai kebutuhan
-8. Klik **save**
-9. Jalankan **SIS Generate Inventory Charge Amount**
-10. Masuk ke tab S**IS Inventory Charge Log**
-11. Pilih Log sequence pertama
-12. Sistem akan menampilkan perhitungan charge stock opname untuk masing-masing tipe
+2. Masuk ke tab **SIS Inventory Charge Log**
+
+![Charge](../Charge_Log.png "Charge Log") {#Figure53}
+
+3. Pilih Log sequence pertama
+4. Sistem akan menampilkan perhitungan charge stock opname untuk masing-masing tipe
 
 Sistem juga menampilkan harga netto untuk produk yang dilakukan stock opname. Harga netto produk bersumber dari aplikasi **Sky** dan dapat dilihat melalui tab **SIS Inventory Charge Log** di iDempiere. Ikuti langkah berikut:
 
 1. Buka menu **Physical Inventory**
-2. Pilih **warehouse** sesuai konfigurasi
-3. Tentukan tanggal stock opname pada field **Movement Date**
-4. Masuk ke tab **Inventory Count Line**
-5. Pilih produk yang akan diproses
-6. Tentukan quantity produk yang akan diproses
-7. Pada field **Inventory Type** tentukan sesuai kebutuhan
-8. Klik **save**
-9. Jalankan **SIS Generate Inventory Charge Amount**
-10. Masuk ke tab **SIS Inventory Charge Log**
-11. Pilih Log sequence kedua
-12. Sistem akan menampilkan harga netto untuk artikel yang dipilih
+2. Masuk ke tab **SIS Inventory Charge Log**
+
+![Charge](../Price_Log.png "Price Log") {#Figure54}
+
+3. Pilih Log sequence kedua
+4. Sistem akan menampilkan harga netto untuk artikel yang dipilih
 
 Jika produk tidak memiliki harga netto, sistem otomatis menggunakan harga default sebesar **75% dari ICPL**.
