@@ -102,7 +102,7 @@ Satu routing dapat digunakan untuk beberapa produk selama proses produksi dan pe
 2. Pada Tab **Routing**, lakukan konfigurasi sesuai dengan alur produksi.
 3. Klik **Save**
 
-Routing juga dapat dikonfigurasi langsung pada level produk. Berikut langkah implementasi routing di Product:
+Routing juga dapat dikonfigurasi langsung pada level **Product**. Berikut langkah implementasi routing di Product:
 
 1. Buka Menu **Product**
 
@@ -110,6 +110,25 @@ Routing juga dapat dikonfigurasi langsung pada level produk. Berikut langkah imp
 
 2. Pada Tab **Routing**, konfigurasi sesuai dengan alur produksi. 
 3. Klik **Save**
+
+### Field "Copy Routing"
+
+Field **Copy Routing** berfungsi untuk menyalin routing yang telah dikonfigurasi di level Product Category ke produk-produk yang menggunakan kategori tersebut. Jika Product Category belum memiliki konfigurasi routing, user dapat menambahkan routing terlebih dahulu, kemudian menyalinnya ke produk yang sudah ada (_existing_).
+
+Ikuti langkah berikut untuk menjalankan Copy Routing di Product Category:
+
+1. Buka menu **Product Category**
+2. Pada Tab **Routing**, lakukan konfigurasi sesuai dengan alur produksi.
+3. Klik tombol **Copy Routing**
+
+![Routing](../Copy_Rout.png "Copy Routing") {#Figure67}
+
+4. Klik **ok**
+5. Klik **save**
+
+Di belakang layar, sistem memperbarui routing pada seluruh produk yang menggunakan Product Category tersebut. Namun, jika produk sudah memiliki konfigurasi routing sebelumnya, sistem mempertahankan routing yang ada dan tidak menimpanya.
+
+> **Catatan:** Copy Routing hanya berfungsi untuk menyalin, bukan memperbarui. Produk yang sudah memiliki routing tidak akan ter-update meskipun Copy Routing dijalankan.
 
 ### Manufacturing Order
 

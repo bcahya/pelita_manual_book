@@ -10,7 +10,8 @@ Langkah selanjutnya adalah mengimplementasikan Item Type pada Product Category d
 2. Pada field **Item Type**, pilih Item Type yang telah dikonfigurasi sesuai kebutuhan.
 3. Klik **Save** untuk menyimpan konfigurasi.
 
-## Langkah Pembuatan Produk dengan Product Segment
+![Item Type](../Item_PC.png "Konfigurasi di Product Category") {#Figure105}
+## Langkah Pembuatan Produk Baru dengan Product Segment
 
 1. Buka Menu **Product**. 
 2. Pada field **Product Type**, pilih **SIS Template**. 
@@ -19,6 +20,10 @@ Langkah selanjutnya adalah mengimplementasikan Item Type pada Product Category d
 ![Product](../Product_A.png "Product Type") {#Figure6}
 
 4. Klik **Save**. Saat produk disimpan, sistem otomatis membuat **Kode artikel** dan **Nama produk**. Di sistem, kode artikel disebut sebagai **Search Key**.
+
+Informasi segment yang telah dikonfigurasi akan muncul di header Product pada field **Product Info**. Field ini menampilkan informasi segment sesuai urutan yang dikonfigurasi di Item Type.
+
+![Informasi Segment](../Info_Segment.png "Informasi Segment di Item Type") {#Figure7}
 
 Apabila produk memiliki varian, user dapat mengatur varian tersebut pada menu **Variant Attribute**.
 

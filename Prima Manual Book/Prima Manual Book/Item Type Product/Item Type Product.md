@@ -25,13 +25,21 @@ Langkah-Langkah Konfigurasi Item Type:
 
 	![Item Type](../ItemType.png "Item Type") {#Figure4}
 
-4. Masuk ke **Item Type Line**. Pada bagian Item Type Line, terdapat dua jenis konfigurasi segment, yaitu **Sequence** (nomor urut otomatis) dan **Static** (Kode tetap artikel), contoh: 59 untuk Brand Polo, 28 untuk MClass Kemeja). Penggunaan Sequence bersifat opsional dan disesuaikan dengan kebutuhan perusahaan.
+4. Masuk ke **Item Type Line**. Pada bagian Item Type Line, terdapat dua jenis konfigurasi segment, yaitu:
+  - Sequence — Nomor urut yang di-generate otomatis oleh sistem.
+  - Static — Kode tetap pada artikel, contoh: 59 untuk Brand Polo, 28 untuk MClass Kemeja. 
+  
+    Penggunaan Sequence bersifat opsional dan disesuaikan dengan kebutuhan perusahaan.
 
 
 	![Item Type Line](../Item_Type2.png "Item Type Line") {#Figure5}
 
 
-5. Klik **Save**
+5. Jika memilih tipe **Sequence**, tentukan jumlah digit nomor urut yang dibutuhkan (1, 2, 3, atau 4 digit). Field **Digit Character** akan muncul secara otomatis untuk mengatur jumlah digit tersebut.
+
+	![Sequence](../Sequence.png "Sequence") {#Figure6}
+	
+6. Klik **Save**
 
 ***Urutan segment pada Item Type mengikuti standar kode perusahaan karena urutan tersebut menentukan hasil akhir kode artikel.***
 

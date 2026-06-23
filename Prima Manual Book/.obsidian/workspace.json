@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Tools/Tools.md",
+                "file": "Prima Manual Book/Routing/Routing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tools"
+              "title": "Routing"
             }
           }
         ]
@@ -196,23 +196,26 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Copy_Rout.png",
+    "Prima Manual Book/Copy_Rout.png",
+    "Prima Manual Book/Item Type Product/Implementasi Item Type di Product.md",
+    "Info_Segment.png",
+    "Prima Manual Book/Info_Segment.png",
+    "Item_PC.png",
+    "Prima Manual Book/Item_PC.png",
+    "Prima Manual Book/Item Type Product/Item Type Product.md",
+    "Sequence 1.png",
+    "Sequence.png",
+    "Prima Manual Book/Sequence.png",
+    "Prima Manual Book/Item Type Product/Product Segment.md",
+    "Prima Manual Book/Tools/Tools.md",
     "Delete_PhysInven.png",
     "SIS_Del_PhysInven.png",
-    "SIS_Complete_PhysInven.png",
-    "Complete_Phys_Inven.png",
-    "Prima Manual Book/Complete_Phys_Inven.png",
-    "Prima Manual Book/SIS_Complete_PhysInven.png",
-    "Prima Manual Book/SIS_Del_PhysInven.png",
-    "Prima Manual Book/Delete_PhysInven.png",
-    "Prima Manual Book/SIS_Complete_Move.png",
-    "Prima Manual Book/Move_Complete.png",
-    "Prima Manual Book/SIS_Delete_Move.png",
     "Prima Manual Book/Format Report/Format Report.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning Subcon.md",
     "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
     "Tanpa judul.md",
     "Prima Manual Book/Format Report",
-    "Prima Manual Book/Tools/Tools.md",
     "Tanpa judul",
     "Prima Manual Book/main.md",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
@@ -239,9 +242,6 @@
     "Prima Manual Book/Contract Management versi Old/Contract Management versi Old.md",
     "Prima Manual Book/Stock Opname Charging/Stock Opname Charging.md",
     "Prima Manual Book/Report Stock/Report Stock per Warehouse.md",
-    "Prima Manual Book/Report Stock/Report Stock per Artikel.md",
-    "![[ReportStock_20260530133832.xlsx]].md",
-    "![[Furniture_10000002_202512.csv]].md",
     "Tanpa judul.canvas"
   ]
 }
