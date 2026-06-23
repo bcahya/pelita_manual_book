@@ -63,6 +63,9 @@
 .include {Import Data/Import Data.md}
 .include {Forecast Report/Forecast Report.md}
 .include {Tax/Tax.md}
+.include {Attribute Set Instance/Attribute Set.md}
 .include {Purchase Order/Purchase Order.md}
 .include {Product dan Category Access/Product dan Category Access.md}
 .include {Tools/Tools.md}
+.include {Format Report/Format Report.md}
+.include {Forecast Report/Forecast Report.md}
