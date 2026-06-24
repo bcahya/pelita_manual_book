@@ -104,27 +104,41 @@ Sistem otomatis menghapus seluruh dokumen dalam rentang waktu yang dikonfigurasi
 ## Invoice
 ### Complete
 
-Complete dokumen invoice adalah langkah final yang mengeksekusi logika bisnis, memperbarui stok, dan menghasilkan jurnal akuntansi otomatis. Fitur ini digunakan jika perusahaan memerlukan confirm banyak dokumen invoice yang bahkan mencapai puIuhan. Ikuti langkah berikut untuk melakukan complete dokumen invoice:
+Fitur SIS Complete Invoice digunakan untuk meng-complete dokumen invoice dalam jumlah banyak — bahkan hingga puluhan — sekaligus. Proses complete mengeksekusi logika bisnis, memperbarui stok, dan menghasilkan jurnal akuntansi secara otomatis.
 
-1. Buka menu **SIS Complete Invoice**
-2. Input **Date Invoice**
-3. Pilih **Document Type**
-4. Pilih **Business Partner**
-5. Klik ok
+Ikuti langkah berikut untuk meng-complete dokumen invoice:
 
-Sistem otomatis meng-complete seluruh dokumen dalam rentang waktu yang dikonfigurasi. Saat dokumen sudah dicomplete maka nominal di invoice tidak bisa diubah dan Invoice resmi masuk ke dalam daftar piutang/utang bisnis dan siap ditarik ke jendela _Payment / Receipt_.
+1. Buka menu **SIS Complete Invoice**.
+2. Input **Date Invoice**.
+3. Pilih **Document Type**.
+4. Pilih **Business Partner**.
+
+![SIS Complete Invoice](../SIS_Complete_Inv.png "SIS Complete Invoice") {#Figure111}
+
+5. Klik **OK**.
+
+![Done complete](../Complete_Inv.png "Done Complete") {#Figure112}
+
+Sistem otomatis meng-complete seluruh dokumen dalam rentang waktu yang dikonfigurasi. Setelah dokumen di-complete, nominal invoice tidak dapat diubah dan invoice resmi masuk ke dalam daftar piutang/utang bisnis, serta siap diproses Payment/Receipt.
 
 >**Catatan:** Proses Complete hanya dapat dilakukan pada dokumen Invoice yang berstatus **Draft**.
 ### Delete
 
-Fitur ini bertujuan untuk **menghapus baris atau seluruh dokumen** yang masih berstatus **Draft (DR)** atau **In Progress (IP)**. Ikuti langkah berikut untuk melakukan delete dokumen invoice:
+Fitur SIS Delete Invoice digunakan untuk menghapus baris atau seluruh dokumen invoice yang masih berstatus Draft atau In Progress. Gunakan fitur ini untuk menghapus tagihan yang salah input atau salah nominal sebelum terjurnal, serta membersihkan antrean dokumen dari modul Accounts Receivable atau Accounts Payable.
 
-1. Buka menu **SIS Delete Invoice**
-2. Input **Date Invoice**
-3. Pilih **Document Type**
-4. Pilih **Business Partner**
-5. Klik ok
+Ikuti langkah berikut untuk menghapus dokumen invoice:
 
-Sistem otomatis menghapus seluruh dokumen dalam rentang waktu yang dikonfigurasi. Saat dokumen dihapus itu artinya sistem menghapus draf tagihan yang salah input atau salah nominal sebelum terjurnal. Menghapus _antrean_ dokumen dari modul piutang (_Accounts Receivable_) atau utang (_Accounts Payable_)
+1. Buka menu **SIS Delete Invoice**.
+2. Input **Date Invoice**.
+3. Pilih **Document Type**.
+4. Pilih **Business Partner**.
+
+![SIS Delete Invoice](../SIS_Del_Inv.png "SIS Delete Invoice") {#Figure113}
+
+5. Klik **OK**.
+
+![Delete](../Del_Inv.png "Done Delete") {#Figure114}
+
+Sistem otomatis menghapus seluruh dokumen dalam rentang waktu yang dikonfigurasi.
 
 >**Catatan:** Proses Delete hanya dapat dilakukan pada dokumen Invoice yang berstatus **Draft**.

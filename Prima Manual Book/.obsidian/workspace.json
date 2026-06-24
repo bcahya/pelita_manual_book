@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Tools/Tools.md",
+                "file": "Prima Manual Book/Asset Management/Asset Management.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tools"
+              "title": "Asset Management"
             }
           }
         ]
@@ -196,6 +196,18 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Ass_Dep.png",
+    "Prima Manual Book/Ass_Dep.png",
+    "Ass_Trans.png",
+    "Ass_Add.png",
+    "Prima Manual Book/Ass_Trans.png",
+    "Prima Manual Book/Ass_Add.png",
+    "Ass_Complete.png",
+    "Prima Manual Book/Ass_Complete.png",
+    "WH_Dep.png",
+    "Prima Manual Book/WH_Dep.png",
+    "Prima Manual Book/Move_Ass.png",
+    "Prima Manual Book/Tools/Tools.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Prima Manual Book/Asset Management",
@@ -206,22 +218,11 @@
     "Prima Manual Book/main.md",
     "Prima Manual Book/Import Data/Import Data.md",
     "Prima Manual Book/Format Report/Format Report.md",
-    "Prima Manual Book/Tools/Tools.md",
     "Prima Manual Book/Stock Opname Charging/Stock Opname Charging.md",
-    "Price_Log.png",
-    "Charge_Log.png",
-    "Prima Manual Book/Price_Log.png",
-    "Prima Manual Book/Charge_Log.png",
-    "Prima Manual Book/SIS_Type5.png",
-    "SIS_Tolerance.png",
-    "Prima Manual Book/SIS_Tolerance.png",
     "Prima Manual Book/Routing/Routing.md",
     "Prima Manual Book/Product dan Category Access/Product dan Category Access.md",
     "Prima Manual Book/Item Type Product/Item Type Product.md",
-    "Copy_Rout.png",
-    "Prima Manual Book/Copy_Rout.png",
     "Prima Manual Book/Item Type Product/Implementasi Item Type di Product.md",
-    "Info_Segment.png",
     "Prima Manual Book/Item Type Product/Product Segment.md",
     "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
     "Tanpa judul.md",
@@ -241,7 +242,6 @@
     "Prima Manual Book/Product Varian/Product Template.md",
     "Prima Manual Book/Product Varian/Regenerate Product Varian.md",
     "Prima Manual Book/Product Varian/Generate Product Varian.md",
-    "Prima Manual Book/Tools Change/Product Category Access.md",
     "Tanpa judul.canvas"
   ]
 }
