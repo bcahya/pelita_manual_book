@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Asset Management/Asset Management.md",
+                "file": "Prima Manual Book/Tools/Tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Asset Management"
+              "title": "Tools"
             }
           }
         ]
@@ -196,8 +196,8 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
+    "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Prima Manual Book/Asset Management",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning Subcon.md",
