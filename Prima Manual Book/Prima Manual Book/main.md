@@ -10,6 +10,8 @@
 
 .pagemargin {bottomright}
     .currentpage
+.pagemargin {bottomleft}
+    Versi 2026-06-15
 .pageformat margin:{2cm}
 .pageformat bordertop:{1px} borderbottom:{1px}
 
@@ -56,8 +58,5 @@
 .include {Purchase Price Contract/Purchase Price Contract.md}
 .include {Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md}
 .include {Stock Opname Charging/Stock Opname Charging.md}
-.include {Contract Management versi Old/Contract Management versi Old.md}
-.include {Report Stock/Report Stock per Warehouse.md}
-.include {Report Stock/Report Stock per Artikel.md}
 .include {Posting Matched Invoice/Posting Matched Invoice.md}
 .include {Import Data/Import Data.md}
