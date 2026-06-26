@@ -1,4 +1,5 @@
-# Attribute Set
+# Attribute Set Instance
+## Attribute Set
 
 Attribute Set adalah fitur yang memungkinkan pencatatan atribut tambahan pada produk di level lot, serial number, atau batch. Fitur ini sangat berguna untuk produk yang memerlukan pelacakan kualitas, tanggal kedaluwarsa, atau identifikasi individual.
 ## Komponen Attribute Set

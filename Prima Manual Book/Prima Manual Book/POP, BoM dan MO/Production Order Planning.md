@@ -68,4 +68,26 @@ Produk defect akan diproses movement manual ke locator sesuai konfigurasi pada B
 
 	![Production Line](../Prod_Line_Reg.png "Production") {#Figure21}
 
+Di header Production Order Planning, terdapat tombol **SIS Generate POP BoM** dan **Generate MO**. Kedua tombol ini memungkinkan user men-generate BoM dan MO untuk seluruh line dalam satu POP sekaligus, tanpa perlu melakukan generate satu per satu.
+### SIS Generate POP BoM
 
+Ikuti langkah berikut untuk men-generate BoM pada seluruh line POP:
+
+1. Buka menu **Production Order Planning**.
+2. Pilih dokumen yang akan diproses.
+3. Masuk ke header **Production Order Planning**.
+4. Klik tombol **SIS Generate POP BoM**.
+5. Klik **ok**.
+
+Sistem otomatis men-generate BoM pada seluruh line POP tersebut.
+### Generate MO
+
+Ikuti langkah berikut untuk men-generate Manufacturing Order (MO) pada seluruh line POP:
+
+1. Buka menu **Production Order Planning**.
+2. Pilih dokumen yang akan diproses.
+3. Masuk ke header **Production Order Planning**.
+4. Klik tombol **Generate MO**.
+5. Klik **OK**.
+
+Sistem otomatis men-generate MO pada seluruh line POP tersebut.

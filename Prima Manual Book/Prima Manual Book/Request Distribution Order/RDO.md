@@ -25,7 +25,7 @@ Pada konfigurasi Document Type RDO, terdapat beberapa field utama yang wajib dii
 ## Alur Proses Request Distribution Order di Sistem
 
 1. Lakukan assign produk melalui fitur **Generate Product** pada menu **Product Access**.
-2. Buka menu Request Distribution Order (**RDO**).
+2. Buka menu **SIS RDO**
 
 
 	![RDO](../RDO_1.png "RDO") {#Figure30}

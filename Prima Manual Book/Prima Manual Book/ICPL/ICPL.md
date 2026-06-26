@@ -65,7 +65,6 @@ ICPL With Reference digunakan untuk membuat versi harga baru berdasarkan ICPL Ba
 4. Pada field **ICPL Reference**, pilih ICPL Base yang akan dijadikan acuan.
 	
 
-
 ![Reference](../Ref_ICPL.png "ICPL Reference") {#Figure35}
 
 
@@ -113,9 +112,12 @@ Setiap warehouse atau outlet harus memiliki ICPL yang digunakan dalam transaksi.
 - ICPL Intercompany
 - ICPL Stock Opname
 
-![ICPL Warehouse](../ICPL_WH.png "Konfigurasi ICPL di Warehouse") {#Figure38}
+!(70%)[ICPL Warehouse](../ICPL_WH.png "Konfigurasi ICPL di Warehouse") {#Figure38}
 
-Selain itu, menu **Warehouse & Locator** memiliki tab **Listing ICPL for Warehouse** untuk menampilkan histori perubahan harga. Jika tidak ada perubahan harga, tab tersebut tidak akan menampilkan data.
+Jika terdapat perubahan ICPL atau Price List pada warehouse, lakukan perubahan langsung melalui field **ICPL 1–4**. Setiap perubahan akan tercatat secara otomatis di tab **Listing ICPL for Warehouse**, yang berfungsi menampilkan histori perubahan ICPL pada warehouse tersebut. Berikut contoh perubahan ICPL untuk warehouse:
+
+!(80%)[Perubahan ICPL](../Change_ICPL_WH.png "Change ICPL Warehouse") {#Figure101}
+
 ### ICPL Pada Purchase Order
 
 ICPL dapat digunakan untuk menentukan harga pembelian dari vendor. Setiap vendor dapat memiliki price list yang berbeda sesuai kesepakatan harga atau kontrak pembelian. Satu vendor hanya dapat menggunakan satu ICPL Purchase.

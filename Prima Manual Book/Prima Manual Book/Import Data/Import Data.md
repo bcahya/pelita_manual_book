@@ -34,21 +34,12 @@ FileZilla adalah aplikasi transfer file open source yang digunakan untuk meminda
 
 ## Import Data MT940
 
-MT940 adalah format standar SWIFT (Society for Worldwide Interbank Financial Telecommunication) untuk rekening koran elektronik (electronic bank statement). File MT940 berisi informasi transaksi perbankan mencakup saldo awal, daftar debit/kredit, dan saldo akhir yang dikirim bank kepada nasabah korporat. Di iDempiere, MT940 digunakan dalam modul Bank Statement. Berikut contoh format file yang digunakan untuk import data Bank Statement.
+MT940 adalah format standar SWIFT (Society for Worldwide Interbank Financial Telecommunication) untuk rekening koran elektronik (_electronic bank statement_). File MT940 memuat informasi transaksi perbankan — mencakup saldo awal, daftar debit/kredit, dan saldo akhir — yang dikirimkan bank kepada nasabah korporat. Di iDempiere, MT940 digunakan dalam modul **Bank Statement**.
 
-
+Format MT940 umumnya menggunakan encoding **UTF-8**. Namun, sistem iDempiere saat ini juga mendukung format MT940 dengan encoding **ISO-8859-1**. Berikut contoh format file yang digunakan untuk import data Bank Statement.
 
     
    ![Format Bank Statement](../Format_MT940.png "Format MT940") {#Figure91}
-
-
-
-
-
-
-
-
-
 
 Langkah Import File MT940:
 1. Siapkan file MT940 dari bank. File MT940 menggunakan format **TXT**.
@@ -78,10 +69,7 @@ Langkah Import File MT940:
 
 Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi, value product/search key pada product, dan tahun bulan transaksi. Berikut contoh format file yang digunakan untuk import data PO Kecil.
 
-
    ![Format PO](../Format-POKecil.png "Format PO Kecil") {#Figure90}
-
-
 
 
 Langkah Import File PO Kecil:
@@ -99,3 +87,11 @@ Langkah Import File PO Kecil:
 5. Sistem iDempiere akan membuat dokumen PO dengan status Draft atau In Progress, yang selanjutnya dapat di-confirm sesuai kebutuhan operasional.
 
 ![Purchase Order](../Hasil_Import_PO.png "Hasil Import Purchase Order") {#Figure90}
+
+Jika file PO Kecil yang diimport tidak sesuai format, sistem tidak akan memproses file tersebut ke iDempiere. Contoh ketidaksesuaian format yang umum terjadi antara lain penggunaan delimiter **;** atau penggunaan **Product ID** pada nama file yang seharusnya menggunakan **Product Value**.
+
+Saat import gagal, file tidak berpindah ke folder **done**. Sistem otomatis membuat folder **error** pada direktori PO Import, yang berisi file txt dengan informasi detail penyebab kegagalan import.
+
+![Error](../Error.png "Log Error File Import") {#Figure91}
+
+Jika file pertama belum diperbaiki dan file kedua yang diimport juga tidak sesuai format, sistem menampilkan pesan error yang sama. File akan tetap berada di folder PO Import dan tidak akan berpindah hingga kesalahan pada file diperbaiki.
