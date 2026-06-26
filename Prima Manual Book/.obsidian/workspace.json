@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Project Management/Project Management.md",
+                "file": "Prima Manual Book/main.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project Management"
+              "title": "main"
             }
           }
         ]
@@ -196,6 +196,7 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/Project Management/Project Management.md",
     "Generate_Ass-Proj.png",
     "Prima Manual Book/Generate_Ass-Proj.png",
     "Generate_Inv_Proj.png",
@@ -207,8 +208,6 @@
     "Prima Manual Book/Format Report/Format Report.md",
     "Process_1.png",
     "Prima Manual Book/Process_1.png",
-    "Prima Manual Book/Process_Detail.png",
-    "Prima Manual Book/Project Management/Project Management.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/main.md",
     "Prima Manual Book/Project Management",
