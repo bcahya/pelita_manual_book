@@ -52,7 +52,7 @@ Project yang telah selesai dapat dijadikan aset, karena perusahaan telah mengelu
 
 1. **Product Category untuk Project Asset** — Gunakan costing method **Standard Costing** dan costing level **Batch/Lot**. Pada konfigurasi accounting, field **Product Expense** menggunakan akun **Project Asset** atau **Construction In Progress**.
 2. **Produk Komponen Project** — Buat produk dengan Product Type **Expense**. Pada konfigurasi accounting produk ini, field **Product Asset** dan **Cost Adjustment** menggunakan akun **Project Asset** atau **Construction In Progress**.
-3. **Produk Aset** — Buat produk yang akan dijadikan aset atas project. Sebelumnya, konfigurasi **Attribute Set** terlebih dahulu — Attribute Set ini menyimpan data kode project dan nilai project. Selain itu, konfigurasi **Asset Type** dengan costing method **Average PO** dan costing level **Batch/Lot**. Penggunaan Average PO bertujuan agar nilai Product Expense mengikuti seluruh nilai yang ada di project.
+3. **Produk Asset** — Buat produk yang akan dijadikan aset atas project. Sebelumnya, konfigurasi **Attribute Set** terlebih dahulu — Attribute Set ini menyimpan data kode project dan nilai project. Selain itu, konfigurasi **Asset Type** dengan costing method **Average PO** dan costing level **Batch/Lot**. Penggunaan Average PO bertujuan agar nilai Product Expense mengikuti seluruh nilai yang ada di project.
 ### Langkah Generate Asset from Project
 
 Setelah project selesai atau memasuki tahap closing, jalankan **Generate Asset From Project**. Ikuti langkah berikut:
