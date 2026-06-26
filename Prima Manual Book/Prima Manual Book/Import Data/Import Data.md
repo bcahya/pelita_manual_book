@@ -90,7 +90,7 @@ Langkah Import File PO Kecil:
 
 Jika file PO Kecil yang diimport tidak sesuai format, sistem tidak akan memproses file tersebut ke iDempiere. Contoh ketidaksesuaian format yang umum terjadi antara lain penggunaan delimiter **;** atau penggunaan **Product ID** pada nama file yang seharusnya menggunakan **Product Value**.
 
-Saat import gagal, file tidak berpindah ke folder **done**. Sistem otomatis membuat folder **error** pada direktori PO Import, yang berisi file **.txt** dengan informasi detail penyebab kegagalan import.
+Saat import gagal, file tidak berpindah ke folder **done**. Sistem otomatis membuat folder **error** pada direktori PO Import, yang berisi file txt dengan informasi detail penyebab kegagalan import.
 
 ![Error](../Error.png "Log Error File Import") {#Figure91}
 

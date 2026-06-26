@@ -46,7 +46,7 @@ Berikut Document Base Type yang telah terdefinisi di sistem iDempiere:
 | SIS MPS                     | MPS   |
 | SIS Price Contract          | SPC   |
 | SIS RDO                     | RDO   |
-
+"Document Base Type"{#Tabel5}
 ## Konfigurasi Document Type di Sistem
 
 1. Buka menu **Window, Tab and Field**.
@@ -130,3 +130,16 @@ Fitur Auto Invoice memungkinkan sistem membuat **AP Invoice** secara otomatis sa
 ![Auto](../Auto_Inv.png "Auto Invoice") {#Figure113}
 
 5. Klik save.
+
+## Document Type SIS RDO
+
+RDO adalah dokumen yang digunakan untuk mendistribusikan dan mengalokasikan permintaan barang ke warehouse tujuan masing-masing. Dokumen **SIS RDO** memiliki beberapa field khusus yang hanya tersedia pada dokumen ini, yaitu:
+
+1. **Document Type Delivery** — Mencatat barang keluar dari gudang asal.
+2. **Document Type Receipt** — Mencatat penerimaan barang dari vendor.
+3. **Warehouse Intransit** — Gudang penerima barang dari gudang asal.
+4. **Locator Transit** — Lokasi penyimpanan di gudang penerima barang.
+
+![RDO](../Doc_RDO.png "SIS RDO") {#Figure114}
+
+Saat dokumen RDO di-complete, sistem otomatis membentuk dokumen **Delivery** dan merilis dokumen **Receipt**. Oleh karena itu, pastikan konfigurasi **Document Type** untuk Delivery dan Receipt sudah dilakukan sebelum memproses RDO.
