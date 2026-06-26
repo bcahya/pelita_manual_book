@@ -27,7 +27,7 @@ Ikuti langkah berikut untuk membuat Purchase Price Contract:
 
 4. Masuk ke tab **SIS Purchase Price Contract Line**
 
-5. Input **Produk**, **Harga Produk** dan **Quantity Produk**
+5. Input **Produk**, **Harga Produk**, **Quantity Produk** dan **UoM**
 
 
 	![Line](../Purchase_Price_Contract_Line.png "Purchase Price Contract Line") {#Figure45}

@@ -10,10 +10,23 @@ Konfigurasi ini bertujuan untuk:
 - Menerapkan Print Format berbeda — setiap document type dapat menggunakan Print Format PDF dengan kolom, layout, atau logo yang berbeda.
 - Menerapkan workflow approval berbeda — misalnya, PO Inventaris memerlukan approval lebih tinggi dibanding PO Bahan Baku.
 - Memudahkan filter dan pelaporan per kategori pembelian.
-
 ## Konfigurasi Document Type
 
-Ikuti langkah berikut untuk melakukan konfigurasi:
+Setiap document type dapat menghasilkan report dengan pilihan yang berbeda. Oleh karena itu, tim IT harus menyiapkan file **Jasper** untuk masing-masing report. Contoh: document type **Purchase Order** dapat memiliki report **PO General** dan **PO Bahan Baku Woven**.
+
+Untuk referensi print Jasper pada dokumen PO, gunakan dua parameter berikut:
+
+- **Process** — Menggunakan default logic berdasarkan **AD_Process_UU**. Contoh logic yang digunakan:  `@SQL=select ad_process_id from ad_process where ad_process_uu='019e267d-2690-7322-a4a2-122489db370d'`
+
+![Process](../Process_1.png "Parameter Process") {#Figure99}
+
+- **Process Detail Report** — Menggunakan Dynamic Validation **SIS_ProcessDetailReport by Process DT Target Access**.
+
+![Process Detail](../Process_Detail.png "Process Detail Report") {#Figure100}
+
+Pastikan field **Report** pada menu **Report & Access** sudah dicentang agar report tersebut muncul di tenant dan sistem.
+
+Ikuti langkah berikut untuk melakukan konfigurasi report print pada masing-masing document type:
 
 1. Buka menu **Document Type** yang akan dikonfigurasi, contoh: **Purchase Order**.
 2. Masuk ke tab **Report Detail Access**.
