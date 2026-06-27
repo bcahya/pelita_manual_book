@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Asset Management/Asset Management.md",
+                "file": "Prima Manual Book/Forecast Report/Forecast Report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Asset Management"
+              "title": "Forecast Report"
             }
           }
         ]
@@ -196,6 +196,7 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/main.md",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Auto_Inv@-826451501.png",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Generate_MR@1900896021.png",
@@ -224,7 +225,6 @@
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/SIS_Complete_Inv@1584488319.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Delete_PhysInven@-851694652.png.checksum",
     "Prima Manual Book/Format Report/Format Report.md",
-    "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/Tanpa judul.md",
     "Prima Manual Book/Contract Management/Contract Management.md",
     "Prima Manual Book/Contract Management versi Old/Contract Management versi Old.md",
