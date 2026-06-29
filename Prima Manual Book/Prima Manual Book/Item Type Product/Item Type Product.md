@@ -35,7 +35,7 @@ Langkah-Langkah Konfigurasi Item Type:
 	![Item Type Line](../Item_Type2.png "Item Type Line") {#Figure5}
 
 
-5. Jika memilih tipe **Sequence**, tentukan jumlah digit nomor urut yang dibutuhkan (1, 2, 3, atau 4 digit). Field **Digit Character** akan muncul secara otomatis untuk mengatur jumlah digit tersebut.
+5. Jika memilih tipe **Sequence**, tentukan jumlah digit nomor urut yang dibutuhkan (1, 2, 3, atau 4 digit). Field **Digit Character** akan muncul secara otomatis untuk mengatur jumlah digit tersebut. Nilai default Digit Character dari sistem adalah **3**, dengan nilai minimal **1** — nilai 0 atau di bawahnya tidak diperbolehkan.
 
 	![Sequence](../Sequence.png "Sequence") {#Figure6}
 	

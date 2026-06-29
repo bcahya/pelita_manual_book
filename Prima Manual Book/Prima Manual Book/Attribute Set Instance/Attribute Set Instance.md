@@ -62,7 +62,7 @@ Pada report Material Receipt, sistem menampilkan expired date yang merupakan Gua
 Jika user perlu melakukan breakdown quantity pada attribute set lines, gunakan fitur Generate ASI untuk membagi quantity sesuai kebutuhan. Quantity hasil generate masih dapat diedit dan disesuaikan dengan quantity aktual penerimaan barang. Ikuti langkah berikut untuk melakukan generate Attribute Set Instance:
 
 1. Masuk ke tab Material Receipt, lalu masuk ke Receipt Line.
-2. Klik tombol setting, kemudian klik SIS Generate Distribute Attribute.
+2. Klik tombol setting (⚙), kemudian klik SIS Generate Distribute Attribute.
 
 ![Generate Distribute Attribute](../SIS_Generate_ASI.png "SIS Generate Attribute") {#Figure85}
 
