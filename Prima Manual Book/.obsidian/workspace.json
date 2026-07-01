@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
+                "file": "Prima Manual Book/Asset Management/Asset Management.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Production Order Planning"
+              "title": "Asset Management"
             }
           }
         ]
@@ -196,20 +196,24 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/IU_Addition.png",
+    "Prima Manual Book/Cost_Adj_Addition.png",
+    "Prima Manual Book/Dep_Addition.png",
+    "Prima Manual Book/GL_Addition.png",
+    "Prima Manual Book/Format Report/Format Report.md",
+    "Prima Manual Book/Asset Management/Asset Management.md",
+    "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Doc_POP.png",
     "Prima Manual Book/Doc_POP.png",
     "Prima Manual Book/Generate_Listing_POP.png",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning Subcon.md",
     "Prima Manual Book/Product Varian/Generate Product Varian.md",
-    "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
     "Generate_BoM_Header.png",
     "Prima Manual Book/Generate_BoM_Header.png",
     "Prima Manual Book/Generate_MO_Header.png",
     "Prima Manual Book/Routing/Routing.md",
     "Prima Manual Book/Overwrite_Routing.png",
-    "Overwrite_Routing 1.png",
-    "Overwrite_Routing.png",
     "Prima Manual Book/Product Varian/Regenerate Product Varian.md",
     "Prima Manual Book/Product Varian/Fitur Product Varian.md",
     "Prima Manual Book/Product Varian/Konfigurasi Sebelum Menentukan Product Varian.md",
@@ -221,9 +225,6 @@
     "Prima Manual Book/Contract Management/Contract Management.md",
     "Prima Manual Book/Document Type/Document Type.md",
     "Prima Manual Book/Forecast Report/Forecast Report.md",
-    "SIS_Forecast.png",
-    "Prima Manual Book/SIS_Forecast.png",
-    "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/main.md",
     "Prima Manual Book/Project Management/Project Management.md",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Doc_RDO@913769946.png.checksum",
@@ -238,7 +239,6 @@
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Complete_Inv@1667753821.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/SIS_Complete_Inv@1584488319.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Delete_PhysInven@-851694652.png.checksum",
-    "Prima Manual Book/Format Report/Format Report.md",
     "Prima Manual Book/Tanpa judul.md",
     "Prima Manual Book/Contract Management versi Old/Contract Management versi Old.md",
     "Prima Manual Book/Purchase Price Contract/Purchase Price Contract.md",
