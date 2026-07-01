@@ -80,22 +80,22 @@ Saat melakukan Asset Transfer, sistem otomatis menjalankan mekanisme berikut:
 
 2. **Depresiasi** — Sistem mencatat depresiasi atas aset yang terbentuk. Jurnalnya: Depresiasi Peralatan (aset from) pada debit dan Akumulasi Depresiasi Peralatan (aset from) pada kredit.
 
-![Depresiasi](../Dep_Addition.png "Depresiasi") {#Figure115}
+![Depresiasi](../Dep_Tf.png "Depresiasi") {#Figure115}
 
 3. **GL Jurnal (Transfer Aset)** — Sistem membuat jurnal pembalik dengan ketentuan berikut:
 
   - **Debit** — Akumulasi penyusutan atas aset from.
   - **Kredit** — Akumulasi penyusutan atas aset to.
 
-![GL](../GL_Addition.png "GL Journal") {#Figure121}
+![GL](../GL_Transfer.png "GL Journal") {#Figure121}
 
 3. **Inventory Decrease/Increase (Internal Use)** — Sistem memproses pengurangan inventory atas aset asal yang ditransfer. Jurnalnya: akun Persediaan pada debit dan Peralatan (aset from) pada kredit.
 
-![IU](../IU_Addition.png "Internal Use") {#Figure122}
+![IU](../IU_TF.png "Internal Use") {#Figure122}
 
 4. **Cost Adjustment** — Setelah Internal Use selesai, sistem menambahkan nilai inventory aset tujuan melalui Cost Adjustment senilai aset from dari asset transfer.
 
-![Cost Adj](../Cost_Adj_Addition.png "Cost Adjustment") {#Figure123}
+![Cost Adj](../Cost_Adj_TF.png "Cost Adjustment") {#Figure123}
 
 Konfigurasi charge untuk **Internal Use** dan **Cost Adjustment** dilakukan di level **Asset Type**.
 ## Asset Depreciation
