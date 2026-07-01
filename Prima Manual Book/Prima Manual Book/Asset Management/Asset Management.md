@@ -75,6 +75,9 @@ Setelah dokumen Asset Transfer di-complete, **Residual Value** aset tujuan terka
 Saat melakukan Asset Transfer, sistem otomatis menjalankan mekanisme berikut:
 
 1. **Jurnal Aset** — Sistem membuat jurnal atas aset from dan aset to. Contoh jurnal yang terbentuk: akun aset to (Kendaraan) dan Peralatan (aset from) pada debit, serta akun Cash pada kredit.
+
+![Asset](../Asset_transfer.png "Asset Transfer") {#Figure124}
+
 2. **Depresiasi** — Sistem mencatat depresiasi atas aset yang terbentuk. Jurnalnya: Depresiasi Peralatan (aset from) pada debit dan Akumulasi Depresiasi Peralatan (aset from) pada kredit.
 
 ![Depresiasi](../Dep_Addition.png "Depresiasi") {#Figure115}
