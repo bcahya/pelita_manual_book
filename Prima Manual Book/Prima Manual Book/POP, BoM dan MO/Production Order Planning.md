@@ -77,6 +77,9 @@ Ikuti langkah berikut untuk men-generate BoM pada seluruh line POP:
 2. Pilih dokumen yang akan diproses.
 3. Masuk ke header **Production Order Planning**.
 4. Klik tombol **SIS Generate POP BoM**.
+
+![Generate](../Generate_BoM_Header.png "Generate POP BoM di Header") {#Figure115}
+
 5. Klik **ok**.
 
 Sistem otomatis men-generate BoM pada seluruh line POP tersebut.
@@ -88,6 +91,38 @@ Ikuti langkah berikut untuk men-generate Manufacturing Order (MO) pada seluruh l
 2. Pilih dokumen yang akan diproses.
 3. Masuk ke header **Production Order Planning**.
 4. Klik tombol **Generate MO**.
+
+![Generate MO](../Generate_MO_Header.png "Generate MO di Header") {#Figure116}
+
 5. Klik **OK**.
 
 Sistem otomatis men-generate MO pada seluruh line POP tersebut.
+
+## Generate Listing Document POP
+
+Fitur **Generate Listing Document POP** digunakan untuk mengekspor seluruh dokumen POP — mulai dari Requisition, Purchase Order, Material Receipt, hingga jurnal Rate Variance — dalam format **Excel**. Dokumen yang dihasilkan memuat informasi quantity dan status dokumen di setiap tahapan produksi.
+
+Ikuti langkah berikut untuk mengekspor dokumen POP:
+
+1. Buka menu **SIS Production Order Planning**.
+2. Pilih dokumen yang akan diproses.
+3. Klik ikon **Setting (⚙)**.
+4. Klik **Generate Listing Document POP**.
+
+![Generate](../Generate_Listing_POP.png "Generate Listing Document POP") {#Figure117}
+
+5. Klik **OK**
+6. Sistem menampilkan dokumen dalam format **Excel**.
+
+![Report](../Doc_POP.png "Hasil Generate") {#Figure118}
+
+7. Klik dokumen tersebut, kemudian klik **Download**.
+
+Dokumen yang dihasilkan memuat informasi quantity dan komponen artikel yang digunakan dalam proses produksi, beserta jurnal transaksi terkait, meliputi:
+
+- Purchase Order (PO)
+- Material Receipt (MR)
+- Invoice
+- Matched Invoice
+- Material Movement
+- Production

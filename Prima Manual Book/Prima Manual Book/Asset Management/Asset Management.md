@@ -71,6 +71,33 @@ Ikuti langkah berikut untuk melakukan Asset Transfer:
 10. Klik **Complete** pada dokumen.
 
 Setelah dokumen Asset Transfer di-complete, **Residual Value** aset tujuan terkalkulasi dengan nilai dari aset asal, sedangkan **Residual Value** aset asal menjadi 0 karena nilainya telah digabungkan ke aset tujuan. Depresiasi dilanjutkan sesuai masa manfaat ekonomi pada aset tujuan.
+
+Saat melakukan Asset Transfer, sistem otomatis menjalankan mekanisme berikut:
+
+1. **Jurnal Aset** — Sistem membuat jurnal atas aset from dan aset to. Contoh jurnal yang terbentuk: akun aset to (Kendaraan) dan Peralatan (aset from) pada debit, serta akun Cash pada kredit.
+
+![Asset](../Asset_transfer.png "Asset Transfer") {#Figure124}
+
+2. **Depresiasi** — Sistem mencatat depresiasi atas aset yang terbentuk. Jurnalnya: Depresiasi Peralatan (aset from) pada debit dan Akumulasi Depresiasi Peralatan (aset from) pada kredit.
+
+![Depresiasi](../Dep_Tf.png "Depresiasi") {#Figure115}
+
+3. **GL Jurnal (Transfer Aset)** — Sistem membuat jurnal pembalik dengan ketentuan berikut:
+
+  - **Debit** — Akumulasi penyusutan atas aset from.
+  - **Kredit** — Akumulasi penyusutan atas aset to.
+
+![GL](../GL_Transfer.png "GL Journal") {#Figure121}
+
+3. **Inventory Decrease/Increase (Internal Use)** — Sistem memproses pengurangan inventory atas aset asal yang ditransfer. Jurnalnya: akun Persediaan pada debit dan Peralatan (aset from) pada kredit.
+
+![IU](../IU_TF.png "Internal Use") {#Figure122}
+
+4. **Cost Adjustment** — Setelah Internal Use selesai, sistem menambahkan nilai inventory aset tujuan melalui Cost Adjustment senilai aset from dari asset transfer.
+
+![Cost Adj](../Cost_Adj_TF.png "Cost Adjustment") {#Figure123}
+
+Konfigurasi charge untuk **Internal Use** dan **Cost Adjustment** dilakukan di level **Asset Type**.
 ## Asset Depreciation
 
 Asset Depreciation adalah proses pencatatan penurunan nilai ekonomis aset tetap secara sistematis selama masa manfaatnya, sesuai kebijakan akuntansi perusahaan dan standar pelaporan keuangan yang berlaku. Periode atau masa manfaat aset dikonfigurasi di **Asset Type**.

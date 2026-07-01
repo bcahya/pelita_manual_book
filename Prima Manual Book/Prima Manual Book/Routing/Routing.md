@@ -130,6 +130,12 @@ Di belakang layar, sistem memperbarui routing pada seluruh produk yang menggunak
 
 > **Catatan:** Copy Routing hanya berfungsi untuk menyalin, bukan memperbarui. Produk yang sudah memiliki routing tidak akan ter-update meskipun Copy Routing dijalankan.
 
+Field **Copy PC Routing** memiliki pilihan **Overwrite** dengan ketentuan berikut:
+
+- **Jika Overwrite dicentang** — Sistem menghapus routing yang ada di product, kemudian menyalin konfigurasi routing dari Product Category ke product tersebut.
+- **Jika Overwrite tidak dicentang** _(default)_ — Sistem mempertahankan routing yang sudah ada di product dan tidak menyalin konfigurasi routing dari Product Category.
+
+![Overwrite](../Overwrite_Routing.png "Field Overwrite") {#Figure68}
 ### Manufacturing Order
 
 Manufacturing Order adalah dokumen perintah produksi yang terhubung langsung dengan routing.
