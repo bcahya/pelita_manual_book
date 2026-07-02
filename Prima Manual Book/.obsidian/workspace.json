@@ -194,8 +194,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "99e9886b87bf6dad",
+  "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Report_Aset.png",
+    "Prima Manual Book/Report_Aset.png",
+    "Prima Manual Book/Project Management/Project Management.md",
+    "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/IU_TF.png",
     "Prima Manual Book/Cost_Adj_TF.png",
     "Prima Manual Book/Dep_Tf.png",
@@ -205,11 +209,8 @@
     "Prima Manual Book/IU_Addition.png",
     "Prima Manual Book/Cost_Adj_Addition.png",
     "Prima Manual Book/Dep_Addition.png",
-    "Prima Manual Book/GL_Addition.png",
     "Prima Manual Book/Format Report/Format Report.md",
-    "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
-    "Doc_POP.png",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning Subcon.md",
     "Prima Manual Book/Product Varian/Generate Product Varian.md",
     "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
@@ -226,7 +227,6 @@
     "Prima Manual Book/Document Type/Document Type.md",
     "Prima Manual Book/Forecast Report/Forecast Report.md",
     "Prima Manual Book/main.md",
-    "Prima Manual Book/Project Management/Project Management.md",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Doc_RDO@913769946.png.checksum",
     "Prima Manual Book/Tax/Tax.md",
     "Prima Manual Book/Import Data/Import Data.md",

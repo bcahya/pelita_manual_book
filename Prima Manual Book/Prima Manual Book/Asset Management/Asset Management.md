@@ -114,3 +114,37 @@ Ikuti langkah berikut untuk mengecek depresiasi aset:
 ![Depresiasi](../Ass_Dep.png "Asset Depresiasi") {#Figure120}
 
 Depresiasi berjalan secara otomatis sesuai scheduler yang telah dikonfigurasi.
+## Report Asset
+
+Report Asset digunakan untuk memantau posisi aset tetap perusahaan, meliputi nilai perolehan, nilai buku berjalan, status penyusutan, dan lokasi fisik aset. Laporan ini umumnya digunakan untuk:
+
+- **Audit fisik aset** — Mencocokkan data locator dan Attribute Set Instance dengan kondisi fisik di lapangan.
+- **Rekonsiliasi nilai buku** — Membandingkan Gross Value dan Residual Value untuk keperluan laporan neraca.
+- **Pemantauan penyusutan** — Memverifikasi kelengkapan proses depresiasi berdasarkan Depreciation Date.
+- **Penelusuran asal aset** — Menelusuri kembali aset ke dokumen pembelian terkait.
+### Langkah Akses Report Asset
+
+1. Buka menu **SIS Report Asset**.
+2. Input field berikut sesuai kebutuhan:
+
+  - **Organization**
+  - **Asset Type**
+  - **Locator**
+  - **Document Status**
+  - **Depreciation Date**
+
+3. Klik **Ok**.
+
+Sistem menampilkan daftar aset sesuai filter yang dikonfigurasi.
+
+![Report](../Report_Aset.png "Report Asset") {#Figure125}
+
+Berikut penjelasan kolom yang tercantum pada report aset:
+- **Asset dan Document** — Dokumen transaksi asal yang menjadi dasar pembentukan aset. Digunakan sebagai jejak audit untuk menelusuri asal usul perolehan aset.
+- **Product** — Produk acuan yang digunakan sebagai dasar pembentukan aset.
+- **Gross Value** — Nilai perolehan awal aset (harga beli) sebelum dikurangi akumulasi penyusutan.
+- **Residual Value** — Nilai buku saat ini setelah dikurangi penyusutan berjalan.
+- **Depreciation Date** — Tanggal proses penyusutan terakhir dicatat untuk aset tersebut.
+- **Locator** — Lokasi fisik penyimpanan aset, digunakan untuk pelacakan fisik saat stock opname atau audit aset.
+- **Attribute Set Instance** — Atribut spesifik unik aset, seperti nomor lot yang membedakan satu unit fisik dari unit lain meski berasal dari produk yang sama.
+- **Document Status** — Status dokumen aset: _Draft_, _Completed_, atau _Closed_.
