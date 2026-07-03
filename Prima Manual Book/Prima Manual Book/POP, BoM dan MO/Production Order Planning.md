@@ -68,6 +68,12 @@ Produk defect akan diproses movement manual ke locator sesuai konfigurasi pada B
 
 	![Production Line](../Prod_Line_Reg.png "Production") {#Figure21}
 
+11. Setelah produk finished goods selesai diproduksi, klik **Complete** pada dokumen POP.
+
+>**Catatan:** Dokumen POP hanya dapat di-complete jika seluruh dokumen **Requisition**, **Purchase Order**, dan **Manufacturing Order** sudah berstatus _Complete_. Jika masih terdapat dokumen yang outstanding atau belum diproses, sistem akan menampilkan pesan error dan dokumen POP tidak dapat di-complete.
+
+![error](../error_pop.png "Error Complete POP") {#Figure126}
+
 Di header Production Order Planning, terdapat tombol **SIS Generate POP BoM** dan **Generate MO**. Kedua tombol ini memungkinkan user men-generate BoM dan MO untuk seluruh line dalam satu POP sekaligus, tanpa perlu melakukan generate satu per satu.
 ### SIS Generate POP BoM
 

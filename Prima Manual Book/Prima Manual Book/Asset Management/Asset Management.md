@@ -97,7 +97,9 @@ Saat melakukan Asset Transfer, sistem otomatis menjalankan mekanisme berikut:
 
 ![Cost Adj](../Cost_Adj_TF.png "Cost Adjustment") {#Figure123}
 
-Konfigurasi charge untuk **Internal Use** dan **Cost Adjustment** dilakukan di level **Asset Type**.
+Konfigurasi charge untuk **Internal Use** dan **Cost Adjustment** dilakukan di level **Asset Type**. Dokumen yang terbentuk —  **Cost Adjustment**, **Inventory Decrease/Increase**, dan **GL Journal** — akan ditampilkan di tab **Asset Addition Line** dan mereferensikan masing-masing dokumen terkait.
+
+![Line](../Line_Asset_Add.png "Dokumen") {#Figure123}
 ## Asset Depreciation
 
 Asset Depreciation adalah proses pencatatan penurunan nilai ekonomis aset tetap secara sistematis selama masa manfaatnya, sesuai kebijakan akuntansi perusahaan dan standar pelaporan keuangan yang berlaku. Periode atau masa manfaat aset dikonfigurasi di **Asset Type**.
@@ -113,7 +115,7 @@ Ikuti langkah berikut untuk mengecek depresiasi aset:
 
 ![Depresiasi](../Ass_Dep.png "Asset Depresiasi") {#Figure120}
 
-Depresiasi berjalan secara otomatis sesuai scheduler yang telah dikonfigurasi.
+Depresiasi berjalan secara otomatis sesuai scheduler yang telah dikonfigurasi. 
 ## Report Asset
 
 Report Asset digunakan untuk memantau posisi aset tetap perusahaan, meliputi nilai perolehan, nilai buku berjalan, status penyusutan, dan lokasi fisik aset. Laporan ini umumnya digunakan untuk:
