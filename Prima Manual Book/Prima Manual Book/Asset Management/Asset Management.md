@@ -99,14 +99,26 @@ Saat melakukan Asset Transfer, sistem otomatis menjalankan mekanisme berikut:
 
 Konfigurasi charge untuk **Internal Use** dan **Cost Adjustment** dilakukan di level **Asset Type**. Dokumen yang terbentuk —  **Cost Adjustment**, **Inventory Decrease/Increase**, dan **GL Journal** — akan ditampilkan di tab **Asset Addition Line** dan mereferensikan masing-masing dokumen terkait.
 
-![Line](../Line_Asset_Add.png "Dokumen") {#Figure123}
+![Line](../Line_Asset_Add.png "Dokumen") {#Figure124}
 ## Asset Depreciation
 
 Asset Depreciation adalah proses pencatatan penurunan nilai ekonomis aset tetap secara sistematis selama masa manfaatnya, sesuai kebijakan akuntansi perusahaan dan standar pelaporan keuangan yang berlaku. Periode atau masa manfaat aset dikonfigurasi di **Asset Type**.
 
-Saat aset dipindahkan ke warehouse atau outlet tujuan, dokumen aset otomatis di-complete dan proses depresiasi langsung berjalan. Jurnal untuk periode pertama depresiasi juga ter-complete secara otomatis. Sistem menggunakan **tanggal penerimaan barang** saat dokumen penerimaan di-complete sebagai _start date_ depresiasi.
+Di iDempiere, masa manfaat aset — yang disebut **Number of Entry** — masih dapat diedit meskipun dokumen aset sudah di-complete. Sistem otomatis menyesuaikan **Depreciation Amount** berdasarkan masa manfaat yang diperbarui. Hal ini diperlukan untuk mengakomodasi kondisi penggabungan beberapa aset yang sebelumnya dicatat secara terpisah menjadi satu aset induk (parent asset), di mana aset induk tersebut kemungkinan sudah mengalami depresiasi sebelumnya.
+### Mekanisme Depresiasi
 
-Konfigurasi **auto complete aset** dan **auto complete jurnal** dapat dilakukan di **Asset Type**. Jika keduanya dikonfigurasi, depresiasi langsung berjalan tanpa perlu tindakan manual.
+Saat aset dipindahkan ke warehouse atau outlet tujuan, dokumen aset otomatis di-complete, namun proses depresiasi belum berjalan. Depresiasi baru dimulai saat user mengklik field **Start Depreciation**. Jika field tersebut belum diproses, aset tidak akan terdepresiasi.
+
+![Start](../Start_Depresiasi.png "Start Depreciation") {#Figure125}
+
+Berikut syarat yang harus terpenuhi sebelum aset dapat didepresiasi:
+
+- Aset sudah dipindahkan ke warehouse atau outlet tujuan.
+- Dokumen aset sudah berstatus _Complete_.
+
+Jika salah satu syarat tidak terpenuhi, aset tidak dapat didepresiasi. Tanggal depresiasi menggunakan tanggal saat field **Start Depreciation** diproses.
+
+Konfigurasi **auto complete aset** dapat dilakukan di **Asset Type**. Jika keduanya dikonfigurasi, depresiasi langsung berjalan tanpa perlu tindakan manual.
 
 Ikuti langkah berikut untuk mengecek depresiasi aset:
 1. Buka menu **SIS Asset**

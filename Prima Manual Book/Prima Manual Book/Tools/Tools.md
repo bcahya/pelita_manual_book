@@ -153,7 +153,7 @@ Ikuti langkah berikut untuk men-generate GL Journal Depreciation:
 
 1. Buka menu **SIS Generate GL Journal Depreciation**.
 2. Pilih **Organization**.
-3. Pilih **Periode Depresiasi**.
+3. Pilih **Periode Depresiasi** dengan menginput **Depreciation Date**
 4. Pilih **Document Type**.
 
 ![Generate](../Gen_Dep_Ass.png "Generate Jurnal Depresiasi") {#Figure126}
