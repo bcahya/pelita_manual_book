@@ -104,7 +104,11 @@ Konfigurasi charge untuk **Internal Use** dan **Cost Adjustment** dilakukan di l
 
 Asset Depreciation adalah proses pencatatan penurunan nilai ekonomis aset tetap secara sistematis selama masa manfaatnya, sesuai kebijakan akuntansi perusahaan dan standar pelaporan keuangan yang berlaku. Periode atau masa manfaat aset dikonfigurasi di **Asset Type**.
 
-Di iDempiere, masa manfaat aset — yang disebut **Number of Entry** — masih dapat diedit meskipun dokumen aset sudah di-complete. Sistem otomatis menyesuaikan **Depreciation Amount** berdasarkan masa manfaat yang diperbarui. Hal ini diperlukan untuk mengakomodasi kondisi penggabungan beberapa aset yang sebelumnya dicatat secara terpisah menjadi satu aset induk (parent asset), di mana aset induk tersebut kemungkinan sudah mengalami depresiasi sebelumnya.
+Di iDempiere, masa manfaat aset — yang disebut **Number of Entry** — masih dapat diedit meskipun dokumen aset sudah di-complete. 
+
+![Masa Manfaat](../NOE_Depre.png "Number of Entry") {#Figure126}
+
+Sistem otomatis menyesuaikan **Depreciation Amount** berdasarkan masa manfaat yang diperbarui. Hal ini diperlukan untuk mengakomodasi kondisi penggabungan beberapa aset yang sebelumnya dicatat secara terpisah menjadi satu aset induk (parent asset), di mana aset induk tersebut kemungkinan sudah mengalami depresiasi sebelumnya.
 ### Mekanisme Depresiasi
 
 Saat aset dipindahkan ke warehouse atau outlet tujuan, dokumen aset otomatis di-complete, namun proses depresiasi belum berjalan. Depresiasi baru dimulai saat user mengklik field **Start Depreciation**. Jika field tersebut belum diproses, aset tidak akan terdepresiasi.
