@@ -147,16 +147,21 @@ Sistem otomatis menghapus seluruh dokumen dalam rentang waktu yang dikonfigurasi
 
 ### Generate GL Journal Depreciation
 
-Fitur **Generate GL Journal Depreciation** digunakan untuk men-generate depresiasi pada seluruh aset sesuai periode depresiasi masing-masing secara sekaligus. Dengan fitur ini, user tidak perlu men-generate depresiasi satu per satu — mengingat aset perusahaan bisa mencapai puluhan bahkan ratusan.
+Fitur **Generate GL Journal Depreciation** digunakan untuk men-generate depresiasi pada seluruh aset sesuai periode dan tanggal depresiasi masing-masing secara sekaligus. Dengan fitur ini, user tidak perlu men-generate depresiasi satu per satu — mengingat aset perusahaan bisa mencapai puluhan bahkan ratusan.
+
+Fitur ini menyediakan dua pendekatan generate jurnal:
+
+- **Periode Depresiasi** — Jika dipilih, field _Depreciation Date_ akan tersembunyi secara otomatis.
+- **Depreciation Date** — Jika dipilih, field _Period_ akan tersembunyi secara otomatis.
 
 Ikuti langkah berikut untuk men-generate GL Journal Depreciation:
 
 1. Buka menu **SIS Generate GL Journal Depreciation**.
 2. Pilih **Organization**.
-3. Pilih **Periode Depresiasi** dengan menginput **Depreciation Date**
+3. Pilih **Periode Depresiasi** atau **Depreciation Date** sesuai pendekatan yang digunakan.
 4. Pilih **Document Type**.
 
-![Generate](../Gen_Dep_Ass.png "Generate Jurnal Depresiasi") {#Figure126}
+![Generate](../SIS_Gen_Dep_Ass.png "Generate Jurnal Depresiasi") {#Figure126}
 
 5. Klik **OK**.
 
