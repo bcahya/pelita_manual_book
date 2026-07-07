@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Security di iDempiere/Security di iDempiere.md",
+                "file": "Prima Manual Book/Project Management/Project Management.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Security di iDempiere"
+              "title": "Project Management"
             }
           }
         ]
@@ -196,8 +196,8 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Document Type/Document Type.md",
     "Prima Manual Book/Security di iDempiere/Security di iDempiere.md",
+    "Prima Manual Book/Document Type/Document Type.md",
     "Prima Manual Book/Security di iDempiere",
     "Prima Manual Book/Tanpa judul.md",
     "Tanpa judul.md",
