@@ -49,9 +49,48 @@ Langkah-langkah membuat Role adalah sebagai berikut:
 5. Setelah seluruh konfigurasi selesai, klik **Save**.
 
 Dengan konfigurasi tersebut, setiap User hanya dapat mengakses Organization, menu, process, dan Document Type sesuai hak akses yang diberikan melalui Role. Pendekatan ini membantu menjaga keamanan data, membatasi akses berdasarkan tanggung jawab pengguna, serta memastikan setiap aktivitas dalam sistem berjalan sesuai dengan otorisasi yang telah ditetapkan.
-
 ## Window Customization
 
+Menu **Window Customization** di iDempiere digunakan untuk menyesuaikan tampilan (_user interface_) suatu window tanpa mengubah struktur inti (_core_) aplikasi. Fitur ini memungkinkan administrator mengatur tampilan window sesuai kebutuhan bisnis, role, atau preferensi perusahaan.
 
+Window Customization umumnya digunakan untuk meningkatkan kemudahan penggunaan (_usability_), menyederhanakan tampilan, dan mengurangi risiko kesalahan input. Namun, memberikan akses perubahan data krusial kepada pengguna yang tidak berwenang dapat menimbulkan risiko operasional — mulai dari kesalahan transaksi hingga terhentinya proses bisnis. Oleh karena itu, hak akses harus dikelola secara ketat, setiap perubahan harus melalui proses persetujuan dan pengujian, serta didukung **audit trail** agar seluruh perubahan dapat dipantau dan dipertanggungjawabkan.
+
+Ikuti langkah berikut untuk melakukan konfigurasi Window Customization:
+
+1. Buka menu **Window Customization**.
+2. Tentukan **window** yang akan dikonfigurasi.
+3. Tentukan **role** yang akan diberikan akses.
+4. Masuk ke tab **Customization**.
+5. Masuk ke tab **Field Customization**.
+6. Tambahkan field-field yang perlu diakses oleh role tersebut.
+7. Pada field **Always Updatable**, pilih **Yes**.
+8. Klik **Save**.
 ## Autentikasi Two-Factor (2FA)
 
+Konfigurasi **Multi-Factor Authentication (MFA)** atau **Two-Factor Authentication (2FA)** di iDempiere bertujuan menambahkan lapisan keamanan saat user melakukan login. Selain memasukkan **username** dan **password**, user juga harus melakukan verifikasi kedua menggunakan **OTP (One-Time Password)** melalui aplikasi authenticator.
+
+Secara default, iDempiere belum menyediakan fitur MFA secara bawaan (_native_). Implementasi MFA dilakukan melalui pengembangan (_customization_) atau integrasi dengan penyedia layanan autentikasi eksternal. Untuk implementasi di iDempiere, metode **TOTP** merupakan pilihan paling aman karena tidak bergantung pada layanan pihak ketiga setelah proses registrasi.
+### Konfigurasi di Sistem
+
+Untuk mengimplementasikan MFA, administrator perlu mengkonfigurasi parameter sistem berikut:
+
+| Parameter                                 | Keterangan                                                                                                               |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **MFA_REGISTERED_DEVICE_EXPIRATION_DAYS** | Menentukan masa berlaku **trusted device** yang telah terdaftar untuk proses autentikasi MFA. Nilai default: **30 hari** |
+| ZK_SESSION_TIMEOUT_IN_SECONDS             | Menentukan durasi timeout selama berada di sistem.                                                                       |
+
+### Registrasi MFA
+
+Sebelum mengaktifkan MFA, user perlu melakukan registrasi di sistem dan menginstall aplikasi **Google Authenticator** untuk menerima kode OTP. Ikuti langkah berikut untuk registrasi MFA:
+
+1. Buka menu **Register MFA**.
+2. Pilih metode MFA yang akan digunakan — disarankan menggunakan **TOTP**.
+3. Input **Parameter Value** dengan **Google Authenticator**.
+4. Klik **OK**.
+5. Sistem menampilkan **QR Code**.
+6. Pindai QR Code menggunakan aplikasi **Google Authenticator**.
+7. Masukkan **OTP pertama** untuk proses aktivasi.
+8. Klik **OK**.
+9. Jika OTP valid, MFA dinyatakan **aktif**.
+
+Setelah MFA aktif, user wajib memasukkan kode OTP dari aplikasi Google Authenticator setiap kali login. Kode OTP berubah setiap menit, sehingga akun tidak dapat diakses oleh pihak lain. Jika kode yang dimasukkan salah, percobaan login akan gagal.
