@@ -49,3 +49,7 @@ Langkah-langkah membuat Role adalah sebagai berikut:
 5. Setelah seluruh konfigurasi selesai, klik **Save**.
 
 Dengan konfigurasi tersebut, setiap User hanya dapat mengakses Organization, menu, process, dan Document Type sesuai hak akses yang diberikan melalui Role. Pendekatan ini membantu menjaga keamanan data, membatasi akses berdasarkan tanggung jawab pengguna, serta memastikan setiap aktivitas dalam sistem berjalan sesuai dengan otorisasi yang telah ditetapkan.
+
+## Window Customization
+
+## Autentikasi Two-Factor (2FA)
