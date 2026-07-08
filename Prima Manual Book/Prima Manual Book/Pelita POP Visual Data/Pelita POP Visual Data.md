@@ -1,27 +1,27 @@
 # Pelita POP Visual Data
 
 Pelita POP Visual Data adalah fitur visualisasi yang menampilkan setiap tahapan Production Order Planning (POP) — mulai dari penentuan artikel yang akan diproduksi hingga artikel selesai diproduksi. Fitur ini memudahkan pemantauan progress produksi sekaligus memungkinkan generate dokumen di masing-masing tahapan.
-
 ## Langkah Akses Pelita POP Visual Data
 
 1. Buka menu Pelita POP Visual Data
 2. Input nomor POP di field POP Document No
-3. Klik Visual It
+3. Input Line No POP
+4. Input Manufacture Order
+5. Klik Visual It
 
-![Visual POP](../POP.png "Visual Data POP") {#Figure79}
+![Visual POP](../visualpop.png "Visual Data POP") {#Figure79}
 
-Sistem menampilkan visualisasi Production Order Planning yang dipilih. Setiap tahapan produksi dibedakan menggunakan kodefikasi A–J dengan warna yang berbeda, sehingga progress produksi dapat dipantau secara langsung.
-
+Sistem menampilkan visualisasi Production Order Planning berdasarkan Manufacturing Order (MO) yang dipilih. Setiap tahapan produksi dibedakan menggunakan kodefikasi A–J dengan warna yang berbeda, sehingga progress produksi dapat dipantau secara langsung.
 ## Ketentuan Visualisasi
 Berikut ketentuan perubahan warna pada visualisasi:
 
 - Abu-abu — Dokumen sudah di-complete (berlaku untuk Movement, MO, Requisition, PO, dan MR).
 
-![Visual Dokumen](../Visual2_POP.png "Visual Document Complete") {#Figure80}
+![Visual Dokumen](../visual_complete.png "Visual Document Complete") {#Figure80}
 
 - Warna sesuai konfigurasi — Dokumen belum di-complete (berlaku untuk Movement, MO, Requisition, PO, dan MR).
 
-![Visual Dokumen](../Visual_POP.png "Visual Document Draft") {#Figure81}
+![Visual Dokumen](../visualpop.png "Visual Document Draft") {#Figure81}
 
 Untuk dokumen selain Movement, Requisition, Purchase Order, dan Material Receipt, warna pada visualisasi tidak berubah — baik saat status dokumen masih draft maupun sudah complete.
 

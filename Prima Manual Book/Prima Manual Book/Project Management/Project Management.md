@@ -39,7 +39,7 @@ Charge digunakan untuk menentukan charge kompensasi pada project. Ikuti langkah 
   - Business Partner
   - Charge Compensation
 
-![Header](../Project.png "Header Project") {#Figure115}
+![Header](../project2.png "Header Project") {#Figure115}
 
 3. Klik save
 
@@ -74,7 +74,7 @@ Setelah Invoice di-complete, sistem otomatis membuat aset yang akan muncul di me
   - Project — Nama project yang sedang dikerjakan.
   - Order — Nomor dokumen Purchase Order atas produk.
 
-![Issue](../Issue_Proj.png "Issue to Project") {#Figure116}
+![Issue](../issue_to_project.png "Issue to Project") {#Figure116}
 
 3. Klik **ok**
 4. Sistem menampilkan notifikasi **Created** — issue atas project berhasil dibuat.
@@ -97,6 +97,9 @@ Ikuti langkah berikut untuk memproses PO hingga Invoice untuk artikel renovasi:
 1. Buat **Purchase Order** seperti biasa.
 2. Masuk ke tab **Material Receipt**, lalu masuk ke **Receipt Line**.
 3. Pada field **Renovation/Repair Asset**, tentukan aset yang akan direnovasi.
+
+![MR](../MR_Renov.png "Tampilan MR untuk Project Renovasi") {#Figure127}
+
 4. Klik **Save**.
 5. Klik **Complete** pada dokumen Material Receipt.
 6. Masuk ke tab **Invoice**, lalu klik **Complete**.
@@ -115,6 +118,9 @@ Ikuti langkah berikut untuk memproses PO hingga Invoice untuk artikel renovasi d
 5. Klik **Complete** pada dokumen Material Receipt.
 6. Masuk ke tab **Invoice**.
 7. Klik tombol **Generate Credit Note from Project Issue**.
+
+![Credit Note](../generate_cn.png "Generate Invoice Credit Note") {#Figure128}
+
 8. Klik **Complete** pada dokumen Invoice.
 
 Saat Generate Credit Note from Project Issue dijalankan, sistem otomatis membentuk Invoice Line di project dengan **CIP** untuk membalik Issue to Project dengan nilai minus. Dengan Credit Note, nilai aset tidak bertambah, namun tagihan atas project berkurang senilai CIP.
