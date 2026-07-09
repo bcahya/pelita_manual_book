@@ -62,7 +62,6 @@
 .include {Report Stock/Report Stock per Artikel.md}
 .include {Posting Matched Invoice/Posting Matched Invoice.md}
 .include {Import Data/Import Data.md}
-.include {Forecast Report/Forecast Report.md}
 .include {Tax/Tax.md}
 .include {Attribute Set Instance/Attribute Set Instance.md}
 .include {Purchase Order/Purchase Order.md}
@@ -71,3 +70,6 @@
 .include {Tools/Tools.md}
 .include {Format Report/Format Report.md}
 .include {Forecast Report/Forecast Report.md}
+.include {Asset Management/Asset Management.md}
+.include {Document Type/Document Type.md}
+.include {Security di iDempiere/Security di iDempiere.md}

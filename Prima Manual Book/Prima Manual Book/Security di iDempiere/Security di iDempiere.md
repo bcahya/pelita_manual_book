@@ -46,6 +46,9 @@ Langkah-langkah membuat Role adalah sebagai berikut:
   - **Process Access** → Menentukan process yang dapat dijalankan.
   - **Document Action Access** → Menentukan aksi yang dapat dilakukan terhadap suatu dokumen, seperti **Complete**, **Void**, **Reverse Correct**, atau **Reactivate**.
   - **Document Type Access** → Menentukan Document Type yang dapat digunakan oleh Role pada saat membuat transaksi. Konfigurasi ini juga membatasi pilihan Document Type yang muncul pada header transaksi di setiap window.
+
+![role](../role.png "Konfigurasi Role Access") {#Figure130}
+
 5. Setelah seluruh konfigurasi selesai, klik **Save**.
 
 Dengan konfigurasi tersebut, setiap User hanya dapat mengakses Organization, menu, process, dan Document Type sesuai hak akses yang diberikan melalui Role. Pendekatan ini membantu menjaga keamanan data, membatasi akses berdasarkan tanggung jawab pengguna, serta memastikan setiap aktivitas dalam sistem berjalan sesuai dengan otorisasi yang telah ditetapkan.
@@ -64,6 +67,9 @@ Ikuti langkah berikut untuk melakukan konfigurasi Window Customization:
 5. Masuk ke tab **Field Customization**.
 6. Tambahkan field-field yang perlu diakses oleh role tersebut.
 7. Pada field **Always Updatable**, pilih **Yes**.
+
+![Window](../window_cust.png "Window Customization") {#Figure129}
+
 8. Klik **Save**.
 ## Autentikasi Two-Factor (2FA)
 
@@ -86,10 +92,16 @@ Sebelum mengaktifkan MFA, user perlu melakukan registrasi di sistem dan menginst
 1. Buka menu **Register MFA**.
 2. Pilih metode MFA yang akan digunakan — disarankan menggunakan **TOTP**.
 3. Input **Parameter Value** dengan **Google Authenticator**.
+
+![register](../register1_mfa.png "Register MFA") {#Figure127}
+
 4. Klik **OK**.
 5. Sistem menampilkan **QR Code**.
+
+![register](../register2_mfa.png "Barcode Register") {#Figure128}
+
 6. Pindai QR Code menggunakan aplikasi **Google Authenticator**.
-7. Masukkan **OTP pertama** untuk proses aktivasi.
+7. Masukkan **OTP** untuk proses aktivasi.
 8. Klik **OK**.
 9. Jika OTP valid, MFA dinyatakan **aktif**.
 
