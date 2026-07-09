@@ -74,10 +74,10 @@ Secara default, iDempiere belum menyediakan fitur MFA secara bawaan (_native_). 
 
 Untuk mengimplementasikan MFA, administrator perlu mengkonfigurasi parameter sistem berikut:
 
-| Parameter                                 | Keterangan                                                                                                               |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **MFA_REGISTERED_DEVICE_EXPIRATION_DAYS** | Menentukan masa berlaku **trusted device** yang telah terdaftar untuk proses autentikasi MFA. Nilai default: **30 hari** |
-| ZK_SESSION_TIMEOUT_IN_SECONDS             | Menentukan durasi timeout selama berada di sistem.                                                                       |
+| Parameter                             | Keterangan                                                                                                           |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| MFA_REGISTERED_DEVICE_EXPIRATION_DAYS | Menentukan masa berlaku trusted device yang telah terdaftar untuk proses autentikasi MFA. Nilai default: **30 hari** |
+| ZK_SESSION_TIMEOUT_IN_SECONDS         | Menentukan durasi timeout selama berada di sistem.                                                                   |
 
 ### Registrasi MFA
 
