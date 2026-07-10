@@ -14,10 +14,12 @@ Setiap User memiliki **username** dan **password** untuk mengakses sistem. Seora
 
 Sebelum mengonfigurasi User dan Role, lakukan konfigurasi parameter sistem berikut:
 
-- **Parameter** : `SIS_ActivateAccessDocBasedOnDocTypeAccess`
-- **Configured Value** : `Y`
+| Parameter                                   | Configured Value |
+| ------------------------------------------- | ---------------- |
+| SIS_ActivateAccessDocBasedOnDocTypeAccess   | Y                |
+| SIS_ActivateAccessDocBasedOnWarehouseAccess | Y                |
 
-Parameter ini mengaktifkan mekanisme pembatasan **Document Type Access** berdasarkan konfigurasi pada Role. Dengan konfigurasi ini, setiap Role hanya dapat menggunakan Document Type yang telah diberikan hak akses.
+Parameter ini mengaktifkan mekanisme pembatasan **Document Type Access** dan **Warehouse** berdasarkan konfigurasi pada Role. Dengan konfigurasi ini, setiap Role hanya dapat menggunakan Document Type dan Warehouse yang telah diberikan hak akses.
 ## Membuat Master Data User
 
 Buat terlebih dahulu master data User sebelum membuat Role. Setiap pengguna yang akan mengakses sistem harus memiliki akun tersendiri agar hak akses dapat dikelola secara terpisah.

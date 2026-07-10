@@ -124,7 +124,7 @@ Jika salah satu syarat tidak terpenuhi, aset tidak dapat didepresiasi. Tanggal d
 
 Konfigurasi **auto complete aset** dapat dilakukan di **Asset Type**. Jika keduanya dikonfigurasi, depresiasi langsung berjalan tanpa perlu tindakan manual.
 
-Ikuti langkah berikut untuk mengecek depresiasi aset:
+Ikuti langkah berikut untuk melakukan verifikasi depresiasi aset:
 1. Buka menu **SIS Asset**
 2. Pilih asset yang akan diproses
 3. Pada tab **Line**, periksa **Depreciation Date** dan nilai depresiasi aset selama masa manfaatnya.
