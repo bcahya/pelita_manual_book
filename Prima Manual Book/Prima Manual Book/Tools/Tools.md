@@ -177,10 +177,11 @@ Ikuti langkah berikut untuk men-generate AP Invoice:
 1. Buka menu **SIS Generate AP Invoice Contract Management**.
 2. Pilih **Organization**.
 3. Pilih **Document Type**.
+4. Pilih **Schedule Date** invoice
 
 ![Generate](../Gen_Inv_Con.png "Generate Invoice") {#Figure127}
 
-4. Klik **OK**.
+5. Klik **OK**.
 
 Sistem otomatis men-generate invoice atas seluruh kontrak dengan periode yang telah dikonfigurasi. Setelah invoice ter-generate, tim payment dapat segera melakukan pembayaran atas kontrak-kontrak tersebut.
 ### Generate GL Journal Depreciation
