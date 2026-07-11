@@ -19,7 +19,7 @@ Sebelum memulai transaksi project, lakukan konfigurasi sistem terlebih dahulu de
 6. Tentukan **Attribute Set** sesuai konfigurasi.
 7. Tentukan **Asset Type** sesuai konfigurasi.
 8. Pada field **Renovation/Repair Asset**, pilih No jika merupakan aset baru, atau Yes jika merupakan renovasi atas aset yang sudah ada.
-9. Field Change Project Price digunakan khusus untuk pekerjaan sipil yang menjadi aset. Penerimaan atas artikel berdasarkan persentase progres tetap 1 (full), namun saat invoice nilai tagihan dapat diubah. Sistem otomatis mengkoreksi nilai aset sesuai nilai terbaru di invoice.
+9. Field Change Project Price digunakan khusus untuk pekerjaan sipil yang menjadi aset. Jika field Change Project Price dicentang, field Charge Cost Adjustment akan muncul secara otomatis — isi field ini untuk menentukan charge yang digunakan saat Cost Adjustment ter-create.
 10. Klik Save.
 ## Konfigurasi Charge
 
@@ -123,4 +123,6 @@ Ikuti langkah berikut untuk memproses PO hingga Invoice untuk artikel renovasi d
 
 8. Klik **Complete** pada dokumen Invoice.
 
-Saat Generate Credit Note from Project Issue dijalankan, sistem otomatis membentuk Invoice Line di project dengan **CIP** untuk membalik Issue to Project dengan nilai minus. Dengan Credit Note, nilai aset tidak bertambah, namun tagihan atas project berkurang senilai CIP.
+Saat **Generate Credit Note from Project Issue** dijalankan, sistem otomatis membentuk Invoice Line di project dengan **CIP** untuk membalik Issue to Project dengan nilai minus. Dengan Credit Note, nilai aset tidak bertambah, namun tagihan atas project berkurang senilai CIP.
+
+Setelah dokumen Invoice di-complete, sistem otomatis membuat dokumen **Cost Adjustment** untuk target Product dan ASI yang diterima. Nilai Cost Adjustment mengikuti nilai invoice per satu quantity.
