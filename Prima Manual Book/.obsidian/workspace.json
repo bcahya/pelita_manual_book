@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Project Management/Project Management.md",
+                "file": "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project Management"
+              "title": "Pelita POP Visual Data"
             }
           }
         ]
@@ -196,12 +196,14 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "wh_mo.png",
+    "Prima Manual Book/wh_mo.png",
+    "Prima Manual Book/Project Management/Project Management.md",
     "Prima Manual Book/Item Type Product/Implementasi Item Type di Product.md",
     "Prima Manual Book/Item Type Product/Item Type Product.md",
     "Prima Manual Book/Item Type Product/Product Segment.md",
     "Prima Manual Book/Tools/Tools.md",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
-    "Prima Manual Book/Project Management/Project Management.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/Import Data/Import Data.md",
     "Prima Manual Book/Security di iDempiere/Security di iDempiere.md",
@@ -217,7 +219,6 @@
     "generate_cn.png",
     "Prima Manual Book/generate_cn.png",
     "MR_Renov.png",
-    "Prima Manual Book/MR_Renov.png",
     "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Security di iDempiere",
@@ -232,7 +233,6 @@
     "Prima Manual Book/Product Varian/Fitur Product Varian.md",
     "Prima Manual Book/Product Varian/Konfigurasi Sebelum Menentukan Product Varian.md",
     "Prima Manual Book/Product Varian/Product Template.md",
-    "Prima Manual Book/Attribute Set Instance/Attribute Set Instance.md",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Doc_RDO@913769946.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Print_PO@-412248541.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/Report_Access@669589429.png.checksum",

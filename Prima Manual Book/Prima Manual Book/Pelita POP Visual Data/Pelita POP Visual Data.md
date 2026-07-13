@@ -13,6 +13,7 @@ Pelita POP Visual Data adalah fitur visualisasi yang menampilkan setiap tahapan 
 
 Sistem menampilkan visualisasi Production Order Planning berdasarkan Manufacturing Order (MO) yang dipilih. Setiap tahapan produksi dibedakan menggunakan kodefikasi A–J dengan warna yang berbeda, sehingga progress produksi dapat dipantau secara langsung.
 ## Ketentuan Visualisasi
+
 Berikut ketentuan perubahan warna pada visualisasi:
 
 - Abu-abu — Dokumen sudah di-complete (berlaku untuk Movement, MO, Requisition, PO, dan MR).
@@ -30,3 +31,10 @@ Berikut interaksi yang tersedia pada visualisasi:
 - Klik satu kali pada salah satu tahapan untuk melihat detail, termasuk dokumen masuk (incoming) dan dokumen keluar (outgoing).
 - Klik dua kali pada node untuk membuka menu terkait. Contoh: klik dua kali pada node A akan membuka menu POP.
 - Sorot salah satu tahapan untuk melihat informasi dokumen beserta keterkaitannya.
+### Informasi Warehouse pada Manufacturing Order (MO)
+
+Setiap Manufacturing Order (MO) kini memuat informasi **warehouse produksi** untuk masing-masing artikel. Dengan informasi ini, user dapat memantau tahapan produksi yang sudah selesai dan yang masih _outstanding_, serta mengetahui artikel sudah diproduksi sampai tahap mana — apakah masih di _cutting_, _sewing_, atau _finishing_.
+
+Berikut contoh implementasi informasi warehouse pada masing-masing MO:
+
+![Warehouse](../wh_mo.png "Informasi Warehouse di MO") {#Figure130}
