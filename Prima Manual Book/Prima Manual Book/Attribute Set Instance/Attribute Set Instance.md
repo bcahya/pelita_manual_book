@@ -45,6 +45,7 @@ Guarantee Date digunakan untuk:
 3. Pada field **Attribute Set**, pilih ASI yang konfigurasi
 4. Klik **Save**
 ### Purchase Order & Penerimaan Barang
+
 1. Buka menu **Purchase Order**
 2. Input field-field mandatory
 3. Masuk ke tab **PO Line**, input produk dan quantity produk yang akan diproses

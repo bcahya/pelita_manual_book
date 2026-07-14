@@ -19,8 +19,34 @@ Sebelum memulai transaksi project, lakukan konfigurasi sistem terlebih dahulu de
 6. Tentukan **Attribute Set** sesuai konfigurasi.
 7. Tentukan **Asset Type** sesuai konfigurasi.
 8. Pada field **Renovation/Repair Asset**, pilih No jika merupakan aset baru, atau Yes jika merupakan renovasi atas aset yang sudah ada.
-9. Field Change Project Price digunakan khusus untuk pekerjaan sipil yang menjadi aset. Jika field Change Project Price dicentang, field Charge Cost Adjustment akan muncul secara otomatis — isi field ini untuk menentukan charge yang digunakan saat Cost Adjustment ter-create.
+9. Field Change Project Price digunakan khusus untuk pekerjaan sipil yang menjadi aset.
 10. Klik Save.
+## Field "Change Project Price"
+
+Field **Change Project Price** digunakan khusus untuk pekerjaan sipil yang menjadi aset. Jika field ini dicentang, field **Charge Cost Adjustment** akan muncul secara otomatis — isi field tersebut untuk menentukan charge yang digunakan saat Cost Adjustment ter-_create_.
+
+Sebelum membuat Purchase Order untuk artikel pekerjaan sipil, lakukan konfigurasi **Document Type AP Invoice** yang akan digunakan terlebih dahulu. Skenario fitur ini ditujukan untuk kondisi di mana amount pada PO dan Invoice berbeda — misalnya akibat realisasi project yang tidak sesuai atau kendala dari vendor. Fitur **Change Project Price** hadir sebagai solusi untuk menangani kondisi tersebut.
+### Implementasi Pada Purchase Order
+
+1. Buka menu **Purchase Order**.
+2. Tentukan **Business Partner** yang akan diproses.
+3. Pada field **Project**, tentukan project yang sedang dikerjakan.
+4. Pada field **Cost Center**, tentukan cost center atas project tersebut.
+5. Masuk ke tab **PO Line**.
+6. Tentukan **produk** yang akan diproses.
+7. Tentukan **quantity** produk.
+8. Klik **Save**.
+9. Klik **Complete** pada dokumen Purchase Order.
+10. Masuk ke tab **Material Receipt**, lalu klik **Complete**.
+11. Masuk ke **Receipt Line**, kemudian masuk ke tab **Invoice**.
+12. Masuk ke tab **Invoice Line**.
+13. Input **Amount Price**.
+14. Klik **Complete** pada dokumen Invoice.
+
+Setelah dokumen Invoice di-complete, sistem otomatis membuat dokumen **Cost Adjustment** untuk target Product dan ASI yang diterima. Nilai Cost Adjustment mengikuti nilai invoice per satu quantity. Selain itu, cost pada product dengan ASI yang terbentuk saat Material Receipt diperbarui sesuai harga Invoice. Jurnal Cost Adjustment ini berfungsi untuk mengkoreksi jurnal Matched Invoice.
+
+![ca](../ca_pekerjaan_sipil.png "Cost Adjustment"){#Figure114}
+
 ## Konfigurasi Charge
 
 Charge digunakan untuk menentukan charge kompensasi pada project. Ikuti langkah berikut untuk membuat master charge project:
@@ -124,5 +150,3 @@ Ikuti langkah berikut untuk memproses PO hingga Invoice untuk artikel renovasi d
 8. Klik **Complete** pada dokumen Invoice.
 
 Saat **Generate Credit Note from Project Issue** dijalankan, sistem otomatis membentuk Invoice Line di project dengan **CIP** untuk membalik Issue to Project dengan nilai minus. Dengan Credit Note, nilai aset tidak bertambah, namun tagihan atas project berkurang senilai CIP.
-
-Setelah dokumen Invoice di-complete, sistem otomatis membuat dokumen **Cost Adjustment** untuk target Product dan ASI yang diterima. Nilai Cost Adjustment mengikuti nilai invoice per satu quantity.

@@ -57,6 +57,7 @@
 .include {Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md}
 .include {Stock Opname Charging/Stock Opname Charging.md}
 .include {Contract Management/Contract Management.md}
+.include {Allowance Penerimaan atau Material Receipt/Allowance Penerimaan atau Material Receipt.md}
 .include {Project Management/Project Management.md}
 .include {Report Stock/Report Stock per Warehouse.md}
 .include {Report Stock/Report Stock per Artikel.md}
