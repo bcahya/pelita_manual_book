@@ -40,6 +40,9 @@ Sebelum membuat Purchase Order untuk artikel pekerjaan sipil, lakukan konfiguras
 10. Masuk ke tab **Material Receipt**, lalu klik **Complete**.
 11. Masuk ke **Receipt Line**, kemudian masuk ke tab **Invoice**.
 12. Masuk ke tab **Invoice Line**.
+
+![Invoice](../invoice_sipil.png "Invoice Line") {#Figure134}
+
 13. Input **Amount Price**.
 14. Klik **Complete** pada dokumen Invoice.
 

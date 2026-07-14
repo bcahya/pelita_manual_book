@@ -72,6 +72,5 @@
 .include {Format Report/Format Report.md}
 .include {Forecast Report/Forecast Report.md}
 .include {Asset Management/Asset Management.md}
-.include {Document Type/Document Type.md}
 .include {Security di iDempiere/Security di iDempiere.md}
 .include {Asset Split/Asset Split.md}
