@@ -122,16 +122,16 @@ Ikuti langkah berikut untuk mengekspor dokumen POP:
 4. Klik **Generate Listing Document POP**.
 5. Pilih document yang akan diproses berdasarkan document status.
 
-![Generate](../Fil_Doc_Listing_POP.png "Generate Listing Document POP") {#Figure117}
+![Generate](../filter_listing.png "Generate Listing Document POP") {#Figure117}
 
 5. Klik **OK**
 6. Sistem menampilkan dokumen dalam format **Excel**.
 
-![Report](../hasil_listing.png "Hasil Generate") {#Figure118}
+![Report](../generate_lis_pop.png "Hasil Generate") {#Figure118}
 
 7. Klik dokumen tersebut, kemudian klik **Download**.
 
-Dokumen yang dihasilkan terfilter berdasarkan **Document Status** yang dikonfigurasi. Contoh: jika filter Document Status diset _Complete_, maka hasil generate hanya menampilkan dokumen berstatus _Complete_. Ketentuan yang sama berlaku untuk status lainnya seperti _Draft_, _In Progress_, _Approved_, dan sebagainya.
+Dokumen yang dihasilkan terfilter berdasarkan **Document Status** yang dikonfigurasi. Contoh: jika filter Document Status diset _Complete_, maka hasil generate hanya menampilkan dokumen berstatus _Complete_. Ketentuan yang sama berlaku untuk status lainnya seperti _Draft_, _In Progress_, dan _Invalid_.
 
 Jika field Document Status dikosongkan, sistem menampilkan seluruh dokumen tanpa filter, mencakup informasi quantity dan komponen artikel yang digunakan dalam proses produksi beserta jurnal transaksi terkait, meliputi:
 
