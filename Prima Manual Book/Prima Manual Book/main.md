@@ -59,12 +59,12 @@
 .include {Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md}
 .include {Stock Opname Charging/Stock Opname Charging.md}
 .include {Contract Management/Contract Management.md}
+.include {Allowance Penerimaan atau Material Receipt/Allowance Penerimaan atau Material Receipt.md}
 .include {Project Management/Project Management.md}
 .include {Report Stock/Report Stock per Warehouse.md}
 .include {Report Stock/Report Stock per Artikel.md}
 .include {Posting Matched Invoice/Posting Matched Invoice.md}
 .include {Import Data/Import Data.md}
-.include {Forecast Report/Forecast Report.md}
 .include {Tax/Tax.md}
 .include {Attribute Set Instance/Attribute Set Instance.md}
 .include {Purchase Order/Purchase Order.md}
@@ -73,3 +73,7 @@
 .include {Tools/Tools.md}
 .include {Format Report/Format Report.md}
 .include {Forecast Report/Forecast Report.md}
+.include {Asset Management/Asset Management.md}
+.include {Security di iDempiere/Security di iDempiere.md}
+.include {Asset Split/Asset Split.md}
+.include {Report/Report.md}

@@ -87,6 +87,13 @@ Disposal asset dapat dilakukan melalui dua mekanisme:
 	![Internal Use](../Internal_Use_Line.png "Penyusutan dengan Internal Use") {#Figure50}
 
 Setelah proses disposal selesai — baik melalui Sales Order maupun Internal Use — sistem otomatis memperbarui status disposal pada data asset dan men-generate jurnal disposal.
+
+Berikut ketentuan qty pada inventory decrease/increase:
+
+- **Nilai positif** — Sistem mengurangi (_decrease_) stok on-hand sebesar quantity yang diinput.
+- **Nilai negatif** — Sistem menambah (_increase_) stok on-hand sebesar quantity yang diinput.
+
+Ketentuan ini berlaku pada kombinasi **Product**, **Locator**, dan **Attribute Set Instance (ASI)** yang dipilih pada baris dokumen.
 ## Pergerakan dan Pengelolaan asset
 
 - Perpindahan asset antar lokasi memengaruhi pencatatan penyusutan

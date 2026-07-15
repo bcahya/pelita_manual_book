@@ -142,3 +142,61 @@ Ikuti langkah berikut untuk menghapus dokumen invoice:
 Sistem otomatis menghapus seluruh dokumen dalam rentang waktu yang dikonfigurasi.
 
 >**Catatan:** Proses Delete hanya dapat dilakukan pada dokumen Invoice yang berstatus **Draft**.
+
+## Asset
+
+### Generate GL Journal Depreciation
+
+Fitur **Generate GL Journal Depreciation** digunakan untuk men-generate depresiasi pada seluruh aset sesuai periode dan tanggal depresiasi masing-masing secara sekaligus. Dengan fitur ini, user tidak perlu men-generate depresiasi satu per satu — mengingat aset perusahaan bisa mencapai puluhan bahkan ratusan.
+
+Fitur ini menyediakan dua pendekatan generate jurnal:
+
+- **Periode Depresiasi** — Jika dipilih, field _Depreciation Date_ akan tersembunyi secara otomatis.
+- **Depreciation Date** — Jika dipilih, field _Period_ akan tersembunyi secara otomatis.
+
+Ikuti langkah berikut untuk men-generate GL Journal Depreciation:
+
+1. Buka menu **SIS Generate GL Journal Depreciation**.
+2. Pilih **Organization**.
+3. Pilih **Periode Depresiasi** atau **Depreciation Date** sesuai pendekatan yang digunakan.
+4. Pilih **Document Type**.
+
+![Generate](../SIS_Gen_Dep_Ass.png "Generate Jurnal Depresiasi") {#Figure126}
+
+5. Klik **OK**.
+
+Sistem otomatis memproses depresiasi pada seluruh aset di periode yang telah dikonfigurasi.
+## Contract Management
+
+### Generate AP Invoice
+
+Fitur **Generate AP Invoice** digunakan untuk men-generate invoice dari beberapa dokumen kontrak manajemen yang memiliki tanggal jatuh tempo yang sama sekaligus. Dengan fitur ini, user tidak perlu men-generate invoice satu per satu per kontrak — mengingat kontrak perusahaan bisa mencapai puluhan bahkan ratusan.
+
+Ikuti langkah berikut untuk men-generate AP Invoice:
+
+1. Buka menu **SIS Generate AP Invoice Contract Management**.
+2. Pilih **Organization**.
+3. Pilih **Document Type**.
+4. Pilih **Schedule Date** invoice
+
+![Generate](../Gen_Inv_Con.png "Generate Invoice") {#Figure127}
+
+5. Klik **OK**.
+
+Sistem otomatis men-generate invoice atas seluruh kontrak dengan periode yang telah dikonfigurasi. Setelah invoice ter-generate, tim payment dapat segera melakukan pembayaran atas kontrak-kontrak tersebut.
+### Generate GL Journal Depreciation
+
+Fitur **Generate GL Journal Depreciation** pada Contract Management digunakan untuk men-generate jurnal amortisasi pada seluruh kontrak sesuai periode masing-masing secara sekaligus. Dengan fitur ini, user tidak perlu men-generate amortisasi satu per satu per kontrak.
+
+Ikuti langkah berikut untuk men-generate GL Journal Depreciation:
+
+1. Buka menu **SIS Generate GL Journal Depreciation Contract Management**.
+2. Pilih **Organization**.
+3. Pilih **Document Type**.
+4. Pilih **Schedule Date** depresiasi.
+
+![generate](../gen_Dep_con.png "Generate Depresiasi") {#Figure128}
+
+5. Klik **OK**.
+
+Sistem otomatis memproses amortisasi pada masing-masing kontrak manajemen di periode yang telah dikonfigurasi

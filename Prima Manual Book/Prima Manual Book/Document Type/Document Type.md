@@ -6,10 +6,21 @@ Document Type adalah konfigurasi yang mendefinisikan perilaku sebuah dokumen tra
 - Alur persetujuan (DocAction)
 - Jurnal akuntansi yang dihasilkan
 
-Di iDempiere, terdapat dua lapisan yang berbeda namun saling terkait:
+Di iDempiere, terdapat tiga lapisan yang berbeda namun saling terkait:
 
-- Document Base Type — Lapisan sistem iDempiere yang tidak dapat ditambah atau diubah oleh pengguna.
-- Document Type — Lapisan konfigurasi yang dibuat dan dikustomisasi oleh admin per organisasi, dan selalu terhubung ke salah satu Document Base Type.
+- Document Base Type — Lapisan sistem iDempiere yang tidak dapat ditambah atau diubah oleh pengguna. Document Base Type menentukan kategori utama suatu dokumen
+- Document Type — Lapisan konfigurasi yang dibuat dan dikustomisasi oleh admin per organisasi, dan selalu terhubung ke salah satu Document Base Type. Document type menentukan konfigurasi operasional dokumen.
+- Document Sub Type — Lapisan ketiga dalam hierarki dokumen iDempiere, yang berada di bawah Document Base Type dan Document Type. Document Sub Type menentukan fungsi dan perilaku spesifik dari dokumen yang berada dalam kategori yang sama.
+
+Document Sub Type mengendalikan logika bisnis yang lebih spesifik, seperti perlakuan akuntansi, pergerakan persediaan, serta jurnal akuntansi yang dihasilkan. Field ini hanya tersedia pada Document Base Type yang mendukung penggunaan sub type. Apabila suatu Document Base Type tidak memiliki sub type, maka field ini akan kosong dan tidak memengaruhi proses transaksi.
+
+Sebagai contoh, Material Physical Inventory memiliki tiga Document Sub Type, yaitu:
+
+- Cost Adjustment digunakan untuk melakukan penyesuaian nilai persediaan atau revaluasi Harga Pokok Persediaan (HPP) tanpa mengubah kuantitas stok.
+- Internal Use Inventory digunakan untuk mencatat pengeluaran persediaan untuk kebutuhan internal perusahaan.
+- Physical Inventory digunakan untuk mencatat hasil stock opname dan menyesuaikan kuantitas persediaan berdasarkan kondisi fisik di gudang.
+
+Ketiga Document Sub Type tersebut menggunakan Document Base Type yang sama, yaitu Material Physical Inventory, namun masing-masing menjalankan fungsi bisnis yang berbeda. Oleh karena itu, setiap sub type menerapkan logika proses, perlakuan akuntansi, dan jurnal yang berbeda sesuai dengan tujuan transaksinya. 
 
 Berikut Document Base Type yang telah terdefinisi di sistem iDempiere:
 

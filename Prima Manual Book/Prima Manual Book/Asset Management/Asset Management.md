@@ -97,20 +97,72 @@ Saat melakukan Asset Transfer, sistem otomatis menjalankan mekanisme berikut:
 
 ![Cost Adj](../Cost_Adj_TF.png "Cost Adjustment") {#Figure123}
 
-Konfigurasi charge untuk **Internal Use** dan **Cost Adjustment** dilakukan di level **Asset Type**.
+Konfigurasi charge untuk **Internal Use** dan **Cost Adjustment** dilakukan di level **Asset Type**. Dokumen yang terbentuk —  **Cost Adjustment**, **Inventory Decrease/Increase**, dan **GL Journal** — akan ditampilkan di tab **Asset Addition Line** dan mereferensikan masing-masing dokumen terkait.
+
+![Line](../Line_Asset_Add.png "Dokumen") {#Figure124}
 ## Asset Depreciation
 
 Asset Depreciation adalah proses pencatatan penurunan nilai ekonomis aset tetap secara sistematis selama masa manfaatnya, sesuai kebijakan akuntansi perusahaan dan standar pelaporan keuangan yang berlaku. Periode atau masa manfaat aset dikonfigurasi di **Asset Type**.
 
-Saat aset dipindahkan ke warehouse atau outlet tujuan, dokumen aset otomatis di-complete dan proses depresiasi langsung berjalan. Jurnal untuk periode pertama depresiasi juga ter-complete secara otomatis. Sistem menggunakan **tanggal penerimaan barang** saat dokumen penerimaan di-complete sebagai _start date_ depresiasi.
+Di iDempiere, masa manfaat aset — yang disebut **Number of Entry** — hanya dapat diedit sebelum dokumen aset di-complete. Setelah dokumen di-complete, masa manfaat tidak dapat diubah.
 
-Konfigurasi **auto complete aset** dan **auto complete jurnal** dapat dilakukan di **Asset Type**. Jika keduanya dikonfigurasi, depresiasi langsung berjalan tanpa perlu tindakan manual.
+![Masa Manfaat](../NOE_Depre.png "Number of Entry") {#Figure126}
 
-Ikuti langkah berikut untuk mengecek depresiasi aset:
+Sistem otomatis menyesuaikan **Depreciation Amount** berdasarkan masa manfaat yang diperbarui. Hal ini diperlukan untuk mengakomodasi kondisi penggabungan beberapa aset yang sebelumnya dicatat secara terpisah menjadi satu aset induk (parent asset), di mana aset induk tersebut kemungkinan sudah mengalami depresiasi sebelumnya.
+### Mekanisme Depresiasi
+
+Saat aset dipindahkan ke warehouse atau outlet tujuan, dokumen aset otomatis di-complete, namun proses depresiasi belum berjalan. Depresiasi baru dimulai saat user mengklik field **Start Depreciation**. Jika field tersebut belum diproses, aset tidak akan terdepresiasi.
+
+![Start](../Start_Depresiasi.png "Start Depreciation") {#Figure125}
+
+Berikut syarat yang harus terpenuhi sebelum aset dapat didepresiasi:
+
+- Aset sudah dipindahkan ke warehouse atau outlet tujuan.
+- Dokumen aset sudah berstatus _Complete_.
+
+Jika salah satu syarat tidak terpenuhi, aset tidak dapat didepresiasi. Tanggal depresiasi menggunakan tanggal saat field **Start Depreciation** diproses.
+
+Konfigurasi **auto complete aset** dapat dilakukan di **Asset Type**. Jika keduanya dikonfigurasi, depresiasi langsung berjalan tanpa perlu tindakan manual.
+
+Ikuti langkah berikut untuk melakukan verifikasi depresiasi aset:
 1. Buka menu **SIS Asset**
 2. Pilih asset yang akan diproses
 3. Pada tab **Line**, periksa **Depreciation Date** dan nilai depresiasi aset selama masa manfaatnya.
 
 ![Depresiasi](../Ass_Dep.png "Asset Depresiasi") {#Figure120}
 
-Depresiasi berjalan secara otomatis sesuai scheduler yang telah dikonfigurasi.
+Depresiasi berjalan secara otomatis sesuai scheduler yang telah dikonfigurasi. 
+## Report Asset
+
+Report Asset digunakan untuk memantau posisi aset tetap perusahaan, meliputi nilai perolehan, nilai buku berjalan, status penyusutan, dan lokasi fisik aset. Laporan ini umumnya digunakan untuk:
+
+- **Audit fisik aset** — Mencocokkan data locator dan Attribute Set Instance dengan kondisi fisik di lapangan.
+- **Rekonsiliasi nilai buku** — Membandingkan Gross Value dan Residual Value untuk keperluan laporan neraca.
+- **Pemantauan penyusutan** — Memverifikasi kelengkapan proses depresiasi berdasarkan Depreciation Date.
+- **Penelusuran asal aset** — Menelusuri kembali aset ke dokumen pembelian terkait.
+### Langkah Akses Report Asset
+
+1. Buka menu **SIS Report Asset**.
+2. Input field berikut sesuai kebutuhan:
+
+  - **Organization**
+  - **Asset Type**
+  - **Locator**
+  - **Document Status**
+  - **Depreciation Date**
+
+3. Klik **Ok**.
+
+Sistem menampilkan daftar aset sesuai filter yang dikonfigurasi.
+
+![Report](../Report_Aset.png "Report Asset") {#Figure125}
+
+Berikut penjelasan kolom yang tercantum pada report aset:
+- **Asset dan Document** — Dokumen transaksi asal yang menjadi dasar pembentukan aset. Digunakan sebagai jejak audit untuk menelusuri asal usul perolehan aset.
+- **Product** — Produk acuan yang digunakan sebagai dasar pembentukan aset.
+- **Gross Value** — Nilai perolehan awal aset (harga beli) sebelum dikurangi akumulasi penyusutan.
+- **Residual Value** — Nilai buku saat ini setelah dikurangi penyusutan berjalan.
+- **Depreciation Date** — Tanggal proses penyusutan terakhir dicatat untuk aset tersebut.
+- **Locator** — Lokasi fisik penyimpanan aset, digunakan untuk pelacakan fisik saat stock opname atau audit aset.
+- **Attribute Set Instance** — Atribut spesifik unik aset, seperti nomor lot yang membedakan satu unit fisik dari unit lain meski berasal dari produk yang sama.
+- **Document Status** — Status dokumen aset: _Draft_, _Completed_, atau _Closed_.

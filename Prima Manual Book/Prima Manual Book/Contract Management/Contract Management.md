@@ -114,9 +114,11 @@ Jika terdapat kompensasi, proses kompensasi dapat dilakukan atas kontrak lain me
 
 5. Klik **complete** dokumen contract management
 6. Masuk ke tab **AP Invoice Schedule**, lalu jalankan **Generate Invoice From Schedule**.
+
 ![Generate AP Invoice](../Generate_Kompensasi.png "Generate AP Invoice") {#Figure74}
 
 7. Sistem membentuk 2 Invoice Line pada invoice: invoice amount awal dan invoice kompensasi yang mengurangi total amount invoice.
+
 ![Invoice](../Invoice_Kompensasi.png "Invoice yang terbentuk") {#Figure75}
 
 8. Klik **complete** pada dokumen AP Invoice

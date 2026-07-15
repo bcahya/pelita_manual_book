@@ -19,7 +19,7 @@ Langkah selanjutnya adalah mengimplementasikan Item Type pada Product Category d
 
 ![Product](../Product_A.png "Product Type") {#Figure6}
 
-4. Klik **Save**. Saat produk disimpan, sistem otomatis membuat **Kode artikel** dan **Nama produk**. Di sistem, kode artikel disebut sebagai **Search Key**.
+4. Klik **Save**. Saat produk disimpan, sistem otomatis membuat **Kode artikel** dan **Nama Artikel**. Di sistem, kode artikel disebut sebagai **Search Key**. Nama artikel terbentuk dari gabungan nama masing-masing segment yang dipisahkan dengan spasi agar mudah dibaca.
 
 Informasi segment yang telah dikonfigurasi akan muncul di header Product pada field **Product Info**. Field ini menampilkan informasi segment sesuai urutan yang dikonfigurasi di Item Type.
 

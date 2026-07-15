@@ -18,15 +18,15 @@ ICPL menjadi dasar perhitungan harga pada setiap transaksi. Sistem hanya dapat m
 Ikuti langkah berikut untuk membuat ICPL Base:
 1. Buka Menu **SIS ICPL**
 2. Klik **New**
-3. Isi semua field
-  - ICPL Type. Tentukan jenis harga yang digunakan, seperti online, offline, intercompany, atau stock opname.
-  - Price include tax. Tentukan apakah harga sudah termasuk pajak.
-  - Valid from. Tentukan tanggal mulai berlaku harga.
-  - Sales transaction. Aktifkan jika ICPL digunakan untuk transaksi penjualan.
-  - Set lucky number. Opsional, jika diperlukan untuk perhitungan tambahan dapat diaktifkan.
-  - Calculate type. Tentukan metode perhitungan seperti Add (+), Subtract (-), Multiply (*) atau Divide (/)
+3. Isi field pada header:
+  - ICPL Type — Opsional, tentukan jenis harga yang digunakan seperti online, offline, intercompany, atau stock opname.
+  - Price Include Tax — Tentukan apakah harga sudah termasuk pajak.
+  - Valid From — Tentukan tanggal mulai berlaku harga.
+  - Sales Transaction — Centang jika ICPL digunakan untuk transaksi penjualan.
+  - Set Lucky Number — Opsional, aktifkan jika diperlukan untuk perhitungan tambahan.
 
-		![ICPL Base](../ICPL_Base.png "ICPL  Base") {#Figure32}
+
+	![ICPL Base](../header_icpl_base.png "ICPL  Base") {#Figure32}
 
 
 4. Klik **Save**
@@ -40,40 +40,69 @@ Setelah header ICPL tersimpan, tambahkan daftar harga produk melalui tab **Line*
 8. Input **Base Price** produk
 
 
-		![Base Price](../ICPL_Product.png "Product di ICPL Base") {#Figure33}
+	![Base Price](../produk_icpl_base.png "Product di ICPL Base") {#Figure33}
 
 
 9. Klik **save**
 10. Ulangi langkah di atas untuk seluruh produk
 11. Klik **complete**
 12. Jalankan proses **Generate PLV** (Price List Version).
-	
-		![Generate PLV](../ICPL_PLV.png "Generate Price List Version") {#Figure34}
-
-
 13. Sistem akan menyimpan data header dan menyiapkan versi harga.
 
 ## ICPL With Reference
 
-ICPL With Reference digunakan untuk membuat versi harga baru berdasarkan ICPL Base yang sudah ada. Sistem akan menghitung harga secara otomatis berdasarkan referensi yang dipilih.
+ICPL With Reference digunakan untuk membuat versi harga baru berdasarkan ICPL Base yang sudah ada. Sistem menghitung harga secara otomatis berdasarkan referensi yang dipilih.
 
-### Membuat ICPL with Reference
+### ICPL with Reference dengan Product Category
 
-1. Buka Menu **SIS ICPL**
-2. Klik **New**
-3. Isi seluruh field
+ICPL With Reference dengan Product Category digunakan ketika satu ICPL memuat beberapa produk dengan kategori berbeda yang memiliki perhitungan harga yang berbeda pula. ICPL Base mencakup semua produk dengan base price masing-masing tanpa filter kategori. Sedangkan di ICPL Reference, perhitungan harga dapat dibedakan per kategori — misalnya produk makanan ditambah Rp2.000 dan produk minuman ditambah Rp3.000.
+
+Ikuti langkah berikut untuk mengkonfigurasi perhitungan harga per kategori:
+
+1. Buka menu **SIS ICPL**.
+2. Klik **New**.
+3. Isi seluruh field pada header.
 4. Pada field **ICPL Reference**, pilih ICPL Base yang akan dijadikan acuan.
 	
 
-![Reference](../Ref_ICPL.png "ICPL Reference") {#Figure35}
+![Reference](../header_icpl_ref_pc.png "ICPL Reference") {#Figure35}
 
 
-5. Klik **save**
-6. Klik **complete**
-7. Jalankan proses **Generate PLV (Price List Version)**.
-8. Sistem akan menampilkan produk beserta harga yang dihitung otomatis berdasarkan harga ICPL Base + (Rate %) 
+5. Klik Save.
+6. Masuk ke tab Criteria.
+7. Input Product Category yang akan diproses.
+8. Pada field Calculate Type, tentukan metode perhitungan: Add (+), Subtract (-), Multiply ()*, atau Divide (/).
+9. Pada field Rate, tentukan rate untuk product category tersebut.
 
-User tidak perlu membuat ICPL Line secara manual karena sistem akan membuat data otomatis saat proses Generate PLV dijalankan. ICPL With Reference juga dapat digunakan sebagai referensi untuk ICPL turunan lainnya.
+![criteria](../pc_icpl_ref.png "Kriteria Produk") {#Figure135}
+
+10. Klik **complete**
+11. Jalankan proses **Generate PLV (Price List Version)**.
+12. Sistem menampilkan produk beserta harga yang dihitung otomatis berdasarkan harga ICPL Base + Rate, dengan perbedaan perhitungan price sesuai masing-masing kategori.
+### ICPL with Reference Tanpa Product Category
+
+Jika penentuan harga berlaku untuk semua produk tanpa filter kategori — misalnya berdasarkan ICPL Type seperti _Online_, _Offline_, _Stock Opname_, atau _Inter Company_ — konfigurasi rate tidak perlu dibedakan per kategori.
+
+Ikuti langkah berikut untuk mengkonfigurasi ICPL Reference tanpa filter Product Category:
+
+1. Buka menu **SIS ICPL**.
+2. Klik **New**.
+3. Isi seluruh field pada header.
+4. Pada field **ICPL Reference**, pilih ICPL Base yang akan dijadikan acuan.
+5. Klik **Save**.
+6. Masuk ke tab **Criteria**.
+7. Pada field **Calculate Type**, tentukan metode perhitungan: _Add (+)_, _Subtract (-)_, _Multiply (_)*, atau _Divide (/)_.
+8. Pada field **Rate**, tentukan rate untuk produk tersebut.
+
+![criteria](../icpl_ref_non_pc.png "Kriteria Produk") {#Figure135}
+
+9. Klik **complete**
+10. Jalankan proses **Generate PLV (Price List Version)**.
+11. Sistem menampilkan produk beserta harga yang dihitung otomatis berdasarkan harga ICPL Base + Rate.
+
+Tanpa filter Product Category, seluruh produk di ICPL Base dikalkulasi dengan rate yang sama sehingga perhitungan harga setiap produk seragam.
+
+User tidak perlu membuat ICPL Line secara manual karena sistem otomatis membuat data saat proses **Generate PLV** dijalankan. ICPL With Reference juga dapat digunakan sebagai referensi untuk ICPL turunan lainnya.
 ## Update ICPL
 
 Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat mengubah langsung dokumen ICPL dengan status Complete. Hanya ICPL Base yang dapat diperbarui.
