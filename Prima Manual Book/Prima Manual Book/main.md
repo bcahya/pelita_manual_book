@@ -74,3 +74,4 @@
 .include {Asset Management/Asset Management.md}
 .include {Security di iDempiere/Security di iDempiere.md}
 .include {Asset Split/Asset Split.md}
+.include {Report/Report.md}
