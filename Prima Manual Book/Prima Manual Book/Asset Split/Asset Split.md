@@ -1,7 +1,7 @@
-# Asset Split
+## Asset Split
 
 Asset Split adalah fitur yang digunakan untuk memecah satu aset menjadi beberapa aset baru (target asset) dengan quantity yang lebih kecil, tanpa mengubah total nilai perolehan aset secara keseluruhan. Fitur ini umumnya digunakan ketika sebuah aset yang tercatat dengan quantity lebih dari satu perlu dipisahkan kepemilikan, lokasi, atau penanggung jawabnya menjadi beberapa unit aset tersendiri. 
-## Langkah Implementasi Asset Split
+### Langkah Implementasi Asset Split
 
 1. Buka menu **SIS Asset Split**.
 2. Input **Cost Center**.
@@ -22,15 +22,15 @@ Asset Split adalah fitur yang digunakan untuk memecah satu aset menjadi beberapa
 14. Klik **Complete** pada dokumen SIS Asset Split.
 
 Setelah dokumen Asset Split di-complete, sistem otomatis membentuk dokumen dan transaksi berikut:
-### Internal Use (Inventory Decrease/Increase)
+#### Internal Use (Inventory Decrease/Increase)
 
 Sistem akan menggenerate dokumen Internal Use untuk mengurangi quantity pada aset sumber (aset yang dipecah) sesuai jumlah yang dipindahkan ke aset target.
 
 ![IU](../split_iu.png "Internal Use") {#Figure131}
-### Jurnal Pembalik Akumulasi Penyusutan
+#### Jurnal Pembalik Akumulasi Penyusutan
 
 Jika aset sumber sudah pernah disusutkan, sistem membuat jurnal untuk membalik (_reverse_) akumulasi penyusutan secara proporsional terhadap quantity yang dipecah. Hal ini memastikan nilai buku target asset dimulai secara akurat sesuai porsi nilai yang dialihkan.
-### Pembentukan Target Asset
+#### Pembentukan Target Asset
 
 Sistem membentuk aset baru sejumlah quantity yang diinput pada dokumen Asset Split. Setiap target asset yang terbentuk memiliki:
 
@@ -38,10 +38,10 @@ Sistem membentuk aset baru sejumlah quantity yang diinput pada dokumen Asset Spl
 - ASI (Attribute Set Instance) yang ter-generate otomatis, sehingga masing-masing target asset dapat dibedakan dan ditelusuri secara individual.
 
 ![asset](../target_aset.png "Target Asset") {#Figure132}
-### Cost Adjustment (CA) untuk Masing-Masing Target Asset
+#### Cost Adjustment (CA) untuk Masing-Masing Target Asset
 
 Sistem membuat dokumen **Cost Adjustment** untuk setiap target asset dengan nilai sesuai amount yang dialokasikan. Cost Adjustment ini mencatat nilai perolehan awal target asset sesuai porsi nilai yang dipecah dari aset sumber.
-### Physical Inventory untuk Masing-Masing Target Asset
+#### Physical Inventory untuk Masing-Masing Target Asset
 
 Sistem membentuk dokumen Physical Inventory untuk setiap target asset dengan ketentuan berikut:
 

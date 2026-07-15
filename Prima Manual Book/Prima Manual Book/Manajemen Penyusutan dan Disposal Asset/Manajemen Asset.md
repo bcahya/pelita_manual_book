@@ -1,5 +1,4 @@
-# Manajemen Asset
-## Manajemen Penyusutan dan Disposal Asset
+## Manajemen Penyusutan
 
 Penyusutan asset adalah proses mengalokasikan biaya asset secara sistematis selama masa manfaatnya. Setiap periode, sistem mencatat beban penyusutan dan mengurangi nilai buku asset. Sebelum melakukan penyusutan, pastikan konfigurasi berikut telah selesai:
 
@@ -62,7 +61,7 @@ Penyusutan asset bekerja dengan ketentuan berikut:
 3. Setiap penerimaan dicatat berdasarkan batch/lot dan mereferensikan dokumen pembelian terkait.
 4. Penyusutan mengikuti harga Purchase Order, sedangkan nilai disposal dapat disesuaikan dengan kebutuhan bisnis.
 
-## Disposal Asset
+## Manajemen Disposal Asset
 
 Disposal adalah proses penghapusan asset dari catatan perusahaan secara permanen. Disposal dilakukan ketika asset sudah tidak layak pakai, dijual, dihibahkan, atau dihancurkan. 
 
