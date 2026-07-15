@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/main.md",
+                "file": "Prima Manual Book/Asset Split/Asset Split.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "main"
+              "title": "Asset Split"
             }
           }
         ]
@@ -196,8 +196,8 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Allowance Penerimaan atau Material Receipt/Allowance Penerimaan atau Material Receipt.md",
     "Prima Manual Book/main.md",
+    "Prima Manual Book/Allowance Penerimaan atau Material Receipt/Allowance Penerimaan atau Material Receipt.md",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/dp_multi_bg@641581090.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/dp_multi_bg@641581090.png",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/dp_bg@-662810564.png.checksum",
