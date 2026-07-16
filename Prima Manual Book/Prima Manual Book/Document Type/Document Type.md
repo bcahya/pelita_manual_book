@@ -154,3 +154,18 @@ RDO adalah dokumen yang digunakan untuk mendistribusikan dan mengalokasikan perm
 ![RDO](../Doc_RDO.png "SIS RDO") {#Figure114}
 
 Saat dokumen RDO di-complete, sistem otomatis membentuk dokumen **Delivery** dan merilis dokumen **Receipt**. Oleh karena itu, pastikan konfigurasi **Document Type** untuk Delivery dan Receipt sudah dilakukan sebelum memproses RDO.
+
+## Setup Warehouse di  Document Type Purchase Order
+
+Di Document Type Purchase Order, user dapat mengkonfigurasi warehouse sesuai kebutuhan perusahaan. Contoh: Document Type **Purchase Order Bahan** menggunakan **Gudang Bahan**, sedangkan Document Type **Purchase Order Aksesoris** menggunakan **Gudang Aksesoris**.
+
+Field warehouse ini tidak bersifat mandatory. Jika warehouse tidak diisi, user tetap dapat menginput warehouse lain saat membuat dokumen dengan tipe tersebut.
+
+Ikuti langkah berikut untuk mengkonfigurasi warehouse di Document Type Purchase Order:
+
+1. Buka menu **Document Type Purchase Order**.
+2. Pada field **Warehouse**, input warehouse yang akan digunakan pada document type tersebut.
+
+![warehouse](../wh_doc_type.png "Warehouse") {#Figure144}
+
+3. Klik **Save**.

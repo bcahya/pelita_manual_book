@@ -66,28 +66,39 @@ Penyusutan asset bekerja dengan ketentuan berikut:
 Disposal adalah proses penghapusan asset dari catatan perusahaan secara permanen. Disposal dilakukan ketika asset sudah tidak layak pakai, dijual, dihibahkan, atau dihancurkan. 
 
 Disposal asset dapat dilakukan melalui dua mekanisme:
+### Sales order
 
-1. **Sales order**
-  - Buka menu **Sales Order,** pastikan Document Type menggunakan **Standard Order**.
-  - Pilih asset berdasarkan **ASI** yang sesuai.
-  - Proses Shipment, lalu buat Invoice Customer (AR).	
+  1. Buka menu **Sales Order,** pastikan Document Type menggunakan **Standard Order**.
+  2. Pilih asset berdasarkan **ASI** yang sesuai.
+  3. Proses Shipment, lalu buat Invoice Customer (AR).	
 
-	!(90%)[Sales Order](../Sales_Order.png "Penyusutan dengan Sales Order") {#Figure49}
+!(90%)[Sales Order](../Sales_Order.png "Penyusutan dengan Sales Order") {#Figure49}
 
 
     
-2. **Physical Inventory (Internal Use)**
-  * Buka menu **Inventory Decrease/Increase**.
-  * Pilih Document Type **Internal Use Inventory**.
-  * Masuk ke **Internal Use Line**.
-  * Pilih asset yang akan didisposal berdasarkan **ASI**.
-  * Tentukan **Charge** sebagai beban disposal
+### Physical Inventory (Internal Use)
 
-	![Internal Use](../Internal_Use_Line.png "Penyusutan dengan Internal Use") {#Figure50}
+  1. Buka menu **Inventory Decrease/Increase**.
+  2. Pilih Document Type **Internal Use Inventory**.
+  3. Masuk ke **Internal Use Line**.
+  4. Pilih asset yang akan didisposal berdasarkan **ASI**.
+  5. Tentukan **Charge** sebagai beban disposal
 
-Setelah proses disposal selesai — baik melalui Sales Order maupun Internal Use — sistem otomatis memperbarui status disposal pada data asset dan men-generate jurnal disposal.
+![Internal Use](../IU_asset.png "Penyusutan dengan Internal Use") {#Figure50}
 
-Berikut ketentuan qty pada inventory decrease/increase:
+Setelah proses disposal melalui Internal Use selesai, sistem otomatis memperbarui status disposal pada data aset dan men-generate dokumen pendukung berikut:
+
+#### Jurnal Disposal
+
+Jurnal disposal aset bertujuan untuk menghapus nilai aset dan akumulasi penyusutannya dari pembukuan, serta mencatat laba atau rugi atas pelepasan aset tersebut.
+
+![disposal](../jurnal_disposal_aset.png "Disposal Aset (Internal Use)") {#Figure142}
+
+![jurnal disposal](../disposal_aset.png "Jurnal Disposal Aset") {#Figure143}
+
+#### Ketentuan qty pada inventory decrease/increase
+
+Field kunci pada baris dokumen adalah **Qty Internal Use**, dengan ketentuan berikut:
 
 - **Nilai positif** — Sistem mengurangi (_decrease_) stok on-hand sebesar quantity yang diinput.
 - **Nilai negatif** — Sistem menambah (_increase_) stok on-hand sebesar quantity yang diinput.
