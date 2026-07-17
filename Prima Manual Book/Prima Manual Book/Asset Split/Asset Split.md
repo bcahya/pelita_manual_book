@@ -38,6 +38,7 @@ Sistem membentuk aset baru sejumlah quantity yang diinput pada dokumen Asset Spl
 - ASI (Attribute Set Instance) yang ter-generate otomatis, sehingga masing-masing target asset dapat dibedakan dan ditelusuri secara individual.
 
 ![asset](../target_aset.png "Target Asset") {#Figure132}
+
 #### Cost Adjustment (CA) untuk Masing-Masing Target Asset
 
 Sistem membuat dokumen **Cost Adjustment** untuk setiap target asset dengan nilai sesuai amount yang dialokasikan. Cost Adjustment ini mencatat nilai perolehan awal target asset sesuai porsi nilai yang dipecah dari aset sumber.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Project Management/Project Management.md",
+                "file": "Prima Manual Book/Asset Split/Asset Split.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project Management"
+              "title": "Asset Split"
             }
           }
         ]
@@ -196,8 +196,8 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Financial Report/Financial Report.md",
     "Prima Manual Book/Project Management/Project Management.md",
+    "Prima Manual Book/Financial Report/Financial Report.md",
     "Prima Manual Book/Financial Report",
     "Prima Manual Book/ICPL/ICPL.md",
     "Prima Manual Book/Attribute Set Instance/Attribute Set Instance.md",
