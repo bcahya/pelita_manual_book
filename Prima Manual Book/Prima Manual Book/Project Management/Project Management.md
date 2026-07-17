@@ -109,6 +109,32 @@ Setelah Invoice di-complete, sistem otomatis membuat aset yang akan muncul di me
 4. Sistem menampilkan notifikasi **Created** — issue atas project berhasil dibuat.
 
 Seluruh issue yang telah dibuat akan muncul di tab **Issue** pada menu Project di master project terkait. Gunakan fitur Issue to Project untuk mencatat penggunaan bahan secara internal dalam project tersebut.
+
+## Action Project
+
+Setelah suatu project dinyatakan selesai dan seluruh transaksi terkait telah dipastikan selesai diproses, project dapat dilakukan proses **Complete**.
+
+Ketika project telah berstatus **Complete**, project tersebut tidak akan dapat digunakan kembali pada transaksi berikut:
+
+- **Purchase Order (PO)**
+- **Purchase Order Line**
+- **Material Receipt (MR)**
+- **Material Receipt Line**
+- **Invoice**
+- **Invoice Line**
+- **Payment**
+- **Issue to Project**
+- **Inventory Decrease/Increase**
+- **Physical Inventory**
+- **Cost Adjustment**
+
+Sebelum melakukan proses **Complete Project**, pastikan tidak terdapat dokumen transaksi yang masih berstatus **outstanding** atau belum selesai diproses.
+
+Apabila masih terdapat dokumen outstanding dan project tetap dilakukan proses complete, sistem akan melakukan validasi dan memberikan notifikasi bahwa masih terdapat dokumen yang belum diselesaikan.
+
+Selain itu, apabila masih terdapat dokumen outstanding yang berkaitan dengan project dan asset telah terbentuk, terdapat risiko nilai asset yang terbentuk belum mencerminkan seluruh biaya yang seharusnya dialokasikan. Hal ini dapat menyebabkan nilai asset mengalami **kurang pengakuan biaya**.
+
+Oleh karena itu, sebelum melakukan proses **Complete Invoice PO Besar** yang berkaitan dengan project, disarankan untuk melakukan pengecekan terlebih dahulu melalui proses **Complete Project**. Setelah seluruh transaksi project dipastikan selesai, lakukan proses **Complete Invoice** agar seluruh biaya dapat tercatat dan teralokasi dengan benar ke dalam project.
 ## Jenis-Jenis Project
 
 Terdapat dua pendekatan project di perusahaan:
