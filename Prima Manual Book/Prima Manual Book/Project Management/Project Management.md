@@ -117,11 +117,8 @@ Setelah suatu project dinyatakan selesai dan seluruh transaksi terkait telah dip
 Ketika project telah berstatus **Complete**, project tersebut tidak akan dapat digunakan kembali pada transaksi berikut:
 
 - **Purchase Order (PO)**
-- **Purchase Order Line**
 - **Material Receipt (MR)**
-- **Material Receipt Line**
 - **Invoice**
-- **Invoice Line**
 - **Payment**
 - **Issue to Project**
 - **Inventory Decrease/Increase**
