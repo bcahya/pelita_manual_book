@@ -122,3 +122,42 @@ Jika terdapat kompensasi, proses kompensasi dapat dilakukan atas kontrak lain me
 ![Invoice](../Invoice_Kompensasi.png "Invoice yang terbentuk") {#Figure75}
 
 8. Klik **complete** pada dokumen AP Invoice
+
+## Report Contract Management
+
+Report Contract Management digunakan untuk menampilkan daftar dokumen Contract Management berdasarkan parameter pencarian yang dipilih. Gunakan report ini untuk memantau informasi kontrak yang telah dibuat tanpa perlu membuka setiap dokumen satu per satu.
+### Langkah Akses Report Contract Management
+
+1. Buka menu **SIS Report Contract Management**.
+2. Input field berikut sesuai kebutuhan:
+- **Business Partner**
+- **Document Status**
+
+![contract](../contract_manag.png "SIS Report Contract Management") {#Figure147}
+
+3. Klik **OK**.
+
+Report menampilkan seluruh informasi yang terdapat pada **Header Contract Management**.
+
+![report](../report_contract.png "Report Contract Management") {#Figure148}
+## Report Contract Management Detail
+
+Report Contract Management Detail digunakan untuk menampilkan rincian setiap item pada dokumen Contract Management. Berbeda dengan Report Contract Management yang hanya menampilkan informasi header, report ini menampilkan seluruh data pada **Contract Management Line**.
+### Langkah Akses Report Contract Management Detail
+
+1. Buka menu **SIS Report Contract Management Detail**.
+2. Input field berikut sesuai kebutuhan:
+
+- **Contract Management**
+- **Cost Center**
+- **Schedule Date**
+
+![detail](../contract_detail.png "SIS Report Contract Management Detail") {#Figure149}
+
+3. Klik **OK**.
+
+Report menampilkan seluruh informasi yang terdapat pada **Contract Management Line**.
+
+![report detail](../report_contract_detail.png "Report Contract Management Detail") {#Figure150}
+
+> **Catatan:** Seluruh parameter bersifat opsional. Jika parameter tidak diisi, sistem menampilkan seluruh data tanpa filter, kecuali parameter yang dikonfigurasi sebagai wajib pada implementasi.

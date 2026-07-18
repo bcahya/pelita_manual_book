@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Movement Standard/Movement Standard.md",
+                "file": "Prima Manual Book/Contract Management/Contract Management.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Movement Standard"
+              "title": "Contract Management"
             }
           }
         ]
@@ -196,28 +196,29 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "contract_detail 1.png",
+    "contract_detail.png",
+    "Prima Manual Book/contract_detail.png",
+    "Prima Manual Book/report_contract.png",
+    "Prima Manual Book/contract_manag.png",
+    "Prima Manual Book/report_contract_detail.png",
+    "Prima Manual Book/Movement Standard/Movement Standard.md",
+    "Prima Manual Book/ICPL/ICPL.md",
+    "Prima Manual Book/Contract Management/Contract Management.md",
+    "Prima Manual Book/Asset Management/Asset Management.md",
     "move_ship.png",
     "Prima Manual Book/move_ship.png",
-    "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/invoice_line_aset.png",
     "Prima Manual Book/invoice_line.png",
     "Prima Manual Book/Asset Split/Asset Split.md",
     "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Prima Manual Book/Project Management/Project Management.md",
-    "Prima Manual Book/ICPL/ICPL.md",
     "Prima Manual Book/icpl_wh_so.png",
-    "Prima Manual Book/icpl_sale_doc.png",
-    "Prima Manual Book/icpl_so.png",
-    "Prima Manual Book/Movement Standard/Movement Standard.md",
     "Prima Manual Book/Movement Standard",
     "Prima Manual Book/Financial Report/Financial Report.md",
     "Prima Manual Book/Financial Report",
     "Prima Manual Book/Attribute Set Instance/Attribute Set Instance.md",
     "Prima Manual Book/Document Type/Document Type.md",
-    "wh_doc_type.png",
-    "Prima Manual Book/wh_doc_type.png",
-    "jurnal_disposal_aset.png",
-    "disposal_aset.png",
     "Prima Manual Book/main.md",
     "Prima Manual Book/Allowance Penerimaan atau Material Receipt/Allowance Penerimaan atau Material Receipt.md",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/dp_multi_bg@641581090.png.checksum",
@@ -232,7 +233,6 @@
     "Prima Manual Book/Routing/Routing.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
-    "Prima Manual Book/Contract Management/Contract Management.md",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
     "Prima Manual Book/Item Type Product/Implementasi Item Type di Product.md",
     "Prima Manual Book/Product Varian/Fitur Product Varian.md",
