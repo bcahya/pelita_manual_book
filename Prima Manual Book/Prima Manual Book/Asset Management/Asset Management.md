@@ -182,3 +182,36 @@ Berikut penjelasan kolom yang tercantum pada report aset:
 - **Locator** — Lokasi fisik penyimpanan aset, digunakan untuk pelacakan fisik saat stock opname atau audit aset.
 - **Attribute Set Instance** — Atribut spesifik unik aset, seperti nomor lot yang membedakan satu unit fisik dari unit lain meski berasal dari produk yang sama.
 - **Document Status** — Status dokumen aset: _Draft_, _Completed_, atau _Closed_.
+
+## Asset Maintenance
+
+Asset Maintenance adalah proses perbaikan dan perawatan yang dilakukan perusahaan terhadap aset-aset yang sudah ada. Perbaikan ini mencakup biaya perawatan, penggantian sparepart, dan biaya lainnya. Seluruh biaya tersebut diakui langsung sebagai beban — tidak menambah nilai aset dan tidak membentuk aset baru.
+
+Perbedaan utama antara **Asset Maintenance** dan **Asset Addition**:
+
+- **Asset Addition** — Biaya perbaikan atau penggantian diakui sebagai penambah nilai aset, sehingga nilai aset tujuan bertambah sesuai perbaikan yang dilakukan.
+- **Asset Maintenance** — Biaya perbaikan atau perawatan diakui sebagai beban dan tidak mempengaruhi nilai aset yang ada.
+### Langkah Proses Asset Maintenance melalui Purchase Order
+
+Biaya perawatan dan perbaikan diproses melalui Purchase Order, di mana tagihannya akan terhubung ke aset yang diperbaiki. Ikuti langkah berikut:
+
+1. Buka menu **Purchase Order**.
+2. Tentukan **Business Partner** yang akan diproses.
+3. Masuk ke tab **PO Line**.
+4. Tentukan **produk** yang akan diproses.
+5. Tentukan **quantity** produk.
+6. Klik **Save**.
+7. Klik **Complete** pada dokumen Purchase Order.
+8. Masuk ke tab **Material Receipt**, lalu klik **Complete**.
+9. Masuk ke **Receipt Line**, kemudian masuk ke tab **Invoice**.
+10. Masuk ke tab **Invoice Line**.
+11. Pada field **SIS Asset**, input dokumen aset yang akan diproses.
+
+![invoice line](../invoice_line.png "Konfigurasi Asset di Invoice Line") {#Figure147}
+
+12. Klik **Save**.
+13. Klik **Complete** pada dokumen Invoice. 
+
+Setelah Invoice di-complete, informasi pada Invoice Line otomatis tersalin ke dokumen **SIS Asset** pada tab **Biaya Perawatan Aset**. Data pada tab tersebut bersifat _read-only_ dan berfungsi sebagai histori perawatan atau perbaikan aset.
+
+> **Catatan:** Asset Maintenance hanya dapat diproses pada aset yang sudah aktif (status dokumen aset _Complete_). Aset yang masih berstatus _Draft_ tidak akan muncul di Invoice Line.

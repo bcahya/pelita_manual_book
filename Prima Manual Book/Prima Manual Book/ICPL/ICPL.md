@@ -165,3 +165,36 @@ ICPL dapat digunakan untuk menentukan harga pembelian dari vendor. Setiap vendor
 4. Klik **save**
 
 Setelah ICPL Purchase dikonfigurasi, sistem akan otomatis menampilkan harga pada transaksi Purchase Order sesuai price list vendor yang dipilih.
+
+### ICPL Penjualan
+
+Untuk membatasi pilihan ICPL yang muncul pada transaksi penjualan, lakukan konfigurasi **Target Document Type** terlebih dahulu sebelum membuat Sales Order. Ikuti langkah berikut:
+
+1. Buka menu **Document Type**.
+2. Pilih document **POS Order**.
+3. Pada field **ICPL Type 1**, tentukan ICPL yang akan digunakan — _Online_, _Offline_, _Intercompany_, atau _Stock Opname_.
+
+![document](../icpl_sale_doc.png "Konfigurasi Target Document Type") {#Figure145}
+
+4. Klik **Save**.
+
+Pada transaksi penjualan, sistem membaca harga produk berdasarkan ICPL yang telah dikonfigurasi di masing-masing warehouse. Karena setiap warehouse atau outlet memiliki ICPL tersendiri, lakukan konfigurasi ICPL untuk setiap warehouse atau outlet. Ikuti langkah berikut:
+
+1. Buka menu **Warehouse and Locators**.
+2. Input **Search Key** dan **Name** sesuai kebutuhan.
+3. Tentukan **Address** untuk outlet.
+4. Pada field **ICPL Online**, **Offline**, **Inter Company**, dan **Stock**, tentukan ICPL yang digunakan.
+
+![wh](../icpl_wh_so.png "Konfigurasi ICPL Warehouse") {#Figure146}
+
+5. Klik **Save**.
+#### Implementasi ICPL pada Sales Order
+
+1. Buka menu **Sales Order**.
+2. Tentukan **Target Document Type** sesuai konfigurasi sebelumnya.
+3. Tentukan **Warehouse** untuk transaksi tersebut.
+4. Klik **Save**.
+
+![so](../icpl_so.png "ICPL di Sales Order") {#Figure147}
+
+Saat dokumen disimpan, sistem otomatis mengisi field **ICPL** dan **Price List** pada Sales Order sesuai konfigurasi ICPL di warehouse yang dipilih. Saat user memilih produk yang akan dijual, harga terisi otomatis sesuai konfigurasi ICPL tersebut.
