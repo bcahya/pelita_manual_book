@@ -1,7 +1,6 @@
 # Stock Opname Charging
 
 Stock opname charging adalah proses perhitungan dan verifikasi fisik stock material charging — yaitu bahan atau komponen yang digunakan dalam proses produksi. Hasil perhitungan fisik kemudian disesuaikan dengan data yang ada di sistem.
-
 ## Tipe Charging untuk Stock Opname
 
 Di SCI, terdapat 4 tipe charging untuk stock opname:
