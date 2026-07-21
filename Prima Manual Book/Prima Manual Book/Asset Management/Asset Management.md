@@ -2,13 +2,16 @@
 
 ## Asset Movement
 
-Asset Movement adalah proses perpindahan aset dari satu lokasi ke lokasi tujuan untuk aktivasi aset. Setelah aset dipindahkan ke locator tujuan, status aset berubah menjadi aktif. Perpindahan aset ditentukan berdasarkan **ASI (Attribute Set Instance)**.
+Asset Movement adalah proses perpindahan aset dari satu lokasi ke lokasi tujuan untuk aktivasi aset. Saat dokumen Invoice atau Purchase Order aset di-complete, sistem otomatis memindahkan aset ke warehouse atau locator tujuan sesuai Material Receipt/BPB, dan field **Locator** di SIS Asset terisi otomatis sesuai locator di Material Receipt.
 
-Sebelum melakukan perpindahan aset, konfigurasi warehouse tujuan terlebih dahulu dengan menetapkannya sebagai warehouse untuk depresiasi. Ikuti langkah berikut:
+Jika aset perlu dipindahkan lagi ke outlet tujuan, user harus melakukan **Inventory Move** secara manual. Perpindahan ini menentukan proses depresiasi aset tersebut. Setelah aset dipindahkan ke locator atau outlet tujuan, status aset berubah menjadi **aktif**. Perpindahan aset ditentukan berdasarkan **ASI (Attribute Set Instance)**.
+
+Sebelum melakukan perpindahan aset, konfigurasi warehouse tujuan terlebih dahulu sebagai warehouse untuk depresiasi. Ikuti langkah berikut:
 
 1. Buka menu **Warehouse & Locator**.
 2. Centang field **Depreciate**.
-3. Klik **Save**.
+3. Tentukan **Operational Date** untuk warehouse atau outlet yang akan diproses.
+4. Klik **Save**.
 
 ![Konfigurasi Warehouse](../WH_Dep.png "Konfigurasi Depresiasi Warehouse") {#Figure115}
 
@@ -28,7 +31,7 @@ Ikuti langkah berikut untuk melakukan perpindahan aset:
 8. Klik **save**
 9. Klik **complete** pada dokumen movement
 
-Di belakang layar, saat movement di-complete, sistem otomatis meng-complete dokumen aset atas ASI tersebut. Depresiasi dimulai H+1 bulan dari penerimaan aset dan berjalan secara otomatis sesuai scheduler yang telah dikonfigurasi. Locator pada dokumen aset juga terisi otomatis sesuai locator Movement, dan dokumen aset teraktivasi secara otomatis.
+Di belakang layar, saat movement di-complete, sistem otomatis meng-complete dokumen aset atas ASI tersebut. Locator pada dokumen aset juga terisi otomatis sesuai locator Movement, dan dokumen aset teraktivasi secara otomatis.
 
 ![Asset](../Ass_Complete.png "Asset Ter-Complete") {#Figure117}
 ## Asset Addition
@@ -127,18 +130,13 @@ Di iDempiere, masa manfaat aset — yang disebut **Number of Entry** — hanya d
 Sistem otomatis menyesuaikan **Depreciation Amount** berdasarkan masa manfaat yang diperbarui. Hal ini diperlukan untuk mengakomodasi kondisi penggabungan beberapa aset yang sebelumnya dicatat secara terpisah menjadi satu aset induk (parent asset), di mana aset induk tersebut kemungkinan sudah mengalami depresiasi sebelumnya.
 ### Mekanisme Depresiasi
 
-Saat aset dipindahkan ke warehouse atau outlet tujuan, dokumen aset otomatis di-complete, namun proses depresiasi belum berjalan. Depresiasi baru dimulai saat user mengklik field **Start Depreciation**. Jika field tersebut belum diproses, aset tidak akan terdepresiasi.
+Depresiasi aset berjalan jika aset sudah berada di warehouse atau outlet tujuan yang memiliki field **Depreciate** tercentang, dan sudah melewati **tanggal operasional** outlet tersebut. Jika operasional outlet belum dimulai, aset tidak dapat didepresiasi.
+
+> **Catatan:** Movement date aset dari warehouse asal ke outlet atau warehouse tujuan harus lebih besar dari tanggal operasional outlet. Aset akan terdepresiasi otomatis setelah melewati tanggal operasional tersebut.
 
 ![Start](../Start_Depresiasi.png "Start Depreciation") {#Figure125}
 
-Berikut syarat yang harus terpenuhi sebelum aset dapat didepresiasi:
-
-- Aset sudah dipindahkan ke warehouse atau outlet tujuan.
-- Dokumen aset sudah berstatus _Complete_.
-
-Jika salah satu syarat tidak terpenuhi, aset tidak dapat didepresiasi. Tanggal depresiasi menggunakan tanggal saat field **Start Depreciation** diproses.
-
-Konfigurasi **auto complete aset** dapat dilakukan di **Asset Type**. Jika keduanya dikonfigurasi, depresiasi langsung berjalan tanpa perlu tindakan manual.
+Konfigurasi **auto complete aset** dapat dilakukan di **Asset Type**. Jika dikonfigurasi, depresiasi langsung berjalan secara otomatis tanpa tindakan manual.
 
 Ikuti langkah berikut untuk melakukan verifikasi depresiasi aset:
 1. Buka menu **SIS Asset**
@@ -213,5 +211,7 @@ Biaya perawatan dan perbaikan diproses melalui Purchase Order, di mana tagihanny
 13. Klik **Complete** pada dokumen Invoice. 
 
 Setelah Invoice di-complete, informasi pada Invoice Line otomatis tersalin ke dokumen **SIS Asset** pada tab **Biaya Perawatan Aset**. Data pada tab tersebut bersifat _read-only_ dan berfungsi sebagai histori perawatan atau perbaikan aset.
+
+![invoice line](../invoice_line_asset.png "Biaya Perawatan Asset") {#Figure150}
 
 > **Catatan:** Asset Maintenance hanya dapat diproses pada aset yang sudah aktif (status dokumen aset _Complete_). Aset yang masih berstatus _Draft_ tidak akan muncul di Invoice Line.

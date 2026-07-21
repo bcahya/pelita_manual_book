@@ -75,8 +75,7 @@ Disposal asset dapat dilakukan melalui dua mekanisme:
 !(90%)[Sales Order](../Sales_Order.png "Penyusutan dengan Sales Order") {#Figure49}
 
 
-    
-### Physical Inventory (Internal Use)
+### Inventory Decrease/Increase (Internal Use)
 
   1. Buka menu **Inventory Decrease/Increase**.
   2. Pilih Document Type **Internal Use Inventory**.
@@ -96,14 +95,6 @@ Jurnal disposal aset bertujuan untuk menghapus nilai aset dan akumulasi penyusut
 
 ![jurnal disposal](../disposal_aset.png "Jurnal Disposal Aset") {#Figure143}
 
-#### Ketentuan qty pada inventory decrease/increase
-
-Field kunci pada baris dokumen adalah **Qty Internal Use**, dengan ketentuan berikut:
-
-- **Nilai positif** — Sistem mengurangi (_decrease_) stok on-hand sebesar quantity yang diinput.
-- **Nilai negatif** — Sistem menambah (_increase_) stok on-hand sebesar quantity yang diinput.
-
-Ketentuan ini berlaku pada kombinasi **Product**, **Locator**, dan **Attribute Set Instance (ASI)** yang dipilih pada baris dokumen.
 ## Pergerakan dan Pengelolaan asset
 
 - Perpindahan asset antar lokasi memengaruhi pencatatan penyusutan

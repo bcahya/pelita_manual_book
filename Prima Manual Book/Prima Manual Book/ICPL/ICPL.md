@@ -198,3 +198,37 @@ Pada transaksi penjualan, sistem membaca harga produk berdasarkan ICPL yang tela
 ![so](../icpl_so.png "ICPL di Sales Order") {#Figure147}
 
 Saat dokumen disimpan, sistem otomatis mengisi field **ICPL** dan **Price List** pada Sales Order sesuai konfigurasi ICPL di warehouse yang dipilih. Saat user memilih produk yang akan dijual, harga terisi otomatis sesuai konfigurasi ICPL tersebut.
+## Product Without Price List
+
+Beberapa produk tidak memiliki price list, sehingga saat membuat Purchase Order, tim purchasing menentukan harga sesuai kebijakan perusahaan. Untuk mengakomodasi kondisi ini, iDempiere menyediakan field **Allow Product Without Pricelist** yang memungkinkan produk tanpa price list tetap dapat diproses dalam Purchase Order.
+
+Namun, karena fleksibilitas ini berisiko menimbulkan lonjakan harga yang belum disepakati, perusahaan dapat mengatur **batas maksimal harga pembelian** untuk setiap produk guna melindungi kepentingan perusahaan.
+### Konfigurasi di Document Type Purchase Order
+
+Ikuti langkah berikut untuk mengaktifkan atau menonaktifkan fitur ini:
+
+1. Buka menu **Document Type**.
+2. Cari dokumen **Purchase Order**.
+3. Pada field **Allow Product Without Pricelist**:
+- **Centang** — Produk tanpa price list dapat diproses pada dokumen tersebut.
+- **Tidak dicentang** — Produk tanpa price list tidak dapat diproses.
+
+![konfigurasi document](../po_no_pricelist.png "Konfigurasi Allow Product Without Pricelist") {#Figure156}
+
+4. Klik **Save**.
+
+### Konfigurasi Maksimal Harga di Level Product
+
+Ikuti langkah berikut untuk mengatur batas maksimal harga pembelian per produk:
+
+1. Buka menu **Product**.
+2. Cari produk yang akan dikonfigurasi.
+3. Pada field **Max Purchasing Price**, input batas maksimal harga untuk produk tersebut.
+
+![max](../product_max_price.png "Konfigurasi Max Purchasing Price") {#Figure157}
+
+4. Klik **Save**.
+
+Setelah dikonfigurasi, jika harga yang diinput pada Purchase Order melebihi **Max Purchasing Price**, sistem otomatis menampilkan pesan error bahwa harga yang diinput melebihi batas maksimal yang telah ditetapkan.
+
+![error](../max_price.png "Implementasi Max Purchasing Price") {#Figure158}

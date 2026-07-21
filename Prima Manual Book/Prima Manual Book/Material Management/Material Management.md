@@ -30,8 +30,7 @@ Stock Opname — atau dikenal sebagai **Physical Inventory** di iDempiere — ad
 ## Adjustment Plus dan Minus
 
 Untuk mencatat penggunaan persediaan atau melakukan adjustment plus/minus tanpa melalui proses penjualan, gunakan fitur **Inventory Decrease/Increase**.
-
-**Langkah Proses Inventory Decrease/Increase**
+### Langkah Proses Inventory Decrease/Increase
 
 1. Buka menu **Inventory Decrease/Increase**.
 2. Input field pada header:

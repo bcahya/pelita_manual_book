@@ -141,3 +141,88 @@ Jika field Document Status dikosongkan, sistem menampilkan seluruh dokumen tanpa
 - Matched Invoice
 - Material Movement
 - Production
+## Mekanisme Production
+
+Di iDempiere, terdapat dua mekanisme produksi yang dikonfigurasi di level **Document Type Manufacturing Order**:
+
+- **Versi Lama** — User menentukan quantity production reports di level MO dengan mengklik **SIS Generate Production From MO**. Sistem otomatis membentuk dokumen Production berstatus _Complete_ dan MO ikut ter-complete. Jika produksi dilakukan secara parsial, sistem otomatis membuat **back order MO** atas sisa quantity yang belum diproduksi.
+- **Versi Baru** — Hanya terdapat satu MO, namun user dapat mengatur production reports berkali-kali sebelum MO di-complete. User menginput quantity produk yang diproses di tab **Production Report Qty** — baik sekaligus maupun secara parsial — kemudian baru mengcomplete dokumen MO. Di versi ini tidak ada auto back order untuk produksi parsial; user harus menentukan quantity production terlebih dahulu sebelum meng-complete MO.
+
+Ikuti langkah berikut untuk mengkonfigurasi mekanisme production:
+
+1. Buka menu **Document Type**.
+2. Cari dokumen **Manufacturing Order**.
+3. Pada field **Auto Back Order**, lakukan konfigurasi:
+- **Y** — Menggunakan mekanisme production versi lama.
+- **N** — Menggunakan mekanisme production versi baru.
+
+![konfigurasi](../konfig_mo_prod.png "Konfigurasi Document Type"){#Figure151}
+
+4. Klik **Save**.
+
+Berikut contoh tampilan window dan proses Manufacturing Order untuk versi lama dan versi baru:
+
+![lama](../prod_lama.png "Production Versi Lama") {#Figure152}
+
+![baru](../prod_baru.png "Production Versi Baru") {#Figure153}
+## Konsolidasi Movement
+
+Fitur **Konsolidasi Movement** digunakan untuk menggabungkan beberapa kebutuhan perpindahan barang ke dalam satu dokumen **Inventory Move**, selama memiliki **Warehouse From** dan **Warehouse To** yang sama. Dengan fitur ini, jumlah dokumen movement berkurang sehingga proses pengiriman, penerimaan, dan administrasi gudang menjadi lebih efisien.
+### Konfigurasi Konsolidasi
+
+Saat sistem men-generate Material Movement, sistem membandingkan informasi perpindahan setiap artikel. Jika beberapa artikel memiliki kombinasi **Warehouse From** dan **Warehouse To** yang sama, sistem menggabungkannya ke dalam **satu dokumen Inventory Move**.
+
+Ikuti langkah berikut untuk mengkonfigurasi konsolidasi movement:
+
+1. Buka menu **Document Type**.
+2. Cari dokumen **Production Order Planning**.
+3. Pada field **Consolidate Movement**, lakukan konfigurasi:
+- **Y** — Movement akan dikonsolidasi.
+- **N** — Movement tidak dikonsolidasi.
+
+![konfigurasi](../konfig_pop_consolidate.png "Konfigurasi Document Type POP") {#Figure154}
+
+4. Klik **Save**.
+### Implementasi Konsolidasi Movement
+
+Meskipun beberapa artikel digabung dalam satu dokumen movement, **quantity setiap artikel tetap dihitung secara independen** sesuai konfigurasi di level product. Sistem tidak menjumlahkan quantity antar artikel yang berbeda — setiap artikel tetap menggunakan quantity hasil perhitungan sesuai konfigurasi BoM, Routing, atau kebutuhan produksinya masing-masing.
+
+Contoh:
+
+|Artikel|Warehouse From|Warehouse To|Qty Movement|
+|---|---|---|---|
+|Tepung Terigu|Gudang Bahan|Gudang Produksi|20 Kg|
+|Gula Pasir|Gudang Bahan|Gudang Produksi|20 Kg|
+|Ragi|Gudang Bahan|Gudang Produksi|10 Kg|
+
+![movement](../move_consolidate.png "Konsolidasi Movement") {#Figure155}
+
+Karena seluruh artikel memiliki Warehouse From dan Warehouse To yang sama, sistem menghasilkan **satu dokumen Inventory Move** dengan tiga line — masing-masing quantity mengikuti kebutuhan artikel tersebut.
+
+Jika konsolidasi movement tidak dikonfigurasi, setiap artikel akan memiliki dokumen Inventory Move tersendiri as existing saat ini meskipun locator asal dan tujuannya sama.
+## Lead Time
+
+**Lead Time Produksi** adalah estimasi waktu yang dibutuhkan untuk menyelesaikan proses produksi suatu produk — sejak produksi dimulai hingga produk selesai. Sistem menggunakan nilai ini untuk menghitung **Document Date** pada MO dan Movement.
+
+### Konfigurasi Lead Time
+
+Konfigurasi Lead Time dilakukan pada **Bill of Material (BoM)** produk melalui field **Lead Time (Days)** — berisi jumlah hari yang dibutuhkan untuk memproduksi produk tersebut.
+
+Contoh konfigurasi:
+
+| Produk            | Lead Time (Days) |
+| ----------------- | ---------------- |
+| Frozen Dough Buns | 1 Hari           |
+
+![product](../lead_product.png "Konfigurasi di Product") {#Figure156}
+### Implementasi Lead Time
+
+Di iDempiere, **Estimated Date** (tanggal output produksi) ditentukan oleh user. Konfigurasi Lead Time pada BoM berfungsi untuk menentukan **Document Date** MO dan Movement, dengan rumus berikut:
+
+> **Document Date = Estimated Date − Lead Time (Days)**
+
+Contoh:
+
+|Estimated Date|Lead Time|Document Date|
+|---|---|---|
+|21 Juli 2026|1 Hari|20 Juli 2026
