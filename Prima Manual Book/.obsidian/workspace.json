@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Financial Report/Financial Report.md",
+                "file": "Prima Manual Book/Cost Adjustment/Cost Adjustment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Financial Report"
+              "title": "Cost Adjustment"
             }
           }
         ]
@@ -196,6 +196,7 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/Financial Report/Financial Report.md",
     "Prima Manual Book/Cost Adjustment/Cost Adjustment.md",
     "Prima Manual Book/Movement Standard/Movement Standard.md",
     "Prima Manual Book/Document Type/Document Type.md",
@@ -215,7 +216,6 @@
     "Prima Manual Book/move_consolidate.png",
     "Prima Manual Book/POP, BoM dan MO/Manufacturing Order.md",
     "Prima Manual Book/Material Management/Material Management.md",
-    "Prima Manual Book/Financial Report/Financial Report.md",
     "Prima Manual Book/Asset Split/Asset Split.md",
     "Prima Manual Book/Report/Report.md",
     "Prima Manual Book/Report Stock/Report Stock per Warehouse.md",
