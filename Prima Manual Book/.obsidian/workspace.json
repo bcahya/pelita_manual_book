@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Movement Standard/Movement Standard.md",
+                "file": "Prima Manual Book/Financial Report/Financial Report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Movement Standard"
+              "title": "Financial Report"
             }
           }
         ]
@@ -196,8 +196,9 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Document Type/Document Type.md",
+    "Prima Manual Book/Cost Adjustment/Cost Adjustment.md",
     "Prima Manual Book/Movement Standard/Movement Standard.md",
+    "Prima Manual Book/Document Type/Document Type.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
@@ -220,7 +221,6 @@
     "Prima Manual Book/Report Stock/Report Stock per Warehouse.md",
     "Prima Manual Book/Report Stock/Report Stock per Artikel.md",
     "Prima Manual Book/Stock Opname/Stock Opname.md",
-    "Prima Manual Book/Cost Adjustment/Cost Adjustment.md",
     "Prima Manual Book/Material Management",
     "Prima Manual Book/Stock Opname Charging/Stock Opname Charging.md",
     "Prima Manual Book/Stock Opname",
