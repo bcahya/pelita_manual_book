@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
+                "file": "Prima Manual Book/Movement Standard/Movement Standard.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Production Order Planning"
+              "title": "Movement Standard"
             }
           }
         ]
@@ -196,6 +196,9 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/Document Type/Document Type.md",
+    "Prima Manual Book/Movement Standard/Movement Standard.md",
+    "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Prima Manual Book/ICPL/ICPL.md",
@@ -205,14 +208,12 @@
     "Prima Manual Book/po_no_pricelist.png",
     "Prima Manual Book/product_max_price.png",
     "Prima Manual Book/max_price.png",
-    "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "lead_product.png",
     "Prima Manual Book/lead_product.png",
     "move_consolidate.png",
     "Prima Manual Book/move_consolidate.png",
     "Prima Manual Book/POP, BoM dan MO/Manufacturing Order.md",
     "Prima Manual Book/Material Management/Material Management.md",
-    "Prima Manual Book/Movement Standard/Movement Standard.md",
     "Prima Manual Book/Financial Report/Financial Report.md",
     "Prima Manual Book/Asset Split/Asset Split.md",
     "Prima Manual Book/Report/Report.md",
@@ -228,7 +229,6 @@
     "Prima Manual Book/Movement Standard",
     "Prima Manual Book/Financial Report",
     "Prima Manual Book/Attribute Set Instance/Attribute Set Instance.md",
-    "Prima Manual Book/Document Type/Document Type.md",
     "Prima Manual Book/main.md",
     "Prima Manual Book/Allowance Penerimaan atau Material Receipt/Allowance Penerimaan atau Material Receipt.md",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/dp_multi_bg@641581090.png.checksum",
