@@ -30,6 +30,20 @@ Stock Opname — atau dikenal sebagai **Physical Inventory** di iDempiere — ad
 ## Adjustment Plus dan Minus
 
 Untuk mencatat penggunaan persediaan atau melakukan adjustment plus/minus tanpa melalui proses penjualan, gunakan fitur **Inventory Decrease/Increase**.
+### Konfigurasi Document Type
+
+Penentuan adjustment plus atau minus dikonfigurasi di level **Document Type**, sehingga adjustment plus dan minus menggunakan document type yang berbeda.
+
+1. Buka menu **Document Type**.
+2. Cari dokumen **Inventory Decrease/Increase**.
+3. Pada field **Adjustment Type**, tentukan jenis adjustment yang digunakan untuk dokumen tersebut:
+- **Adjustment Negatif** — Dokumen khusus untuk adjustment negatif.
+- **Adjustment Positif** — Dokumen khusus untuk adjustment positif.
+
+![adjustment](../adjustment.png "Adjustment Type") {#Figure161}
+
+4. Pada field **Charge**, input charge untuk dokumen tersebut jika charge sudah ditentukan. Jika tidak, user dapat memilih charge secara manual saat transaksi.
+5. Klik **Save**.
 ### Langkah Proses Inventory Decrease/Increase
 
 1. Buka menu **Inventory Decrease/Increase**.
@@ -45,7 +59,5 @@ Untuk mencatat penggunaan persediaan atau melakukan adjustment plus/minus tanpa 
 - **Attribute Set Instance** — Nomor ASI yang akan diproses _(jika ada)_.
 4. Klik **Save**.
 5. Klik **Complete** pada dokumen Inventory Decrease/Increase.
-
-Penentuan adjustment plus atau minus dikonfigurasi di level **Document Type**, sehingga adjustment plus dan minus menggunakan document type yang berbeda.
 
 Setelah dokumen di-complete, sistem otomatis mengkalkulasi ulang quantity produk — apakah bertambah atau berkurang — sesuai konfigurasi. Sistem juga otomatis membentuk jurnal atas penyesuaian quantity tersebut, dengan nilai jurnal mengikuti cost pada artikel.

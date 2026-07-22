@@ -15,7 +15,7 @@ Asset Split adalah fitur yang digunakan untuk memecah satu aset menjadi beberapa
 10. Input **Qty** target asset.
 11. Input **Amount** dari target asset.
 
-![line](../target.png "Asset Split Line") {#Figure134}
+![line](../target_aset_(2).png "Asset Split Line") {#Figure134}
 
 12. Klik **Save**.
 13. Ulangi langkah 9–12 untuk target asset lainnya.
@@ -26,10 +26,12 @@ Setelah dokumen Asset Split di-complete, sistem otomatis membentuk dokumen dan t
 
 Sistem akan menggenerate dokumen Internal Use untuk mengurangi quantity pada aset sumber (aset yang dipecah) sesuai jumlah yang dipindahkan ke aset target.
 
-![IU](../split_iu.png "Internal Use") {#Figure131}
+![IU](../iu_split.png "Internal Use") {#Figure131}
 #### Jurnal Pembalik Akumulasi Penyusutan
 
 Jika aset sumber sudah pernah disusutkan, sistem membuat jurnal untuk membalik (_reverse_) akumulasi penyusutan secara proporsional terhadap quantity yang dipecah. Hal ini memastikan nilai buku target asset dimulai secara akurat sesuai porsi nilai yang dialihkan.
+
+![depresiasi](../depre_split.png "Jurnal Pembalik Depresiasi") {#Figure160}
 #### Pembentukan Target Asset
 
 Sistem membentuk aset baru sejumlah quantity yang diinput pada dokumen Asset Split. Setiap target asset yang terbentuk memiliki:
@@ -37,11 +39,13 @@ Sistem membentuk aset baru sejumlah quantity yang diinput pada dokumen Asset Spl
 - Dokumen Asset tersendiri.
 - ASI (Attribute Set Instance) yang ter-generate otomatis, sehingga masing-masing target asset dapat dibedakan dan ditelusuri secara individual.
 
-![asset](../target_aset.png "Target Asset") {#Figure132}
+![asset](../aset_target.png "Target Asset") {#Figure132}
 
 #### Cost Adjustment (CA) untuk Masing-Masing Target Asset
 
 Sistem membuat dokumen **Cost Adjustment** untuk setiap target asset dengan nilai sesuai amount yang dialokasikan. Cost Adjustment ini mencatat nilai perolehan awal target asset sesuai porsi nilai yang dipecah dari aset sumber.
+
+![ca](../ca_split.png "Jurnal Cost Adjustment") {#Figure159}
 #### Physical Inventory untuk Masing-Masing Target Asset
 
 Sistem membentuk dokumen Physical Inventory untuk setiap target asset dengan ketentuan berikut:
@@ -50,7 +54,7 @@ Sistem membentuk dokumen Physical Inventory untuk setiap target asset dengan ket
 - Count Qty = 1 (mencerminkan quantity aktual target asset hasil split).
 - Value = sesuai nilai yang tercatat pada Cost Adjustment target asset.
 
-![PI & CA](../ca_pi_split.png "Cost Adjustment & Physical Inventory") {#Figure133}
+![PI & CA](../pi_split.png "Cost Adjustment & Physical Inventory") {#Figure133}
 
 Dokumen Physical Inventory ini mencatat keberadaan fisik dan nilai target asset di sistem, selaras dengan nilai yang telah ditetapkan pada Cost Adjustment.
 

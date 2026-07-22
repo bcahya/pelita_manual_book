@@ -50,7 +50,7 @@ Ikuti langkah berikut untuk mengakses Contract Management di iDempiere:
   - Period Contract — Tentukan periode selama masa kontrak
   - Periode Sewa Awal — Tentukan tanggal kontrak awal
 
-![Contract Management](../Header_Contract.png "Contract Management") {#Figure69}
+![Contract Management](../contract_header.png "Contract Management") {#Figure69}
 
 3. Masuk ke tab **Contract Management Line**. 
 4. Klik **New**, kemudian isi field berikut:
@@ -59,7 +59,7 @@ Ikuti langkah berikut untuk mengakses Contract Management di iDempiere:
   - Percentage — Tentukan persentase dari total amount (jika ada)
   - UnAmortized — Centang jika biaya merupakan deposit yang dapat diklaim
 
-![Line](../Product_Contract.png "Contract Management Line") {#Figure70}
+![Line](../line_contract.png "Contract Management Line") {#Figure70}
 
 
 5. Ulangi langkah 4 untuk komponen biaya lainnya
@@ -74,28 +74,10 @@ Ikuti langkah berikut untuk mengakses Contract Management di iDempiere:
   - Update Date Schedule Amortisasi — Memperbarui tanggal amortisasi
   - SIS Update Total Amount Schedule CM — Memperbarui total amount schedule jika terdapat perubahan nominal di pertengahan periode; jika amount di AP Schedule Invoice diperbarui, amount di GL Amortisasi akan ikut disesuaikan secara otomatis.
 
-![Process](../Process.png "Process") {#Figure71}
+![Process](../tools_contract.png "Process") {#Figure71}
 
 9. Setelah schedule AP Invoice dan GL Amortization sudah sesuai, klik **Complete** pada dokumen Contract Management.
 10. Sistem otomatis men-generate AP Invoice dan GL Amortization sesuai date schedule yang telah dikonfigurasi.
-
-## Langkah Klaim Deposit
-
-Jika terdapat biaya deposit yang dapat diklaim, pastikan invoice atas biaya deposit tersebut sudah ter-generate sebelum melakukan klaim. Ikuti langkah berikut:
-1. Setelah dokumen Contract Management di-complete, tombol **Claim CM to AR Receipt** akan muncul pada biaya deposit.
-
-![Klaim Deposit](../Klaim_Depo.png "Klaim Deposit") {#Figure72}
-
-2. Klik **Claim CM to AR Receipt**
-3. Isi field yang tersedia:
-  - Bank account
-  - Document type
-  - Document action
-  - Transaction date
-  
-4. Klik **ok**
-
-Sistem otomatis membentuk **Payment AR Receipt** atas klaim yang di-generate dan field **Claimed** akan tercentang secara otomatis.
 
 ## Langkah Proses Kompensasi
 
@@ -108,12 +90,12 @@ Jika terdapat kompensasi, proses kompensasi dapat dilakukan atas kontrak lain me
   - Product — Isi dengan produk biaya yang akan diproses.
   - Centang field **Add Compensation**.
   - Pada field **Contract Management Compensation**, pilih dokumen kontrak yang akan dikompensasi.
-  - Input **compensation amount**
 
 ![Kompensasi Produk](../Kompensasi.png "Konfigurasi Kompensasi") {#Figure73}
 
-5. Klik **complete** dokumen contract management
-6. Masuk ke tab **AP Invoice Schedule**, lalu jalankan **Generate Invoice From Schedule**.
+5. Klik **Generate Schedule**
+6. Klik **complete** dokumen contract management
+7. Masuk ke tab **AP Invoice Schedule**, lalu jalankan **Generate Invoice From Schedule**.
 
 ![Generate AP Invoice](../Generate_Kompensasi.png "Generate AP Invoice") {#Figure74}
 
@@ -123,6 +105,25 @@ Jika terdapat kompensasi, proses kompensasi dapat dilakukan atas kontrak lain me
 
 8. Klik **complete** pada dokumen AP Invoice
 
+## Langkah Klaim Deposit
+
+Jika terdapat biaya deposit yang dapat diklaim, pastikan invoice atas biaya deposit tersebut sudah ter-generate sebelum melakukan klaim. Ikuti langkah berikut:
+1. Setelah dokumen Contract Management di-complete, tombol **Claim CM to AR Receipt** akan muncul pada biaya deposit.
+
+![Klaim Deposit](../klaim_contract.png "Klaim Deposit") {#Figure72}
+
+2. Klik **Claim CM to AR Receipt**
+3. Isi field yang tersedia:
+  - Bank account
+  - Document type
+  - Document action
+  - Transaction date
+  
+4. Klik **ok**
+
+Sistem otomatis membentuk **Payment AR Receipt** atas klaim yang di-generate dan field **Claimed** akan tercentang secara otomatis.
+
+![klaim](../klaimdepo_contract.png "AR Receipt") {#Figure160}
 ## Report Contract Management
 
 Report Contract Management digunakan untuk menampilkan daftar dokumen Contract Management berdasarkan parameter pencarian yang dipilih. Gunakan report ini untuk memantau informasi kontrak yang telah dibuat tanpa perlu membuka setiap dokumen satu per satu.
