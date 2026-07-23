@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Project Management/Project Management.md",
+                "file": "Prima Manual Book/ICPL/ICPL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project Management"
+              "title": "ICPL"
             }
           }
         ]
@@ -196,32 +196,34 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Material Management/Material Management.md",
-    "adjustment.png",
-    "Prima Manual Book/adjustment.png",
-    "Prima Manual Book/Contract Management/Contract Management.md",
-    "klaimdepo_contract.png",
-    "Prima Manual Book/klaimdepo_contract.png",
-    "klaim_contract.png",
-    "Prima Manual Book/klaim_contract.png",
-    "line_contract.png",
-    "Prima Manual Book/line_contract.png",
-    "contract_header.png",
-    "Prima Manual Book/contract_header.png",
-    "Prima Manual Book/Asset Management/Asset Management.md",
+    "Prima Manual Book/prod_khusus.png",
+    "Prima Manual Book/category2.png",
+    "category.png",
+    "Prima Manual Book/category.png",
+    "non_category.png",
+    "Prima Manual Book/non_category.png",
+    "Prima Manual Book/Report Stock/Report Kartu Stock.md",
+    "kartu_stock.png",
+    "Prima Manual Book/Report/Report.md",
+    "parameter_kartu_stok.png",
+    "Prima Manual Book/kartu_stock.png",
+    "Prima Manual Book/parameter_kartu_stok.png",
+    "Prima Manual Book/parameter_print_jurnal.png",
+    "Prima Manual Book/Report Stock/Report Stock per Artikel.md",
+    "Prima Manual Book/Report Stock/Report Stock per Warehouse.md",
+    "Prima Manual Book/ICPL/ICPL.md",
     "Prima Manual Book/Asset Split/Asset Split.md",
+    "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
+    "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/Project Management/Project Management.md",
+    "Prima Manual Book/Material Management/Material Management.md",
+    "Prima Manual Book/Contract Management/Contract Management.md",
     "Prima Manual Book/Cost Adjustment/Cost Adjustment.md",
     "Prima Manual Book/Financial Report/Financial Report.md",
     "Prima Manual Book/Movement Standard/Movement Standard.md",
     "Prima Manual Book/Document Type/Document Type.md",
-    "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
-    "Prima Manual Book/ICPL/ICPL.md",
     "Prima Manual Book/POP, BoM dan MO/Manufacturing Order.md",
-    "Prima Manual Book/Report/Report.md",
-    "Prima Manual Book/Report Stock/Report Stock per Warehouse.md",
-    "Prima Manual Book/Report Stock/Report Stock per Artikel.md",
     "Prima Manual Book/Stock Opname/Stock Opname.md",
     "Prima Manual Book/Material Management",
     "Prima Manual Book/Stock Opname Charging/Stock Opname Charging.md",
@@ -240,7 +242,6 @@
     "Prima Manual Book/Routing/Routing.md",
     "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
-    "Prima Manual Book/Item Type Product/Implementasi Item Type di Product.md",
     "Tanpa judul.canvas"
   ]
 }

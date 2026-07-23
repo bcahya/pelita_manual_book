@@ -10,7 +10,6 @@ ICPL menjadi dasar perhitungan harga pada setiap transaksi. Sistem hanya dapat m
 2. Mendukung beberapa jenis harga, seperti retail, grosir, dan distributor dalam satu sistem.
 3. Menyimpan histori perubahan harga sebagai versi baru.
 4. Menghitung diskon atau markup secara otomatis berdasarkan produk atau kategori.
-
 ## Pengaturan ICPL Base
 
 ### Membuat ICPL Base
@@ -63,7 +62,7 @@ Ikuti langkah berikut untuk mengkonfigurasi perhitungan harga per kategori:
 2. Klik **New**.
 3. Isi seluruh field pada header.
 4. Pada field **ICPL Reference**, pilih ICPL Base yang akan dijadikan acuan.
-	
+
 
 ![Reference](../header_icpl_ref_pc.png "ICPL Reference") {#Figure35}
 
@@ -74,7 +73,7 @@ Ikuti langkah berikut untuk mengkonfigurasi perhitungan harga per kategori:
 8. Pada field Calculate Type, tentukan metode perhitungan: Add (+), Subtract (-), Multiply ()*, atau Divide (/).
 9. Pada field Rate, tentukan rate untuk product category tersebut.
 
-![criteria](../pc_icpl_ref.png "Kriteria Produk") {#Figure135}
+![criteria](../category.png "Kriteria Produk") {#Figure135}
 
 10. Klik **complete**
 11. Jalankan proses **Generate PLV (Price List Version)**.
@@ -91,10 +90,11 @@ Ikuti langkah berikut untuk mengkonfigurasi ICPL Reference tanpa filter Product 
 4. Pada field **ICPL Reference**, pilih ICPL Base yang akan dijadikan acuan.
 5. Klik **Save**.
 6. Masuk ke tab **Criteria**.
-7. Pada field **Calculate Type**, tentukan metode perhitungan: _Add (+)_, _Subtract (-)_, _Multiply (_)*, atau _Divide (/)_.
-8. Pada field **Rate**, tentukan rate untuk produk tersebut.
+7. Kosongkan field **Product Category**.
+8. Pada field **Calculate Type**, tentukan metode perhitungan: _Add (+)_, _Subtract (-)_, _Multiply (_)*, atau _Divide (/)_.
+9. Pada field **Rate**, tentukan rate untuk produk tersebut.
 
-![criteria](../icpl_ref_non_pc.png "Kriteria Produk") {#Figure135}
+![criteria](../non_category.png "Kriteria Produk") {#Figure135}
 
 9. Klik **complete**
 10. Jalankan proses **Generate PLV (Price List Version)**.
@@ -103,6 +103,50 @@ Ikuti langkah berikut untuk mengkonfigurasi ICPL Reference tanpa filter Product 
 Tanpa filter Product Category, seluruh produk di ICPL Base dikalkulasi dengan rate yang sama sehingga perhitungan harga setiap produk seragam.
 
 User tidak perlu membuat ICPL Line secara manual karena sistem otomatis membuat data saat proses **Generate PLV** dijalankan. ICPL With Reference juga dapat digunakan sebagai referensi untuk ICPL turunan lainnya.
+
+### ICPL with Reference Produk Tertentu
+
+ICPL Reference memungkinkan penyesuaian harga tidak hanya berdasarkan **Product Category**, tetapi juga berdasarkan **produk tertentu** dalam kategori tersebut. Konfigurasi ini digunakan apabila terdapat produk yang memiliki penambahan atau pengurangan harga berbeda dari aturan umum kategori.
+
+Sebagai contoh, pada outlet **Rest Area** berlaku ketentuan sebagai berikut:
+
+- Kategori **Makanan** memiliki penambahan harga sebesar **Rp2.000** dari harga dasar (Base Price). Namun, produk **Croissant** dan **Beef Pastry** memiliki kebijakan khusus dengan penambahan harga sebesar **Rp5.000**.
+- Kategori **Ice Cream** memiliki penambahan harga sebesar **Rp4.000** dari harga dasar. Namun, produk **Ice Cream Cone** dan **Ice Cream Sundae** memiliki penambahan harga sebesar **Rp6.000**.
+
+Untuk memenuhi kebutuhan tersebut, lakukan konfigurasi ICPL Reference pada level **Product Category** sebagai aturan umum, kemudian tambahkan konfigurasi pada level **Product** sebagai pengecualian (override). Saat sistem menghasilkan Price List Version, konfigurasi pada level produk akan diprioritaskan dibandingkan konfigurasi kategori.
+
+1. Buka menu **SIS ICPL**.
+2. Klik **New**.
+3. Isi seluruh field pada header.
+4. Tentukan tanggal Valid From.
+5. Pada field **ICPL Reference**, pilih ICPL Base yang akan dijadikan acuan.
+6. Klik Save.
+7. Masuk ke tab **Criteria**.
+8. Input Product Category yang akan diproses.
+9. Pada field Calculate Type, tentukan metode perhitungan: Add (+), Subtract (-), Multiply ()*, atau Divide (/).
+10. Pada field Rate, tentukan rate untuk product category tersebut.
+
+![criteria](../category2.png "Kriteria Produk") {#Figure136}
+
+10. Klik save
+11. Untuk menambahkan pengecualian pada produk tertentu, klik New kembali pada tab Criteria.
+12. Kosongkan field Product Category.
+13. Pada field Product, pilih produk yang memiliki penyesuaian harga berbeda dari kategori.
+14. Tentukan Calculate Type sesuai kebutuhan.
+15. Masukkan nilai Rate yang berlaku khusus untuk produk tersebut.
+
+![product](../prod_khusus.png "Product Tertentu") {#Figure165}
+
+16. Klik **save**.
+17. Klik **complete**.
+18. Jalankan proses Generate PLV (Price List Version).
+
+Setelah proses Generate PLV dijalankan, sistem akan menghitung harga jual berdasarkan Base Price pada ICPL Base dengan aturan berikut:
+
+- Produk yang tidak memiliki konfigurasi khusus akan menggunakan nilai Rate yang ditentukan pada Product Category.
+- Produk yang memiliki konfigurasi khusus akan menggunakan nilai Rate pada level Product, sehingga mengabaikan konfigurasi yang terdapat pada Product Category.
+
+Dengan mekanisme ini, perusahaan dapat menerapkan aturan harga umum untuk satu kategori sekaligus memberikan penyesuaian harga khusus pada produk tertentu tanpa perlu membuat ICPL yang terpisah.
 ## Update ICPL
 
 Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat mengubah langsung dokumen ICPL dengan status Complete. Hanya ICPL Base yang dapat diperbarui.
@@ -110,21 +154,16 @@ Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat 
 
 1. Buka menu **SIS ICPL Update**
 2. Pilih ICPL Base yang akan diperbarui.
-3. Input tanggal baru pada field **Valid From**
-	
-	
-	![ICPL Update](../ICPL_Update.png "ICPL Update") {#Figure36}
+3. Input tanggal baru pada field **Valid From**	
 
+![ICPL Update](../ICPL_Update.png "ICPL Update") {#Figure36}
 
 4. Masuk ke tab **Line**
 5. Pilih **Produk**
 6. Input **Price** terbaru
 
 
-
-	![Line](../ICPL_Update_Line.png "Product & Price ICPL Update") {#Figure37}
-	
-
+![Line](../ICPL_Update_Line.png "Product & Price ICPL Update") {#Figure37}
 
 7. Klik **save**
 8. Klik **complete**

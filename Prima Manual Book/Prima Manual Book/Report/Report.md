@@ -131,3 +131,41 @@ Digunakan untuk mencetak dokumen DP kepada satu vendor (Business Partner) dalam 
 Digunakan untuk mencetak dokumen DP yang mencakup lebih dari satu vendor dalam satu dokumen transaksi, misalnya pada pembayaran DP gabungan.
 
 ![multi](../dp_multi_bg.png "DP Vendor BG Multi BP") {#Figure154}
+
+## Report Print Journal Status
+
+**Print Journal Status** adalah laporan yang menampilkan status pencatatan (_posting_) jurnal akuntansi dari seluruh dokumen transaksi. Report ini membantu tim Finance memantau apakah transaksi sudah berhasil diposting ke General Ledger (GL) atau masih terdapat dokumen yang gagal diposting.
+### Fungsi Print Journal Status
+
+- **Memantau status posting jurnal** — Mengetahui apakah dokumen sudah berhasil diposting (_Posted = Yes_) atau belum (_Posted = No_).
+- **Mendeteksi kegagalan posting** — Mengidentifikasi dokumen yang gagal diposting akibat kesalahan konfigurasi, seperti akun belum tersedia, periode sudah tutup, atau costing belum terbentuk, sehingga dapat segera ditindaklanjuti.
+- **Rekonsiliasi transaksi dengan General Ledger** — Memastikan seluruh transaksi operasional telah menghasilkan jurnal di GL dan membantu proses _closing_ bulanan agar tidak ada transaksi yang terlewat.
+### Langkah Akses Report Print Journal Status
+
+1. Buka menu **SIS Export Print Journal Status**.
+2. Input parameter berikut sesuai kebutuhan:
+- **Date Acct** — Tanggal akuntansi.
+- **Posted** — Pilih jika ingin menampilkan jurnal yang sudah ter-posting.
+- **Posting Error** — Pilih jika ingin menampilkan jurnal yang gagal diposting.
+- **Processing** — Status proses dokumen.
+
+![parameter](../parameter_print_jurnal.png "Parameter") {#Figure161}
+
+3. Klik **Start**.
+
+Sistem menampilkan pop-up hasil export dalam format **Excel**. Klik dokumen tersebut untuk mengunduhnya.
+
+> Jika hanya **Date Acct** yang diisi, sistem menampilkan seluruh jurnal — baik yang sudah ter-posting maupun yang belum — pada hasil export.
+
+#### Informasi yang Ditampilkan pada Hasil Export
+
+
+![export](../export_jurnal.png "Hasil Export Format Excel") {#Figure162}
+
+| Informasi         | Keterangan                                                       |
+| ----------------- | ---------------------------------------------------------------- |
+| **Document No**   | Nomor dokumen transaksi                                          |
+| **Table**         | Tabel asal transaksi (Invoice, Order, Inventory, Movement, dll.) |
+| **Date Account**  | Tanggal akuntansi                                                |
+| **Posted**        | Status posting jurnal                                            |
+| **Processing**    | Status proses dokumen                                            |

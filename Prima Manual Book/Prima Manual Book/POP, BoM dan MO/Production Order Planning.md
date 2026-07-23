@@ -202,8 +202,7 @@ Karena seluruh artikel memiliki Warehouse From dan Warehouse To yang sama, siste
 Jika konsolidasi movement tidak dikonfigurasi, setiap artikel akan memiliki dokumen Inventory Move tersendiri as existing saat ini meskipun locator asal dan tujuannya sama.
 ## Lead Time
 
-**Lead Time Produksi** adalah estimasi waktu yang dibutuhkan untuk menyelesaikan proses produksi suatu produk — sejak produksi dimulai hingga produk selesai. Sistem menggunakan nilai ini untuk menghitung **Document Date** pada MO dan Movement.
-
+**Lead Time Produksi** adalah estimasi waktu yang dibutuhkan untuk menyelesaikan proses produksi suatu produk — sejak produksi dimulai hingga produk selesai.
 ### Konfigurasi Lead Time
 
 Konfigurasi Lead Time dilakukan pada **Bill of Material (BoM)** produk melalui field **Lead Time (Days)** — berisi jumlah hari yang dibutuhkan untuk memproduksi produk tersebut.
