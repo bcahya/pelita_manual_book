@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/ICPL/ICPL.md",
+                "file": "Prima Manual Book/Asset Management/Asset Management.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ICPL"
+              "title": "Asset Management"
             }
           }
         ]
@@ -196,23 +196,23 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/prod_khusus.png",
-    "Prima Manual Book/category2.png",
-    "category.png",
-    "Prima Manual Book/category.png",
-    "non_category.png",
-    "Prima Manual Book/non_category.png",
+    "pendukung_tf.png",
+    "Prima Manual Book/pendukung_tf.png",
+    "iu_transfer.png",
+    "Prima Manual Book/iu_transfer.png",
+    "Prima Manual Book/gl_tf.png",
+    "Prima Manual Book/ca_tf.png",
+    "Prima Manual Book/aset_tf.png",
+    "Prima Manual Book/Asset Split/Asset Split.md",
+    "cost_ca_split.png",
+    "ca_split.png",
+    "pi_split.png",
+    "depresiasi_split.png",
+    "Prima Manual Book/ICPL/ICPL.md",
     "Prima Manual Book/Report Stock/Report Kartu Stock.md",
-    "kartu_stock.png",
     "Prima Manual Book/Report/Report.md",
-    "parameter_kartu_stok.png",
-    "Prima Manual Book/kartu_stock.png",
-    "Prima Manual Book/parameter_kartu_stok.png",
-    "Prima Manual Book/parameter_print_jurnal.png",
     "Prima Manual Book/Report Stock/Report Stock per Artikel.md",
     "Prima Manual Book/Report Stock/Report Stock per Warehouse.md",
-    "Prima Manual Book/ICPL/ICPL.md",
-    "Prima Manual Book/Asset Split/Asset Split.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/Project Management/Project Management.md",

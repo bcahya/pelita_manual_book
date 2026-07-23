@@ -79,7 +79,7 @@ Ikuti langkah berikut untuk melakukan Asset Transfer:
 7. Pada field **Asset To**, input nomor dokumen aset tujuan (aset induk).
 8. Field **Addition Amount** terisi otomatis dengan nilai sisa (_Residual Value_) dari aset asal.
 
-![Transfer](../transfer.png "Asset Tranfer") {#Figure119}
+![Transfer](../aset_tf.png "Asset Tranfer") {#Figure119}
 
 9. Klik **Save**.
 10. Klik **Complete** pada dokumen.
@@ -87,18 +87,6 @@ Ikuti langkah berikut untuk melakukan Asset Transfer:
 Setelah dokumen Asset Transfer di-complete, **Residual Value** aset tujuan terkalkulasi dengan nilai dari aset asal, sedangkan **Residual Value** aset asal menjadi 0 karena nilainya telah digabungkan ke aset tujuan. Depresiasi dilanjutkan sesuai masa manfaat ekonomi pada aset tujuan.
 
 Saat melakukan Asset Transfer, sistem otomatis menjalankan mekanisme berikut:
-### Jurnal Aset
-
-Sistem membuat jurnal atas aset from dan aset to. Contoh jurnal yang terbentuk: akun aset to (Kendaraan) dan Peralatan (aset from) pada debit, serta akun Cash pada kredit.
-
-![Asset](../Asset_transfer.png "Asset Transfer") {#Figure124}
-
-### Depresiasi Asset
-
-Apabila aset from telah terdepresiasi, sistem akan mencatat depresiasi atas aset yang terbentuk. Contoh jurnal depresiasi: Depresiasi Aset (aset from) pada debit dan Akumulasi Depresiasi Aset (aset from) pada kredit.
-
-![Depresiasi](../Dep_Tf.png "Depresiasi") {#Figure115}
-
 ### GL Journal
 
 Sistem membuat jurnal pembalik untuk transfer aset dengan ketentuan berikut:
@@ -106,23 +94,23 @@ Sistem membuat jurnal pembalik untuk transfer aset dengan ketentuan berikut:
   - **Debit** — Akumulasi penyusutan atas aset from.
   - **Kredit** — Akumulasi penyusutan atas aset to.
 
-![GL](../GL_Transfer.png "GL Journal") {#Figure121}
+![GL](../gl_tf.png "GL Journal") {#Figure121}
 
 ### Inventory Decrease/Increase (Internal Use)
 
-Sistem memproses pengurangan inventory atas aset asal yang ditransfer. Jurnalnya: akun Persediaan pada debit dan Peralatan (aset from) pada kredit.
+Sistem memproses pengurangan inventory atas aset asal yang ditransfer. Jurnalnya: Charge pada debit dan Peralatan (aset from) pada kredit.
 
-![IU](../jurnal_iu_transfer.png "Internal Use") {#Figure122}
+![IU](../iu_transfer.png "Internal Use") {#Figure122}
 
 ### Cost Adjustment
 
 Setelah Internal Use selesai, sistem menambahkan nilai inventory aset tujuan melalui Cost Adjustment senilai aset from dari asset transfer.
 
-![Cost Adj](../jurnal_ca_transfer.png "Cost Adjustment") {#Figure123}
+![Cost Adj](../ca_tf.png "Cost Adjustment") {#Figure123}
 
 Konfigurasi charge untuk **Internal Use** dan **Cost Adjustment** dilakukan di level **Asset Type**. Dokumen yang terbentuk —  **Cost Adjustment**, **Inventory Decrease/Increase**, dan **GL Journal** — akan ditampilkan di tab **Asset Addition Line** dan mereferensikan masing-masing dokumen terkait.
 
-![Line](../Line_Asset_Add.png "Dokumen") {#Figure124}
+![Line](../pendukung_tf.png "Dokumen") {#Figure124}
 ## Asset Depreciation
 
 Asset Depreciation adalah proses pencatatan penurunan nilai ekonomis aset tetap secara sistematis selama masa manfaatnya, sesuai kebijakan akuntansi perusahaan dan standar pelaporan keuangan yang berlaku. Periode atau masa manfaat aset dikonfigurasi di **Asset Type**.

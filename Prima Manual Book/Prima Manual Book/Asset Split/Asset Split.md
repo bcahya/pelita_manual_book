@@ -15,7 +15,7 @@ Asset Split adalah fitur yang digunakan untuk memecah satu aset menjadi beberapa
 10. Input **Qty** target asset.
 11. Input **Amount** dari target asset.
 
-![line](../target_aset_(2).png "Asset Split Line") {#Figure134}
+![line](../target_split.png "Asset Split Line") {#Figure134}
 
 12. Klik **Save**.
 13. Ulangi langkah 9–12 untuk target asset lainnya.
@@ -31,7 +31,7 @@ Sistem akan menggenerate dokumen Internal Use untuk mengurangi quantity pada ase
 
 Jika aset sumber sudah pernah disusutkan, sistem membuat jurnal untuk membalik (_reverse_) akumulasi penyusutan secara proporsional terhadap quantity yang dipecah. Hal ini memastikan nilai buku target asset dimulai secara akurat sesuai porsi nilai yang dialihkan.
 
-![depresiasi](../depre_split.png "Jurnal Pembalik Depresiasi") {#Figure160}
+![depresiasi](../depresiasi_split.png "Jurnal Pembalik Depresiasi") {#Figure160}
 #### Pembentukan Target Asset
 
 Sistem membentuk aset baru sejumlah quantity yang diinput pada dokumen Asset Split. Setiap target asset yang terbentuk memiliki:
@@ -39,11 +39,15 @@ Sistem membentuk aset baru sejumlah quantity yang diinput pada dokumen Asset Spl
 - Dokumen Asset tersendiri.
 - ASI (Attribute Set Instance) yang ter-generate otomatis, sehingga masing-masing target asset dapat dibedakan dan ditelusuri secara individual.
 
-![asset](../aset_target.png "Target Asset") {#Figure132}
+![asset](../aset_split.png "Target Asset") {#Figure132}
 
 #### Cost Adjustment (CA) untuk Masing-Masing Target Asset
 
 Sistem membuat dokumen **Cost Adjustment** untuk setiap target asset dengan nilai sesuai amount yang dialokasikan. Cost Adjustment ini mencatat nilai perolehan awal target asset sesuai porsi nilai yang dipecah dari aset sumber.
+
+
+![ca](../cost_ca_split.png "Cost Target Asset") {#Figure165}
+
 
 ![ca](../ca_split.png "Jurnal Cost Adjustment") {#Figure159}
 #### Physical Inventory untuk Masing-Masing Target Asset
