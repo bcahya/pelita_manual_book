@@ -169,3 +169,98 @@ Sistem menampilkan pop-up hasil export dalam format **Excel**. Klik dokumen ters
 | **Date Account**  | Tanggal akuntansi                                                |
 | **Posted**        | Status posting jurnal                                            |
 | **Processing**    | Status proses dokumen                                            |
+## Laporan Crosscheck Ayat Silang
+
+Laporan Crosscheck Ayat Silang digunakan untuk memverifikasi keseimbangan jurnal akuntansi di iDempiere. Laporan ini memastikan setiap transaksi yang telah diposting ke **General Ledger (GL)** membentuk pasangan ayat jurnal (debet dan kredit) yang benar dan seimbang.
+
+### Fungsi Laporan Kros Cek Ayat Silang
+
+- Memastikan setiap jurnal memiliki total **debet = kredit**.
+- Memverifikasi bahwa posting transaksi dari modul operasional (Purchase, Sales, Inventory, Asset, Production, Payment, dan lain-lain) telah menghasilkan jurnal sesuai konfigurasi accounting.
+- Membantu proses rekonsiliasi sebelum penutupan periode (_Period Closing_).
+- Memudahkan auditor atau tim Finance menelusuri asal jurnal jika ditemukan selisih atau ketidaksesuaian.
+
+### Langkah Akses Laporan Cross Check Ayat Silang
+
+1. Buka menu **SIS Laporan Kros Cek Ayat Silang**.
+2. Input parameter berikut sesuai kebutuhan:
+- **Process Detail Report** — Report yang akan diproses.
+- **Tenant** — Tenant yang akan dilakukan pengecekan.
+- **Account** — Akun yang akan dicek.
+- **Transaction Date** — Tanggal transaksi.
+
+![parameter](../parameter_ayat_silang.png "Parameter Laporan Cross Check Ayat Silang") {#Figure166}
+
+3. Klik start
+
+![report](../laporan_ayat_silang.png "Laporan Ayat Silang") {#Figure167}
+
+Sistem menampilkan informasi berikut pada laporan:
+
+- Tanggal transaksi
+- Saldo awal
+- Nomor dokumen
+- Jenis dokumen
+- Nilai debet
+- Nilai kredit
+- Organization
+
+Laporan Crosscheck Ayat Silang adalah laporan kontrol akuntansi yang memverifikasi hubungan antar akun dalam jurnal, memastikan keseimbangan debet dan kredit, serta membantu analisis asal-usul transaksi sehingga proses rekonsiliasi dan audit dapat dilakukan lebih cepat dan akurat.
+## Report Invoice Vendor
+
+Report Invoice Vendor digunakan untuk menampilkan daftar dokumen Invoice Vendor (_Accounts Payable Invoice_) yang telah dibuat di iDempiere. Gunakan report ini untuk memantau transaksi tagihan dari vendor serta memudahkan proses rekonsiliasi dengan Purchase Order, Material Receipt, maupun pembayaran.
+
+Report Invoice Vendor dibagi menjadi dua jenis berdasarkan tipe transaksi:
+### Invoice Vendor Lain-Lain
+
+Report ini menampilkan seluruh transaksi invoice pembelian dari vendor yang menambah nilai kewajiban perusahaan kepada vendor (_Accounts Payable_). Ikuti langkah berikut untuk mengaksesnya:
+
+1. Buka menu **Purchase Invoice and Credit/Debit Note**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **Print Invoice Lain-Lain**.
+4. Klik **OK**.
+
+![vendor](../invoice_vendor_lain-lain.png "Invoice Vendor Lain-Lain") {#Figure167}
+### Invoice Vendor Credit Note Lain-Lain
+
+Report ini menampilkan transaksi Credit Note Vendor — dokumen yang digunakan untuk mengurangi nilai tagihan vendor akibat kondisi tertentu, seperti:
+
+- Retur barang kepada vendor.
+- Koreksi harga pembelian.
+- Koreksi kuantitas.
+- Pembatalan sebagian nilai invoice.
+- Pemberian potongan (_allowance_) dari vendor.
+
+Ikuti langkah berikut untuk mencetak Invoice Vendor Credit Note Lain-Lain:
+
+1. Buka menu **Purchase Invoice and Credit/Debit Note**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **Print Invoice Credit Note**.
+4. Klik **OK**.
+
+## Report Invoice Buyer
+
+Report Invoice Buyer digunakan untuk menampilkan seluruh transaksi Invoice Penjualan (_Accounts Receivable Invoice_) yang dibuat kepada buyer atau pelanggan. Gunakan report ini untuk memantau transaksi penjualan yang telah ditagihkan, baik berupa invoice penjualan maupun credit note.
+
+Report Invoice Buyer dibagi menjadi dua jenis:
+### Invoice Buyer Lain-Lain
+
+Report ini digunakan untuk mencatat tagihan atas transaksi non-reguler, seperti penjualan jasa, biaya administrasi, penggantian biaya (_reimbursement_), atau transaksi lain yang memerlukan penagihan kepada buyer tanpa melalui proses Sales Order.
+
+Ikuti langkah berikut untuk mengaksesnya:
+
+1. Buka menu **Purchase Invoice and Credit/Debit Note**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Printout Invoice Buyer Lain-Lain**.
+4. Klik **OK**.
+
+### Invoice Buyer Credit Note
+
+Report ini menampilkan transaksi Credit Note yang diterbitkan kepada buyer — dokumen yang digunakan untuk mengurangi nilai piutang kepada buyer akibat adanya koreksi transaksi.
+
+Ikuti langkah berikut untuk mencetak Invoice Buyer Credit Note:
+
+1. Buka menu **Purchase Invoice and Credit/Debit Note**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Printout Invoice Credit Note Buyer Lain-Lain**.
+4. Klik **OK**.

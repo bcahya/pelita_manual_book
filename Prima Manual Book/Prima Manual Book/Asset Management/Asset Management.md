@@ -45,7 +45,8 @@ Ikuti langkah berikut untuk melakukan Asset Addition:
 4. Pada field **Asset Addition Type**, pilih **Addition**.
 5. Masuk ke tab **Line**.
 6. Input **nomor dokumen aset** yang akan diproses.
-7. Input **Addition Amount** yang akan diproses.
+7. Tentukan **Charge** untuk transaksi tersebut
+8. Input **Addition Amount** yang akan diproses.
 
 ![Addition](../addition.png "Asset Addition") {#Figure118}
 
@@ -67,6 +68,19 @@ Dokumen **Cost Adjustment** akan ditampilkan di tab **Asset Addition Line** dan 
 ## Asset Transfer
 
 Asset Transfer adalah proses pengalihan nilai antar aset. Fitur ini digunakan untuk menggabungkan beberapa aset yang sebelumnya dicatat secara terpisah menjadi satu **aset induk (parent asset)**, guna memudahkan pengelolaan.
+
+Pada saat melakukan **Asset Transfer**, sistem akan membentuk transaksi menggunakan **Charge** tertentu. Nilai **Charge** tidak dipilih secara manual pada saat transaksi, melainkan ditentukan melalui konfigurasi sistem sehingga field **Charge** akan terisi secara otomatis sesuai konfigurasi yang berlaku.
+
+Lakukan konfigurasi **Charge** untuk transaksi **Asset Transfer** melalui menu **System Configurator** dengan langkah-langkah berikut:
+
+1. Buka menu **System Configurator**.
+2. Klik **New**.
+3. Isi field **Name** dengan **SIS_CHARGE_ASSET_TRANSFER_ID**.
+4. Isi field **Configured Value** dengan **Charge ID** yang akan digunakan sesuai kebijakan perusahaan.
+5. Pilih **Configuration Level** = **Client**.
+6. Klik **save**.
+
+Setelah konfigurasi selesai, setiap transaksi **Asset Transfer** akan menggunakan **Charge** tersebut secara otomatis.
 
 Ikuti langkah berikut untuk melakukan Asset Transfer:
 

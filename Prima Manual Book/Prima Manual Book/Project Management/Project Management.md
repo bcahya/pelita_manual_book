@@ -8,7 +8,7 @@ Fitur Project Management digunakan untuk mencatat seluruh aktivitas dan pengguna
 - **Charge Project (CIP)** — Sebagai penampung atas penggunaan persediaan dan biaya tambahan.
 ## Konfigurasi Sistem
 
-Sebelum memulai transaksi project, lakukan konfigurasi sistem terlebih dahulu dengan menambahkan **SIS_CHARGE_ASSET_ADDITION_ID** dengan Configured Value **1000002**. Konfigurasi ini digunakan sebagai charge project untuk penambahan nilai project apabila tidak terdapat Credit Note atas pemakaian persediaan dan biaya tambahan.
+Sebelum memulai transaksi project, lakukan konfigurasi sistem terlebih dahulu dengan menambahkan **SIS_CHARGE_ASSET_ADDITION_ID** dengan Configured Value **Charge_ID**. Konfigurasi ini digunakan sebagai charge project untuk penambahan nilai project apabila tidak terdapat Credit Note atas pemakaian persediaan dan biaya tambahan.
 ## Konfigurasi Artikel Project
 
 1. Buka menu **Product**.

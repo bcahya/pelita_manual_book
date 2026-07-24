@@ -2,7 +2,6 @@
 ## Stock Opname
 
 Stock Opname — atau dikenal sebagai **Physical Inventory** di iDempiere — adalah fitur untuk merekonsiliasi stok fisik di gudang dengan stok yang tercatat di sistem. Jika terdapat selisih antara quantity fisik dan quantity di sistem (_book_), selisih tersebut diproses sebagai penyesuaian.
-
 ### Langkah Proses Stock Opname
 
 1. Buka menu **Physical Inventory**.
@@ -37,12 +36,12 @@ Penentuan adjustment plus atau minus dikonfigurasi di level **Document Type**, s
 1. Buka menu **Document Type**.
 2. Cari dokumen **Inventory Decrease/Increase**.
 3. Pada field **Adjustment Type**, tentukan jenis adjustment yang digunakan untuk dokumen tersebut:
-- **Adjustment Negatif** — Dokumen khusus untuk adjustment negatif.
-- **Adjustment Positif** — Dokumen khusus untuk adjustment positif.
+- - **Adjustment Negatif** — Dokumen khusus untuk adjustment negatif. Saat diproses, Internal Use Qty bernilai positif dan sistem **menambah** stok.
+- **Adjustment Positif** — Dokumen khusus untuk adjustment positif. Saat diproses, Internal Use Qty bernilai negatif dan sistem **mengurangi** stok.
 
-![adjustment](../adjustment.png "Adjustment Type") {#Figure161}
+![adjustment](../iu_adj_charge.png "Adjustment Type") {#Figure161}
 
-4. Pada field **Charge**, input charge untuk dokumen tersebut jika charge sudah ditentukan. Jika tidak, user dapat memilih charge secara manual saat transaksi.
+4. Pada field **Charge**, input charge atas transaksi jika charge sudah ditentukan. Jika tidak, user dapat memilih charge secara manual saat transaksi.
 5. Klik **Save**.
 ### Langkah Proses Inventory Decrease/Increase
 
@@ -60,4 +59,9 @@ Penentuan adjustment plus atau minus dikonfigurasi di level **Document Type**, s
 4. Klik **Save**.
 5. Klik **Complete** pada dokumen Inventory Decrease/Increase.
 
-Setelah dokumen di-complete, sistem otomatis mengkalkulasi ulang quantity produk — apakah bertambah atau berkurang — sesuai konfigurasi. Sistem juga otomatis membentuk jurnal atas penyesuaian quantity tersebut, dengan nilai jurnal mengikuti cost pada artikel.
+### Ketentuan Adjustment
+
+- **Adjustment Positif** — Menunjukkan adanya kelebihan stok yang harus dikurangi dari sistem. Sistem otomatis **mengurangi** stok produk.
+- **Adjustment Negatif** — Menunjukkan adanya kekurangan stok yang harus ditambahkan ke sistem. Sistem otomatis **menambah** stok produk.
+
+Setelah dokumen di-complete, sistem otomatis mengkalkulasi ulang quantity produk sesuai konfigurasi dan membentuk jurnal atas penyesuaian tersebut. Nilai jurnal mengikuti cost pada artikel.
