@@ -1,11 +1,24 @@
 # Mekanisme Pembayaran
 
-Setelah **AP Invoice** berstatus **Completed**, perusahaan dapat melakukan pembayaran kepada vendor melalui menu **Payment and Receipt**. Proses ini berfungsi untuk menyelesaikan kewajiban perusahaan atas invoice yang telah diterbitkan.
+Setelah AP Invoice berstatus _Completed_, perusahaan dapat melakukan pembayaran kepada vendor melalui menu **Payment and Receipt**. Proses ini digunakan untuk menyelesaikan kewajiban perusahaan atas invoice yang telah diterbitkan.
 
-iDempiere mendukung beberapa mekanisme pembayaran, antara lain pembayaran satu invoice, multi invoice, multi Business Partner (Business Partner Pembayar), serta pembayaran menggunakan valuta asing (valas).
+iDempiere mendukung beberapa mekanisme pembayaran, antara lain:
+
+- Pembayaran satu invoice
+- Pembayaran multi invoice
+- Pembayaran multi Business Partner (_Business Partner Pembayar_)
+- Pembayaran menggunakan valuta asing (valas)
+## Konfigurasi Document Type
+
+Document Type untuk payment dapat dibedakan sesuai kebutuhan operasional. Namun sebelum digunakan, pastikan field **Payment Multi BP** pada Document Type AP Payment sudah dikonfigurasi. Berikut ketentuannya:
+
+- **Dicentang (Y)** — Pembayaran dengan document type tersebut diizinkan untuk multi BP, artinya BP Payment dan BP Invoice dapat berbeda.
+- **Tidak dicentang (N)** — Pembayaran hanya dapat dilakukan dengan BP yang sama dengan BP pada invoice. Jika BP di Payment dan Invoice berbeda, sistem otomatis memblokir transaksi tersebut.
+
+Sesuaikan konfigurasi ini dengan kebutuhan operasional perusahaan.
 ## Pembayaran Multi BP (Business Partner)
 
-Mekanisme **Multi Business Partner** digunakan ketika pembayaran dilakukan menggunakan **Business Partner yang berbeda** dengan vendor pada invoice. Kondisi ini umumnya diterapkan apabila terdapat vendor induk, perusahaan afiliasi, atau pihak ketiga yang bertindak sebagai penerima pembayaran.
+Mekanisme **Multi Business Partner** digunakan ketika pembayaran dilakukan kepada Business Partner yang berbeda dengan vendor pada invoice. Kondisi ini umumnya diterapkan jika terdapat vendor induk, perusahaan afiliasi, atau pihak ketiga yang bertindak sebagai penerima pembayaran.
 
 Untuk melakukan pembayaran Multi Business Partner, lakukan langkah-langkah berikut:
 
@@ -18,6 +31,8 @@ Untuk melakukan pembayaran Multi Business Partner, lakukan langkah-langkah berik
 7. Input invoice yang akan dibayarkan.
 8. Klik **save**.
 9. Klik **complete**.
+
+>**Catatan:** Payment Date tidak boleh lebih awal dari Invoice Date. Jika Payment Date < Invoice Date, sistem otomatis memblokir transaksi dan menampilkan pesan bahwa Payment Date tidak boleh sebelum Invoice Date.
 
 Setelah pembayaran diselesaikan, sistem membentuk **satu jurnal AP Payment** menggunakan **Business Partner** yang tercantum pada dokumen pembayaran.
 

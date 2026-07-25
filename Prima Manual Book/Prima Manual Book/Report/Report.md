@@ -191,9 +191,9 @@ Laporan Crosscheck Ayat Silang digunakan untuk memverifikasi keseimbangan jurnal
 
 ![parameter](../parameter_ayat_silang.png "Parameter Laporan Cross Check Ayat Silang") {#Figure166}
 
-3. Klik start
+3. Klik **start**.
 
-![report](../laporan_ayat_silang.png "Laporan Ayat Silang") {#Figure167}
+![report](../report_ayat_silang.png "Laporan Ayat Silang") {#Figure167}
 
 Sistem menampilkan informasi berikut pada laporan:
 
@@ -264,3 +264,24 @@ Ikuti langkah berikut untuk mencetak Invoice Buyer Credit Note:
 2. Klik tombol **Setting (⚙)**.
 3. Klik **SIS Printout Invoice Credit Note Buyer Lain-Lain**.
 4. Klik **OK**.
+
+## Export GL Distribution Data
+
+Export GL Distribution Data adalah proses mengekspor hasil distribusi akun (GL Distribution) yang telah diproses sistem menjadi jurnal akuntansi. Fitur ini digunakan untuk mengirimkan hasil distribusi ke sistem lain, melakukan rekonsiliasi, atau menyimpan hasil distribusi dalam format file (Excel atau CSV).
+### Tujuan Export GL Distribution Data
+
+- Mengekspor jurnal hasil distribusi ke sistem ERP atau aplikasi keuangan lain.
+- Melakukan rekonsiliasi hasil distribusi dengan General Ledger.
+- Menyediakan data distribusi sebagai bahan audit.
+- Membuat arsip jurnal distribusi dalam format Excel atau CSV.
+- Memudahkan analisis alokasi biaya berdasarkan akun atau cost center.
+### Langkah Export GL Distribution 
+
+1. Buka menu **SIS Export GL Distribution**.
+2. Klik **Start**.
+3. Klik file yang muncul.
+4. Klik **Download** untuk mengunduh file tersebut.
+
+![export](../gl_distribute.png "Export GL Distribution") {#Figure170}
+
+Sistem menghasilkan file dalam format **Excel** yang memuat informasi akun asal dan akun target yang didistribusikan. Data diambil dari jurnal yang telah diposting dan dipengaruhi oleh aturan GL Distribution.

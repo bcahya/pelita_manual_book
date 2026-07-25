@@ -70,9 +70,16 @@
 .include {Product dan Category Access/Product dan Category Access.md}
 .include {Document Type/Document Type.md}
 .include {Report/Report.md}
+.include {Report Stock/Report Kartu Stock.md}
 .include {Report Stock/Report Stock per Warehouse.md}
 .include {Report Stock/Report Stock per Artikel.md}
 .include {Forecast Report/Forecast Report.md}
 .include {Format Report/Format Report.md}
 .include {Tools/Tools.md}
 .include {Security di iDempiere/Security di iDempiere.md}
+.include {Financial Report/Financial Report.md}
+.include {Material Management/Material Management.md}
+.include {AP dan AR Manual/AP dan AR Manual.md}
+.include {Mekanisme Pembayaran/Mekanisme Pembayaran.md}
+.include {GL Journal Generator/GL Journal Generator.md}
+.include {Movement Standar/Movement Standar.md}
