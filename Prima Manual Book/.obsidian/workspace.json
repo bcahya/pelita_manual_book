@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/main.md",
+                "file": "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "main"
+              "title": "Mekanisme Pembayaran"
             }
           }
         ]
@@ -196,27 +196,27 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Movement Standard/Movement Standard.md",
+    "Prima Manual Book/AP dan AR Manual/AP dan AR Manual.md",
+    "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
+    "parameter_revaluasi.png",
+    "Prima Manual Book/parameter_revaluasi.png",
+    "Prima Manual Book/reval_inv_01.png",
+    "Prima Manual Book/reval_bs_31.png",
+    "Prima Manual Book/reval_bs_01.png",
+    "Prima Manual Book/reval_inv_31.png",
+    "jurnal_bs.png",
+    "jurnal_payment.png",
+    "Prima Manual Book/jurnal_bs.png",
+    "Prima Manual Book/jurnal_payment.png",
     "Prima Manual Book/main.md",
+    "Prima Manual Book/Movement Standard/Movement Standard.md",
     "Prima Manual Book/Material Management/Material Management.md",
     "Prima Manual Book/Report Stock/Report Kartu Stock.md",
-    "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
     "Prima Manual Book/Asset Split/Asset Split.md",
-    "Prima Manual Book/AP dan AR Manual/AP dan AR Manual.md",
     "Prima Manual Book/Report/Report.md",
-    "gl_distribute.png",
-    "Prima Manual Book/gl_distribute.png",
-    "parameter_ayat_silang.png",
-    "Prima Manual Book/parameter_ayat_silang.png",
-    "report_ayat_silang.png",
-    "Prima Manual Book/report_ayat_silang.png",
     "Prima Manual Book/Project Management/Project Management.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/GL Journal Generator/GL Journal Generator.md",
-    "Prima Manual Book/journal_line_gl.png",
-    "Prima Manual Book/gl_header.png",
-    "journal_line_gl.png",
-    "gl_header.png",
     "Prima Manual Book/Mekanisme Pembayaran",
     "Prima Manual Book/GL Journal Generator",
     "Prima Manual Book/AP dan AR Manual",

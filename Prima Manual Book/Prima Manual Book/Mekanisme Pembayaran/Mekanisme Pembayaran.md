@@ -84,3 +84,59 @@ Apabila terjadi selisih kurs antara saat pencatatan invoice dan saat pembayaran,
 ![allocat](../allocat_valas.png "Payment Allocation Valas") {#Figure173}
 
 Konfigurasi akun untuk **Realized Gain/Loss** maupun **Unrealized Gain/Loss** dilakukan pada **Accounting Schema**. Seluruh akun yang digunakan dalam proses pembayaran dapat disesuaikan dengan kebijakan akuntansi masing-masing perusahaan.
+
+## Bank/Cash Statement
+
+Bank/Cash Statement adalah fitur yang digunakan untuk mencatat mutasi rekening bank atau kas berdasarkan rekening koran (_bank statement_) maupun laporan transaksi kas. Fitur ini berfungsi sebagai media rekonsiliasi antara transaksi yang terjadi di bank dengan transaksi yang telah dicatat di sistem, seperti Payment, Receipt, maupun transaksi lainnya.
+
+Transaksi Payment hanya mencatat bahwa perusahaan telah melakukan atau menerima pembayaran, namun belum membuktikan bahwa dana benar-benar telah masuk atau keluar dari rekening bank. Proses **Bank/Cash Statement** digunakan untuk mengonfirmasi bahwa transaksi Payment tersebut benar-benar telah terjadi di rekening bank melalui proses **rekonsiliasi (_matching_)**. Dengan demikian, Bank/Cash Statement menjadi kontrol untuk memastikan setiap transaksi pembayaran dan penerimaan sesuai dengan mutasi rekening yang diterbitkan bank.
+
+### Validasi Currency
+
+Salah satu validasi penting dalam proses rekonsiliasi adalah **currency antara Payment dan Bank/Cash Statement harus sama**. Mekanisme validasinya adalah sebagai berikut:
+
+- Jika Payment menggunakan mata uang **IDR**, maka Bank/Cash Statement juga harus menggunakan **IDR**.
+- Jika Payment menggunakan mata uang **USD**, maka Bank/Cash Statement juga harus menggunakan **USD**.
+- Sistem hanya menampilkan dan mengizinkan proses _matching_ terhadap Payment yang memiliki currency yang sama dengan Bank/Cash Statement.
+
+### Rate pada Bank/Cash Statament
+
+Untuk Bank/Cash Statement yang telah direkonsiliasi ke Payment tertentu, jurnal yang ter-generate menggunakan **rate yang digunakan di Payment**. Rate pada Payment dapat diambil dari nilai rate atas currency type pada tanggal tersebut, atau dari hasil **overwrite rate**.
+
+Berikut contoh Payment dengan currency USD menggunakan overwrite rate, beserta Bank Statement atas payment tersebut:
+
+![payment](../jurnal_payment.png "Jurnal Payment") {#Figure171}
+
+
+![bank statement](../jurnal_bs.png "Jurnal Bank/Cash Statement") {#Figure172}
+
+### Revaluasi Bank/Cash Statement
+
+Pada transaksi Bank/Cash Statement yang menggunakan mata uang asing, nilai transaksi dalam mata uang dasar (misalnya IDR) dapat berubah akibat perbedaan kurs antara tanggal transaksi pembayaran dan tanggal penutupan periode. Oleh karena itu, diperlukan proses **Revaluasi** di akhir periode akuntansi untuk menyesuaikan nilai saldo rekening bank sesuai kurs penutupan. Revaluasi ini hanya memengaruhi nilai dalam mata uang dasar — nilai dalam mata uang asal (misalnya USD) tetap tidak berubah.
+
+#### Mekanisme Revaluasi
+
+Contoh: perusahaan melakukan Payment sebesar **USD 5** dengan kurs transaksi **Rp10.000/USD**, sehingga nilai yang tercatat adalah **Rp50.000**. Pada akhir bulan, kurs penutupan berubah menjadi **Rp10.100/USD**. Sistem menjalankan **Currency Revaluation** sehingga nilai saldo bank disesuaikan menjadi **Rp50.500**. Selisih sebesar **Rp500** diakui sebagai keuntungan atau kerugian selisih kurs sesuai konfigurasi akun akuntansi.
+
+Ikuti langkah berikut untuk melakukan revaluasi Bank/Cash:
+
+1. Buka menu **SIS Revaluasi Valas Bank/Cash**.
+2. Input parameter berikut:
+- **Organization**
+- **Document Type**
+- **Period Revaluation**
+
+
+![parameter](../parameter_revaluasi.png "Parameter Revaluasi") {#Figure175}
+
+3. Klik **Start**.
+
+Proses revaluasi menghasilkan dua jurnal:
+
+- **Jurnal Revaluasi Akhir Bulan** — Menyesuaikan nilai saldo bank berdasarkan kurs penutupan periode sehingga laporan keuangan mencerminkan nilai aset atau kewajiban yang sebenarnya pada tanggal pelaporan.
+
+![reval](../reval_bs_31.png "Revaluasi Bank/Cash Akhir Bulan") {#Figure176}
+
+- **Jurnal Pembalik Awal Bulan (_Reversing Journal_)** — Sistem otomatis membalik jurnal revaluasi pada hari pertama periode berikutnya agar transaksi kembali menggunakan nilai historis dan proses rekonsiliasi Payment dengan Bank/Cash Statement tetap sesuai.
+
+![revaluasi](../reval_bs_01.png "Revaluasi Bank/Cash Awal Bulan Berikutnya") {#Figure177}

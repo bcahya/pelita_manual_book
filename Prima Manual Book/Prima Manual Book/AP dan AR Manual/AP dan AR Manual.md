@@ -89,3 +89,38 @@ Ikuti langkah berikut untuk membuat AR Credit Note:
 Setelah dokumen di-complete, sistem mengurangi piutang dan membentuk jurnal akuntansi. Contoh jurnal untuk pendapatan usaha lainnya:
 
 ![arcn](../ar_cn.png "Jurnal AR Credit Note") {#Figure176}
+
+## Revaluasi Invoice dengan Valuta Asing (Valas)
+
+Di iDempiere, jika invoice menggunakan mata uang selain Rupiah dan kurs pada saat transaksi berbeda dengan kurs akhir bulan — contoh: saat transaksi 1 USD = Rp10.000, sedangkan akhir bulan 1 USD = Rp10.100 — sistem dapat melakukan revaluasi invoice tersebut menggunakan kurs yang berlaku di akhir bulan.
+
+Revaluasi berlaku untuk:
+
+- AP Invoice
+- AP Credit Memo
+- AR Invoice
+- AR Credit Memo
+
+Seluruh invoice yang menggunakan mata uang asing akan dilakukan revaluasi.
+
+Ikuti langkah berikut untuk melakukan revaluasi:
+
+1. Buka menu **SIS Revaluasi Valas Invoice**.
+2. Input parameter berikut:
+- Organization
+- Document Type
+- Period Revaluation
+
+![parameter](../parameter_revaluasi.png "Parameter Revaluasi") {#Figure172}
+
+3. Klik start
+
+Nilai AP Invoice dalam mata uang asing tetap sama, namun nilai dalam Rupiah direvaluasi sesuai kurs akhir bulan.
+
+Pada akhir bulan, sistem membentuk jurnal revaluasi. 
+
+![invoice](../reval_inv_31.png "Revaluasi Akhir Bulan") {#Figure173}
+
+Pada tanggal 1 bulan berikutnya, sistem otomatis membentuk **jurnal pembalik** atas revaluasi tersebut.
+
+![revaluasi](../reval_inv_01.png "Revaluasi Awal Bulan Berikutnya") {#Figure174}
