@@ -32,11 +32,13 @@ Lakukan konfigurasi **GL Journal Generator** sebagai berikut:
 
 3. Masuk ke **GL Generator Line**
 - **Description** – Menentukan deskripsi yang akan ditampilkan pada setiap **GL Journal Line**. 
-- **Copy All Dimension** – Menyalin seluruh informasi dimensi (misalnya Business Partner, Product, Project, Cost Center, dan dimensi lainnya) dari data **Accounting Fact**.
+- **Same Account** – Mengelompokkan hasil generate berdasarkan akun (_group by account_). Dengan mengaktifkan opsi ini, sistem akan menggabungkan transaksi yang memiliki akun yang sama sehingga tampilan **GL Journal** menjadi lebih ringkas.
+- **Same Product** – Mengelompokkan hasil generate berdasarkan produk. Jika diaktifkan, sistem hanya akan menggabungkan transaksi yang memiliki produk yang sama.
+- **Copy All Dimension** – Menyalin seluruh dimensi akuntansi dari **Accounting Fact**, seperti **Business Partner**, **Product**, **Project**, **Campaign**, **Sales Region**, **User Element**, **Cost Center**, dan dimensi lainnya ke **GL Journal** yang dihasilkan.
 - **Multiplier Amount** – Isi **-1** agar sistem membalik seluruh nilai jurnal dari akun yang dipilih. 
 - **Round Factor** – Menentukan pembulatan nilai desimal pada jurnal yang dihasilkan.    
 
-![line](../gl_line.png "Generator Line") {#Figure177}
+![line](../generator_line.png "Generator Line") {#Figure177}
 
 4. Masuk ke tab **Generate Source**
 - **Account Element** – Pilih **parent account** paling atas sehingga sistem akan mengambil seluruh akun turunannya yang memiliki transaksi.
@@ -45,9 +47,17 @@ Lakukan konfigurasi **GL Journal Generator** sebagai berikut:
 
 ![source](../gl_source.png "Generator Source") {#Figure178}
 
-5. Klik **Generate GL Journal**
+5. Klik **Generate GL Journal** untuk menjalankan proses pembentukan jurnal.
 
-Sistem akan membuat **GL Journal** berdasarkan transaksi pada periode yang dipilih. Setelah proses generate selesai, ubah **Period** pada GL Journal yang terbentuk menjadi **Adjustment Period (Periode 13)** agar jurnal penutup tercatat pada periode penyesuaian akhir tahun.
+Setelah proses selesai, sistem akan membuat **GL Journal** berdasarkan seluruh transaksi yang memenuhi konfigurasi pada periode yang dipilih.
+
+Perilaku hasil generate dipengaruhi oleh konfigurasi pada **GL Generator Line**, antara lain:
+
+- Apabila **Copy All Dimension** diaktifkan, setiap baris **GL Journal** akan membawa seluruh dimensi akuntansi yang terdapat pada transaksi sumber (**Accounting Fact**).
+- Apabila **Same Product** diaktifkan, sistem akan mengelompokkan jurnal berdasarkan produk yang sama sehingga transaksi dengan produk berbeda tetap ditampilkan pada baris yang terpisah.
+- Apabila **Same Account** diaktifkan, sistem akan mengelompokkan jurnal berdasarkan akun yang sama sehingga jumlah baris jurnal menjadi lebih sedikit dan tampilan lebih sederhana.
+
+Setelah **GL Journal** berhasil dihasilkan, ubah nilai **Period** pada jurnal tersebut menjadi **Adjustment Period (Periode 13)** agar jurnal penutup dicatat pada periode penyesuaian akhir tahun sebelum dilakukan proses posting.
 
 ## Membuat GL Journal Manual
 
