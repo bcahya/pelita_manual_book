@@ -172,9 +172,9 @@ Saat dokumen Bank/Cash Transfer di-complete, sistem otomatis membuat dua dokumen
 - **AP Payment** — Merepresentasikan dana keluar (pengurangan saldo) dari **Bank/Cash From**.
 - **AR Receipt** — Merepresentasikan dana masuk (penambahan saldo) ke **Bank/Cash To**.
 
-Sistem membentuk kedua dokumen tersebut secara otomatis, sehingga user tidak perlu membuat AP Payment maupun AR Receipt secara manual.
-
 ![apar](../ap-ar_bankcash_tf.png "AP Payment dan AR Receipt") {#Figure180}
+
+Sistem membentuk kedua dokumen tersebut secara otomatis, sehingga user tidak perlu membuat AP Payment maupun AR Receipt secara manual.
 
 Berikut jurnal yang terbentuk atas AP Payment dan AR Receipt untuk Bank/Cash Transfer:
 
