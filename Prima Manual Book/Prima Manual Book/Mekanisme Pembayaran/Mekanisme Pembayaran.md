@@ -140,3 +140,44 @@ Proses revaluasi menghasilkan dua jurnal:
 - **Jurnal Pembalik Awal Bulan (_Reversing Journal_)** — Sistem otomatis membalik jurnal revaluasi pada hari pertama periode berikutnya agar transaksi kembali menggunakan nilai historis dan proses rekonsiliasi Payment dengan Bank/Cash Statement tetap sesuai.
 
 ![revaluasi](../reval_bs_01.png "Revaluasi Bank/Cash Awal Bulan Berikutnya") {#Figure177}
+
+## Bank/Cash Transfer
+
+Fitur Bank/Cash Transfer digunakan untuk memindahkan dana antar rekening bank maupun kas di sistem. Proses ini hanya memindahkan saldo antar akun kas/bank milik perusahaan dan tidak melibatkan Business Partner maupun penyelesaian piutang atau utang.
+
+Setiap transaksi Bank/Cash Transfer memperbarui saldo pada rekening asal dan rekening tujuan, serta menghasilkan jurnal akuntansi sesuai konfigurasi akun pada masing-masing Bank/Cash.
+
+### Langkah Proses Bank/Cash Transfer
+
+1. Buka menu **Bank/Cash Transfer**.
+2. Input field pada header:
+- **From Bank Account** — Bank sumber dana.
+- **From Bank Currency** — Terisi otomatis mengikuti currency pada master Bank Account.
+- **From Charge** - Set default untuk biaya transfer yang dibebankan kepada **rekening sumber (Bank/Cash From)**.
+- **Amount** — Nominal yang akan dipindahkan berdasarkan currency.
+- **To Bank Account** — Bank tujuan transfer.
+- **To Charge** - Set default untuk biaya transfer yang dibebankan kepada **rekening tujuan (Bank/Cash To)**.
+- **To Bank Currency** — Terisi otomatis mengikuti currency pada master Bank Account.
+- **Currency Type** — Rate currency yang digunakan _(field muncul jika transfer lintas currency)_.
+- **Override Currency Conversion Rate** — Menentukan kurs secara manual _(field muncul jika transfer lintas currency)_.
+- **Rate** — Nilai kurs yang digunakan _(field muncul jika transfer lintas currency)_.
+- **To Amount** — Nominal dana di rekening tujuan.
+
+![header](../header_bankcash_tf.png "Header Bank/Cash Transfer") {#Figure179}
+
+3. Klik **Complete** pada dokumen.
+
+Saat dokumen Bank/Cash Transfer di-complete, sistem otomatis membuat dua dokumen dengan status _Complete_:
+
+- **AP Payment** — Merepresentasikan dana keluar (pengurangan saldo) dari **Bank/Cash From**.
+- **AR Receipt** — Merepresentasikan dana masuk (penambahan saldo) ke **Bank/Cash To**.
+
+Sistem membentuk kedua dokumen tersebut secara otomatis, sehingga user tidak perlu membuat AP Payment maupun AR Receipt secara manual.
+
+![apar](../ap-ar_bankcash_tf.png "AP Payment dan AR Receipt") {#Figure180}
+
+Berikut jurnal yang terbentuk atas AP Payment dan AR Receipt untuk Bank/Cash Transfer:
+
+![ap payment](../jurnal_ap_bank_tf.png "Jurnal AP Payment atas Bank/Cash Transfer") {#Figure181}
+
+![ar](../jurnal_ar_bank_tf.png "Jurnal AR Receipt atas Bank/Cash Transfer") {#Figure182}

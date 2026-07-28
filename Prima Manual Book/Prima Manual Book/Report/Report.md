@@ -285,3 +285,32 @@ Export GL Distribution Data adalah proses mengekspor hasil distribusi akun (GL D
 ![export](../gl_distribute.png "Export GL Distribution") {#Figure170}
 
 Sistem menghasilkan file dalam format **Excel** yang memuat informasi akun asal dan akun target yang didistribusikan. Data diambil dari jurnal yang telah diposting dan dipengaruhi oleh aturan GL Distribution.
+
+## Report Account Element
+
+**xport Account Element** adalah fitur di iDempiere yang digunakan untuk mengekspor data Account Element (_Chart of Accounts/COA_) ke dalam file spreadsheet (Microsoft Excel). Laporan ini bertujuan untuk melakukan review, dokumentasi, maupun keperluan migrasi dan sinkronisasi data akun ke sistem lain.
+
+Data yang diekspor memuat seluruh daftar akun beserta atributnya sesuai konfigurasi pada Accounting Schema.
+### Langkah Export Account Element
+
+1. Buka menu **SIS Export Account Element**.
+2. Klik **Start**.
+3. **Download** file yang muncul.
+
+![export](../export_coa.png "Proses Export Account Element") {#Figure178}
+
+
+![hasil](../hasil_coa.png "Hasil Export Account Element") {#Figure179}
+
+Informasi yang Ditampilkan pada Hasil Export
+
+- **Account** — Kode akun.
+- **Name Account** — Nama akun.
+- **Description** — Deskripsi akun _(jika tersedia)_.
+- **Account Type** — Jenis akun: Asset, Liability, Equity, Revenue, Expense, atau Memo.
+- **Document Controlled** — Status kontrol dokumen oleh sistem.
+- **Summary Level** — Menunjukkan apakah akun merupakan akun ringkasan (_summary_) atau akun transaksi (_posting_).
+
+Berikut contoh hasil export Account Element:
+
+> **Catatan:** Export Account Element hanya mengekspor data master akun (_Chart of Accounts_) dan tidak menampilkan saldo akun maupun transaksi jurnal. Gunakan laporan ini sebagai referensi konfigurasi, bukan sebagai laporan keuangan.
