@@ -288,7 +288,7 @@ Sistem menghasilkan file dalam format **Excel** yang memuat informasi akun asal 
 
 ## Report Account Element
 
-**xport Account Element** adalah fitur di iDempiere yang digunakan untuk mengekspor data Account Element (_Chart of Accounts/COA_) ke dalam file spreadsheet (Microsoft Excel). Laporan ini bertujuan untuk melakukan review, dokumentasi, maupun keperluan migrasi dan sinkronisasi data akun ke sistem lain.
+**Export Account Element** adalah fitur di iDempiere yang digunakan untuk mengekspor data Account Element (_Chart of Accounts/COA_) ke dalam file spreadsheet (Microsoft Excel). Laporan ini bertujuan untuk melakukan review, dokumentasi, maupun keperluan migrasi dan sinkronisasi data akun ke sistem lain.
 
 Data yang diekspor memuat seluruh daftar akun beserta atributnya sesuai konfigurasi pada Accounting Schema.
 ### Langkah Export Account Element
@@ -298,9 +298,6 @@ Data yang diekspor memuat seluruh daftar akun beserta atributnya sesuai konfigur
 3. **Download** file yang muncul.
 
 ![export](../export_coa.png "Proses Export Account Element") {#Figure178}
-
-
-![hasil](../hasil_coa.png "Hasil Export Account Element") {#Figure179}
 
 Informasi yang Ditampilkan pada Hasil Export
 
@@ -313,4 +310,115 @@ Informasi yang Ditampilkan pada Hasil Export
 
 Berikut contoh hasil export Account Element:
 
+![hasil](../hasil_coa.png "Hasil Export Account Element") {#Figure179}
+
 > **Catatan:** Export Account Element hanya mengekspor data master akun (_Chart of Accounts_) dan tidak menampilkan saldo akun maupun transaksi jurnal. Gunakan laporan ini sebagai referensi konfigurasi, bukan sebagai laporan keuangan.
+
+## Laporan Buku Besar Pembantu
+
+Buku Besar Pembantu adalah laporan yang menampilkan rincian transaksi untuk setiap akun secara lebih detail dibandingkan Buku Besar (_General Ledger_). Gunakan laporan ini untuk menelusuri mutasi transaksi beserta saldo setiap Business Partner, akun, maupun dimensi akuntansi sesuai kebutuhan analisis.
+
+Laporan ini berfungsi sebagai laporan pendukung untuk merekonsiliasi saldo akun pada General Ledger dengan rincian transaksi yang membentuk saldo tersebut.
+
+Data pada Buku Besar Pembantu bersumber dari tabel akuntansi (_Fact_Acct_) yang terbentuk setelah dokumen berhasil diposting (_Posted = Yes_). Dokumen yang masih berstatus _Draft_, _In Progress_, atau belum diposting tidak akan ditampilkan.
+### Langkah Export Buku Besar Pembantu
+
+1. Buka menu **SIS Export Buku Besar Pembantu**.
+2. Input parameter berikut sesuai kebutuhan:
+- **Account Date** — Tanggal akun transaksi.
+- **Business Partner** — Opsional, untuk memfilter berdasarkan Business Partner.
+- **Cost Center** — Opsional, untuk memfilter berdasarkan Cost Center.
+- **Product** — Opsional, untuk memfilter berdasarkan produk yang digunakan dalam transaksi.
+
+![paramter](../parameter_buku_besar_pembantu.png "Parameter Report Buku Besar Pembantu") {#Figure180}
+
+3. Klik start
+
+Berikut contoh hasil export Buku Besar Pembantu:
+
+![report](../report_buku_bes_pembantu.png "Laporan Buku Besar Pembantu") {#Figure181}
+
+Informasi yang Ditampilkan pada Hasil Export
+
+- **Company** — Tenant.
+- **No Reff** — Nomor dokumen.
+- **Description** — Deskripsi transaksi _(jika tersedia)_.
+- **Date Acct** — Tanggal transaksi.
+- **Acc Value** — Kode akun.
+- **Acc Name** — Nama akun.
+- **Debit** — Nilai debit.
+- **Kredit** — Nilai kredit.
+- **Saldo Awal** — Saldo awal periode.
+- **Saldo Berjalan** — Saldo setelah setiap transaksi diposting.
+- **Artikel** — Kode produk.
+- **Nama Barang** — Nama produk.
+- **Cost Center** — Value cost center.
+- **Nama Cost Center** — Nama cost center.
+- **BPartner** — Value Business Partner.
+- **Nama BPartner** — Nama Business Partner.
+- **Warehouse** — Warehouse saat transaksi dilakukan.
+
+Saldo diperbarui secara berurutan berdasarkan tanggal posting, sehingga user dapat memantau perubahan saldo setelah setiap transaksi diposting.
+
+## Report Slip Setoran
+
+**Report Printout Payment AP Bank** adalah laporan yang digunakan untuk mencetak informasi pembayaran vendor yang dilakukan melalui transaksi AP Payment dengan metode **Bank Transfer**. Laporan ini dirancang untuk diintegrasikan dengan Slip Setoran Bank, sehingga informasi pembayaran dari iDempiere dapat digunakan sebagai dokumen pendukung saat melakukan penyetoran atau transfer dana melalui bank.
+
+Laporan ini berfungsi sebagai media verifikasi sebelum transaksi dikirim ke bank, sekaligus sebagai dokumen arsip atas pembayaran yang telah diproses.
+### Konfigurasi Report Printout Payment AP Bank
+
+Sebelum mencetak Report Printout Payment AP Bank, lakukan konfigurasi hak akses report dan template report pada masing-masing rekening bank. Konfigurasi ini memastikan sistem menampilkan jenis report yang sesuai dengan metode pembayaran yang digunakan perusahaan.
+#### Konfigurasi Report Detail Access pada Role
+
+1. Buka menu **Role**.
+2. Pilih role yang akan diberikan akses untuk mencetak report.
+3. Buka tab **Report Detail Access**.
+4. Tambahkan report **SIS Printout Payment AP Bank**.
+5. Pada field **Process Detail Report**, pilih jenis report yang akan digunakan sesuai kebutuhan perusahaan.
+
+![role](../bank_role.png "Konfigurasi SIS Printout Payment AP Bank di Role") {#Figure182}
+
+Lakukan konfigurasi ini untuk setiap jenis report pembayaran bank yang digunakan, misalnya:
+
+- BCA BG
+- BCA Transfer
+- BCA Setoran
+- Mandiri Transfer
+- BNI Transfer
+- atau template pembayaran bank lainnya.
+
+Setelah dikonfigurasi, report akan tersedia dan dapat dipilih pada proses pembayaran sesuai hak akses user.
+#### Konfigurasi Bank Report Template
+
+Setelah konfigurasi pada Role selesai, hubungkan report dengan masing-masing rekening bank. Ikuti langkah berikut:
+
+1. Buka menu **Bank/Cash**.
+2. Pilih rekening bank yang akan digunakan untuk transaksi pembayaran.
+3. Buka tab **Bank Report Template**.
+4. Tambahkan konfigurasi report baru.
+5. Pada field **Process Detail Report**, pilih report yang telah dikonfigurasi sebelumnya, misalnya BCA BG, BCA Transfer, BCA Setoran, atau report lain sesuai kebutuhan.
+
+![bank](../bank_payment.png "Konfigurasi Process Detail Report Pada Bank") {#Figure183}
+
+6. Klik **Save**.
+
+Lakukan konfigurasi ini pada setiap rekening bank yang digunakan untuk transaksi pembayaran. Dengan demikian, setiap rekening bank dapat menggunakan template printout yang berbeda sesuai format Slip Setoran Bank yang dipersyaratkan masing-masing bank.
+### Langkah Cetak Report Slip Setoran
+
+1. Buka menu **SIS Printout Payment AP Bank**.
+2. Input parameter berikut sesuai kebutuhan:
+- **Bank**
+- **Process Detail Report**
+- **Transaction Date**
+- **Bank Account** _(opsional)_
+- **Payment** _(opsional)_
+
+![parameter](../parameter_slip.png "Parameter Report Slip") {#Figure184}
+
+3. Klik **Start**.
+
+![hasil](../report_slip.png "Report Payment Bank") {#Figure185}
+
+Data pada laporan diambil dari dokumen AP Payment yang telah dibuat di sistem, meliputi informasi pembayaran, Business Partner, rekening bank, dan nilai pembayaran. Informasi ini digunakan sebagai dasar pengisian atau pencetakan **Slip Setoran Bank** saat proses transfer atau penyetoran ke bank.
+
+Dengan mekanisme ini, perusahaan dapat menggunakan lebih dari satu format printout pembayaran tanpa perlu mengubah report secara manual setiap kali menggunakan rekening bank yang berbeda.
