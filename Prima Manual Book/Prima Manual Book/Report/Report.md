@@ -422,3 +422,49 @@ Lakukan konfigurasi ini pada setiap rekening bank yang digunakan untuk transaksi
 Data pada laporan diambil dari dokumen AP Payment yang telah dibuat di sistem, meliputi informasi pembayaran, Business Partner, rekening bank, dan nilai pembayaran. Informasi ini digunakan sebagai dasar pengisian atau pencetakan **Slip Setoran Bank** saat proses transfer atau penyetoran ke bank.
 
 Dengan mekanisme ini, perusahaan dapat menggunakan lebih dari satu format printout pembayaran tanpa perlu mengubah report secara manual setiap kali menggunakan rekening bank yang berbeda.
+
+## Report Journal Harian
+
+**Laporan Jurnal Harian** merupakan laporan yang menampilkan seluruh jurnal yang terbentuk pada periode tertentu berdasarkan tanggal akuntansi (**Accounting Date**). Laporan ini digunakan untuk melihat seluruh transaksi yang telah diposting ke General Ledger beserta akun debit dan kredit yang terpengaruh.
+
+### Tujuan Report Journal Harian
+
+Laporan Jurnal Harian digunakan untuk:
+
+- Menampilkan seluruh jurnal yang telah diposting pada periode tertentu.
+- Memastikan setiap transaksi telah menghasilkan jurnal sesuai konfigurasi sistem.
+- Melakukan verifikasi keseimbangan nilai debit dan kredit.
+- Mendukung proses rekonsiliasi sebelum dilakukan closing periode.
+
+### Langkah Proses Report Journal Harian
+
+1. Buka menu **SIS Export Journal Harian**.
+2. Input parameter berikut sesuai kebutuhan:
+- Account date
+- Transaction date
+
+![parameter](../parameter_jurnal_daily.png "Parameter Journal Harian") {#Figure183}
+
+3. Klik start
+
+![jurnal](../jurnal_daily.png "Report Jurnal Harian) {#Figure184}
+
+Report yang dihasilkan dari export journal harian ini dalam bentuk excel yang terdiri dari beberapa kolom yaitu:
+- Company — Tenant.
+- Document Number — Nomor dokumen.
+- **Date Acct** — Tanggal transaksi.
+- **Acc Value** — Kode akun.
+- **Acc Name** — Nama akun.
+- DValue — Nilai debit.
+- CValue — Nilai kredit.
+- PcsPrice
+- Qty
+- Balance
+- **Artikel** — Kode produk.
+- **Nama Barang** — Nama produk.
+- **Cost Center** — Value cost center.
+- **Nama Cost Center** — Nama cost center.
+- **BPartner** — Value Business Partner.
+- **Nama BPartner** — Nama Business Partner.
+
+Setiap transaksi akan ditampilkan sesuai urutan tanggal posting sehingga memudahkan proses penelusuran jurnal.

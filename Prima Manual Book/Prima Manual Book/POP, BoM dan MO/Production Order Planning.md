@@ -225,3 +225,28 @@ Contoh:
 |Estimated Date|Lead Time|Document Date|
 |---|---|---|
 |21 Juli 2026|1 Hari|20 Juli 2026
+
+## Production Time
+
+Saat membuat Production Order Planning, user harus menentukan tiga informasi waktu berikut:
+
+- **Estimated Date** — Tanggal estimasi produk selesai diproduksi.
+- **Lead Time** — Waktu yang diperlukan (dalam hari) untuk memproduksi suatu artikel.
+- **Finished Time** — Tanggal aktual perusahaan menyelesaikan produksi.
+
+Konfigurasi Finished Time diperlukan karena produksi artikel dalam jumlah besar dapat membutuhkan waktu lebih dari satu bulan, sehingga perlu dicatat secara terpisah dari estimasi.
+
+### Mekanisme Finished Time
+
+Finished Time bersifat **read-only** — user tidak dapat menginput atau mengedit nilai ini secara manual. Sistem mengisi Finished Time secara otomatis berdasarkan ketentuan berikut:
+
+- Saat POP dibuat dan MO (_Manufacturing Order_) ter-generate, sistem membuat field Finished Time di menu **Manufacturing Order** dalam kondisi kosong.
+- Saat dokumen MO di-complete — baik untuk _semi finished goods_ maupun _finished goods_ — sistem otomatis mengisi **Finished Time** sesuai tanggal dokumen MO di-complete.
+- Jika dokumen MO belum di-complete, field Finished Time tetap kosong.
+
+Berikut contoh implementasi Finished Time saat MO baru di-generate dan saat MO sudah di-complete:
+
+![before](../before_complete_mo.png "Generate MO") {#Figure181}
+
+
+![complete](../mo_complete.png "Complete MO") {#Figure183}
