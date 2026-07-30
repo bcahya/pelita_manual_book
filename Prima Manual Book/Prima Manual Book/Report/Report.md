@@ -450,16 +450,16 @@ Laporan Jurnal Harian digunakan untuk:
 ![jurnal](../jurnal_daily.png "Report Jurnal Harian) {#Figure184}
 
 Report yang dihasilkan dari export journal harian ini dalam bentuk excel yang terdiri dari beberapa kolom yaitu:
-- Company — Tenant.
-- Document Number — Nomor dokumen.
+- **Company** — Tenant.
+- **Document Number** — Nomor dokumen.
 - **Date Acct** — Tanggal transaksi.
 - **Acc Value** — Kode akun.
 - **Acc Name** — Nama akun.
-- DValue — Nilai debit.
-- CValue — Nilai kredit.
-- PcsPrice
-- Qty
-- Balance
+- **DValue** — Nilai debit.
+- **CValue** — Nilai kredit.
+- **PcsPrice**
+- **Qty**
+- **Balance**
 - **Artikel** — Kode produk.
 - **Nama Barang** — Nama produk.
 - **Cost Center** — Value cost center.
