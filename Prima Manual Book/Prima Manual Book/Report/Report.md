@@ -425,21 +425,18 @@ Dengan mekanisme ini, perusahaan dapat menggunakan lebih dari satu format printo
 
 ## Report Journal Harian
 
-**Laporan Jurnal Harian** merupakan laporan yang menampilkan seluruh jurnal yang terbentuk pada periode tertentu berdasarkan tanggal akuntansi (**Accounting Date**). Laporan ini digunakan untuk melihat seluruh transaksi yang telah diposting ke General Ledger beserta akun debit dan kredit yang terpengaruh.
+Laporan Jurnal Harian menampilkan seluruh jurnal yang terbentuk pada periode tertentu berdasarkan **Accounting Date**. Gunakan laporan ini untuk melihat seluruh transaksi yang telah diposting ke General Ledger beserta akun debit dan kredit yang terpengaruh.
 
 ### Tujuan Report Journal Harian
-
-Laporan Jurnal Harian digunakan untuk:
 
 - Menampilkan seluruh jurnal yang telah diposting pada periode tertentu.
 - Memastikan setiap transaksi telah menghasilkan jurnal sesuai konfigurasi sistem.
 - Melakukan verifikasi keseimbangan nilai debit dan kredit.
-- Mendukung proses rekonsiliasi sebelum dilakukan closing periode.
-
+- Mendukung proses rekonsiliasi sebelum _closing_ periode.
 ### Langkah Proses Report Journal Harian
 
 1. Buka menu **SIS Export Journal Harian**.
-2. Input parameter berikut sesuai kebutuhan:
+2. Input parameter berikut:
 - Account date
 - Transaction date
 
@@ -449,7 +446,8 @@ Laporan Jurnal Harian digunakan untuk:
 
 ![jurnal](../jurnal_daily.png "Report Jurnal Harian) {#Figure184}
 
-Report yang dihasilkan dari export journal harian ini dalam bentuk excel yang terdiri dari beberapa kolom yaitu:
+Report yang dihasilkan dalam format **Excel** dengan kolom-kolom berikut:
+
 - **Company** — Tenant.
 - **Document Number** — Nomor dokumen.
 - **Date Acct** — Tanggal transaksi.
@@ -457,9 +455,9 @@ Report yang dihasilkan dari export journal harian ini dalam bentuk excel yang te
 - **Acc Name** — Nama akun.
 - **DValue** — Nilai debit.
 - **CValue** — Nilai kredit.
-- **PcsPrice**
-- **Qty**
-- **Balance**
+- **PcsPrice** — Harga per satuan.
+- **Qty** — Quantity.
+- **Balance** — Saldo.
 - **Artikel** — Kode produk.
 - **Nama Barang** — Nama produk.
 - **Cost Center** — Value cost center.
@@ -467,4 +465,44 @@ Report yang dihasilkan dari export journal harian ini dalam bentuk excel yang te
 - **BPartner** — Value Business Partner.
 - **Nama BPartner** — Nama Business Partner.
 
-Setiap transaksi akan ditampilkan sesuai urutan tanggal posting sehingga memudahkan proses penelusuran jurnal.
+Setiap transaksi ditampilkan sesuai urutan tanggal posting sehingga memudahkan proses penelusuran jurnal.
+## Laporan Kartu Hutang
+
+Laporan Kartu Hutang menyajikan rincian transaksi hutang kepada vendor (Business Partner) selama periode tertentu. Gunakan laporan ini untuk menampilkan setiap transaksi yang membentuk hutang beserta nilai tagihan, komponen pajak, dan nilai pembayaran terkait.
+### Tujuan
+
+- Menampilkan rincian transaksi hutang kepada setiap vendor.
+- Memverifikasi nilai tagihan sebelum dilakukan pembayaran.
+- Menampilkan komponen pajak dan biaya yang membentuk nilai hutang.
+- Mendukung proses rekonsiliasi transaksi hutang dengan dokumen sumber.
+- Menjadi dokumen pendukung dalam proses audit dan pemeriksaan transaksi.
+### Langkah Proses Laporan Kartu Hutang
+
+1. Buka menu **SIS Print Kartu Hutang**.
+2. Input parameter berikut:
+- Business Partner
+- Transaction date
+- Organization
+- Process Detail Report — Opsional, pilih _Print Kartu Hutang_.
+
+![parameter](../parameter_kartu_hutang.png "Parameter Laporan Kartu Hutang") {#Figure184}
+
+3. Klik start
+
+![report](../kartu_hutang.png "Laporan Kartu Hutang") {#Figure185}
+
+Laporan Kartu Hutang menampilkan informasi transaksi secara rinci, antara lain:
+
+- Nomor Dokumen
+- Tanggal Dokumen
+- Business Partner
+- Deskripsi Tagihan
+- DPP (Dasar Pengenaan Pajak)
+- PPN
+- PPh
+- Biaya Administrasi _(jika ada)_
+- Nilai Invoice
+- Nilai Pembayaran
+- Periode
+
+Jika transaksi memiliki komponen pajak atau biaya administrasi, seluruh nilai tersebut ditampilkan pada laporan sehingga user dapat mengetahui komposisi nilai hutang dari setiap transaksi. Seluruh data ditampilkan berdasarkan transaksi yang telah berstatus **Posted**.

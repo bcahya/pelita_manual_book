@@ -35,6 +35,30 @@ Di dalam warehouse terdapat line bernama Locator. Locator harus dibuat terlebih 
 5. Klik **Save**
 
 Jika satu produk diproduksi di lebih dari satu gudang, misalnya Jakarta dan Surabaya, buat konfigurasi BoM (Bill of Material) terpisah sesuai lokasi produksi masing-masing. Routing nantinya akan mengikuti konfigurasi BoM tersebut.
+
+### Production Warehouse
+
+Perusahaan memiliki banyak warehouse, namun tidak semua digunakan untuk proses produksi. Untuk mempermudah pemilihan warehouse saat produksi, lakukan konfigurasi **Production Warehouse** di menu Warehouse and Locator.
+
+Ikuti langkah berikut untuk mengkonfigurasi Production Warehouse:
+
+1. Buka menu **Warehouse and Locator**.
+2. Pada field **Production Warehouse**, lakukan konfigurasi:
+- **Y** — Warehouse tersebut merupakan Production Warehouse.
+- **N** — Warehouse tersebut bukan Production Warehouse.
+
+![wh](../wh_po.png "Konfigurasi di Warehouse") {#Figure186}
+
+3. Klik **Save**.
+
+Warehouse yang digunakan untuk produksi umumnya berkaitan dengan **Routing** yang digunakan untuk memproses Production Order Planning (POP). Selain itu, lakukan konfigurasi Production Warehouse untuk setiap artikel yang memiliki BoM dan akan diproses produksi.
+
+Agar tampilan lebih sederhana, warehouse dapat difilter berdasarkan flag **Production Warehouse** yang telah dikonfigurasi. Setelah dikonfigurasi, hanya warehouse dengan flag Production Warehouse yang akan muncul pada pilihan Production Warehouse di Bill of Material.
+
+Berikut contoh implementasi filter Production Warehouse di Bill of Material:
+
+![bom](../po_bom.png "Filter Production Warehouse di BoM") {#Figure187}
+
 ## Jenis Action Routing
  
 Routing memiliki beberapa jenis action yang digunakan untuk menentukan alur perpindahan barang.

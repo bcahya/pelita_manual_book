@@ -1,10 +1,27 @@
-# Movement Standard
+# Mekanisme Movement
+
+Inventory Move adalah proses perpindahan persediaan dari satu locator ke locator lainnya, baik dalam warehouse yang sama maupun antar warehouse. Inventory Move tidak mengubah nilai persediaan (inventory value), melainkan hanya mengubah lokasi penyimpanan barang.
+
+Terdapat 2 mekanisme perpindahan persediaan di sistem iDempiere:
+
+•Movement Langsung → perpindahan produk dari satu locator ke locator lain tanpa melibatkan locator in-transit.
+
+•Movement Standard (melibatkan In-Transit) → perpindahan produk dari warehouse asal ke warehouse tujuan dengan terlebih dahulu melewati locator in-transit sebelum diterima oleh warehouse tujuan.
 
 Movement Standard adalah mekanisme perpindahan barang antar warehouse yang membutuhkan proses **pengiriman (_delivery_)** dan **penerimaan (_receipt_)**. Mekanisme ini memastikan barang tidak langsung berpindah ke warehouse tujuan, melainkan berstatus _in transit_ terlebih dahulu sehingga stok dapat dipantau dengan lebih akurat.
 
 Proses pengiriman dan penerimaan saling terhubung, sehingga diperlukan konfigurasi dua document type: **Movement Standard Pengiriman** dan **Movement Standard Penerimaan**.
 ## Konfigurasi Document Type
 
+### Document Type Movement Langsung
+
+1. Buka menu **Document Type**.
+2. Klik **New**.
+3. Isi **Name** sesuai kebutuhan operasional.
+4. Pada field **Document Base Type**, pilih **Material Movement**.
+5. Pada field **Internal Use Doc Type**, tentukan dokumen Internal Use yang digunakan.
+6. Centang field **Auto Create Back Order**.
+7. Klik **Save**.
 ### Document Type Movement Penerimaan (Receipt)
 
 1. Buka menu **Document Type**.

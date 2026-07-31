@@ -67,3 +67,13 @@ Setelah produksi Semi Finished Goods selesai dan stok tersedia di warehouse, pro
 12. Setelah quantity ditentukan, lakukan **Complete Document MO**. Sistem akan menjalankan proses production secara otomatis dan mengkonsumsi:
   - Raw Material
   - Semi Finished Goods
+
+## Inventory Move Subcon
+
+Pada **Production Order Planning (POP) Subcon** — di mana proses produksi melibatkan pihak luar — saat Purchase Order (PO) untuk Subcon di-complete, sistem otomatis membuat dokumen **Inventory Move** untuk artikel tersebut.
+
+Untuk membedakan movement artikel Subcon dari artikel yang diproduksi secara internal, sistem menyalin informasi **Business Partner** dari PO Subcon ke dokumen Inventory Move terkait secara otomatis. Artikel yang diproduksi oleh perusahaan sendiri tidak memiliki informasi Business Partner pada dokumen Inventory Move.
+
+Berikut contoh implementasi penyalinan Business Partner di Inventory Move artikel Subcon:
+
+![bp](../bp_movement.png "Informasi Business Partner di Inventory Move") {#Figure185}

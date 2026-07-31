@@ -82,4 +82,4 @@
 .include {AP dan AR Manual/AP dan AR Manual.md}
 .include {Mekanisme Pembayaran/Mekanisme Pembayaran.md}
 .include {GL Journal Generator/GL Journal Generator.md}
-.include {Movement Standar/Movement Standar.md}
+.include {Mekanisme Movement/Mekanisme Movement.md}

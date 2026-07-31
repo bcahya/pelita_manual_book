@@ -41,6 +41,38 @@ Setelah pembayaran diselesaikan, sistem membentuk **satu jurnal AP Payment** men
 Selanjutnya, pada proses **Payment Allocation**, sistem secara otomatis mengalokasikan pembayaran ke masing-masing invoice dan membentuk jurnal hutang usaha sesuai **vendor pada setiap invoice**. Dengan mekanisme ini, seluruh invoice tetap terlunasi berdasarkan vendor masing-masing meskipun pembayaran dilakukan melalui satu Business Partner.
 
 ![allocation](../allocat_multi_bp.png "Payment Allocation") {#Figure169}
+
+Untuk pembayaran atas beberapa invoice, sistem mengkalkulasi total amount seluruh invoice yang ada di payment tersebut. Ketentuan yang sama berlaku untuk **AR Receipt** — total payment akan dikalkulasi secara otomatis.
+
+![calculate](../calculate_inv.png "Kalkulasi Payment atas Beberapa Invoice") {#Figure187}
+
+## Pembayaran DP (Down Payment)
+
+**Down Payment (DP)** atau **Pre Payment** adalah pembayaran yang dilakukan kepada vendor sebelum barang atau jasa diterima maupun sebelum invoice vendor diterbitkan.
+
+Di iDempiere, transaksi DP atau Pre Payment diproses melalui menu **Payment and Receipt** dengan mengacu pada **Purchase Order (PO)**. Nomor PO digunakan sebagai referensi untuk menjaga keterkaitan antara proses pembelian dan pembayaran sehingga seluruh transaksi dapat ditelusuri hingga proses penyelesaian invoice.
+
+Jika perusahaan melakukan pembayaran DP tanpa melalui proses pembelian yang memerlukan Purchase Order, buat **PO Dummy** khusus sebagai dokumen referensi pembayaran. PO Dummy hanya berfungsi sebagai acuan administrasi agar transaksi Payment tetap mengikuti mekanisme standar iDempiere dan keterkaitan antar dokumen tetap terjaga.
+
+Penggunaan PO Dummy sebaiknya diatur melalui kebijakan internal perusahaan — misalnya dengan membuat tipe dokumen atau penomoran khusus — agar mudah dibedakan dari Purchase Order untuk proses pembelian normal.
+
+### Langkah Pembayaran dengan DP
+
+1. Buka menu **Payment and Receipt**.
+2. Tentukan **Bank Account** yang akan digunakan.
+3. Tentukan **Document Type** yang akan digunakan.
+4. Pilih **Business Partner** yang akan diproses.
+5. Pada field **Order**, input nomor PO yang akan diproses.
+6. Input payment amount
+7. Klik **Complete** pada dokumen Payment and Receipt.
+
+![dp](../pre_payment.png "Pre Payment") {#Figure188}
+
+Saat nomor PO diinput, field **Prepayment** terisi otomatis. Berikut contoh jurnal transaksi pembayaran DP (_Pre Payment_):
+
+![jurnal](../jurnal_dp.png "Jurnal Pre Payment") {#Figure189}
+
+Konfigurasi akun yang digunakan dalam transaksi dapat disesuaikan dengan kebijakan tim Finance.
 ## Pembayaran Valuta Asing (Valas)
 
 Sebelum melakukan pembayaran menggunakan mata uang asing, perusahaan harus mengonfigurasi **Currency Rate** sebagai dasar konversi nilai transaksi ke mata uang dasar perusahaan. Sistem akan menggunakan konfigurasi tersebut untuk menentukan kurs yang berlaku pada saat pembayaran.
@@ -84,7 +116,6 @@ Apabila terjadi selisih kurs antara saat pencatatan invoice dan saat pembayaran,
 ![allocat](../allocat_valas.png "Payment Allocation Valas") {#Figure173}
 
 Konfigurasi akun untuk **Realized Gain/Loss** maupun **Unrealized Gain/Loss** dilakukan pada **Accounting Schema**. Seluruh akun yang digunakan dalam proses pembayaran dapat disesuaikan dengan kebijakan akuntansi masing-masing perusahaan.
-
 ## Bank/Cash Statement
 
 Bank/Cash Statement adalah fitur yang digunakan untuk mencatat mutasi rekening bank atau kas berdasarkan rekening koran (_bank statement_) maupun laporan transaksi kas. Fitur ini berfungsi sebagai media rekonsiliasi antara transaksi yang terjadi di bank dengan transaksi yang telah dicatat di sistem, seperti Payment, Receipt, maupun transaksi lainnya.
@@ -146,16 +177,23 @@ Fitur Bank/Cash Transfer digunakan untuk memindahkan dana antar rekening bank ma
 
 Setiap transaksi Bank/Cash Transfer memperbarui saldo pada rekening asal dan rekening tujuan, serta menghasilkan jurnal akuntansi sesuai konfigurasi akun pada masing-masing Bank/Cash.
 
+### Konfigurasi Bank/Cash Transfer
+
+Sebelum melakukan bank/cash transfer, perlu dilakukan konfigurasi untuk **Business Partner** dan **Charge** yang dikenakan saat proses bank/cash transfer:
+
+| Parameter                  | Configured Value                                                     |
+| -------------------------- | -------------------------------------------------------------------- |
+| SIS_BANKTRANSFER_BP_ID     | Business Partner ID yang akan digunakan sesuai kebijakan perusahaan. |
+| SIS_BANKTRANSFER_CHARGE_ID | **Charge ID** yang akan digunakan sesuai kebijakan perusahaan.       |
+
 ### Langkah Proses Bank/Cash Transfer
 
 1. Buka menu **Bank/Cash Transfer**.
 2. Input field pada header:
 - **From Bank Account** — Bank sumber dana.
 - **From Bank Currency** — Terisi otomatis mengikuti currency pada master Bank Account.
-- **From Charge** - Set default untuk biaya transfer yang dibebankan kepada **rekening sumber (Bank/Cash From)**.
 - **Amount** — Nominal yang akan dipindahkan berdasarkan currency.
 - **To Bank Account** — Bank tujuan transfer.
-- **To Charge** - Set default untuk biaya transfer yang dibebankan kepada **rekening tujuan (Bank/Cash To)**.
 - **To Bank Currency** — Terisi otomatis mengikuti currency pada master Bank Account.
 - **Currency Type** — Rate currency yang digunakan _(field muncul jika transfer lintas currency)_.
 - **Override Currency Conversion Rate** — Menentukan kurs secara manual _(field muncul jika transfer lintas currency)_.
