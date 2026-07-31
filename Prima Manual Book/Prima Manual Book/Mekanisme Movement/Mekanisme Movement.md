@@ -1,16 +1,15 @@
 # Mekanisme Movement
 
-Inventory Move adalah proses perpindahan persediaan dari satu locator ke locator lainnya, baik dalam warehouse yang sama maupun antar warehouse. Inventory Move tidak mengubah nilai persediaan (inventory value), melainkan hanya mengubah lokasi penyimpanan barang.
+**Inventory Move** digunakan untuk memindahkan persediaan dari satu locator ke locator lain, baik dalam warehouse yang sama maupun antar warehouse. Proses ini hanya mengubah lokasi penyimpanan barang dan **tidak mengubah nilai persediaan (inventory value).**
 
-Terdapat 2 mekanisme perpindahan persediaan di sistem iDempiere:
+Sistem iDempiere menyediakan dua mekanisme perpindahan persediaan:
 
-•Movement Langsung → perpindahan produk dari satu locator ke locator lain tanpa melibatkan locator in-transit.
+- **Movement Langsung** – Memindahkan produk langsung dari locator asal ke locator tujuan tanpa melalui locator **In-Transit**.
+- **Movement Standard** – Memindahkan produk antar warehouse melalui warehouse dan locator **In-Transit** sebelum diterima di warehouse tujuan.
 
-•Movement Standard (melibatkan In-Transit) → perpindahan produk dari warehouse asal ke warehouse tujuan dengan terlebih dahulu melewati locator in-transit sebelum diterima oleh warehouse tujuan.
+Pada **Movement Standard**, perpindahan barang terdiri dari dua tahap, yaitu **Delivery** (pengiriman) dan **Receipt** (penerimaan). Barang tidak langsung masuk ke warehouse tujuan, tetapi terlebih dahulu berada pada status **In-Transit**, sehingga proses perpindahan dapat dipantau dengan lebih akurat.
 
-Movement Standard adalah mekanisme perpindahan barang antar warehouse yang membutuhkan proses **pengiriman (_delivery_)** dan **penerimaan (_receipt_)**. Mekanisme ini memastikan barang tidak langsung berpindah ke warehouse tujuan, melainkan berstatus _in transit_ terlebih dahulu sehingga stok dapat dipantau dengan lebih akurat.
-
-Proses pengiriman dan penerimaan saling terhubung, sehingga diperlukan konfigurasi dua document type: **Movement Standard Pengiriman** dan **Movement Standard Penerimaan**.
+Karena proses Delivery dan Receipt saling terhubung, lakukan konfigurasi dua **Document Type**, yaitu **Movement Standard Delivery** dan **Movement Standard Receipt**.
 ## Konfigurasi Document Type
 
 ### Document Type Movement Langsung
@@ -72,3 +71,75 @@ Setelah produk berpindah ke warehouse intransit, proses Movement Receipt untuk m
 6. Klik **Complete** pada dokumen Movement.
 
 Jika quantity yang diterima hanya sebagian (_parsial_), sistem otomatis membuat **back order** atas kekurangan quantity tersebut yang dapat ditelusuri melalui **Movement Source/Target**.
+
+## Return to Vendor
+
+**Return to Vendor** digunakan untuk mengembalikan barang kepada vendor atas barang yang sebelumnya diterima melalui proses pembelian. Saat proses ini dijalankan, sistem akan mengurangi stok, mencatat transaksi pengembalian, dan menjaga konsistensi data inventory serta transaksi pembelian.
+### Konfigurasi RMA Type
+
+Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebagai kategori atau alasan pengembalian barang.
+
+Langkah konfigurasi:
+
+1. Buka menu **RMA Type**.
+2. Isi **Name** sesuai kebutuhan operasional.
+3. Klik **Save**.
+### Konfigurasi Vendor RMA
+
+**Vendor RMA** berfungsi sebagai dokumen otorisasi pengembalian barang kepada vendor. Dokumen ini menghubungkan proses Return to Vendor dengan **Material Receipt** yang menjadi referensi.
+
+Langkah konfigurasi:
+
+1. Buka menu **Vendor RMA**.
+2. Pilih **Document Type**.
+3. Tentukan **RMA Type**.
+4. Pada field **Receipt**, pilih dokumen **Material Receipt** yang akan direferensikan.
+5. Buka tab **RMA Line**.
+6. Pilih **Receipt Line** yang akan dikembalikan.
+7. Klik **Save**.
+8. Klik **Complete**.
+### Langkah Proses Return to Vendor
+
+1. Buka menu **Return to Vendor**.
+2. Pilih **Document Type**.
+3. Tentukan **Movement Date**.
+4. Pilih **Business Partner**.
+5. Tentukan **Warehouse** tempat penyimpanan barang.
+6. Klik **Create Lines From**.
+7. Pilih dokumen **Vendor RMA** yang telah dibuat.
+8. Klik **Complete**.
+
+Setelah dokumen **Return to Vendor** di-_complete_, sistem akan:
+
+- Mengurangi stok sesuai quantity yang dikembalikan.
+- Mencatat perpindahan barang keluar dari warehouse.
+- Membentuk jurnal Return to Vendor.
+
+![jurnal](../return_vendor.png "Jurnal Return to Vendor") {#Figure190}
+
+- Menyimpan riwayat pengembalian pada menu **Product**, tab **Transactions** dan **Located At**.
+
+### Pembuatan AP Credit Memo
+
+Setelah proses **Return to Vendor** selesai, buat **AP Credit Memo** sebagai dokumen koreksi atas transaksi pembelian.
+
+Langkah-langkahnya sebagai berikut:
+
+1. Buka dokumen **Return to Vendor**.
+2. Klik tombol **Settings**.
+3. Pilih **Generate Invoice From Receipt**.
+4. Klik **OK**.
+
+Sistem akan secara otomatis:
+
+- Membuat dokumen **AP Credit Memo**.
+- Menyalin seluruh informasi dari dokumen **Return to Vendor** ke **Invoice Line**.
+- Menyelesaikan dokumen dengan status **Complete**.
+
+Selanjutnya sistem membentuk jurnal **AP Credit Memo** sesuai transaksi yang dihasilkan.
+
+![credit](../credit_return.png "Jurnal AP Credit Memo") {#Figure191}
+
+Selain itu, sistem juga menjalankan proses **Matching** antara transaksi **Return to Vendor** dan **AP Credit Memo** sehingga tidak terdapat saldo maupun akun yang masih menggantung pada proses pembelian.
+
+![match](../match_return.png "Jurnal Match Receipt") {#Figure192}
