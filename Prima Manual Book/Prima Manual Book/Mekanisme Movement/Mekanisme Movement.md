@@ -76,9 +76,7 @@ Jika quantity yang diterima hanya sebagian (_parsial_), sistem otomatis membuat 
 **Return to Vendor** digunakan untuk mengembalikan barang kepada vendor atas barang yang sebelumnya diterima melalui proses pembelian. Saat proses ini dijalankan, sistem akan mengurangi stok, mencatat transaksi pengembalian, dan menjaga konsistensi data inventory serta transaksi pembelian.
 ### Konfigurasi RMA Type
 
-Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebagai kategori atau alasan pengembalian barang.
-
-Langkah konfigurasi:
+Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebagai kategori atau alasan pengembalian barang. Langkah konfigurasi:
 
 1. Buka menu **RMA Type**.
 2. Isi **Name** sesuai kebutuhan operasional.
@@ -88,9 +86,7 @@ Langkah konfigurasi:
 3. Klik **Save**.
 ### Konfigurasi Vendor RMA
 
-**Vendor RMA** berfungsi sebagai dokumen otorisasi pengembalian barang kepada vendor. Dokumen ini menghubungkan proses Return to Vendor dengan **Material Receipt** yang menjadi referensi.
-
-Langkah konfigurasi:
+**Vendor RMA** berfungsi sebagai dokumen otorisasi pengembalian barang kepada vendor. Dokumen ini menghubungkan proses Return to Vendor dengan **Material Receipt** yang menjadi referensi. Langkah konfigurasi:
 
 1. Buka menu **Vendor RMA**.
 2. Pilih **Document Type**.
