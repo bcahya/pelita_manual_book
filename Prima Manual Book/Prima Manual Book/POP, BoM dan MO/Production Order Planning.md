@@ -212,6 +212,7 @@ Contoh konfigurasi:
 | Produk            | Lead Time (Days) |
 | ----------------- | ---------------- |
 | Frozen Dough Buns | 1 Hari           |
+"Contoh Konfigurasi Lead Time"{#Tabel10}
 
 ![product](../lead_product.png "Konfigurasi di Product") {#Figure156}
 ### Implementasi Lead Time
@@ -225,7 +226,7 @@ Contoh:
 |Estimated Date|Lead Time|Document Date|
 |---|---|---|
 |21 Juli 2026|1 Hari|20 Juli 2026
-
+"Contoh Implementasi Lead Time"{#Tabel11}
 ## Production Time
 
 Saat membuat Production Order Planning, user harus menentukan tiga informasi waktu berikut:

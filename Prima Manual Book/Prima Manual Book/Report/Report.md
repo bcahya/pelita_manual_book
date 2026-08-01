@@ -125,12 +125,12 @@ Report BG digunakan untuk mencetak dokumen uang muka (_Down Payment_/DP) yang di
 
 Digunakan untuk mencetak dokumen DP kepada satu vendor (Business Partner) dalam satu dokumen transaksi.
 
-![satu vendor](../dp_bg.png "DP Vendor BG") {#Figure153}
+![satu vendor](../print_dp_bg.png "DP Vendor BG") {#Figure153}
 ### DP Vendor BG Multi BP
 
 Digunakan untuk mencetak dokumen DP yang mencakup lebih dari satu vendor dalam satu dokumen transaksi, misalnya pada pembayaran DP gabungan.
 
-![multi](../dp_multi_bg.png "DP Vendor BG Multi BP") {#Figure154}
+![multi](../print_multi_bp.png "DP Vendor BG Multi BP") {#Figure154}
 
 ## Report Print Journal Status
 
@@ -189,11 +189,11 @@ Laporan Crosscheck Ayat Silang digunakan untuk memverifikasi keseimbangan jurnal
 - **Account** — Akun yang akan dicek.
 - **Transaction Date** — Tanggal transaksi.
 
-![parameter](../parameter_ayat_silang.png "Parameter Laporan Cross Check Ayat Silang") {#Figure166}
+![parameter](../par_ayat_silang.png "Parameter Laporan Cross Check Ayat Silang") {#Figure166}
 
 3. Klik **start**.
 
-![report](../report_ayat_silang.png "Laporan Ayat Silang") {#Figure167}
+![report](../ayat_sil.png "Laporan Ayat Silang") {#Figure167}
 
 Sistem menampilkan informasi berikut pada laporan:
 
@@ -254,6 +254,7 @@ Ikuti langkah berikut untuk mengaksesnya:
 3. Klik **SIS Printout Invoice Buyer Lain-Lain**.
 4. Klik **OK**.
 
+![buyer lain-lain](../print_invoice_buy_lain.png "Invoice Buyer Lain-Lain") {#Figure198}
 ### Invoice Buyer Credit Note
 
 Report ini menampilkan transaksi Credit Note yang diterbitkan kepada buyer — dokumen yang digunakan untuk mengurangi nilai piutang kepada buyer akibat adanya koreksi transaksi.
@@ -264,6 +265,8 @@ Ikuti langkah berikut untuk mencetak Invoice Buyer Credit Note:
 2. Klik tombol **Setting (⚙)**.
 3. Klik **SIS Printout Invoice Credit Note Buyer Lain-Lain**.
 4. Klik **OK**.
+
+![credit memo](../invoice_buyer_cn.png "Invoice Buyer Credit Note"){#Figure199}
 
 ## Export GL Distribution Data
 

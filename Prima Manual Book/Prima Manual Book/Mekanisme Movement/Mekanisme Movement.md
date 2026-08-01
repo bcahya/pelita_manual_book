@@ -109,7 +109,7 @@ Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebaga
 6. Klik **Create Lines From**.
 7. Pilih dokumen **Vendor RMA** yang telah dibuat.
 
-![return](../return_vendor_2.png "Return to Vendor)  {#Figure199}
+![return](../menu_return_vendor.png "Return to Vendor)  {#Figure199}
 
 8. Klik **Complete**.
 

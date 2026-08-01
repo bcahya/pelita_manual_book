@@ -17,7 +17,7 @@ Sebelum membuat laporan keuangan, lakukan konfigurasi pada parameter berikut:
 |**Report Column Set**|Menentukan informasi dan periode yang ditampilkan pada setiap kolom laporan.|
 |**Exclude Adjustment Period**|Centang jika transaksi pada periode penyesuaian tidak ingin disertakan dalam laporan.|
 |**List Sources**|Centang untuk menampilkan rincian akun (Chart of Accounts) yang menjadi sumber setiap baris laporan.|
-
+"Konfigurasi Header Financial Report"{#Tabel12}
 ## Konfigurasi Report Line Set
 
 **Report Line Set** digunakan untuk menyusun struktur laporan dan menentukan sumber data pada setiap baris.
@@ -29,7 +29,7 @@ Pilih jenis baris sesuai kebutuhan:
 |---|---|
 |**Segment Value**|Mengambil nilai langsung dari akun pada Chart of Accounts.|
 |**Calculation**|Menghasilkan nilai berdasarkan perhitungan dari baris lain dalam laporan.|
-
+"Line Type"{#Tabel13}
 ### Calculation Type
 
 Jika menggunakan **Calculation**, pilih metode perhitungan berikut:
@@ -40,15 +40,15 @@ Jika menggunakan **Calculation**, pilih metode perhitungan berikut:
 |**Add Range**|Menjumlahkan nilai dalam rentang baris tertentu.|
 |**Subtract**|Mengurangi nilai antarbaris.|
 |**Percentage**|Menghitung persentase berdasarkan operand yang ditentukan.|
-
+"Calculation Type"{#Tabel14}
 ### Parameter Lain
 
-|Parameter|Keterangan|
-|---|---|
-|**Posting Type**|Pilih **Actual** untuk mengambil transaksi yang telah diposting.|
-|**Amount Type**|Pilih **Balance (Expected Sign)** agar saldo ditampilkan sesuai karakteristik akun (debit atau kredit).|
-|**Report Source**|Tentukan akun yang digunakan sebagai sumber data. Jika baris hanya berfungsi sebagai judul atau heading, parameter ini dapat dikosongkan.|
-
+| Parameter         | Keterangan                                                                                                                                |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Posting Type**  | Pilih **Actual** untuk mengambil transaksi yang telah diposting.                                                                          |
+| **Amount Type**   | Pilih **Balance (Expected Sign)** agar saldo ditampilkan sesuai karakteristik akun (debit atau kredit).                                   |
+| **Report Source** | Tentukan akun yang digunakan sebagai sumber data. Jika baris hanya berfungsi sebagai judul atau heading, parameter ini dapat dikosongkan. |
+"Konfigurasi Parameter Lain"{#Tabel15}
 ## Konfigurasi Report Column Set
 
 **Report Column Set** digunakan untuk menentukan informasi dan periode yang ditampilkan pada kolom laporan.
@@ -67,7 +67,7 @@ Pilih jenis periode sesuai kebutuhan pelaporan.
 |**Period**|Menampilkan data hanya pada periode yang dipilih.|
 |**Total**|Menampilkan akumulasi seluruh data hingga periode laporan.|
 |**Year**|Menampilkan data dalam satu tahun fiskal.|
-
+"Period Type"{#Tabel16}
 ## Laporan Gabungan Outlet
 
 Financial Report dapat menampilkan data gabungan dari beberapa outlet menggunakan struktur organisasi (**Tree**).
