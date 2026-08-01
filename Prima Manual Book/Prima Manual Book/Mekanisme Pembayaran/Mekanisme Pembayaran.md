@@ -141,9 +141,19 @@ Berikut contoh Payment dengan currency USD menggunakan overwrite rate, beserta B
 
 ![bank statement](../jurnal_bs.png "Jurnal Bank/Cash Statement") {#Figure172}
 
-### Revaluasi Bank/Cash Statement
+### Revaluasi Bank/Cash Statement Valas
 
-Pada transaksi Bank/Cash Statement yang menggunakan mata uang asing, nilai transaksi dalam mata uang dasar (misalnya IDR) dapat berubah akibat perbedaan kurs antara tanggal transaksi pembayaran dan tanggal penutupan periode. Oleh karena itu, diperlukan proses **Revaluasi** di akhir periode akuntansi untuk menyesuaikan nilai saldo rekening bank sesuai kurs penutupan. Revaluasi ini hanya memengaruhi nilai dalam mata uang dasar — nilai dalam mata uang asal (misalnya USD) tetap tidak berubah.
+Pada transaksi Bank/Cash Statement yang menggunakan mata uang asing, nilai transaksi dalam mata uang dasar (misalnya IDR) dapat berubah akibat perbedaan kurs antara tanggal transaksi pembayaran dan tanggal penutupan periode. Oleh karena itu, lakukan proses **Revaluasi** di akhir periode akuntansi untuk menyesuaikan nilai saldo rekening bank sesuai kurs penutupan. Revaluasi ini hanya memengaruhi nilai dalam mata uang dasar — nilai dalam mata uang asal (misalnya USD) tetap tidak berubah.
+#### Konfigurasi Revaluasi Bank/Cash Statement Valas
+
+Sebelum melakukan revaluasi, lakukan konfigurasi akun atas bank valas yang digunakan pada Bank/Cash Statement. Berikut ketentuan konfigurasi yang perlu diperhatikan:
+
+- Pada akun bank valas, pastikan field **Bank Account** sudah **dicentang**. Jika field ini tidak dicentang, proses revaluasi Bank/Cash Valas tidak dapat dijalankan.
+- Penamaan akun disesuaikan dengan kebijakan perusahaan.
+
+Berikut contoh konfigurasi akun bank valas:
+
+![akun](../akun_bank_valas.png "Konfigurasi Akun Bank Valas") {#Figure197}
 #### Mekanisme Revaluasi
 
 Contoh: perusahaan melakukan Payment sebesar **USD 5** dengan kurs transaksi **Rp10.000/USD**, sehingga nilai yang tercatat adalah **Rp50.000**. Pada akhir bulan, kurs penutupan berubah menjadi **Rp10.100/USD**. Sistem menjalankan **Currency Revaluation** sehingga nilai saldo bank disesuaikan menjadi **Rp50.500**. Selisih sebesar **Rp500** diakui sebagai keuntungan atau kerugian selisih kurs sesuai konfigurasi akun akuntansi.
@@ -181,10 +191,10 @@ Setiap transaksi Bank/Cash Transfer memperbarui saldo pada rekening asal dan rek
 
 Sebelum melakukan bank/cash transfer, perlu dilakukan konfigurasi untuk **Business Partner** dan **Charge** yang dikenakan saat proses bank/cash transfer:
 
-| Parameter                  | Configured Value                                                     |
-| -------------------------- | -------------------------------------------------------------------- |
-| SIS_BANKTRANSFER_BP_ID     | Business Partner ID yang akan digunakan sesuai kebijakan perusahaan. |
-| SIS_BANKTRANSFER_CHARGE_ID | **Charge ID** yang akan digunakan sesuai kebijakan perusahaan.       |
+| Parameter                  | Configured Value                                                   |
+| -------------------------- | ------------------------------------------------------------------ |
+| SIS_BANKTRANSFER_BP_ID     | **C_BPartner_ID** yang akan digunakan sesuai kebijakan perusahaan. |
+| SIS_BANKTRANSFER_CHARGE_ID | **C_Charge_ID** yang akan digunakan sesuai kebijakan perusahaan.   |
 
 ### Langkah Proses Bank/Cash Transfer
 

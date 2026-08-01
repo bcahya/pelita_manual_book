@@ -4,7 +4,7 @@
 
 Sistem iDempiere menyediakan dua mekanisme perpindahan persediaan:
 
-- **Movement Langsung** – Memindahkan produk langsung dari locator asal ke locator tujuan tanpa melalui locator **In-Transit**.
+- **Movement Langsung** – Memindahkan produk langsung dari locator asal ke locator tujuan tanpa melalui locator In-Transit.
 - **Movement Standard** – Memindahkan produk antar warehouse melalui warehouse dan locator **In-Transit** sebelum diterima di warehouse tujuan.
 
 Pada **Movement Standard**, perpindahan barang terdiri dari dua tahap, yaitu **Delivery** (pengiriman) dan **Receipt** (penerimaan). Barang tidak langsung masuk ke warehouse tujuan, tetapi terlebih dahulu berada pada status **In-Transit**, sehingga proses perpindahan dapat dipantau dengan lebih akurat.
@@ -71,7 +71,6 @@ Setelah produk berpindah ke warehouse intransit, proses Movement Receipt untuk m
 6. Klik **Complete** pada dokumen Movement.
 
 Jika quantity yang diterima hanya sebagian (_parsial_), sistem otomatis membuat **back order** atas kekurangan quantity tersebut yang dapat ditelusuri melalui **Movement Source/Target**.
-
 ## Return to Vendor
 
 **Return to Vendor** digunakan untuk mengembalikan barang kepada vendor atas barang yang sebelumnya diterima melalui proses pembelian. Saat proses ini dijalankan, sistem akan mengurangi stok, mencatat transaksi pengembalian, dan menjaga konsistensi data inventory serta transaksi pembelian.
@@ -83,6 +82,9 @@ Langkah konfigurasi:
 
 1. Buka menu **RMA Type**.
 2. Isi **Name** sesuai kebutuhan operasional.
+
+![rma](../rma_type.png "RMA Type") {#Figure197}
+
 3. Klik **Save**.
 ### Konfigurasi Vendor RMA
 
@@ -94,6 +96,9 @@ Langkah konfigurasi:
 2. Pilih **Document Type**.
 3. Tentukan **RMA Type**.
 4. Pada field **Receipt**, pilih dokumen **Material Receipt** yang akan direferensikan.
+
+![vendor rma](../vendor_rma.png "Header Vendor RMA") {#Figure198}
+
 5. Buka tab **RMA Line**.
 6. Pilih **Receipt Line** yang akan dikembalikan.
 7. Klik **Save**.
@@ -107,6 +112,9 @@ Langkah konfigurasi:
 5. Tentukan **Warehouse** tempat penyimpanan barang.
 6. Klik **Create Lines From**.
 7. Pilih dokumen **Vendor RMA** yang telah dibuat.
+
+![return](../return_vendor(2).png "Return to Vendor)  {#Figure199}
+
 8. Klik **Complete**.
 
 Setelah dokumen **Return to Vendor** di-_complete_, sistem akan:
@@ -118,7 +126,6 @@ Setelah dokumen **Return to Vendor** di-_complete_, sistem akan:
 ![jurnal](../return_vendor.png "Jurnal Return to Vendor") {#Figure190}
 
 - Menyimpan riwayat pengembalian pada menu **Product**, tab **Transactions** dan **Located At**.
-
 ### Pembuatan AP Credit Memo
 
 Setelah proses **Return to Vendor** selesai, buat **AP Credit Memo** sebagai dokumen koreksi atas transaksi pembelian.

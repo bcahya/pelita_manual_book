@@ -83,3 +83,4 @@
 .include {Mekanisme Pembayaran/Mekanisme Pembayaran.md}
 .include {GL Journal Generator/GL Journal Generator.md}
 .include {Mekanisme Movement/Mekanisme Movement.md}
+.include {Estimated Landed Cost/Estimated Landed Cost.md}
