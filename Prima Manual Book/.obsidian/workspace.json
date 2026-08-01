@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Report/Report.md",
+                "file": "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Report"
+              "title": "Mekanisme Pembayaran"
             }
           }
         ]
@@ -196,6 +196,14 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/konfig_full@-121106600.png.checksum",
+    "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/konfig_full@-121106600.png",
+    "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/konfiq_partial@1619257846.png.checksum",
+    "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/konfiq_partial@1619257846.png",
+    "Prima Manual Book/konfig_full.png",
+    "Prima Manual Book/konfiq_partial.png",
+    "konfiq_partial.png",
+    "Prima Manual Book/Report/Report.md",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/ayat_sila@-696676763.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/ayat_sila@-696676763.png",
     "ayat_sila.png",
@@ -203,18 +211,12 @@
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/par_harian@1479953229.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/par_harian@1479953229.png",
     "par_harian.png",
-    "Prima Manual Book/par_harian.png",
     "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
     "Prima Manual Book/Financial Report/Financial Report.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Routing/Routing.md",
-    "Prima Manual Book/Report/Report.md",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/invoice_buyer_cn@882256315.png.checksum",
-    "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/invoice_buyer_cn@882256315.png",
-    "invoice_buyer_cn.png",
-    "Prima Manual Book/invoice_buyer_cn.png",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/print_invoice_buy_lain@-67230359.png.checksum",
-    "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/print_invoice_buy_lain@-67230359.png",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/par_ayat_silang@-217483298.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/ayat_sil@-300117262.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/print_multi_bp@-171017258.png.checksum",
@@ -224,9 +226,7 @@
     "Prima Manual Book/Estimated Landed Cost/Estimated Landed Cost.md",
     "Prima Manual Book/Estimated Landed Cost.md",
     "Tanpa judul",
-    "Prima Manual Book/Mekanisme Pembayaran/Tanpa judul",
     "Prima Manual Book/Tanpa judul.md",
-    "Prima Manual Book/Tanpa judul 1",
     "Prima Manual Book/Purchase Price Contract/Purchase Price Contract.md",
     "Prima Manual Book/Posting Matched Invoice/Posting Matched Invoice.md",
     "Prima Manual Book/Asset Management/Asset Management.md",

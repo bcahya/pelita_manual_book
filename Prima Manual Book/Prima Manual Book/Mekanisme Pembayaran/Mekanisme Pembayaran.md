@@ -228,3 +228,17 @@ Berikut jurnal yang terbentuk atas AP Payment dan AR Receipt untuk Bank/Cash Tra
 ![ap payment](../jurnal_ap_bank_tf.png "Jurnal AP Payment atas Bank/Cash Transfer") {#Figure181}
 
 ![ar|697](../jurnal_ar_bank_tf.png "Jurnal AR Receipt atas Bank/Cash Transfer") {#Figure182}
+
+## Konfigurasi Matching
+
+Proses matching di iDempiere dapat dilakukan secara **full** maupun **partial**. Untuk mengaktifkan fitur ini, lakukan konfigurasi berikut di sistem:
+
+1. **SIS_MATCHING_PARTIAL_SEQUENCE_ID**
+
+![konfig](../konfiq_partial.png "Konfigurasi Partial Matching") {#Figure200}
+
+2. **SIS_MATCHING_SEQUENCE_ID**
+
+![konfig](../konfig_full.png "Konfigurasi Matching") {#Figure201}
+
+Setelah konfigurasi selesai, rekonsiliasi dapat dilakukan secara parsial atau sebagian. Field ini berfungsi sebagai penanda (_sequence/group ID_) untuk mengelompokkan transaksi matching parsial yang berasal dari proses yang sama.
