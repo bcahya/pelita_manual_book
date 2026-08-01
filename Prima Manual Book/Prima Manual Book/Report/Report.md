@@ -193,7 +193,7 @@ Laporan Crosscheck Ayat Silang digunakan untuk memverifikasi keseimbangan jurnal
 
 3. Klik **start**.
 
-![report](../ayat_sil.png "Laporan Ayat Silang") {#Figure167}
+![report](../ayat_sila.png "Laporan Ayat Silang") {#Figure167}
 
 Sistem menampilkan informasi berikut pada laporan:
 
@@ -443,11 +443,11 @@ Laporan Jurnal Harian menampilkan seluruh jurnal yang terbentuk pada periode ter
 - Account date
 - Transaction date
 
-![parameter](../parameter_jurnal_daily.png "Parameter Journal Harian") {#Figure183}
+![parameter](../par_harian.png "Parameter Journal Harian") {#Figure183}
 
 3. Klik start
 
-![jurnal](../jurnal_daily.png "Report Jurnal Harian) {#Figure184}
+![jurnal](../ayat_sil.png "Report Jurnal Harian) {#Figure184}
 
 Report yang dihasilkan dalam format **Excel** dengan kolom-kolom berikut:
 

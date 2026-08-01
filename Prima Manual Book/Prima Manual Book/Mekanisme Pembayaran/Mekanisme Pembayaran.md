@@ -227,4 +227,4 @@ Berikut jurnal yang terbentuk atas AP Payment dan AR Receipt untuk Bank/Cash Tra
 
 ![ap payment](../jurnal_ap_bank_tf.png "Jurnal AP Payment atas Bank/Cash Transfer") {#Figure181}
 
-![ar](../jurnal_ar_bank_tf.png "Jurnal AR Receipt atas Bank/Cash Transfer") {#Figure182}
+![ar|697](../jurnal_ar_bank_tf.png "Jurnal AR Receipt atas Bank/Cash Transfer") {#Figure182}
