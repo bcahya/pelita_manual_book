@@ -195,7 +195,7 @@ Sebelum melakukan bank/cash transfer, perlu dilakukan konfigurasi untuk **Busine
 | -------------------------- | ------------------------------------------------------------------ |
 | SIS_BANKTRANSFER_BP_ID     | **C_BPartner_ID** yang akan digunakan sesuai kebijakan perusahaan. |
 | SIS_BANKTRANSFER_CHARGE_ID | **C_Charge_ID** yang akan digunakan sesuai kebijakan perusahaan.   |
-
+"System Configurator"{#Tabel16}
 ### Langkah Proses Bank/Cash Transfer
 
 1. Buka menu **Bank/Cash Transfer**.
