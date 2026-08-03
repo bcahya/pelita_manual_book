@@ -317,3 +317,22 @@ Setelah Manufacturing Order di-complete, sistem otomatis membuat dokumen **Produ
 Setelah Manufacturing Order di-complete, sistem otomatis membuat dokumen **Production** atas artikel tersebut dengan status _Complete_ dan _Posted_. Produksi dilakukan tanpa pengelompokan berdasarkan batch/lot.
 
 ![non asi](../prod_non_asi.png "Production Non Batch/Lot") {#Figure208}
+
+## Document Type Movement POP
+
+Saat Production Order Planning (POP) melibatkan banyak warehouse, tidak semua user memiliki hak akses ke seluruh warehouse. Umumnya, satu user hanya memiliki akses ke satu warehouse saat produk akan dipindahkan (_movement_). Untuk mengatasi hal ini, sistem menyediakan konfigurasi **Document Type Movement** per warehouse, sehingga setiap user tetap dapat mengakses dokumen movement sesuai aksesnya.
+
+Ikuti langkah berikut untuk mengkonfigurasi Document Type Movement di warehouse:
+
+1. Buka menu **Warehouse and Locator**.
+2. Tentukan **Search Key** dan **Name** warehouse tersebut.
+3. Pada field **Document Type Movement**, pilih document type sesuai konfigurasi.
+
+![wh](../movement_wh.png "Konfigurasi Document Type Movement di Warehouse") {#Figure207}
+
+4. Klik **Save**.
+
+Document Type yang dikonfigurasi di Document Type POP dapat menggunakan **Document Type Movement General** yang khusus diperuntukkan untuk POP. Jika konfigurasi Document Type Movement tidak dilakukan di warehouse, sistem otomatis menggunakan Document Type Movement yang dikonfigurasi di Document Type POP.
+
+Berikut contoh Document Type Movement di warehouse dan implementasinya di Production Order Planning (POP):
+
