@@ -1,4 +1,4 @@
-# Estimated Landed Cost
+# Purchase Order Estimated Landed Cost
 
 Estimated Landed Cost digunakan untuk memperkirakan biaya tambahan yang akan timbul selama proses pengadaan barang. Estimasi ini dimasukkan sejak pembuatan Purchase Order (PO) sehingga perusahaan dapat memperkirakan total biaya perolehan barang sebelum seluruh biaya aktual diterima.
 

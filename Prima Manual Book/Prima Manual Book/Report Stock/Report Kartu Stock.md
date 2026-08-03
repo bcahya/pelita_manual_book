@@ -1,15 +1,15 @@
-# Report Kartu Stock
+## Report Kartu Stock
 
 Laporan Kartu Stok berfungsi untuk menyajikan riwayat seluruh transaksi yang memengaruhi persediaan suatu produk pada periode tertentu. Setiap transaksi akan memperlihatkan jumlah stok sebelum transaksi, kuantitas yang masuk atau keluar, serta saldo stok setelah transaksi diproses.
 
-## Fungsi Laporan Kartu Stock
+### Fungsi Laporan Kartu Stock
 
 - Memantau pergerakan stok
 - Mengetahui saldo stok setiap transaksi
 - Melakukan penelusuran (traceability)
 - Membantu proses rekonsiliasi stok
 
-## Langkah Proses Laporan Kartu Stock
+### Langkah Proses Laporan Kartu Stock
 
 1. Buka menu **SIS Report Kartu Stock**
 2. Input parameter berikut:

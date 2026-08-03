@@ -1,4 +1,4 @@
-.docname {20260715 Pelita Prima Manual Book}
+.docname {20260801 Pelita Prima Manual Book}
 .doctype {paged}
 .doclang {English}
 .theme {paperwhite} layout:{latex}
@@ -11,7 +11,7 @@
 .pagemargin {bottomright}
     .currentpage
 .pagemargin {bottomleft}
-    Versi 2026-07-15
+    Versi 2026-08-01
 .pageformat margin:{2cm}
 .pageformat bordertop:{1px} borderbottom:{1px}
 
@@ -52,35 +52,35 @@
 .include {Master Production Schedule/MPS.md}
 .include {Request Distribution Order/RDO.md}
 .include {ICPL/ICPL.md}
-.include {Cost of Production/Cost of Production.md}
-.include {Cost Adjustment/Cost Adjustment.md}
 .include {Purchase Price Contract/Purchase Price Contract.md}
 .include {Asset Management/Asset Management.md}
 .include {Asset Split/Asset Split.md}
 .include {Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md}
 .include {Stock Opname Charging/Stock Opname Charging.md}
 .include {Allowance Penerimaan atau Material Receipt/Allowance Penerimaan atau Material Receipt.md}
+.include {Mekanisme Movement/Mekanisme Movement.md}
+.include {Material Management/Material Management.md}
 .include {Contract Management/Contract Management.md}
 .include {Project Management/Project Management.md}
-.include {Posting Matched Invoice/Posting Matched Invoice.md}
-.include {Import Data/Import Data.md}
 .include {Tax/Tax.md}
 .include {Attribute Set Instance/Attribute Set Instance.md}
 .include {Purchase Order/Purchase Order.md}
-.include {Product dan Category Access/Product dan Category Access.md}
-.include {Document Type/Document Type.md}
+.include {Estimated Landed Cost/Estimated Landed Cost.md}
+.include {AP dan AR Manual/AP dan AR Manual.md}
+.include {Posting Matched Invoice/Posting Matched Invoice.md}
+.include {Mekanisme Pembayaran/Mekanisme Pembayaran.md}
+.include {GL Journal Generator/GL Journal Generator.md}
 .include {Report/Report.md}
 .include {Report Stock/Report Kartu Stock.md}
 .include {Report Stock/Report Stock per Warehouse.md}
 .include {Report Stock/Report Stock per Artikel.md}
 .include {Forecast Report/Forecast Report.md}
 .include {Format Report/Format Report.md}
+.include {Financial Report/Financial Report.md}
+.include {Import Data/Import Data.md}
+.include {Document Type/Document Type.md}
+.include {Product dan Category Access/Product dan Category Access.md}
+.include {Cost of Production/Cost of Production.md}
+.include {Cost Adjustment/Cost Adjustment.md}
 .include {Tools/Tools.md}
 .include {Security di iDempiere/Security di iDempiere.md}
-.include {Financial Report/Financial Report.md}
-.include {Material Management/Material Management.md}
-.include {AP dan AR Manual/AP dan AR Manual.md}
-.include {Mekanisme Pembayaran/Mekanisme Pembayaran.md}
-.include {GL Journal Generator/GL Journal Generator.md}
-.include {Mekanisme Movement/Mekanisme Movement.md}
-.include {Estimated Landed Cost/Estimated Landed Cost.md}
