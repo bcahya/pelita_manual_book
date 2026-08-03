@@ -509,3 +509,11 @@ Laporan Kartu Hutang menampilkan informasi transaksi secara rinci, antara lain:
 - Periode
 
 Jika transaksi memiliki komponen pajak atau biaya administrasi, seluruh nilai tersebut ditampilkan pada laporan sehingga user dapat mengetahui komposisi nilai hutang dari setiap transaksi. Seluruh data ditampilkan berdasarkan transaksi yang telah berstatus **Posted**.
+
+## Report BPB FG Toko
+
+Report BPB FG Toko adalah report untuk movement artikel yang memiliki **Bill of Material (BoM)** ke outlet atau toko. Artikel yang dipindahkan merupakan **Finished Goods (FG)** atau **Semi Finished Goods (SFG)**. Namun, quantity yang berkurang pada movement ini bukan artikel FG atau SFG-nya, melainkan **bahan baku atau komponen** yang terdapat di Bill of Material artikel tersebut.
+
+Berikut contoh Report BPB FG pada Toko atau Outlet:
+
+![report bpb fg](../bpb_fg.png "Report BPB FG ke Toko atau Outlet") {#Figure201}

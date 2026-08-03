@@ -251,3 +251,69 @@ Berikut contoh implementasi Finished Time saat MO baru di-generate dan saat MO s
 
 
 ![complete](../mo_complete.png "Complete MO") {#Figure183}
+
+## ASI untuk Production
+
+Saat melakukan production, user dapat menentukan apakah produksi menggunakan **batch/lot** — yang di iDempiere dikenal sebagai **ASI (Attribute Set Instance)**. Jika produksi dilakukan per batch, lakukan konfigurasi **Attribute Set** pada artikel _semi finished goods_ (end product). Jika tidak menggunakan ASI, konfigurasi ini tidak diperlukan.
+
+Ikuti langkah berikut untuk mengkonfigurasi Attribute Set di product:
+
+1. Buka menu **Product**.
+2. Input **Search Key** dan **Name** product.
+3. Tentukan **Product Category**.
+4. Tentukan **UoM**.
+5. Tentukan **Product Type**.
+6. Centang field **Bill of Material**.
+7. Centang field **Purchased**.
+8. Centang field **Stocked**.
+9. Pada field **Attribute Set**, pilih Attribute Set yang sudah dikonfigurasi.
+
+![product](../product_prod_asi.png "Konfigurasi Product dengan ASI") {#Figure206}
+ 
+10. Masuk ke tab **BoM**.
+11. Tentukan **Production Warehouse**.
+12. Tentukan **Locator Defect**.
+13. Tentukan **BoM Type**.
+14. Tentukan **Lead Time**.
+15. Masuk ke tab **Component**.
+16. Input produk-produk yang menjadi komponen pada artikel tersebut.
+17. Klik **Save**.
+### Mekanisme Production
+
+Produksi dapat dilakukan per batch (dengan ASI) maupun tanpa batch (non ASI). Berikut dua mekanisme yang tersedia:
+
+#### Production dengan ASI
+
+1. Buka menu **Production Order Planning**.
+2. Tentukan **Document Date**.
+3. Tentukan **Estimated Date**.
+4. Masuk ke tab **Line**.
+5. Tentukan **artikel** yang akan diproduksi.
+6. Tentukan **quantity** yang akan diproduksi.
+7. Tentukan **BoM Formula**.
+8. Klik **SIS Generate POP BoM**.
+9. Klik **SIS Generate MO**.
+10. Proses **Manufacturing Order** hingga Movement.
+11. Klik **Complete** pada dokumen Manufacturing Order.
+
+Setelah Manufacturing Order di-complete, sistem otomatis membuat dokumen **Production** atas artikel tersebut dengan status _Complete_ dan _Posted_. Dokumen Production yang terbentuk memuat informasi **Attribute Set Instance (ASI)**, yang menandakan bahwa produksi dilakukan berdasarkan batch/lot.
+
+![asi](../prod_asi.png "Production dengan Batch/Lot") {#Figure207}
+
+#### Production Non ASI
+
+1. Buka menu **Production Order Planning**.
+2. Tentukan **Document Date**.
+3. Tentukan **Estimated Date**.
+4. Masuk ke tab **Line**.
+5. Tentukan **artikel** yang akan diproduksi.
+6. Tentukan **quantity** yang akan diproduksi.
+7. Tentukan **BoM Formula**.
+8. Klik **SIS Generate POP BoM**.
+9. Klik **SIS Generate MO**.
+10. Proses **Manufacturing Order** hingga Movement.
+11. Klik **Complete** pada dokumen Manufacturing Order.
+
+Setelah Manufacturing Order di-complete, sistem otomatis membuat dokumen **Production** atas artikel tersebut dengan status _Complete_ dan _Posted_. Produksi dilakukan tanpa pengelompokan berdasarkan batch/lot.
+
+![non asi](../prod_non_asi.png "Production Non Batch/Lot") {#Figure208}
