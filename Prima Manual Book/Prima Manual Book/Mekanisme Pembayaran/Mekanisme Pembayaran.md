@@ -116,13 +116,13 @@ Apabila terjadi selisih kurs antara saat pencatatan invoice dan saat pembayaran,
 ![allocat](../allocat_valas.png "Payment Allocation Valas") {#Figure173}
 
 Konfigurasi akun untuk **Realized Gain/Loss** maupun **Unrealized Gain/Loss** dilakukan pada **Accounting Schema**. Seluruh akun yang digunakan dalam proses pembayaran dapat disesuaikan dengan kebijakan akuntansi masing-masing perusahaan.
-## Bank/Cash Statement
+# Bank/Cash Statement
 
 Bank/Cash Statement adalah fitur yang digunakan untuk mencatat mutasi rekening bank atau kas berdasarkan rekening koran (_bank statement_) maupun laporan transaksi kas. Fitur ini berfungsi sebagai media rekonsiliasi antara transaksi yang terjadi di bank dengan transaksi yang telah dicatat di sistem, seperti Payment, Receipt, maupun transaksi lainnya.
 
 Transaksi Payment hanya mencatat bahwa perusahaan telah melakukan atau menerima pembayaran, namun belum membuktikan bahwa dana benar-benar telah masuk atau keluar dari rekening bank. Proses **Bank/Cash Statement** digunakan untuk mengonfirmasi bahwa transaksi Payment tersebut benar-benar telah terjadi di rekening bank melalui proses **rekonsiliasi (_matching_)**. Dengan demikian, Bank/Cash Statement menjadi kontrol untuk memastikan setiap transaksi pembayaran dan penerimaan sesuai dengan mutasi rekening yang diterbitkan bank.
 
-### Validasi Currency
+## Validasi Currency
 
 Salah satu validasi penting dalam proses rekonsiliasi adalah **currency antara Payment dan Bank/Cash Statement harus sama**. Mekanisme validasinya adalah sebagai berikut:
 
@@ -130,7 +130,7 @@ Salah satu validasi penting dalam proses rekonsiliasi adalah **currency antara P
 - Jika Payment menggunakan mata uang **USD**, maka Bank/Cash Statement juga harus menggunakan **USD**.
 - Sistem hanya menampilkan dan mengizinkan proses _matching_ terhadap Payment yang memiliki currency yang sama dengan Bank/Cash Statement.
 
-### Rate pada Bank/Cash Statament
+## Rate pada Bank/Cash Statament
 
 Untuk Bank/Cash Statement yang telah direkonsiliasi ke Payment tertentu, jurnal yang ter-generate menggunakan **rate yang digunakan di Payment**. Rate pada Payment dapat diambil dari nilai rate atas currency type pada tanggal tersebut, atau dari hasil **overwrite rate**.
 
@@ -141,10 +141,10 @@ Berikut contoh Payment dengan currency USD menggunakan overwrite rate, beserta B
 
 ![bank statement](../jurnal_bs.png "Jurnal Bank/Cash Statement") {#Figure172}
 
-### Revaluasi Bank/Cash Statement Valas
+## Revaluasi Bank/Cash Statement Valas
 
 Pada transaksi Bank/Cash Statement yang menggunakan mata uang asing, nilai transaksi dalam mata uang dasar (misalnya IDR) dapat berubah akibat perbedaan kurs antara tanggal transaksi pembayaran dan tanggal penutupan periode. Oleh karena itu, lakukan proses **Revaluasi** di akhir periode akuntansi untuk menyesuaikan nilai saldo rekening bank sesuai kurs penutupan. Revaluasi ini hanya memengaruhi nilai dalam mata uang dasar — nilai dalam mata uang asal (misalnya USD) tetap tidak berubah.
-#### Konfigurasi Revaluasi Bank/Cash Statement Valas
+### Konfigurasi Revaluasi Bank/Cash Statement Valas
 
 Sebelum melakukan revaluasi, lakukan konfigurasi akun atas bank valas yang digunakan pada Bank/Cash Statement. Berikut ketentuan konfigurasi yang perlu diperhatikan:
 
@@ -154,9 +154,9 @@ Sebelum melakukan revaluasi, lakukan konfigurasi akun atas bank valas yang digun
 Berikut contoh konfigurasi akun bank valas:
 
 ![akun](../akun_bank_valas.png "Konfigurasi Akun Bank Valas") {#Figure197}
-#### Mekanisme Revaluasi
+### Mekanisme Revaluasi
 
-Contoh: perusahaan melakukan Payment sebesar **USD 5** dengan kurs transaksi **Rp10.000/USD**, sehingga nilai yang tercatat adalah **Rp50.000**. Pada akhir bulan, kurs penutupan berubah menjadi **Rp10.100/USD**. Sistem menjalankan **Currency Revaluation** sehingga nilai saldo bank disesuaikan menjadi **Rp50.500**. Selisih sebesar **Rp500** diakui sebagai keuntungan atau kerugian selisih kurs sesuai konfigurasi akun akuntansi.
+Contoh: perusahaan melakukan Payment sebesar **USD 5** dengan kurs transaksi **Rp10.000/USD**, sehingga nilai yang tercatat adalah **Rp50.000**. Pada akhir periode, kurs penutupan berubah menjadi **Rp10.100/USD**. Sistem menjalankan **Currency Revaluation** sehingga nilai saldo bank disesuaikan menjadi **Rp50.500**. Selisih sebesar **Rp500** diakui sebagai keuntungan atau kerugian selisih kurs sesuai konfigurasi akun akuntansi.
 
 Ikuti langkah berikut untuk melakukan revaluasi Bank/Cash:
 
@@ -177,17 +177,17 @@ Proses revaluasi menghasilkan dua jurnal:
 
 ![reval](../reval_bs_31.png "Revaluasi Bank/Cash Akhir Bulan") {#Figure176}
 
-- **Jurnal Pembalik Awal Bulan (_Reversing Journal_)** — Sistem otomatis membalik jurnal revaluasi pada hari pertama periode berikutnya agar transaksi kembali menggunakan nilai historis dan proses rekonsiliasi Payment dengan Bank/Cash Statement tetap sesuai.
+- **Jurnal Pembalik Awal Periode Berikutnya (_Reversing Journal_)** — Sistem otomatis membalik jurnal revaluasi pada hari pertama periode berikutnya agar transaksi kembali menggunakan nilai historis dan proses rekonsiliasi Payment dengan Bank/Cash Statement tetap sesuai.
 
 ![revaluasi](../reval_bs_01.png "Revaluasi Bank/Cash Awal Bulan Berikutnya") {#Figure177}
 
-## Bank/Cash Transfer
+# Bank/Cash Transfer
 
 Fitur Bank/Cash Transfer digunakan untuk memindahkan dana antar rekening bank maupun kas di sistem. Proses ini hanya memindahkan saldo antar akun kas/bank milik perusahaan dan tidak melibatkan Business Partner maupun penyelesaian piutang atau utang.
 
 Setiap transaksi Bank/Cash Transfer memperbarui saldo pada rekening asal dan rekening tujuan, serta menghasilkan jurnal akuntansi sesuai konfigurasi akun pada masing-masing Bank/Cash.
 
-### Konfigurasi Bank/Cash Transfer
+## Konfigurasi Bank/Cash Transfer
 
 Sebelum melakukan bank/cash transfer, perlu dilakukan konfigurasi untuk **Business Partner** dan **Charge** yang dikenakan saat proses bank/cash transfer:
 
@@ -196,7 +196,7 @@ Sebelum melakukan bank/cash transfer, perlu dilakukan konfigurasi untuk **Busine
 | SIS_BANKTRANSFER_BP_ID     | **C_BPartner_ID** yang akan digunakan sesuai kebijakan perusahaan. |
 | SIS_BANKTRANSFER_CHARGE_ID | **C_Charge_ID** yang akan digunakan sesuai kebijakan perusahaan.   |
 "System Configurator"{#Tabel16}
-### Langkah Proses Bank/Cash Transfer
+## Langkah Proses Bank/Cash Transfer
 
 1. Buka menu **Bank/Cash Transfer**.
 2. Input field pada header:
@@ -229,7 +229,7 @@ Berikut jurnal yang terbentuk atas AP Payment dan AR Receipt untuk Bank/Cash Tra
 
 ![ar|697](../jurnal_ar_bank_tf.png "Jurnal AR Receipt atas Bank/Cash Transfer") {#Figure182}
 
-## Konfigurasi Matching
+# Konfigurasi Matching Akun Ayat Silang
 
 Proses matching di iDempiere dapat dilakukan secara **full** maupun **partial**. Untuk mengaktifkan fitur ini, lakukan konfigurasi berikut di sistem:
 

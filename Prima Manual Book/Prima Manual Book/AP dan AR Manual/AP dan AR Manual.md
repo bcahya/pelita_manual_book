@@ -92,7 +92,7 @@ Setelah dokumen di-complete, sistem mengurangi piutang dan membentuk jurnal akun
 
 ## Revaluasi Invoice dengan Valuta Asing (Valas)
 
-Di iDempiere, jika invoice menggunakan mata uang selain Rupiah dan kurs pada saat transaksi berbeda dengan kurs akhir bulan — contoh: saat transaksi 1 USD = Rp10.000, sedangkan akhir bulan 1 USD = Rp10.100 — sistem dapat melakukan revaluasi invoice tersebut menggunakan kurs yang berlaku di akhir bulan.
+Di iDempiere, jika invoice menggunakan mata uang selain Rupiah dan kurs pada saat transaksi berbeda dengan kurs akhir periode — contoh: saat transaksi 1 USD = Rp10.000, sedangkan akhir periode 1 USD = Rp10.100 — sistem dapat melakukan revaluasi invoice tersebut menggunakan kurs yang berlaku di akhir periode.
 
 Revaluasi berlaku untuk:
 
@@ -115,12 +115,12 @@ Ikuti langkah berikut untuk melakukan revaluasi:
 
 3. Klik start
 
-Nilai AP Invoice dalam mata uang asing tetap sama, namun nilai dalam Rupiah direvaluasi sesuai kurs akhir bulan.
+Nilai AP Invoice dalam mata uang asing tetap sama, namun nilai dalam Rupiah direvaluasi sesuai kurs akhir periode.
 
-Pada akhir bulan, sistem membentuk jurnal revaluasi. 
+Pada akhir periode, sistem membentuk jurnal revaluasi. 
 
 ![invoice](../reval_inv_31.png "Revaluasi Akhir Bulan") {#Figure173}
 
-Pada tanggal 1 bulan berikutnya, sistem otomatis membentuk **jurnal pembalik** atas revaluasi tersebut.
+Pada tanggal 1 periode berikutnya, sistem otomatis membentuk **jurnal pembalik** atas revaluasi tersebut.
 
 ![revaluasi](../reval_inv_01.png "Revaluasi Awal Bulan Berikutnya") {#Figure174}
