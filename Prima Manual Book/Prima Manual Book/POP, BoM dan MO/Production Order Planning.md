@@ -334,5 +334,6 @@ Ikuti langkah berikut untuk mengkonfigurasi Document Type Movement di warehouse:
 
 Document Type yang dikonfigurasi di Document Type POP dapat menggunakan **Document Type Movement General** yang khusus diperuntukkan untuk POP. Jika konfigurasi Document Type Movement tidak dilakukan di warehouse, sistem otomatis menggunakan Document Type Movement yang dikonfigurasi di Document Type POP.
 
-Berikut contoh Document Type Movement di warehouse dan implementasinya di Production Order Planning (POP):
+Berikut contoh implementasinya di Production Order Planning (POP):
 
+![POP](../pop_move_cut.png "Inventory Move di POP") {#Figure208}

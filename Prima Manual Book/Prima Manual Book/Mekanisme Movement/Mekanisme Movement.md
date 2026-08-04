@@ -146,3 +146,71 @@ Selanjutnya sistem membentuk jurnal **AP Credit Memo** sesuai transaksi yang dih
 Selain itu, sistem juga menjalankan proses **Matching** antara transaksi **Return to Vendor** dan **AP Credit Memo** sehingga tidak terdapat saldo maupun akun yang masih menggantung pada proses pembelian.
 
 ![match](../match_return.png "Jurnal Match Receipt") {#Figure192}
+
+## Ekspedisi
+
+Movement dengan Ekspedisi digunakan untuk mencatat perpindahan barang antar warehouse yang melibatkan pihak ekspedisi atau proses pengiriman. Mekanisme ini memisahkan proses pengiriman dari proses penerimaan barang di warehouse tujuan, sehingga status barang dapat dipantau selama proses distribusi.
+
+### Konfigurasi Ekspedisi
+
+Sebelum melakukan movement dengan ekspedisi, lakukan konfigurasi pada warehouse asal. Ikuti langkah berikut:
+
+1. Buka menu **Warehouse and Locators**.
+2. Input **Search Key** dan **Name** untuk warehouse.
+3. Input **alamat** warehouse.
+4. Centang field **Source Expedition**.
+
+![wh](../wh_eksped.png "Konfigurasi Warehouse") {#Figure208}
+
+5. Klik **Save**.
+
+### Mekanisme Ekspedisi
+
+#### Membuat Dokumen Movement
+
+1. Buka menu **Inventory Move**.
+2. Tentukan **warehouse asal** yang telah dikonfigurasi dan **warehouse tujuan**.
+
+![wh](../move_eksped.png "Warehouse di Inventory Move") {#Figure209}
+
+3. Masuk ke **Move Line**.
+4. Tentukan **produk** yang akan diproses.
+5. Tentukan **quantity** produk.
+6. Tentukan **Locator** asal dan **Locator** tujuan.
+7. Klik **Save**.
+8. Klik **Complete** pada dokumen Inventory Move.
+
+Dokumen Inventory Move ini digunakan sebagai acuan oleh pihak gudang untuk memproses produk melalui ekspedisi.
+#### Proses Pengiriman (Ekspedisi)
+
+1. Buka menu **SIS Expedition**.
+2. Tentukan **Document Date**.
+3. Tentukan **Business Partner** — dalam hal ini adalah pihak ekspedisi.
+4. Masuk ke tab **Line**.
+5. Input dokumen **Inventory Move** yang akan diproses.
+6. Tentukan **quantity** produk yang akan diproses.
+
+![line](../line_eksped.png "Ekspedisi") {#Figure210}
+
+7. Klik **Save**.
+8. Klik **Complete** pada dokumen.
+
+Saat nomor Inventory Move diinput, field **Warehouse** terisi otomatis sesuai warehouse tujuan di Inventory Move tersebut — user tidak dapat menginput warehouse tujuan secara manual di dokumen ekspedisi.
+
+Setelah dokumen di-complete, sistem otomatis menandai dokumen Inventory Move terkait dengan flag **SIS_Expedition = Y**, yang berarti dokumen tersebut tidak dapat digunakan untuk proses pengiriman ekspedisi lain. Field **Active** pada Line SIS Expedition juga tercentang secara otomatis.
+#### Pembatalan Ekspedisi
+
+Jika proses pengiriman mengalami kendala, lakukan pembatalan ekspedisi dengan langkah berikut:
+
+1. Buka menu **SIS Expedition**.
+2. Pilih dokumen ekspedisi yang akan dibatalkan.
+3. Masuk ke tab **Line**.
+4. Klik **Cancel Expedition**.
+
+![batal](../batal_eskped.png "Pembatalan Ekspedisi") {#Figure211}
+
+Saat ekspedisi dibatalkan, field **Active** pada Line akan ter-uncheck secara otomatis. Flag **SIS_Expedition** pada dokumen Inventory Move terkait juga direset, sehingga dokumen tersebut dapat ditautkan ke dokumen ekspedisi yang baru.
+
+![batal](../move_eksp_batal.png "Inventory Move Batal") {#Figure212}
+
+> **Catatan:** Jika pengiriman dilakukan secara bertahap, gunakan dokumen Movement yang berbeda untuk setiap tahap pengiriman agar setiap pengiriman memiliki dokumen ekspedisi dan penerimaan tersendiri.

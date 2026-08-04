@@ -3,7 +3,6 @@
 ICPL atau Price List adalah fitur untuk mengelola dan menyimpan informasi harga jual maupun harga beli produk. Dengan ICPL, perusahaan dapat menetapkan harga yang berbeda untuk setiap pelanggan atau vendor dalam periode tertentu.
 
 ICPL menjadi dasar perhitungan harga pada setiap transaksi. Sistem hanya dapat mengisi harga otomatis pada Sales Order maupun Purchase Order jika price list sudah dikonfigurasi dengan benar.
-
 ## Manfaat ICPL
 
 1. Menstandarkan harga produk secara terpusat sehingga user tidak perlu menginput harga secara manual pada setiap transaksi.
@@ -169,6 +168,26 @@ Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat 
 8. Klik **complete**
 
 Saat ICPL Base diperbarui, seluruh ICPL turunan akan ikut ter-update secara otomatis.
+
+### Input Product di ICPL Update
+
+Saat melakukan update di ICPL Base, jumlah produk yang tersedia bisa sangat banyak. Jika hanya perlu memperbarui beberapa produk tertentu, gunakan fitur pencarian dengan karakter khusus berikut:
+#### Karakter (%)
+
+Karakter `%` mewakili **nol, satu, atau lebih karakter**. Gunakan karakter ini jika tidak mengetahui keseluruhan nama atau kode produk, atau hanya mengingat sebagian informasinya.
+
+- Kain% — Menampilkan semua produk yang diawali dengan Kain, misalnya Kain Katun, Kain Knitting, Kain Kragh, dan sebagainya.
+- %Katun — Menampilkan produk yang diakhiri dengan Katun, seperti Kain Katun dan Benang Katun.
+- %001% — Menampilkan seluruh produk yang mengandung angka _001_ pada kode produk.
+
+#### Karakter ( _ )
+
+Karakter `_` mewakili **tepat satu karakter**. Gunakan karakter ini jika hanya ada satu karakter yang tidak diketahui pada posisi tertentu.
+
+- 10_01 — Menampilkan data seperti 10001, 10101, 10201, di mana hanya satu karakter pada posisi `_` yang berbeda.
+
+> **Catatan:** Pencarian menggunakan ILIKE tidak membedakan huruf besar dan huruf kecil, sehingga pencarian _kain_, _Kain_, atau _KaIn_ akan menghasilkan data yang sama.
+
 ## Implementasi ICPL
 
 ### ICPL Pada Warehouse
