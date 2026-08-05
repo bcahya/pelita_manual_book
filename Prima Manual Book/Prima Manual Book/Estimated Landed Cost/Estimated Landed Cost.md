@@ -78,6 +78,6 @@ Setelah Invoice di-complete, **Landed Cost Allocation** pada masing-masing cost 
 
 ![allocation](../land_cost_all.png "Landed Cost Allocation") {#Figure196}
 
-Jika terdapat selisih antara Estimated Landed Cost dan realisasi biaya, sistem membentuk **jurnal variance** pada jurnal invoice. Berikut contoh jurnalnya:
+Jika terdapat selisih antara Estimated Landed Cost dan realisasi biaya di produk yang terdapat ASI, sistem membentuk **jurnal variance** pada jurnal invoice. Berikut contoh jurnalnya:
 
 ![jurnal](../jurnal_land_cos.png "Jurnal Realisasi Landed Cost") {#Figure197}
