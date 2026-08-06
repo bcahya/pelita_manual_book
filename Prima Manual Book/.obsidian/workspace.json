@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Tax/Tax.md",
+                "file": "Prima Manual Book/Document Sequence/Document Sequence.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tax"
+              "title": "Document Sequence"
             }
           }
         ]
@@ -196,19 +196,26 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/tax_combin.png",
-    "Prima Manual Book/charge_pph_23.png",
-    "Prima Manual Book/acct_charge_pph.png",
-    "Prima Manual Book/jurnal_no_tax.png",
-    "Prima Manual Book/tax_inc.png",
-    "Prima Manual Book/jurnal_include_tax.png",
-    "Prima Manual Book/no_tax.png",
-    "Prima Manual Book/pph_23.png",
-    "jurnal_include_tax.png",
-    "tax_inc.png",
-    "jurnal_no_tax.png",
-    "Prima Manual Book/AP dan AR Manual/AP dan AR Manual.md",
+    "Prima Manual Book/doc_typ_match.png",
+    "Prima Manual Book/sys_doc_match.png",
+    "Prima Manual Book/match_inv.png",
+    "Prima Manual Book/doc_seq_match.png",
+    "Prima Manual Book/Document Sequence/doc_typ_match.png",
+    "Prima Manual Book/Document Sequence/sys_doc_match.png",
+    "Prima Manual Book/Document Sequence/match_inv.png",
+    "Prima Manual Book/Document Sequence/doc_seq_match.png",
+    "match_inv.png",
+    "sys_doc_match.png",
+    "doc_typ_match.png",
+    "Prima Manual Book/Document Type/Document Type.md",
+    "Prima Manual Book/Document Sequence/Document Sequence.md",
+    "Prima Manual Book/Purchase Order/Purchase Order.md",
+    "Prima Manual Book/Document Sequence",
+    "Prima Manual Book/Invoice Bayangan/Invoice Bayangan.md",
+    "Prima Manual Book/Report/Report.md",
+    "Prima Manual Book/Invoice Bayangan",
     "Prima Manual Book/Tax/Tax.md",
+    "Prima Manual Book/AP dan AR Manual/AP dan AR Manual.md",
     "Prima Manual Book/Estimated Landed Cost/Estimated Landed Cost.md",
     "Prima Manual Book/Format Report/Format Report.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
@@ -219,7 +226,6 @@
     "Prima Manual Book/Material Management/Material Management.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/Stock Opname Charging/Stock Opname Charging.md",
-    "Prima Manual Book/Report/Report.md",
     "Prima Manual Book/Auto Production POS Order",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/konfig_full@-121106600.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/konfiq_partial@1619257846.png.checksum",
@@ -230,18 +236,12 @@
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/invoice_buyer_cn@882256315.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/print_invoice_buy_lain@-67230359.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/par_ayat_silang@-217483298.png.checksum",
-    "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/ayat_sil@-300117262.png.checksum",
-    "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/print_multi_bp@-171017258.png.checksum",
     "Prima Manual Book/main.md",
     "Prima Manual Book/Estimated Landed Cost.md",
     "Prima Manual Book/Tanpa judul.md",
     "Prima Manual Book/Purchase Price Contract/Purchase Price Contract.md",
     "Prima Manual Book/Posting Matched Invoice/Posting Matched Invoice.md",
     "Prima Manual Book/Security di iDempiere/Security di iDempiere.md",
-    "Prima Manual Book/POP, BoM dan MO/Production Order Planning Subcon.md",
-    "Prima Manual Book/POP, BoM dan MO/Manufacturing Order.md",
-    "Prima Manual Book/Cost Adjustment/Cost Adjustment.md",
-    "Prima Manual Book/GL Journal Generator/GL Journal Generator.md",
     "Tanpa judul.canvas"
   ]
 }

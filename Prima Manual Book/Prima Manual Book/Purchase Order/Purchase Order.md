@@ -97,3 +97,24 @@ Lakukan penghapusan melalui menu **SIS Delete Document PO**. Ikuti langkah berik
 ![PO Delete](../PO_Delete.png "PO Terhapus") {#Figure100}
 
 > **Catatan:** Hanya Purchase Order berstatus **Draft** yang dapat dihapus melalui menu ini.
+
+## Material Receipt
+
+Di iDempiere, Material Receipt dapat dibuat secara manual. Ikuti langkah berikut:
+
+1. Buka menu **Material Receipt**.
+2. Tentukan **Business Partner**.
+3. Tentukan **Warehouse**.
+4. Klik **Create Lines From**.
+5. Pilih dokumen **Purchase Order (PO)** yang akan diproses.
+6. Klik **Create Lines From Shipment/Receipt**.
+
+![manual](../mr_manual.png "Create Lines From") {#Figure214}
+
+7. Receipt Line terisi otomatis sesuai informasi di PO — meliputi produk, locator, dan quantity.
+8. Klik **Save**.
+9. Klik **Complete** pada dokumen Material Receipt.
+
+> **Catatan:** MR Line wajib terhubung dengan PO Line. Jika tidak terhubung, sistem akan menampilkan pesan error bahwa Receipt Line harus terhubung dengan PO. Tidak ada Material Receipt yang dapat diproses tanpa referensi PO. Berikut contoh error yang muncul jika MR Line tidak terhubung dengan PO Line:
+
+![error](../eror_mr.png "Notifikasi Error di MR Line") {#Figure215}
