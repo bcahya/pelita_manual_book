@@ -84,3 +84,4 @@
 .include {Cost Adjustment/Cost Adjustment.md}
 .include {Tools/Tools.md}
 .include {Security di iDempiere/Security di iDempiere.md}
+.include {Invoice Bayangan/Invoice Bayangan.md}

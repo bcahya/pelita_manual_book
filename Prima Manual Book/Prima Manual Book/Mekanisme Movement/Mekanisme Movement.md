@@ -99,6 +99,18 @@ Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebaga
 6. Pilih **Receipt Line** yang akan dikembalikan.
 7. Klik **Save**.
 8. Klik **Complete**.
+
+### Konfigurasi Document Type Return to Vendor
+
+1. Buka menu **Document Type**.
+2. Klik **New**.
+3. Isi **Name** sesuai kebutuhan operasional.
+4. Pada field **Document Base Type**, pilih **Material Delivery**.
+5. Centang field **Document Number Is Controlled**.
+6. Centang field **MR. Auto Invoice AP**
+7. Pada field **MR. Document Type Invoice AP**, pilih document AP Credit Memo yang telah dikonfigurasi.
+8. Pada field **MR. Document Action Invoice AP**, pilih document action untuk menentukan status invoice credit memo yang ter-generate — _Prepare_ atau _Complete_
+9. Klik **Save**.
 ### Langkah Proses Return to Vendor
 
 1. Buka menu **Return to Vendor**.
@@ -113,40 +125,49 @@ Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebaga
 
 8. Klik **Complete**.
 
-Setelah dokumen **Return to Vendor** di-_complete_, sistem akan:
+Setelah dokumen Return to Vendor di-_complete_, sistem akan:
 
-- Mengurangi stok sesuai quantity yang dikembalikan.
-- Mencatat perpindahan barang keluar dari warehouse.
-- Membentuk jurnal Return to Vendor.
+- Mengurangi stok sesuai kuantitas barang yang dikembalikan.
+- Mencatat transaksi pengeluaran barang dari warehouse.
+- Membentuk jurnal akuntansi Return to Vendor.
 
 ![jurnal](../return_vendor.png "Jurnal Return to Vendor") {#Figure190}
 
-- Menyimpan riwayat pengembalian pada menu **Product**, tab **Transactions** dan **Located At**.
-### Pembuatan AP Credit Memo
+- Menyimpan riwayat transaksi pada tab Transactions dan Located At di menu Product.
+- Membuat dokumen AP Credit Memo dengan status Complete.
+### AP Credit Memo
 
-Setelah proses **Return to Vendor** selesai, buat **AP Credit Memo** sebagai dokumen koreksi atas transaksi pembelian.
-
-Langkah-langkahnya sebagai berikut:
-
-1. Buka dokumen **Return to Vendor**.
-2. Klik tombol **Settings**.
-3. Pilih **Generate Invoice From Receipt**.
-4. Klik **OK**.
-
-Sistem akan secara otomatis:
+Setelah proses **Return to Vendor** selesai, sistem secara otomatis:
 
 - Membuat dokumen **AP Credit Memo**.
-- Menyalin seluruh informasi dari dokumen **Return to Vendor** ke **Invoice Line**.
+- Menyalin seluruh informasi transaksi dari **Return to Vendor** ke **Invoice Line** pada AP Credit Memo.
 - Menyelesaikan dokumen dengan status **Complete**.
-
-Selanjutnya sistem membentuk jurnal **AP Credit Memo** sesuai transaksi yang dihasilkan.
+- Membentuk jurnal akuntansi **AP Credit Memo** sesuai transaksi yang dihasilkan.
 
 ![credit](../credit_return.png "Jurnal AP Credit Memo") {#Figure191}
 
-Selain itu, sistem juga menjalankan proses **Matching** antara transaksi **Return to Vendor** dan **AP Credit Memo** sehingga tidak terdapat saldo maupun akun yang masih menggantung pada proses pembelian.
+Selanjutnya, sistem menjalankan proses **Matching** antara transaksi **Return to Vendor** dan **AP Credit Memo**. Proses ini memastikan nilai transaksi pembelian telah direkonsiliasi sehingga tidak terdapat saldo maupun akun pembelian yang masih menggantung.
 
 ![match](../match_return.png "Jurnal Match Receipt") {#Figure192}
 
+#### Allocation AP Credit Memo
+
+Selain membuat **AP Credit Memo**, sistem juga melakukan proses **Allocation** secara otomatis terhadap invoice pembelian yang masih memiliki saldo outstanding. Mekanisme allocation berjalan sebagai berikut:
+##### Invoice masih outstanding
+
+Sistem mengalokasikan **AP Credit Memo** dengan invoice pembelian sehingga saldo tagihan berkurang sesuai nilai pengembalian barang.
+
+![ap cn](../ap_cn_ots.png "Allocation AP Credit Memo Outstanding") {#Figure215}
+##### Invoice telah dibayar sebagian (Partial Payment)  
+
+Sistem tetap melakukan allocation antara **AP Credit Memo** dan invoice pembelian. Allocation dilakukan terhadap sisa tagihan yang masih outstanding sehingga nilai hutang tersisa berkurang sesuai nominal AP Credit Memo.
+
+![ap cn](../ap_cn_paysebagian.png "Allocation AP Credit Memo (Partial Payment)") {#Figure216}
+##### Invoice telah dibayar penuh (Fully Paid)  
+
+Sistem tetap membuat **AP Credit Memo**, namun tidak melakukan allocation karena invoice pembelian telah lunas dan seluruh nilainya telah dialokasikan ke transaksi pembayaran sebelumnya. Dalam kondisi ini, AP Credit Memo tetap tersedia sebagai saldo kredit yang dapat dimanfaatkan pada transaksi berikutnya sesuai kebijakan perusahaan.
+
+![ap cn](../ap_cn_payfull.png "Allocation AP Credit Memo (Fully Paid)"){#Figure217}
 ## Ekspedisi
 
 Movement dengan Ekspedisi digunakan untuk mencatat perpindahan barang antar warehouse yang melibatkan pihak ekspedisi atau proses pengiriman. Mekanisme ini memisahkan proses pengiriman dari proses penerimaan barang di warehouse tujuan, sehingga status barang dapat dipantau selama proses distribusi.
