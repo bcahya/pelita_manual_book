@@ -24,7 +24,7 @@ Untuk referensi print Jasper pada dokumen PO, gunakan dua parameter berikut:
 
 ![Process Detail](../Process_Detail.png "Process Detail Report") {#Figure100}
 
-Pastikan field **Report** pada menu **Report & Access** sudah dicentang agar report tersebut muncul di tenant dan sistem.
+Pastikan field **Report** pada menu **Report & Process** sudah dicentang agar report tersebut muncul di tenant dan sistem.
 
 Ikuti langkah berikut untuk melakukan konfigurasi report print pada masing-masing document type:
 

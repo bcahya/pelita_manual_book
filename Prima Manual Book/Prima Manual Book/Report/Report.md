@@ -84,7 +84,7 @@ Pembelian kebutuhan umum PPG yang tidak termasuk dalam kategori khusus lainnya.
 
 Pembelian bahan baku atau material untuk kebutuhan proses woven. 
 
-![woven](../po_woven_ppg.png "PO Woven") {#Figure147}
+![woven](../poo_wov.png "PO Woven") {#Figure147}
 ## Report Material Receipt (MR/BPB)
 
 Report MR digunakan untuk mencetak dokumen permintaan material yang diajukan secara internal oleh divisi produksi ke bagian gudang/persediaan. Permintaan ini diproses lebih lanjut menjadi Purchase Order jika stok tidak mencukupi, atau dipenuhi langsung dari stok gudang. Klasifikasi report MR adalah sebagai berikut:
@@ -469,7 +469,7 @@ Report yang dihasilkan dalam format **Excel** dengan kolom-kolom berikut:
 - **Nama BPartner** — Nama Business Partner.
 
 Setiap transaksi ditampilkan sesuai urutan tanggal posting sehingga memudahkan proses penelusuran jurnal.
-## Laporan Kartu Hutang
+## Laporan Kartu Hutang PPG
 
 Laporan Kartu Hutang menyajikan rincian transaksi hutang kepada vendor (Business Partner) selama periode tertentu. Gunakan laporan ini untuk menampilkan setiap transaksi yang membentuk hutang beserta nilai tagihan, komponen pajak, dan nilai pembayaran terkait.
 ### Tujuan
@@ -509,7 +509,6 @@ Laporan Kartu Hutang menampilkan informasi transaksi secara rinci, antara lain:
 - Periode
 
 Jika transaksi memiliki komponen pajak atau biaya administrasi, seluruh nilai tersebut ditampilkan pada laporan sehingga user dapat mengetahui komposisi nilai hutang dari setiap transaksi. Seluruh data ditampilkan berdasarkan transaksi yang telah berstatus **Posted**.
-
 ## Report BPB FG Toko
 
 Report BPB FG Toko adalah report untuk movement artikel yang memiliki **Bill of Material (BoM)** ke outlet atau toko. Artikel yang dipindahkan merupakan **Finished Goods (FG)** atau **Semi Finished Goods (SFG)**. Namun, quantity yang berkurang pada movement ini bukan artikel FG atau SFG-nya, melainkan **bahan baku atau komponen** yang terdapat di Bill of Material artikel tersebut.
@@ -517,3 +516,28 @@ Report BPB FG Toko adalah report untuk movement artikel yang memiliki **Bill of 
 Berikut contoh Report BPB FG pada Toko atau Outlet:
 
 ![report bpb fg](../bpb_fg.png "Report BPB FG ke Toko atau Outlet") {#Figure201}
+
+## Kartu Hutang SCI
+
+Laporan Kartu Hutang adalah laporan kontrol untuk memantau posisi kewajiban perusahaan kepada vendor. Laporan ini menampilkan transaksi pembentuk hutang, pembayaran atau alokasi yang telah dilakukan, serta saldo hutang yang masih _outstanding_. Dengan mengacu pada tanggal jatuh tempo, laporan ini membantu Finance mengidentifikasi hutang yang akan jatuh tempo maupun yang telah _overdue_, sehingga dapat menentukan prioritas pembayaran.
+### Langkah Akses Laporan Kartu Hutang SCI
+
+1. Buka menu **SIS Kartu Hutang**.
+2. Tentukan **Organisasi**.
+3. Tentukan **Business Partner** yang akan dicek.
+
+![parameter](../param_hutang_sci.png "Parameter"){#Figure216}
+
+4. Klik **Start**.
+
+
+![print](../print_kartu_hutang.png "Report Kartu Hutang") {#Figure217}
+
+Laporan Kartu Hutang menampilkan informasi transaksi secara rinci, antara lain:
+
+- **Business Partner** — Menampilkan vendor yang memiliki transaksi hutang.
+- **Document Date / Invoice Date** — Menampilkan tanggal transaksi atau tanggal invoice.
+- **Aging** — Menampilkan periode jatuh tempo pembayaran. Aging dihitung berdasarkan **Payment Term** yang digunakan pada Business Partner ditambah tanggal invoice.
+- **Invoice Amount** — Menampilkan nilai awal invoice.
+- **Payment** — Menampilkan pembayaran yang telah mengurangi hutang.
+- **Days Due** — Menampilkan jumlah hari keterlambatan atau sisa hari menuju jatuh tempo.
