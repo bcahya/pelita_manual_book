@@ -93,7 +93,7 @@ Ikuti langkah berikut untuk mengkonfigurasi Tax Combination:
 - **Rate** — Input rate pajak sesuai kebutuhan.
 4. Pada field **Tax Combination**, input pajak yang akan dikombinasikan, contoh: PPh 23.
 
-![combi](../tax_combin 1.png "Tax Combination") {#Figure213}
+![combi](../tax_combin.png "Tax Combination") {#Figure213}
 
 5. Masuk ke tab **Accounting**.
 6. Pada field **Tax Expense** dan **Tax Credit**, tentukan akun sesuai kebijakan tim Accounting.
