@@ -51,15 +51,19 @@ Ikuti langkah berikut untuk mengkonfigurasi Production Warehouse:
 
 3. Klik **Save**.
 
-Warehouse yang digunakan untuk produksi umumnya berkaitan dengan **Routing** yang digunakan untuk memproses Production Order Planning (POP). Selain itu, lakukan konfigurasi Production Warehouse untuk setiap artikel yang memiliki BoM dan akan diproses produksi.
+Warehouse yang digunakan untuk produksi berkaitan dengan **Routing** yang digunakan untuk memproses Production Order Planning (POP). Lakukan konfigurasi **Production Warehouse** untuk setiap artikel yang memiliki BoM dan akan diproses produksi.
 
-Agar tampilan lebih sederhana, warehouse dapat difilter berdasarkan flag **Production Warehouse** yang telah dikonfigurasi. Setelah dikonfigurasi, hanya warehouse dengan flag Production Warehouse yang akan muncul pada pilihan Production Warehouse di Bill of Material.
+Sistem mengambil data **Warehouse To** yang terdaftar dalam routing berdasarkan ketentuan berikut:
+
+- **Routing Action _Manufacture_** — Digunakan untuk produk yang diproduksi secara internal.
+- **Routing Action _Buy_** — Digunakan untuk produk subcon (_Semi Finished Goods_ yang dikerjakan oleh vendor atau pihak ketiga).
+
+Agar tampilan lebih sederhana, warehouse dapat difilter berdasarkan flag **Production Warehouse** yang telah dikonfigurasi dan sesuai routing pada produk tersebut. Setelah dikonfigurasi, hanya warehouse dengan flag Production Warehouse yang terdaftar di routing yang akan muncul pada pilihan Production Warehouse di **Bill of Material**.
 
 Berikut contoh implementasi filter Production Warehouse di Bill of Material:
-
 ![bom](../po_bom.png "Filter Production Warehouse di BoM") {#Figure187}
 
-## Jenis Action Routing
+## Jenis Routing Action
  
 Routing memiliki beberapa jenis action yang digunakan untuk menentukan alur perpindahan barang.
 
@@ -84,6 +88,24 @@ Routing memiliki tiga jenis operation:
 | Take from stock Trigger another rules | Mengambil dari stok, lalu menjalankan aturan lain jika stok tidak mencukupi |
 | Trigger another rules                 | Langsung menjalankan aturan lain tanpa pengecekan stok                      |
 "Operation Routing"{#Tabel5}
+
+### Implementasi Routing Action dan Operation Type
+
+Routing Action dan Operation Type saling berkaitan. Terdapat dua kombinasi yang sudah ditetapkan sistem dan tidak dapat menggunakan Operation Type lain:
+
+1. **Pull From** — Wajib menggunakan Operation Type **Take from Stock Trigger Another Rules**. Sistem otomatis menset default Operation Type ini saat Routing Action _Pull From_ dipilih, sehingga mencegah kesalahan pemilihan type.
+
+![pull from](../pull_from.png "Operation Type untuk Pull From") {#Figure220}
+
+2. **Push To** — Wajib menggunakan Operation Type **Trigger Another Rules**. Sistem otomatis menset default Operation Type ini saat Routing Action _Push To_ dipilih.
+
+![push to](../push_to.png "Operation Type untuk Push To") {#Figure221}
+
+Untuk Routing Action **Buy** dan **Manufacture**, konfigurasi Operation Type tidak diperlukan. Setelah proses pembelian atau produksi selesai, produk langsung dipindahkan ke warehouse tujuan. User hanya perlu menginput **Warehouse To** dan **Locator To**.
+
+![buy](../buy.png "Routing Action Buy") {#Figure222}
+
+![manufacture](../manuf.png "Routing Action Manufacture"){#Figure223} 
 ## Langkah Pengaturan Routing di Sistem
 
 1. Buka Menu **SIS Routing**
@@ -95,14 +117,13 @@ Routing memiliki tiga jenis operation:
 
 ![Routing Line](../Routing_Line.png "Konfigurasi Routing") {#Figure64}
 
-	Berikut field yang harus dikonfigurasi:
+Berikut field yang harus dikonfigurasi:
 
 | Field          | Keterangan                                      |
 | -------------- | ----------------------------------------------- |
 | Routing Action | Aksi yang dijalankan sistem pada tahap tertentu |
 | Warehouse      | Gudang asal material atau komponen              |
 | Locator        | Lokasi pengambilan material atau komponen       |
-| Operation Type | Jenis operasi yang menentukan logika proses     |
 | Warehouse To   | Gudang tujuan hasil produksi                    |
 | Locator To     | Lokasi penyimpanan hasil produksi               |
 "Field Routing Line"{#Tabel6}

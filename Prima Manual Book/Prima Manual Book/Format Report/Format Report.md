@@ -20,11 +20,12 @@ Untuk referensi print Jasper pada dokumen PO, gunakan dua parameter berikut:
 
 ![Process](../Process_1.png "Parameter Process") {#Figure99}
 
-- **Process Detail Report** — Menggunakan Dynamic Validation **SIS_ProcessDetailReport by Process DT Target Access**.
+- **Process Detail Report** — Menggunakan Dynamic Validation **SIS_ProcessDetailReport by Process DT Target Access** untuk Target Document Type dan **SIS_ProcessDetailReport by Process DT Access** untuk Document Type.
 
 ![Process Detail](../Process_Detail.png "Process Detail Report") {#Figure100}
 
 Pastikan field **Report** pada menu **Report & Process** sudah dicentang agar report tersebut muncul di tenant dan sistem.
+## Akses Report Berdasarkan Document Type
 
 Ikuti langkah berikut untuk melakukan konfigurasi report print pada masing-masing document type:
 
@@ -34,10 +35,17 @@ Ikuti langkah berikut untuk melakukan konfigurasi report print pada masing-masin
 4. Pada field **Process**, pilih proses sesuai kebutuhan perusahaan.
 5. Pada field **Process Detail Report**, input report sesuai kebutuhan perusahaan.
 
-![Report Detail Access](../Report_Access.png "Report Detail Access") {#Figure101}
+![Report Detail Access](../report_po_access.png "Report Detail Access") {#Figure101}
 
 6. Klik **save**.
 
-![Report PO](../Print_PO.png "Report PO") {#Figure102}
+![Report PO](../report_po_bb.png "Report PO") {#Figure102}
 
-Ulangi langkah di atas untuk document type lain yang memerlukan konfigurasi serupa. Setelah konfigurasi selesai, sistem akan menampilkan pilihan format report tersebut saat user melakukan report pada document yang bersangkutan.
+Ulangi langkah di atas untuk document type lain yang memerlukan konfigurasi serupa. Setelah konfigurasi selesai, sistem menampilkan pilihan format report saat user melakukan print pada dokumen terkait.
+
+Hanya user yang memiliki akses ke menu dan document type terkait yang dapat mencetak dokumen PO. Contoh: jika Target Document Type yang dipilih adalah **PO Bahan Baku**, maka report yang muncul hanya report yang telah dikonfigurasi pada document type tersebut — misalnya PO Bahan Mentah, PO Woven, dan PO Knitting.
+
+Pembatasan akses report berdasarkan document type ini bertujuan untuk:
+
+- Memastikan setiap user hanya dapat mengakses report sesuai haknya.
+- Menghindari kesalahan pemilihan report — misalnya, memproses PO Bahan Baku namun mencetak printout PO ATK yang tidak sesuai.

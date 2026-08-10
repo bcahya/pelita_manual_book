@@ -531,7 +531,7 @@ Laporan Kartu Hutang adalah laporan kontrol untuk memantau posisi kewajiban peru
 4. Klik **Start**.
 
 
-![print](../print_kartu_hutang.png "Report Kartu Hutang") {#Figure217}
+![print](../kartu_hutang_sci_fix.png "Report Kartu Hutang") {#Figure217}
 
 Laporan Kartu Hutang menampilkan informasi transaksi secara rinci, antara lain:
 
