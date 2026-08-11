@@ -562,3 +562,18 @@ Laporan Kartu Hutang menampilkan informasi transaksi secara rinci, antara lain:
 Berikut contoh Report Printout Kontra Bon:
 
 ![kontra bon](../kontra_bon.png "Printout Kontra Bon") {#Figure220}
+
+## Printout Payment
+
+Report Payment digunakan untuk menampilkan dan memantau transaksi pembayaran dan penerimaan yang diproses melalui menu **Payment and Receipt**. Gunakan report ini untuk mengecek detail transaksi, Business Partner, rekening yang digunakan, nominal pembayaran, dan alokasi terhadap invoice. Data report juga dapat digunakan sebagai dasar rekonsiliasi dengan **Bank/Cash Statement** dan pengecekan transaksi payment yang belum dialokasikan.
+### Langkah Akses Printout Payment
+
+1. Buka menu **Payment and Receipt**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **Print Document Payment**.
+4. Klik **Pembayaran ke Vendor**
+5. Klik **OK**.
+
+Berikut contoh Report Printout Payment:
+
+![payment](../printout_pay.png "Printout Payment") {#Figure221}

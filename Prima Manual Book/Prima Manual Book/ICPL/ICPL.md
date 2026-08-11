@@ -168,7 +168,6 @@ Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat 
 8. Klik **complete**
 
 Saat ICPL Base diperbarui, seluruh ICPL turunan akan ikut ter-update secara otomatis.
-
 ### Input Product di ICPL Update
 
 Saat melakukan update di ICPL Base, jumlah produk yang tersedia bisa sangat banyak. Jika hanya perlu memperbarui beberapa produk tertentu, gunakan fitur pencarian dengan karakter khusus berikut:
