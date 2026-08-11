@@ -116,6 +116,20 @@ Apabila terjadi selisih kurs antara saat pencatatan invoice dan saat pembayaran,
 ![allocat](../allocat_valas.png "Payment Allocation Valas") {#Figure173}
 
 Konfigurasi akun untuk **Realized Gain/Loss** maupun **Unrealized Gain/Loss** dilakukan pada **Accounting Schema**. Seluruh akun yang digunakan dalam proses pembayaran dapat disesuaikan dengan kebijakan akuntansi masing-masing perusahaan.
+
+## Release Date (Tanggal Pencairan)
+
+**Release Date** pada Payment adalah tanggal yang menentukan kapan transaksi pembayaran dapat direlease atau dianggap siap untuk direalisasikan sesuai mekanisme pembayaran yang digunakan. Release Date dapat dikonfigurasi di menu **Payment and Receipt**.
+
+Release Date berbeda dengan **Payment Date**:
+
+- **Release Date** — Tanggal ketika pembayaran dijadwalkan untuk dilepas atau diproses.
+- **Payment Date** — Tanggal transaksi pembayaran dilakukan.
+- **Posting Date/Accounting Date** — Tetap mengikuti tanggal akuntansi yang digunakan pada transaksi, bukan Release Date.
+
+Release Date bersifat _updatable_ — dapat diedit kapan pun, termasuk setelah dokumen Payment and Receipt di-complete. Berikut implementasi Release Date di menu Payment and Receipt:
+
+![release date](../release_date.png "Release Date") {#Figure221}
 # Bank/Cash Statement
 
 Bank/Cash Statement adalah fitur yang digunakan untuk mencatat mutasi rekening bank atau kas berdasarkan rekening koran (_bank statement_) maupun laporan transaksi kas. Fitur ini berfungsi sebagai media rekonsiliasi antara transaksi yang terjadi di bank dengan transaksi yang telah dicatat di sistem, seperti Payment, Receipt, maupun transaksi lainnya.

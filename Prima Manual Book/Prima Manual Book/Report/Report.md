@@ -512,6 +512,13 @@ Jika transaksi memiliki komponen pajak atau biaya administrasi, seluruh nilai te
 ## Report BPB FG Toko
 
 Report BPB FG Toko adalah report untuk movement artikel yang memiliki **Bill of Material (BoM)** ke outlet atau toko. Artikel yang dipindahkan merupakan **Finished Goods (FG)** atau **Semi Finished Goods (SFG)**. Namun, quantity yang berkurang pada movement ini bukan artikel FG atau SFG-nya, melainkan **bahan baku atau komponen** yang terdapat di Bill of Material artikel tersebut.
+### Langkah Akses Report BPB FG Toko
+
+1. Buka menu **Inventory Move**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **Print Dokumen Movement**.
+4. Klik **BPB FG Toko**.
+5. Klik **OK**.
 
 Berikut contoh Report BPB FG pada Toko atau Outlet:
 
@@ -541,3 +548,17 @@ Laporan Kartu Hutang menampilkan informasi transaksi secara rinci, antara lain:
 - **Invoice Amount** — Menampilkan nilai awal invoice.
 - **Payment** — Menampilkan pembayaran yang telah mengurangi hutang.
 - **Days Due** — Menampilkan jumlah hari keterlambatan atau sisa hari menuju jatuh tempo.
+
+## Report Kontra Bon
+
+**Report Kontra Bon** digunakan untuk menampilkan informasi tagihan vendor yang telah tercatat dalam sistem dan dapat digunakan sebagai dasar proses pengecekan serta administrasi pembayaran kepada vendor.
+### Langkah Akses Report Printout Kontra Bon
+
+1. Buka menu **SIS Kontra Bon**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Kontra Bon**.
+4. Klik **OK**.
+
+Berikut contoh Report Printout Kontra Bon:
+
+![kontra bon](../kontra_bon.png "Printout Kontra Bon") {#Figure220}

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Tax/Tax.md",
+                "file": "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tax"
+              "title": "Mekanisme Pembayaran"
             }
           }
         ]
@@ -196,8 +196,15 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/jurnal_no_tax.png",
+    "Prima Manual Book/release_date.png",
+    "release_date.png",
+    "Prima Manual Book/Report/Report.md",
+    "kontra_bon.png",
+    "Prima Manual Book/kontra_bon.png",
+    "Prima Manual Book/Report Stock/Report Stock per Warehouse.md",
+    "Prima Manual Book/Report Stock/Report Stock per Artikel.md",
     "Prima Manual Book/Tax/Tax.md",
+    "Prima Manual Book/jurnal_no_tax.png",
     "Prima Manual Book/no_tax.png",
     "Prima Manual Book/Document Sequence/Document Sequence.md",
     "Prima Manual Book/Invoice Bayangan/Invoice Bayangan.md",
@@ -207,12 +214,7 @@
     "Prima Manual Book/report_po_access.png",
     "report_po_access.png",
     "detail_report_sys.png",
-    "Prima Manual Book/Report/Report.md",
     "Prima Manual Book/Routing/Routing.md",
-    "Prima Manual Book/manuf.png",
-    "Prima Manual Book/buy.png",
-    "Prima Manual Book/pull_from.png",
-    "Prima Manual Book/push_to.png",
     "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
     "Prima Manual Book/Document Type/Document Type.md",
     "Prima Manual Book/main.md",
@@ -240,8 +242,6 @@
     "Prima Manual Book/Estimated Landed Cost.md",
     "Prima Manual Book/Tanpa judul.md",
     "Prima Manual Book/Purchase Price Contract/Purchase Price Contract.md",
-    "Prima Manual Book/Posting Matched Invoice/Posting Matched Invoice.md",
-    "Prima Manual Book/Security di iDempiere/Security di iDempiere.md",
     "Tanpa judul.canvas"
   ]
 }
