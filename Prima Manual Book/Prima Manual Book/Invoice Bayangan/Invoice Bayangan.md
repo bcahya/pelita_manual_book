@@ -3,6 +3,19 @@
 Invoice Bayangan (_Shadow Invoice_) adalah dokumen invoice yang digunakan untuk mencatat transaksi antara **Business Partner Penjual (_Seller_)** dan **Business Partner Pembeli (_Buyer_)** dalam satu dokumen. Berbeda dengan invoice standar yang hanya menggunakan satu Business Partner, Invoice Bayangan menyimpan informasi kedua pihak sehingga hubungan transaksi terdokumentasi secara lengkap.
 
 Selain informasi Seller dan Buyer, Invoice Bayangan juga memuat detail transaksi seperti produk, kuantitas, harga, diskon, pajak (_Tax_), dan total nilai invoice. Sistem menghitung seluruh nilai transaksi secara otomatis berdasarkan konfigurasi yang berlaku.
+
+## Penentuan Business Partner
+
+Invoice Bayangan melibatkan dua Business Partner — **Seller/Vendor** dan **Buyer/Customer**. Sistem memfilter Business Partner yang dapat dipilih pada masing-masing field berdasarkan konfigurasi flag di master data Business Partner:
+
+- **Business Partner 1** — Diakui sebagai **Vendor**. Hanya Business Partner dengan flag **Vendor = Y** yang akan muncul pada field ini.
+- **Business Partner 2** — Diakui sebagai **Customer**. Hanya Business Partner dengan flag **Customer = Y** yang akan muncul pada field ini.
+
+Berikut contoh filtering Business Partner di menu Invoice Bayangan:
+
+![vendor](../bp_vendor.png "Business Partner - Vendor") {#Figure222}
+
+![cs](../bp_cs.png "Business Partner - Customer") {#Figure223}
 ## Mekanisme Invoice Bayangan
 
 1. Buka menu **SIS Invoice Mirror**.

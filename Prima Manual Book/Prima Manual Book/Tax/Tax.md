@@ -8,7 +8,7 @@ Sistem iDempiere mendukung konfigurasi **Pajak Pertambahan Nilai (PPN) 11%** den
 Masing-masing skenario memiliki konfigurasi akun dan dampak pelaporan yang berbeda.
 
 Selain PPN, terdapat pajak **PPh 23 sebesar 2%** yang dapat dikombinasikan dengan PPN 11% dalam satu transaksi. Perlu diperhatikan bahwa harga produk dapat sudah termasuk pajak (_include tax_) atau belum (_exclude tax_), sehingga perhitungan di invoice akan berbeda untuk setiap kondisi.
-## Tax PPN tim SCI
+## Tax PPN tim SCI (Not Credited)
 
 Ikuti langkah berikut untuk mengkonfigurasi tax rate tim SCI:
 1. Buka menu **Tax Rate**
@@ -17,15 +17,14 @@ Ikuti langkah berikut untuk mengkonfigurasi tax rate tim SCI:
   - Name
   - Tax Category
   - Valid from
-  - Centang field **Tax Not Credited**
-  - Tax Not Credited Rate
+  - Posting Indicator, pilih **Distribute Tax with Relevant Expense**.
   
-  ![Konfigurasi Tax](../Tax_SCI.png "Konfigurasi Tax") {#Figure94}
+  ![Konfigurasi Tax](../ppn_sci.png "Konfigurasi Tax") {#Figure94}
   
 4. Masuk ke tab **Accounting**
-5. Pada field **Tax Expense** dan **Tax Credit**, tentukan akun sesuai kebijakan tim Accounting.
+5. Pada field **Tax Expense**, tentukan akun sesuai kebijakan tim Accounting.
 6. Klik **save**
-## Tax PPN tim PPG
+## Tax Credited
 
 Ikuti langkah berikut untuk mengkonfigurasi tax rate tim PPG:
 1. Buka menu **Tax Rate**
@@ -35,12 +34,13 @@ Ikuti langkah berikut untuk mengkonfigurasi tax rate tim PPG:
   - Tax Category
   - Valid from
   - Input Rate tax sesuai kebutuhan 
+4. Centang kolom **Document Level**.
 
-![Konfigurasi Tax](../Tax_PPG.png "Konfigurasi Tax") {#Figure95}
+![Konfigurasi Tax](../ppn.png "Konfigurasi Tax") {#Figure95}
 
-4. Masuk ke tab **Accounting**
-5. Pada field **Tax Expense** dan **Tax Credit**, tentukan akun sesuai kebijakan tim Accounting.
-6. Klik **save**
+5. Masuk ke tab **Accounting**
+6. Pada field **Tax Expense** dan **Tax Credit**, tentukan akun sesuai kebijakan tim Accounting.
+7. Klik **save**
 
 ## Tax PPh 23
 
@@ -70,7 +70,9 @@ Ikuti langkah berikut untuk mengkonfigurasi tax rate PPh 23:
 - **Tax Category**
 - **Valid From**
 - **Rate** — Input rate pajak sesuai kebutuhan.
-4. Pada field **Charge**, input charge PPh 23 yang telah dikonfigurasi sebelumnya.
+
+4. Centang kolom **Document Level**.
+5. Pada field **Charge**, input charge PPh 23 yang telah dikonfigurasi sebelumnya.
 
 ![pph](../pph_23.png "PPh 23") {#Figure212}
 
@@ -91,7 +93,9 @@ Ikuti langkah berikut untuk mengkonfigurasi Tax Combination:
 - **Tax Category**
 - **Valid From**
 - **Rate** — Input rate pajak sesuai kebutuhan.
-4. Pada field **Tax Combination**, input pajak yang akan dikombinasikan, contoh: PPh 23.
+
+4. Centang kolom **Document Level**.
+5. Pada field **Tax Combination**, input pajak yang akan dikombinasikan, contoh: PPh 23.
 
 ![combi](../tax_combin.png "Tax Combination") {#Figure213}
 
