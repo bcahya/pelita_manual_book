@@ -85,6 +85,12 @@ Pembelian kebutuhan umum PPG yang tidak termasuk dalam kategori khusus lainnya.
 Pembelian bahan baku atau material untuk kebutuhan proses woven. 
 
 ![woven](../poo_wov.png "PO Woven") {#Figure147}
+
+### PO Kecil
+
+Printout PO Kecil dirancang untuk kebutuhan operasional yang memerlukan dokumen PO dengan tampilan ringkas, sehingga informasi penting tetap tersedia tanpa menggunakan format PO yang kompleks.
+
+![po kecil](../po_kecill.png "Printout PO Kecil") {#Figure229}
 ## Report Material Receipt (MR/BPB)
 
 Report MR digunakan untuk mencetak dokumen permintaan material yang diajukan secara internal oleh divisi produksi ke bagian gudang/persediaan. Permintaan ini diproses lebih lanjut menjadi Purchase Order jika stok tidak mencukupi, atau dipenuhi langsung dari stok gudang. Klasifikasi report MR adalah sebagai berikut:
@@ -118,6 +124,39 @@ Permintaan material terkait proses/divisi FID sesuai klasifikasi internal perusa
 Permintaan material terkait proses/divisi FB sesuai klasifikasi internal perusahaan.
 
 ![FB](../mr_fb.png "MR FB") {#Figure152}
+
+## Report Surat Jalan (Movement)
+
+Ikuti langkah berikut untuk mengakses report surat jalan:
+
+1. Buka menu **Inventory Move**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **Print Document Movement**.
+4. Klik **OK**.
+### SJ Bahan Knitting ke Gudang Titip
+
+
+### SJ Bahan Knitting ke CMT
+
+### SJ Bahan Knitting ke Pabrik
+
+### SJ Gudang Titip Knitting ke Gudang Bahan
+
+### SJ Bahan Woven ke Gudang Bahan
+
+### SJ Bahan Woven ke CMT
+
+### SJ Gudang Titip Bahan Woven ke Gudang Bahan
+
+### SJ Aksesoris
+
+### SJ Aksesoris ke Outlet
+
+### SJ Aksesoris By Gudang Ekspedisi
+
+### SJ Aksesoris ke CMT
+
+### SJ Aksesoris ke Pabrik
 ## Report BG (DP Vendor)
 
 Report BG digunakan untuk mencetak dokumen uang muka (_Down Payment_/DP) yang diberikan kepada vendor sebagai bagian dari proses pembayaran atas Purchase Order. Report ini terdiri dari dua jenis template:
@@ -237,7 +276,6 @@ Ikuti langkah berikut untuk mencetak Invoice Vendor Credit Note Lain-Lain:
 2. Klik tombol **Setting (⚙)**.
 3. Klik **Print Invoice Credit Note**.
 4. Klik **OK**.
-
 ## Report Invoice Buyer
 
 Report Invoice Buyer digunakan untuk menampilkan seluruh transaksi Invoice Penjualan (_Accounts Receivable Invoice_) yang dibuat kepada buyer atau pelanggan. Gunakan report ini untuk memantau transaksi penjualan yang telah ditagihkan, baik berupa invoice penjualan maupun credit note.
