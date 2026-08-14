@@ -2,39 +2,43 @@
 
 Purchase Order adalah dokumen yang digunakan untuk mencatat dan mengelola proses pemesanan barang atau jasa kepada supplier. Dokumen ini memuat informasi mengenai supplier, produk yang dipesan, jumlah, harga, tanggal pemesanan, metode pembayaran, dan informasi pendukung lainnya.
 
-Di iDempiere, Purchase Order berfungsi sebagai dasar proses pengadaan barang — mulai dari pembuatan pesanan hingga penerimaan barang dan penagihan (Invoice). Dengan Purchase Order, perusahaan memastikan seluruh transaksi pembelian terdokumentasi dengan baik dan sesuai proses bisnis yang telah ditetapkan. Di perusahaan terdapat purchase order yang terbentuk dari transaksi requisition. Jadi perusahaan akan membuat requisition yang terdiri dari product dan qtu yang dibutuhkan oleh tim purchasing. Setelah terbentuk baru dilakukan generate PO from requisition.
+Di iDempiere, Purchase Order berfungsi sebagai dasar proses pengadaan barang — mulai dari pembuatan pesanan hingga penerimaan barang dan penagihan (Invoice). Dengan Purchase Order, perusahaan memastikan seluruh transaksi pembelian terdokumentasi dengan baik dan sesuai proses bisnis yang telah ditetapkan. 
+
+Purchase Order dapat terbentuk dari transaksi **Requisition**. Tim purchasing membuat Requisition yang memuat produk dan quantity yang dibutuhkan, kemudian melakukan **Generate PO From Requisition**.
 ## Requisition
 
-Requisition adalah dokumen yang digunakan untuk mengajukan kebutuhan pembelian barang atau jasa sebelum proses pembelian dilakukan melalui **Purchase Order (PO)**.
+Requisition adalah dokumen yang digunakan untuk mengajukan kebutuhan pembelian barang atau jasa sebelum proses pembelian dilakukan melalui Purchase Order.
 
-Pada  Requisition, user dapat menentukan beberapa informasi, seperti:
+Pada Requisition, user dapat menentukan informasi berikut:
 
-- Product atau item yang akan dibeli
-- Quantity yang dibutuhkan
-- Warehouse atau lokasi tujuan
-- Business Partner (BP) yang akan digunakan sebagai vendor
+- **Product** atau item yang akan dibeli.
+- **Quantity** yang dibutuhkan.
+- **Warehouse** atau lokasi tujuan.
+- **Business Partner (BP)** yang akan digunakan sebagai vendor.
 
-Satu Requisition dapat memiliki **beberapa Requisition Line**, sehingga kebutuhan pembelian yang berbeda dapat dicatat dalam satu dokumen. Berikut langkah untuk membuat requisition:
-1. Buka menu Requisition
-2. Input Warehouse tujuan
-3. Tentukan tanggal transaksi
-4. Masuk ke Requisition Line
-5. Tentukan Business Partner yang akan digunakan
-6. Tentukan product yang akan diproses
-7. Tentukan quantity yang dibutuhkan
-8. Klik save
-9. Klik complete dokumen
+Satu Requisition dapat memiliki beberapa Requisition Line, sehingga kebutuhan pembelian yang berbeda dapat dicatat dalam satu dokumen. Ikuti langkah berikut untuk membuat Requisition:
+
+1. Buka menu **Requisition**.
+2. Input **Warehouse** tujuan.
+3. Tentukan **tanggal transaksi**.
+4. Masuk ke **Requisition Line**.
+5. Tentukan **Business Partner** yang akan digunakan.
+6. Tentukan **produk** yang akan diproses.
+7. Tentukan **quantity** yang dibutuhkan.
+8. Klik **Save**.
+9. Klik **Complete** pada dokumen.
 ## Generate PO From Requisition
 
-Fitur **Generate PO From Requisition** digunakan untuk membuat Purchase Order berdasarkan Requisition Line yang telah dibuat pada  Requisition. Proses generate PO dapat dilakukan dengan memilih **satu atau beberapa Requisition Line**, termasuk Requisition Line yang berasal dari satu maupun beberapa  Requisition.
+Fitur **Generate PO From Requisition** digunakan untuk membuat Purchase Order berdasarkan Requisition Line yang telah dibuat. Proses generate PO dapat dilakukan dengan memilih satu atau beberapa Requisition Line — termasuk dari satu maupun beberapa Requisition.
 
-Sistem akan melakukan pengelompokan Requisition Line berdasarkan **Business Partner (BP)** yang digunakan.
+Sistem mengelompokkan Requisition Line berdasarkan **Business Partner (BP)** dengan ketentuan berikut:
 
-Apabila beberapa Requisition Line memiliki **BP yang sama**, sistem akan menggabungkan Requisition Line tersebut ke dalam **1 Purchase Order**. Berikut contoh PO dengan beberapa dokumen requisition:
+- Jika beberapa Requisition Line memiliki **BP yang sama**, sistem menggabungkan seluruh Requisition Line tersebut ke dalam **satu Purchase Order**.
+- Jika Requisition Line memiliki **BP yang berbeda**, sistem membuat **Purchase Order terpisah** untuk masing-masing BP.
+
+Berikut contoh PO yang terbentuk dari beberapa dokumen Requisition dengan BP yang sama dan berbeda:
 
 ![multi](../multi_req.png "PO Multi Requisition") {#Figure230}
-
-Apabila Requisition Line memiliki **BP yang berbeda**, sistem akan membuat **Purchase Order terpisah untuk masing-masing BP**. Berikut contoh PO dengan beberapa dokumen requisition dengan BP yang berbeda dan sama:
 
 ![beda bp](../multi_bp.png "PO Multi Requisition dan Multi Business Partner") {#Figure231}
 ## Proses Purchase Order Manual

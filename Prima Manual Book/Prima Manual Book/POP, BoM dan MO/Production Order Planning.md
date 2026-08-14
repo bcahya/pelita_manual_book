@@ -205,7 +205,7 @@ Jika konsolidasi movement tidak dikonfigurasi, setiap artikel akan memiliki doku
 **Lead Time Produksi** adalah estimasi waktu yang dibutuhkan untuk menyelesaikan proses produksi suatu produk — sejak produksi dimulai hingga produk selesai.
 ### Konfigurasi Lead Time
 
-Konfigurasi Lead Time dilakukan pada **Bill of Material (BoM)** produk melalui field **Lead Time (Days)** — berisi jumlah hari yang dibutuhkan untuk memproduksi produk tersebut.
+Konfigurasi Lead Time dilakukan pada **Bill of Material (BoM)** produk melalui field **Lead Time (Days)** — berisi jumlah hari yang dibutuhkan untuk memproduksi produk tersebut. Nilai Lead Time harus lebih besar dari 0 dan tidak boleh diisi dengan 0. Konfigurasi ini wajib dilakukan karena Lead Time berkaitan langsung dengan proses produksi artikel. Jika Lead Time tidak dikonfigurasi, proses produksi tidak dapat dijalankan.
 
 Contoh konfigurasi:
 

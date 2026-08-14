@@ -135,28 +135,38 @@ Ikuti langkah berikut untuk mengakses report surat jalan:
 4. Klik **OK**.
 ### SJ Bahan Knitting ke Gudang Titip
 
-
+![knit](../sj_knit_titip.png "SJ Knitting ke Gudang Titip") {#Figure232}
 ### SJ Bahan Knitting ke CMT
 
+![knit](../sj_knit_cmt.png "SJ Knitting ke CMT") {#Figure233}
 ### SJ Bahan Knitting ke Pabrik
 
-### SJ Gudang Titip Knitting ke Gudang Bahan
+![knit](../sj_knit_pab.png "SJ Knitting ke Pabrik") {#Figure234}
+### SJ Bahan Knitting ke Gudang Bahan
 
+![knit](../sj_knit_bahan.png "SJ Knitting ke Gudang Bahan") {#Figure235}
 ### SJ Bahan Woven ke Gudang Bahan
 
+![woven](../sj_wov_bahan.png "SJ Woven ke Gudang Bahan") {#Figure236}
 ### SJ Bahan Woven ke CMT
 
-### SJ Gudang Titip Bahan Woven ke Gudang Bahan
+![wov](../sj_wov_titip.png "SJ Woven ke CMT") {#Figure237}
+### SJ Bahan Woven ke Gudang Bahan
 
-### SJ Aksesoris
+![WOV](../sj_wov_cmt.png "SJ Woven ke Gudang Bahan") {#Figure238}
 
 ### SJ Aksesoris ke Outlet
 
+![aks](../sj_aks_outlet.png "SJ Aksesoris ke Outlet") {#Figure239}
 ### SJ Aksesoris By Gudang Ekspedisi
 
+![aks](../sj_aks_ekspedisi.png "SJ Aksesoris ke Gudang Ekspedisi") {#Figure240}
 ### SJ Aksesoris ke CMT
 
+![aks](../sj_aks_cmt.png "SJ Aksesoris ke CMT") {#Figure241}
 ### SJ Aksesoris ke Pabrik
+
+![aks](../sj_aks_pabrik.png "SJ Aksesoris ke Pabrik") {#Figure242}
 ## Report BG (DP Vendor)
 
 Report BG digunakan untuk mencetak dokumen uang muka (_Down Payment_/DP) yang diberikan kepada vendor sebagai bagian dari proses pembayaran atas Purchase Order. Report ini terdiri dari dua jenis template:

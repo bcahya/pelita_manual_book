@@ -243,6 +243,12 @@ Berikut jurnal yang terbentuk atas AP Payment dan AR Receipt untuk Bank/Cash Tra
 
 ![ar|697](../jurnal_ar_bank_tf.png "Jurnal AR Receipt atas Bank/Cash Transfer") {#Figure182}
 
+Atas AP Payment dan AR Receipt tersebut, sistem otomatis melakukan proses **matching** terhadap akun yang dikonfigurasi di **Charge**. Berikut proses matching atas akun tersebut di dokumen AP Payment dan AR Receipt:
+
+![ap](../ap.png "AP Payment") {#Figure231}
+
+![ar](../ar.png "AR Receipt") {#Figure232}
+
 # Konfigurasi Matching Akun Ayat Silang
 
 Proses matching di iDempiere dapat dilakukan secara **full** maupun **partial**. Untuk mengaktifkan fitur ini, lakukan konfigurasi berikut di sistem:
