@@ -91,6 +91,17 @@ Pembelian bahan baku atau material untuk kebutuhan proses woven.
 Printout PO Kecil dirancang untuk kebutuhan operasional yang memerlukan dokumen PO dengan tampilan ringkas, sehingga informasi penting tetap tersedia tanpa menggunakan format PO yang kompleks.
 
 ![po kecil](../po_kecill.png "Printout PO Kecil") {#Figure229}
+
+## Report Requisiton
+
+Ikuti langkah berikut untuk mengakses report requisition:
+
+1. Buka menu **Requisition**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Document Requisition**.
+4. Klik **OK**.
+
+![pr](../print_pr.png "Requisition") {#Figure242}
 ## Report Material Receipt (MR/BPB)
 
 Report MR digunakan untuk mencetak dokumen permintaan material yang diajukan secara internal oleh divisi produksi ke bagian gudang/persediaan. Permintaan ini diproses lebih lanjut menjadi Purchase Order jika stok tidak mencukupi, atau dipenuhi langsung dari stok gudang. Klasifikasi report MR adalah sebagai berikut:

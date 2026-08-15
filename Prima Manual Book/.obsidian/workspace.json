@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Report/Report.md",
+                "file": "Prima Manual Book/Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Report"
+              "title": "Petty Cash dan Kartu Fleet"
             }
           }
         ]
@@ -196,22 +196,24 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/sj_knit_titip.png",
-    "Prima Manual Book/sj_knit_cmt.png",
-    "Prima Manual Book/sj_knit_pab.png",
-    "Prima Manual Book/sj_wov_bahan.png",
-    "Prima Manual Book/sj_wov_titip.png",
-    "Prima Manual Book/sj_wov_cmt.png",
-    "Prima Manual Book/sj_aks_outlet.png",
-    "Prima Manual Book/sj_aks_ekspedisi.png",
-    "Prima Manual Book/sj_aks_cmt.png",
-    "Prima Manual Book/sj_aks_pabrik.png",
-    "Prima Manual Book/sj_knit_bahan.png",
+    "Prima Manual Book/terima_fleet.png",
+    "Prima Manual Book/pindah_fleet.png",
+    "Prima Manual Book/bank_fleet.png",
+    "Prima Manual Book/fleet.png",
+    "bank_fleet.png",
+    "pindah_fleet.png",
+    "terima_fleet.png",
+    "fleet.png",
+    "Prima Manual Book/petty_pay.png",
+    "Prima Manual Book/terima_petty.png",
+    "Prima Manual Book/pindah_petty.png",
+    "Prima Manual Book/Report/Report.md",
+    "Prima Manual Book/Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md",
+    "Prima Manual Book/Petty Cash dan Kartu Fleet",
     "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
     "Prima Manual Book/Tax/Tax.md",
     "Prima Manual Book/Posting Matched Invoice/Posting Matched Invoice.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
-    "Prima Manual Book/Report/Report.md",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
     "Prima Manual Book/ICPL/ICPL.md",
     "Prima Manual Book/Format Report/Format Report.md",
@@ -232,7 +234,6 @@
     "Prima Manual Book/Routing/Routing.md",
     "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
     "Prima Manual Book/Document Type/Document Type.md",
-    "Prima Manual Book/main.md",
     "Prima Manual Book/Document Sequence",
     "Prima Manual Book/Invoice Bayangan",
     "Prima Manual Book/Auto Production POS Order",
@@ -241,7 +242,6 @@
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/ayat_sila@-696676763.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/par_harian@1479953229.png.checksum",
     "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/invoice_buyer_cn@882256315.png.checksum",
-    "Prima Manual Book/quarkdown-output/preview-main-4207148518/media/print_invoice_buy_lain@-67230359.png.checksum",
     "Tanpa judul.canvas"
   ]
 }
