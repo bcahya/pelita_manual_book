@@ -86,19 +86,30 @@ Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebaga
 3. Klik **Save**.
 ### Konfigurasi Vendor RMA
 
-**Vendor RMA** berfungsi sebagai dokumen otorisasi pengembalian barang kepada vendor. Dokumen ini menghubungkan proses Return to Vendor dengan **Material Receipt** yang menjadi referensi. Langkah konfigurasi:
+**Vendor RMA** berfungsi sebagai dokumen otorisasi pengembalian barang kepada vendor. Dokumen ini menghubungkan proses **Return to Vendor** dengan **Material Receipt** yang menjadi referensi.
+
+Saat membuat Vendor RMA, user dapat memilih **UoM** atas produk yang akan di-return — apakah menggunakan **Base UoM** atau **UoM Conversion**. UoM yang dikonfigurasi di Vendor RMA otomatis disalin ke dokumen **Return to Vendor** dan **AP Credit Memo**, sehingga UoM yang digunakan pada ketiga dokumen tersebut tetap selaras.
+
+Langkah konfigurasi:
 
 1. Buka menu **Vendor RMA**.
 2. Pilih **Document Type**.
 3. Tentukan **RMA Type**.
 4. Pada field **Receipt**, pilih dokumen **Material Receipt** yang akan direferensikan.
 
-![vendor rma](../vendor_rma.png "Header Vendor RMA") {#Figure198}
+![vendor rma](../rma.png "Header Vendor RMA") {#Figure198}
 
-5. Buka tab **RMA Line**.
-6. Pilih **Receipt Line** yang akan dikembalikan.
-7. Klik **Save**.
-8. Klik **Complete**.
+5. Klik **Create Lines From**.
+6. Pilih **Material Receipt** yang akan diproses.
+7. Klik **Create lines from RMA**.
+8. Buka tab **RMA Line**.
+9. Tentukan **UoM** atas produk yang akan di-return.
+10. Tentukan **quantity** produk yang akan di-return.
+
+![line](../rma_line.png "Vendor RMA Line") {#Figure242}
+
+11. Klik **Save**.
+12. Klik **Complete**.
 
 ### Konfigurasi Document Type Return to Vendor
 
@@ -108,6 +119,9 @@ Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebaga
 4. Pada field **Document Base Type**, pilih **Material Delivery**.
 5. Centang field **Document Number Is Controlled**.
 6. Centang field **MR. Auto Invoice AP**
+
+![ap cn](../ap_cn_doc_type.png "Konfigurasi AP Credit Memo") {#Figure241}
+
 7. Pada field **MR. Document Type Invoice AP**, pilih document AP Credit Memo yang telah dikonfigurasi.
 8. Pada field **MR. Document Action Invoice AP**, pilih document action untuk menentukan status invoice credit memo yang ter-generate — _Prepare_ atau _Complete_
 9. Klik **Save**.
@@ -121,7 +135,10 @@ Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebaga
 6. Klik **Create Lines From**.
 7. Pilih dokumen **Vendor RMA** yang telah dibuat.
 
-![return](../menu_return_vendor.png "Return to Vendor)  {#Figure199}
+![return](../rtv.png "Return to Vendor)  {#Figure199}
+
+
+![line](../rtv_line.png "Return to Vendor Line") {#Figure243}
 
 8. Klik **Complete**.
 
@@ -131,7 +148,7 @@ Setelah dokumen Return to Vendor di-_complete_, sistem akan:
 - Mencatat transaksi pengeluaran barang dari warehouse.
 - Membentuk jurnal akuntansi Return to Vendor.
 
-![jurnal](../return_vendor.png "Jurnal Return to Vendor") {#Figure190}
+![jurnal](../line_rtv.png "Jurnal Return to Vendor") {#Figure190}
 
 - Menyimpan riwayat transaksi pada tab Transactions dan Located At di menu Product.
 - Membuat dokumen AP Credit Memo dengan status Complete.
@@ -141,14 +158,17 @@ Setelah proses **Return to Vendor** selesai, sistem secara otomatis:
 
 - Membuat dokumen **AP Credit Memo**.
 - Menyalin seluruh informasi transaksi dari **Return to Vendor** ke **Invoice Line** pada AP Credit Memo.
+
+![ap cm](../ap_cm_line.png "AP Credit Memo Line") {#Figure244}
+
 - Menyelesaikan dokumen dengan status **Complete**.
 - Membentuk jurnal akuntansi **AP Credit Memo** sesuai transaksi yang dihasilkan.
 
-![credit](../credit_return.png "Jurnal AP Credit Memo") {#Figure191}
+![credit](../line_cm.png "Jurnal AP Credit Memo") {#Figure191}
 
 Selanjutnya, sistem menjalankan proses **Matching** antara transaksi **Return to Vendor** dan **AP Credit Memo**. Proses ini memastikan nilai transaksi pembelian telah direkonsiliasi sehingga tidak terdapat saldo maupun akun pembelian yang masih menggantung.
 
-![match](../match_return.png "Jurnal Match Receipt") {#Figure192}
+![match](../match_rma.png "Jurnal Match Receipt") {#Figure192}
 
 #### Allocation AP Credit Memo
 
@@ -171,7 +191,6 @@ Sistem tetap membuat **AP Credit Memo**, namun tidak melakukan allocation karena
 ## Ekspedisi
 
 Movement dengan Ekspedisi digunakan untuk mencatat perpindahan barang antar warehouse yang melibatkan pihak ekspedisi atau proses pengiriman. Mekanisme ini memisahkan proses pengiriman dari proses penerimaan barang di warehouse tujuan, sehingga status barang dapat dipantau selama proses distribusi.
-
 ### Konfigurasi Ekspedisi
 
 Sebelum melakukan movement dengan ekspedisi, lakukan konfigurasi pada warehouse asal. Ikuti langkah berikut:

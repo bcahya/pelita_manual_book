@@ -3,6 +3,66 @@
 Fitur Kontra Bon digunakan untuk mengelola proses pengumpulan dan verifikasi tagihan vendor/customer sebelum dilakukan pembayaran atau penagihan. Kontra Bon adalah dokumen yang membuktikan bahwa sejumlah dokumen tagihan telah diserahkan dan diverifikasi untuk diproses ke tahap pembayaran.
 
 Kontra Bon bukan transaksi pembayaran — fungsinya adalah mengelompokkan dan mengontrol invoice yang akan dibayarkan.
+## Konfigurasi Document Type Kontra Bon
+
+1. Buka menu **Document Type**.
+2. Klik **New**.
+3. Isi **Name** sesuai kebutuhan operasional.
+4. Pada field **Document Base Type**, pilih **SIS Kontra Bon**.
+5. Centang field **Document Number Is Controlled**.
+6. Pada field **Kontra Bon Type**, tentukan tipe kontra bon:
+- **Non PO**
+- **PO Lengkap**
+- **PO Invoice**
+
+![tipe](../type_konta.png "Tipe Kontra Bon") {#Figure245}
+
+7. Pada field **AP Credit Memo Doctype**, tentukan document type yang akan digunakan.
+
+![ap cn](../cn_kontra.png "Konfigurasi AP Credit Memo") {#Figure241}
+
+8. Klik **Save**.
+
+## Konfigurasi Faktur Pajak di Kontra Bon
+
+Field **nomor faktur pajak** pada Kontra Bon berkaitan dengan status **PKP (Pengusaha Kena Pajak)** Business Partner. Karena tidak semua Business Partner terdaftar sebagai PKP, field ini bersifat fleksibel:
+
+- **Business Partner PKP** — Field nomor faktur pajak bersifat **mandatory**.
+- **Business Partner Non-PKP** — Field nomor faktur pajak **tidak mandatory**.
+
+Ikuti langkah berikut untuk mengkonfigurasi flag PKP di master Business Partner:
+
+1. Buka menu **Business Partner**.
+2. Centang field **Vendor**.
+3. Pada **Vendor Information**, konfigurasi field **PKP**:
+- **Dicentang** — Nomor faktur pajak bersifat mandatory.
+
+![pkp](../bp_pkp.png "Business Partner PKP") {#Figure245}
+
+- **Tidak dicentang** — Nomor faktur pajak tidak mandatory.
+
+![non pkp](../bp_non_pkp.png "Business Partner Non PKP") {#Figure246}
+
+4. Klik **Save**.
+
+Berikut contoh implementasi PKP di Kontra Bon:
+
+- Business Partner dengan PKP
+
+![pkp](../kb_pkp.png "Mandatory Faktur Pajak") {#Figure247}
+
+- Business Partner Non-PKP
+
+![non](../kb_non.png "Faktur Pajak Non Mandatory") {#Figure248}
+## Mekanisme Tanggal Penerimaan Invoice
+
+**Tanggal Penerimaan Invoice** dan **Tanggal Kontra Bon** adalah dua tanggal yang berbeda dengan fungsi masing-masing dalam proses Kontra Bon. Kedua tanggal ini bersifat _updatable_ karena dalam kondisi tertentu perusahaan dapat menerima invoice setelah tanggal jatuh tempo.
+
+Pada kondisi tersebut, Tanggal Penerimaan Invoice dapat diinput atau diperbarui sesuai tanggal aktual penerimaan invoice — bahkan setelah dokumen Kontra Bon di-complete.
+
+![confirm](../tgl_confirm_inv.png "Tanggal Penerimaan Invoice") {#Figure249}
+
+Mekanisme ini memastikan sistem dapat merepresentasikan kondisi aktual proses administrasi invoice, khususnya ketika invoice dari vendor diterima perusahaan setelah melewati tanggal jatuh tempo.
 ## Mekanisme Kontra Bon
 
 ### Kontra Bon dengan Purchase Order
@@ -16,18 +76,19 @@ Kontra Bon bukan transaksi pembayaran — fungsinya adalah mengelompokkan dan me
 7. Input nomor **PO** yang akan diproses.
 8. Masuk ke tab **Line**.
 9. Input nomor **MR/BPB**.
-10. Tentukan **tanggal faktur pajak**.
-11. Input **nomor invoice supplier**.
-12. Input **nomor faktur pajak**.
-13. Input **Amount Debit Note** — isi jika terdapat pengurangan nilai pada tagihan.
-14. Tentukan **Charge** atas Amount Debit Note.
-15. Centang field **Confirm Qty**.
-16. Centang field **Confirm Total**.
+10. Tentukan **tanggal penerimaan invoice**.
+11. Tentukan **tanggal faktur pajak**.
+12. Input **nomor invoice supplier**.
+13. Input **nomor faktur pajak**.
+14. Input **Amount Debit Note** — isi jika terdapat pengurangan nilai pada tagihan.
+15. Tentukan **Charge** atas Amount Debit Note.
+16. Centang field **Confirm Qty**.
+17. Centang field **Confirm Total**.
 
 ![line](../kontra_line_po.png "SIS Kontra Line") {#Figure223}
 
-17. Klik **Save**.
-18. Klik **Complete** pada dokumen.
+18. Klik **Save**.
+19. Klik **Complete** pada dokumen.
 
 Saat dokumen Kontra Bon di-complete, sistem otomatis menyalin informasi **nomor invoice supplier** dan **nomor faktur pajak** ke invoice. Sistem juga menghitung dan menampilkan **tanggal jatuh tempo** pada invoice berdasarkan tanggal invoice dan **Term of Payment (TOP)** dari Business Partner.
 
@@ -61,16 +122,17 @@ Berikut contoh jurnal alokasi atas Invoice Credit Memo tersebut:
 15. Tentukan **Business Partner**.
 16. Masuk ke tab **Line**.
 17. Input nomor **AP Invoice**.
-18. Tentukan **tanggal faktur pajak**.
-19. Input **nomor invoice supplier**.
-20. Input **nomor faktur pajak**.
-21. Centang field **Confirm Qty**.
-22. Centang field **Confirm Total**.
+18. Tentukan **tanggal penerimaan invoice**.
+19. Tentukan **tanggal faktur pajak**.
+20. Input **nomor invoice supplier**.
+21. Input **nomor faktur pajak**.
+22. Centang field **Confirm Qty**.
+23. Centang field **Confirm Total**.
 
 ![invoice](../kontra_inv.png "Kontra Bon Tanpa PO") {#Figure228}
 
-23. Klik **Save**.
-24. Klik **Complete** pada dokumen.
+24. Klik **Save**.
+25. Klik **Complete** pada dokumen.
 
 Saat dokumen Kontra Bon di-complete, sistem otomatis menyalin informasi **nomor invoice supplier** dan **nomor faktur pajak** ke invoice. Sistem juga menghitung dan menampilkan **tanggal jatuh tempo** pada invoice berdasarkan tanggal invoice dan **Term of Payment (TOP)** dari Business Partner.
 ## Pembayaran Kontra Bon

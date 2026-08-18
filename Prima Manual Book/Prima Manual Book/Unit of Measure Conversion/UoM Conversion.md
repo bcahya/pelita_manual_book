@@ -17,4 +17,33 @@ UoM Conversion diterapkan di Requisition, Purchase Order, dan Movement. Karena i
 
 > [Tim PSI merekomendasikan untuk menetapkan standarisasi UoM pada proses Movement, Requisition dan Purchasing dengan tujuan untuk meminimalkan potensi kesalahan input UoM serta memastikan akurasi dalam penentuan harga] Catatan
 
- 
+
+## Ketentuan UoM Conversion
+
+Dalam proses transaksi, satu vendor dapat menggunakan satuan yang berbeda dengan vendor lainnya untuk produk yang sama. Oleh karena itu, sistem perlu mendukung **lebih dari satu UoM Conversion** pada satu product sesuai dengan kebutuhan transaksi masing-masing vendor.
+### Konfigurasi UoM Conversion di Level Product
+
+Lakukan konfigurasi UoM Conversion pada menu **Product** dengan langkah berikut:
+
+1. Buka menu **Product**.
+2. Masuk ke tab **UoM Conversion**.
+3. Tentukan **UoM From** dan **UoM To**.
+4. Tentukan jenis transaksi yang menggunakan konfigurasi tersebut melalui flag:
+- **Movement**
+- **Purchasing**
+- **Requisition**
+
+![uom1](../po1.png "UoM Conversion 1") {#Figure248}
+
+
+![po2](../po2.png "UoM Conversion 2") {#Figure249}
+
+5. Klik **Save** untuk menyimpan konfigurasi.
+
+Meskipun flag **Movement, Requisition, dan Purchasing** dapat diaktifkan secara bersamaan atau lebih dari satu, sistem tetap menggunakan **satu UoM Conversion sebagai default** untuk masing-masing transaksi **Requisition, Purchasing, dan Movement pada POP**.
+
+### Contoh Implementasi
+
+Berikut contoh implementasi **multi UoM Conversion** untuk transaksi **Purchasing**, ketika satu product memiliki satuan pembelian yang berbeda sesuai dengan kebutuhan vendor:
+
+![po](../uom__po.png "Implementasi Purchase Order") {#Figure250}
