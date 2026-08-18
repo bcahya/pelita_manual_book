@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md",
+                "file": "Prima Manual Book/main.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Petty Cash dan Kartu Fleet"
+              "title": "main"
             }
           }
         ]
@@ -196,6 +196,13 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
+    "Prima Manual Book/Import Data/Import Data.md",
+    "Prima Manual Book/Tax/Tax.md",
+    "Prima Manual Book/main.md",
+    "Prima Manual Book/Document Sequence/Document Sequence.md",
+    "Prima Manual Book/ICPL/ICPL.md",
+    "Prima Manual Book/Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md",
     "Prima Manual Book/terima_fleet.png",
     "Prima Manual Book/pindah_fleet.png",
     "Prima Manual Book/bank_fleet.png",
@@ -206,22 +213,16 @@
     "fleet.png",
     "Prima Manual Book/petty_pay.png",
     "Prima Manual Book/terima_petty.png",
-    "Prima Manual Book/pindah_petty.png",
     "Prima Manual Book/Report/Report.md",
-    "Prima Manual Book/Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md",
     "Prima Manual Book/Petty Cash dan Kartu Fleet",
-    "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
-    "Prima Manual Book/Tax/Tax.md",
     "Prima Manual Book/Posting Matched Invoice/Posting Matched Invoice.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
-    "Prima Manual Book/ICPL/ICPL.md",
     "Prima Manual Book/Format Report/Format Report.md",
     "Prima Manual Book/Kontra Bon/Kontra Bon.md",
     "Prima Manual Book/AP dan AR Manual/AP dan AR Manual.md",
     "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Prima Manual Book/GL Journal Generator/GL Journal Generator.md",
-    "Prima Manual Book/Document Sequence/Document Sequence.md",
     "Prima Manual Book/Kontra Bon",
     "Prima Manual Book/Pelita POP Visual Data/Pelita POP Visual Data.md",
     "Prima Manual Book/Unit of Measure Conversion/Implementasi di Requisition.md",
@@ -233,7 +234,6 @@
     "Prima Manual Book/Report Stock/Report Stock per Artikel.md",
     "Prima Manual Book/Routing/Routing.md",
     "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
-    "Prima Manual Book/Document Type/Document Type.md",
     "Prima Manual Book/Document Sequence",
     "Prima Manual Book/Invoice Bayangan",
     "Prima Manual Book/Auto Production POS Order",
