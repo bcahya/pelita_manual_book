@@ -20,7 +20,7 @@ Nomor dokumen dapat disesuaikan melalui konfigurasi **Prefix**, **Suffix**, dan 
 
 ![sequence](./doc_seq_match.png "Document Sequence") {#Figure216}
 
-4. Klik Save.
+4. Klik **Save**.
 ## Konfigurasi di Document Type
 
 1. Buka menu **Document Type**.
