@@ -56,7 +56,11 @@ Karena proses Delivery dan Receipt saling terhubung, lakukan konfigurasi dua **D
 9. Klik **Save**.
 10. Klik **Complete** pada dokumen Movement.
 
-Saat Movement di-complete, warehouse dan locator tujuan otomatis berubah menjadi warehouse dan locator **In-Transit** sesuai konfigurasi document type. Sistem juga otomatis membuat **Movement Receipt** dari In-Transit ke warehouse dan locator tujuan, beserta informasi **Movement Source/Target** sesuai alur perpindahan barang.
+Saat Movement di-complete, warehouse dan locator tujuan otomatis berubah menjadi warehouse dan locator **In-Transit** sesuai konfigurasi document type. Selain itu, field **Warehouse Target** — yaitu warehouse tujuan movement — akan muncul secara otomatis.
+
+![shipment](../wh_target.png "Movement Delivery") {#Figure258}
+
+Sistem juga otomatis membuat **Movement Receipt** dari In-Transit ke warehouse dan locator tujuan, beserta informasi **Movement Source/Target** sesuai alur perpindahan barang.
 
 ![shipment](../move_ship.png "Movement Delivery") {#Figure148}
 ### Proses Penerimaan (Receipt)
