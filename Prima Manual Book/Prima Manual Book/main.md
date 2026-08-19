@@ -86,6 +86,7 @@
 .include {Tools/Tools.md}
 .include {Security di iDempiere/Security di iDempiere.md}
 .include {Invoice Bayangan/Invoice Bayangan.md}
+.include {Auto Production POS Order/Auto Production POS Order.md}
 .include {Estimated Landed Cost/Estimated Landed Cost.md}
 .include {Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md}
 .include {Kontra Bon/Kontra Bon.md}

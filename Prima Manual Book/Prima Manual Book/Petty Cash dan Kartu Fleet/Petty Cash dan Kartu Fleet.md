@@ -78,3 +78,61 @@ Saat Bank/Cash Transfer di-complete, sistem membentuk dua dokumen payment dengan
 ### Proses Matching Ayat Silang melalui Bank Statement
 
 ![bank](../bank_fleet.png "Bank Statement Kartu Fleet") {#Figure250}
+
+## Invoice Biaya atas Kartu Fleet
+
+Kartu Fleet digunakan untuk mencatat dan memantau kendaraan perusahaan beserta transaksi yang berkaitan. Pencatatan biaya atas Kartu Fleet diakui sebagai beban dan dilakukan tanpa PO maupun MR/BPB.
+
+Agar invoice biaya Kartu Fleet yang sudah di-complete otomatis membentuk dokumen **Payment**, lakukan konfigurasi pada **Document Type Invoice** terlebih dahulu. Ikuti langkah berikut:
+
+1. Buka menu **Document Type**.
+2. Klik **New**.
+3. Isi **Name** sesuai kebutuhan operasional.
+4. Pada field **Document Base Type**, pilih **AP Invoice**.
+5. Centang field **Document Number Is Controlled**.
+6. Centang field **Auto Payment**.
+7. Tentukan **Document Type Payment Fleet**.
+8. Tentukan **Document Action** atas Payment Fleet.
+9. Field **Auto Bank Statement** — jika dicentang, sistem otomatis membuat Bank Statement saat Payment di-complete.
+10. Tentukan **Document Type Bank Statement Fleet**.
+11. Tentukan **Document Action** atas Bank Statement Fleet.
+
+![konfig](../konfig_inv_fleet.png "Konfigurasi Document Type Invoice Kartu Fleet") {#Figure250}
+
+12. Klik **Save**.
+### Langkah Membuat AP Invoice Biaya Kartu Fleet
+
+1. Buka menu **Purchase Invoice and Credit/Debit Note**.
+2. Tentukan **Target Document Type**.
+3. Tentukan **Business Partner**.
+4. Tentukan **Bank Account** yang digunakan.
+5. Masuk ke **Invoice Line**.
+6. Tentukan **Charge** atau biaya yang akan diproses.
+7. Tentukan **Qty** _(default 1)_.
+8. Tentukan **Price** untuk biaya tersebut.
+
+![inv](../inv_biaya_fleet.png "Invoice Biaya Kartu Fleet") {#Figure251}
+
+9. Klik **Save**.
+10. Klik **Complete**.
+
+Berikut contoh jurnal yang terbentuk atas invoice biaya _(nama akun dapat disesuaikan dengan ketentuan)_:
+
+![jurnal](../jurnal_inv_fleet.png "Jurnal Invoice Biaya Kartu Fleet") {#Figure252}
+
+Setelah Invoice di-complete, sistem otomatis membuat dokumen **Payment** atas invoice tersebut. Document Action pada Payment mengikuti konfigurasi di Document Type Invoice.
+
+![pay](../payment_fleet.png "Payment Invoice Biaya") {#Figure253}
+
+Berikut contoh jurnal yang terbentuk saat Payment di-complete:
+
+![jurnal](../jurnal_payment_fleet.png "Jurnal Payment") {#Figure254}
+
+Saat Payment di-complete, sistem otomatis membuat dokumen **Bank Statement** sesuai konfigurasi sebelumnya. 
+
+![bs](../bs_fleet_2.png "Bank/Cash Statement") {#Figure255}
+
+
+![jurnal](../jurnal_bs_fleet.png "Jurnal Bank Statement") {#Figure256}
+
+Informasi pada Bank Statement diambil dari invoice dan payment, sehingga setiap Payment dan Bank Statement dapat ditelusuri kaitannya dengan invoice dan Business Partner yang bersangkutan.

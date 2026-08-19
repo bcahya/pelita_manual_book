@@ -95,3 +95,46 @@ Saat import gagal, file tidak berpindah ke folder **done**. Sistem otomatis memb
 ![Error](../Error.png "Log Error File Import") {#Figure91}
 
 Jika file pertama belum diperbaiki dan file kedua yang diimport juga tidak sesuai format, sistem menampilkan pesan error yang sama. File akan tetap berada di folder PO Import dan tidak akan berpindah hingga kesalahan pada file diperbaiki.
+
+## Report PO Kecil
+
+Report PO Kecil digunakan untuk menampilkan informasi Purchase Order dengan format PO Kecil sesuai kebutuhan operasional. Report ini mengambil data dari transaksi Purchase Order beserta informasi pendukung yang telah dikonfigurasi. Report PO Kecil memuat informasi **Regional** dan **Area** yang digunakan untuk mengelompokkan PO berdasarkan lokasi atau wilayah outlet/warehouse tujuan.
+
+### Mekanisme Konfigurasi Regional dan Area
+
+Informasi Regional dan Area pada Report PO Kecil mengikuti konfigurasi **SIS Regional** dan **Sales Region**. SIS Regional menentukan struktur wilayah yang digunakan perusahaan, sedangkan Sales Region berfungsi sebagai pengelompokan wilayah yang ditampilkan pada report.
+
+#### Konfigurasi Regional
+
+1. Buka menu **SIS Regional**.
+2. Tentukan Regional yang digunakan, misalnya:
+- Jakarta
+- Jawa Barat
+
+![region](../sis_regional.png "Regional") {#Figure255}
+
+3. Masuk ke tab **Sales Region**.
+4. Tentukan **Search Key** dan **Name** dari region, contoh: Jakarta Pusat, Jakarta Utara, dan sebagainya.
+
+![sr](../sales_region.png "Sales Region") {#Figure256}
+
+5. Klik **Save**.
+
+#### Konfigurasi Sales Region pada Warehouse
+
+1. Buka menu **Warehouse and Locators**.
+2. Tentukan warehouse yang akan dikonfigurasi.
+3. Pada field **Sales Region**, tentukan Sales Region untuk masing-masing Warehouse/Outlet.
+
+![wh](../wh_sales_region.png "Konfigurasi Sales Region di Warehouse") {#Figure257}
+
+4. Klik **Save**.
+
+Setiap Warehouse/Outlet akan terhubung dengan Regional melalui Sales Region yang telah dikonfigurasi. Saat PO Kecil dibuat dengan Warehouse/Outlet tujuan tertentu, sistem mengambil Sales Region dari master Warehouse tersebut untuk menentukan **Regional** dan **Area** yang ditampilkan pada Report PO Kecil.
+### Langkah Proses Report PO Kecil
+
+1. Buka menu **Print Report PO Kecil**.
+2. Tentukan **periode** yang akan diproses.
+3. Klik **OK**.
+
+![po kecil](../print_report_po_kecil.png "Report Rekapitulasi PO Kecil") {#Figure258}
