@@ -1,4 +1,4 @@
-.docname {20260801 Pelita Prima Manual Book}
+.docname {20260815 Pelita Prima Manual Book}
 .doctype {paged}
 .doclang {English}
 .theme {paperwhite} layout:{latex}
