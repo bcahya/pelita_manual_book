@@ -11,7 +11,7 @@
 .pagemargin {bottomright}
     .currentpage
 .pagemargin {bottomleft}
-    Versi 2026-08-01
+    Versi 2026-08-15
 .pageformat margin:{2cm}
 .pageformat bordertop:{1px} borderbottom:{1px}
 
