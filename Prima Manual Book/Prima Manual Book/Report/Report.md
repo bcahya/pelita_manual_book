@@ -636,3 +636,17 @@ Report Payment digunakan untuk menampilkan dan memantau transaksi pembayaran dan
 Berikut contoh Report Printout Payment:
 
 ![payment](../printout_pay.png "Printout Payment") {#Figure221}
+
+## Laporan Outstanding Invoice
+
+Langkah Akses Report Outstanding Invoice:
+
+1. Buka menu **SIS Kontra Bon**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **Report Outstanding Invoice Supplier**.
+4. Klik **OK**.
+
+Berikut contoh Report Outstanding Invoice:
+
+![ots](../lap_ots_inv.png "Laporan Outstanding Invoice") {#Figure255}
+

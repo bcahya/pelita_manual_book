@@ -136,23 +136,21 @@ Lakukan penghapusan melalui menu **SIS Delete Document PO**. Ikuti langkah berik
 
 > **Catatan:** Hanya Purchase Order berstatus **Draft** yang dapat dihapus melalui menu ini.
 
-## Material Receipt
+## Mekanisme Diskon di Purchase Order
 
-Di iDempiere, Material Receipt dapat dibuat secara manual. Ikuti langkah berikut:
+Pada Purchase Order, sistem menggunakan **Price List** sebagai dasar perhitungan harga produk. Oleh karena itu, produk harus memiliki Price List sebelum user dapat menerapkan diskon.
 
-1. Buka menu **Material Receipt**.
-2. Tentukan **Business Partner**.
-3. Tentukan **Warehouse**.
-4. Klik **Create Lines From**.
-5. Pilih dokumen **Purchase Order (PO)** yang akan diproses.
-6. Klik **Create Lines From Shipment/Receipt**.
+User dapat menginput diskon dengan dua metode:
 
-![manual](../mr_manual.png "Create Lines From") {#Figure214}
+### Diskon dalam Value  
 
-7. Receipt Line terisi otomatis sesuai informasi di PO — meliputi produk, locator, dan quantity.
-8. Klik **Save**.
-9. Klik **Complete** pada dokumen Material Receipt.
+User menginput nominal diskon langsung pada field **Discount Value**. Sistem mengurangi Price List dengan nilai diskon tersebut untuk mendapatkan **Price Actual**, kemudian otomatis menghitung persentase diskonnya.
 
-> **Catatan:** MR Line wajib terhubung dengan PO Line. Jika tidak terhubung, sistem akan menampilkan pesan error bahwa Receipt Line harus terhubung dengan PO. Tidak ada Material Receipt yang dapat diproses tanpa referensi PO. Berikut contoh error yang muncul jika MR Line tidak terhubung dengan PO Line:
+![value](../diskon_value.png "Diskon dalam Value") {#Figure256}
+### Diskon dalam Persentase  
 
-![error](../eror_mr.png "Notifikasi Error di MR Line") {#Figure215}
+User menginput diskon dalam bentuk persentase (%) pada field **Discount %**. Sistem menghitung **Discount Value** berdasarkan Price List, kemudian menghitung **Price Actual**. Sistem juga otomatis menghitung nilai diskon dalam bentuk nominalnya.
+
+![persen](../diskon_persen.png "Diskon dalam Persentase") {#Figure257}
+
+Price List merupakan harga dasar, sedangkan diskon digunakan untuk mendapatkan harga setelah diskon (**Price Actual**). Kedua metode input diskon saling mengisi secara otomatis — jika user menginput salah satu, sistem otomatis menghitung yang lainnya.

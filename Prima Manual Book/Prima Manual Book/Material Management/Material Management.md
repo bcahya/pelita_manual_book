@@ -65,3 +65,12 @@ Penentuan adjustment plus atau minus dikonfigurasi di level **Document Type**, s
 - **Adjustment Negatif** — Menunjukkan adanya kekurangan stok yang harus ditambahkan ke sistem. Sistem otomatis **menambah** stok produk.
 
 Setelah dokumen di-complete, sistem otomatis mengkalkulasi ulang quantity produk sesuai konfigurasi dan membentuk jurnal atas penyesuaian tersebut. Nilai jurnal mengikuti cost pada artikel.
+## Report Internal Use
+
+Ikuti langkah berikut untuk mengakses report Internal Use (_Inventory Decrease/Increase_):
+
+1. Buka menu **Inventory Decrease/Increase**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **Print Document Internal Use**.
+4. Klik **OK**.
+
