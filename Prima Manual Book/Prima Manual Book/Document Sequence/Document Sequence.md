@@ -18,7 +18,8 @@ Nomor dokumen dapat disesuaikan melalui konfigurasi **Prefix**, **Suffix**, dan 
 - **Restart Sequence Every Day** — Merestart penomoran setiap hari.
 - **Date Column** — Input _DateOrdered_.
 
-![sequence](./doc_seq_match.png "Document Sequence") {#Figure216}
+
+![sequence](./seq_match.png "Document Sequence") {#Figure216}
 
 4. Klik **Save**.
 ## Konfigurasi di Document Type
