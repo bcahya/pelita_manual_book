@@ -22,7 +22,7 @@ Laporan Kartu Stok berfungsi untuk menyajikan riwayat seluruh transaksi yang mem
 
 3. Klik Start.
 
-![kartu](../kartu_stock.png "Report Kartu Stcok") {#Figure164}
+![kartu](../stock_fg.png "Report Kartu Stcok") {#Figure164}
 
 
 > **Catatan:** Report Kartu Stock hanya menampilkan transaksi yang telah diproses (Completed) sehingga saldo yang ditampilkan mencerminkan kondisi persediaan yang telah tercatat secara resmi di sistem. Transaksi dengan status Drafted, In Progress, atau Voided tidak memengaruhi saldo stok pada laporan ini.

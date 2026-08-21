@@ -105,37 +105,66 @@ Ikuti langkah berikut untuk mengakses report requisition:
 ## Report Material Receipt (MR/BPB)
 
 Report MR digunakan untuk mencetak dokumen permintaan material yang diajukan secara internal oleh divisi produksi ke bagian gudang/persediaan. Permintaan ini diproses lebih lanjut menjadi Purchase Order jika stok tidak mencukupi, atau dipenuhi langsung dari stok gudang. Klasifikasi report MR adalah sebagai berikut:
-### MR Aksesoris
+
+### Material Receipt (MR) Tim PPG
+#### MR Aksesoris
 
 Permintaan material aksesoris produksi seperti kancing, resleting, dan label.
 
 ![aksesoris](../mr_aksesoris.png "MR Aksesoris") {#Figure148}
-### MR Knitting
+#### MR Knitting
 
 Permintaan material/bahan baku untuk kebutuhan proses produksi knitting.
 
 ![knit](../mr_knit.png "MR Knitting") {#Figure149}
-### MR Woven
+#### MR Woven
 
 Permintaan material/bahan baku untuk kebutuhan proses produksi woven. 
 
 ![woven](../mr_woven.png "MR Woven") {#Figure150}
-### MR Sisa Cutting
+#### MR Sisa Cutting
 
 Pencatatan penggunaan sisa hasil cutting (kain/material sisa potong) untuk dimanfaatkan kembali dalam proses produksi.
 
 ![sisa cutting](../mr_sisa_cut.png "MR Sisa Cutting") {#Figure151}
-### MR FID
+#### MR FID
 
 Permintaan material terkait proses/divisi FID sesuai klasifikasi internal perusahaan.
 
 ![FID](../mr_fid.png "MR FID") {#Figure151}
-### MR FB
+#### MR FB
 
 Permintaan material terkait proses/divisi FB sesuai klasifikasi internal perusahaan.
 
 ![FB](../mr_fb.png "MR FB") {#Figure152}
 
+### Material Receipt (MR) Tim SCI
+
+#### MR Umum
+
+![umum](../mr_umum.png "BPB Umum") {#Figure260}
+#### MR Inventaris Outlet
+
+![umum](../mr_inv_outlet.png "BPB Umum") {#Figure261}
+#### MR Inventaris Kantor
+
+![umum](../mr_inv_kantor.png "BPB Umum") {#Figure262}
+#### MR Barang Kemas
+
+![umum](../mr_brg_kemas.png "BPB Umum") {#Figure263}
+#### MR Barang Mentah
+
+![umum](../mr_brg_mentah.png "BPB Umum") {#Figure264}
+#### MR Barang Jadi
+
+![umum](../mr_brg_jadi.png "BPB Umum") {#Figure265}
+#### MR ATK
+
+![umum](../mr_atk.png "BPB Umum") {#Figure266}
+
+#### MR Perlengkapan
+
+![umum](../mr_perlengkapan.png "BPB Umum") {#Figure267}
 ## Report Surat Jalan (Movement)
 
 Ikuti langkah berikut untuk mengakses report surat jalan:

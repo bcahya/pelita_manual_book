@@ -74,3 +74,6 @@ Ikuti langkah berikut untuk mengakses report Internal Use (_Inventory Decrease/I
 3. Klik **Print Document Internal Use**.
 4. Klik **OK**.
 
+![inv](../IU_Inventory.png "Internal Use Inventory"){#Figure268}
+
+![scrap](../IU_Scarp.png "Internal Use Scrap Pabrik") {#Figure269}

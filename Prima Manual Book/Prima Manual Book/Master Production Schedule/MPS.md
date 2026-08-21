@@ -52,7 +52,7 @@ Sebelum menjalankan proses Generate MPS, lakukan konfigurasi Document Type MPS t
   - Quantity produk
   - Mapping data pada file CSV
 
-		![MPS](../MPS_2.png "Hasil Generate MPS") {#Figure28}
+	![MPS](../MPS_2.png "Hasil Generate MPS") {#Figure28}
 
 
 	

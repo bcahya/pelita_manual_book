@@ -9,6 +9,22 @@ ICPL menjadi dasar perhitungan harga pada setiap transaksi. Sistem hanya dapat m
 2. Mendukung beberapa jenis harga, seperti retail, grosir, dan distributor dalam satu sistem.
 3. Menyimpan histori perubahan harga sebagai versi baru.
 4. Menghitung diskon atau markup secara otomatis berdasarkan produk atau kategori.
+
+## Konfigurasi Scheduler Generate PLV
+
+Saat user membuat ICPL Base maupun ICPL Reference, sistem dapat men-generate **Price List Version (PLV)** secara otomatis melalui **Scheduler** tanpa perlu mengklik manual di menu SIS ICPL. Ikuti langkah berikut untuk mengkonfigurasi Scheduler Generate PLV:
+
+1. Buka menu **Scheduler**.
+2. Input **Name** dengan **SIS Auto Generate PLV**.
+3. Pada field **Process**, input **SIS Auto Generate PLV**.
+4. Pada field **Schedule**, tentukan jadwal eksekusi (menit, jam, atau hari).
+5. Pada field **Days to Keep Log**, tentukan berapa lama log hasil eksekusi akan disimpan oleh sistem.
+
+![plv](../sch_plv.png "Konfigurasi Scheduler Auto Generate PLV") {#Figure270}
+
+6. Klik **Save**.
+
+Scheduler mengotomasi eksekusi proses berdasarkan waktu atau interval yang dikonfigurasi. Saat Scheduler berjalan, tab **Log** akan diperbarui sesuai jadwal. Log eksekusi dipertahankan sesuai konfigurasi **Days to Keep Log** — setelah periode tersebut berakhir, log lama dibersihkan otomatis oleh sistem.
 ## Pengaturan ICPL Base
 
 ### Membuat ICPL Base
@@ -44,9 +60,8 @@ Setelah header ICPL tersimpan, tambahkan daftar harga produk melalui tab **Line*
 9. Klik **save**
 10. Ulangi langkah di atas untuk seluruh produk
 11. Klik **complete**
-12. Jalankan proses **Generate PLV** (Price List Version).
-13. Sistem akan menyimpan data header dan menyiapkan versi harga.
 
+Sistem men-generate PLV secara otomatis sesuai jadwal Scheduler. Setelah Price List berhasil ter-create, sistem menampilkan produk beserta harga yang telah ditentukan. Proses generate PLV dapat dipantau melalui tab **Log** — termasuk update harga atau penambahan produk. Ketentuan ini juga berlaku untuk ICPL With Reference.
 ## ICPL With Reference
 
 ICPL With Reference digunakan untuk membuat versi harga baru berdasarkan ICPL Base yang sudah ada. Sistem menghitung harga secara otomatis berdasarkan referensi yang dipilih.
@@ -75,8 +90,8 @@ Ikuti langkah berikut untuk mengkonfigurasi perhitungan harga per kategori:
 ![criteria](../category.png "Kriteria Produk") {#Figure135}
 
 10. Klik **complete**
-11. Jalankan proses **Generate PLV (Price List Version)**.
-12. Sistem menampilkan produk beserta harga yang dihitung otomatis berdasarkan harga ICPL Base + Rate, dengan perbedaan perhitungan price sesuai masing-masing kategori.
+
+Sistem men-generate PLV secara otomatis sesuai Scheduler dan menampilkan produk beserta harga yang dihitung berdasarkan harga ICPL Base + Rate, dengan perbedaan perhitungan sesuai masing-masing kategori.
 ### ICPL with Reference Tanpa Product Category
 
 Jika penentuan harga berlaku untuk semua produk tanpa filter kategori — misalnya berdasarkan ICPL Type seperti _Online_, _Offline_, _Stock Opname_, atau _Inter Company_ — konfigurasi rate tidak perlu dibedakan per kategori.
@@ -167,7 +182,7 @@ Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat 
 7. Klik **save**
 8. Klik **complete**
 
-Saat ICPL Base diperbarui, seluruh ICPL turunan akan ikut ter-update secara otomatis.
+Saat ICPL Base diperbarui, seluruh ICPL turunan ikut ter-update secara otomatis. Saat ICPL Update di-complete, sistem men-generate PLV secara otomatis. Jika Valid Date berbeda dari sebelumnya, sistem membuat **Price List Version baru** dengan harga dan tanggal terbaru. Proses perubahan harga atau penambahan produk tercatat di tab **Log** sehingga histori perubahan dapat dilacak.
 ### Input Product di ICPL Update
 
 Saat melakukan update di ICPL Base, jumlah produk yang tersedia bisa sangat banyak. Jika hanya perlu memperbarui beberapa produk tertentu, gunakan fitur pencarian dengan karakter khusus berikut:
