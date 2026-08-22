@@ -161,6 +161,8 @@ Setelah proses Generate PLV dijalankan, sistem akan menghitung harga jual berdas
 - Produk yang memiliki konfigurasi khusus akan menggunakan nilai Rate pada level Product, sehingga mengabaikan konfigurasi yang terdapat pada Product Category.
 
 Dengan mekanisme ini, perusahaan dapat menerapkan aturan harga umum untuk satu kategori sekaligus memberikan penyesuaian harga khusus pada produk tertentu tanpa perlu membuat ICPL yang terpisah.
+
+> **Catatan:** Informasi **Sales Transaction**, **Price Include Tax**, dan **Set Lucky Number** pada ICPL Base otomatis tersalin ke ICPL Reference yang menggunakannya.
 ## Update ICPL
 
 Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat mengubah langsung dokumen ICPL dengan status Complete. Hanya ICPL Base yang dapat diperbarui.
