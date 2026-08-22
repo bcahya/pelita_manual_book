@@ -212,6 +212,37 @@ Ikuti langkah berikut untuk mengakses report surat jalan:
 
 ### Surat Jalan tim SCI
 
+#### SJ 1/2 Jadi Gudang Surabaya ke Outlet
+
+![sj sci](../sj_sfg_sby.png "SJ Barang Setengah Jadi Gudang Surabaya ke Outlet") {#Figure270}
+
+#### SJ 1/2 Jadi Gudang Area ke Outlet
+
+![sj sci](../sj_sfg_area.png "SJ Barang Setengah Jadi Gudang Area ke Outlet") {#Figure271}
+
+#### SJ 48 ke Outlet
+
+![sj sci](../sj_48.png "SJ 48 ke Outlet") {#Figure272}
+
+#### SJ 58
+
+![sj sci](../sj_58.png "SJ 58") {#Figure273}
+
+#### SJ ATK
+
+![sj sci](../sj_atk.png "SJ ATK") {#Figure274}
+
+#### SJ Inventaris Outlet
+
+![sj sci](../sj_inv_outlet.png "SJ Inventaris Outlet") {#Figure275}
+
+#### SJ Barang Jadi dan Mentah Gudang Area ke Outlet
+
+![sj sci](../sj_brg_jadi_area.png "SJ Barang Jadi dan Mentah GD Area ke Outlet") {#Figure276}
+
+#### SJ Barang Jadi dan Mentah Gudang Surabaya ke Outlet
+
+![sj sci](../sj_brg_jadi_sby.png "SJ Barang Jadi dan Mentah GD Surabaya ke Outlet") {#Figure277}
 
 ## Report BG (DP Vendor)
 
