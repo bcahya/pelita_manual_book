@@ -73,17 +73,18 @@ Mekanisme ini memastikan sistem dapat merepresentasikan kondisi aktual proses ad
 4. Buka menu **SIS Kontra Bon**.
 5. Tentukan **Document Type** — pilih **Kontra Bon PO Lengkap**.
 6. Tentukan **Document Date**.
-7. Input nomor **PO** yang akan diproses.
-8. Masuk ke tab **Line**.
-9. Input nomor **MR/BPB**.
-10. Tentukan **tanggal penerimaan invoice**.
-11. Tentukan **tanggal faktur pajak**.
-12. Input **nomor invoice supplier**.
-13. Input **nomor faktur pajak**.
-14. Input **Amount Debit Note** — isi jika terdapat pengurangan nilai pada tagihan.
-15. Tentukan **Charge** atas Amount Debit Note.
-16. Centang field **Confirm Qty**.
-17. Centang field **Confirm Total**.
+7. Tentukan **Business Partner**.
+8. Klik **Generate Kontra Bon Line**.
+9. **Nomor PO, Nomor MR, Nomor Invoice** akan tergenerate otomatis.
+10. Masuk ke tab **Line**.
+11. Tentukan **tanggal penerimaan invoice**.
+12. Tentukan **tanggal faktur pajak**.
+13. Input **nomor invoice supplier**.
+14. Input **nomor faktur pajak**.
+15. Input **Amount Debit Note** — isi jika terdapat pengurangan nilai pada tagihan.
+16. Tentukan **Charge** atas Amount Debit Note.
+17. Centang field **Confirm Qty**.
+18. Centang field **Confirm Total**.
 
 ![line](../kontra_line_po.png "SIS Kontra Line") {#Figure223}
 
@@ -120,14 +121,15 @@ Berikut contoh jurnal alokasi atas Invoice Credit Memo tersebut:
 13. Tentukan **Document Type** — pilih **Kontra Bon Non PO** atau **PO Invoice**.
 14. Tentukan **Document Date**.
 15. Tentukan **Business Partner**.
-16. Masuk ke tab **Line**.
-17. Input nomor **AP Invoice**.
-18. Tentukan **tanggal penerimaan invoice**.
-19. Tentukan **tanggal faktur pajak**.
-20. Input **nomor invoice supplier**.
-21. Input **nomor faktur pajak**.
-22. Centang field **Confirm Qty**.
-23. Centang field **Confirm Total**.
+16. Klik **Generate Kontra Bon Line**.
+17. **Nomor Invoice** akan tergenerate otomatis.
+18. Masuk ke tab **Line**.
+19. Tentukan **tanggal penerimaan invoice**.
+20. Tentukan **tanggal faktur pajak**.
+21. Input **nomor invoice supplier**.
+22. Input **nomor faktur pajak**.
+23. Centang field **Confirm Qty**.
+24. Centang field **Confirm Total**.
 
 ![invoice](../kontra_inv.png "Kontra Bon Tanpa PO") {#Figure228}
 
@@ -135,6 +137,8 @@ Berikut contoh jurnal alokasi atas Invoice Credit Memo tersebut:
 25. Klik **Complete** pada dokumen.
 
 Saat dokumen Kontra Bon di-complete, sistem otomatis menyalin informasi **nomor invoice supplier** dan **nomor faktur pajak** ke invoice. Sistem juga menghitung dan menampilkan **tanggal jatuh tempo** pada invoice berdasarkan tanggal invoice dan **Term of Payment (TOP)** dari Business Partner.
+
+> **Catatan:** Field **Generate Kontra Bon Line** mengakomodasi kondisi di mana satu Kontra Bon dapat memuat multi invoice dan multi PO dengan Business Partner yang sama, sehingga satu dokumen Kontra Bon dapat terdiri dari beberapa line. Proses generate ini hanya berlaku untuk PO, MR, dan Invoice berstatus _Complete_. PO atau Invoice yang sudah ter-generate tidak akan muncul di window jika dilakukan generate ulang dengan Business Partner yang sama pada dokumen yang berbeda.
 ## Pembayaran Kontra Bon
 
 1. Buka menu **Payment and Receipt**.
