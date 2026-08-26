@@ -52,11 +52,18 @@ Untuk pembayaran atas beberapa invoice, sistem mengkalkulasi total amount seluru
 
 Di iDempiere, transaksi DP atau Pre Payment diproses melalui menu **Payment and Receipt** dengan mengacu pada **Purchase Order (PO)**. Nomor PO digunakan sebagai referensi untuk menjaga keterkaitan antara proses pembelian dan pembayaran sehingga seluruh transaksi dapat ditelusuri hingga proses penyelesaian invoice.
 
-Jika perusahaan melakukan pembayaran DP tanpa melalui proses pembelian yang memerlukan Purchase Order, buat **PO Dummy** khusus sebagai dokumen referensi pembayaran. PO Dummy hanya berfungsi sebagai acuan administrasi agar transaksi Payment tetap mengikuti mekanisme standar iDempiere dan keterkaitan antar dokumen tetap terjaga.
+Selain dengan PO, iDempiere juga mendukung **Pre Payment tanpa PO** yang dikonfigurasi di level **Document Type**.
+### Konfigurasi Document Type Pre Payment
 
-Penggunaan PO Dummy sebaiknya diatur melalui kebijakan internal perusahaan — misalnya dengan membuat tipe dokumen atau penomoran khusus — agar mudah dibedakan dari Purchase Order untuk proses pembelian normal.
+Pada Document Type AP Payment, terdapat field **Pre Payment** dengan ketentuan berikut:
 
-### Langkah Pembayaran dengan DP
+- **Dicentang (Y)** — Pre Payment dapat dilakukan tanpa Purchase Order.
+- **Tidak dicentang (N)** — Pre Payment hanya dapat diproses jika sudah terdapat Purchase Order.
+
+![dp](../Screenshot_2026-08-26_152920.png "Document Type Pre Payment tanpa PO") {Figure270}
+
+Sesuaikan konfigurasi ini dengan kebutuhan operasional perusahaan.
+### Langkah Pre Payment dengan PO
 
 1. Buka menu **Payment and Receipt**.
 2. Tentukan **Bank Account** yang akan digunakan.
@@ -73,6 +80,22 @@ Saat nomor PO diinput, field **Prepayment** terisi otomatis. Berikut contoh jurn
 ![jurnal](../jurnal_dp.png "Jurnal Pre Payment") {#Figure189}
 
 Konfigurasi akun yang digunakan dalam transaksi dapat disesuaikan dengan kebijakan tim Finance.
+### Langkah Pre Payment tanpa PO
+
+1. Buka menu **Payment and Receipt**.
+2. Tentukan **Bank Account** yang akan digunakan.
+3. Tentukan **Document Type** yang akan digunakan.
+4. Pilih **Business Partner** yang akan diproses.
+5. Input **Payment Amount**.
+6. Klik **Save**.
+
+![save](../Screenshot_2026-08-26_153133.png "Pre Payment tanpa PO") {#Figure271}
+
+7. Klik **Complete** pada dokumen Payment and Receipt.
+
+Saat dokumen disimpan, field **Prepayment** terisi otomatis. Berikut contoh jurnal transaksi pembayaran DP (_Pre Payment_):
+
+![jurnal](../Screenshot_2026-08-26_153407.png "Jurnal Pre Payment") {#Figure272}
 ## Pembayaran Valuta Asing (Valas)
 
 Sebelum melakukan pembayaran menggunakan mata uang asing, perusahaan harus mengonfigurasi **Currency Rate** sebagai dasar konversi nilai transaksi ke mata uang dasar perusahaan. Sistem akan menggunakan konfigurasi tersebut untuk menentukan kurs yang berlaku pada saat pembayaran.
