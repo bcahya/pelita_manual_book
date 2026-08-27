@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
+                "file": "Prima Manual Book/Item Type Product/Implementasi Item Type di Product.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mekanisme Pembayaran"
+              "title": "Implementasi Item Type di Product"
             }
           }
         ]
@@ -196,6 +196,8 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/POP, BoM dan MO/Bill of Material.md",
+    "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
     "Prima Manual Book/Screenshot_2026-08-26_153133.png",
     "Prima Manual Book/Screenshot_2026-08-26_153407.png",
     "Prima Manual Book/Screenshot_2026-08-26_152920.png",
@@ -209,11 +211,9 @@
     "Prima Manual Book/Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md",
     "Prima Manual Book/Kontra Bon/Kontra Bon.md",
     "Prima Manual Book/ICPL/ICPL.md",
-    "Prima Manual Book/POP, BoM dan MO/Bill of Material.md",
     "prod_component.png",
     "Prima Manual Book/prod_component.png",
     "Prima Manual Book/sj_sfg_area.png",
-    "Prima Manual Book/sj_48.png",
     "Prima Manual Book/Purchase Price Contract/Purchase Price Contract.md",
     "Prima Manual Book/Report Stock/Report Kartu Stock.md",
     "Prima Manual Book/Report Stock/Report Stock per Warehouse.md",

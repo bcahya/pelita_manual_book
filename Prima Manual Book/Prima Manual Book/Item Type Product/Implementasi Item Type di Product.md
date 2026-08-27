@@ -32,3 +32,40 @@ Apabila produk memiliki varian, user dapat mengatur varian tersebut pada menu **
 Setelah Variant Attribute selesai dikonfigurasi, user dapat menjalankan proses **Generate Product Variant**. Sistem akan otomatis membentuk kode artikel berdasarkan template Item Type yang telah dikonfigurasi, kemudian menambahkan kode varian sesuai atribut produk.
 
 ![Product Varian](../KodefikasiProdukVarian.png "Kode Artikel Product Varian") {#Figure8}
+
+## Product Type SIS Template Compatible
+
+### Create Product dengan Copy Product dengan Item Type
+
+Langkah untuk membuat product baru dengan copy product yang memiliki item type:
+
+1. Buka menu **Product**.
+2. Pilih Product yang memiliki **Item Type** sebagai template.
+3. Klik **Copy Product**.
+4. Pada Product baru, pilih **Product Type = SIS Template Compatible**.
+5. Input **Kode Artikel** sesuai artikel yang akan dibuat.
+6. Klik save.
+
+Saat product disimpan sistem akan:
+
+- Jika **Product Segment** dengan kode yang sama sudah tersedia, sistem menggunakan Product Segment tersebut.
+- Jika **Product Segment** belum tersedia, sistem otomatis membuat **Product Segment baru** berdasarkan Kode Artikel.
+- Sistem otomatis membentuk **Product Info** berdasarkan Product Segment.
+- Jika Kode Artikel Product baru berbeda dengan Kode Artikel pada Product Item Type yang disalin, sistem otomatis memperbarui **Item Type** mengikuti Product Segment pada Product baru.
+### Create Product Baru Menggunakan Tombol Plus (+)
+
+Langkah untuk membuat product baru:
+
+1. Buka menu **Product**.
+2. Klik tombol **Plus (+)** untuk membuat Product baru.
+3. Pilih **Product Type = SIS Template Compatible**.
+4. Input **Kode Artikel**.
+5. Input **Nama Product** sesuai kebutuhan.
+6. Klik save.
+
+Saat product disimpan:
+
+
+- Nama Product tetap menggunakan nama yang diinput oleh user.
+- Nama Product **tidak terhubung dengan Product Segment** pada kode artikel.
+- Saat Product disimpan, sistem **tidak otomatis membentuk Product Info**.
