@@ -703,7 +703,7 @@ Berikut contoh Report Printout Payment:
 
 ![payment](../printout_pay.png "Printout Payment") {#Figure221}
 
-## Laporan Outstanding Invoice
+## Laporan Outstanding Invoice Supplier SCI
 
 Langkah Akses Report Outstanding Invoice:
 
@@ -716,3 +716,16 @@ Berikut contoh Report Outstanding Invoice:
 
 ![ots](../lap_ots_inv.png "Laporan Outstanding Invoice") {#Figure255}
 
+## Export Movement Window
+
+Langkah Akses Export movement window:
+
+1. Buka menu **SIS Export Movement Window**.
+2. Tentukan **MIC**.
+3. Tentukan **Document Type** yang akan dicek.
+4. Tentukan **Document Status**.
+5. Klik **OK**.
+
+Berikut contoh report export movement window:
+
+![move window](../export_mov_wind.png "Export Movement Window") {#Figure274}

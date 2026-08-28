@@ -56,9 +56,9 @@ Warehouse yang digunakan untuk produksi berkaitan dengan **Routing** yang diguna
 Sistem mengambil data **Warehouse To** yang terdaftar dalam routing berdasarkan ketentuan berikut:
 
 - **Routing Action _Manufacture_** — Digunakan untuk produk yang diproduksi secara internal.
-- **Routing Action _Buy_** — Digunakan untuk produk subcon (_Semi Finished Goods_ yang dikerjakan oleh vendor atau pihak ketiga).
+- **Set field Subcontracting** — Digunakan untuk produk subcon (_Semi Finished Goods_ yang dikerjakan oleh vendor atau pihak ketiga).
 
-Agar tampilan lebih sederhana, warehouse dapat difilter berdasarkan flag **Production Warehouse** yang telah dikonfigurasi dan sesuai routing pada produk tersebut. Setelah dikonfigurasi, hanya warehouse dengan flag Production Warehouse yang terdaftar di routing yang akan muncul pada pilihan Production Warehouse di **Bill of Material**.
+Agar tampilan lebih sederhana, warehouse  difilter berdasarkan flag **Production Warehouse** yang telah dikonfigurasi dan sesuai routing pada produk tersebut. Setelah dikonfigurasi, hanya warehouse dengan flag Production Warehouse yang terdaftar di routing yang akan muncul pada pilihan Production Warehouse di **Bill of Material**.
 
 Berikut contoh implementasi filter Production Warehouse di Bill of Material:
 ![bom](../po_bom.png "Filter Production Warehouse di BoM") {#Figure187}

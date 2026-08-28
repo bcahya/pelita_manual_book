@@ -35,37 +35,30 @@ Setelah Variant Attribute selesai dikonfigurasi, user dapat menjalankan proses *
 
 ## Product Type SIS Template Compatible
 
-### Create Product dengan Copy Product dengan Item Type
-
-Langkah untuk membuat product baru dengan copy product yang memiliki item type:
-
-1. Buka menu **Product**.
-2. Pilih Product yang memiliki **Item Type** sebagai template.
-3. Klik **Copy Product**.
-4. Pada Product baru, pilih **Product Type = SIS Template Compatible**.
-5. Input **Kode Artikel** sesuai artikel yang akan dibuat.
-6. Klik save.
-
-Saat product disimpan sistem akan:
-
-- Jika **Product Segment** dengan kode yang sama sudah tersedia, sistem menggunakan Product Segment tersebut.
-- Jika **Product Segment** belum tersedia, sistem otomatis membuat **Product Segment baru** berdasarkan Kode Artikel.
-- Sistem otomatis membentuk **Product Info** berdasarkan Product Segment.
-- Jika Kode Artikel Product baru berbeda dengan Kode Artikel pada Product Item Type yang disalin, sistem otomatis memperbarui **Item Type** mengikuti Product Segment pada Product baru.
-### Create Product Baru Menggunakan Tombol Plus (+)
-
-Langkah untuk membuat product baru:
+**SIS Template Compatible** adalah Product Type yang digunakan untuk product yang dibuat berdasarkan **Item Type** sebagai sumber identitas produk. Saat membuat product, user memilih Item Type yang sudah memiliki Kode Artikel. Sistem kemudian menggunakan Kode Artikel dari Item Type tersebut sebagai Kode Artikel pada product yang terbentuk.
+### Mekanisme Pembuatan Product Baru dengan SIS Template Compatible
 
 1. Buka menu **Product**.
-2. Klik tombol **Plus (+)** untuk membuat Product baru.
-3. Pilih **Product Type = SIS Template Compatible**.
-4. Input **Kode Artikel**.
-5. Input **Nama Product** sesuai kebutuhan.
-6. Klik save.
+2. Klik **New**.
+3. Pilih **Product Type SIS Template Compatible**.
+4. Tentukan **Item Type** yang akan digunakan.
 
-Saat product disimpan:
+![product](../sis_compa.png "Product Baru dengan SIS Template Compatible") {#Figure271}
 
+5. Input **Kode Artikel**.
+6. Input **Nama Product** sesuai kebutuhan.
+7. Klik **Save**.
 
-- Nama Product tetap menggunakan nama yang diinput oleh user.
-- Nama Product **tidak terhubung dengan Product Segment** pada kode artikel.
-- Saat Product disimpan, sistem **tidak otomatis membentuk Product Info**.
+Saat product disimpan, sistem otomatis menjalankan proses berikut:
+
+- Saat product baru disimpan, **Product Type** otomatis berubah menjadi **Item**.
+
+![save](../p_baru.png "Product Baru setelah Disimpan") {#Figure272}
+
+- Membentuk **Product Info** berdasarkan Product Segment.
+
+![info](../info.png "Product Info") {#Figure273}
+
+- Jika Product Segment dengan kode yang sama sudah tersedia, sistem menggunakan Product Segment tersebut.
+- Jika Product Segment belum tersedia, sistem otomatis membuat **Product Segment baru** berdasarkan Kode Artikel.
+- Jika Kode Artikel product baru berbeda dengan Kode Artikel pada Product Item Type yang disalin, sistem otomatis memperbarui **Item Type** mengikuti Product Segment pada product baru.

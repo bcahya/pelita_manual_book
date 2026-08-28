@@ -41,6 +41,36 @@ Berikut contoh PO yang terbentuk dari beberapa dokumen Requisition dengan BP yan
 ![multi](../multi_req.png "PO Multi Requisition") {#Figure230}
 
 ![beda bp](../multi_bp.png "PO Multi Requisition dan Multi Business Partner") {#Figure231}
+
+## MOQ (Minimum Order Quantity)
+
+Sistem menggunakan **Minimum Order Quantity (MOQ)** untuk menentukan batas minimum quantity yang dapat dipesan pada Purchase Order berdasarkan quantity pada Requisition.
+### MOQ Dikonfigurasi
+
+Jika produk memiliki konfigurasi MOQ dan **Qty Requisition < MOQ**, user dapat mengisi **Qty PO Release** lebih besar dari Qty Requisition dengan ketentuan Qty PO Release minimal memenuhi nilai MOQ.
+
+Contoh:
+
+- Qty Requisition = 10
+- MOQ = 20
+- Qty PO Release = 20 → **Diperbolehkan**, karena Qty Requisition lebih kecil dari MOQ dan Qty PO Release telah memenuhi nilai MOQ.
+
+Namun, jika **Qty Requisition sudah sama dengan atau lebih besar dari MOQ**, Qty PO Release tidak boleh melebihi Qty Requisition.
+### MOQ Tidak Dikonfigurasi
+
+Jika produk tidak memiliki konfigurasi MOQ, sistem membatasi **Qty PO Release** agar tidak melebihi Qty Requisition.
+
+Contoh 1:
+
+- Qty Requisition = 10
+- MOQ = tidak dikonfigurasi
+- Qty PO Release = 10 → **Diperbolehkan**.
+
+Contoh 2:
+
+- Qty Requisition = 10
+- MOQ = tidak dikonfigurasi
+- Qty PO Release = 15 → **Tidak diperbolehkan**, karena melebihi Qty Requisition.
 ## Proses Purchase Order Manual
 
 1. Buka menu **Purchase Order**
