@@ -169,3 +169,37 @@ Ikuti langkah berikut untuk mengkonfigurasi warehouse di Document Type Purchase 
 ![warehouse](../wh_doc_type.png "Warehouse") {#Figure144}
 
 3. Klik **Save**.
+
+## Auto Shipment dan Auto Invoice dari Sales Order
+
+Fitur **Auto Shipment** dan **Auto Invoice** digunakan untuk mengotomasi pembuatan dokumen Shipment dan Customer Invoice berdasarkan Sales Order yang telah diproses. Dengan konfigurasi ini, user tidak perlu membuat Shipment dan Invoice secara manual untuk setiap Sales Order.
+### Auto Shipment dari Sales Order
+
+Auto Shipment digunakan untuk membuat dokumen Shipment secara otomatis berdasarkan Sales Order yang sudah _Complete_ dan memenuhi ketentuan pengiriman.
+
+Ikuti langkah berikut untuk mengkonfigurasi Auto Generate Shipment:
+
+1. Buka **Document Type Standard Order**, **POS Order**, atau document type lain yang menggunakan document base type Sales Order.
+2. Centang field **PO/SO. Generate MR/Shipment** — field **PO/SO. Document Type for MR/Shipment** akan muncul secara otomatis.
+3. Pilih **PO/SO. Document Type for MR/Shipment** sesuai kebutuhan perusahaan.
+4. Pada field **PO/SO. Document Action For MR/Shipment**, pilih document action untuk menentukan status Shipment yang ter-generate — _Draft_ atau _Complete_.
+
+![Generate](../auto_ship.png "Generate Shipment") {#Figure276}
+
+5. Klik save
+
+Saat Sales Order di-complete, sistem otomatis men-generate MR/Shipment dengan status _Complete_ atau _Draft_ sesuai konfigurasi.
+### Auto Invoice dari Shipment
+
+Auto Invoice digunakan untuk membuat **Customer Invoice** secara otomatis berdasarkan transaksi penjualan yang telah memenuhi ketentuan invoice.
+
+Ikuti langkah berikut untuk melakukan konfigurasi:
+
+1. Buka menu **Document Type MM Shipment**.
+2. Centang field **MR/Shipment. Auto Invoice AP/AR** untuk mengaktifkan auto-generation invoice.
+3. Pada field **MR/Shipment. Document Type Invoice AP/AR** yang muncul, pilih document type invoice yang sesuai.
+4. Pada field **MR/Shipment. Document Action Invoice AP/AR**, pilih document action untuk menentukan status invoice yang ter-generate — _Prepare_ atau _Complete_.
+
+![Auto](../auto_invoice.png "Auto Invoice") {#Figure277}
+
+5. Klik save.

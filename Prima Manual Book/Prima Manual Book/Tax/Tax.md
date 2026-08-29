@@ -171,3 +171,31 @@ Berikut contoh jurnal invoice dengan Tax Combination (_Price Not Include Tax_):
 Berikut contoh jurnal invoice dengan Tax Combination (_Price Include Tax_):
 
 ![jurnal](../jurnal_include_tax.png "Jurnal Include Tax") {#Figure217}
+
+## Konfigurasi Tax Access di Document Type
+
+1. Buka menu **Document Type**.
+2. Tentukan document type yang akan dikonfigurasi.
+3. Centang field **Tax Rate Access** pada header untuk mengaktifkan pembatasan tax rate.
+4. Klik **Generate Tax Rate Access**, kemudian input tax rate yang akan diproses.
+
+![gen](../gen_tax.png "Generate Tax Rate Access") {#Figure275}
+
+5. Klik **SIS Generate Tax Rate Access**.
+6. Tab **Tax Rate Access** akan menampilkan daftar tax rate yang telah dikonfigurasi.
+
+![tax](../tax_rate_acc.png "Tax Rate Access") {#Figure276}
+
+Ulangi langkah di atas untuk setiap document type lain yang memerlukan konfigurasi. Jika transaksi tidak memerlukan pembatasan tax rate, konfigurasi ini tidak perlu dilakukan.
+
+### Implementasi Tax Access
+
+1. Buka menu **Purchase Order**.
+2. Pilih **Document Type** yang telah dikonfigurasi.
+3. Input **Business Partner**.
+4. Input **Warehouse** untuk penempatan produk.
+5. Tentukan **tax rate** yang akan digunakan — sistem hanya menampilkan tax rate yang sesuai konfigurasi Tax Rate Access.
+
+![tax](../po_tax.png "Tax Rate di Purchase Order") {#Figure277}
+
+6. Klik **Save**.

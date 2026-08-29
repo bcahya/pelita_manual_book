@@ -23,7 +23,6 @@ Karena konfigurasi berlaku per document type, lakukan konfigurasi untuk setiap d
 5. Klik **Generate Product,** kemudian input produk-produk yang akan diproses.
 6. Klik **SIS Generate Product Access**.
 7. Tab **Product Access** akan menampilkan daftar produk yang telah dikonfigurasi.
-
 ### Konfigurasi Product Category Access
 
 1. Buka menu **Document Type**

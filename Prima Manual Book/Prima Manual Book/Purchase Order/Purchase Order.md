@@ -42,6 +42,11 @@ Berikut contoh PO yang terbentuk dari beberapa dokumen Requisition dengan BP yan
 
 ![beda bp](../multi_bp.png "PO Multi Requisition dan Multi Business Partner") {#Figure231}
 
+Terdapat relasi antara quantity Requisition dan Purchase Order. Saat membuat Requisition, quantity yang diinput otomatis ter-set di Purchase Order pada tab **Requisition Line** sesuai quantity di Requisition. Jika menggunakan UoM Conversion, quantity yang ter-set adalah quantity dalam satuan **UoM Base**.
+
+Berikut contoh relasi quantity Requisition dengan Purchase Order:
+
+![qty](../req_pr_po.png "Qty Requisition pada Purchase Order") {#Figure275}
 ## MOQ (Minimum Order Quantity)
 
 Sistem menggunakan **Minimum Order Quantity (MOQ)** untuk menentukan batas minimum quantity yang dapat dipesan pada Purchase Order berdasarkan quantity pada Requisition.

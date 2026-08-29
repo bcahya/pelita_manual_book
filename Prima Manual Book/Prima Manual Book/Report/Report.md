@@ -210,6 +210,13 @@ Ikuti langkah berikut untuk mengakses report surat jalan:
 
 ![aks](../sj_aks_pabrik.png "SJ Aksesoris ke Pabrik") {#Figure242}
 
+#### SJ Finished Goods
+
+Report Surat Jalan Finished Goods memuat informasi harga yang diambil dari konfigurasi **ICPL Offline** pada masing-masing outlet atau warehouse. Harga yang ditampilkan ditentukan berdasarkan ICPL yang dikonfigurasi di warehouse tujuan.
+
+Berikut contoh Surat Jalan Finished Goods:
+
+![sj](../sj_fg.png "Surat Jalan Finished Goods") {#Figure274}
 ### Surat Jalan tim SCI
 
 #### SJ 1/2 Jadi Gudang Surabaya ke Outlet
@@ -729,3 +736,15 @@ Langkah Akses Export movement window:
 Berikut contoh report export movement window:
 
 ![move window](../export_mov_wind.png "Export Movement Window") {#Figure274}
+
+## Export Summary Movement
+
+Langkah Akses Export summary movement:
+
+1. Buka menu **SIS Export Summary Movement**.
+2. Tentukan **Movement Date**.
+3. Klik **OK**.
+
+Berikut contoh report export summary movement:
+
+![summary](../summary_mov.png "Report Summary Movement") {#Figure277}
