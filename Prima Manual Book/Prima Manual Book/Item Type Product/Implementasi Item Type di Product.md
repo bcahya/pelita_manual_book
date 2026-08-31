@@ -62,3 +62,15 @@ Saat product disimpan, sistem otomatis menjalankan proses berikut:
 - Jika Product Segment dengan kode yang sama sudah tersedia, sistem menggunakan Product Segment tersebut.
 - Jika Product Segment belum tersedia, sistem otomatis membuat **Product Segment baru** berdasarkan Kode Artikel.
 - Jika Kode Artikel product baru berbeda dengan Kode Artikel pada Product Item Type yang disalin, sistem otomatis memperbarui **Item Type** mengikuti Product Segment pada product baru.
+
+## Field Update Product Info
+
+Field **Update Product Info** digunakan untuk memperbarui Product Info yang sudah terbentuk di master product yang menggunakan Item Type tertentu. Jika terdapat perubahan segmentasi pada Item Type, user dapat memperbarui Kode Artikel yang menggunakan Item Type tersebut melalui field ini.
+
+Ikuti langkah berikut untuk melakukan update Product Info:
+
+1. Buka menu **Product**.
+2. Tentukan product yang akan diperbarui.
+3. Klik field **Update Product Info**.
+
+Sistem otomatis memperbarui Product Info pada product tersebut sesuai segmentasi Item Type yang terbaru.
