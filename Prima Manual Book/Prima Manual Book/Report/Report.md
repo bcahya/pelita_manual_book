@@ -728,14 +728,15 @@ Berikut contoh Report Outstanding Invoice:
 Langkah Akses Export movement window:
 
 1. Buka menu **SIS Export Movement Window**.
-2. Tentukan **MIC**.
-3. Tentukan **Document Type** yang akan dicek.
-4. Tentukan **Document Status**.
-5. Klik **OK**.
+2. Tentukan **Movement Date**.
+3. Tentukan **MIC**.
+4. Tentukan **Document Type** yang akan dicek.
+5. Tentukan **Document Status**.
+6. Klik **OK**.
 
 Berikut contoh report export movement window:
 
-![move window](../export_mov_wind.png "Export Movement Window") {#Figure274}
+![move window](../move_window.png "Export Movement Window") {#Figure274}
 
 ## Export Summary Movement
 
