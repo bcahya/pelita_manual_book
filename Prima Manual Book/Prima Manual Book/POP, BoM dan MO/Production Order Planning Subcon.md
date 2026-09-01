@@ -67,7 +67,6 @@ Setelah produksi Semi Finished Goods selesai dan stok tersedia di warehouse, pro
 12. Setelah quantity ditentukan, lakukan **Complete Document MO**. Sistem akan menjalankan proses production secara otomatis dan mengkonsumsi:
   - Raw Material
   - Semi Finished Goods
-
 ## Inventory Move Subcon
 
 Pada **Production Order Planning (POP) Subcon** — di mana proses produksi melibatkan pihak luar — saat Purchase Order (PO) untuk Subcon di-complete, sistem otomatis membuat dokumen **Inventory Move** untuk artikel tersebut.
@@ -77,3 +76,19 @@ Untuk membedakan movement artikel Subcon dari artikel yang diproduksi secara int
 Berikut contoh implementasi penyalinan Business Partner di Inventory Move artikel Subcon:
 
 ![bp](../bp_movement.png "Informasi Business Partner di Inventory Move") {#Figure185}
+
+## Cost Adjustment Hasil CMT
+
+Product subcon dapat memiliki komponen berupa bahan baku (_raw material_) yang dibeli perusahaan dan dikirim ke vendor subcon. Saat bahan baku dipindahkan ke gudang subcon dan dokumen Movement di-complete, sistem otomatis membentuk **Internal Use** atas bahan baku tersebut.
+
+![auto iu](../auto_iu_cmt.png "Auto Internal Use") {#Figure277}
+
+Konfigurasi auto Internal Use dilakukan di **master Locator Warehouse Subcon**. Jika konfigurasi ini tidak dilakukan, sistem tidak akan membentuk Internal Use secara otomatis saat produk dipindahkan ke gudang subcon.
+
+
+![auto iu](../auto_iu_loc_cmt.png "Konfigurasi Auto Internal Use di Locator - Warehouse") {#Figure278}
+
+
+Pada **Production Order Planning (POP)** yang menggunakan subcon, hasil produksi subcon diterima melalui **BPB/MR**. Penerimaan dapat dilakukan secara _parsial_. Saat MR di-complete, sistem otomatis menjalankan proses **Cost Adjustment** atas product subcon tersebut.
+
+![auto iu](../auto_ca_cmt.png "Auto Cost Adjustment") {#Figure279}

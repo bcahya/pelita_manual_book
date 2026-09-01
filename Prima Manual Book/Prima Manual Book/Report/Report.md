@@ -749,3 +749,15 @@ Langkah Akses Export summary movement:
 Berikut contoh report export summary movement:
 
 ![summary](../summary_mov.png "Report Summary Movement") {#Figure277}
+
+## Laporan Listing Perubahan ICPL
+
+Langkah Akses Export summary movement:
+
+1. Buka menu **SIS Report Product ICPL Impact**.
+2. Tentukan **Price List**.
+3. Klik **OK**.
+
+Berikut contoh report listing product yang terdapat perubahan ICPL:
+
+![icpl](../report_list_icpl.png "Report Listing Perubahan ICPL") {#Figure278}

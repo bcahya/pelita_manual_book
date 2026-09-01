@@ -13,17 +13,18 @@ Ikuti langkah berikut untuk membuat AP Invoice Manual:
 2. Tentukan **Target Document Type**.
 3. Tentukan **Business Partner**.
 4. Tentukan **Price List** yang digunakan.
-5. Tentukan **Payment Rule**.
-6. Masuk ke **Invoice Line**.
-7. Tentukan **Charge** atau biaya yang akan diproses.
-8. Tentukan **Qty** _(default 1)_.
-9. Tentukan **Price** untuk tagihan tersebut.
-10. Klik **Save**.
-11. Klik **Complete**.
+5. Masuk ke **Invoice Line**.
+6. Tentukan **Charge** atau biaya yang akan diproses.
+7. Tentukan **Qty** _(default 1)_.
+8. Tentukan **Price** untuk tagihan tersebut.
+9. Klik **Save**.
+10. Klik **Complete**.
 
 Setelah dokumen di-complete, saldo hutang kepada vendor bertambah dan sistem membentuk jurnal akuntansi. Contoh jurnal untuk pembayaran tagihan biaya profesional konsultan:
 
 ![manual](../ap_manual.png "Jurnal AP Manual") {#Figure173}
+
+>**Catatan:** Payment Rule pada menu Purchase Invoice and Credit/Debit Note secara default menggunakan **On Credit**. Namun jika Payment Rule sudah dikonfigurasi di level **Business Partner**, Payment Rule pada invoice otomatis mengikuti konfigurasi tersebut.
 ### AP Credit Note
 
 AP Credit Note digunakan untuk mengurangi kewajiban perusahaan kepada vendor. Dokumen ini bukan merupakan pembayaran, melainkan koreksi terhadap invoice yang telah diterbitkan.

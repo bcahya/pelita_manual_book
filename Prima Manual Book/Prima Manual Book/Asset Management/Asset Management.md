@@ -4,8 +4,6 @@
 
 Asset Movement adalah proses perpindahan aset dari satu lokasi ke lokasi tujuan untuk aktivasi aset. Saat dokumen Invoice atau Purchase Order aset di-complete, sistem otomatis memindahkan aset ke warehouse atau locator tujuan sesuai Material Receipt/BPB, dan field **Locator** di SIS Asset terisi otomatis sesuai locator di Material Receipt.
 
-Jika aset perlu dipindahkan lagi ke outlet tujuan, user harus melakukan **Inventory Move** secara manual. Perpindahan ini menentukan proses depresiasi aset tersebut. Setelah aset dipindahkan ke locator atau outlet tujuan, status aset berubah menjadi **aktif**. Perpindahan aset ditentukan berdasarkan **ASI (Attribute Set Instance)**.
-
 Sebelum melakukan perpindahan aset, konfigurasi warehouse tujuan terlebih dahulu sebagai warehouse untuk depresiasi. Ikuti langkah berikut:
 
 1. Buka menu **Warehouse & Locator**.
@@ -186,7 +184,6 @@ Berikut penjelasan kolom yang tercantum pada report aset:
 - **Locator** — Lokasi fisik penyimpanan aset, digunakan untuk pelacakan fisik saat stock opname atau audit aset.
 - **Attribute Set Instance** — Atribut spesifik unik aset, seperti nomor lot yang membedakan satu unit fisik dari unit lain meski berasal dari produk yang sama.
 - **Document Status** — Status dokumen aset: _Draft_, _Completed_, atau _Closed_.
-
 ## Asset Maintenance
 
 Asset Maintenance adalah proses perbaikan dan perawatan yang dilakukan perusahaan terhadap aset-aset yang sudah ada. Perbaikan ini mencakup biaya perawatan, penggantian sparepart, dan biaya lainnya. Seluruh biaya tersebut diakui langsung sebagai beban — tidak menambah nilai aset dan tidak membentuk aset baru.
@@ -221,3 +218,17 @@ Setelah Invoice di-complete, informasi pada Invoice Line otomatis tersalin ke do
 ![invoice line](../invoice_line_asset.png "Biaya Perawatan Asset") {#Figure150}
 
 > **Catatan:** Asset Maintenance hanya dapat diproses pada aset yang sudah aktif (status dokumen aset _Complete_). Aset yang masih berstatus _Draft_ tidak akan muncul di Invoice Line.
+
+## Product Asset
+
+1. Buka menu **Product**.
+2. Input **Search Key** dan **nama product**.
+3. Pada field **Asset Type**, pilih tipe aset yang sesuai.
+4. Pada field **Attribute Set**, tentukan lot/batch atas product.
+
+![asi](../asi_product.png "Product Asset") {#Figure275}
+
+5. Pada field **Renovation/Repair Asset**, pilih **No** jika merupakan aset baru, atau **Yes** jika merupakan renovasi atas aset yang sudah ada.
+6. Klik **Save**.
+
+Jika product dikonfigurasi menggunakan **Asset Type**, product juga wajib memiliki **Attribute Set**. Attribute Set digunakan untuk menentukan atribut identifikasi atau tracking aset — seperti Serial Number, Lot Number, atau atribut lainnya sesuai kebutuhan bisnis.
