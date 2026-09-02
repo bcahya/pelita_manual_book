@@ -26,6 +26,12 @@ Stock Opname — atau dikenal sebagai **Physical Inventory** di iDempiere — ad
 
 > **Catatan:** Jika ASI tidak diinput saat memproses Physical Inventory, sistem mengkalkulasi quantity berdasarkan artikel tanpa spesifikasi ke ASI atau batch/lot.
 
+### Konfigurasi Sistem
+
+SIS_INVENTORY_EXT_URL dan SIS_INVENTORY_CHARGE5_URL merupakan konfigurasi URL yang digunakan untuk menghubungkan iDempiere dengan tools atau informasi yang tersedia pada server klien. Konfigurasi ini digunakan untuk mendukung proses Stock Opname, khususnya dalam mengakses informasi atau fungsi tambahan yang diperlukan selama transaksi Stock Opname.
+
+- SIS_INVENTORY_EXT_URL adalah URL untuk mengakses tools atau informasi eksternal yang digunakan dalam proses Stock Opname.
+- SIS_INVENTORY_CHARGE5_URL adalah URL untuk mengakses tools atau informasi yang digunakan pada proses Stock Opname dengan Charge Type 5.
 ## Adjustment Plus dan Minus
 
 Untuk mencatat penggunaan persediaan atau melakukan adjustment plus/minus tanpa melalui proses penjualan, gunakan fitur **Inventory Decrease/Increase**.

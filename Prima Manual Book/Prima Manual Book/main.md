@@ -88,3 +88,5 @@
 .include {Kontra Bon/Kontra Bon.md}
 .include {Tools/Tools.md}
 .include {Security di iDempiere/Security di iDempiere.md}
+.include {Sales Order/Sales Order.md}
+.include {Auto Production POS Order/Auto Production POS Order.md}
