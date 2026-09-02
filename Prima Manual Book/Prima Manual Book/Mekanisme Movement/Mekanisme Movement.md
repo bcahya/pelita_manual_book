@@ -105,10 +105,9 @@ Langkah konfigurasi:
 
 5. Klik **Create Lines From**.
 6. Pilih **Material Receipt** yang akan diproses.
-7. Klik **Create lines from RMA**.
-8. Buka tab **RMA Line**.
-9. Tentukan **UoM** atas produk yang akan di-return.
-10. Tentukan **quantity** produk yang akan di-return.
+7. Buka tab **RMA Line**.
+8. Tentukan **UoM** atas produk yang akan di-return.
+9. Tentukan **quantity** produk yang akan di-return.
 
 ![line](../rma_line.png "Vendor RMA Line") {#Figure242}
 
