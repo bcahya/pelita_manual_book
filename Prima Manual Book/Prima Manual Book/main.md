@@ -1,4 +1,4 @@
-.docname {20260815 Pelita Prima Manual Book}
+.docname {20260901 Pelita Prima Manual Book}
 .doctype {paged}
 .doclang {English}
 .theme {paperwhite} layout:{latex}
@@ -11,7 +11,7 @@
 .pagemargin {bottomright}
     .currentpage
 .pagemargin {bottomleft}
-    Versi 2026-08-15
+    Versi 2026-09-01
 .pageformat margin:{2cm}
 .pageformat bordertop:{1px} borderbottom:{1px}
 
@@ -69,6 +69,8 @@
 .include {AP dan AR Manual/AP dan AR Manual.md}
 .include {Posting Matched Invoice/Posting Matched Invoice.md}
 .include {Mekanisme Pembayaran/Mekanisme Pembayaran.md}
+.include {Sales Order/Sales Order.md}
+.include {Auto Production POS Order/Auto Production POS Order.md}
 .include {GL Journal Generator/GL Journal Generator.md}
 .include {Report/Report.md}
 .include {Report Stock/Report Kartu Stock.md}
@@ -88,5 +90,3 @@
 .include {Kontra Bon/Kontra Bon.md}
 .include {Tools/Tools.md}
 .include {Security di iDempiere/Security di iDempiere.md}
-.include {Sales Order/Sales Order.md}
-.include {Auto Production POS Order/Auto Production POS Order.md}
