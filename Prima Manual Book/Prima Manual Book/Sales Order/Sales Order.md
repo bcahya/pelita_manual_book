@@ -40,6 +40,15 @@ Konfigurasi dilakukan pada **Document Type MM Shipment** dengan langkah berikut:
 
 
 6. Klik **Save**.
+
+## Validasi Tanggal Transaksi
+
+Allow Future Doc merupakan fitur yang digunakan untuk menentukan apakah Date Ordered pada transaksi dapat menggunakan tanggal di masa mendatang (_future date_).
+
+![allow future date](../allow_date_so.png "Konfigurasi Allow Future Date") {#Figure279}
+
+- Jika Allow Future Doc dicentang (_checked_), transaksi diperbolehkan menggunakan _future date_ pada Date Ordered.
+- Jika Allow Future Doc tidak dicentang (_unchecked_), transaksi tidak diperbolehkan menggunakan _future date_ pada Date Ordered.
 ## Proses Sales Order
 
 1. Buka menu **Sales Order**.
