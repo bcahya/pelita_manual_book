@@ -93,3 +93,24 @@ Penggunaan Standard Costing membantu perusahaan:
 - Mempermudah proses monitoring biaya
 
 Dengan minimnya koreksi costing, perusahaan dapat menyusun laporan keuangan dalam kurun waktu yang lebih cepat dan lebih stabil. 
+
+## Create Costing Product Baru
+
+Di iDempiere, terdapat mekanisme untuk membuat costing atas product baru yang belum memiliki riwayat transaksi maupun stok di gudang. Saat product baru dibuat, cost untuk product tersebut belum tersedia. Gunakan menu **SIS Create Costing Record** untuk membuat costing pada product baru tersebut. Costing yang terbentuk mengikuti nilai **Initial HPP Value** yang dikonfigurasi di master product.
+
+![hpp](../hpp.png "Initial HPP Value") {#Figure281}
+
+Saat membuat product baru, sistem secara default mengisi **Initial HPP Value** dengan nilai **0.10**. Jika belum dikonfigurasi ulang, sistem akan menggunakan nilai tersebut saat proses create costing dijalankan.
+
+Ikuti langkah berikut untuk membuat costing pada product baru:
+
+1. Buka menu **SIS Create Costing Record**.
+2. Tentukan **product** yang akan diproses.
+3. Klik **OK**.
+
+![create cost](../par_cost.png "Create Costing") {#Figure282}
+
+
+![cpst](../current_cost_non.png "Cost Pada Product") {#Figure283}
+
+Sistem otomatis membuat costing pada product tersebut sesuai Initial HPP Value. Setelah costing terbentuk, jika dilakukan **inventory adjustment** positif maupun negatif, jurnal akan ter-posting dengan nilai sesuai cost yang telah dikonfigurasi.

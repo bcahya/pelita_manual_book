@@ -17,7 +17,6 @@ UoM Conversion diterapkan di Requisition, Purchase Order, dan Movement. Karena i
 
 > [Tim PSI merekomendasikan untuk menetapkan standarisasi UoM pada proses Movement, Requisition dan Purchasing dengan tujuan untuk meminimalkan potensi kesalahan input UoM serta memastikan akurasi dalam penentuan harga] Catatan
 
-
 ## Ketentuan UoM Conversion
 
 Dalam proses transaksi, satu vendor dapat menggunakan satuan yang berbeda dengan vendor lainnya untuk produk yang sama. Oleh karena itu, sistem perlu mendukung **lebih dari satu UoM Conversion** pada satu product sesuai dengan kebutuhan transaksi masing-masing vendor.
@@ -47,3 +46,11 @@ Meskipun flag **Movement, Requisition, dan Purchasing** dapat diaktifkan secara 
 Berikut contoh implementasi **multi UoM Conversion** untuk transaksi **Purchasing**, ketika satu product memiliki satuan pembelian yang berbeda sesuai dengan kebutuhan vendor:
 
 ![po](../uom__po.png "Implementasi Purchase Order") {#Figure250}
+
+## UoM Conversion Kragh dan Manset
+
+UoM Conversion khusus ini hanya berlaku untuk produk **Kragh** dan **Manset**. Berbeda dari konversi pada umumnya, UoM Conversion untuk kedua produk ini bersifat **mundur** — contoh: Base UoM adalah _Kilogram_ sedangkan UoM Conversion-nya adalah _Gram_.
+
+![uom](../uom_conv_kragh.png "UoM Conversion Kragh & Manset") {#Figure280}
+
+Konfigurasi ini dibuat khusus untuk kebutuhan **printout PO dan MR** pada proses _Knitting_ dan _Woven_, dan tidak berpengaruh pada UoM yang digunakan dalam transaksi PO maupun berdampak pada nilai atau proses di dalam PO.

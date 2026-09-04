@@ -189,3 +189,78 @@ User menginput diskon dalam bentuk persentase (%) pada field **Discount %**. Sis
 ![persen](../diskon_persen.png "Diskon dalam Persentase") {#Figure257}
 
 Price List merupakan harga dasar, sedangkan diskon digunakan untuk mendapatkan harga setelah diskon (**Price Actual**). Kedua metode input diskon saling mengisi secara otomatis — jika user menginput salah satu, sistem otomatis menghitung yang lainnya.
+
+## Purchase Order Expense
+
+PO Expense adalah Purchase Order yang digunakan untuk mencatat pengadaan barang atau jasa yang bersifat _expense_ dan tidak memerlukan proses penerimaan barang melalui Material Receipt (MR).
+
+Berbeda dengan PO untuk pembelian barang persediaan, PO Expense tidak menambah stok. Oleh karena itu, setelah PO Expense diproses, transaksi tidak dilanjutkan ke proses Generate Material Receipt. Namun, PO Expense tetap dapat digunakan sebagai dasar pembuatan **AP Invoice**.
+### Konfigurasi Product Expense
+
+Product yang digunakan pada PO Expense harus dikonfigurasi sebagai _Expense_ agar transaksi tidak diperlakukan sebagai pembelian barang yang masuk ke stok. Berikut konfigurasi yang perlu diperhatikan pada Master Product:
+
+- **Product Type** — Gunakan tipe **Expense**.
+- **Purchase** — Aktifkan jika product dapat digunakan dalam transaksi purchasing.
+- **UoM** — Tentukan sesuai kebutuhan transaksi, misalnya _Each_, _Hour_, _Service_, atau UoM lainnya.
+- **Accounting** — Konfigurasi akun expense sesuai kebutuhan agar transaksi invoice tercatat ke akun yang tepat.
+### Konfigurasi Document Type Purchase Order Expense
+
+Sebelum membuat PO Expense, lakukan konfigurasi pada **Document Type** yang akan digunakan. Ikuti langkah berikut:
+
+1. Buka menu **Document Type**.
+2. Klik **New**.
+3. Pada field **Document Base Type**, pilih **Purchase Order**.
+4. Centang field **PO Expense**.
+
+![doc type](../doc_po_expense.png "Konfigurasi Document Type PO Expense") {#Figure285}
+
+5. Klik **Save**.
+
+### Proses Purchase Order Expense
+
+1. Buka menu **Purchase Order**.
+2. Tentukan **Document Type** dengan PO Expense.
+3. Input **Business Partner**.
+4. Input **Warehouse**.
+5. Masuk ke tab **PO Line**.
+6. Pilih **product expense** yang akan diproses.
+
+![po](../po_expense.png "PO Expense") {#Figure289}
+
+7. Input **quantity** produk.
+8. Klik **Save**.
+9. Klik **Complete** pada dokumen.
+
+PO Expense yang telah _Complete_ tidak menghasilkan dokumen **Material Receipt (MR)**.
+### Invoice Purchase Order Expense
+
+Invoice atas PO Expense dapat diproses melalui dua mekanisme — satu PO atau multi PO.
+#### Satu Purchase Order
+
+1. Buka menu **Purchase Invoice and Credit/Debit Note**.
+2. Tentukan **Target Document Type**.
+3. Tentukan **Business Partner**.
+4. Klik **Create Lines From**.
+5. Input nomor PO yang akan diproses.
+
+
+![invoice](../satu_inv_po_expense.png "Satu PO Expense") {#Figure286}
+
+6. Klik **Save**.
+7. Masuk ke **Invoice Line**.
+8. Periksa **quantity** dan **price** yang ter-generate.
+9. Klik **Complete**.
+
+#### Multi Purchase Order
+
+1. Buka menu **SIS Generate Invoice PO Expense**.
+2. Klik **Requery**.
+3. Tentukan nomor dokumen PO yang akan diproses.
+4. Klik **SIS Generate Invoice PO Expense**.
+
+
+![invoice](../inv_po_expense.png "Multi PO Expense") {#Figure287}
+
+Invoice berhasil ter-generate dari dokumen Purchase Order yang ditentukan. Berikut contoh jurnal atas invoice dari PO Expense:
+
+![jurnal](../jurnal_po_expense.png "Jurnal Invoice PO Expense") {#Figure288}
