@@ -10,12 +10,25 @@ iDempiere mendukung beberapa mekanisme pembayaran, antara lain:
 - Pembayaran menggunakan valuta asing (valas)
 ## Konfigurasi Document Type
 
+### Document Type Payment Multi BP
+
 Document Type untuk payment dapat dibedakan sesuai kebutuhan operasional. Namun sebelum digunakan, pastikan field **Payment Multi BP** pada Document Type AP Payment sudah dikonfigurasi. Berikut ketentuannya:
 
 - **Dicentang (Y)** — Pembayaran dengan document type tersebut diizinkan untuk multi BP, artinya BP Payment dan BP Invoice dapat berbeda.
 - **Tidak dicentang (N)** — Pembayaran hanya dapat dilakukan dengan BP yang sama dengan BP pada invoice. Jika BP di Payment dan Invoice berbeda, sistem otomatis memblokir transaksi tersebut.
 
 Sesuaikan konfigurasi ini dengan kebutuhan operasional perusahaan.
+
+### Auto Generate Bank/Cash Statement
+
+Konfigurasi ini memungkinkan sistem otomatis membuat **Bank Statement** setelah transaksi Payment berhasil di-complete.
+
+- **Dicentang (Y)** — Saat Payment berstatus _Completed_, sistem otomatis membuat Bank Statement berdasarkan Payment tersebut.
+- **Tidak dicentang (N)** — Saat Payment berstatus _Completed_, sistem tidak membuat Bank Statement secara otomatis. Bank Statement harus dibuat melalui proses **Bank/Cash Statement** secara manual.
+
+![auto bs](../auto_bs.png "Konfigurasi Auto Generate Bank Statement") {#Figure283}
+
+Konfigurasi Auto Bank Statement bersifat **opsional**. Jika diaktifkan, Bank Statement terbentuk otomatis saat Payment selesai. Jika tidak diaktifkan, tidak ada otomasi generate Bank Statement dari Payment.
 ## Pembayaran Multi BP (Business Partner)
 
 Mekanisme **Multi Business Partner** digunakan ketika pembayaran dilakukan kepada Business Partner yang berbeda dengan vendor pada invoice. Kondisi ini umumnya diterapkan jika terdapat vendor induk, perusahaan afiliasi, atau pihak ketiga yang bertindak sebagai penerima pembayaran.
@@ -223,7 +236,6 @@ Proses revaluasi menghasilkan dua jurnal:
 Fitur Bank/Cash Transfer digunakan untuk memindahkan dana antar rekening bank maupun kas di sistem. Proses ini hanya memindahkan saldo antar akun kas/bank milik perusahaan dan tidak melibatkan Business Partner maupun penyelesaian piutang atau utang.
 
 Setiap transaksi Bank/Cash Transfer memperbarui saldo pada rekening asal dan rekening tujuan, serta menghasilkan jurnal akuntansi sesuai konfigurasi akun pada masing-masing Bank/Cash.
-
 ## Konfigurasi Bank/Cash Transfer
 
 Sebelum melakukan bank/cash transfer, perlu dilakukan konfigurasi untuk **Business Partner** dan **Charge** yang dikenakan saat proses bank/cash transfer:
@@ -285,3 +297,36 @@ Proses matching di iDempiere dapat dilakukan secara **full** maupun **partial**.
 ![konfig](../konfig_full.png "Konfigurasi Matching") {#Figure201}
 
 Setelah konfigurasi selesai, rekonsiliasi dapat dilakukan secara parsial atau sebagian. Field ini berfungsi sebagai penanda (_sequence/group ID_) untuk mengelompokkan transaksi matching parsial yang berasal dari proses yang sama.
+
+## Payment dengan Organisasi Berbeda
+
+Mekanisme ini digunakan ketika invoice tercatat pada satu organisasi, namun pembayaran dilakukan oleh organisasi lain.
+
+Contoh:
+
+- **Beard Papa** — Organisasi yang memiliki kewajiban kepada vendor, dengan nilai invoice sebesar Rp100.000.
+- **Roti'O** — Organisasi yang melakukan pembayaran kepada vendor atas nama Beard Papa.
+
+Dalam kondisi ini, kewajiban kepada vendor tetap berasal dari **Beard Papa**, sedangkan dana yang digunakan untuk pembayaran berasal dari **Roti'O**.
+### Implementasi Payment dengan Organisasi Berbeda
+
+- Invoice dibuat dengan organisasi **Beard Papa** sebesar Rp100.000.
+- Pembayaran dilakukan oleh **Roti'O** menggunakan rekening Bank Roti'O.
+
+Karena invoice berasal dari Beard Papa sedangkan pembayaran berasal dari Roti'O, transaksi ini harus memperhatikan pencatatan **antar-organisasi**.
+
+Berikut contoh jurnal Invoice, Payment, dan Allocation yang terbentuk dengan organisasi yang berbeda:
+
+Jurnal Invoice
+
+![invoice](../Invoice_BP.png "Jurnal Invoice") {#Figure281}
+
+Jurnal Payment
+
+![payment](../payment_ro.png "Jurnal Payment") {#Figure282}
+
+Jurnal Payment Allocation
+
+![allocation](../allocat_ro.png "Jurnal Payment Allocation") {#Figure283}
+
+Saat pembayaran dilakukan, invoice vendor pada **Beard Papa** dinyatakan lunas. Namun, **Beard Papa** masih memiliki kewajiban kepada **Roti'O** sebesar **Rp100.000**.

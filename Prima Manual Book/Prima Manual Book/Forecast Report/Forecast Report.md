@@ -7,13 +7,13 @@ Forecast report adalah laporan yang menampilkan stok di gudang/locator, asal tra
 3. T Warehouse yang akan diperiksa.
 4. Tentukan Locator atau lokasi penyimpanan produk di dalam warehouse.
 
-![Header](../SIS_Forecast.png "Konfigurasi Header") {#Figure 94}
+![Header](../parameter_forecast.png "Konfigurasi Header") {#Figure 94}
 
 5. Klik Ok
 
 Sistem menampilkan informasi ketersediaan stock produk sesuai kriteria yang dipilih, meliputi data produk pada warehouse dan locator yang ditentukan. 
 
-![Forecast Report](../Forecast.png "Forecast Report") {#Figure 95}
+![Forecast Report](../forecast_update.png "Forecast Report") {#Figure 95}
 
 Forecast report menyediakan informasi Stock On Hand, Purchase Requisition, dan Material Movement untuk membantu user memantau ketersediaan material, kebutuhan pembelian, serta penggunaan material di gudang.
 ## Stock On Hand

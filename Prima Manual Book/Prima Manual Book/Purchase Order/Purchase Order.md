@@ -128,7 +128,7 @@ Sistem otomatis mencatat warehouse baru di tab **Listing PO Warehouse** pada dok
 
 ![Listing WH](../Listing_WH.png "Listin Warehouse") {#Figure96}
 
-**Catatan:** Perubahan Warehouse hanya dapat dilakukan pada Purchase Order yang masih berstatus **Complete**.
+**Catatan:** Perubahan Warehouse hanya dapat dilakukan pada Purchase Order yang masih berstatus **Complete** dan **Material Receipt** masih draft.
 ### Menutup Purchase Order
 
 Purchase Order berstatus **Complete** dapat ditutup (_Close_) jika proses pembelian telah selesai atau tidak ada transaksi lanjutan. Lakukan penutupan melalui menu **SIS Close Document PO**. Ikuti langkah berikut:

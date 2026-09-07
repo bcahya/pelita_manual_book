@@ -92,6 +92,18 @@ Printout PO Kecil dirancang untuk kebutuhan operasional yang memerlukan dokumen 
 
 ![po kecil](../po_kecill.png "Printout PO Kecil") {#Figure229}
 
+#### PO Kecil Di Bawah 1 Juta
+
+Ikuti langkah berikut untuk mengakses report requisition:
+
+1. Buka menu **Purchase Order**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **PrinT Document PO**.
+4. Pada Process Detail Report, pilih **PO Kecil Dibawah 1 Juta** 
+5. Klik **OK**.
+
+![po kecil](../po_kecil_under.png "PO Kecil Di Bawah 1 Juta") {#Figure280}
+
 ## Report Requisiton
 
 Ikuti langkah berikut untuk mengakses report requisition:
@@ -105,7 +117,6 @@ Ikuti langkah berikut untuk mengakses report requisition:
 ## Report Material Receipt (MR/BPB)
 
 Report MR digunakan untuk mencetak dokumen permintaan material yang diajukan secara internal oleh divisi produksi ke bagian gudang/persediaan. Permintaan ini diproses lebih lanjut menjadi Purchase Order jika stok tidak mencukupi, atau dipenuhi langsung dari stok gudang. Klasifikasi report MR adalah sebagai berikut:
-
 ### Material Receipt (MR) Tim PPG
 #### MR Aksesoris
 
@@ -165,6 +176,13 @@ Permintaan material terkait proses/divisi FB sesuai klasifikasi internal perusah
 #### MR Perlengkapan
 
 ![umum](../mr_perlengkapan.png "BPB Umum") {#Figure267}
+
+### Material Receipt (MR) PO Kecil
+
+Material Receipt (MR) atau BPB untuk PO Kecil menggunakan format **thermal**. Berikut contoh format MR/BPB PO Kecil:
+
+![mr](../mr_po_kecil.png "Material Receipt PO Kecil"){#Figure281}
+
 ## Report Surat Jalan (Movement)
 
 Ikuti langkah berikut untuk mengakses report surat jalan:
