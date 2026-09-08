@@ -157,3 +157,34 @@ Saat dokumen Kontra Bon di-complete, sistem otomatis menyalin informasi **nomor
 Status invoice yang diproses berubah menjadi **Paid** dan sistem membentuk alokasi atas invoice tersebut sebesar amount yang diproses. Berikut contoh jurnal yang terbentuk atas pembayaran invoice Kontra Bon:
 
 ![jurnal](../jurnal_pay.png "Jurnal Pembayaran") {#Figure230}
+
+## Import Kontra Bon
+
+Proses import data Kontra Bon dapat dilakukan melalui menu **SIS Kontra Bon** menggunakan file berformat **CSV**. Terdapat dua pilihan metode import:
+
+- **Insert** — Gunakan metode ini jika data Kontra Bon yang diimport akan dibuat sebagai dokumen baru di sistem.
+- **Merge** — Gunakan metode ini jika data Kontra Bon yang diimport akan digabungkan dengan dokumen Kontra Bon yang sudah ada.
+### Mengunduh Format File Import
+
+Ikuti langkah berikut untuk mendapatkan format file CSV yang dapat digunakan untuk proses import:
+
+1. Klik **Setting**.
+2. Klik **Export**.
+3. Klik **OK**.
+
+Sistem menghasilkan file dalam format **CSV** yang dapat langsung digunakan sebagai template import. Pastikan data pada file CSV sudah diisi sesuai format yang ditentukan sebelum proses import dilakukan.
+### Proses Import Data Kontra Bon
+
+1. Buka menu **SIS Kontra Bon**.
+2. Klik **Setting**.
+3. Klik **Import File Loader**.
+4. Tentukan file yang akan diimport.
+5. Pilih **metode import** (_Insert_ atau _Merge_).
+6. Klik **OK**.
+
+Berikut contoh format CSV untuk import Kontra Bon sebagai referensi pengisian data:
+
+![format](../format_import_kb.png "Format File Kontra Bon") {#Figure282}
+
+
+![hasil](../hasil_import.png "Hasil Import Kontra Bon") {#Figure283}
