@@ -26,7 +26,7 @@ Konfigurasi ini memungkinkan sistem otomatis membuat **Bank Statement** setelah 
 - **Dicentang (Y)** — Saat Payment berstatus _Completed_, sistem otomatis membuat Bank Statement berdasarkan Payment tersebut.
 - **Tidak dicentang (N)** — Saat Payment berstatus _Completed_, sistem tidak membuat Bank Statement secara otomatis. Bank Statement harus dibuat melalui proses **Bank/Cash Statement** secara manual.
 
-![auto bs](../auto_bs.png "Konfigurasi Auto Generate Bank Statement") {#Figure283}
+![auto bs](../auto_bank_statement.png "Konfigurasi Auto Generate Bank Statement") {#Figure283}
 
 Konfigurasi Auto Bank Statement bersifat **opsional**. Jika diaktifkan, Bank Statement terbentuk otomatis saat Payment selesai. Jika tidak diaktifkan, tidak ada otomasi generate Bank Statement dari Payment.
 ## Pembayaran Multi BP (Business Partner)

@@ -184,6 +184,16 @@ Berikut penjelasan kolom yang tercantum pada report aset:
 - **Locator** — Lokasi fisik penyimpanan aset, digunakan untuk pelacakan fisik saat stock opname atau audit aset.
 - **Attribute Set Instance** — Atribut spesifik unik aset, seperti nomor lot yang membedakan satu unit fisik dari unit lain meski berasal dari produk yang sama.
 - **Document Status** — Status dokumen aset: _Draft_, _Completed_, atau _Closed_.
+
+Report Asset memungkinkan user melihat **summary** berdasarkan **Asset Type**. Ikuti langkah berikut untuk mengkonfigurasi tampilan summary aset:
+
+1. Klik **Report Wizard**.
+2. Pada tab **Sort Criteria**, pilih **Asset Type** pada field **Order By**.
+3. Pada tab **Grouping Criteria**, centang **Asset Type**.
+4. Pada tab **Summary Field**, centang informasi yang ingin ditampilkan — seperti **Gross Value**, **Residual Value**, dan informasi lainnya.
+5. Klik **OK**.
+
+Sistem menampilkan daftar aset beserta summary berdasarkan Asset Type. Informasi yang muncul pada report sesuai konfigurasi yang dipilih, seperti Gross Value, Residual Value, Attribute Set Instance, dan sebagainya.
 ## Asset Maintenance
 
 Asset Maintenance adalah proses perbaikan dan perawatan yang dilakukan perusahaan terhadap aset-aset yang sudah ada. Perbaikan ini mencakup biaya perawatan, penggantian sparepart, dan biaya lainnya. Seluruh biaya tersebut diakui langsung sebagai beban — tidak menambah nilai aset dan tidak membentuk aset baru.
