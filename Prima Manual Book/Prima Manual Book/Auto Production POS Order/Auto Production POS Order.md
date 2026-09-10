@@ -14,7 +14,7 @@ Jika salah satu konfigurasi belum tersedia, sistem tidak dapat membuat transaksi
 
 1. Buka menu **Warehouse and Locator**.
 2. Cari warehouse yang akan dikonfigurasi.
-3. Centang field **Auto Production**.
+3. Centang field **Production Warehouse**.
 
 ![wh](../wh_auto.png "Konfigurasi Warehouse") {#Figure202}
 

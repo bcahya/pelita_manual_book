@@ -33,7 +33,6 @@ Pengadaan asset dilakukan melalui tahapan berikut:
 4. Matching invoicee
 
 Setelah proses penerimaan selesai, sistem otomatis membentuk data asset berdasarkan ASI (Attribute Set Instance). Data asset tersebut dapat diakses melalui menu SIS Asset.
-
 ### Proses Manajemen Penyusutan Asset
 
 Lakukan penyusutan asset melalui langkah-langkah berikut:

@@ -94,7 +94,7 @@ Printout PO Kecil dirancang untuk kebutuhan operasional yang memerlukan dokumen 
 
 #### PO Kecil Di Bawah 1 Juta
 
-Ikuti langkah berikut untuk mengakses report requisition:
+Ikuti langkah berikut untuk mengakses PO Kecil Di Bawah 1 Juta:
 
 1. Buka menu **Purchase Order**.
 2. Klik tombol **Setting (⚙)**.
@@ -104,6 +104,18 @@ Ikuti langkah berikut untuk mengakses report requisition:
 
 ![po kecil](../po_kecil_under.png "PO Kecil Di Bawah 1 Juta") {#Figure280}
 
+
+#### Rekapitulasi PO Kecil
+
+Ikuti langkah berikut untuk mengakses rekapitulasi PO kecil:
+
+1. Buka menu **Print Report PO Kecil **.
+2. Tentukan **Periode Date**
+3. Klik **OK**.
+
+Berikut contoh report rekapitulasi PO kecil:
+
+![rekap](../rekap_po_kecil.png "Rekapitulasi PO Kecil") {#Figure289}
 ## Report Requisiton
 
 Ikuti langkah berikut untuk mengakses report requisition:
@@ -779,3 +791,16 @@ Langkah Akses Laporan Listing Perubahan ICPL:
 Berikut contoh report listing product yang terdapat perubahan ICPL:
 
 ![icpl](../list_icpl_update.png "Report Listing Perubahan ICPL") {#Figure278}
+
+## Laporan Export Purchase Order
+
+Langkah Akses Laporan Export Purchase Order:
+
+1. Buka menu **SIS Export PO**.
+2. Tentukan **Date Ordered**.
+3. Field **Show Price**, bersifat opsional. Field ini bertujuan untuk menampilkan harga pada Purchase Order.
+4. Klik **OK**.
+
+Berikut contoh export purchase order:
+
+![export po](../export.png "Laporan Export PO") {#Figure290}

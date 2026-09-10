@@ -142,3 +142,13 @@ Setelah Customer RMA dibuat, user dapat melanjutkan proses penerimaan barang ret
 Saat **Customer Return** di-complete, sistem akan membentuk **AR Credit Memo** secara otomatis apabila konfigurasi **MR. Auto Invoice AP/AR** telah diaktifkan pada Document Type Customer Return.
 
 AR Credit Memo yang terbentuk akan menggunakan **Document Type AR Credit Memo** dan **Document Action** sesuai dengan konfigurasi pada field **MR. Document Type Invoice AP/AR** dan **MR. Document Action Invoice AP/AR**.
+
+## Informasi Customer Return di Sales Order
+
+Saat customer melakukan return produk berdasarkan Shipment yang berasal dari Sales Order, informasi return tersebut otomatis tercatat di **Order Line**. Field **Qty Return** pada Order Line terisi otomatis sesuai quantity produk yang di-return. Jika tidak ada return, nilai Qty Return akan tetap **0**.
+
+![qty return](../return_so.png "Informasi Qty Return") {#Figure285}
+
+Informasi dokumen Customer Return juga ditampilkan pada tab **Customer Return** di Sales Order. Tab ini muncul secara otomatis dan menampilkan detail dokumen return jika terdapat produk yang dikembalikan oleh customer.
+
+![return](../return_so2.png "Informasi Customer Return di Sales Order") {#Figure286}

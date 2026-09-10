@@ -264,3 +264,13 @@ Invoice atas PO Expense dapat diproses melalui dua mekanisme — satu PO atau mu
 Invoice berhasil ter-generate dari dokumen Purchase Order yang ditentukan. Berikut contoh jurnal atas invoice dari PO Expense:
 
 ![jurnal](../jurnal_po_expense.png "Jurnal Invoice PO Expense") {#Figure288}
+
+## Informasi Product Return di Purchase Order
+
+Saat dilakukan Return to Vendor berdasarkan Material Receipt yang berasal dari Purchase Order, informasi return tersebut otomatis tercatat di **PO Line**. Field **Qty Return** pada PO Line terisi otomatis sesuai quantity produk yang di-return. Jika tidak ada return, nilai Qty Return akan tetap **0**.
+
+![qty return](../return_po.png "Informasi Qty Return") {#Figure287}
+
+Informasi dokumen Return to Vendor juga ditampilkan pada tab **Return to Vendor** di Purchase Order. Tab ini muncul secara otomatis dan menampilkan detail dokumen return jika terdapat produk yang dikembalikan kepada vendor.
+
+![return](../return_po2.png "Informasi Return to Vendor di Purchase Order") {#Figure288}
