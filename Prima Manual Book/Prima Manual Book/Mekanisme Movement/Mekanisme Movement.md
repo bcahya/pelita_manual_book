@@ -92,7 +92,14 @@ Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebaga
 
 **Vendor RMA** berfungsi sebagai dokumen otorisasi pengembalian barang kepada vendor. Dokumen ini menghubungkan proses **Return to Vendor** dengan **Material Receipt** yang menjadi referensi.
 
-Saat membuat Vendor RMA, user dapat memilih **UoM** atas produk yang akan di-return — apakah menggunakan **Base UoM** atau **UoM Conversion**. UoM yang dikonfigurasi di Vendor RMA otomatis disalin ke dokumen **Return to Vendor** dan **AP Credit Memo**, sehingga UoM yang digunakan pada ketiga dokumen tersebut tetap selaras.
+Saat membuat Vendor RMA, user dapat memilih **UoM** atas produk yang akan di-return — apakah menggunakan **Base UoM** atau **UoM Conversion**. UoM yang dikonfigurasi di Vendor RMA otomatis disalin ke dokumen **Return to Vendor** dan **AP Credit Memo**, sehingga UoM yang digunakan pada ketiga dokumen tersebut tetap selaras. Sebelum melakukan return to vendor user harus melakukan konfigurasi di Document Type vendor rma:
+
+1. Buka menu **Document Type**.
+2. Klik **New**.
+3. Isi **Name** sesuai kebutuhan operasional.
+4. Pada field **Document Base Type**, pilih **Purchase Order**.
+5. Centang field **Document Number Is Controlled**.
+6. Centang field **MR. Auto Invoice AP**
 
 Langkah konfigurasi:
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
+                "file": "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Manajemen Asset"
+              "title": "Mekanisme Movement"
             }
           }
         ]
@@ -196,20 +196,23 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Auto Production POS Order/Auto Production POS Order.md",
-    "Prima Manual Book/ICPL/ICPL.md",
+    "Prima Manual Book/Purchase Order/Purchase Order.md",
+    "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
     "Prima Manual Book/Report/Report.md",
+    "Prima Manual Book/ICPL/ICPL.md",
+    "Prima Manual Book/Product dan Category Access/Product dan Category Access.md",
+    "Prima Manual Book/Document Type/Document Type.md",
+    "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
+    "Prima Manual Book/Auto Production POS Order/Auto Production POS Order.md",
     "export.png",
     "Prima Manual Book/export.png",
     "rekap_po_kecil.png",
     "Prima Manual Book/rekap_po_kecil.png",
-    "Prima Manual Book/Purchase Order/Purchase Order.md",
     "Prima Manual Book/Sales Order/Sales Order.md",
     "Prima Manual Book/return_po.png",
     "Prima Manual Book/return_po2.png",
     "Prima Manual Book/return_so.png",
     "Prima Manual Book/return_so2.png",
-    "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
     "Prima Manual Book/AP dan AR Manual/AP dan AR Manual.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
@@ -230,8 +233,6 @@
     "Prima Manual Book/Unit of Measure Conversion/Implementasi di Movement.md",
     "Prima Manual Book/Item Type Product/Item Type Product.md",
     "Prima Manual Book/Item Type Product/Implementasi Item Type di Product.md",
-    "Prima Manual Book/Cost Adjustment/Cost Adjustment.md",
-    "Prima Manual Book/main.md",
     "Prima Manual Book/Sales Order",
     "Prima Manual Book/Material Receipt",
     "Untitled",
