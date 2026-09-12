@@ -78,3 +78,37 @@ Jika user perlu melakukan breakdown quantity pada attribute set lines, gunakan f
 5. Sistem otomatis membentuk line ASI sesuai konfigurasi yang diinput.
 
 ![Hasil Generate ASI](../Hasil_Generate_ASI.png "Hasil Generate ASI") {#Figure87}
+
+## Attribute Set Instance (ASI) Manual
+
+Dalam kondisi tertentu, ASI pada product ditentukan secara manual — misalnya saat nomor batch/lot mengikuti batch dari supplier. Untuk mengakomodasi kondisi ini, user perlu menginput ASI secara manual di Receipt Line sebelum memproses MR/BPB.
+
+Sebelum melakukan input ASI manual, lakukan konfigurasi pada **Document Type Material Receipt** terlebih dahulu:
+
+1. Buka menu **Document Type**.
+2. Tentukan Document Type Material Receipt yang akan dikonfigurasi.
+3. Centang field **Manual ASI Setup** — menandakan bahwa ASI akan diinput secara manual.
+
+![doc type](../mr_asi.png "Konfigurasi Document Type") {#Figure292}
+### Penerimaan Barang dengan Input ASI Manual
+
+1. Buka menu **Material Receipt**.
+2. Tentukan dokumen yang akan diproses.
+3. Masuk ke tab **Receipt Line**.
+4. Masuk ke tab **Attributes**.
+5. Klik **Attribute Set Instance**.
+6. Centang field **New Record**.
+7. Input nomor batch/lot pada field **Lot No**.
+
+![asi](../asi_manual.png "Input ASI di Material Receipt") {#Figure293}
+
+8. **Guarantee Date** terisi otomatis sesuai konfigurasi di master Attribute Set.
+9. Klik **OK**.
+
+![asi](../asi_mr2.png "ASI di Material Receipt") {#Figure294}
+
+Jika konfigurasi **Manual ASI Setup** belum dilakukan pada Document Type, ASI tidak dapat diinput secara manual. Pastikan konfigurasi selesai sebelum memulai transaksi.
+
+> **Catatan:** Guarantee Date terisi otomatis berdasarkan konfigurasi **Guarantee Date** pada Attribute Set. User menentukan masa berlaku produk dalam satuan hari, dan sistem menghitung tanggalnya secara otomatis berdasarkan tanggal dokumen ter-_create_.
+
+![guarantee](../guarantee.png "Konfigurasi Guarantee Days di Attribute Set") {#Figure295}

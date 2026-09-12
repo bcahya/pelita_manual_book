@@ -87,12 +87,26 @@ Sales Invoice yang terbentuk secara otomatis akan mengacu pada informasi transak
 Status Sales Invoice setelah terbentuk akan mengikuti konfigurasi **Document Action Invoice AP/AR** pada Document Type Shipment.
 ## Customer Return
 
-**Customer Return** merupakan transaksi yang digunakan untuk mencatat pengembalian barang dari customer. Proses Customer Return diawali dengan pembuatan **Customer RMA** sebagai dokumen referensi pengembalian barang.
+Customer Return digunakan untuk memproses pengembalian barang dari customer atas barang yang sebelumnya dikirim melalui proses penjualan. Saat proses ini dijalankan, sistem menambah stok, mencatat transaksi pengembalian, dan menjaga konsistensi data inventory serta transaksi penjualan.
+
+Proses Customer Return dimulai dari **Sales Order**, kemudian dilanjutkan dengan pembuatan **RMA Type**, **Customer RMA**, **Customer Return**, dan **AR Credit Memo**. Proses dari Customer RMA hingga AR Credit Memo dapat dilakukan dalam satu rangkaian proses.
+### Konfigurasi Document Type Customer RMA
+
+Sebelum melakukan proses Customer RMA, lakukan konfigurasi pada Document Type Customer RMA:
+
+1. Buka menu **Document Type**.
+2. Klik **New**.
+3. Isi **Name** sesuai kebutuhan operasional.
+4. Pada field **Document Base Type**, pilih **Sales Order**.
+5. Centang field **Auto Return Material**.
+6. Tentukan **Document Type** dan **Document Action** atas return.
+
+![doc type](../doc_CUS_rma.png "Document Type Customer RMA") {#Figure294}
+
+7. Klik **Save**.
 ### Konfigurasi Document Type Customer Return
 
-Sebelum melakukan transaksi Customer Return, perlu dilakukan konfigurasi **Document Type** yang digunakan untuk proses penerimaan barang retur dari customer.
-
-Langkah konfigurasi:
+Sebelum melakukan transaksi Customer Return, perlu dilakukan konfigurasi **Document Type** yang digunakan untuk proses penerimaan barang retur dari customer. Langkah konfigurasi:
 
 1. Buka menu **Document Type**.
 2. Klik **New**.
@@ -111,38 +125,44 @@ Langkah konfigurasi:
 
 #### Customer RMA
 
-**Customer RMA** merupakan dokumen yang digunakan sebagai dasar dan referensi pengembalian barang dari customer. Customer RMA perlu dibuat terlebih dahulu sebelum transaksi Customer Return diproses. Langkah pembuatan Customer RMA:
+Customer RMA berfungsi sebagai dokumen otorisasi pengembalian barang dari customer dan menghubungkan proses Customer Return dengan Shipment yang menjadi referensi. UoM yang dikonfigurasi di Customer RMA otomatis disalin ke dokumen **Customer Return** dan **AR Credit Memo**, sehingga UoM pada ketiga dokumen tetap selaras. Ikuti langkah berikut untuk membuat Customer RMA:
 
 1. Buka menu **Customer RMA**.
-2. Input **Document Type**, **RMA Type**, dan referensi **Shipment** yang akan dikembalikan.
-3. Klik **Create Lines From**.
-4. Pilih Shipment yang menjadi dasar pengembalian.
-5. Buka tab **RMA Line**.
-6. Tentukan **Quantity** produk yang akan di-return.
-7. Klik **Save**.
-8. Klik **Complete**.
-#### Customer Return
+2. Pilih **Document Type**.
+3. Tentukan **RMA Type**.
+4. Pada field **Shipment**, pilih dokumen **Shipment** yang akan direferensikan.
+5. Klik **Create Lines From**.
 
-Setelah Customer RMA dibuat, user dapat melanjutkan proses penerimaan barang retur melalui Customer Return. Langkah proses Customer Return:
+![rma](../cus_rma.png "Customer RMA") {#Figure295}
 
-1. Buka menu **Customer Return**.
-2. Pilih **Document Type** yang telah dikonfigurasi.
-3. Tentukan **Movement Date**.
-4. Pilih **Business Partner** customer.
-5. Pilih **Warehouse** yang digunakan untuk menerima barang retur.
-6. Klik **Create Lines From**.
-7. Pilih dokumen **Customer RMA** yang telah dibuat.
-8. Sistem akan mengisi **Customer Return Line** berdasarkan informasi pada RMA Line.
-9. Periksa kembali Product dan Quantity yang akan diterima.
-10. Klik **Save**
+6. Tentukan **quantity** produk yang akan di-return.
+7. Klik **Create Line From RMA**.
+8. Sistem otomatis membuat RMA Line berdasarkan line yang dipilih.
+9. Verifikasi **quantity** dan **UoM** di RMA Line.
+10. Klik **Save**.
 11. Klik **Complete**.
 
+Saat Customer RMA di-complete, sistem otomatis membuat dokumen **Customer Return** dengan status sesuai konfigurasi Document Type Customer RMA.
+#### Customer Return
+
+1. Buka menu **Customer Return**.
+2. Cari dokumen Customer Return yang ter-create dengan menginput nomor dokumen **Customer RMA**.
+3. Informasi dari Customer RMA — termasuk quantity, price, UoM, dan informasi Business Partner — otomatis tersalin ke **Customer Return Line**.
+
+![return](../cus_return.png "Customer Return") {#Figure296}
+
+4. Klik **Complete**.
+
+![jurnal return](../jurnal_cus_ret.png "Jurnal Customer Return") {#Figure297}
 ### Pembentukan AR Credit Memo
 
 Saat **Customer Return** di-complete, sistem akan membentuk **AR Credit Memo** secara otomatis apabila konfigurasi **MR. Auto Invoice AP/AR** telah diaktifkan pada Document Type Customer Return.
 
 AR Credit Memo yang terbentuk akan menggunakan **Document Type AR Credit Memo** dan **Document Action** sesuai dengan konfigurasi pada field **MR. Document Type Invoice AP/AR** dan **MR. Document Action Invoice AP/AR**.
 
+![cn customer return](../cn_so.png "Credit Memo Customer Return") {#Figure298}
+
+![jurnal credit memo](../jurnal_cn_so.png "Jurnal Credit Memo") {#Figure299}
 ## Informasi Customer Return di Sales Order
 
 Saat customer melakukan return produk berdasarkan Shipment yang berasal dari Sales Order, informasi return tersebut otomatis tercatat di **Order Line**. Field **Qty Return** pada Order Line terisi otomatis sesuai quantity produk yang di-return. Jika tidak ada return, nilai Qty Return akan tetap **0**.

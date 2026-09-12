@@ -494,14 +494,13 @@ Data pada Buku Besar Pembantu bersumber dari tabel akuntansi (_Fact_Acct_) yang 
 - **Business Partner** — Opsional, untuk memfilter berdasarkan Business Partner.
 - **Cost Center** — Opsional, untuk memfilter berdasarkan Cost Center.
 - **Product** — Opsional, untuk memfilter berdasarkan produk yang digunakan dalam transaksi.
-
-![paramter](../parameter_buku_besar_pembantu.png "Parameter Report Buku Besar Pembantu") {#Figure180}
+- **Account** — Akun dalam transaksi.
 
 3. Klik start
 
 Berikut contoh hasil export Buku Besar Pembantu:
 
-![report](../report_buku_bes_pembantu.png "Laporan Buku Besar Pembantu") {#Figure181}
+![report](../rev_buku_besar_pembantu.png "Laporan Buku Besar Pembantu") {#Figure181}
 
 Informasi yang Ditampilkan pada Hasil Export
 
@@ -804,3 +803,32 @@ Langkah Akses Laporan Export Purchase Order:
 Berikut contoh export purchase order:
 
 ![export po](../export.png "Laporan Export PO") {#Figure290}
+
+## Laporan Harga Jual Artikel Per ICPL
+
+Langkah Akses Laporan Harga Jual Artikel Per ICPL:
+
+1. Buka menu **SIS Report Harga Jual Artikel Per ICPL**.
+2. Tentukan **ICPL** yang akan diproses.
+3. Tentukan **Valid From** dari ICPL yang akan diproses.
+
+![report](../parameter_icpl.png "Parameter ICPL") {#Figure291}
+
+4. Klik **OK**.
+
+Berikut contoh report harga jual artikel per ICPL:
+
+![report](../harga_jual_icpl.png "Report Harga Jual Artikel per ICPL") {#Figure292}
+
+## Laporan Kartu Stock Bahan
+
+Langkah Akses Laporan Kartu Stock Bahan:
+
+1. Buka menu **SIS Report Kartu Stock Bahan**.
+2. Tentukan **Transaction Date**.
+3. Tentukan **Nomor PO** atau **Material Receipt** yang akan diproses.
+4. Klik **ok**.
+
+Berikut contoh report kartu stock bahan:
+
+![bahan](../kartu_stock_bahan.png "Kartu Stock Bahan") {#Figure304}

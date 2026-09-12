@@ -264,6 +264,128 @@ Invoice atas PO Expense dapat diproses melalui dua mekanisme — satu PO atau mu
 Invoice berhasil ter-generate dari dokumen Purchase Order yang ditentukan. Berikut contoh jurnal atas invoice dari PO Expense:
 
 ![jurnal](../jurnal_po_expense.png "Jurnal Invoice PO Expense") {#Figure288}
+## Return to Vendor
+
+Return to Vendor digunakan untuk mengembalikan barang kepada vendor atas barang yang sebelumnya diterima melalui proses pembelian. Saat proses ini dijalankan, sistem mengurangi stok, mencatat transaksi pengembalian, dan menjaga konsistensi data inventory serta transaksi pembelian.
+
+Proses Return to Vendor dimulai dari pembuatan master **RMA Type**, kemudian **Vendor RMA**, **Return to Vendor**, dan **AP Credit Memo**. Proses dari Vendor RMA hingga AP Credit Memo dapat dilakukan dalam satu rangkaian proses. Namun, **RMA Type** sebagai master data harus dibuat terlebih dahulu.
+### Konfigurasi RMA Type
+
+Sebelum melakukan **Return to Vendor**, buat terlebih dahulu **RMA Type** sebagai kategori atau alasan pengembalian barang. Langkah konfigurasi:
+
+1. Buka menu **RMA Type**.
+2. Isi **Name** sesuai kebutuhan operasional.
+
+![rma](../rma_type.png "RMA Type") {#Figure197}
+
+3. Klik **Save**.
+### Konfigurasi Document Type Vendor RMA
+
+Sebelum melakukan proses Vendor RMA, lakukan konfigurasi pada Document Type Vendor RMA:
+
+1. Buka menu **Document Type**.
+2. Klik **New**.
+3. Isi **Name** sesuai kebutuhan operasional.
+4. Pada field **Document Base Type**, pilih **Purchase Order**.
+5. Centang field **Auto Return Material**.
+6. Tentukan **Document Type** dan **Document Action** atas return.
+
+![vendor rma](../doc_rma.png "Document Type Vendor RMA") {#Figure293}
+
+7. Klik **Save**.
+
+### Konfigurasi Document Type Return to Vendor
+
+1. Buka menu **Document Type**.
+2. Klik **New**.
+3. Isi **Name** sesuai kebutuhan operasional.
+4. Pada field **Document Base Type**, pilih **Material Delivery**.
+5. Centang field **Document Number Is Controlled**.
+6. Centang field **MR. Auto Invoice AP**
+
+![ap cn](../ap_cn_doc_type.png "Konfigurasi AP Credit Memo") {#Figure241}
+
+7. Pada field **MR. Document Type Invoice AP**, pilih document AP Credit Memo yang telah dikonfigurasi.
+8. Pada field **MR. Document Action Invoice AP**, pilih document action untuk menentukan status invoice credit memo yang ter-generate — _Prepare_ atau _Complete_
+9. Klik **Save**.
+
+### Proses Vendor RMA
+
+Vendor RMA berfungsi sebagai dokumen otorisasi pengembalian barang kepada vendor dan menghubungkan proses Return to Vendor dengan Material Receipt yang menjadi referensi. UoM yang dikonfigurasi di Vendor RMA otomatis disalin ke dokumen **Return to Vendor** dan **AP Credit Memo**, sehingga UoM pada ketiga dokumen tetap selaras.
+
+Ikuti langkah berikut untuk membuat Vendor RMA:
+
+1. Buka menu **Vendor RMA**.
+2. Pilih **Document Type**.
+3. Tentukan **RMA Type**.
+4. Pada field **Receipt**, pilih dokumen **Material Receipt** yang akan direferensikan.
+
+![vendor rma](../header_rma.png "Header Vendor RMA") {#Figure198}
+
+5. Klik **Create Lines From**.
+6. Tentukan **quantity** produk yang akan di-return.
+7. Klik **Create Line From RMA**.
+8. Sistem otomatis membuat RMA Line berdasarkan line yang dipilih.
+9. Verifikasi **quantity** dan **UoM** di RMA Line.
+10. Klik **Save**.
+11. Klik **Complete**.
+
+Saat Vendor RMA di-complete, sistem otomatis membuat dokumen **Return to Vendor** dengan status sesuai konfigurasi Document Type Vendor RMA.
+### Langkah Proses Return to Vendor
+
+1. Buka menu **Return to Vendor**.
+2. Cari dokumen Return to Vendor yang ter-create dengan menginput nomor dokumen **Vendor RMA**.
+3. Informasi dari Vendor RMA — termasuk quantity, price, UoM, dan informasi Business Partner — otomatis tersalin ke **Return to Vendor Line**.
+
+![return to vendor](../return.png "Return to Vendor Line") {#Figure199}
+
+4. Klik **Complete**.
+
+Setelah dokumen Return to Vendor di-complete, sistem otomatis:
+
+- Mengurangi stok sesuai quantity barang yang dikembalikan.
+- Mencatat transaksi pengeluaran barang dari warehouse.
+- Membentuk jurnal akuntansi Return to Vendor.
+
+![jurnal](../jurnal_rtv.png "Jurnal Return to Vendor") {#Figure190}
+
+- Menyimpan riwayat transaksi pada tab **Transactions** dan **Located At** di menu Product.
+- Membuat dokumen **AP Credit Memo** dengan status _Complete_.
+### AP Credit Memo
+
+Setelah proses Return to Vendor selesai, sistem otomatis:
+
+- Membuat dokumen **AP Credit Memo**.
+- Menyalin seluruh informasi transaksi dari Return to Vendor ke **Invoice Line** pada AP Credit Memo.
+
+![ap cm](../ap_cm_line.png "AP Credit Memo Line") {#Figure244}
+
+- Menyelesaikan dokumen dengan status _Complete_.
+- Membentuk jurnal akuntansi AP Credit Memo sesuai transaksi yang dihasilkan.
+
+![credit](../line_cm.png "Jurnal AP Credit Memo") {#Figure191}
+
+Sistem kemudian menjalankan proses **Matching** antara transaksi Return to Vendor dan AP Credit Memo untuk memastikan nilai transaksi pembelian telah direkonsiliasi sehingga tidak terdapat saldo atau akun pembelian yang masih menggantung.
+
+![match](../match_rma.png "Jurnal Match Receipt") {#Figure192}
+#### Allocation AP Credit Memo
+
+Selain membuat **AP Credit Memo**, sistem juga melakukan proses **Allocation** secara otomatis terhadap invoice pembelian yang masih memiliki saldo outstanding. Mekanisme allocation berjalan sebagai berikut:
+##### Invoice masih outstanding
+
+Sistem mengalokasikan **AP Credit Memo** dengan invoice pembelian sehingga saldo tagihan berkurang sesuai nilai pengembalian barang.
+
+![ap cn](../ap_cn_ots.png "Allocation AP Credit Memo Outstanding") {#Figure215}
+##### Invoice telah dibayar sebagian (Partial Payment)  
+
+Sistem tetap melakukan allocation antara **AP Credit Memo** dan invoice pembelian. Allocation dilakukan terhadap sisa tagihan yang masih outstanding sehingga nilai hutang tersisa berkurang sesuai nominal AP Credit Memo.
+
+![ap cn](../ap_cn_paysebagian.png "Allocation AP Credit Memo (Partial Payment)") {#Figure216}
+##### Invoice telah dibayar penuh (Fully Paid)  
+
+Sistem tetap membuat **AP Credit Memo**, namun tidak melakukan allocation karena invoice pembelian telah lunas dan seluruh nilainya telah dialokasikan ke transaksi pembayaran sebelumnya. Dalam kondisi ini, AP Credit Memo tetap tersedia sebagai saldo kredit yang dapat dimanfaatkan pada transaksi berikutnya sesuai kebijakan perusahaan.
+
+![ap cn](../ap_cn_payfull.png "Allocation AP Credit Memo (Fully Paid)"){#Figure217}
 
 ## Informasi Product Return di Purchase Order
 

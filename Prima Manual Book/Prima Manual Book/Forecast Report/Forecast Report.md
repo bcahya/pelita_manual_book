@@ -1,21 +1,24 @@
 # Forecast Report
 
-Forecast report adalah laporan yang menampilkan stok di gudang/locator, asal transaksi, dan movement antar gudang. Ikuti langkah berikut untuk mengakses Forecast Report di iDempiere:
+Forecast Report adalah laporan yang menampilkan stok di gudang/locator, asal transaksi, dan movement antar gudang. User dapat memilih satu atau beberapa produk yang ingin ditampilkan — cukup input nama atau kode artikel pada field **Product**. Laporan ini juga mendukung pengecekan berdasarkan **Product Category** dengan menginput nama atau kode Product Category yang diinginkan.
 
-1. Buka menu SIS Forecast Report
-2. Pilih Product yang akan dicek.
-3. T Warehouse yang akan diperiksa.
-4. Tentukan Locator atau lokasi penyimpanan produk di dalam warehouse.
+Ikuti langkah berikut untuk mengakses Forecast Report:
 
-![Header](../parameter_forecast.png "Konfigurasi Header") {#Figure 94}
+1. Buka menu **SIS Forecast Report**.
+2. Tentukan **Product** atau **Product Category** yang akan dicek.
+3. Tentukan **Warehouse** yang akan diperiksa.
+4. Tentukan **Locator** atau lokasi penyimpanan produk di dalam warehouse.
+5. Klik **OK**.
+
+![Header](../parameter_for.png "Konfigurasi Header") {#Figure 94}
 
 5. Klik Ok
 
-Sistem menampilkan informasi ketersediaan stock produk sesuai kriteria yang dipilih, meliputi data produk pada warehouse dan locator yang ditentukan. 
+Sistem menampilkan informasi ketersediaan stok produk sesuai kriteria yang dipilih, meliputi data produk pada warehouse dan locator yang ditentukan.
 
-![Forecast Report](../forecast_update.png "Forecast Report") {#Figure 95}
+![Forecast Report](../fore_pc.png "Forecast Report") {#Figure 95}
 
-Forecast report menyediakan informasi Stock On Hand, Purchase Requisition, dan Material Movement untuk membantu user memantau ketersediaan material, kebutuhan pembelian, serta penggunaan material di gudang.
+Forecast Report menyediakan informasi berikut untuk membantu user memantau ketersediaan material, kebutuhan pembelian, dan penggunaan material di gudang:
 ## Stock On Hand
 
 Stock On Hand menampilkan jumlah stok material yang tersedia di gudang secara aktual. Sistem akan memperbarui jumlah stok secara otomatis setiap kali terjadi transaksi yang memengaruhi persediaan, seperti:

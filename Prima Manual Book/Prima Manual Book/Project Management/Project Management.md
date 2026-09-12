@@ -109,7 +109,6 @@ Setelah Invoice di-complete, sistem otomatis membuat aset yang akan muncul di me
 4. Sistem menampilkan notifikasi **Created** — issue atas project berhasil dibuat.
 
 Seluruh issue yang telah dibuat akan muncul di tab **Issue** pada menu Project di master project terkait. Gunakan fitur Issue to Project untuk mencatat penggunaan bahan secara internal dalam project tersebut.
-
 ## Action Project
 
 Setelah suatu project dinyatakan selesai dan seluruh transaksi terkait telah dipastikan selesai diproses, project dapat dilakukan proses **Complete**.
@@ -176,3 +175,56 @@ Ikuti langkah berikut untuk memproses PO hingga Invoice untuk artikel renovasi d
 8. Klik **Complete** pada dokumen Invoice.
 
 Saat **Generate Credit Note from Project Issue** dijalankan, sistem otomatis membentuk Invoice Line di project dengan **CIP** untuk membalik Issue to Project dengan nilai minus. Dengan Credit Note, nilai aset tidak bertambah, namun tagihan atas project berkurang senilai CIP.
+## Project dengan Product Expense
+
+Dalam suatu Project, Purchase Order (PO) dapat mencakup pembelian Product Item maupun Product Expense. Untuk transaksi Product Expense, pembuatan PO harus dilakukan secara terpisah dari Product Item. Dalam satu PO, Product Item dan Product Expense tidak dapat digabungkan. Jika terdapat pembelian Product Expense, buat PO terpisah menggunakan Document Type khusus PO Expense.
+
+Berikut alur proses Project dengan Product Expense:
+### Membuat Purchase Order Expense
+
+Buat Purchase Order menggunakan Document Type PO Expense untuk Product Expense yang akan dibebankan ke Project. Saat membuat PO, baik untuk Product Item maupun Product Expense, tentukan informasi berikut:
+
+- **Project** — Project yang akan dibebankan atas transaksi tersebut.
+- **Cost Center** — Cost Center yang terkait dengan transaksi.
+
+Pastikan Project dan Cost Center telah dipilih sebelum PO diproses.
+### Generate Invoice dari PO Expense
+
+PO Expense tidak menghasilkan proses **Material Receipt (MR) / BPB**. Setelah PO Expense selesai diproses, lanjutkan dengan membuat Invoice dari PO tersebut. Generate Invoice atas PO Expense, kemudian proses Invoice hingga berstatus **Complete**.
+### Issue to Project
+
+Setelah Invoice PO Expense diproses, lakukan **Issue to Project** untuk membebankan biaya ke Project terkait.
+
+Langkah-langkahnya sebagai berikut:
+
+1. Buka menu **Issue to Project**.
+2. Isi field berikut:
+- **Project** — Pilih Project yang sedang dikerjakan.
+- **Order** — Pilih nomor dokumen Purchase Order Expense.
+
+![issue to project](../issue_po_ex.png "Issue to Project") {#Figure299}
+
+3. Klik **OK**.
+4. Sistem menampilkan notifikasi **Created**, yang menandakan Issue to Project berhasil dibuat.
+
+Seluruh Issue yang berhasil dibuat akan muncul pada tab **Issue** di menu **Project** pada Master Project terkait.
+
+![issue to project](../issue_pro.png "Issue di Project") {#Figure300}
+
+![jurnal issue to project](../jurnal_issue_ex.png "Jurnal PO Expense") {#Figure301}
+### Credit Note untuk Kompensasi Project
+
+Apabila terdapat kompensasi dalam Project, proses kompensasi tersebut melalui **Credit Note**. Langkah-langkahnya sebagai berikut:
+
+1. Buka menu **Purchase Invoice and Credit/Debit Note**.
+2. Tentukan **Target Document Type**.
+3. Tentukan **Business Partner**.
+4. Klik **Generate Credit Note From Project Issue**.
+
+Saat proses Generate Credit Note From Project Issue dijalankan, sistem secara otomatis membuat Invoice Line berdasarkan Issue to Project yang terkait.
+
+![credit note](../cn_expense.png "Credit Note Kompensasi Project") {#Figure302}
+
+Invoice Line tersebut menggunakan nilai **CIP** dengan nilai minus untuk membalik transaksi **Issue to Project**. Dengan demikian, Credit Note mengurangi nilai tagihan Project sebesar nilai CIP yang dikompensasikan.
+
+![cn di project](../cn_project.png "Nilai Credit Note di Project") {#Figure303}
