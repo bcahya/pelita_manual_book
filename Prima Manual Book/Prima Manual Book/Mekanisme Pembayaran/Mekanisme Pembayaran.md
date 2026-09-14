@@ -245,6 +245,22 @@ Sebelum melakukan bank/cash transfer, perlu dilakukan konfigurasi untuk **Busine
 | SIS_BANKTRANSFER_BP_ID     | **C_BPartner_ID** yang akan digunakan sesuai kebijakan perusahaan. |
 | SIS_BANKTRANSFER_CHARGE_ID | **C_Charge_ID** yang akan digunakan sesuai kebijakan perusahaan.   |
 "System Configurator"{#Tabel16}
+
+## Konfigurasi Charge Bank/Cash Transfer
+
+Transaksi Bank/Cash Transfer dapat memiliki konfigurasi **Charge** yang berbeda, yang akan berpengaruh pada jurnal ayat silang yang terbentuk. Konfigurasi Charge dilakukan di level **Document Type**.
+
+Ikuti langkah berikut untuk mengkonfigurasi Charge pada Document Type:
+
+1. Buka menu **Document Type**.
+2. Tentukan Document Type dengan **Document Base Type Bank/Cash Transfer** yang akan dikonfigurasi.
+3. Pada field **Charge Bank Transfer**, tentukan charge atas transaksi pada document type tersebut.
+
+![charge](../charge_bc_tf.png "Konfigurasi Charge Bank/Cash Transfer") {#Figure306}
+
+4. Klik **Save**.
+
+Saat transaksi Bank atau Cash Transfer diproses, jurnal ayat silang yang terbentuk menggunakan charge yang telah dikonfigurasi. Ketentuan ini juga berlaku untuk transaksi **Petty Cash** dan **Kartu Fleet** — charge harus dikonfigurasi terlebih dahulu karena pengisian Petty Cash dan Kartu Fleet dilakukan melalui menu **Bank/Cash Transfer**.
 ## Langkah Proses Bank/Cash Transfer
 
 1. Buka menu **Bank/Cash Transfer**.

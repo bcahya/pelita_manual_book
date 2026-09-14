@@ -139,7 +139,7 @@ Permintaan material aksesoris produksi seperti kancing, resleting, dan label.
 
 Permintaan material/bahan baku untuk kebutuhan proses produksi knitting.
 
-![knit](../mr_knit.png "MR Knitting") {#Figure149}
+![knit](../mr_knitting.png "MR Knitting") {#Figure149}
 #### MR Woven
 
 Permintaan material/bahan baku untuk kebutuhan proses produksi woven. 
@@ -832,3 +832,16 @@ Langkah Akses Laporan Kartu Stock Bahan:
 Berikut contoh report kartu stock bahan:
 
 ![bahan](../kartu_stock_bahan.png "Kartu Stock Bahan") {#Figure304}
+
+## Report PO Project
+
+Langkah Akses Report Project yang mencakup PO Besar dan PO Kecil:
+
+1. Buka menu **Project**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Printout PO Project**.
+4. Klik **OK**.
+
+Berikut contoh Report Project:
+
+![po project](../po_project.png "Report PO Project") {#Figure305}
