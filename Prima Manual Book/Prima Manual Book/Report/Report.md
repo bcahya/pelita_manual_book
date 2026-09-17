@@ -74,7 +74,7 @@ Pembelian yang berkaitan dengan kendaraan operasional, misalnya suku cadang, bah
 
 Pembelian bahan baku, benang, atau suku cadang mesin untuk kebutuhan proses knitting.
 
-![knit](../po_knit_ppg.png "PO Knitting") {#Figure146}
+![knit](../po_knitting.png "PO Knitting") {#Figure146}
 #### PO Umum
 
 Pembelian kebutuhan umum PPG yang tidak termasuk dalam kategori khusus lainnya.
@@ -139,7 +139,7 @@ Permintaan material aksesoris produksi seperti kancing, resleting, dan label.
 
 Permintaan material/bahan baku untuk kebutuhan proses produksi knitting.
 
-![knit](../mr_knitting.png "MR Knitting") {#Figure149}
+![knit](../mr_knitting2.png "MR Knitting") {#Figure149}
 #### MR Woven
 
 Permintaan material/bahan baku untuk kebutuhan proses produksi woven. 

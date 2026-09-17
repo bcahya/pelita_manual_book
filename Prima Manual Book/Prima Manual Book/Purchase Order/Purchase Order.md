@@ -320,7 +320,7 @@ Ikuti langkah berikut untuk membuat Vendor RMA:
 3. Tentukan **RMA Type**.
 4. Pada field **Receipt**, pilih dokumen **Material Receipt** yang akan direferensikan.
 
-![vendor rma](../header_rma.png "Header Vendor RMA") {#Figure198}
+![vendor rma](../vendor_rma2.png "Header Vendor RMA") {#Figure198}
 
 5. Klik **Create Lines From**.
 6. Tentukan **quantity** produk yang akan di-return.
@@ -337,7 +337,7 @@ Saat Vendor RMA di-complete, sistem otomatis membuat dokumen **Return to Vendor*
 2. Cari dokumen Return to Vendor yang ter-create dengan menginput nomor dokumen **Vendor RMA**.
 3. Informasi dari Vendor RMA — termasuk quantity, price, UoM, dan informasi Business Partner — otomatis tersalin ke **Return to Vendor Line**.
 
-![return to vendor](../return.png "Return to Vendor Line") {#Figure199}
+![return to vendor](../rtv_2.png "Return to Vendor Line") {#Figure199}
 
 4. Klik **Complete**.
 
@@ -347,7 +347,7 @@ Setelah dokumen Return to Vendor di-complete, sistem otomatis:
 - Mencatat transaksi pengeluaran barang dari warehouse.
 - Membentuk jurnal akuntansi Return to Vendor.
 
-![jurnal](../jurnal_rtv.png "Jurnal Return to Vendor") {#Figure190}
+![jurnal](../jurnal_rtv2.png "Jurnal Return to Vendor") {#Figure190}
 
 - Menyimpan riwayat transaksi pada tab **Transactions** dan **Located At** di menu Product.
 - Membuat dokumen **AP Credit Memo** dengan status _Complete_.
@@ -358,16 +358,16 @@ Setelah proses Return to Vendor selesai, sistem otomatis:
 - Membuat dokumen **AP Credit Memo**.
 - Menyalin seluruh informasi transaksi dari Return to Vendor ke **Invoice Line** pada AP Credit Memo.
 
-![ap cm](../ap_cm_line.png "AP Credit Memo Line") {#Figure244}
+![ap cm](../cn_rtv2.png "AP Credit Memo Line") {#Figure244}
 
 - Menyelesaikan dokumen dengan status _Complete_.
 - Membentuk jurnal akuntansi AP Credit Memo sesuai transaksi yang dihasilkan.
 
-![credit](../line_cm.png "Jurnal AP Credit Memo") {#Figure191}
+![credit](../jurnal_cn_rtv.png "Jurnal AP Credit Memo") {#Figure191}
 
 Sistem kemudian menjalankan proses **Matching** antara transaksi Return to Vendor dan AP Credit Memo untuk memastikan nilai transaksi pembelian telah direkonsiliasi sehingga tidak terdapat saldo atau akun pembelian yang masih menggantung.
 
-![match](../match_rma.png "Jurnal Match Receipt") {#Figure192}
+![match](../jurnal_match_cn.png "Jurnal Match Receipt") {#Figure192}
 #### Allocation AP Credit Memo
 
 Selain membuat **AP Credit Memo**, sistem juga melakukan proses **Allocation** secara otomatis terhadap invoice pembelian yang masih memiliki saldo outstanding. Mekanisme allocation berjalan sebagai berikut:
