@@ -141,3 +141,33 @@ Saat ekspedisi dibatalkan, field **Active** pada Line akan ter-uncheck secara ot
 ![batal](../move_eksp_batal.png "Inventory Move Batal") {#Figure212}
 
 > **Catatan:** Jika pengiriman dilakukan secara bertahap, gunakan dokumen Movement yang berbeda untuk setiap tahap pengiriman agar setiap pengiriman memiliki dokumen ekspedisi dan penerimaan tersendiri.
+
+## Pembatalan Sebagian
+
+**Pembatalan Sebagian** digunakan untuk membatalkan **produk tertentu** pada dokumen **Inventory Move Delivery** tanpa harus membatalkan seluruh produk dalam satu dokumen. Pembatalan dilakukan pada level **Inventory Move Line** dengan ketentuan sebagai berikut:
+
+- Pembatalan sebagian hanya dapat dilakukan apabila dokumen Inventory Move Delivery sudah berstatus **Complete**.
+- Pembatalan dilakukan **per line**, bukan per qty. Apabila satu line dibatalkan, maka **seluruh qty** yang ada di line tersebut akan ikut dibatalkan.
+
+### Proses Pembatalan Sebagian
+
+1. Buka menu **Inventory Move**.
+2. Tentukan dokumen **Inventory Move Delivery** yang akan diproses dan berstatus **complete**.
+3. Setelah dokumen berstatus Complete, sistem akan menampilkan button **Cancel Delivery**.
+
+![cancel](../cancel_deliv.png "Cancel Delivery") {#Figure300}
+
+4. Klik button **Cancel Delivery** untuk memulai proses pembatalan.
+5. Pilih **Inventory Move Line** yang akan dibatalkan.
+
+![sis](../sis_cancel.png "SIS Cancel Delivery) {#Figure301}
+
+6. Klik **SIS Cancel Delivery**.
+
+Setelah pembatalan dilakukan, sistem secara otomatis akan membentuk **Inventory Move pembalik** untuk Inventory Move Line yang dibatalkan. Sistem juga akan menyesuaikan dokumen **Inventory Move Receipt** yang terkait dengan Inventory Move Delivery tersebut. 
+
+![move](../move_pembalik.png "Inventory Move Pembalik") {#Figure302}
+
+Inventory Move Line yang dibatalkan akan **terhapus secara otomatis** dari Inventory Move Receipt. Inventory Move Line yang tidak dibatalkan tetap tersedia pada Inventory Move Receipt dan dapat dilanjutkan ke proses penerimaan.
+
+Dengan demikian, apabila dalam satu Inventory Move Delivery terdapat beberapa produk dan hanya sebagian produk yang dibatalkan, maka **hanya produk yang tidak dibatalkan yang akan diproses pada Inventory Move Receipt**.
