@@ -136,3 +136,42 @@ Saat Payment di-complete, sistem otomatis membuat dokumen **Bank Statement** ses
 ![jurnal](../jurnal_bs_fleet.png "Jurnal Bank Statement") {#Figure256}
 
 Informasi pada Bank Statement diambil dari invoice dan payment, sehingga setiap Payment dan Bank Statement dapat ditelusuri kaitannya dengan invoice dan Business Partner yang bersangkutan.
+
+## Auto Create Bank Account Petty Cash
+
+Di iDempiere, setiap outlet memiliki Bank Account Petty Cash tersendiri. Karena jumlah outlet bisa mencapai ratusan, sistem otomatis membuat Bank Account Petty Cash untuk setiap warehouse yang dibuat, dengan penamaan **Petty Cash + Nama Warehouse**.
+
+Sebelum membuat master data warehouse, lakukan konfigurasi sistem berikut terlebih dahulu:
+
+- Tambahkan konfigurasi **SIS_BANK_PETTY_CASH_ID** dengan nilai **C_Bank_ID** dari bank Petty Cash yang telah dibuat di menu **Bank/Cash**.
+
+Setelah konfigurasi selesai, sistem otomatis membuat Bank Account Petty Cash setiap kali warehouse baru dibuat.
+
+### Proses Auto Create Bank Account Petty Cash dari Warehouse
+
+Ikuti langkah berikut untuk membuat warehouse:
+
+1. Buka menu **Warehouse and Locator**.
+2. Tentukan **Search Key**. **Search Key** yang diinput merepresentasikan **Account Number** di Bank/Cash.
+3. Tentukan **Name** warehouse.
+4. Tentukan **alamat** warehouse.
+5. Klik **Save**.
+
+Saat warehouse disimpan, sistem otomatis:
+
+- Membuat **satu locator default** yang dikonfigurasi sebagai _Stock Locator_ dan _Reserve Locator_.
+- Membuat **Bank Account Petty Cash** atas warehouse tersebut.
+
+![wh](../wh_outlet.png "Master Warehouse") {#Figure303}
+### Verifikasi Bank Account Petty Cash
+
+Untuk memverifikasi bahwa Bank Account Petty Cash sudah ter-create otomatis, ikuti langkah berikut:
+
+1. Buka menu **Bank/Cash**.
+2. Cari bank Petty Cash yang dikonfigurasi pada **SIS_BANK_PETTY_CASH_ID**.
+3. Masuk ke tab **Account**.
+4. Sistem menampilkan account Petty Cash yang ter-create otomatis dengan nama **Petty Cash + Nama Warehouse**.
+
+![akun](../akun_petty.png "Akun Petty Cash per Warehouse") {#Figure304}
+
+Dengan mekanisme ini, user tidak perlu membuat account Petty Cash secara manual untuk setiap outlet. Setiap Warehouse atau Outlet baru yang dibuat otomatis memiliki **Bank Account Petty Cash** yang terhubung dengan warehouse tersebut.

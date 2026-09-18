@@ -21,15 +21,13 @@ Guarantee Date digunakan untuk:
 
 1. Buka menu **Attribute Set**
 2. Centang field **Lot**
-3. Centang field **Guarantee Date**
-4. Centang field **Instance Attribute**
-5. Centang field **Mandatory Guarantee Date**
-6. Pada field **Mandatory Type**, pilih **Always Mandatory**
-7. Pada field **Attribute Set Type**, pilih **Material Management System**
+3. Centang field **Instance Attribute**
+4. Pada field **Mandatory Type**, pilih **Always Mandatory**
+5. Pada field **Attribute Set Type**, pilih **Material Management System**
 
 ![Attibute Set](../Attribute_Set_New.png "Attribute Set") {#Figure75}
 
-8. Masuk ke tab Exclude, input data berikut:
+6. Masuk ke tab Exclude, input data berikut:
   - C_OrderLine – Sales Order Line
   - M_InOutLine – Shipment/Receipt Line
   - M_MovementLine_Move Line
@@ -39,7 +37,7 @@ Guarantee Date digunakan untuk:
 
   ![Exclude](../Exclude.png "Exclude") {#Figure76}
   
-9. Klik **Save**
+7. Klik **Save**
 
 ### Setup Attribute Set Instance di Produk
 
@@ -112,3 +110,53 @@ Jika konfigurasi **Manual ASI Setup** belum dilakukan pada Document Type, ASI ti
 > **Catatan:** Guarantee Date terisi otomatis berdasarkan konfigurasi **Guarantee Date** pada Attribute Set. User menentukan masa berlaku produk dalam satuan hari, dan sistem menghitung tanggalnya secara otomatis berdasarkan tanggal dokumen ter-_create_.
 
 ![guarantee](../guarantee.png "Konfigurasi Guarantee Days di Attribute Set") {#Figure295}
+
+## Batch Production
+
+Batch Production digunakan untuk membentuk nomor atau informasi batch produksi berdasarkan **ASI (Attribute Set Instance)**. Dalam proses pembentukan Batch Production, sistem menggunakan **Sequence** sebagai dasar untuk menentukan urutan batch yang akan terbentuk.
+
+Konfigurasi ini dilengkapi dengan informasi **Locator** yang digunakan sebagai referensi lokasi penyimpanan hasil produksi. Data Locator yang digunakan pada proses Batch Production mengikuti Locator yang dikonfigurasi pada masing-masing transaksi.
+### Konfigurasi Sequence
+
+Sebelum mengkonfigurasi ASI, lakukan konfigurasi **Sequence** yang akan digunakan dalam proses pembentukan Batch Production. Sequence berfungsi untuk menentukan urutan pembentukan batch dan menghasilkan nomor batch secara berurutan. Selain informasi sequence, konfigurasi ini juga memuat informasi **Locator** sebagai bagian dari proses Batch Production.
+
+Ikuti langkah berikut untuk mengkonfigurasi Sequence Production:
+
+1. Buka menu **Document Sequence**.
+2. Centang field **Auto Numbering**.
+3. Tentukan **Prefix**.
+4. Tentukan **Suffix**.
+5. Centang field **Restart sequence every Year**.
+6. Pada field Date Column input **GuaranteeDate**.
+7. Centang field **Locator Level**.
+8. Pada field Locator Column input **M_Locator_ID**.
+
+![sequence](../sequence_prod.png "Sequence Production") {#Figure305}
+
+9. Klik **Save**.
+### Konfigurasi ASI
+
+ASI digunakan sebagai dasar informasi yang melekat pada produk atau hasil produksi. Pastikan ASI sudah dikonfigurasi sesuai kebutuhan sebelum menjalankan proses Batch Production.
+
+Ikuti langkah berikut untuk mengkonfigurasi ASI:
+
+1. Buka menu **Attribute Set**.
+2. Tentukan **Sequence** yang akan digunakan.
+3. Centang field **Guarantee Date** — jika akan ditambahkan informasi masa berlaku.
+4. Centang field **Instance Attribute**.
+5. Centang field **Mandatory Guarantee Date** — jika akan ditambahkan informasi masa berlaku.
+6. Pada field **Guarantee Days**, input masa berlaku dalam satuan hari.
+7. Pada field **Mandatory Type**, pilih **Always Mandatory**.
+8. Pada field **Attribute Set Type**, pilih **Material Management System**.
+
+![asi](../asi_prod.png "Attribute Set Production") {#Figure306}
+
+9. Klik **Save**.
+
+### Implementasi ASI di Produksi
+
+Setelah ASI, Sequence, dan Locator dikonfigurasi, proses Batch Production dapat dijalankan melalui transaksi produksi. Saat Batch Production dijalankan, sistem menggunakan **ASI** sebagai informasi dasar batch dan **Sequence** untuk menentukan urutan pembentukan batch, sehingga nomor atau identitas batch terbentuk secara berurutan.
+
+Berikut contoh produksi dengan ASI dan Sequence:
+
+![prod](../production_asi.png "Production dengan ASI") {#Figure307}

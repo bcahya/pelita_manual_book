@@ -16,7 +16,7 @@ Nomor dokumen dapat disesuaikan melalui konfigurasi **Prefix**, **Suffix**, dan 
 - **Restart Sequence Every Year** — Merestart penomoran setiap tahun.
 - **Restart Sequence Every Month** — Merestart penomoran setiap bulan.
 - **Restart Sequence Every Day** — Merestart penomoran setiap hari.
-- **Date Column** — Input tanggal masing-masing dokumen.
+- **Date Column** — Input tanggal sesuai nama kolom tanggal pada masing-masing menu. Karena nama kolom tanggal berbeda di setiap dokumen, pastikan Date Column diisi sesuai nama _table_ tanggal yang digunakan di menu tersebut.
 
 
 ![sequence](./seq_match.png "Document Sequence") {#Figure216}

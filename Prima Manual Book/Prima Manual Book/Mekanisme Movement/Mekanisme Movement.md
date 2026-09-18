@@ -142,6 +142,39 @@ Saat ekspedisi dibatalkan, field **Active** pada Line akan ter-uncheck secara ot
 
 > **Catatan:** Jika pengiriman dilakukan secara bertahap, gunakan dokumen Movement yang berbeda untuk setiap tahap pengiriman agar setiap pengiriman memiliki dokumen ekspedisi dan penerimaan tersendiri.
 
+### Informasi Tambahan Pada Ekspedisi
+
+Saat proses perpindahan barang menggunakan ekspedisi, dokumen ekspedisi memuat informasi **supir**, **kernet**, **nama kendaraan**, dan **nomor polisi kendaraan**. Informasi ini penting untuk memastikan setiap pengiriman dapat ditelusuri — termasuk siapa yang mengantarkan dan kendaraan apa yang digunakan.
+
+Supir dan kernet dikonfigurasi sebagai **User** di sistem, sehingga master data untuk setiap supir dan kernet harus dibuat terlebih dahulu. Begitu pula dengan kendaraan — master data kendaraan juga harus dikonfigurasi sebelum digunakan.
+#### Konfigurasi Supir dan Kernet
+
+Ikuti langkah berikut untuk membuat master data supir dan kernet:
+
+1. Buka menu **User**.
+2. Tentukan **nama** dan **Search Key** untuk supir atau kernet.
+3. Pada field **Expedition Role**, tentukan apakah user tersebut berperan sebagai **supir** atau **kernet**.
+
+![user](../supir.png "Supir dan Kernet") {#Figure301}
+
+4. Klik **Save**.
+
+#### Konfigurasi Kendaraan
+
+Ikuti langkah berikut untuk membuat master data kendaraan:
+
+1. Buka menu **Kendaraan Expedition**.
+2. Input **Search Key** dengan nomor polisi kendaraan.
+3. Input **Name** dengan nama kendaraan.
+
+![kendaraan](../kendaraan.png "Nama dan Nomor Polisi Kendaraan") {#Figure302}
+
+4. Klik **Save**.
+
+Setiap dokumen ekspedisi akan menampilkan informasi **nama supir**, **kernet**, **nomor kendaraan**, dan **jenis kendaraan**, sehingga perusahaan dapat memantau pengiriman barang secara lengkap dan akurat.
+
+![informasi](../eks_tambahan.png "Informasi Supir, Kernet dan Kendaraan") {#Figure303}
+
 ## Pembatalan Sebagian
 
 **Pembatalan Sebagian** digunakan untuk membatalkan produk tertentu pada dokumen **Inventory Move Delivery** tanpa harus membatalkan seluruh produk dalam satu dokumen. Pembatalan dilakukan pada level **Inventory Move Line** dengan ketentuan berikut:
