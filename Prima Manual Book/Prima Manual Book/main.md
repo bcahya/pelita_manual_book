@@ -1,4 +1,4 @@
-.docname {20260901 Pelita Prima Manual Book}
+.docname {20260915 Pelita Prima Manual Book}
 .doctype {paged}
 .doclang {English}
 .theme {paperwhite} layout:{latex}
@@ -11,7 +11,7 @@
 .pagemargin {bottomright}
     .currentpage
 .pagemargin {bottomleft}
-    Versi 2026-09-01
+    Versi 2026-09-15
 .pageformat margin:{2cm}
 .pageformat bordertop:{1px} borderbottom:{1px}
 
