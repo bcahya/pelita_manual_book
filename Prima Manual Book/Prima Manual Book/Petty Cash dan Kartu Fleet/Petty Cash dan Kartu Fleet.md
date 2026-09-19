@@ -175,3 +175,50 @@ Untuk memverifikasi bahwa Bank Account Petty Cash sudah ter-create otomatis, iku
 ![akun](../akun_petty.png "Akun Petty Cash per Warehouse") {#Figure304}
 
 Dengan mekanisme ini, user tidak perlu membuat account Petty Cash secara manual untuk setiap outlet. Setiap Warehouse atau Outlet baru yang dibuat otomatis memiliki **Bank Account Petty Cash** yang terhubung dengan warehouse tersebut.
+
+## Import Transaksi Kartu Fleet
+
+Transaksi **Kartu Fleet** pada sistem iDempiere direpresentasikan sebagai **AP Invoice**. Setiap transaksi yang berasal dari Kartu Fleet akan diproses menjadi AP Invoice berdasarkan **tanggal transaksi dan nomor Kartu Fleet**.
+
+Dalam prosesnya, transaksi Kartu Fleet dapat terdiri dari beberapa jenis transaksi. Namun, dari sisi pembebanan biaya, transaksi tersebut akan dikelompokkan menjadi dua kategori utama, yaitu:
+
+- **BBM**, untuk transaksi yang berkaitan dengan pembelian bahan bakar.
+- **Non-BBM**, untuk transaksi selain BBM, seperti **Tol, Parkir**, atau charge lainnya.
+
+Data transaksi Kartu Fleet diperoleh dalam bentuk file dan akan diimport ke sistem menggunakan **FileZilla**.
+
+Sebelum transaksi Kartu Fleet dapat diproses, perlu dilakukan konfigurasi terlebih dahulu pada sistem. Konfigurasi yang diperlukan meliputi:
+
+### Konfigurasi Sebelum Import Transaksi
+
+#### Konfigurasi Sistem
+
+| Konfigurasi                   | Value            |
+| ----------------------------- | ---------------- |
+| SIS_FLEET_CHARGE_TOL_ID       | C_Charge_ID      |
+| SIS_FLEET_CHARGE_BBM_ID       | C_Charge_ID      |
+| SIS_FLEET_PRICE_LIST_ID       | C_Charge_ID      |
+| SIS_FLEET_TAX_ID              | M_PriceList_ID   |
+| SIS_FLEET_PAYMENT_TERM_ID     | C_PaymentTerm_ID |
+| SIS_FLEET_DEFAULT_DOC_TYPE_ID | C_DocType_ID     |
+| SIS_FLEET_CURRENCY_ID         | C_Currency_ID    |
+| SIS_FLEET_USER_ID             | AD_User_ID       |
+#### Konfigurasi Nomor Kartu Fleet
+
+Nomor atau akun Kartu Fleet harus dikonfigurasi pada sistem sebagai identitas kartu yang digunakan untuk melakukan transaksi.
+
+Informasi ini nantinya digunakan untuk mengidentifikasi transaksi yang berasal dari masing-masing Kartu Fleet pada saat proses import dan pembentukan AP Invoice.
+#### Konfigurasi Cost Center
+
+Pada konfigurasi **Bank Account**, perlu ditentukan **Cost Center** yang terkait dengan Kartu Fleet. Cost Center yang dikonfigurasi pada Bank Account tersebut nantinya akan digunakan sebagai **Business Partner pada AP Invoice** yang terbentuk dari transaksi Kartu Fleet.
+
+### Proses Import Transaksi
+
+1. Siapkan file Transaksi Kartu Fleet yang menggunakan format **TXT**.
+2. Import melalui FileZilla
+  - Navigasi ke /home/dev-idempiere/Fleet → Import Transaksi
+  - Pilih file Transaksi Kartu Fleet yang akan diimport
+
+3. Jika import berhasil, file otomatis berpindah ke folder **done**
+
+Di idempiere akan tercreate AP Invoice atas transaksi kartu fleet dengan masing-masing bank account, business partner dan tanggal transaksi. Seluruh informasi yang ada diinvoice sesuai dengan konfigurasi di sistem dan yang ada di file transaksinya. Document AP Invoice yang berhasil diimport berstatus draft.

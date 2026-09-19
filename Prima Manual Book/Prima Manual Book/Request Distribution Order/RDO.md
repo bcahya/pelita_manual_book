@@ -54,9 +54,9 @@ Pada konfigurasi Document Type RDO, terdapat beberapa field utama yang wajib dii
 
 
 
-5. Validasi quantity distribusi.
-
-6. Klik **Complete Document** untuk menyelesaikan proses RDO.
+5. Validasi **quantity** distribusi.
+6. Tentukan **Warehouse dan Locator Tujuan**.
+7. Klik **Complete Document** untuk menyelesaikan proses RDO.
 
 Setelah dokumen di-complete, sistem akan otomatis membuat dokumen:
 
@@ -64,7 +64,6 @@ Setelah dokumen di-complete, sistem akan otomatis membuat dokumen:
 - Inventory Move Receipt
 
 Kedua dokumen tersebut akan terbentuk dalam status **Draft** dan perlu diproses lebih lanjut sesuai alur operasional.
-
 ## Back Order Pada RDO
 
 Jika quantity distribusi yang diproses lebih kecil dari quantity permintaan, sistem akan otomatis membuat Back Order untuk sisa quantity yang belum terpenuhi.
@@ -90,3 +89,35 @@ Berikut ketentuan pembatalan berdasarkan status dokumen Delivery:
 - **Jika dokumen Delivery belum di-complete** — Status dokumen Receipt yang sebelumnya _In Progress_ otomatis ter-_void_.
 
 ![recipt](../receipt.png "Document Receipt Void") {#Figure247}
+
+## Generate Multi Movement Delivery
+
+Saat melakukan RDO, warehouse tujuan untuk setiap produk dapat berbeda-beda. Untuk mengakomodasi kondisi ini, sistem mendukung **RDO dengan multi warehouse tujuan**.
+
+RDO menggunakan mekanisme **intransit** — sebelum dipindahkan ke warehouse tujuan, sistem terlebih dahulu memindahkan produk dari gudang asal ke warehouse intransit.
+
+Untuk RDO dengan multi warehouse tujuan, sistem membuat **satu dokumen Inventory Move Delivery** yang memuat seluruh produk yang diproses di RDO Line.
+
+Ikuti langkah berikut untuk memproses RDO dengan multi warehouse tujuan:
+
+1. Buka menu **SIS RDO**.
+2. Tentukan **warehouse** dan **locator** asal.
+3. Klik **Generate RDO Line**.
+4. Tentukan **produk** dan **quantity** yang akan diproses.
+5. Klik **SIS Generate RDO Line**.
+6. Masuk ke tab **Line**.
+7. Tentukan **warehouse** dan **locator** tujuan untuk produk yang akan diproses.
+
+![wh](../rdo_line.png "Penentuan Warehouse Tujuan") {#Figure306}
+
+8. Klik **Save**.
+9. Ulangi langkah 7–8 untuk produk lainnya.
+10. Klik **Complete**.
+
+Saat RDO di-complete, sistem otomatis membuat dokumen **Inventory Move Delivery** dan **Inventory Move Receipt**. 
+
+![deliv](../deli_rdo.png "Inventory Move Delivery") {#Figure307}
+
+![receipt](../receipt_rdo.png "Inventory Move Receipt") {#Figure308}
+
+Dokumen Inventory Move Receipt yang ter-create dikonsolidasikan berdasarkan **warehouse tujuan** — jika beberapa produk dalam satu RDO memiliki warehouse tujuan yang sama, sistem menggabungkannya dalam satu dokumen. Dengan demikian, jumlah dokumen Inventory Move yang terbentuk sesuai dengan jumlah warehouse tujuan yang berbeda pada RDO Line.

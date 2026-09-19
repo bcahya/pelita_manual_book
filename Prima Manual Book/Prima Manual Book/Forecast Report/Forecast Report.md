@@ -16,7 +16,7 @@ Ikuti langkah berikut untuk mengakses Forecast Report:
 
 Sistem menampilkan informasi ketersediaan stok produk sesuai kriteria yang dipilih, meliputi data produk pada warehouse dan locator yang ditentukan.
 
-![Forecast Report](../fore_pc.png "Forecast Report") {#Figure 95}
+![Forecast Report](../forecast_mo.png "Forecast Report") {#Figure 95}
 
 Forecast Report menyediakan informasi berikut untuk membantu user memantau ketersediaan material, kebutuhan pembelian, dan penggunaan material di gudang:
 ## Stock On Hand
