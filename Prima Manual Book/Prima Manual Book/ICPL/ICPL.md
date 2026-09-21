@@ -185,6 +185,14 @@ Perubahan ICPL hanya dapat dilakukan melalui menu ICPL Update. User tidak dapat 
 8. Klik **complete**
 
 Saat ICPL Base diperbarui, seluruh ICPL turunan ikut ter-update secara otomatis. Saat ICPL Update di-complete, sistem men-generate PLV secara otomatis. Jika Valid Date berbeda dari sebelumnya, sistem membuat **Price List Version baru** dengan harga dan tanggal terbaru. Proses perubahan harga atau penambahan produk tercatat di tab **Log** sehingga histori perubahan dapat dilacak.
+
+Apabila pada **Document Type ICPL Base** dikonfigurasi **Product Category Access**, sistem akan membatasi hanya produk dari **kategori tersebut** yang akan diproses di ICPL Base. Saat dilakukan **ICPL Update**, sistem juga hanya melakukan update pada produk yang **termasuk dalam kategori** tersebut. 
+
+![icpl](../icpl_pc.png "Konfigurasi Product Category Access") {#Figure312}
+
+Apabila produk yang diinput berada **di luar kategori** yang dikonfigurasi, proses update tetap dapat dilakukan namun sistem **tidak akan melakukan update** pada produk tersebut karena produk tidak termasuk dalam kategori yang berlaku.
+
+Sebaliknya, apabila pada **Document Type ICPL Base tidak dikonfigurasi Product Category Access**, sistem akan melakukan update pada **seluruh produk** yang diinput di ICPL Update, baik yang berada dalam satu kategori maupun tidak.
 ### Input Product di ICPL Update
 
 Saat melakukan update di ICPL Base, jumlah produk yang tersedia bisa sangat banyak. Jika hanya perlu memperbarui beberapa produk tertentu, gunakan fitur pencarian dengan karakter khusus berikut:

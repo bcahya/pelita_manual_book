@@ -219,6 +219,10 @@ Pada konfigurasi **Bank Account**, perlu ditentukan **Cost Center** yang terkait
   - Navigasi ke /home/dev-idempiere/Fleet → Import Transaksi
   - Pilih file Transaksi Kartu Fleet yang akan diimport
 
+![fleet](../import_fleet.png "Import Transaksi") {#Figure310}
+
 3. Jika import berhasil, file otomatis berpindah ke folder **done**
 
 Di idempiere akan tercreate AP Invoice atas transaksi kartu fleet dengan masing-masing bank account, business partner dan tanggal transaksi. Seluruh informasi yang ada diinvoice sesuai dengan konfigurasi di sistem dan yang ada di file transaksinya. Document AP Invoice yang berhasil diimport berstatus draft.
+
+![fleet](../ap_fleet.png "AP Invoice Biaya Fleet") {#Figure311}

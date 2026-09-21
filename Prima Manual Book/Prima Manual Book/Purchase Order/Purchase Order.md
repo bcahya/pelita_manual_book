@@ -396,3 +396,47 @@ Saat dilakukan Return to Vendor berdasarkan Material Receipt yang berasal dari P
 Informasi dokumen Return to Vendor juga ditampilkan pada tab **Return to Vendor** di Purchase Order. Tab ini muncul secara otomatis dan menampilkan detail dokumen return jika terdapat produk yang dikembalikan kepada vendor.
 
 ![return](../return_po2.png "Informasi Return to Vendor di Purchase Order") {#Figure288}
+
+## Ketentuan Print Out Purchase Order
+
+Terdapat ketentuan dalam melakukan **print out Purchase Order** sebagai berikut:
+
+- **Print Out Pertama** → semua user yang memiliki akses dapat melakukan print out.
+- **Print Out Kedua dan seterusnya** → tidak semua role dapat melakukannya; hanya role yang diberikan akses khusus yang dapat melakukan print out copy tersebut, dan tetap harus menggunakan **otorisasi**.
+
+### Konfigurasi Akses Copy Print Out di Role
+
+Akses untuk melakukan print out kedua dikonfigurasi di **master data Role** dengan langkah berikut:
+
+1. Buka menu **Role**.
+2. Tentukan **role** yang akan diberikan akses.
+3. Centang field **Allow Print Copy Document**.
+
+![role](../role_print.png "Konfigurasi Role Print Copy") {#Figure306}
+
+4. Klik **Save**.
+
+### Langkah Print Out Pertama
+
+1. Buka menu **Purchase Order**.
+2. Tentukan **dokumen** yang akan di-print.
+3. Klik **Setting**, kemudian klik **Print Document PO**.
+4. Tentukan **report** yang akan diproses.
+5. Klik **OK**.
+
+![po](../po_1.png "Print Out Pertama") {#Figure307}
+### Langkah Print Out Copy (Kedua, Ketiga, dst.)
+
+1. Buka menu **Purchase Order**.
+2. Tentukan **dokumen** yang akan di-print.
+3. Klik **Setting**, kemudian klik **Print Document PO**.
+4. Tentukan **report** yang akan diproses.
+5. Input **username** dan **password** sebagai otorisasi.
+
+![po](../user_print.png "OtorusasiPrint Out Kedua") {#Figure308}
+
+6. Klik **OK**.
+
+![po](../po_kedua.png "Print Out Kedua") {#Figure309}
+
+History user yang melakukan print out akan muncul di **tab Print Log**, yang menampilkan informasi **tanggal, waktu, user,** dan **format report** yang diproses.
