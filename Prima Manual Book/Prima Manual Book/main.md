@@ -90,3 +90,4 @@
 .include {Kontra Bon/Kontra Bon.md}
 .include {Tools/Tools.md}
 .include {Security di iDempiere/Security di iDempiere.md}
+.include {Konfigurasi Document Type/Konfigurasi Document Type.md}

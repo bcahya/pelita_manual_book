@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md",
+                "file": "Prima Manual Book/Attribute Set Instance/Attribute Set Instance.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Petty Cash dan Kartu Fleet"
+              "title": "Attribute Set Instance"
             }
           }
         ]
@@ -196,8 +196,9 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Import Data/Import Data.md",
+    "Prima Manual Book/main.md",
     "Prima Manual Book/Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md",
+    "Prima Manual Book/Import Data/Import Data.md",
     "Prima Manual Book/Konfigurasi Document Type/Konfigurasi Document Type.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Request Distribution Order/RDO.md",
@@ -222,7 +223,6 @@
     "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
     "Prima Manual Book/Report/Report.md",
     "Prima Manual Book/Item Type Product/Implementasi Item Type di Product.md",
-    "Prima Manual Book/main.md",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
     "Prima Manual Book/Tools/Tools.md",
     "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
