@@ -845,3 +845,18 @@ Langkah Akses Report Project yang mencakup PO Besar dan PO Kecil:
 Berikut contoh Report Project:
 
 ![po project](../po_project.png "Report PO Project") {#Figure305}
+
+## Report Cost History
+
+Report Cost History digunakan untuk menampilkan histori perubahan biaya seluruh product dalam periode tertentu, sehingga user dapat memantau, menganalisis, dan memvalidasi nilai cost product yang terbentuk.
+
+Ikuti langkah berikut untuk mengakses Report Cost History:
+
+1. Buka menu **SIS Report Cost History**.
+2. Tentukan **Product Category** atau **Product** yang akan dicek.
+3. Tentukan **tanggal update**.
+4. Klik **OK**.
+
+Berikut contoh Report Cost History:
+
+![cost](../report_cost_his.png "Report Cost History"){#Figure311}
