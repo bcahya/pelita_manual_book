@@ -93,13 +93,25 @@ Agar invoice biaya Kartu Fleet yang sudah di-complete otomatis membentuk dokumen
 6. Centang field **Auto Payment**.
 7. Tentukan **Document Type Payment Fleet**.
 8. Tentukan **Document Action** atas Payment Fleet.
-9. Field **Auto Bank Statement** — jika dicentang, sistem otomatis membuat Bank Statement saat Payment di-complete.
-10. Tentukan **Document Type Bank Statement Fleet**.
-11. Tentukan **Document Action** atas Bank Statement Fleet.
 
-![konfig](../konfig_inv_fleet.png "Konfigurasi Document Type Invoice Kartu Fleet") {#Figure250}
+![konfig](../invoice_fleet.png "Konfigurasi Document Type Invoice Kartu Fleet") {#Figure250}
 
-12. Klik **Save**.
+9. Klik **Save**.
+
+Untuk mengkonfigurasi agar Payment yang sudah di-complete otomatis membentuk dokumen **Bank Statement**, lakukan konfigurasi pada **Document Type AP Payment** terlebih dahulu. Ikuti langkah berikut:
+
+1. Buka menu **Document Type**.
+2. Klik **New**.
+3. Isi **Name** sesuai kebutuhan operasional.
+4. Pada field **Document Base Type**, pilih **AP Payment**.
+5. Centang field **Document Number Is Controlled**.
+6. Centang field **Auto Bank Statement** — saat Payment di-complete, sistem otomatis membuat Bank Statement.
+7. Tentukan **Document Type Bank Statement**.
+8. Tentukan **Document Action** atas Bank Statement.
+
+![konfig](../stat_fleet.png "Konfigurasi Document Type AP Payment Kartu Fleet") {#Figure310}
+
+9. Klik **Save**.
 ### Langkah Membuat AP Invoice Biaya Kartu Fleet
 
 1. Buka menu **Purchase Invoice and Credit/Debit Note**.
@@ -226,3 +238,28 @@ Pada konfigurasi **Bank Account**, perlu ditentukan **Cost Center** yang terkait
 Di idempiere akan tercreate AP Invoice atas transaksi kartu fleet dengan masing-masing bank account, business partner dan tanggal transaksi. Seluruh informasi yang ada diinvoice sesuai dengan konfigurasi di sistem dan yang ada di file transaksinya. Document AP Invoice yang berhasil diimport berstatus draft.
 
 ![fleet](../ap_fleet.png "AP Invoice Biaya Fleet") {#Figure311}
+
+## Import Transaksi Pengisian Kartu Fleet
+
+Transaksi pengisian (_refill_) Kartu Fleet dapat dilakukan melalui **import** sehingga user tidak perlu membuat transaksi satu per satu — mengingat transaksi ini bisa mencapai puluhan bahkan ratusan. Transaksi pengisian ini direpresentasikan sebagai **transfer antar bank ke Kartu Fleet**, sehingga user perlu menentukan sumber dana atas transaksi tersebut terlebih dahulu.
+
+Karena import dilakukan menggunakan server eksternal **FileZilla**, user juga perlu mengkonfigurasi **Document Type** untuk transaksi tersebut di sistem. Lakukan konfigurasi berikut sebelum melakukan import:
+
+| Konfigurasi                 | Value            |
+| --------------------------- | ---------------- |
+| SIS_FLEET_BT_DOCTYPE_ID     | C_DocType_ID     |
+| SIS_FLEET_BT_BANKACCOUNT_ID | C_BankAccount_ID |
+### Proses Import Transaksi
+
+1. Siapkan file Transaksi Kartu Fleet yang menggunakan format **TXT**.
+2. Import melalui FileZilla
+  - Navigasi ke /home/dev-idempiere/fleetbt→ Import Transaksi
+  - Pilih file Transaksi Kartu Fleet yang akan diimport
+
+![fleet](../bt_fleet.png "Import Transaksi") {#Figure311}
+
+3. Jika import berhasil, file otomatis berpindah ke folder **done**
+
+Setelah import berhasil, iDempiere otomatis membuat dokumen **Bank/Cash Transfer** untuk setiap transaksi Kartu Fleet dengan bank account tujuan, nominal, dan tanggal transaksi sesuai data pada file yang diimport. Dokumen Bank/Cash Transfer yang ter-create berstatus **Draft**.
+
+![fleet](../fleet_bt.png "Transaksi Bank/Cash Transfer") {#Figure312}
