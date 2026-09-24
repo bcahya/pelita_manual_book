@@ -440,3 +440,26 @@ Akses untuk melakukan print out kedua dikonfigurasi di **master data Role** deng
 ![po](../po_kedua.png "Print Out Kedua") {#Figure309}
 
 History user yang melakukan print out akan muncul di **tab Print Log**, yang menampilkan informasi **tanggal, waktu, user,** dan **format report** yang diproses.
+
+## Purchase Order Valas (Valuta Asing)
+
+Purchase Order Valas menggunakan mata uang selain Rupiah — contohnya US Dollar. Karena menggunakan mata uang asing, lakukan konfigurasi **Currency Rate** terlebih dahulu sebelum memulai transaksi. Sistem menggunakan rate tersebut untuk mengkonversi harga ke Rupiah.
+
+Ikuti langkah berikut untuk mengkonfigurasi Currency Rate:
+
+1. Buka menu **Currency Rate**.
+2. Tentukan **Currency From** dan **Currency To**.
+3. Pilih **Currency Type**.
+4. Tentukan periode **Valid From** dan **Valid To**.
+5. Isi **Multiply Rate** atau **Divide Rate** sesuai metode konversi yang digunakan. Hanya salah satu field yang perlu diisi.
+
+Pada Purchase Order Valas, sebagian besar produk yang diproses tidak memiliki price list sehingga harga ditentukan langsung saat transaksi. Untuk mencegah harga yang diinput melebihi anggaran, lakukan konfigurasi **Max Purchasing Price** pada master product.
+
+![max](../max_purchase.png "Konfigurasi Max Purchasing Price") {#Figure312}
+
+**Max Purchasing Price** dinyatakan dalam satuan **Rupiah**. Saat transaksi, sistem mengkalkulasi harga valas yang diinput dengan Currency Rate, kemudian membandingkan hasilnya dengan Max Purchasing Price:
+
+- Jika amount masih dalam batas Max Purchasing Price → PO dapat diproses.
+- Jika amount melebihi Max Purchasing Price → sistem menampilkan pesan error dan PO tidak dapat diproses.
+
+![max](../lebih_price.png "Contoh Jika Melebihi Max Purchasing Price") {#Figure313}
