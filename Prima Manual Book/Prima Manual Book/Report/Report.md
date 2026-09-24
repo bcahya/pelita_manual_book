@@ -383,7 +383,7 @@ Report ini menampilkan seluruh transaksi invoice pembelian dari vendor yang mena
 3. Klik **Print Invoice Lain-Lain**.
 4. Klik **OK**.
 
-![vendor](../invoice_vendor_lain-lain.png "Invoice Vendor Lain-Lain") {#Figure167}
+![vendor](../inv_vll.png "Invoice Vendor Lain-Lain") {#Figure167}
 ### Invoice Vendor Credit Note Lain-Lain
 
 Report ini menampilkan transaksi Credit Note Vendor — dokumen yang digunakan untuk mengurangi nilai tagihan vendor akibat kondisi tertentu, seperti:
@@ -400,6 +400,8 @@ Ikuti langkah berikut untuk mencetak Invoice Vendor Credit Note Lain-Lain:
 2. Klik tombol **Setting (⚙)**.
 3. Klik **Print Invoice Credit Note**.
 4. Klik **OK**.
+
+![vendor](../inv_vcn.png "Invoice Vendor Credit Note Lain-Lain") {#Figure168}
 ## Report Invoice Buyer
 
 Report Invoice Buyer digunakan untuk menampilkan seluruh transaksi Invoice Penjualan (_Accounts Receivable Invoice_) yang dibuat kepada buyer atau pelanggan. Gunakan report ini untuk memantau transaksi penjualan yang telah ditagihkan, baik berupa invoice penjualan maupun credit note.
@@ -416,7 +418,7 @@ Ikuti langkah berikut untuk mengaksesnya:
 3. Klik **SIS Printout Invoice Buyer Lain-Lain**.
 4. Klik **OK**.
 
-![buyer lain-lain](../print_invoice_buy_lain.png "Invoice Buyer Lain-Lain") {#Figure198}
+![buyer lain-lain](../inv_bll.png "Invoice Buyer Lain-Lain") {#Figure198}
 ### Invoice Buyer Credit Note
 
 Report ini menampilkan transaksi Credit Note yang diterbitkan kepada buyer — dokumen yang digunakan untuk mengurangi nilai piutang kepada buyer akibat adanya koreksi transaksi.
@@ -428,7 +430,7 @@ Ikuti langkah berikut untuk mencetak Invoice Buyer Credit Note:
 3. Klik **SIS Printout Invoice Credit Note Buyer Lain-Lain**.
 4. Klik **OK**.
 
-![credit memo](../invoice_buyer_cn.png "Invoice Buyer Credit Note"){#Figure199}
+![credit memo](../inv_bcn.png "Invoice Buyer Credit Note"){#Figure199}
 
 ## Export GL Distribution Data
 

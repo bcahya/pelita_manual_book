@@ -47,9 +47,9 @@ Berikut contoh implementasi **multi UoM Conversion** untuk transaksi **Purchasin
 
 ![po](../uom__po.png "Implementasi Purchase Order") {#Figure250}
 
-## UoM Conversion Kragh dan Manset
+## UoM Conversion Spesial
 
-UoM Conversion khusus ini hanya berlaku untuk produk **Kragh** dan **Manset**. Berbeda dari konversi pada umumnya, UoM Conversion untuk kedua produk ini bersifat **mundur** — contoh: Base UoM adalah _Kilogram_ sedangkan UoM Conversion-nya adalah _Gram_.
+UoM Conversion Spesial ini hanya berlaku untuk produk **Kragh** dan **Manset**. Berbeda dari konversi pada umumnya, UoM Conversion untuk kedua produk ini bersifat **mundur** — contoh: Base UoM adalah _Kilogram_ sedangkan UoM Conversion-nya adalah _Gram_.
 
 ![uom](../uom_conv_kragh.png "UoM Conversion Kragh & Manset") {#Figure280}
 
