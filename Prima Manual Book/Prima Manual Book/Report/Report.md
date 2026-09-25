@@ -857,8 +857,24 @@ Ikuti langkah berikut untuk mengakses Report Cost History:
 1. Buka menu **SIS Report Cost History**.
 2. Tentukan **Product Category** atau **Product** yang akan dicek.
 3. Tentukan **tanggal update**.
-4. Klik **OK**.
+4. Tentukan **Cost Element**.
+5. Klik **OK**.
 
 Berikut contoh Report Cost History:
 
 ![cost](../report_cost_his.png "Report Cost History"){#Figure311}
+
+## Report Rekap Pembayaran Vendor CMT
+
+Langkah Akses Report Rekap Pembayaran Vendor CMT:
+
+1. Buka menu **SIS Report Rekap Pembayaran Vendor CMT**.
+2. Tentukan **document date**.
+3. Tentukan **Business Partner**.
+4. Tentukan **Production Order Planning**.
+5. Tentukan **Warehouse Production**.
+6. Klik **OK**.
+
+Berikut contoh Report Rekap Pembayaran Vendor CMT:
+
+![cmt](../rekap_pay_cmt.png "Report Rekap Pembayaran CMT") {#Figure313}

@@ -337,3 +337,27 @@ Document Type yang dikonfigurasi di Document Type POP dapat menggunakan **Docume
 Berikut contoh implementasinya di Production Order Planning (POP):
 
 ![POP](../pop_move_cut.png "Inventory Move di POP") {#Figure208}
+
+## Konfigurasi Document Type Movement
+
+Pada Production Order Planning, routing melibatkan perpindahan barang dari warehouse ke **intransit**, kemudian dari intransit ke gudang atau pabrik tujuan. Karena kedua proses ini menggunakan document type yang berbeda, lakukan konfigurasi berikut:
+
+- **Document Type Transfer (Out)** — Digunakan untuk perpindahan dari warehouse ke intransit.
+- **Document Type Penerimaan (In)** — Digunakan untuk perpindahan dari intransit ke gudang tujuan.
+
+Konfigurasi ini dilakukan di menu **Warehouse and Locator** untuk masing-masing warehouse. Ikuti langkah berikut:
+
+1. Buka menu **Warehouse and Locator**.
+2. Tentukan **Search Key** dan **Name** warehouse tersebut.
+3. Pada field **DocType Movement Out**, pilih document type sesuai konfigurasi.
+4. Pada field **DocType Movement In**, pilih document type sesuai konfigurasi.
+5. Klik save.
+
+
+![wh](../wh_trf.png "Konfigurasi DocType Movement") {#Figure314}
+
+Berikut contoh implementasi konfigurasi ini di Production Order Planning (POP):
+
+![wh](../mov_out.png "Movement Dari Gudang Bahan Baku") {#Figure315}
+
+![wh](../mov_in.png "Movement Dari Intransit ke Warehouse Tujuan") {#Figure316}

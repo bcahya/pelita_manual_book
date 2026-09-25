@@ -18,7 +18,6 @@ Document Type untuk payment dapat dibedakan sesuai kebutuhan operasional. Namun 
 - **Tidak dicentang (N)** — Pembayaran hanya dapat dilakukan dengan BP yang sama dengan BP pada invoice. Jika BP di Payment dan Invoice berbeda, sistem otomatis memblokir transaksi tersebut.
 
 Sesuaikan konfigurasi ini dengan kebutuhan operasional perusahaan.
-
 ### Auto Generate Bank/Cash Statement
 
 Konfigurasi ini memungkinkan sistem otomatis membuat **Bank Statement** setelah transaksi Payment berhasil di-complete.
@@ -29,6 +28,20 @@ Konfigurasi ini memungkinkan sistem otomatis membuat **Bank Statement** setelah 
 ![auto bs](../auto_bank_statement.png "Konfigurasi Auto Generate Bank Statement") {#Figure283}
 
 Konfigurasi Auto Bank Statement bersifat **opsional**. Jika diaktifkan, Bank Statement terbentuk otomatis saat Payment selesai. Jika tidak diaktifkan, tidak ada otomasi generate Bank Statement dari Payment.
+
+Untuk menentukan Document Type Bank Statement yang digunakan, lakukan langkah berikut:
+
+1. Buka menu **Bank/Cash**.
+2. Pilih **Bank/Cash** yang akan dikonfigurasi.
+3. Buka tab **Account**.
+4. Pada field **Document Type Bank Statement**, pilih Document Type untuk **Bank Masuk**.
+5. Pada field **Document Type Bank Statement Out**, pilih Document Type untuk **Bank Keluar**.
+
+![bs](../doc_type_bs.png "Konfigurasi Document Type Bank/Cash Statement") {#Figure319}
+
+6. Klik **Save**.
+
+Setelah konfigurasi selesai, sistem akan menggunakan Document Type yang telah ditentukan pada **Bank/Cash Account** saat membuat Bank Statement secara otomatis dari transaksi Payment.
 ## Pembayaran Multi BP (Business Partner)
 
 Mekanisme **Multi Business Partner** digunakan ketika pembayaran dilakukan kepada Business Partner yang berbeda dengan vendor pada invoice. Kondisi ini umumnya diterapkan jika terdapat vendor induk, perusahaan afiliasi, atau pihak ketiga yang bertindak sebagai penerima pembayaran.
@@ -171,6 +184,35 @@ Tanggal pencairan bersifat _updatable_ — dapat diedit kapan pun, termasuk sete
 Bank/Cash Statement adalah fitur yang digunakan untuk mencatat mutasi rekening bank atau kas berdasarkan rekening koran (_bank statement_) maupun laporan transaksi kas. Fitur ini berfungsi sebagai media rekonsiliasi antara transaksi yang terjadi di bank dengan transaksi yang telah dicatat di sistem, seperti Payment, Receipt, maupun transaksi lainnya.
 
 Transaksi Payment hanya mencatat bahwa perusahaan telah melakukan atau menerima pembayaran, namun belum membuktikan bahwa dana benar-benar telah masuk atau keluar dari rekening bank. Proses **Bank/Cash Statement** digunakan untuk mengonfirmasi bahwa transaksi Payment tersebut benar-benar telah terjadi di rekening bank melalui proses **rekonsiliasi (_matching_)**. Dengan demikian, Bank/Cash Statement menjadi kontrol untuk memastikan setiap transaksi pembayaran dan penerimaan sesuai dengan mutasi rekening yang diterbitkan bank.
+
+## Konfigurasi Bank Masuk dan Bank Keluar
+
+Bank/Cash Statement dapat digunakan untuk mencatat transaksi **Bank Masuk** maupun **Bank Keluar**. Jenis transaksi tersebut menentukan nilai pada **Statement Amount**:
+
+- **Bank Masuk** → Statement Amount bernilai **positif**.
+- **Bank Keluar** → Statement Amount bernilai **negatif**.
+
+Sebelum membuat transaksi Bank/Cash Statement, user perlu mengatur **Document Type** untuk menentukan apakah transaksi tersebut merupakan Bank Masuk atau Bank Keluar. Konfigurasi ini akan menentukan tanda nilai pada **Statement Amount** secara otomatis.
+### Langkah Konfigurasi Document Type
+
+1. Buka menu **Document Type**.
+2. Klik **New** untuk membuat Document Type baru.
+3. Pada field **GL Category**, pilih **Manual**.
+4. Pada field **Document Base Type**, pilih **Bank Statement**.
+5. Konfigurasi field **Bank Masuk**:
+
+- **Dicentang** → Document Type digunakan untuk transaksi **Bank Masuk**, sehingga Statement Amount bernilai positif.
+- **Tidak dicentang** → Document Type digunakan untuk transaksi **Bank Keluar**, sehingga Statement Amount bernilai negatif.
+
+![konfig](../bank_statement.png "Konfigurasi Document Type") {#Figure317}
+
+6. Klik **Save** untuk menyimpan konfigurasi.
+
+Setelah konfigurasi selesai, sistem akan membedakan nilai **Statement Amount** berdasarkan Document Type yang digunakan:
+
+![bank](../bank_masuk.png "Contoh Bank Masuk") {#Figure318}
+
+![bank](../bank_keluar.png "Contoh Bank Keluar") {#Figure319}
 
 ## Validasi Currency
 
