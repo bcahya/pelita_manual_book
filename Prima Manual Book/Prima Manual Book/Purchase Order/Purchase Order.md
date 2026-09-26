@@ -397,13 +397,14 @@ Informasi dokumen Return to Vendor juga ditampilkan pada tab **Return to Vendor*
 
 ![return](../return_po2.png "Informasi Return to Vendor di Purchase Order") {#Figure288}
 
-## Ketentuan Print Out Purchase Order
+## Otorisasi Print Out Purchase Order
 
 Terdapat ketentuan dalam melakukan **print out Purchase Order** sebagai berikut:
 
 - **Print Out Pertama** → semua user yang memiliki akses dapat melakukan print out.
 - **Print Out Kedua dan seterusnya** → tidak semua role dapat melakukannya; hanya role yang diberikan akses khusus yang dapat melakukan print out copy tersebut, dan tetap harus menggunakan **otorisasi**.
 
+Otorisasi printout pada Purchase Order hanya berlaku untuk dokumen PO berstatus **Complete**. Untuk dokumen PO yang masih berstatus _Draft_ atau _In Progress_, printout kedua, ketiga, dan seterusnya dapat dilakukan tanpa otorisasi.
 ### Konfigurasi Akses Copy Print Out di Role
 
 Akses untuk melakukan print out kedua dikonfigurasi di **master data Role** dengan langkah berikut:
@@ -441,6 +442,17 @@ Akses untuk melakukan print out kedua dikonfigurasi di **master data Role** deng
 
 History user yang melakukan print out akan muncul di **tab Print Log**, yang menampilkan informasi **tanggal, waktu, user,** dan **format report** yang diproses.
 
+### Print Preview Purchase Order
+
+User dapat menggunakan fitur **Preview** pada proses pencetakan **Purchase Order (PO)** untuk menampilkan dokumen PO dalam format preview.
+
+Pada **Printout Document PO**, user dapat mencentang opsi **Preview** sebelum menjalankan proses printout. Sistem akan menampilkan tanda **“PREVIEW”** pada hasil printout untuk menunjukkan bahwa dokumen tersebut merupakan dokumen preview dan bukan dokumen final.
+
+![preview](../preview.png "Opsi Preview") {#Figure315}
+
+![preview](../print_preview.png "Printout Preview") {#Figure316}
+
+User dapat menjalankan fitur **Preview** pada PO dengan status **Draft** maupun **Complete**. Sistem juga mengizinkan user mencetak PO dalam mode Preview tanpa melalui proses otorisasi.
 ## Purchase Order Valas (Valuta Asing)
 
 Purchase Order Valas menggunakan mata uang selain Rupiah — contohnya US Dollar. Karena menggunakan mata uang asing, lakukan konfigurasi **Currency Rate** terlebih dahulu sebelum memulai transaksi. Sistem menggunakan rate tersebut untuk mengkonversi harga ke Rupiah.
