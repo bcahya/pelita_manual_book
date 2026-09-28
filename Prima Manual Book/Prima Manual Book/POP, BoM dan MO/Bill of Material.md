@@ -49,3 +49,41 @@ Untuk memproduksi **1 pcs Kemeja** dibutuhkan komponen berikut:
 | Kemeja         | Kancing      | 4   |
 "Bill of Material"{#Tabel3}
 
+## Copy Informasi Product
+
+Pada iDempiere, tersedia field **Copy From Product** yang digunakan untuk menyalin informasi dari product lain ke product yang sedang dibuat. Fitur ini membantu user mempercepat proses konfigurasi product, terutama ketika beberapa product memiliki informasi atau konfigurasi yang sama.
+
+Dengan menggunakan **Copy From Product**, user tidak perlu melakukan konfigurasi informasi product satu per satu. User cukup menentukan product sumber yang memiliki konfigurasi sesuai kebutuhan, kemudian sistem akan menyalin informasi tersebut ke product yang sedang dibuat.
+
+Informasi yang dapat disalin dari product sumber meliputi:
+
+- Bill of Material (BOM)
+- Price
+- Substitutes
+- Related
+- Replenish
+- Business Partner
+- UOM Conversion
+
+Fitur ini dapat digunakan apabila terdapat beberapa product yang memiliki konfigurasi yang sama, misalnya BOM, Price, dan UOM Conversion. User dapat menggunakan salah satu product yang telah dikonfigurasi sebagai product sumber dan menyalin informasinya ke product baru.
+
+### Langkah Copy Informasi Product
+
+Untuk menyalin informasi dari product lain, lakukan langkah berikut:
+
+1. Buka menu **Product**.
+2. Buat atau pilih product yang akan dikonfigurasi.
+3. Isi **Search Key** sesuai dengan kode product.
+4. Isi **Name** sesuai dengan nama product.
+5. Tentukan **Product Category**.
+6. Tentukan **UoM** sebagai satuan dasar (**Base UoM**) product.
+7. Tentukan **Product Type** sesuai dengan jenis product.
+8. Jika product menggunakan BOM, centang field **Bill of Material**.
+9. Klik tombol setting (⚙).
+10. Pilih **Copy From Product**.
+11. Pada field **Product**, pilih product sumber yang informasinya akan disalin.
+12. Klik **OK** untuk menjalankan proses copy.
+
+Setelah proses berhasil dijalankan, sistem akan menyalin informasi dari product sumber ke product yang sedang dibuat.
+
+Informasi yang disalin meliputi **BOM, Price, Substitute, Related, Replenish, Business Partner. dan UOM Conversion** sesuai dengan konfigurasi yang tersedia pada product sumber.

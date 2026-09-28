@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Report/Report.md",
+                "file": "Prima Manual Book/POP, BoM dan MO/Bill of Material.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Report"
+              "title": "Bill of Material"
             }
           }
         ]
@@ -194,16 +194,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "069fb2af657edcc7",
+  "active": "b205d49b5e27cc7a",
   "lastOpenFiles": [
+    "Prima Manual Book/Attribute Set Instance/Attribute Set Instance.md",
+    "Prima Manual Book/POP, BoM dan MO/Bill of Material.md",
+    "Prima Manual Book/Report/Report.md",
     "Prima Manual Book/waste_out.png",
     "Prima Manual Book/waste_re.png",
     "Prima Manual Book/waste_mic.png",
-    "Prima Manual Book/POP, BoM dan MO/Bill of Material.md",
     "Prima Manual Book/Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md",
     "Prima Manual Book/Material Receipt/Material Receipt.md",
-    "Prima Manual Book/Attribute Set Instance/Attribute Set Instance.md",
-    "Prima Manual Book/Report/Report.md",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
     "Prima Manual Book/bpb_wov.png",
     "Prima Manual Book/bpb_knit.png",
@@ -215,7 +215,6 @@
     "mr_bm.png",
     "Prima Manual Book/mr_bm.png",
     "Prima Manual Book/preview.png",
-    "Prima Manual Book/print_preview.png",
     "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/Import Data/Import Data.md",
