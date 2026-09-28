@@ -25,8 +25,19 @@ Satu Requisition dapat memiliki beberapa Requisition Line, sehingga kebutuhan pe
 5. Tentukan **Business Partner** yang akan digunakan.
 6. Tentukan **produk** yang akan diproses.
 7. Tentukan **quantity** yang dibutuhkan.
+
+![line](../req_line.png "Requisition Line") {#Figure315}
+
 8. Klik **Save**.
 9. Klik **Complete** pada dokumen.
+
+Setelah Requisition selesai diproses, langkah berikutnya adalah **Generate PO From Requisition** untuk membuat Purchase Order dari Requisition.
+
+Sebelum melakukan generate, perlu diperhatikan bahwa produk yang diproses di Requisition kemungkinan belum memiliki price list. Untuk mengakomodasi kondisi ini, lakukan konfigurasi **SIS_StandardPL_ID** terlebih dahulu — price list yang dikonfigurasi akan dijadikan sebagai **standar price list** untuk produk yang belum memiliki price list saat di-generate ke Purchase Order.
+
+![config](../std_pl.png "Konfigurasi Price List") {#Figure316}
+
+Saat PO terbentuk dari proses generate, sistem otomatis menggunakan price list yang dikonfigurasi pada **SIS_StandardPL_ID**. User masih dapat mengedit price di PO Line sesuai kebutuhan. Dengan demikian, meskipun produk belum memiliki price list, proses Generate PO From Requisition tetap dapat dijalankan.
 ## Generate PO From Requisition
 
 Fitur **Generate PO From Requisition** digunakan untuk membuat Purchase Order berdasarkan Requisition Line yang telah dibuat. Proses generate PO dapat dilakukan dengan memilih satu atau beberapa Requisition Line — termasuk dari satu maupun beberapa Requisition.
@@ -176,7 +187,6 @@ Lakukan penghapusan melalui menu **SIS Delete Document PO**. Ikuti langkah berik
 Pada Purchase Order, sistem menggunakan **Price List** sebagai dasar perhitungan harga produk. Oleh karena itu, produk harus memiliki Price List sebelum user dapat menerapkan diskon.
 
 User dapat menginput diskon dengan dua metode:
-
 ### Diskon dalam Value  
 
 User menginput nominal diskon langsung pada field **Discount Value**. Sistem mengurangi Price List dengan nilai diskon tersebut untuk mendapatkan **Price Actual**, kemudian otomatis menghitung persentase diskonnya.
@@ -475,3 +485,20 @@ Pada Purchase Order Valas, sebagian besar produk yang diproses tidak memiliki pr
 - Jika amount melebihi Max Purchasing Price → sistem menampilkan pesan error dan PO tidak dapat diproses.
 
 ![max](../lebih_price.png "Contoh Jika Melebihi Max Purchasing Price") {#Figure313}
+
+## Field Price di Purchase Order Line
+
+Saat membuat Purchase Order, terdapat tiga kondisi harga produk yang dapat diproses. Masing-masing kondisi memiliki ketentuan yang berbeda terkait kemampuan user dalam mengedit harga.
+### Produk tanpa Price List
+
+Aktifkan field **Allow Product Without Price List** di Document Type Purchase Order agar produk tanpa price list tetap dapat diproses dalam transaksi. Jika field ini tidak diaktifkan, sistem akan memblokir transaksi untuk produk yang tidak memiliki price list.
+
+Saat produk diinput, user menginput harga secara manual pada field **Price**. Harga masih dapat diedit selama dokumen berstatus _Draft_ atau _In Progress_. Setelah dokumen di-complete, seluruh field otomatis menjadi _disabled_ dan tidak dapat diubah lagi.
+
+### Produk dengan Price List (tanpa kontrak)
+
+Untuk produk yang sudah memiliki price list namun tidak terikat kontrak, sistem otomatis mengisi harga berdasarkan price list yang berlaku. User masih dapat mengedit field **Price List** maupun **Price Entered** sesuai kebutuhan selama dokumen belum di-complete.
+
+### Produk dengan Price Contract
+
+Untuk produk yang terikat **Price Contract**, sistem mengunci harga secara otomatis saat produk diinput di PO Line. User tidak dapat mengedit price karena harga telah ditetapkan berdasarkan kontrak yang sudah disepakati. Perubahan harga di PO Line tidak diperbolehkan untuk menjaga konsistensi dengan nilai kontrak.

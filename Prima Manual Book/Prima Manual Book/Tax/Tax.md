@@ -187,7 +187,6 @@ Berikut contoh jurnal invoice dengan Tax Combination (_Price Include Tax_):
 ![tax](../tax_rate_acc.png "Tax Rate Access") {#Figure276}
 
 Ulangi langkah di atas untuk setiap document type lain yang memerlukan konfigurasi. Jika transaksi tidak memerlukan pembatasan tax rate, konfigurasi ini tidak perlu dilakukan.
-
 ### Implementasi Tax Access
 
 1. Buka menu **Purchase Order**.
@@ -199,3 +198,5 @@ Ulangi langkah di atas untuk setiap document type lain yang memerlukan konfigura
 ![tax](../po_tax.png "Tax Rate di Purchase Order") {#Figure277}
 
 6. Klik **Save**.
+
+>**Catatan:** Tax Rate Access berlaku pada level Document Type **Purchase Order, AP Invoice dan AR Invoice**. User dapat menentukan tax rate mana saja yang akan muncul saat transaksi menggunakan document type yang telah dikonfigurasi.

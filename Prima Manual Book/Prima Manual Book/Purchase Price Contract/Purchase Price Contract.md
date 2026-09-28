@@ -40,7 +40,6 @@ Setelah dokumen di-complete, sistem akan menjalankan beberapa proses otomatis:
 - Sistem mengacu pada data valid from, product dan price yang terdapat pada **Price Contract Line**
 - Sistem memperbarui data **Purchase Price List** berdasarkan price list pada ICPL Base.
 - Sistem memperbarui data ICPL sesuai data pada SIS Purchase Price Contract.
-
 ## Realisasi di Purchase Order
 
 Sebelum Purchase Order di-complete, pastikan data berikut sesuai dengan Purchase Price Contract:

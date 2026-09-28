@@ -46,3 +46,22 @@ Contoh:
 - Movement Date yang diperbolehkan: **17–20 Agustus**
 
 Jika tanggal yang diinput berada di luar rentang tersebut, sistem tidak mengizinkan MR/BPB untuk diproses.
+## Validasi Quantity MR/BPB terhadap PO dan ASI
+
+Sistem melakukan validasi quantity pada **Material Receipt (MR)/BPB** untuk memastikan quantity barang yang diterima sesuai dengan quantity yang tercantum pada **Purchase Order (PO)**. Jika transaksi menggunakan **ASI**, sistem juga melakukan validasi terhadap quantity yang tercantum pada ASI.
+
+Validasi ini bertujuan untuk memastikan quantity penerimaan tidak melebihi batas yang diperbolehkan serta menjaga kesesuaian antara dokumen PO, ASI, dan MR/BPB.
+### Ketentuan Quantity MR/BPB terhadap PO
+
+Quantity yang diproses pada MR/BPB tidak boleh melebihi quantity pada PO. Sistem akan membandingkan quantity yang akan diterima dengan sisa quantity PO yang masih dapat diterima.
+
+Jika product memiliki **allowance**, sistem memperbolehkan quantity MR/BPB melebihi quantity PO sesuai dengan batas allowance yang telah ditentukan.
+
+Allowance berfungsi sebagai batas toleransi penerimaan dan hanya dapat digunakan sampai dengan nilai yang telah ditentukan. Jika quantity MR/BPB melebihi quantity PO dan juga melewati batas allowance, sistem akan menolak proses MR/BPB. Sistem juga memperhitungkan quantity yang telah diterima sebelumnya sehingga user tidak dapat melakukan penerimaan melebihi total quantity yang masih diperbolehkan.
+### Ketentuan Quantity dengan ASI
+
+Untuk transaksi yang menggunakan **ASI**, quantity yang tercantum pada ASI harus sesuai dengan quantity yang diproses pada MR.
+
+Sistem melakukan validasi dengan membandingkan quantity ASI dengan quantity pada MR. **Quantity ASI dan quantity MR harus sama** agar MR dapat diproses. Apabila terdapat perbedaan quantity antara ASI dan MR, sistem tidak dapat memproses MR sampai quantity pada keduanya tersebut disesuaikan.
+
+Ketentuan ini berlaku baik apabila quantity MR lebih kecil maupun lebih besar dari quantity yang tercantum pada ASI.

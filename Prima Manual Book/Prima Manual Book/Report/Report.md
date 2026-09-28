@@ -139,17 +139,17 @@ Permintaan material aksesoris produksi seperti kancing, resleting, dan label.
 
 Permintaan material/bahan baku untuk kebutuhan proses produksi knitting.
 
-![knit](../mr_knitting2.png "MR Knitting") {#Figure149}
+![knit](../bpb_knit.png "MR Knitting") {#Figure149}
 #### MR Woven
 
 Permintaan material/bahan baku untuk kebutuhan proses produksi woven. 
 
-![woven](../mr_woven.png "MR Woven") {#Figure150}
+![woven](../bpb_wov.png "MR Woven") {#Figure150}
 #### MR Sisa Cutting
 
 Pencatatan penggunaan sisa hasil cutting (kain/material sisa potong) untuk dimanfaatkan kembali dalam proses produksi.
 
-![sisa cutting](../mr_sisa_cut.png "MR Sisa Cutting") {#Figure151}
+![sisa cutting](../bpb_knit.png "MR Sisa Cutting") {#Figure151}
 #### MR FID
 
 Permintaan material terkait proses/divisi FID sesuai klasifikasi internal perusahaan.
@@ -175,9 +175,9 @@ Permintaan material terkait proses/divisi FB sesuai klasifikasi internal perusah
 #### MR Barang Kemas
 
 ![umum](../mr_brg_kemas.png "BPB Umum") {#Figure263}
-#### MR Barang Mentah
+#### MR Bahan Mentah
 
-![umum](../mr_brg_mentah.png "BPB Umum") {#Figure264}
+![umum](../mr_bm.png "BPB Umum") {#Figure264}
 #### MR Barang Jadi
 
 ![umum](../mr_brg_jadi.png "BPB Umum") {#Figure265}
@@ -878,3 +878,47 @@ Langkah Akses Report Rekap Pembayaran Vendor CMT:
 Berikut contoh Report Rekap Pembayaran Vendor CMT:
 
 ![cmt](../rekap_pay_cmt.png "Report Rekap Pembayaran CMT") {#Figure313}
+
+## Report Waste
+
+**Report Waste** digunakan untuk menampilkan informasi rekapitulasi transaksi waste berdasarkan kebutuhan analisis. Report Waste terdiri dari tiga jenis report, yaitu:
+### Report Rekap Waste per Outlet
+
+Report **Rekap Waste per Outlet** digunakan untuk menampilkan informasi rekapitulasi waste berdasarkan outlet pada periode tertentu. Langkah Akses Report Rekap Waste per Outlet:
+
+1. Buka menu **SIS Report Rekap Waste per Outlet**.
+2. Tentukan **warehouse**.
+3. Tentukan **Subbrand**.
+4. Tentukan **Period**.
+5. Klik **OK**.
+
+Sistem akan menampilkan data rekapitulasi waste berdasarkan outlet sesuai dengan parameter yang telah ditentukan.
+
+![waste](../waste_out.png "Report Waste Per Outlet") {#Figure316}
+### Report Rekap Waste per Reason
+
+Report **Rekap Waste per Reason** digunakan untuk menampilkan informasi rekapitulasi waste berdasarkan **reason** atau alasan terjadinya waste pada periode tertentu. Langkah Akses Report Rekap Waste per Reason:
+
+1. Buka menu **SIS Report Rekap Waste per Reason**.
+2. Tentukan **warehouse**.
+3. Tentukan **Subbrand**.
+4. Tentukan **Total Period**.
+5. Tentukan reason type
+6. Klik **OK**.
+
+Sistem akan menampilkan data rekapitulasi waste berdasarkan reason sesuai dengan parameter yang telah ditentukan.
+
+![waste](../waste_re.png "Report Waste Per Reason") {#Figure317}
+### Report Rekap Waste per Outlet MIC
+
+Report **Rekap Waste per Outlet MIC** digunakan untuk menampilkan informasi rekapitulasi waste berdasarkan outlet MIC dan guidance waste/reject pada periode tertentu. Langkah Akses Report Rekap Waste per Outlet MIC:
+
+1. Buka menu **SIS Report Rekap Waste per Outlet MIC**.
+2. Tentukan **warehouse**.
+3. Tentukan **SIS Guidance Waste/Reject**.
+4. Tentukan **Period**.
+5. Klik **OK**.
+
+Sistem akan menampilkan data rekapitulasi waste berdasarkan outlet MIC sesuai dengan parameter yang telah ditentukan.
+
+![waste](../waste_mic.png "Report Waste Per Outlet MIC") {#Figure318}
