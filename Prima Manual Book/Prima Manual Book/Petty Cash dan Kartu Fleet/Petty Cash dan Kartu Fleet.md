@@ -106,13 +106,12 @@ Untuk mengkonfigurasi agar Payment yang sudah di-complete otomatis membentuk dok
 4. Pada field **Document Base Type**, pilih **AP Payment**.
 5. Centang field **Document Number Is Controlled**.
 6. Centang field **Auto Bank Statement** — saat Payment di-complete, sistem otomatis membuat Bank Statement.
-7. Tentukan **Document Type Bank Statement**.
-8. Tentukan **Document Action** atas Bank Statement.
+7. Tentukan **Document Action** atas Bank Statement.
 
 ![konfig](../stat_fleet.png "Konfigurasi Document Type AP Payment Kartu Fleet") {#Figure310}
 
-9. Klik **Save**.
-### Langkah Membuat AP Invoice Biaya Kartu Fleet
+8. Klik **Save**.
+### Langkah Membuat AP Invoice Biaya Kartu Fleet Manual
 
 1. Buka menu **Purchase Invoice and Credit/Debit Note**.
 2. Tentukan **Target Document Type**.

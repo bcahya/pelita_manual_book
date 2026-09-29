@@ -388,3 +388,45 @@ Jurnal Payment Allocation
 ![allocation](../allocat_ro.png "Jurnal Payment Allocation") {#Figure283}
 
 Saat pembayaran dilakukan, invoice vendor pada **Beard Papa** dinyatakan lunas. Namun, **Beard Papa** masih memiliki kewajiban kepada **Roti'O** sebesar **Rp100.000**.
+
+## Reverse Payment and Receipt
+
+Proses **Reverse** pada Payment and Receipt digunakan untuk membalik transaksi yang sudah diproses. Sistem menyediakan dua metode reverse, yaitu **Reverse Correct** dan **Reverse Accrual**.
+
+### Reverse Correct
+
+**Reverse Correct** digunakan untuk membatalkan transaksi Payment atau Receipt dengan membuat transaksi pembalik yang mengoreksi transaksi awal.
+
+Jurnal saat AP Payment Complete:
+
+![pay](../pay_cor.png "Jurnal Payment Awal") {#Figure321}
+
+Ketika user melakukan **Reverse Correct**, sistem membuat transaksi pembalik dengan jurnal:
+
+![pay](../pay_cor2.png "Jurnal Payment Reverse") {#Figure322}
+
+Dengan demikian, jurnal reverse akan mengembalikan saldo akun ke kondisi sebelum Payment diproses.
+
+### Reverse Accrual
+
+**Reverse Accrual** digunakan untuk membalik transaksi Payment atau Receipt melalui transaksi accrual. Sistem membuat transaksi pembalik berdasarkan transaksi awal sehingga nilai transaksi awal dapat dikoreksi.
+
+Jurnal AP Payment awal:
+
+![pay](../pay_acc.png "Jurnal Payment Awal") {#Figure323}
+
+Saat dilakukan **Reverse Accrual**, sistem membuat jurnal pembalik:
+
+![pay](../pay_acc2.png "Jurnal Payment Reverse") {#Figure324}
+
+Jurnal tersebut membalik jurnal Payment sehingga transaksi awal tidak lagi memengaruhi saldo akun.
+
+### Impact Bank Statement
+
+Apabila Payment atau Receipt yang akan di-reverse sudah memiliki **Bank Statement**, sistem akan melakukan **Void** terhadap Bank Statement tersebut.
+
+![pay](../pay_rev.png "Payment Reverse") {#Figure325}
+
+![bank](../bank_voi.png "Bank Statement Void") {#Figure326}
+
+Dengan demikian, histori transaksi tetap tersedia, sementara transaksi dan Bank Statement yang terkait tidak lagi dianggap sebagai transaksi aktif.

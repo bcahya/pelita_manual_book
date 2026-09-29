@@ -206,4 +206,115 @@ Setelah pembatalan dilakukan, sistem otomatis membentuk **Inventory Move pembali
 
 Dengan demikian, jika dalam satu Inventory Move Delivery terdapat beberapa produk dan hanya sebagian yang dibatalkan, hanya produk yang tidak dibatalkan yang akan diproses pada Inventory Move Receipt. 
 
+## Rute di Ekspedisi
 
+Proses Ekspedisi menggunakan informasi rute untuk menentukan tujuan pengiriman product. Setiap ekspedisi dapat memiliki tujuan yang berbeda, sehingga user perlu menentukan rute sebelum melakukan pengiriman. User membuat rute sebagai master data yang terdiri dari warehouse asal dan warehouse tujuan.
+### Membuat Rute
+
+User dapat membuat rute dengan langkah berikut:
+
+1. Buka menu **SIS Route**.
+2. Klik **New**.
+3. Isi **Search Key** dan **Name** untuk rute.
+4. Tentukan **Warehouse Asal**.
+
+![rute](../rute_head.png "Rute") {#Figure328}
+
+5. Masuk ke tab **Route Line**.
+6. Tentukan **Warehouse Tujuan**.
+
+![rute](../rute_line.png "Rute") {#Figure329}
+
+7. Klik **Save**.
+
+### Konfigurasi Volume Product
+
+Selain menentukan rute, user perlu mengisi volume pada setiap product yang akan diproses melalui ekspedisi.
+
+Pada **Product Master**, isi field **Volume** dengan volume masing-masing product. Sistem menggunakan informasi tersebut untuk menghitung total volume product pada proses **Inventory Move** dan **Expedition**.
+
+### Membuat Inventory Move dari RDO
+
+Setelah user menentukan rute, warehouse asal, dan warehouse tujuan, user dapat membuat Inventory Move melalui **RDO** dengan langkah berikut:
+
+1. Buka menu **SIS RDO**.
+2. Tentukan **Warehouse** dan **Locator Asal**.
+3. Tentukan **Rute Pengiriman**.
+
+![rdo](../rdo_hed.png "Inventory Move dari RDO") {#Figure330}
+
+4. Klik **Generate RDO Line**.
+5. Pilih product yang akan diproses.
+6. Klik **SIS Generate RDO Line**.
+7. Masuk ke tab **Line**.
+8. Tentukan **Warehouse Tujuan** untuk masing-masing product.
+9. Klik **Save**.
+10. Klik **Complete** pada dokumen.
+
+Setelah RDO berstatus Complete, sistem akan membuat Inventory Move Delivery dan Inventory Move Receipt.
+
+### Inventory Move Delivery
+
+User perlu memproses Inventory Move Delivery terlebih dahulu. Pada header Inventory Move terdapat informasi Volume. Sistem menghitung volume tersebut berdasarkan volume product pada Move Line.
+
+![move](../vol_invendel.png "Informasi Volume di Inventory Move") {#Figure331}
+
+Setelah Inventory Move Delivery selesai diproses, user dapat melanjutkan ke proses ekspedisi.
+### Membuat Expedition
+
+User dapat membuat dokumen ekspedisi dengan langkah berikut:
+
+1. Buka menu **SIS Expedition**.
+2. Tentukan **Business Partner**.
+3. Tentukan **Supir** dan **Kernet**.
+4. Tentukan **Kendaraan** yang digunakan.
+5. Masuk ke tab **Line**.
+6. Masukkan nomor **Inventory Move** yang akan diproses.
+7. Klik **Save**.
+
+Pada header Expedition terdapat informasi Volume. Sistem menghitung total volume berdasarkan volume Inventory Move yang terdapat pada Expedition Line.
+### Pembatalan Expedition Line
+
+User dapat membatalkan ekspedisi pada masing-masing Expedition Line apabila diperlukan. Saat user membatalkan Inventory Move pada Expedition Line, sistem akan melakukan perhitungan ulang terhadap Volume pada header Expedition. Volume akan berkurang sesuai dengan volume Inventory Move yang dibatalkan.
+
+Dengan demikian, informasi volume pada header Expedition selalu mengikuti Inventory Move yang masih aktif pada Expedition Line.
+
+## Movement Product dengan BoM
+
+Fitur Movement Product dengan BoM digunakan untuk memindahkan product jadi atau setengah jadi beserta komponen BoM (Bill of Material) yang membentuk product tersebut.
+
+Product yang memiliki BoM dapat terdiri dari beberapa komponen, seperti Product Item dan Product Expense. Saat user melakukan movement dengan konfigurasi Move BOM Component, sistem akan memindahkan stock product jadi atau setengah jadi beserta stock komponen yang memiliki Product Type Item.
+
+### Konfigurasi Move BOM Component
+
+Sebelum melakukan Inventory Move, user perlu mengaktifkan konfigurasi Move BOM Component pada Document Type Inventory Move.
+
+Field Move BOM Component terdapat pada Document Base Type = Material Movement dan berfungsi untuk menentukan apakah sistem akan memindahkan komponen BoM saat user melakukan movement.
+
+- Move BOM Component = Yes → Sistem memindahkan product jadi atau setengah jadi beserta komponen BoM yang memiliki Product Type Item.
+- Move BOM Component = No → Sistem hanya memindahkan product jadi atau setengah jadi. Komponen BoM tidak ikut dipindahkan.
+
+### Proses Inventory Move dengan BoM
+
+Setelah konfigurasi **Move BOM Component** selesai, user dapat melakukan Inventory Move dengan langkah berikut:
+
+1. Buka menu **Inventory Move**.
+2. Pilih **Document Type** yang sudah dikonfigurasi dengan **Move BOM Component**.
+3. Tentukan **Warehouse From** dan **Warehouse To**.
+4. Klik **Save**.
+5. Pada field **Phantom Product**, pilih product jadi atau setengah jadi yang akan dipindahkan.
+6. Pada field **Phantom BOM**, pilih BoM yang akan digunakan.
+7. Pada field **Phantom Qty**, masukkan jumlah product yang akan dipindahkan.
+
+![move](../phantom.png "Penentuan Phantom") {#Figure326}
+
+8. Klik **Save**.
+9. Klik **Document Action**.
+10. Pilih **Prepare**.
+11. Klik **OK**.
+
+![move](../move_line.png "Move Line Product BoM") {#Figure327}
+
+Setelah user menjalankan **Prepare**, sistem akan membuat **Move Line** berdasarkan komponen pada BoM yang dipilih.
+
+Sistem akan memindahkan stock product jadi atau setengah jadi sesuai quantity yang ditentukan. Selain itu, sistem juga akan memindahkan stock komponen BoM yang memiliki Product Type Item.

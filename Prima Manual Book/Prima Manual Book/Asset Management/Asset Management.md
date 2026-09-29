@@ -242,3 +242,29 @@ Setelah Invoice di-complete, informasi pada Invoice Line otomatis tersalin ke do
 6. Klik **Save**.
 
 Jika product dikonfigurasi menggunakan **Asset Type**, product juga wajib memiliki **Attribute Set**. Attribute Set digunakan untuk menentukan atribut identifikasi atau tracking aset — seperti Serial Number, Lot Number, atau atribut lainnya sesuai kebutuhan bisnis.
+
+## Koreksi Masa Manfaat Asset
+
+Sebelum melakukan pengadaan aset, user mengkonfigurasi **Asset Type** termasuk menentukan **masa manfaat aset** dalam satuan bulan. Dalam implementasinya, terdapat kemungkinan nilai masa manfaat yang diinput tidak sesuai ketentuan. Contoh: masa manfaat aset seharusnya **48 bulan (4 tahun)**, namun user menginput **46 bulan**.
+
+Kesalahan ini umumnya baru diketahui setelah aset ter-create dan depresiasi sudah terbentuk berdasarkan masa manfaat yang salah. Kondisi ini krusial karena masa manfaat berpengaruh langsung pada perhitungan aset dan pajak. Oleh karena itu, user perlu melakukan **koreksi masa manfaat** dengan nilai yang benar.
+
+Koreksi ini berlaku untuk aset yang:
+
+- **Belum didepresiasi** — sistem mengkalkulasi ulang nilai depresiasi berdasarkan masa manfaat baru.
+- **Sudah didepresiasi** — sistem hanya mengkalkulasi ulang periode yang **belum didepresiasi**.
+
+### Langkah Koreksi Masa Manfaat Asset
+
+### Langkah Koreksi Masa Manfaat Aset
+
+1. Buka menu **SIS Asset**.
+2. Tentukan **aset** yang akan dikoreksi.
+3. Klik **Update Masa Manfaat Aset**.
+4. Input nilai **masa manfaat** yang benar.
+
+![sis](../sis_up.png "Update Masa Manfaat") {#Figure317}
+
+5. Klik **OK**.
+
+Setelah proses selesai, masa manfaat pada aset ter-update dan **Depreciation Amount** dikalkulasi ulang sesuai masa manfaat yang baru.

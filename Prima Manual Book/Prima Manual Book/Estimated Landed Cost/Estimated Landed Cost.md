@@ -81,3 +81,15 @@ Setelah Invoice di-complete, **Landed Cost Allocation** pada masing-masing cost 
 Jika terdapat selisih antara Estimated Landed Cost dan realisasi biaya di produk yang terdapat ASI, sistem membentuk **jurnal variance** pada jurnal invoice. Berikut contoh jurnalnya:
 
 ![jurnal](../jurnal_land_cos.png "Jurnal Realisasi Landed Cost") {#Figure197}
+
+## Currency Type Pada Purchase Order dan Landed Cost
+
+Apabila Purchase Order (PO) menggunakan valuta asing, sedangkan realisasi Landed Cost menggunakan mata uang Rupiah, user perlu menentukan Currency Type pada Purchase Order. Currency Type menentukan jenis currency rate yang digunakan sistem untuk mengonversi nilai transaksi valuta asing ke Rupiah.
+
+Saat user menentukan Currency Type pada PO, sistem akan menggunakan currency rate berdasarkan type tersebut ketika user merealisasikan Landed Cost melalui AP Invoice. Apabila user tidak menentukan Currency Type pada PO, sistem akan menggunakan Currency Type Default yang telah dikonfigurasi sebagai dasar currency rate.
+### Ketentuan Currency Type
+
+- **Currency Type ditentukan pada PO** → Sistem menggunakan currency rate berdasarkan Currency Type yang dipilih pada PO.
+- **Currency Type tidak ditentukan pada PO** → Sistem menggunakan Currency Type Default yang telah dikonfigurasi.
+
+Dengan konfigurasi tersebut, sistem dapat menentukan nilai Rupiah pada AP Invoice Landed Cost berdasarkan currency rate yang sesuai dengan transaksi Purchase Order.

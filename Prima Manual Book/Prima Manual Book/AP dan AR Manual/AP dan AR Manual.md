@@ -125,3 +125,53 @@ Pada akhir periode, sistem membentuk jurnal revaluasi.
 Pada tanggal 1 periode berikutnya, sistem otomatis membentuk **jurnal pembalik** atas revaluasi tersebut.
 
 ![revaluasi](../reval_inv_01.png "Revaluasi Awal Bulan Berikutnya") {#Figure174}
+
+## Reverse Invoice
+
+Fitur **Reverse Invoice** digunakan untuk membatalkan invoice yang sudah diproses dengan membuat transaksi pembalik. Sistem menyediakan dua metode reverse, yaitu **Reverse Correct** dan **Reverse Accrual**.
+
+User dapat melakukan reverse apabila flag **Can be Reverse** pada **Document Type AP Invoice** atau **AR Invoice** sudah diaktifkan. Konfigurasi **Can be Reverse** menentukan apakah invoice dapat dilakukan reverse:
+
+- **Can be Reverse = Yes** → Sistem mengizinkan user melakukan reverse invoice.
+- **Can be Reverse = No** → Sistem tidak mengizinkan user melakukan reverse invoice.
+
+### Reverse Correct
+
+**Reverse Correct** digunakan untuk membatalkan invoice sekaligus membuat invoice baru sebagai dokumen koreksi. Saat user menjalankan **Reverse Correct**, sistem akan:
+
+- Membuat transaksi pembalik untuk membatalkan invoice awal.
+- Membuat invoice baru berdasarkan invoice yang direverse.
+#### Langkah Reverse Correct
+
+1. Buka menu **AP Invoice** atau **AR Invoice**.
+2. Pilih invoice yang akan dikoreksi.
+3. Klik **Document Action**.
+4. Pilih **Reverse Correct**.
+5. Klik **OK**.
+
+Sistem akan membuat transaksi pembalik dan invoice baru berdasarkan invoice yang direverse.
+
+**Contoh jurnal:**
+
+- Jurnal invoice awal mencatat transaksi sesuai nilai invoice
+
+![cor](../cor_inv.png "Jurnal Invoice Awal") {#Figure318}
+
+- Jurnal reverse membalik nilai transaksi invoice awal
+ 
+![cor](../cor_inv2.png "Jurnal Pembalik") {#Figure319}
+### Reverse Accrual
+
+**Reverse Accrual** digunakan untuk membatalkan invoice tanpa membuat invoice baru sebagai pengganti.
+
+Saat user menjalankan **Reverse Accrual**, sistem akan membuat transaksi pembalik atas invoice sehingga nilai dan jurnal invoice awal menjadi terbalik. 
+
+**Contoh jurnal:**
+
+- Jurnal invoice awal mencatat transaksi sesuai nilai invoice
+
+![acc](../acc_inv.png "Jurnal Invoice Awal") {#Figure320}
+
+- Jurnal reverse membalik nilai transaksi invoice awal
+ 
+![acc](../acc_inv2.png "Jurnal Pembalik") {#Figure321}
