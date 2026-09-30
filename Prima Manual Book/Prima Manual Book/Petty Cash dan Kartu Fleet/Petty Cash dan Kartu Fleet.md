@@ -208,8 +208,9 @@ Sebelum transaksi Kartu Fleet dapat diproses, perlu dilakukan konfigurasi terleb
 | ----------------------------- | ---------------- |
 | SIS_FLEET_CHARGE_TOL_ID       | C_Charge_ID      |
 | SIS_FLEET_CHARGE_BBM_ID       | C_Charge_ID      |
-| SIS_FLEET_PRICE_LIST_ID       | C_Charge_ID      |
-| SIS_FLEET_TAX_ID              | M_PriceList_ID   |
+| SIS_FLEET_CHARGE_PARKIR_ID    | C_Charge_ID      |
+| SIS_FLEET_PRICE_LIST_ID       | M_PriceList_ID   |
+| SIS_FLEET_TAX_ID              | C_Tax_ID         |
 | SIS_FLEET_PAYMENT_TERM_ID     | C_PaymentTerm_ID |
 | SIS_FLEET_DEFAULT_DOC_TYPE_ID | C_DocType_ID     |
 | SIS_FLEET_CURRENCY_ID         | C_Currency_ID    |

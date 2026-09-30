@@ -922,3 +922,16 @@ Report **Rekap Waste per Outlet MIC** digunakan untuk menampilkan informasi reka
 Sistem akan menampilkan data rekapitulasi waste berdasarkan outlet MIC sesuai dengan parameter yang telah ditentukan.
 
 ![waste](../waste_mic.png "Report Waste Per Outlet MIC") {#Figure318}
+
+## Report Bank Statement Detail
+
+Ikuti langkah berikut untuk mengakses Laporan Bank Statement Detail:
+
+1. Buka menu **SIS Bank Statement Detail**.
+2. Tentukan **Bank** atau **Bank Account** yang akan dicek.
+3. Tentukan **Statement Date**.
+4. Klik **OK**.
+
+Berikut contoh Laporan Bank Statement Detail:
+
+![bs](../bs_detail.png "Report Bank Statement Detail") {#Figure332}

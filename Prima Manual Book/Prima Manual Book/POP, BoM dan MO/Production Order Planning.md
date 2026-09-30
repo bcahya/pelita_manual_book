@@ -361,3 +361,24 @@ Berikut contoh implementasi konfigurasi ini di Production Order Planning (POP):
 ![wh](../mov_out.png "Movement Dari Gudang Bahan Baku") {#Figure315}
 
 ![wh](../mov_in.png "Movement Dari Intransit ke Warehouse Tujuan") {#Figure316}
+
+## Warehouse Production
+
+Dalam proses Production Order Planning, bahan mentah melewati beberapa tahap produksi sebelum menjadi barang jadi. Setiap tahap produksi menggunakan warehouse yang berbeda. Untuk menandai warehouse mana yang digunakan pada tahap produksi tertentu, lakukan konfigurasi pada field **Warehouse Production**.
+
+Contoh: produk bahan mentah yang dibeli akan ditempatkan di **gudang bahan baku**. Untuk menyatakan bahwa gudang tersebut digunakan untuk proses bahan, user mengkonfigurasi field Warehouse Production dengan nilai **Bahan**.
+
+Field Warehouse Production berfungsi sebagai **identitas tahap produksi** suatu warehouse. Terdapat 8 pilihan Warehouse Production yang tersedia:
+
+- Bahan
+- Bordir
+- Cutting
+- Finishing
+- QC Serie
+- Sablon
+- Sewing
+- Washing
+
+![wp](../wp.png "Warehouse Production") {#Figure331}
+
+Jika warehouse dikonfigurasi dengan Warehouse Production **Cutting**, warehouse tersebut digunakan khusus untuk proses _cutting_. Ketentuan yang sama berlaku untuk seluruh tahap produksi lainnya hingga proses _finishing_.

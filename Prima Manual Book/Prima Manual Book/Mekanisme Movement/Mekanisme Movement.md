@@ -318,3 +318,35 @@ Setelah konfigurasi **Move BOM Component** selesai, user dapat melakukan Invento
 Setelah user menjalankan **Prepare**, sistem akan membuat **Move Line** berdasarkan komponen pada BoM yang dipilih.
 
 Sistem akan memindahkan stock product jadi atau setengah jadi sesuai quantity yang ditentukan. Selain itu, sistem juga akan memindahkan stock komponen BoM yang memiliki Product Type Item.
+
+## Proses Input Move Line dengan Scan Barcode
+
+Saat melakukan perpindahan barang, perusahaan dapat menggunakan fitur **scan barcode** untuk memindai kode artikel. Setelah artikel berhasil di-scan dan quantity ditentukan, user menekan **Enter** — sistem otomatis membuat Move Line atas produk tersebut dengan quantity sesuai yang diinput.
+
+Sebelum menggunakan fitur ini, lakukan konfigurasi pada **Document Type Material Movement**. Terdapat field **Using Barcode** dengan ketentuan berikut:
+
+- **Using Barcode = Y** — Movement menggunakan barcode.
+- **Using Barcode = N** — Movement tidak menggunakan barcode dan berjalan seperti biasa.
+
+### Mekanisme Scan Barcode di Inventory Move
+
+1. Buka menu **Inventory Move**.
+2. Tentukan **Document Type** yang telah dikonfigurasi.
+3. Tentukan **Warehouse** asal dan **Warehouse** tujuan.
+4. Klik **Save**.
+
+Saat dokumen disimpan, field **Using Barcode** pada header Inventory Move otomatis tercentang.
+
+5. Input kode artikel pada field **Product Value** atau scan melalui **barcode scanner**.
+6. Tentukan **Qty Barcode**.
+
+![qty](../qty_barcode.png "Qty Barcode") {#Figure334}
+
+7. Klik **Enter** pada PC atau perangkat.
+
+Setelah Enter diklik, sistem otomatis membuat **Move Line** atas produk tersebut dengan ketentuan berikut:
+
+- **Locator asal dan tujuan** — sesuai konfigurasi di header.
+- **Quantity** — sesuai Qty Barcode yang telah diinput.
+
+![qty](../qty_up.png "Move Line") {#Figure335}
