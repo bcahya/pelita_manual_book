@@ -935,3 +935,16 @@ Ikuti langkah berikut untuk mengakses Laporan Bank Statement Detail:
 Berikut contoh Laporan Bank Statement Detail:
 
 ![bs](../bs_detail.png "Report Bank Statement Detail") {#Figure332}
+
+## Report Penyelesaian Invoice
+
+Ikuti langkah berikut untuk mengakses Laporan Penyelesaian Invoice:
+
+1. Buka menu **SIS Report Penyelesaian Invoice**.
+2. Tentukan **Invoice** yang akan dicek.
+3. Tentukan **Organisasi**.
+4. Klik **OK**.
+
+Berikut contoh Laporan Penyelesaian Invoice:
+
+![cash](../cash.png "Report Penyelesaian Invoice") {#Figure336}

@@ -67,9 +67,9 @@ Langkah Import File MT940:
 
 ## Import Data PO Kecil
 
-Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi, value product/search key pada product, dan tahun bulan transaksi. Berikut contoh format file yang digunakan untuk import data PO Kecil.
+Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi dan tahun bulan transaksi. Berikut contoh format file yang digunakan untuk import data PO Kecil.
 
-   ![Format PO](../Format-POKecil.png "Format PO Kecil") {#Figure90}
+   ![Format PO](../import_po_kecil.png "Format PO Kecil") {#Figure90}
 
 
 Langkah Import File PO Kecil:
@@ -78,15 +78,13 @@ Langkah Import File PO Kecil:
   - Navigasi ke /home/dev-idempiere/po_import → Import PO Kecil
   - Pilih file PO Kecil yang akan diimport
 
-![Import Data PO Kecil](../Import_PO.png "Import Data PO Kecil") {#Figure84}
-
 4. Jika import berhasil, file otomatis berpindah ke folder **done**
 
-![Done Import PO](../PO_Done.png "Done Import PO") {#Figure89}
+![Done Import PO](../done_po_kecil.png "Done Import PO") {#Figure89}
 
 5. Sistem iDempiere akan membuat dokumen PO dengan status Draft atau In Progress, yang selanjutnya dapat di-confirm sesuai kebutuhan operasional.
 
-![Purchase Order](../Hasil_Import_PO.png "Hasil Import Purchase Order") {#Figure90}
+![Purchase Order](../po_kecil_dr.png "Hasil Import Purchase Order") {#Figure90}
 
 Jika file PO Kecil yang diimport tidak sesuai format, sistem tidak akan memproses file tersebut ke iDempiere. Contoh ketidaksesuaian format yang umum terjadi antara lain penggunaan delimiter **;** atau penggunaan **Product ID** pada nama file yang seharusnya menggunakan **Product Value**.
 
