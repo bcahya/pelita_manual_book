@@ -54,3 +54,7 @@ UoM Conversion Spesial ini hanya berlaku untuk produk **Kragh** dan **Manset**. 
 ![uom](../uom_conv_kragh.png "UoM Conversion Kragh & Manset") {#Figure280}
 
 Konfigurasi ini dibuat khusus untuk kebutuhan **printout PO dan MR** pada proses _Knitting_ dan _Woven_, dan tidak berpengaruh pada UoM yang digunakan dalam transaksi PO maupun berdampak pada nilai atau proses di dalam PO.
+
+Setelah UoM dibuat, tentukan UoM tersebut pada product yang menggunakannya. Di master product, terdapat field UoM Conversion Spesial — isi field ini dengan UoM Conversion Spesial yang sesuai untuk product tersebut. Setelah dikonfigurasi, UoM tersebut akan muncul pada printout Purchase Order Knitting dan Woven saat transaksi diproses.
+
+![spesial](../uom_spesial.png "UoM Conversion Spesial") {#Figure335}
