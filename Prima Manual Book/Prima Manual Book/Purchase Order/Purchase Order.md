@@ -40,7 +40,15 @@ Sebelum melakukan generate, perlu diperhatikan bahwa produk yang diproses di Req
 Saat PO terbentuk dari proses generate, sistem otomatis menggunakan price list yang dikonfigurasi pada **SIS_StandardPL_ID**. User masih dapat mengedit price di PO Line sesuai kebutuhan. Dengan demikian, meskipun produk belum memiliki price list, proses Generate PO From Requisition tetap dapat dijalankan.
 ## Generate PO From Requisition
 
-Fitur **Generate PO From Requisition** digunakan untuk membuat Purchase Order berdasarkan Requisition Line yang telah dibuat. Proses generate PO dapat dilakukan dengan memilih satu atau beberapa Requisition Line — termasuk dari satu maupun beberapa Requisition.
+Fitur **Generate PO From Requisition** digunakan untuk membuat Purchase Order berdasarkan Requisition Line yang telah dibuat. Proses generate PO dapat dilakukan dengan memilih satu atau beberapa Requisition Line — termasuk dari satu maupun beberapa Requisition. 
+
+Pada window Generate PO From Requisition, sistem menampilkan informasi Qty dan Applied Qty:
+
+- Qty menunjukkan jumlah product dalam UOM Base.
+- Applied Qty menunjukkan jumlah product dalam UOM yang digunakan pada proses purchasing, baik UOM Base maupun UOM Conversion.
+- Jika user menggunakan UOM Conversion, nilai Applied Qty mengikuti quantity dalam UOM Conversion yang digunakan pada purchasing.
+
+Dengan demikian, Qty menjadi acuan jumlah product dalam UOM Base, sedangkan Applied Qty menunjukkan quantity yang digunakan pada transaksi Purchase Order sesuai UOM purchasing.
 
 Sistem mengelompokkan Requisition Line berdasarkan **Business Partner (BP)** dengan ketentuan berikut:
 

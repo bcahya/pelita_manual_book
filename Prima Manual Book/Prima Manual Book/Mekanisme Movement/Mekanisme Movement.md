@@ -350,3 +350,47 @@ Setelah Enter diklik, sistem otomatis membuat **Move Line** atas produk tersebut
 - **Quantity** — sesuai Qty Barcode yang telah diinput.
 
 ![qty](../qty_up.png "Move Line") {#Figure335}
+
+## Movement untuk Product dengan ASI
+
+Proses **Inventory Move** dapat dilakukan untuk product yang menggunakan **ASI (Attribute Set Instance)** maupun product yang tidak menggunakan ASI.
+
+### Movement Product Tanpa ASI
+
+Untuk product yang tidak menggunakan ASI, sistem mengambil stock berdasarkan Warehouse dan Locator asal. Sistem menentukan stock yang akan dipindahkan berdasarkan metode yang dikonfigurasi pada Product Category, yaitu:
+
+- FIFO (First In First Out) → Sistem mengambil stock yang pertama kali masuk.
+- LIFO (Last In First Out) → Sistem mengambil stock yang terakhir kali masuk.
+
+### Movement Product dengan ASI
+
+Product yang menggunakan ASI memiliki identitas masing-masing berdasarkan ASI. Saat user menerima product, setiap ASI dapat memiliki identitas yang berbeda sehingga satu Material Receipt dapat terdiri dari beberapa ASI. Saat user melakukan Inventory Move untuk product dengan ASI, sistem akan menentukan stock berdasarkan ASI yang tersedia pada **Locator** asal.
+
+User dapat menentukan ASI yang akan dipindahkan secara otomatis oleh sistem atau secara manual.
+#### Penentuan ASI oleh Sistem
+
+Jika user tidak menentukan ASI secara manual, sistem akan menentukan ASI berdasarkan metode pengambilan stock yang berlaku, yaitu FIFO atau LIFO. Sistem akan memilih ASI yang masih memiliki stock pada Locator asal sesuai dengan metode tersebut.
+#### Penentuan ASI Secara Manual
+
+User dapat menentukan ASI secara manual dengan mengaktifkan field **Manual ASI Selection** pada header Inventory Move. Jika Manual ASI Selection dicentang, user dapat menentukan ASI yang akan dipindahkan secara langsung.
+
+![asi](../manual_asi.png "Konfigurasi ASI Manual") {#Figure336}
+
+### Langkah Menentukan ASI Secara Manual
+
+1. Buat **Inventory Move**.
+2. Tentukan **Warehouse** dan **Locator** asal serta tujuan.
+3. Tentukan product dan quantity yang akan dipindahkan.
+4. Masuk ke tab **Attributes**.
+5. Klik kolom **Attribute Set Instance**.
+6. Uncentang **New Record**.
+7. Klik **Selection Existing Record**.
+8. Pilih **ASI** yang akan dipindahkan.
+
+![asi](../asi_m.png "Attribute Set Instance") {#Figure337}
+
+9. Klik **Ok**.
+10. Klik **Save**.
+11. Klik **Complete**.
+
+Setelah Inventory Move selesai diproses, sistem akan mengurangi stock ASI pada Locator asal dan menambahkan stock ASI yang sama pada Locator tujuan.
