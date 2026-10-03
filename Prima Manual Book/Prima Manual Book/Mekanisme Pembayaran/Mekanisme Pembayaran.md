@@ -54,7 +54,7 @@ Untuk melakukan pembayaran Multi Business Partner, lakukan langkah-langkah berik
 4. Tentukan **Transaction Date**.
 5. Pilih **Business Partner** sebagai pihak yang melakukan atau menerima pembayaran.
 6. Buka tab **Allocate**.
-7. Input invoice yang akan dibayarkan.
+7. Input **invoice** yang akan dibayarkan — sistem hanya menampilkan invoice yang memiliki currency yang sama dengan Bank Account yang dipilih.
 8. Klik **save**.
 9. Klik **complete**.
 

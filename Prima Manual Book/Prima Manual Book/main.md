@@ -65,6 +65,7 @@
 .include {Tax/Tax.md}
 .include {Attribute Set Instance/Attribute Set Instance.md}
 .include {Purchase Order/Purchase Order.md}
+.include {Material Receipt/Material Receipt.md}
 .include {Estimated Landed Cost/Estimated Landed Cost.md}
 .include {AP dan AR Manual/AP dan AR Manual.md}
 .include {Posting Matched Invoice/Posting Matched Invoice.md}

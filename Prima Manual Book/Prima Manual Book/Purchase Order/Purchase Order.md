@@ -50,10 +50,10 @@ Pada window Generate PO From Requisition, sistem menampilkan informasi Qty dan A
 
 Dengan demikian, Qty menjadi acuan jumlah product dalam UOM Base, sedangkan Applied Qty menunjukkan quantity yang digunakan pada transaksi Purchase Order sesuai UOM purchasing.
 
-Sistem mengelompokkan Requisition Line berdasarkan **Business Partner (BP)** dengan ketentuan berikut:
+Sistem mengelompokkan Requisition Line berdasarkan Business Partner (BP) dengan ketentuan berikut:
 
-- Jika beberapa Requisition Line memiliki **BP yang sama**, sistem menggabungkan seluruh Requisition Line tersebut ke dalam **satu Purchase Order**.
-- Jika Requisition Line memiliki **BP yang berbeda**, sistem membuat **Purchase Order terpisah** untuk masing-masing BP.
+- Jika beberapa Requisition Line memiliki BP yang sama, sistem menggabungkan seluruh Requisition Line tersebut ke dalam satu Purchase Order.
+- Jika Requisition Line memiliki BP yang berbeda, sistem membuat Purchase Order terpisah untuk masing-masing BP.
 
 Berikut contoh PO yang terbentuk dari beberapa dokumen Requisition dengan BP yang sama dan berbeda:
 
@@ -66,6 +66,16 @@ Terdapat relasi antara quantity Requisition dan Purchase Order. Saat membuat Req
 Berikut contoh relasi quantity Requisition dengan Purchase Order:
 
 ![qty](../req_pr_po.png "Qty Requisition pada Purchase Order") {#Figure275}
+
+Saat melakukan Generate PO From Requisition, terdapat kemungkinan user memilih Target Document Type yang tidak sesuai dengan produk yang akan diproses. Contoh: produk yang diproses adalah produk aksesoris, namun Target Document Type yang dipilih adalah Purchase Order Bahan Mentah.
+
+![po](../po_bb.png "Konfigurasi di Document Type Purchase Order") {#Figure338}
+
+Untuk mencegah kesalahan tersebut, aktifkan konfigurasi Product Access atau Product Category Access pada Document Type Purchase Order. Dengan konfigurasi ini, sistem hanya memproses produk yang sesuai dengan filter yang telah dikonfigurasi. 
+
+Jika produk pada Requisition berada di luar Product Access atau Product Category Access yang dikonfigurasi, Purchase Order tetap ter-generate namun PO Line tidak akan ter-create. Saat sistem mencoba membuat PO Line secara otomatis, PO juga tidak dapat diproses lebih lanjut.
+
+![po](../po_kosong.png "PO Hasil Generate") {#Figure339}
 ## MOQ (Minimum Order Quantity)
 
 Sistem menggunakan **Minimum Order Quantity (MOQ)** untuk menentukan batas minimum quantity yang dapat dipesan pada Purchase Order berdasarkan quantity pada Requisition.

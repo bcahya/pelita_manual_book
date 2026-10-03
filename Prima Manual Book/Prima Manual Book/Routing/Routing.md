@@ -63,6 +63,22 @@ Agar tampilan lebih sederhana, warehouse  difilter berdasarkan flag **Production
 Berikut contoh implementasi filter Production Warehouse di Bill of Material:
 ![bom](../po_bom.png "Filter Production Warehouse di BoM") {#Figure187}
 
+### Informasi Warehouse Manager
+
+Di iDempiere, field **Warehouse Manager (MIC)** pada menu Warehouse and Locator digunakan untuk menetapkan **Manager in Charge (MIC)** yang bertanggung jawab terhadap suatu warehouse. Informasi ini dapat digunakan sebagai referensi dalam proses yang membutuhkan penanggung jawab warehouse, termasuk pada report atau dokumen transaksi.
+
+Ikuti langkah berikut untuk mengkonfigurasi Warehouse Manager:
+
+1. Buka menu **Warehouse and Locator**.
+2. Tentukan **warehouse** yang akan dikonfigurasi.
+3. Masuk ke tab **Warehouse Manager**.
+4. Pada field **Manager**, tentukan user yang bertanggung jawab atas warehouse tersebut.
+
+![wh](../wh_manag.png "Konfigurasi Warehouse Manager") {#Figure339}
+
+5. Klik **Save**.
+
+Jika informasi MIC digunakan dalam report atau dokumen transaksi, sistem otomatis mengambil data PIC berdasarkan warehouse yang telah dikonfigurasi.
 ## Jenis Routing Action
  
 Routing memiliki beberapa jenis action yang digunakan untuk menentukan alur perpindahan barang.

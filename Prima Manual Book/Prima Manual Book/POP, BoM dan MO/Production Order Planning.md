@@ -382,3 +382,12 @@ Field Warehouse Production berfungsi sebagai **identitas tahap produksi** suatu 
 ![wp](../wp.png "Warehouse Production") {#Figure331}
 
 Jika warehouse dikonfigurasi dengan Warehouse Production **Cutting**, warehouse tersebut digunakan khusus untuk proses _cutting_. Ketentuan yang sama berlaku untuk seluruh tahap produksi lainnya hingga proses _finishing_.
+
+## Informasi Kurs di Production Order Planning
+
+Di Production Order Planning, terdapat field **Rate (Kurs)** yang digunakan jika transaksi menggunakan mata uang asing. Sistem menggunakan **Currency Rate** dengan Currency Type sesuai default yang telah dikonfigurasi.
+
+Berikut ketentuan pengisian rate secara otomatis:
+
+- **Jika tanggal transaksi berada dalam rentang Valid From dan Valid To** pada Currency Rate — sistem otomatis mengisi field Rate sesuai Currency Rate yang berlaku.
+- **Jika tidak ada Currency Rate yang berlaku** pada tanggal transaksi — sistem otomatis mengisi Rate dengan nilai **1**.
