@@ -948,3 +948,17 @@ Ikuti langkah berikut untuk mengakses Laporan Penyelesaian Invoice:
 Berikut contoh Laporan Penyelesaian Invoice:
 
 ![cash](../cash.png "Report Penyelesaian Invoice") {#Figure336}
+
+## Report Monitoring Production
+
+Report Monitoring Production digunakan untuk memantau progress produksi yang sedang berjalan — termasuk informasi tahap produksi yang sudah dicapai, quantity, dokumen Inventory Move, dan tanggal produksi.
+
+Ikuti langkah berikut untuk mengakses Report Monitoring Production:
+
+1. Buka menu **SIS Report Monitoring Production**.
+2. Tentukan **Document Date**.
+3. Klik **OK**.
+
+Berikut contoh Laporan Monitoring Production:
+
+![prod](../mon_prod.png "Report Monitoring Production") {#Figure337}

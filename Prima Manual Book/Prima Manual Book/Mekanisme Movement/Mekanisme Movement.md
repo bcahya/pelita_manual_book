@@ -142,6 +142,17 @@ Saat ekspedisi dibatalkan, field **Active** pada Line akan ter-uncheck secara ot
 
 > **Catatan:** Jika pengiriman dilakukan secara bertahap, gunakan dokumen Movement yang berbeda untuk setiap tahap pengiriman agar setiap pengiriman memiliki dokumen ekspedisi dan penerimaan tersendiri.
 
+#### Proses Penerimaan dari Ekspedisi
+
+Perpindahan barang yang menggunakan mekanisme intransit melibatkan dua warehouse tujuan — warehouse intransit dan warehouse tujuan sebenarnya. Proses ini menghasilkan dua dokumen: dokumen pengiriman dan dokumen penerimaan.
+
+Saat dokumen Inventory Move Pengiriman di-complete, warehouse tujuan otomatis berubah menjadi warehouse intransit dan sistem otomatis membuat dokumen penerimaan.
+#### Penerimaan dengan Ekspedisi
+
+Jika perpindahan barang melibatkan ekspedisi, proses penerimaan hanya dapat dilakukan setelah dokumen ekspedisi diproses melalui menu **SIS Expedition**. Jika penerimaan diproses sebelum ekspedisi selesai, Inventory Move tidak dapat di-complete.
+#### Penerimaan tanpa Ekspedisi
+
+Jika perpindahan barang tidak melibatkan ekspedisi, dokumen penerimaan dapat langsung diproses setelah Inventory Move Pengiriman di-complete.
 ### Informasi Tambahan Pada Ekspedisi
 
 Saat proses perpindahan barang menggunakan ekspedisi, dokumen ekspedisi memuat informasi **supir**, **kernet**, **nama kendaraan**, dan **nomor polisi kendaraan**. Informasi ini penting untuk memastikan setiap pengiriman dapat ditelusuri — termasuk siapa yang mengantarkan dan kendaraan apa yang digunakan.
@@ -253,14 +264,14 @@ Setelah user menentukan rute, warehouse asal, dan warehouse tujuan, user dapat m
 
 Setelah RDO berstatus Complete, sistem akan membuat Inventory Move Delivery dan Inventory Move Receipt.
 
-### Inventory Move Delivery
+#### Inventory Move Delivery
 
 User perlu memproses Inventory Move Delivery terlebih dahulu. Pada header Inventory Move terdapat informasi Volume. Sistem menghitung volume tersebut berdasarkan volume product pada Move Line.
 
 ![move](../vol_invendel.png "Informasi Volume di Inventory Move") {#Figure331}
 
 Setelah Inventory Move Delivery selesai diproses, user dapat melanjutkan ke proses ekspedisi.
-### Membuat Expedition
+#### Membuat Expedition
 
 User dapat membuat dokumen ekspedisi dengan langkah berikut:
 
@@ -273,7 +284,7 @@ User dapat membuat dokumen ekspedisi dengan langkah berikut:
 7. Klik **Save**.
 
 Pada header Expedition terdapat informasi Volume. Sistem menghitung total volume berdasarkan volume Inventory Move yang terdapat pada Expedition Line.
-### Pembatalan Expedition Line
+#### Pembatalan Expedition Line
 
 User dapat membatalkan ekspedisi pada masing-masing Expedition Line apabila diperlukan. Saat user membatalkan Inventory Move pada Expedition Line, sistem akan melakukan perhitungan ulang terhadap Volume pada header Expedition. Volume akan berkurang sesuai dengan volume Inventory Move yang dibatalkan.
 

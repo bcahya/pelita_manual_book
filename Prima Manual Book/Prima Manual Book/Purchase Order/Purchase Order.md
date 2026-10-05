@@ -493,6 +493,10 @@ Ikuti langkah berikut untuk mengkonfigurasi Currency Rate:
 4. Tentukan periode **Valid From** dan **Valid To**.
 5. Isi **Multiply Rate** atau **Divide Rate** sesuai metode konversi yang digunakan. Hanya salah satu field yang perlu diisi.
 
+Sistem menggunakan **Currency Rate** berdasarkan **Currency Type default** yang telah dikonfigurasi di sistem untuk transaksi Purchase Order Valas. Saat ini, hanya satu Currency Type yang dapat diset sebagai default. Oleh karena itu, saat membuat transaksi Purchase Order, user tidak perlu memilih Currency Type — sistem otomatis mengambil Currency Type default yang telah dikonfigurasi.
+
+Jika pada Currency Type default tersebut belum terdapat rate yang berlaku pada tanggal transaksi, sistem tidak dapat memproses Purchase Order.
+
 Pada Purchase Order Valas, sebagian besar produk yang diproses tidak memiliki price list sehingga harga ditentukan langsung saat transaksi. Untuk mencegah harga yang diinput melebihi anggaran, lakukan konfigurasi **Max Purchasing Price** pada master product.
 
 ![max](../max_purchase.png "Konfigurasi Max Purchasing Price") {#Figure312}
@@ -512,7 +516,6 @@ Saat membuat Purchase Order, terdapat tiga kondisi harga produk yang dapat dipro
 Aktifkan field **Allow Product Without Price List** di Document Type Purchase Order agar produk tanpa price list tetap dapat diproses dalam transaksi. Jika field ini tidak diaktifkan, sistem akan memblokir transaksi untuk produk yang tidak memiliki price list.
 
 Saat produk diinput, user menginput harga secara manual pada field **Price**. Harga masih dapat diedit selama dokumen berstatus _Draft_ atau _In Progress_. Setelah dokumen di-complete, seluruh field otomatis menjadi _disabled_ dan tidak dapat diubah lagi.
-
 ### Produk dengan Price List (tanpa kontrak)
 
 Untuk produk yang sudah memiliki price list namun tidak terikat kontrak, sistem otomatis mengisi harga berdasarkan price list yang berlaku. User masih dapat mengedit field **Price List** maupun **Price Entered** sesuai kebutuhan selama dokumen belum di-complete.
