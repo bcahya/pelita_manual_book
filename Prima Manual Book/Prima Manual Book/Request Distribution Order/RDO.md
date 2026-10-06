@@ -121,3 +121,91 @@ Saat RDO di-complete, sistem otomatis membuat dokumen **Inventory Move Delivery*
 ![receipt](../receipt_rdo.png "Inventory Move Receipt") {#Figure308}
 
 Dokumen Inventory Move Receipt yang ter-create dikonsolidasikan berdasarkan **warehouse tujuan** — jika beberapa produk dalam satu RDO memiliki warehouse tujuan yang sama, sistem menggabungkannya dalam satu dokumen. Dengan demikian, jumlah dokumen Inventory Move yang terbentuk sesuai dengan jumlah warehouse tujuan yang berbeda pada RDO Line.
+
+## Mekanisme Inventory Move Receipt
+
+Pada mekanisme RDO sebelumnya, saat RDO di-complete sistem otomatis membuat dokumen **Inventory Move Delivery** dan **Receipt**. Saat ini telah dilakukan penyesuaian — penerimaan (_receipt_) dapat dilakukan secara manual, sehingga saat RDO di-complete sistem **tidak lagi** otomatis membuat Inventory Move Receipt.
+
+Untuk mengakomodasi hal ini, terdapat tambahan konfigurasi pada **Document Type RDO** melalui field **Auto Create Receipt Movement Doc**:
+
+- **Auto Create Receipt Movement Doc = Y** — Saat RDO di-complete, sistem otomatis membuat Inventory Move Delivery dan Receipt.
+- **Auto Create Receipt Movement Doc = N** — Saat RDO di-complete, sistem hanya membuat Inventory Move Delivery. Inventory Move Receipt dibuat secara manual.
+
+### Langkah Membuat Inventory Move Receipt Manual
+
+Ikuti langkah berikut untuk membuat Inventory Move Receipt secara manual yang mereferensikan Inventory Move Delivery:
+
+1. Buka menu **Inventory Move**.
+2. Klik **New**.
+3. Tentukan **Document Type**.
+4. Tentukan **Warehouse** asal dan **Warehouse** tujuan.
+5. Centang field **Receipt**.
+6. Input dokumen **Inventory Move Delivery** pada field **Movement Reference**.
+7. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
+8. Klik **Generated Movement Line**.
+9. Klik **OK**.
+
+Sistem otomatis menyalin Move Line dari Inventory Move Delivery, dengan **Locator tujuan** sesuai RDO Line.
+
+10. Verifikasi **produk**, **quantity**, serta **Locator** asal dan tujuan.
+11. Klik **Save**.
+12. Klik **Complete** pada dokumen.
+
+Untuk memproses Inventory Move Receipt dari Generate RDO, user dapat memproses Inventory Move seperti mekanisme sebelumnya — seluruh informasi pada Inventory Move bersumber dari RDO dan RDO Line.
+## RDO Sub Brand
+
+Pada proses Inventory Move, terdapat kebutuhan untuk mendistribusikan produk berdasarkan kategori **Sub Brand** tanpa perlu menentukan produk satu per satu. Setiap produk sudah memiliki kategori Sub Brand yang telah diidentifikasi oleh perusahaan, sehingga user cukup menentukan Sub Brand yang akan diproses.
+
+### Mekanisme RDO Sub Brand
+
+1. Buka menu **SIS RDO**.
+2. Tentukan **Document Type**.
+3. Tentukan **Warehouse** dan **Locator** tujuan.
+4. Tentukan **Sub Brand**.
+5. Klik **Save**.
+6. Masuk ke tab **RDO Line**.
+7. Tentukan **quantity** yang akan diproses.
+8. Tentukan **Warehouse** dan **Locator** tujuan.
+9. Klik **Save**.
+10. Klik **Complete** pada dokumen.
+
+Saat RDO di-complete, sistem otomatis membuat **Inventory Move Delivery** dengan mekanisme intransit — warehouse dan locator tujuan dari pengiriman adalah **intransit**.
+
+Karena distribusi dilakukan berdasarkan kategori Sub Brand, user menginput produk satu per satu melalui **scan barcode**. Ikuti langkah berikut:
+
+1. Buka menu **Inventory Move**.
+2. Tentukan dokumen **Inventory Move** yang ter-create dari RDO.
+3. Pada field **Product Value**, lakukan scan barcode atau input manual kode produk.
+4. Tentukan **Qty Barcode**.
+5. Klik **Enter**.
+
+Setelah Enter diklik, sistem otomatis membuat **Move Line** dengan ketentuan berikut:
+
+- **Locator asal dan tujuan** — sesuai konfigurasi header (_intransit_).
+- **Quantity** — sesuai Qty Barcode yang diinput.
+
+6. Verifikasi **produk** dan **quantity** yang diproses.
+7. Klik **Save**.
+8. Klik **Complete** pada dokumen.
+
+> **Catatan:** Quantity yang diproses tidak boleh melebihi quantity yang dikonfigurasi di RDO Line. Jika melebihi, Inventory Move Delivery tidak dapat di-complete.
+
+### Langkah Inventory Move Receipt (Penerimaan) Manual — RDO Sub Brand
+
+Setelah Inventory Move Delivery selesai diproses, lakukan penerimaan secara manual:
+
+1. Buka menu **Inventory Move**.
+2. Klik **New**.
+3. Tentukan **Document Type**.
+4. Tentukan **Warehouse** asal dan **Warehouse** tujuan.
+5. Centang field **Receipt**.
+6. Input dokumen **Inventory Move Delivery** sebelumnya pada field **Movement Reference**.
+7. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
+8. Klik **Generated Movement Line**.
+9. Klik **OK**.
+
+Sistem otomatis menyalin Move Line dari Inventory Move Delivery, dengan **Locator tujuan** sesuai RDO Line.
+
+10. Verifikasi **produk**, **quantity**, serta **Locator** asal dan tujuan.
+11. Klik **Save**.
+12. Klik **Complete** pada dokumen.

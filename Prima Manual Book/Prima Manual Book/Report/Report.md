@@ -962,3 +962,15 @@ Ikuti langkah berikut untuk mengakses Report Monitoring Production:
 Berikut contoh Laporan Monitoring Production:
 
 ![prod](../mon_prod.png "Report Monitoring Production") {#Figure337}
+
+## Laporan Kapasitas per Locator per Sub Brand
+
+Ikuti langkah berikut untuk mengakses Report Kapasitas per Locator per Sub Brand:
+
+1. Buka menu **SIS Report Capacity Locator**.
+2. Tentukan **Locator**.
+3. Klik **OK**.
+
+Berikut contoh Laporan Kapasitas per Locator per Sub Brand:
+
+![kapasitas](../kap_loc.png "Report Kapasitas per Locator") {#Figure340}

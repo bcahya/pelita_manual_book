@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Report/Report.md",
+                "file": "Prima Manual Book/Request Distribution Order/RDO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Report"
+              "title": "RDO"
             }
           }
         ]
@@ -196,6 +196,13 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
+    "Prima Manual Book/Request Distribution Order/RDO.md",
+    "Prima Manual Book/Report/Report.md",
+    "Prima Manual Book/kap_loc.png",
+    "Prima Manual Book/Project Management/Project Management.md",
+    "Prima Manual Book/Purchase Order/Purchase Order.md",
+    "Prima Manual Book/jurnal_issue_ex.png",
     "mon_prod.png",
     "Prima Manual Book/mon_prod.png",
     "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
@@ -205,20 +212,14 @@
     "Prima Manual Book/Sales Order/Sales Order.md",
     "Prima Manual Book/Document Type/Document Type.md",
     "Prima Manual Book/Material Management/Material Management.md",
-    "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
-    "Prima Manual Book/Report/Report.md",
     "Prima Manual Book/monitor_prod.png",
     "monitor_prod.png",
-    "Prima Manual Book/Purchase Order/Purchase Order.md",
     "Prima Manual Book/Routing/Routing.md",
     "Prima Manual Book/wh_manag.png",
     "Prima Manual Book/po_bb.png",
     "Prima Manual Book/po_kosong.png",
     "Prima Manual Book/main.md",
     "Prima Manual Book/manual_asi.png",
-    "asi_m.png",
-    "Prima Manual Book/asi_m.png",
-    "Pasted image 20261002222249.png",
     "Prima Manual Book/Auto Production POS Order/Auto Production POS Order.md",
     "Prima Manual Book/Unit of Measure Conversion/UoM Conversion.md",
     "Prima Manual Book/Import Data/Import Data.md",
@@ -231,7 +232,6 @@
     "Prima Manual Book/POP, BoM dan MO/Bill of Material.md",
     "Prima Manual Book/Attribute Set Instance/Attribute Set Instance.md",
     "Prima Manual Book/Material Receipt/Material Receipt.md",
-    "Prima Manual Book/Purchase Price Contract/Purchase Price Contract.md",
     "Prima Manual Book/Konfigurasi Document Type",
     "Prima Manual Book/Product",
     "Prima Manual Book/Sales Order",
