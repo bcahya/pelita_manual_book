@@ -974,3 +974,17 @@ Ikuti langkah berikut untuk mengakses Report Kapasitas per Locator per Sub Brand
 Berikut contoh Laporan Kapasitas per Locator per Sub Brand:
 
 ![kapasitas](../kap_loc.png "Report Kapasitas per Locator") {#Figure340}
+
+## Report Print Out Ekspedisi
+
+Ikuti langkah berikut untuk mengakses Print Out Ekspedisi:
+
+1. Buka menu **SIS Expedition**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Document Expedition**.
+4. Pada Process Detail Report, pilih **Faktur Ekspedisi** 
+5. Klik **OK**.
+
+Berikut contoh Print Out Ekspedisi:
+
+![eks](../print_eks.png "Report Print Out Ekspedisi") {#Figure341}

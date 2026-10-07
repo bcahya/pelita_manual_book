@@ -29,7 +29,8 @@ Karena proses Delivery dan Receipt saling terhubung, lakukan konfigurasi dua **D
 4. Pada field **Document Base Type**, pilih **Material Movement**.
 5. Pada field **Internal Use Doc Type**, tentukan dokumen Internal Use yang digunakan.
 6. Centang field **Auto Create Back Order**.
-7. Klik **Save**.
+7. Apabila proses 
+8. Klik **Save**.
 ### Document Type Movement Pengiriman (Delivery)
 
 1. Buka menu **Document Type**.
@@ -75,6 +76,21 @@ Setelah produk berpindah ke warehouse intransit, proses Movement Receipt untuk m
 6. Klik **Complete** pada dokumen Movement.
 
 Jika quantity yang diterima hanya sebagian (_parsial_), sistem otomatis membuat **back order** atas kekurangan quantity tersebut yang dapat ditelusuri melalui **Movement Source/Target**.
+
+Proses penerimaan yang menggunakan **Intransit** dapat melibatkan ekspedisi atau tidak melibatkan ekspedisi. User menentukan mekanisme tersebut melalui konfigurasi **Document Type Material Movement**.
+
+Pada **Document Type Material Movement**, terdapat field **Expedition** yang menentukan apakah proses perpindahan menggunakan ekspedisi.
+
+- **Expedition = Y** → Sistem menjalankan proses perpindahan dengan melibatkan **Expedition**.
+- **Expedition = N** → Sistem menjalankan proses perpindahan tanpa melibatkan **Expedition**.
+
+Dengan konfigurasi tersebut, sistem akan menjalankan proses perpindahan Intransit sesuai mekanisme yang ditentukan pada Document Type Material Movement.
+#### Penerimaan dengan Ekspedisi
+
+Jika perpindahan barang melibatkan ekspedisi, proses penerimaan hanya dapat dilakukan setelah dokumen ekspedisi diproses melalui menu **SIS Expedition**. Jika penerimaan diproses sebelum ekspedisi selesai, Inventory Move tidak dapat di-complete.
+#### Penerimaan tanpa Ekspedisi
+
+Jika perpindahan barang tidak melibatkan ekspedisi, dokumen penerimaan dapat langsung diproses setelah Inventory Move Pengiriman di-complete.
 ## Ekspedisi
 
 Movement dengan Ekspedisi digunakan untuk mencatat perpindahan barang antar warehouse yang melibatkan pihak ekspedisi atau proses pengiriman. Mekanisme ini memisahkan proses pengiriman dari proses penerimaan barang di warehouse tujuan, sehingga status barang dapat dipantau selama proses distribusi.

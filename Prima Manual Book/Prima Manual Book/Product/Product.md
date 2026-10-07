@@ -31,3 +31,33 @@ Jika terdapat perubahan atau pembaruan gambar, ikuti langkah berikut untuk mengh
 ![delete](../del_image.png "Delete Gambar Product") {#Figure286}
 
 Gambar dihapus dari product tersebut dan tidak akan muncul lagi di master product.
+
+## Informasi Tambahan di Product
+
+Menu Product memiliki dua field tambahan untuk kebutuhan transaksional dan pelaporan, yaitu **Sub Brand** dan **MClass**:
+
+- **Sub Brand** — Kategorisasi turunan atau kelompok dari Brand.
+- **MClass** — Pengelompokan produk berdasarkan kelas.
+
+### Konfigurasi Sub Brand
+
+1. Buka menu **SIS Sub Brand**.
+2. Tentukan **Search Key** dan **Name**.
+3. Klik **Save**.
+
+![sub](../subbrand.png "Sub Brand") {#Figure341}
+
+Setelah master Sub Brand dibuat, informasi tersebut dapat diterapkan pada master product. Berikut contoh implementasi Sub Brand di product:
+
+![sub](../pc_subbrand.png "Product dengan Sub Brand") {#Figure342}
+### Konfigurasi MClass
+
+1. Buka menu **SIS MClass**.
+2. Tentukan **Search Key** dan **Name**.
+3. Klik **Save**.
+
+![mclass](../mclass.png "MClass") {#Figure343}
+
+Setelah master MClass dibuat, informasi tersebut dapat diterapkan pada master product. Berikut contoh implementasi MClass di product:
+
+![mclass](../pc_mclass.png "Product dengan MClass") {#Figure344}

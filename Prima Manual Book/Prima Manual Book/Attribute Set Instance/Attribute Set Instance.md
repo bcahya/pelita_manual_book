@@ -26,19 +26,16 @@ Guarantee Date digunakan untuk:
 5. Pada field **Attribute Set Type**, pilih **Material Management System**
 
 ![Attibute Set](../Attribute_Set_New.png "Attribute Set") {#Figure75}
-
-6. Masuk ke tab Exclude, input data berikut:
-  - C_OrderLine – Sales Order Line
-  - M_InOutLine – Shipment/Receipt Line
-  - M_MovementLine_Move Line
-  - Un-check field **Sales Transaction**
-
-  Fitur exclude bertujuan untuk memberikan pengecualian atas tabel yang dipilih terhadap mandatory Attribute Set yang dikonfigurasi di level 2 header. Apabila suatu transaksi dikecualikan, maka field Attribute Set tidak wajib diinput saat melakukan transaksi tersebut.
-
-  ![Exclude](../Exclude.png "Exclude") {#Figure76}
   
-7. Klik **Save**
+6. Klik **Save**
 
+### Konfigurasi Exclude di Attribute Set
+
+Fitur **Exclude** digunakan untuk memberikan pengecualian pada tabel tertentu terhadap konfigurasi mandatory Attribute Set di level header. Jika suatu transaksi dikecualikan, field **Attribute Set** tidak wajib diinput saat memproses transaksi tersebut.
+
+Saat membuat Attribute Set, sistem otomatis membuat tabel yang ada di tab **Exclude**, sehingga user tidak perlu mengkonfigurasi setiap tabel secara manual
+
+  ![Exclude](../exclude_asi.png "Exclude") {#Figure76}
 ### Setup Attribute Set Instance di Produk
 
 1. Buka Menu Product
