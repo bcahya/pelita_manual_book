@@ -62,4 +62,6 @@ Saat membuat **UoM Conversion Spesial**, user sudah menentukan product yang akan
 Setelah dikonfigurasi, UoM Conversion Spesial akan:
 
 - Muncul pada **printout Purchase Order Knitting** saat transaksi diproses.
-- Ditampilkan pada **PO Line** sehingga user dapat mengetahui apakah product yang diproses menggunakan UoM Conversion Spesial.
+- Sistem menampilkan informasi UoM Conversion Spesial yang digunakan beserta quantity dalam satuan UoM tersebut di PO Line. Dengan demikian, user dapat mengetahui apakah PO menggunakan UoM Conversion Spesial serta melihat jumlah product dalam satuan tersebut.
+
+![spesial](../po_line_sps.png "Informasi UoM Conversion Spesial di PO Line") {#Figure343}

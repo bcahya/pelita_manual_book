@@ -963,15 +963,15 @@ Berikut contoh Laporan Monitoring Production:
 
 ![prod](../mon_prod.png "Report Monitoring Production") {#Figure337}
 
-## Laporan Kapasitas per Locator per Sub Brand
+## Laporan Kapasitas per Locator
 
-Ikuti langkah berikut untuk mengakses Report Kapasitas per Locator per Sub Brand:
+Ikuti langkah berikut untuk mengakses Report Kapasitas per Locator:
 
 1. Buka menu **SIS Report Capacity Locator**.
 2. Tentukan **Locator**.
 3. Klik **OK**.
 
-Berikut contoh Laporan Kapasitas per Locator per Sub Brand:
+Berikut contoh Laporan Kapasitas per Locator:
 
 ![kapasitas](../kap_loc.png "Report Kapasitas per Locator") {#Figure340}
 
@@ -988,3 +988,16 @@ Ikuti langkah berikut untuk mengakses Print Out Ekspedisi:
 Berikut contoh Print Out Ekspedisi:
 
 ![eks](../print_eks.png "Report Print Out Ekspedisi") {#Figure341}
+
+## Report Export Currenct Stock Qty On Hand
+
+Ikuti langkah berikut untuk mengakses Report Export Currenct Stock Qty On Hand:
+
+1. Buka menu **SIS Report Export Currenct Qty Stock On Hand**.
+2. Tentukan **Locator**.
+3. Tentukan **Product** — Opsional.
+4. Klik **OK**.
+
+Berikut contoh Report Export Currenct Stock Qty On Hand:
+
+![on hand](../stock_oh.png "Report Current Stock Qty On Hand") {#Figure342}

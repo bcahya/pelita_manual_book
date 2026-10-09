@@ -114,3 +114,89 @@ Ikuti langkah berikut untuk membuat costing pada product baru:
 ![cpst](../current_cost_non.png "Cost Pada Product") {#Figure283}
 
 Sistem otomatis membuat costing pada product tersebut sesuai Initial HPP Value. Setelah costing terbentuk, jika dilakukan **inventory adjustment** positif maupun negatif, jurnal akan ter-posting dengan nilai sesuai cost yang telah dikonfigurasi.
+
+## Costing Average PO Level Organization pada Product dengan ASI
+
+Pada iDempiere, metode costing Average PO mendukung dua pilihan Costing Level, yaitu Organization dan Batch/Lot.
+
+- Costing Level Organization → Sistem menghitung cost pada level organisasi.
+- Costing Level Batch/Lot → Sistem menghitung cost berdasarkan batch/lot atau ASI.
+
+Pada kondisi tertentu, product menggunakan **Costing Level Organization**, tetapi product tersebut juga memiliki **ASI (Attribute Set Instance)**. Dalam kondisi ini, sistem membentuk costing berdasarkan organisasi dengan nilai cost dihitung rata-rata berdasarkan transaksi pembelian.
+
+Contoh berikut menjelaskan proses pembelian product dengan metode costing Average PO, Costing Level Organization, menggunakan ASI, dan menerapkan Minimum Order Quantity (MOQ) sebesar 100 kilogram.
+
+![moq](../moq_2.png "Minimum Order Qty") {#Figure343}
+### Requisition
+
+User membuat Requisition sebagai permintaan pembelian product. Pada contoh ini, user menginput quantity sebesar 90 kilogram, sedangkan MOQ product adalah 100 kilogram.
+
+Langkah-langkah membuat Requisition:
+
+1. Buka menu **Requisition**.
+2. Tentukan **Document Type**.
+3. Tentukan tanggal transaksi.
+4. Tentukan **Warehouse**.
+5. Masuk ke tab **Requisition Line**.
+6. Tentukan **Business Partner**.
+7. Pilih **Product** yang akan diproses.
+8. Input **Qty** contoh sebesar 90 kilogram.
+
+![req](../req_line2.png "Requisition Line") {#Figure344}
+
+9. Klik **Save**.
+10. Klik **Complete**.
+### Generate PO From Requisition
+
+Setelah Requisition selesai diproses, user dapat membuat Purchase Order melalui fitur SIS Generate PO From Requisition. Langkah-langkahnya:
+
+1. Buka menu **SIS Generate PO From Requisition**.
+2. Masukkan nomor dokumen Requisition.
+3. Pilih Requisition Line yang akan diproses.
+4. Klik **Requery**.
+5. Tentukan **Target Document Type** untuk Purchase Order.
+6. Tentukan **Tax**.
+7. Klik **SIS Generate PO From Requisition**.
+
+Sistem akan membuat Purchase Order secara otomatis. Karena product memiliki MOQ sebesar 100 kilogram, quantity pada PO Line akan mengikuti MOQ tersebut, meskipun quantity pada Requisition hanya 90 kilogram.
+### Purchase Order
+
+Setelah sistem membuat Purchase Order, user perlu memeriksa quantity dan harga sebelum menyelesaikan transaksi. Langkah-langkahnya:
+
+1. Buka menu **Purchase Order**.
+2. Cari Purchase Order yang terbentuk dari proses generate sebelumnya.
+3. Masuk ke tab **PO Line**.
+4. Verifikasi **Qty Ordered** sebesar 100 kilogram dan harga product.
+
+![po](../po_line2.png "Purchase Order Line dengan MOQ") {#Figure345}
+
+5. Klik **Save**.
+6. Klik **Complete**.
+
+### Material Receipt
+
+Setelah Purchase Order selesai diproses, user dapat melakukan penerimaan barang melalui Material Receipt. Langkah-langkahnya:
+
+1. Buka menu **Material Receipt**.
+2. Klik **New**.
+3. Masukkan nomor dokumen Purchase Order.
+4. Klik **Create Lines From**.
+5. Pilih PO Line yang akan diterima.
+6. Klik **OK**.
+7. Masuk ke tab **Receipt Line**.
+8. Verifikasi product dan quantity yang akan diterima.
+9. Klik **Setting**.
+10. Klik **SIS Generate Distribute Attribute**, lalu tentukan batch yang akan diproses.
+
+![MR](../mr_line2.png "Material Receipt dengan ASI") {#Figure346}
+
+11. Klik **Save**.
+12. Klik **Complete**.
+
+Setelah user menyelesaikan Material Receipt, sistem akan membentuk data costing menggunakan metode Average PO dengan Costing Level Organization. Sistem membentuk costing pada level organisasi, sedangkan stock pada locator tetap tercatat berdasarkan ASI. Organisasi pada data costing mengikuti organisasi yang digunakan pada dokumen Material Receipt, sementara nilai cost mengikuti nilai transaksi Purchase Order.
+
+![cost](../cost.png "Costing Product dengan ASI") {#Figure347}
+
+![stock](../stock_2.png "Stock dengan ASI") {#Figure348}
+
+Dengan demikian, sistem dapat memproses product yang menggunakan ASI dan menerapkan MOQ pada proses pembelian meskipun Costing Level dikonfigurasi pada Organization.

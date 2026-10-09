@@ -79,6 +79,32 @@ Ikuti langkah berikut untuk mengkonfigurasi Warehouse Manager:
 5. Klik **Save**.
 
 Jika informasi MIC digunakan dalam report atau dokumen transaksi, sistem otomatis mengambil data PIC berdasarkan warehouse yang telah dikonfigurasi.
+
+### Konfigurasi Kapasitas Locator
+
+Setiap locator atau gudang memiliki kapasitas penyimpanan yang berbeda-beda. Kapasitas ini juga dapat ditentukan berdasarkan **Sub Brand**, sehingga produk yang termasuk dalam Sub Brand tertentu memiliki kapasitas tersendiri di locator tersebut.
+
+Ikuti langkah berikut untuk mengkonfigurasi kapasitas locator:
+
+1. Buka menu **SIS Sub Brand Capacity**.
+2. Tentukan **Warehouse** yang akan dikonfigurasi.
+3. Tentukan **Locator** yang akan dikonfigurasi.
+4. Masuk ke tab **Line**.
+5. Pada field **SIS Sub Brand**, tentukan Sub Brand yang akan dikonfigurasi.
+6. Tentukan kapasitas pada field **Capacity**.
+7. Masuk ke tab **Capacity Allowance**.
+8. Tentukan **Allowance** dalam bentuk persentase.
+9. Tentukan **Date Effective Allowance**.
+10. Klik **Save**.
+
+Kapasitas per locator per Sub Brand akan ditampilkan pada **Report Capacity Locator**. Report ini menampilkan informasi stok yang tersedia di locator, kapasitas, allowance, dan status kapasitas — apakah over kapasitas atau tidak.
+
+Saat dilakukan **Inventory Move**, sistem otomatis memeriksa kapasitas dan allowance di setiap locator:
+
+- Jika masih ada ruang — Inventory Move dapat diproses.
+- Jika kapasitas sudah penuh dan melebihi allowance — Sistem menampilkan pesan error bahwa locator sudah over kapasitas dan Inventory Move tidak dapat diproses.
+
+Dengan mekanisme ini, user dapat memastikan setiap locator tidak melebihi kapasitas yang telah ditentukan.
 ## Jenis Routing Action
  
 Routing memiliki beberapa jenis action yang digunakan untuk menentukan alur perpindahan barang.
