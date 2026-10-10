@@ -65,3 +65,16 @@ Untuk transaksi yang menggunakan **ASI**, quantity yang tercantum pada ASI harus
 Sistem melakukan validasi dengan membandingkan quantity ASI dengan quantity pada MR. **Quantity ASI dan quantity MR harus sama** agar MR dapat diproses. Apabila terdapat perbedaan quantity antara ASI dan MR, sistem tidak dapat memproses MR sampai quantity pada keduanya tersebut disesuaikan.
 
 Ketentuan ini berlaku baik apabila quantity MR lebih kecil maupun lebih besar dari quantity yang tercantum pada ASI.
+
+### Informasi Qty ASI di MR/BPB
+
+Untuk produk yang memiliki ASI, user perlu menjalankan **Generate Distribute Attribute** saat melakukan penerimaan barang (Material Receipt) dan menentukan jumlah _lines_ atau batch yang akan di-generate. Setelah di-generate, user dapat melihat hasil dan nomor ASI pada tab **Attribute**.
+
+Pada tab Attribute terdapat dua informasi quantity:
+
+- **Qty Entered** — Menampilkan quantity dalam satuan UoM sesuai PO yang ada di Receipt Line. User perlu menginput nilai ini secara manual dan masih dapat diedit sebelum dokumen di-complete.
+- **Movement Qty** — Menampilkan quantity dalam satuan **Base UoM**.
+
+![asi mr](../qty_mr_attribute.png "Informasi Qty di Material Receipt") {#Figure349}
+
+Field Qty Entered bertujuan untuk mengakomodasi perbedaan antara Qty Entered dan Movement Qty yang disebabkan oleh konversi UoM. Sistem akan melakukan pembulatan ke depan pada Qty Entered saat konversi dilakukan.istem akan melakukan pembulatan ke depan.

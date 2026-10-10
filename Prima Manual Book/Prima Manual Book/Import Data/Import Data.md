@@ -71,8 +71,16 @@ Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yait
 
    ![Format PO](../import_po_kecil.png "Format PO Kecil") {#Figure90}
 
+Selain itu, lakukan konfigurasi **Price List** dan **Payment Term** yang akan digunakan sebagai acuan. Konfigurasi ini dilakukan di level **server**. Berikut contoh setup Price List dan Payment Term di server.
 
-Langkah Import File PO Kecil:
+![filezilla](../pl_pt_filezilla.jpg "Konfigurasi Price List dan Payment Term") {#Figure346}
+
+Sistem menentukan Price List dan Payment Term dengan ketentuan berikut:
+
+- Jika **Business Partner belum memiliki** konfigurasi Price List dan Payment Term, sistem menggunakan Price List dan Payment Term yang dikonfigurasi di server.
+- Jika **Business Partner sudah memiliki** konfigurasi Price List dan Payment Term, sistem mengambil data dari master Business Partner tersebut.
+
+Berikut langkah Import File PO Kecil di FileZilla:
 1. Siapkan file PO Kecil dalam format csv
 2. Import melalui FileZilla
   - Navigasi ke /home/dev-idempiere/po_import → Import PO Kecil

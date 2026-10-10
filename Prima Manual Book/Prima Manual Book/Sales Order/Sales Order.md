@@ -172,3 +172,18 @@ Saat customer melakukan return produk berdasarkan Shipment yang berasal dari Sal
 Informasi dokumen Customer Return juga ditampilkan pada tab **Customer Return** di Sales Order. Tab ini muncul secara otomatis dan menampilkan detail dokumen return jika terdapat produk yang dikembalikan oleh customer.
 
 ![return](../return_so2.png "Informasi Customer Return di Sales Order") {#Figure286}
+
+
+### Informasi Cost Center di Sales Order
+
+Di iDempiere, **Cost Center** merepresentasikan warehouse — keduanya memiliki data yang sama. Untuk mencegah user lupa menginput Cost Center saat membuat Sales Order, sistem otomatis mengisi field **Cost Center** di header Sales Order sesuai warehouse yang dipilih.
+
+![cc so](../cost_center_so.png "Informasi Cost Center di Sales Order") {#Figure349}
+
+Informasi Cost Center ini juga otomatis tersalin ke:
+
+- **Order Line**
+- **Shipment**
+- **Sales Invoice**
+
+Dengan demikian, seluruh transaksi tersebut dapat ditelusuri dan dikelompokkan berdasarkan **Cost Center**.

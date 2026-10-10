@@ -273,6 +273,17 @@ Proses revaluasi menghasilkan dua jurnal:
 
 ![revaluasi](../reval_bs_01.png "Revaluasi Bank/Cash Awal Bulan Berikutnya") {#Figure177}
 
+Saat dilakukan revaluasi Bank/Cash Statement, field **Description** pada GL Journal Line memuat informasi perhitungan dan **Bank Account** dari revaluasi tersebut, sehingga user dapat mengetahui nilai jurnal berasal dari Bank Account mana. Selain itu, GL Journal Line juga menampilkan informasi **Bank Account** pada field tersendiri sebagai referensi tambahan.
+
+![des](../des_gl.png "Informasi di Description") {#Figure352}
+
+Berikut informasi yang tersedia pada field **Description**:
+
+- **Balance** — Saldo dalam mata uang dasar.
+- **Balance Valas** — Saldo dalam mata uang asing.
+- **Revaluasi Amount** — Nilai penyesuaian hasil revaluasi.
+- **Rate** — Kurs yang digunakan pada revaluasi.
+- **Unrealized Revaluation** — Nilai keuntungan atau kerugian revaluasi yang belum direalisasi.
 # Bank/Cash Transfer
 
 Fitur Bank/Cash Transfer digunakan untuk memindahkan dana antar rekening bank maupun kas di sistem. Proses ini hanya memindahkan saldo antar akun kas/bank milik perusahaan dan tidak melibatkan Business Partner maupun penyelesaian piutang atau utang.

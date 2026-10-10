@@ -494,15 +494,18 @@ Data pada Buku Besar Pembantu bersumber dari tabel akuntansi (_Fact_Acct_) yang 
 2. Input parameter berikut sesuai kebutuhan:
 - **Account Date** — Tanggal akun transaksi.
 - **Business Partner** — Opsional, untuk memfilter berdasarkan Business Partner.
+- **Business Partner Group** — Opsional, untuk memfilter berdasarkan Business Partner Grup.
 - **Cost Center** — Opsional, untuk memfilter berdasarkan Cost Center.
 - **Product** — Opsional, untuk memfilter berdasarkan produk yang digunakan dalam transaksi.
-- **Account** — Akun dalam transaksi.
+- **Account** — Akun yang digunakan dalam transaksi.
+- **Bank** — Opsional, untuk memfilter berdasarkan Bank.
+- **Bank Account** — Opsional, untuk memfilter berdasarkan Bank Account.
 
 3. Klik start
 
 Berikut contoh hasil export Buku Besar Pembantu:
 
-![report](../rev_buku_besar_pembantu.png "Laporan Buku Besar Pembantu") {#Figure181}
+![report](../bb_pembantu.png "Laporan Buku Besar Pembantu") {#Figure181}
 
 Informasi yang Ditampilkan pada Hasil Export
 

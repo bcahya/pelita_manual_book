@@ -403,6 +403,7 @@ User dapat menentukan ASI secara manual dengan mengaktifkan field **Manual ASI S
 
 ![asi](../manual_asi.png "Konfigurasi ASI Manual") {#Figure336}
 
+> **Catatan:** Field **Manual ASI Selection** secara default bernilai **N** (tidak dicentang). Jika ASI akan diinput secara manual, pastikan field tersebut dicentang terlebih dahulu sebelum memulai transaksi.
 ### Langkah Menentukan ASI Secara Manual
 
 1. Buat **Inventory Move**.
@@ -421,3 +422,14 @@ User dapat menentukan ASI secara manual dengan mengaktifkan field **Manual ASI S
 11. Klik **Complete**.
 
 Setelah Inventory Move selesai diproses, sistem akan mengurangi stock ASI pada Locator asal dan menambahkan stock ASI yang sama pada Locator tujuan.
+
+## Informasi Cost Center Pada Movement
+
+Setiap warehouse memiliki **Cost Center** tersendiri. Saat dilakukan Movement, persediaan di warehouse asal berkurang dan persediaan di warehouse tujuan bertambah.
+
+Untuk membedakan akun persediaan berdasarkan warehouse atau Cost Center, jurnal Inventory Move menggunakan ketentuan berikut:
+
+- **Debit** — Akun persediaan/aset untuk **Cost Center Warehouse Tujuan** (penambahan persediaan).
+- **Kredit** — Akun persediaan/aset untuk **Cost Center Warehouse Asal** (pengurangan persediaan).
+
+![cc move](../cost_center_movement.png "Informasi Cost Center di Jurnal Inventory Move") {#Figure347}

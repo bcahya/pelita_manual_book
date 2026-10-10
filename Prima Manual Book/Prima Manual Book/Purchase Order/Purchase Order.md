@@ -523,3 +523,17 @@ Untuk produk yang sudah memiliki price list namun tidak terikat kontrak, sistem 
 ### Produk dengan Price Contract
 
 Untuk produk yang terikat **Price Contract**, sistem mengunci harga secara otomatis saat produk diinput di PO Line. User tidak dapat mengedit price karena harga telah ditetapkan berdasarkan kontrak yang sudah disepakati. Perubahan harga di PO Line tidak diperbolehkan untuk menjaga konsistensi dengan nilai kontrak.
+
+## Informasi Cost Center di Purchase Order
+
+Di iDempiere, **Cost Center** merepresentasikan warehouse — keduanya memiliki data yang sama. Untuk mencegah user lupa menginput Cost Center saat membuat Purchase Order, sistem otomatis mengisi field **Cost Center** di header Purchase Order sesuai warehouse yang dipilih.
+
+![cc po](../cost_center_po.png "Informasi Cost Center di Purchase Order") {#Figure348}
+
+Informasi Cost Center ini juga otomatis tersalin ke:
+
+- **PO Line**
+- **Material Receipt**
+- **Purchase Invoice**
+
+Dengan demikian, seluruh transaksi tersebut dapat ditelusuri dan dikelompokkan berdasarkan **Cost Center**.

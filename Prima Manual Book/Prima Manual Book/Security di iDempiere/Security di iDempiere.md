@@ -108,3 +108,20 @@ Sebelum mengaktifkan MFA, user perlu melakukan registrasi di sistem dan menginst
 9. Jika OTP valid, MFA dinyatakan **aktif**.
 
 Setelah MFA aktif, user wajib memasukkan kode OTP dari aplikasi Google Authenticator setiap kali login. Kode OTP berubah setiap menit, sehingga akun tidak dapat diakses oleh pihak lain. Jika kode yang dimasukkan salah, percobaan login akan gagal.
+
+## Perubahan Password User
+
+Di iDempiere, setiap user dapat mengubah password secara mandiri melalui menu **SIS Change Password**.
+
+Ikuti langkah berikut untuk mengubah password:
+
+1. Buka menu **SIS Change Password**.
+2. Input **password lama**.
+3. Input **password baru**.
+4. Konfirmasi **password baru**.
+
+![change](../change_pass.png "Perubahan Password") {#Figure345}
+
+5. Klik **OK**.
+
+Jika perubahan password berhasil, sistem menampilkan notifikasi sukses. Pastikan password lama yang diinput sudah benar — sistem otomatis memvalidasi password yang dimasukkan. Setelah berhasil, user dapat langsung menggunakan password baru untuk login ke sistem.

@@ -200,3 +200,29 @@ Ikuti langkah berikut untuk men-generate GL Journal Depreciation:
 5. Klik **OK**.
 
 Sistem otomatis memproses amortisasi pada masing-masing kontrak manajemen di periode yang telah dikonfigurasi
+
+## SIS Complete Order Document
+
+Fitur **SIS Complete Order Document** digunakan untuk meng-complete Purchase Order dan Sales Order dalam jumlah banyak sekaligus, sehingga user tidak perlu meng-complete setiap dokumen satu per satu.
+
+Ikuti langkah berikut untuk menjalankan proses Complete Order Document:
+
+1. Buka menu **SIS Complete Order Document**.
+2. Tentukan **Date Ordered**.
+3. Tentukan **Organisasi** _(opsional)_.
+4. Tentukan **Document Type** _(opsional)_.
+5. Tentukan **Business Partner** _(opsional)_.
+6. Pada field **Sales Transaction**:
+- Pilih **Yes** untuk memproses dokumen **Sales Order**.
+- Pilih **No** untuk memproses dokumen **Purchase Order**.
+7. Klik **OK**.
+
+Sistem otomatis meng-complete seluruh dokumen sesuai parameter yang telah ditentukan. Berikut contoh Purchase Order dan Sales Order yang ter-complete dari proses tersebut:
+
+![complete](../complete-po.png "Complete Purchase Order") {#Figure349}
+
+![complete](../po_complete.png "Purchase Order Yang Ter-Complete") {#Figure350}
+
+![complete](../complete_so.png "Complete Sales Order") {#Figure351}
+
+![complete](../so_complete.png "Sales Order Yang Ter-Complete") {#Figure352}
