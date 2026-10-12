@@ -199,7 +199,7 @@ Setelah Inventory Move Delivery selesai diproses, lakukan penerimaan secara manu
 3. Tentukan **Document Type**.
 4. Tentukan **Warehouse** asal dan **Warehouse** tujuan.
 5. Centang field **Receipt**.
-6. Input dokumen **Inventory Move Delivery** sebelumnya pada field **Movement Reference**.
+6. Input dokumen **Inventory Move Delivery** sebelumnya pada field **Movement Source/Target**.
 7. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
 8. Klik **Generated Movement Line**.
 9. Klik **OK**.
@@ -209,3 +209,20 @@ Sistem otomatis menyalin Move Line dari Inventory Move Delivery, dengan **Locato
 10. Verifikasi **produk**, **quantity**, serta **Locator** asal dan tujuan.
 11. Klik **Save**.
 12. Klik **Complete** pada dokumen.
+
+> **Catatan:** Jika penerimaan RDO dilakukan sebagian, sistem akan mengurangi Qty Delivered dengan jumlah yang telah diterima sebelumnya saat user melakukan penerimaan berikutnya.
+
+## Penerimaan dengan Mempertimbangkan Kapasitas Locator
+
+Setiap locator memiliki kapasitas untuk menampung product. User dapat mengatur kapasitas dan allowance (batas tambahan kapasitas) pada masing-masing locator melalui menu **SIS Subbrand Capacity** yang dijelaskan pada bab Routing.
+
+Konfigurasi kapasitas dan allowance membantu user mengontrol penerimaan barang agar tidak melebihi kapasitas locator.
+
+### Konfigurasi Check SubBrand Capacity
+
+Setelah menentukan kapasitas dan allowance, user perlu melakukan konfigurasi pada **Document Type Inventory Move Receipt** melalui field **Check SubBrand Capacity**.
+
+- **Check SubBrand Capacity = Yes** — Sistem memeriksa kapasitas locator tujuan sebelum memproses Inventory Move Receipt. Jika kapasitas masih mencukupi, sistem mengizinkan transaksi diproses. Jika kapasitas terlampaui, sistem menolak transaksi dan menampilkan error **Over Capacity**.
+- **Check SubBrand Capacity = No** — Sistem tidak memeriksa kapasitas locator tujuan saat memproses Inventory Move Receipt.
+
+Konfigurasi kapasitas ini hanya berlaku untuk product yang memiliki **Subbrand**. Product yang tidak menggunakan Subbrand tidak mengikuti pemeriksaan kapasitas berdasarkan konfigurasi tersebut.

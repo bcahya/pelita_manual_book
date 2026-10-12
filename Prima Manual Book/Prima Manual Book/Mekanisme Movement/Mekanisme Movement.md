@@ -314,33 +314,36 @@ Product yang memiliki BoM dapat terdiri dari beberapa komponen, seperti Product 
 
 ### Konfigurasi Move BOM Component
 
-Sebelum melakukan Inventory Move, user perlu mengaktifkan konfigurasi Move BOM Component pada Document Type Inventory Move.
+Sebelum melakukan Inventory Move, user perlu mengaktifkan konfigurasi Move FG BoM pada Document Type Inventory Move.
 
-Field Move BOM Component terdapat pada Document Base Type = Material Movement dan berfungsi untuk menentukan apakah sistem akan memindahkan komponen BoM saat user melakukan movement.
+Field Move FG BoM terdapat pada Document Base Type Material Movement dan berfungsi untuk menentukan apakah sistem akan memindahkan komponen BoM saat user melakukan movement.
 
-- Move BOM Component = Yes → Sistem memindahkan product jadi atau setengah jadi beserta komponen BoM yang memiliki Product Type Item.
-- Move BOM Component = No → Sistem hanya memindahkan product jadi atau setengah jadi. Komponen BoM tidak ikut dipindahkan.
+- Move FG BoM = Yes → Sistem memindahkan product jadi atau setengah jadi beserta komponen BoM yang memiliki Product Type Item.
+- Move FG BoM = No → Sistem hanya memindahkan product jadi atau setengah jadi. Komponen BoM tidak ikut dipindahkan.
 
 ### Proses Inventory Move dengan BoM
 
 Setelah konfigurasi **Move BOM Component** selesai, user dapat melakukan Inventory Move dengan langkah berikut:
 
 1. Buka menu **Inventory Move**.
-2. Pilih **Document Type** yang sudah dikonfigurasi dengan **Move BOM Component**.
+2. Pilih **Document Type** yang sudah dikonfigurasi dengan **Move FG BoM**.
 3. Tentukan **Warehouse From** dan **Warehouse To**.
 4. Klik **Save**.
-5. Pada field **Phantom Product**, pilih product jadi atau setengah jadi yang akan dipindahkan.
-6. Pada field **Phantom BOM**, pilih BoM yang akan digunakan.
-7. Pada field **Phantom Qty**, masukkan jumlah product yang akan dipindahkan.
+5. Masuk ke tab **Move Line Special**.
+6. Tentukan product yang akan diproses.
+7. Isi quantity product yang akan dipindahkan.
+8. Pilih **BoM** yang digunakan untuk product tersebut.
+9. Tentukan **UoM** yang digunakan untuk product tersebut.
 
-![move](../phantom.png "Penentuan Phantom") {#Figure326}
+![move](../move_line_spc.png "Penentuan Product dan BoM") {#Figure326}
 
-8. Klik **Save**.
-9. Klik **Document Action**.
-10. Pilih **Prepare**.
-11. Klik **OK**.
+10. Klik **Save**.
+11. Kembali ke **Header Inventory Move**.
+12. Klik **Document Action**.
+13. Pilih **Prepare**.
+14. Klik **OK**.
 
-![move](../move_line.png "Move Line Product BoM") {#Figure327}
+![move](../move_line_spc2.png "Move Line Product BoM") {#Figure327}
 
 Setelah user menjalankan **Prepare**, sistem akan membuat **Move Line** berdasarkan komponen pada BoM yang dipilih.
 

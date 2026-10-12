@@ -318,7 +318,9 @@ Setelah Manufacturing Order di-complete, sistem otomatis membuat dokumen **Produ
 
 ![non asi](../prod_non_asi.png "Production Non Batch/Lot") {#Figure208}
 
-## Document Type Movement POP
+## Inventory Move POP
+
+### Document Type Movement POP
 
 Saat Production Order Planning (POP) melibatkan banyak warehouse, tidak semua user memiliki hak akses ke seluruh warehouse. Umumnya, satu user hanya memiliki akses ke satu warehouse saat produk akan dipindahkan (_movement_). Untuk mengatasi hal ini, sistem menyediakan konfigurasi **Document Type Movement** per warehouse, sehingga setiap user tetap dapat mengakses dokumen movement sesuai aksesnya.
 
@@ -338,7 +340,7 @@ Berikut contoh implementasinya di Production Order Planning (POP):
 
 ![POP](../pop_move_cut.png "Inventory Move di POP") {#Figure208}
 
-## Konfigurasi Document Type Movement
+### Konfigurasi Document Type Transfer dan Terima POP
 
 Pada Production Order Planning, routing melibatkan perpindahan barang dari warehouse ke **intransit**, kemudian dari intransit ke gudang atau pabrik tujuan. Karena kedua proses ini menggunakan document type yang berbeda, lakukan konfigurasi berikut:
 
@@ -362,6 +364,27 @@ Berikut contoh implementasi konfigurasi ini di Production Order Planning (POP):
 
 ![wh](../mov_in.png "Movement Dari Intransit ke Warehouse Tujuan") {#Figure316}
 
+### Implementasi Inventory Move POP
+
+Sistem membuat **Inventory Move** secara otomatis saat user menjalankan **Generate MO**. Pada proses tersebut, sistem akan membuat **Manufacturing Order (MO)**, **Requisition** apabila stok tidak mencukupi, dan Inventory Move.
+
+Sistem membuat Inventory Move berdasarkan konfigurasi **Routing**, sehingga perpindahan barang dari satu locator ke locator lainnya mengikuti alur yang telah ditentukan. Document Type Inventory Move mengikuti konfigurasi pada warehouse dan Document Type Production Order Planning (POP) sesuai pengaturan yang telah dijelaskan sebelumnya.
+#### Langkah Memproses Inventory Move dari POP
+
+1. Buka menu **Inventory Move**.
+2. Cari Inventory Move berdasarkan nomor **POP** atau **MO (Manufacturing Order)**.
+3. Pilih dokumen Inventory Move yang akan diproses.
+4. Verifikasi informasi pada header Inventory Move.
+5. Pastikan informasi **POP**, **MO**, **Warehouse From**, dan **Warehouse To** sudah sesuai.
+6. Masuk ke tab **Move Line**.
+7. Verifikasi data pada Move Line. Field **Target Qty** menunjukkan quantity yang telah dihitung oleh sistem berdasarkan kebutuhan produksi.
+8. Klik **Save**.
+9. Klik **Complete** dokumen.
+#### Penerimaan Sebagian
+
+Jika user melakukan penerimaan sebagian dan Document Type dikonfigurasi **Auto Back Order**, sistem akan membuat Inventory Move baru untuk memenuhi sisa quantity yang belum diterima secara otomatis.
+
+Jika konfigurasi **Auto Create Back Order** tidak diaktifkan, user harus membuat Inventory Move untuk sisa quantity secara manual. Namun, Inventory Move yang dibuat secara manual tersebut tidak terhubung dengan POP maupun MO yang sedang diproses.
 ## Warehouse Production
 
 Dalam proses Production Order Planning, bahan mentah melewati beberapa tahap produksi sebelum menjadi barang jadi. Setiap tahap produksi menggunakan warehouse yang berbeda. Untuk menandai warehouse mana yang digunakan pada tahap produksi tertentu, lakukan konfigurasi pada field **Warehouse Production**.

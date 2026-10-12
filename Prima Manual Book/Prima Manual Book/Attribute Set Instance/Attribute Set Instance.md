@@ -74,6 +74,8 @@ Jika user perlu melakukan breakdown quantity pada attribute set lines, gunakan f
 
 ![Hasil Generate ASI](../Hasil_Generate_ASI.png "Hasil Generate ASI") {#Figure87}
 
+Jika ASI menggunakan format **Description**, sistem menggunakan **Document Number Material Receipt** sebagai basis nomor ASI. Saat status dokumen masih _Draft_, ASI terbentuk menggunakan Document Number saat itu. Ketika Material Receipt di-complete, sistem otomatis melakukan **regenerate ASI** dengan memperbarui Document Number sesuai sequence yang berlaku saat dokumen di-complete. Dengan demikian, nomor ASI selalu selaras dengan Document Number Material Receipt yang final.
+
 ## Attribute Set Instance (ASI) Manual
 
 Dalam kondisi tertentu, ASI pada product ditentukan secara manual — misalnya saat nomor batch/lot mengikuti batch dari supplier. Untuk mengakomodasi kondisi ini, user perlu menginput ASI secara manual di Receipt Line sebelum memproses MR/BPB.

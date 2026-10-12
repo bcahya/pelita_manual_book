@@ -12,17 +12,22 @@ Stock Opname — atau dikenal sebagai **Physical Inventory** di iDempiere — ad
 - **Cost Center** — Dimensi tambahan untuk financial report.
 4. Klik **Create Inventory Count List** — Sistem otomatis men-generate line dari daftar inventory di warehouse yang dipilih, dengan filter berikut:
 - Locator — Lokasi dari warehouse yang diproses.
+- Product — Product yang akan diproses.
 - Product Category — Kategori produk yang akan diproses.
+- Subbrand — Kategori Subbrand yang akan diproses
 - Inventory Qty — **Not 0** = hanya produk yang memiliki stok di locator
-5. Klik **SIS Generate Inventory Charge Amount** — Menghitung biaya charging jika terdapat selisih minus.
-6. Masuk ke **Inventory Count Line**, kemudian input field berikut:
-- **Locator** — Lokasi dari warehouse yang diproses.
-- **Product** — Produk yang akan diproses.
+- Set Inventory Count to — Pilih **On Hand Qty** untuk mengisi quantity berdasarkan stok yang tersedia pada locator, atau **Zero** untuk mengisi quantity dengan nilai nol tanpa memperhitungkan stok yang tersedia.
+
+![create](../create_so.png "Create Inventory Count Line") {#Figure349}
+
+5. Klik **ok** untuk membuat Inventory Count Line sesuai filter yang ditentukan.
+6. Klik **SIS Generate Inventory Charge Amount** — Menghitung biaya charging jika terdapat selisih minus.
+7. Masuk ke **Inventory Count Line**, kemudian input field berikut:
 - **Qty Count** — Jumlah quantity fisik hasil perhitungan aktual.
 - **Inventory Type** — Tipe charging untuk biaya yang dicatat.
 - **Attribute** — ASI pada produk _(jika ada)_.
 - **Charge** — Menentukan biaya yang akan dicatat atas selisih (plus atau minus).
-7. Klik **Complete** pada dokumen Physical Inventory.
+8. Klik **Complete** pada dokumen Physical Inventory.
 
 > **Catatan:** Jika ASI tidak diinput saat memproses Physical Inventory, sistem mengkalkulasi quantity berdasarkan artikel tanpa spesifikasi ke ASI atau batch/lot.
 
