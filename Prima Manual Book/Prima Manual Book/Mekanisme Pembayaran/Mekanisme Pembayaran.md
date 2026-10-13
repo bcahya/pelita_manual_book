@@ -233,6 +233,26 @@ Berikut contoh Payment dengan currency USD menggunakan overwrite rate, beserta B
 
 ![bank statement](../jurnal_bs.png "Jurnal Bank/Cash Statement") {#Figure172}
 
+## Bank/Cash Statement Manual
+
+Bank Statement Manual adalah transaksi pencatatan mutasi bank yang diinput secara manual oleh user. User mengisi **Statement Amount** sesuai nilai transaksi bank, kemudian menentukan **Charge** yang dikenakan atas transaksi tersebut.
+
+Di iDempiere, Charge digunakan untuk mencatat biaya atau pendapatan tambahan yang berkaitan dengan transaksi bank — misalnya biaya administrasi bank. Charge yang dipilih memengaruhi pencatatan akuntansi sesuai konfigurasi akun pada Charge. Ikuti langkah berikut untuk membuat Bank Statement Manual:
+
+1. Buka menu **Bank/Cash Statement**.
+2. Tentukan **Bank Account**.
+3. Tentukan **Document Type**.
+4. Masuk ke **Statement Line**.
+5. Tentukan **Statement Line Date**.
+6. Input **Statement Amount**.
+7. Tentukan **Charge**.
+
+![st](../statement_amount.png "Statement Line") {#Figure349}
+
+8. Klik **Save**.
+9. Klik **Complete** pada dokumen.
+
+Saat membuat Statement Line, user cukup menginput **Statement Amount**. Field lain seperti **Transaction Amount**, **Charge Amount**, dan **Interest Amount** tidak perlu diinput secara manual — saat Charge ditentukan, sistem otomatis mengisi **Charge Amount** sesuai Statement Amount yang diinput.
 ## Revaluasi Bank/Cash Statement Valas
 
 Pada transaksi Bank/Cash Statement yang menggunakan mata uang asing, nilai transaksi dalam mata uang dasar (misalnya IDR) dapat berubah akibat perbedaan kurs antara tanggal transaksi pembayaran dan tanggal penutupan periode. Oleh karena itu, lakukan proses **Revaluasi** di akhir periode akuntansi untuk menyesuaikan nilai saldo rekening bank sesuai kurs penutupan. Revaluasi ini hanya memengaruhi nilai dalam mata uang dasar — nilai dalam mata uang asal (misalnya USD) tetap tidak berubah.
