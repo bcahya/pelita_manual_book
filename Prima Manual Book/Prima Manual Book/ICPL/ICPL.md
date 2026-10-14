@@ -23,6 +23,8 @@ Saat user membuat ICPL Base maupun ICPL Reference, sistem dapat men-generate **P
 ![plv](../sch_plv.png "Konfigurasi Scheduler Auto Generate PLV") {#Figure270}
 
 6. Klik **Save**.
+7. Klik **Not Schedule**.
+8. Klik **Ok**.
 
 Scheduler mengotomasi eksekusi proses berdasarkan waktu atau interval yang dikonfigurasi. Saat Scheduler berjalan, tab **Log** akan diperbarui sesuai jadwal. Log eksekusi dipertahankan sesuai konfigurasi **Days to Keep Log** — setelah periode tersebut berakhir, log lama dibersihkan otomatis oleh sistem.
 ## Pengaturan ICPL Base
@@ -84,8 +86,8 @@ Ikuti langkah berikut untuk mengkonfigurasi perhitungan harga per kategori:
 5. Klik Save.
 6. Masuk ke tab Criteria.
 7. Input Product Category yang akan diproses.
-8. Pada field Calculate Type, tentukan metode perhitungan: Add (+), Subtract (-), Multiply ()*, atau Divide (/).
-9. Pada field Rate, tentukan rate untuk product category tersebut.
+8. Pada field Calculate Type, tentukan metode perhitungan: Add (+), Subtract (-), Multiply (*), atau Divide (/).
+9. Pada field Rate, tentukan rate untuk product category tersebut. Jika menggunakan metode Multiply dengan harga lebih besar 10%, input nilai Rate dengan 1.1.
 
 ![criteria](../category.png "Kriteria Produk") {#Figure135}
 
@@ -106,7 +108,7 @@ Ikuti langkah berikut untuk mengkonfigurasi ICPL Reference tanpa filter Product 
 6. Masuk ke tab **Criteria**.
 7. Kosongkan field **Product Category**.
 8. Pada field **Calculate Type**, tentukan metode perhitungan: _Add (+)_, _Subtract (-)_, _Multiply (_)*, atau _Divide (/)_.
-9. Pada field **Rate**, tentukan rate untuk produk tersebut.
+9. Pada field **Rate**, tentukan rate untuk produk tersebut. Jika menggunakan metode Multiply dengan harga lebih besar 10%, input nilai Rate dengan 1.1.
 
 ![criteria](../non_category.png "Kriteria Produk") {#Figure135}
 
@@ -138,7 +140,7 @@ Untuk memenuhi kebutuhan tersebut, lakukan konfigurasi ICPL Reference pada level
 7. Masuk ke tab **Criteria**.
 8. Input Product Category yang akan diproses.
 9. Pada field Calculate Type, tentukan metode perhitungan: Add (+), Subtract (-), Multiply ()*, atau Divide (/).
-10. Pada field Rate, tentukan rate untuk product category tersebut.
+10. Pada field Rate, tentukan rate untuk product category tersebut. Jika menggunakan metode Multiply dengan harga lebih besar 10%, input nilai Rate dengan 1.1.
 
 ![criteria](../category2.png "Kriteria Produk") {#Figure136}
 

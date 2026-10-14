@@ -92,3 +92,4 @@
 .include {Tools/Tools.md}
 .include {Security di iDempiere/Security di iDempiere.md}
 .include {Konfigurasi Document Type/Konfigurasi Document Type.md}
+.include {Konfigurasi Charge/Konfigurasi Charge.md}

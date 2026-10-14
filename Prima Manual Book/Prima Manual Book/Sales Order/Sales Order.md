@@ -163,6 +163,12 @@ AR Credit Memo yang terbentuk akan menggunakan **Document Type AR Credit Memo** 
 ![cn customer return](../cn_so.png "Credit Memo Customer Return") {#Figure298}
 
 ![jurnal credit memo](../jurnal_cn_so.png "Jurnal Credit Memo") {#Figure299}
+
+Pada menu **AR Credit Memo**, terdapat penambahan field **RMA** pada bagian header. Field ini menghubungkan AR Credit Memo dengan dokumen **Customer RMA** terkait.
+
+![ap cn](../rma_ar.png "Informasi RMA di AR Credit Memo"){#Figure354}
+
+Dengan adanya field **RMA**, user dapat mengetahui Customer RMA yang menjadi dasar transaksi AR Credit Memo, sehingga transaksi pengembalian barang dari customer dapat ditelusuri dengan lebih mudah.
 ## Informasi Customer Return di Sales Order
 
 Saat customer melakukan return produk berdasarkan Shipment yang berasal dari Sales Order, informasi return tersebut otomatis tercatat di **Order Line**. Field **Qty Return** pada Order Line terisi otomatis sesuai quantity produk yang di-return. Jika tidak ada return, nilai Qty Return akan tetap **0**.

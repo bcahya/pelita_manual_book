@@ -146,18 +146,35 @@ Saat dokumen Kontra Bon di-complete, sistem otomatis menyalin informasi **nomor
 3. Pilih **Bank Account** yang digunakan untuk pembayaran.
 4. Tentukan **Transaction Date**.
 5. Pilih **Business Partner** sebagai pihak yang melakukan atau menerima pembayaran.
-6. Klik tombol **Setting (⚙)**.
-7. Klik **Generate Allocate Kontra Bon**.
-8. Pilih **AP Invoice** yang akan diproses.
+6. Klik **Generate Allocate Kontra Bon**.
+7. Pilih **AP Invoice** yang akan diproses.
 
 ![pay](../payment_kontra.png "Payment Kontra Bon") {#Figure229}
 
-9. Klik **Complete**.
+8. Klik **Complete**.
 
 Status invoice yang diproses berubah menjadi **Paid** dan sistem membentuk alokasi atas invoice tersebut sebesar amount yang diproses. Berikut contoh jurnal yang terbentuk atas pembayaran invoice Kontra Bon:
 
 ![jurnal](../jurnal_pay.png "Jurnal Pembayaran") {#Figure230}
 
+![pay](../reverse_pay_kontra.png "Payment Kontra Bon Reverse") {#Figure354}
+
+Apabila payment sebelumnya telah dilakukan **reversal**, user dapat memproses kembali pembayaran AP Invoice atas kontra bon dengan langkah berikut:
+
+1. Buka menu **Payment and Receipt**.
+2. Tentukan **Document Type**.
+3. Pilih **Bank Account** yang digunakan untuk pembayaran.
+4. Tentukan **Transaction Date**.
+5. Pilih **Business Partner**.
+6. Klik **Generate Allocate Kontra Bon**.
+7. Pilih **AP Invoice** yang akan diproses kembali.
+
+![pay](../pay_kontra.png "Payment Kontra Bon Yang Sebelumnya Di-Reverse") {#Figure355}
+
+8. Klik **SIS Generate Allocate From Kontra Bon**.
+9. Klik **Complete**.
+
+Setelah proses selesai, sistem akan membuat payment baru untuk AP Invoice atas kontra bon yang sebelumnya telah direversal.
 ## Import Kontra Bon
 
 Proses import data Kontra Bon dapat dilakukan melalui menu **SIS Kontra Bon** menggunakan file berformat **CSV**. Terdapat dua pilihan metode import:

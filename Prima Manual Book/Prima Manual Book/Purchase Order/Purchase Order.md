@@ -415,6 +415,11 @@ Sistem tetap membuat **AP Credit Memo**, namun tidak melakukan allocation karena
 
 ![ap cn](../ap_cn_payfull.png "Allocation AP Credit Memo (Fully Paid)"){#Figure217}
 
+Pada **AP Credit Memo**, terdapat penambahan field **RMA** pada bagian header. Field ini menghubungkan AP Credit Memo dengan dokumen **Vendor RMA** terkait.
+
+![ap cn](../rma_ap.png "Informasi RMA di AP Credit Memo"){#Figure353}
+
+Dengan adanya field **RMA**, user dapat mengetahui Vendor RMA yang menjadi dasar transaksi AP Credit Memo, sehingga transaksi pengembalian barang kepada vendor dapat ditelusuri dengan lebih mudah.
 ## Informasi Product Return di Purchase Order
 
 Saat dilakukan Return to Vendor berdasarkan Material Receipt yang berasal dari Purchase Order, informasi return tersebut otomatis tercatat di **PO Line**. Field **Qty Return** pada PO Line terisi otomatis sesuai quantity produk yang di-return. Jika tidak ada return, nilai Qty Return akan tetap **0**.

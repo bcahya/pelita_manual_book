@@ -92,3 +92,35 @@ Konfigurasi auto Internal Use dilakukan di **master Locator Warehouse Subcon**. 
 Pada **Production Order Planning (POP)** yang menggunakan subcon, hasil produksi subcon diterima melalui **BPB/MR**. Penerimaan dapat dilakukan secara _parsial_. Saat MR di-complete, sistem otomatis menjalankan proses **Cost Adjustment** atas product subcon tersebut.
 
 ![auto iu](../auto_ca_cmt.png "Auto Cost Adjustment") {#Figure279}
+
+### Konfigurasi Cost Adjustment CMT
+
+Konfigurasi Cost Adjustment dilakukan di **Document Type Purchase Order** pada field **Document Type Adjustment SC** — user menentukan document type untuk Cost Adjustment yang akan ter-create saat MR di-complete.
+
+![auto ca](../ca_po.png "Konfigurasi Cost Adjustment di Document Type PO") {#Figure350}
+
+![auto ca](../ca_mr.png "Informasi Cost Adjustment di Material Receip") {#Figure351}
+
+Selain itu, lakukan konfigurasi **Scheduler** sebelum memulai transaksi. Sistem membuat Cost Adjustment secara otomatis sesuai jadwal Scheduler. Ikuti langkah berikut untuk mengkonfigurasi Scheduler:
+
+1. Buka menu **Scheduler**.
+2. Pada field **Name**, input **SIS Auto Create Adjustment MR SC**.
+3. Pada field **Process**, pilih **SIS Auto Create Adjustment MR SC**.
+4. Pada field **Schedule**, tentukan jadwal eksekusi (menit, jam, atau hari).
+5. Pada field **Supervisor**, pilih user yang bertanggung jawab.
+6. Pada field **Days to Keep Log**, tentukan berapa lama log hasil eksekusi akan disimpan oleh sistem.
+7. Klik **Save**.
+8. Klik **Not Schedule**.
+9. Klik **OK**.
+
+Setelah Scheduler berjalan dan Material Receipt/BPB di-complete, sistem otomatis membuat **Cost Adjustment** sesuai jadwal Scheduler. Nomor dokumen Cost Adjustment juga akan muncul di **Receipt Line** sebagai referensi.
+
+## Keterkaitan dengan POP Induk
+
+Pada proses **Production Order Planning (POP)** yang melibatkan Subcon, sistem akan membuat POP turunan saat Purchase Order atas hasil Subcon diproses. POP turunan ini digunakan untuk memproduksi product _semi-finished goods_ secara internal tanpa melibatkan pihak ketiga.
+
+Untuk menghubungkan POP turunan dengan POP induk, sistem menyediakan field **POP Parent** pada header Production Order Planning.
+
+![parent subcon](../pop_parent_subcon.png "Informasi POP Parent di POP Subcon") {#Figure356}
+
+Field **POP Parent** menunjukkan dokumen POP induk yang terkait dengan POP turunan, sehingga user dapat mengetahui keterkaitan antara proses produksi induk dan turunannya. Sistem mengisi field **POP Parent** secara otomatis, sehingga user tidak perlu menginputnya secara manual.

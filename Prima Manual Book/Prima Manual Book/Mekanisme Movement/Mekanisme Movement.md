@@ -402,9 +402,21 @@ User dapat menentukan ASI yang akan dipindahkan secara otomatis oleh sistem atau
 Jika user tidak menentukan ASI secara manual, sistem akan menentukan ASI berdasarkan metode pengambilan stock yang berlaku, yaitu FIFO atau LIFO. Sistem akan memilih ASI yang masih memiliki stock pada Locator asal sesuai dengan metode tersebut.
 #### Penentuan ASI Secara Manual
 
-User dapat menentukan ASI secara manual dengan mengaktifkan field **Manual ASI Selection** pada header Inventory Move. Jika Manual ASI Selection dicentang, user dapat menentukan ASI yang akan dipindahkan secara langsung.
+User dapat menentukan ASI secara manual melalui konfigurasi **Manual ASI Selection** pada **Document Type Material Movement**.
+
+![asi](../manual_asi_move.png "Konfigurasi ASI Manual di Document Type Movement") {#Figure352}
+
+Apabila **Manual ASI Selection** dicentang pada Document Type, sistem akan mengaktifkan field **Manual ASI Selection** secara otomatis pada header Inventory Move. Dengan demikian, user dapat menentukan ASI yang akan diproses. Sebaliknya, jika field tersebut tidak dicentang, sistem akan menentukan ASI secara otomatis berdasarkan metode pengambilan stok yang berlaku.
 
 ![asi](../manual_asi.png "Konfigurasi ASI Manual") {#Figure336}
+
+Selain itu, user perlu mengatur System Configurator **SIS_USING_DOCTYPE_MANUAL_ASI** untuk menentukan apakah konfigurasi Manual ASI Selection pada Document Type diterapkan secara otomatis pada header Inventory Move.
+
+- SIS_USING_DOCTYPE_MANUAL_ASI = Y — Sistem menyalin konfigurasi Manual ASI Selection dari Document Type ke header Inventory Move.
+- SIS_USING_DOCTYPE_MANUAL_ASI = N — Sistem tidak menyalin konfigurasi tersebut secara otomatis ke header Inventory Move.
+
+![sys](../sys_manual_asi.png "Konfigurasi Sistem") {#Figure353}
+
 
 > **Catatan:** Field **Manual ASI Selection** secara default bernilai **N** (tidak dicentang). Jika ASI akan diinput secara manual, pastikan field tersebut dicentang terlebih dahulu sebelum memulai transaksi.
 ### Langkah Menentukan ASI Secara Manual

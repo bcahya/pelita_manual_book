@@ -150,6 +150,12 @@ Ikuti langkah berikut untuk melakukan verifikasi depresiasi aset:
 ![Depresiasi](../depre_aset.png "Asset Depresiasi") {#Figure120}
 
 Depresiasi berjalan secara otomatis sesuai scheduler yang telah dikonfigurasi. 
+
+Jika jurnal depresiasi aset masih berstatus Draft, user perlu melakukan **Complete** secara manual. Namun, apabila akun akumulasi penyusutan aset dikonfigurasi sebagai **Document Controlled**, sistem akan menolak GL Journal manual yang menggunakan akun tersebut.
+
+Jika kondisi ini terjadi, user perlu menonaktifkan konfigurasi **Document Controlled** pada akun akumulasi penyusutan sebelum menyelesaikan GL Journal secara manual, sesuai prosedur dan kebijakan pengendalian akuntansi yang berlaku.
+
+Untuk menghindari kendala tersebut, kami menyarankan agar user mengaktifkan **Auto Complete Journal** sehingga sistem langsung menyelesaikan jurnal depresiasi saat proses depresiasi aset dijalankan.
 ## Report Asset
 
 Report Asset digunakan untuk memantau posisi aset tetap perusahaan, meliputi nilai perolehan, nilai buku berjalan, status penyusutan, dan lokasi fisik aset. Laporan ini umumnya digunakan untuk:
@@ -242,6 +248,27 @@ Setelah Invoice di-complete, informasi pada Invoice Line otomatis tersalin ke do
 6. Klik **Save**.
 
 Jika product dikonfigurasi menggunakan **Asset Type**, product juga wajib memiliki **Attribute Set**. Attribute Set digunakan untuk menentukan atribut identifikasi atau tracking aset — seperti Serial Number, Lot Number, atau atribut lainnya sesuai kebutuhan bisnis.
+
+## Konfigurasi Asset Type
+
+Saat membuat product aset baru, user perlu menentukan Asset Type sesuai kategori aset. Setiap jenis aset dapat memiliki masa manfaat dan akun akuntansi yang berbeda. Oleh karena itu, user perlu membuat master Asset Type sebagai dasar pengelolaan aset.
+
+### Langkah Konfigurasi Asset Type
+
+1. Buka menu **SIS Asset Type**.
+2. Isi **Search Key** dan **Name**.
+3. Tentukan **Document Type Asset** yang akan digunakan.
+4. Tentukan akun-akun pada header, mulai dari **Asset Account** hingga **Asset Cost Disposal Account**, sesuai kebutuhan pencatatan aset.
+5. Isi field **Number Of Entry** untuk menentukan masa manfaat aset sesuai konfigurasi sistem.
+6. Pada field **Auto Complete Asset**:
+- **Dicentang** — Sistem otomatis menyelesaikan dokumen aset saat invoice selesai diproses.
+- **Tidak dicentang** — Status dokumen aset tetap Draft setelah invoice selesai diproses.
+
+7. Pada field **Auto Complete Journal**:
+- **Dicentang** — Sistem otomatis menyelesaikan jurnal yang terbentuk saat proses depresiasi aset.
+- **Tidak dicentang** — Jurnal depresiasi tetap berstatus Draft dan perlu diselesaikan secara manual.
+
+8. Klik **Save**.
 
 ## Koreksi Masa Manfaat Asset
 
