@@ -70,6 +70,7 @@
 .include {AP dan AR Manual/AP dan AR Manual.md}
 .include {Posting Matched Invoice/Posting Matched Invoice.md}
 .include {Mekanisme Pembayaran/Mekanisme Pembayaran.md}
+.include {Bank Statement/Bank Statement.md}
 .include {Sales Order/Sales Order.md}
 .include {Auto Production POS Order/Auto Production POS Order.md}
 .include {GL Journal Generator/GL Journal Generator.md}
