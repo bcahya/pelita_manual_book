@@ -1,4 +1,4 @@
-.docname {20261001 Pelita Prima Manual Book}
+.docname {20261015 Pelita Prima Manual Book}
 .doctype {paged}
 .doclang {English}
 .theme {paperwhite} layout:{latex}
@@ -11,7 +11,7 @@
 .pagemargin {bottomright}
     .currentpage
 .pagemargin {bottomleft}
-    Versi 2026-10-01
+    Versi 2026-10-15
 .pageformat margin:{2cm}
 .pageformat bordertop:{1px} borderbottom:{1px}
 
@@ -90,7 +90,7 @@
 .include {Invoice Bayangan/Invoice Bayangan.md}
 .include {Petty Cash dan Kartu Fleet/Petty Cash dan Kartu Fleet.md}
 .include {Kontra Bon/Kontra Bon.md}
-.include {Tools/Tools.md}
-.include {Security di iDempiere/Security di iDempiere.md}
 .include {Konfigurasi Document Type/Konfigurasi Document Type.md}
 .include {Konfigurasi Charge/Konfigurasi Charge.md}
+.include {Tools/Tools.md}
+.include {Security di iDempiere/Security di iDempiere.md}
