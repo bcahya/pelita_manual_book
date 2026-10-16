@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/Material Management/Material Management.md",
+                "file": "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Material Management"
+              "title": "Mekanisme Movement"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "sis generate depreciation journal",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -196,14 +196,19 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
-    "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
+    "Prima Manual Book/Attribute Set Instance/Attribute Set Instance.md",
+    "Prima Manual Book/Material Receipt/Material Receipt.md",
+    "Prima Manual Book/Request Distribution Order/RDO.md",
+    "Prima Manual Book/Asset Management/Asset Management.md",
+    "Prima Manual Book/Asset Split/Asset Split.md",
+    "Prima Manual Book/Tools/Tools.md",
+    "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Prima Manual Book/Material Management/Material Management.md",
+    "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
     "Prima Manual Book/Import Data/Import Data.md",
     "Prima Manual Book/POP, BoM dan MO/Inventory Move POP.md",
     "Prima Manual Book/POP, BoM dan MO/Production Order Planning.md",
     "Prima Manual Book/main.md",
-    "Prima Manual Book/Asset Management/Asset Management.md",
-    "Prima Manual Book/Manajemen Penyusutan dan Disposal Asset/Manajemen Asset.md",
     "Prima Manual Book/ICPL/ICPL.md",
     "Prima Manual Book/Bank Statement/Bank Statement.md",
     "Prima Manual Book/last_rekon.png",
@@ -229,11 +234,6 @@
     "Prima Manual Book/Allowance Penerimaan atau Material Receipt/Allowance Penerimaan atau Material Receipt.md",
     "Prima Manual Book/Konfigurasi Charge",
     "Prima Manual Book/AP dan AR Manual/AP dan AR Manual.md",
-    "Prima Manual Book/AP dan AR Manual/Untitled.md",
-    "Prima Manual Book/Cost Adjustment/Cost Adjustment.md",
-    "Prima Manual Book/Security di iDempiere/Security di iDempiere.md",
-    "Prima Manual Book/Attribute Set Instance/Attribute Set Instance.md",
-    "Prima Manual Book/Material Receipt/Material Receipt.md",
     "Prima Manual Book/Tidak dipastikan 237084.crdownload",
     "Prima Manual Book/Konfigurasi Document Type",
     "Prima Manual Book/Product",

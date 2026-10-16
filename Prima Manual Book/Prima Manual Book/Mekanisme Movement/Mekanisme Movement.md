@@ -426,9 +426,8 @@ Selain itu, user perlu mengatur System Configurator **SIS_USING_DOCTYPE_MANUAL_A
 3. Tentukan product dan quantity yang akan dipindahkan.
 4. Masuk ke tab **Attributes**.
 5. Klik kolom **Attribute Set Instance**.
-6. Uncentang **New Record**.
-7. Klik **Selection Existing Record**.
-8. Pilih **ASI** yang akan dipindahkan.
+6. Klik **Selection Existing Record**.
+7. Pilih **ASI** yang akan dipindahkan.
 
 ![asi](../asi_m.png "Attribute Set Instance") {#Figure337}
 

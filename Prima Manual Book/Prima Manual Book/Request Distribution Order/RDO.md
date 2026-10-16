@@ -138,12 +138,13 @@ Ikuti langkah berikut untuk membuat Inventory Move Receipt secara manual yang me
 1. Buka menu **Inventory Move**.
 2. Klik **New**.
 3. Tentukan **Document Type**.
-4. Tentukan **Warehouse** asal dan **Warehouse** tujuan.
-5. Centang field **Receipt**.
-6. Input dokumen **Inventory Move Delivery** pada field **Movement Reference**.
-7. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
-8. Klik **Generated Movement Line**.
-9. Klik **OK**.
+4. Centang field **Receipt**.
+5. Input dokumen **Inventory Move Delivery** pada field **Movement Reference**.
+6. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
+7. Field **Warehouse From** terisi otomatis sesuai warehouse tujuan dari Inventory Move Delivery.
+8. Field **Warehouse To** terisi otomatis sesuai warehouse saat user login.
+9. Klik **Generated Movement Line**.
+10. Klik **OK**.
 
 Sistem otomatis menyalin Move Line dari Inventory Move Delivery, dengan **Locator tujuan** sesuai RDO Line.
 
@@ -197,12 +198,13 @@ Setelah Inventory Move Delivery selesai diproses, lakukan penerimaan secara manu
 1. Buka menu **Inventory Move**.
 2. Klik **New**.
 3. Tentukan **Document Type**.
-4. Tentukan **Warehouse** asal dan **Warehouse** tujuan.
-5. Centang field **Receipt**.
-6. Input dokumen **Inventory Move Delivery** sebelumnya pada field **Movement Source/Target**.
-7. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
-8. Klik **Generated Movement Line**.
-9. Klik **OK**.
+4. Centang field **Receipt**.
+5. Input dokumen **Inventory Move Delivery** sebelumnya pada field **Movement Source/Target**.
+6. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
+7. Field **Warehouse From** terisi otomatis sesuai warehouse tujuan dari Inventory Move Delivery.
+8. Field **Warehouse To** terisi otomatis sesuai warehouse saat user login.
+9. Klik **Generated Movement Line**.
+10. Klik **OK**.
 
 Sistem otomatis menyalin Move Line dari Inventory Move Delivery, dengan **Locator tujuan** sesuai RDO Line.
 
