@@ -135,6 +135,18 @@ User dapat melakukan reverse apabila flag **Can be Reverse** pada **Document Typ
 - **Can be Reverse = Yes** → Sistem mengizinkan user melakukan reverse invoice.
 - **Can be Reverse = No** → Sistem tidak mengizinkan user melakukan reverse invoice.
 
+### Ketentuan Invoice yang Dapat Di-reverse
+
+Invoice yang dapat di-reverse adalah **invoice yang dibuat secara manual**. Berikut kondisi yang **tidak diperbolehkan** untuk di-reverse:
+
+- Invoice yang berasal dari **Material Receipt** atau **Shipment**.
+- Invoice atas **Purchase Order** dengan product type _Expense_.
+- Invoice yang sudah diproses melalui **Kontra Bon**.
+- Invoice yang sudah dilakukan **Payment**.
+
+Jika user mencoba melakukan reverse pada invoice yang tidak memenuhi ketentuan di atas, sistem menampilkan pesan error bahwa invoice tidak dapat di-reverse.
+
+![reverse](../reverse_invoice.png "Reversal Invoice dari Purchase Order") {#Figure359}
 ### Reverse Correct
 
 **Reverse Correct** digunakan untuk membatalkan invoice sekaligus membuat invoice baru sebagai dokumen koreksi. Saat user menjalankan **Reverse Correct**, sistem akan:
@@ -175,3 +187,28 @@ Saat user menjalankan **Reverse Accrual**, sistem akan membuat transaksi pembali
 - Jurnal reverse membalik nilai transaksi invoice awal
  
 ![acc](../acc_inv2.png "Jurnal Pembalik") {#Figure321}
+
+## Multi Cost Center Pada AP dan AR Invoice Manual
+
+Pada AP dan AR Invoice yang dibuat secara manual, satu dokumen invoice dapat memuat beberapa **Cost Center** yang berbeda — setiap Invoice Line dapat memiliki Cost Center tersendiri.
+
+Untuk invoice dengan Cost Center yang berbeda di setiap line, **header invoice tidak perlu diisi Cost Center**. Cost Center ditentukan langsung di masing-masing **Invoice Line**.
+
+Ikuti langkah berikut untuk menentukan Cost Center di Invoice Line:
+
+1. Buka menu **Purchase Invoice and Credit/Debit Note**.
+2. Tentukan **Target Document Type**.
+3. Tentukan **Business Partner**.
+4. Tentukan **Price List** yang digunakan.
+5. Masuk ke **Invoice Line**.
+6. Tentukan **Charge** atau biaya yang akan diproses.
+7. Tentukan **Qty**.
+8. Tentukan **Price** untuk tagihan tersebut.
+9. Tentukan **Cost Center**.
+10. Klik **Save**.
+11. Ulangi langkah 6–10 untuk line dan charge lainnya.
+12. Klik **Complete**.
+
+Karena setiap Invoice Line memiliki Cost Center yang berbeda, jurnal atas masing-masing charge terbentuk sesuai dengan Cost Center pada line tersebut. Berikut contoh invoice dengan multi line dan multi Cost Center:
+ 
+![jurnal](../jurnal_inv_multi.png "Jurnal Invoice dengan Beberapa Cost Center") {#Figure360}
