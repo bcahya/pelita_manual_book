@@ -193,3 +193,61 @@ Informasi Cost Center ini juga otomatis tersalin ke:
 - **Sales Invoice**
 
 Dengan demikian, seluruh transaksi tersebut dapat ditelusuri dan dikelompokkan berdasarkan **Cost Center**.
+
+## POS Order dengan Price Actual
+
+Transaksi POS Order merupakan transaksi yang diproses di luar sistem iDempiere melalui aplikasi Sky, kemudian diinput ke dalam sistem. Pada transaksi ini, user menginput harga jual atau **Price Actual** sesuai dengan harga transaksi di aplikasi Sky.
+
+Harga actual dapat berbeda dengan harga pada Price List. Selisih antara kedua harga tersebut akan dihitung oleh sistem sebagai diskon. Saat ini, transaksi Sales Order tetap mewajibkan penggunaan Price List. Oleh karena itu, sebelum memproses POS Order, user harus memastikan bahwa produk dan warehouse yang digunakan sudah memiliki Price List (ICPL) yang sesuai. Jika Price List belum tersedia, transaksi Sales Order tidak dapat diproses.
+
+Pada saat Sales Invoice dibuat, nilai piutang usaha (Account Receivable) akan mengikuti harga actual. Sementara itu, selisih antara harga pada Price List dan harga actual akan dicatat sebagai diskon yang mengurangi pendapatan.
+
+### POS Order melalui Sales Order
+
+1. Buka menu **Sales Order**.
+2. Pilih transaksi POS Order yang akan diproses.
+3. Verifikasi Warehouse, Target Document Type, Price List, Tax, dan field lainnya.
+4. Buka tab **Order Line**.
+5. Verifikasi Product dan Qty.
+6. Tentukan **Price Entered** sesuai harga actual. Jika terdapat selisih dengan harga pada Price List, sistem akan menghitung selisih tersebut sebagai diskon secara otomatis.
+
+![pos](../pos_line.png "Penentuan Harga Actual") {#Figure364}
+
+7. Klik **Save**.
+8. Klik **Complete** untuk menyelesaikan dokumen Sales Order.
+
+### Proses Shipment (Customer)
+
+Setelah Sales Order dicomplete, sistem dapat membuat Shipment secara otomatis sesuai konfigurasi pada Document Type POS Order. Jika Shipment tidak terbentuk secara otomatis, lakukan langkah berikut:
+
+1. Buka menu **Sales Order**.
+2. Pilih transaksi POS Order yang telah diproses.
+3. Klik **Zoom Across** (ikon kaca pembesar dengan tanda plus).
+4. Pilih **Shipment (Customer)** untuk membuka dokumen Shipment terkait.
+
+![ship](../shipment.png "Shipment") {#Figure365}
+
+5. Buka tab **Shipment Line**.
+6. Verifikasi Product dan Qty.
+7. Klik **Complete** untuk menyelesaikan dokumen Shipment.
+
+### Proses Sales Invoice
+
+Setelah Shipment diproses, sistem dapat membuat Sales Invoice secara otomatis sesuai konfigurasi pada Document Type Shipment. Untuk memproses invoice, lakukan langkah berikut:
+
+1. Buka menu **Shipment (Customer)**.
+2. Pilih transaksi Shipment yang telah diproses.
+3. Klik **Zoom Across** (ikon kaca pembesar dengan tanda plus).
+4. Pilih **Sales Invoice and Credit/Debit Note** untuk membuka dokumen invoice terkait.
+
+![invoice](../sale_invoice.png "Sales Invoice") {#Figure366}
+
+5. Buka tab **Invoice Line**.
+6. Verifikasi Product, Qty, dan Price.
+7. Klik **Complete** untuk menyelesaikan dokumen Sales Invoice.
+
+Setelah Sales Invoice dicomplete, sistem akan membentuk jurnal akuntansi sesuai konfigurasi akun yang berlaku. Pada transaksi POS Order dengan perbedaan antara Price Actual dan Price List, nilai piutang usaha mengikuti harga actual, sedangkan selisih harga dicatat sebagai diskon yang mengurangi pendapatan.
+
+Berikut contoh jurnal Sales Invoice apabila terdapat selisih antara Price Actual dan Price List yang dihitung sebagai diskon:
+
+![sales](../jurnal_sales_invoice.png "Jurnal Sales Invoice") {#Figure367}

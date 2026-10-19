@@ -215,7 +215,13 @@ Ikuti langkah berikut untuk menjalankan proses Complete Order Document:
 6. Pada field **Sales Transaction**:
 - Pilih **Yes** untuk memproses dokumen **Sales Order**.
 - Pilih **No** untuk memproses dokumen **Purchase Order**.
-7. Klik **OK**.
+
+7. Pada field **Import**:
+- Pilih **Yes** jika PO yang akan di-complete adalah hasil **import PO Budget**.
+- Pilih **No** jika PO yang akan di-complete bukan dari hasil import.
+
+8. Tentukan **user** yang membuat PO pada field **Created By**.
+9. Klik **OK**.
 
 Sistem otomatis meng-complete seluruh dokumen sesuai parameter yang telah ditentukan. Berikut contoh Purchase Order dan Sales Order yang ter-complete dari proses tersebut:
 

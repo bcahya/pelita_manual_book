@@ -437,6 +437,26 @@ Selain itu, user perlu mengatur System Configurator **SIS_USING_DOCTYPE_MANUAL_A
 
 Setelah Inventory Move selesai diproses, sistem akan mengurangi stock ASI pada Locator asal dan menambahkan stock ASI yang sama pada Locator tujuan.
 
+### Movement Receipt dengan Product ASI
+
+Inventory Move di sistem dapat dilakukan secara **manual** maupun melalui **RDO**. Proses Inventory Move juga dapat berjalan secara **direct (langsung)** atau melibatkan **intransit**. Untuk Inventory Move yang melibatkan intransit, terdapat dua proses movement — **Inventory Move Delivery** dan **Inventory Move Receipt**.
+
+Saat melakukan movement untuk produk yang memiliki ASI, user dapat memilih dua cara penentuan ASI:
+
+- **Manual** — ASI ditentukan sendiri oleh user.
+- **Otomatis** — ASI ditentukan oleh sistem berdasarkan mekanisme FIFO atau LIFO.
+
+Jika ASI ditentukan secara manual di **Inventory Move Delivery**, ASI atas produk yang diproses pada Delivery dan Receipt akan **selalu sama** karena berada dalam satu rangkaian proses. ASI pada Inventory Move Delivery otomatis tersalin ke **Inventory Move Receipt** — meskipun Document Type Receipt tidak dikonfigurasi menggunakan ASI manual — karena ASI mengikuti ASI yang telah ditentukan di Inventory Move Delivery.
+
+Berikut contoh implementasi ASI di Delivery dan Receipt:
+
+**Inventory Move Delivery**
+
+![move](../move_deliv.png "ASI pada Inventory Move Delivery") {#Figure361}
+
+**Inventory Move Receipt**
+
+![move](../move_receipt.png "ASI pada Inventory Move Receipt") {#Figure362}
 ## Informasi Cost Center Pada Movement
 
 Setiap warehouse memiliki **Cost Center** tersendiri. Saat dilakukan Movement, persediaan di warehouse asal berkurang dan persediaan di warehouse tujuan bertambah.

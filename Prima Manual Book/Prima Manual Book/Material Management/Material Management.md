@@ -104,12 +104,6 @@ Dengan mekanisme ini, user tidak perlu mengkonfigurasi Auto Internal Use satu pe
 ## Internal Use Product dengan BoM
 
 Produk Semi Finished Goods yang dipindahkan ke outlet dicatat penggunaannya melalui **Internal Use (Inventory Decrease/Increase)**. Produk tersebut diproduksi oleh outlet, dan setelah selesai diproduksi user melakukan Internal Use untuk produk tersebut.
-
-Sebelum melakukan Internal Use, pastikan konfigurasi berikut sudah dilakukan pada master product komponen:
-
-- Centang field **Auto Internal Use** pada master product yang akan di-Internal Use.
-- Tentukan **Charge Internal Use** yang akan digunakan saat Internal Use dijalankan.
-
 ### Konfigurasi Document Type Internal Use
 
 Sebelum melakukan Internal Use, lakukan konfigurasi pada **Document Type Internal Use**. Ikuti langkah berikut:
@@ -120,8 +114,11 @@ Sebelum melakukan Internal Use, lakukan konfigurasi pada **Document Type Interna
 4. Pada field **Document Base Type**, pilih **Material Physical Inventory**.
 5. Pada field **Inv Sub Type**, pilih **Internal Use Inventory**.
 6. Centang field **Inventory FG BOM**.
-7. Klik **Save**.
+7. Tentukan **Charge** pada field **Adjustment Charge**.
 
+![iu](../iu_bom.png "Konfigurasi Document Type Internal Use BoM") {#Figure363}
+
+8. Klik **Save**.
 ### Langkah Internal Use Product Finished Good dengan BoM
 
 Setelah Document Type dikonfigurasi, lakukan Internal Use dengan langkah berikut:
@@ -138,4 +135,8 @@ Setelah Document Type dikonfigurasi, lakukan Internal Use dengan langkah berikut
 10. Kembali ke **header**.
 11. Klik **Action Prepare**.
 
-Setelah Prepare dijalankan, sistem otomatis membuat **Internal Use Line** berdasarkan komponen pada BoM yang dipilih. Quantity Internal Use terisi otomatis sesuai quantity yang diinput di Internal Use Special dikalkulasi dengan quantity di BoM. Charge juga terisi otomatis sesuai konfigurasi Charge pada master product.
+![iu](../iu_line.png "Internal Use Line atas Komponen Product BoM") {#Figure364}
+
+Setelah Prepare dijalankan, sistem otomatis membuat **Internal Use Line** berdasarkan komponen pada BoM yang dipilih. Quantity Internal Use terisi otomatis sesuai quantity yang diinput di Internal Use Special dikalkulasi dengan quantity di BoM. Charge juga terisi otomatis sesuai konfigurasi Charge pada document type Internal Use.
+
+> **Catatan:** Tab **Internal Use Special** hanya muncul jika field **Inventory FG BOM** pada Document Type diset **Yes**. Jika **Inventory FG BOM = False**, tab tersebut tidak muncul — yang berarti Internal Use dilakukan langsung pada product itu sendiri, bukan pada komponen-komponennya.
