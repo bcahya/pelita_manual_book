@@ -1004,3 +1004,37 @@ Ikuti langkah berikut untuk mengakses Report Export Currenct Stock Qty On Hand:
 Berikut contoh Report Export Currenct Stock Qty On Hand:
 
 ![on hand](../stock_oh.png "Report Current Stock Qty On Hand") {#Figure342}
+
+## Print Out Stock Opname
+
+Ikuti langkah berikut untuk mengakses Report Print Out Stock Opname:
+
+1. Buka menu **Physical Inventory**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Document Physical Inventory**.
+4. Pada Process Detail Report, pilih **Rekap Opname** 
+5. Klik **OK**.
+
+Berikut contoh Print Out Stock Opname:
+
+![so](../rekap_opname.png "Print Out Stock Opname") {#Figure365}
+
+## Print Out RDO
+
+Ikuti langkah berikut untuk mengakses Report Print Out RDO:
+
+1. Buka menu **SIS RDO**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Document RDO**.
+4. Pada Process Detail Report, pilih **Request Distribution Order FG SCI atau Request Distribution Order FG PPG** 
+5. Klik **OK**.
+
+Berikut contoh Print Out RDO:
+
+**Request Distribution Order FG SCI**
+
+![rdo](../rdo_sci.png "Print Out RDO") {#Figure366}
+
+**Request Distribution Order FG PPG**
+
+![rdo](../rdo_ppg.png "Print Out RDO") {#Figure367}

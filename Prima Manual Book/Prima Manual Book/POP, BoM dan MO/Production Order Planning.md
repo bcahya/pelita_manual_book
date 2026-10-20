@@ -292,3 +292,21 @@ Berikut ketentuan pengisian rate secara otomatis:
 
 - **Jika tanggal transaksi berada dalam rentang Valid From dan Valid To** pada Currency Rate — sistem otomatis mengisi field Rate sesuai Currency Rate yang berlaku.
 - **Jika tidak ada Currency Rate yang berlaku** pada tanggal transaksi — sistem otomatis mengisi Rate dengan nilai **1**.
+
+## Validasi POP
+
+Setelah seluruh proses produksi diselesaikan, user dapat meng-complete dokumen **POP**. Terdapat dua mekanisme complete POP yang dapat dikonfigurasi di sistem melalui parameter **SIS_DISABLE_CHECK_INVENTORY_MOVE_WHILE_COMPLETE_POP**:
+
+**Jika SIS_DISABLE_CHECK_INVENTORY_MOVE_WHILE_COMPLETE_POP = Y**
+
+![pop](../pop2.png "Konfigurasi Sistem") {#Figure367}
+
+POP dapat di-complete meskipun masih terdapat Inventory Move _outstanding_ yang belum di-complete. Namun, Inventory Move yang tidak diproses tersebut harus di-_void_ terlebih dahulu sebelum POP dapat di-complete.
+
+**Jika SIS_DISABLE_CHECK_INVENTORY_MOVE_WHILE_COMPLETE_POP = N**
+
+![pop](../pop1.png "Konfigurasi Sistem") {#Figure368}
+
+POP hanya dapat di-complete jika **seluruh** Inventory Move yang ter-create dari Generate MO sudah berstatus _Complete_ — termasuk perpindahan produk jadi ke gudang induk atau hingga routing berakhir.
+
+Sesuaikan konfigurasi ini dengan kebutuhan operasional perusahaan sebelum memproses POP
