@@ -29,8 +29,9 @@ Karena proses Delivery dan Receipt saling terhubung, lakukan konfigurasi dua **D
 4. Pada field **Document Base Type**, pilih **Material Movement**.
 5. Pada field **Internal Use Doc Type**, tentukan dokumen Internal Use yang digunakan.
 6. Centang field **Auto Create Back Order**.
-7. Apabila proses 
-8. Klik **Save**.
+7. Centang field **Receipt**.
+8. Apabila proses 
+9. Klik **Save**.
 ### Document Type Movement Pengiriman (Delivery)
 
 1. Buka menu **Document Type**.

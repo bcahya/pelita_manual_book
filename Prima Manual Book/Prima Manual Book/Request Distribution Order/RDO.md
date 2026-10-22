@@ -25,14 +25,13 @@ Sebelum proses RDO dijalankan, pastikan konfigurasi berikut sudah diselesaikan:
 
 Pada konfigurasi Document Type RDO, terdapat beberapa field utama yang wajib diisi:
 
-| Field                        | Keterangan                                                         |
-| ---------------------------- | ------------------------------------------------------------------ |
-| Document type delivery       | Digunakan untuk mencatat barang keluar dari warehouse asal         |
-| Document type receipt        | Digunakan untuk mencatat penerimaan barang di warehouse tujuan     |
-| Document type pembatalan RDO | Document type untuk mencatat pembatalan transaksi RDO              |
-| Warehouse intransit          | Warehouse transit selama proses distribusi                         |
-| Locator Intransit            | Lokasi intransit penerimaan barang                                 |
-| Product Access               | **Wajib dicentang** agar filter produk berjalan sesuai konfigurasi |
+| Field                        | Keterangan                                                                                                                                                                                                                                                       |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Document type delivery       | Digunakan untuk mencatat barang keluar dari warehouse asal                                                                                                                                                                                                       |
+| Document type receipt        | Digunakan untuk mencatat penerimaan barang di warehouse tujuan                                                                                                                                                                                                   |
+| Document type pembatalan RDO | Document type untuk mencatat pembatalan transaksi RDO                                                                                                                                                                                                            |
+| Product Access               | Apabila **Di-Centang** maka transaksi akan difilterberdasarkan produk sesuai konfigurasi                                                                                                                                                                         |
+| Check SubBrand Capacity      | Apabila **Di-Centang**, sistem akan memeriksa kapasitas locator sebelum melakukan complete RDO. Jika kapasitas masih mencukupi, sistem mengizinkan transaksi diproses. Jika kapasitas terlampaui, sistem menolak transaksi dan menampilkan error **Over Capacity |
 "Konfigurasi RDO"{#Tabel4}
 ## Alur Proses Request Distribution Order di Sistem
 
@@ -61,7 +60,7 @@ Pada konfigurasi Document Type RDO, terdapat beberapa field utama yang wajib dii
 Setelah dokumen di-complete, sistem akan otomatis membuat dokumen:
 
 - Inventory Move Delivery
-- Inventory Move Receipt
+- Inventory Move Receipt, sesuai konfigurasi di document type.
 
 Kedua dokumen tersebut akan terbentuk dalam status **Draft** dan perlu diproses lebih lanjut sesuai alur operasional.
 ## Back Order Pada RDO
@@ -114,7 +113,7 @@ Ikuti langkah berikut untuk memproses RDO dengan multi warehouse tujuan:
 9. Ulangi langkah 7–8 untuk produk lainnya.
 10. Klik **Complete**.
 
-Saat RDO di-complete, sistem otomatis membuat dokumen **Inventory Move Delivery** dan **Inventory Move Receipt**. 
+Saat RDO di-complete, sistem otomatis membuat dokumen **Inventory Move Delivery** dan **Inventory Move Receipt** (sesuai konfigurasi di document type). 
 
 ![deliv](../deli_rdo.png "Inventory Move Delivery") {#Figure307}
 
@@ -138,13 +137,12 @@ Ikuti langkah berikut untuk membuat Inventory Move Receipt secara manual yang me
 1. Buka menu **Inventory Move**.
 2. Klik **New**.
 3. Tentukan **Document Type**.
-4. Centang field **Receipt**.
-5. Input dokumen **Inventory Move Delivery** pada field **Movement Reference**.
-6. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
-7. Field **Warehouse From** terisi otomatis sesuai warehouse tujuan dari Inventory Move Delivery.
-8. Field **Warehouse To** terisi otomatis sesuai warehouse saat user login.
-9. Klik **Generated Movement Line**.
-10. Klik **OK**.
+4. Input dokumen **Inventory Move Delivery** pada field **Movement Reference**.
+5. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
+6. Field **Warehouse From** terisi otomatis sesuai warehouse tujuan dari Inventory Move Delivery.
+7. Field **Warehouse To** terisi otomatis sesuai warehouse saat user login.
+8. Klik **Generated Movement Line**.
+9. Klik **OK**.
 
 Sistem otomatis menyalin Move Line dari Inventory Move Delivery, dengan **Locator tujuan** sesuai RDO Line.
 
@@ -198,13 +196,12 @@ Setelah Inventory Move Delivery selesai diproses, lakukan penerimaan secara manu
 1. Buka menu **Inventory Move**.
 2. Klik **New**.
 3. Tentukan **Document Type**.
-4. Centang field **Receipt**.
-5. Input dokumen **Inventory Move Delivery** sebelumnya pada field **Movement Source/Target**.
-6. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
-7. Field **Warehouse From** terisi otomatis sesuai warehouse tujuan dari Inventory Move Delivery.
-8. Field **Warehouse To** terisi otomatis sesuai warehouse saat user login.
-9. Klik **Generated Movement Line**.
-10. Klik **OK**.
+4. Input dokumen **Inventory Move Delivery** sebelumnya pada field **Movement Source/Target**.
+5. Informasi RDO otomatis tersalin ke Inventory Move Receipt.
+6. Field **Warehouse From** terisi otomatis sesuai warehouse tujuan dari Inventory Move Delivery.
+7. Field **Warehouse To** terisi otomatis sesuai warehouse saat user login.
+8. Klik **Generated Movement Line**.
+9. Klik **OK**.
 
 Sistem otomatis menyalin Move Line dari Inventory Move Delivery, dengan **Locator tujuan** sesuai RDO Line.
 

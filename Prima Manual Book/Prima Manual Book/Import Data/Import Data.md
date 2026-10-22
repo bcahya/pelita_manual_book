@@ -67,9 +67,21 @@ Langkah Import File MT940:
 
 ## Import Data PO Kecil
 
-Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi dan tahun bulan transaksi. Berikut contoh format file yang digunakan untuk import data PO Kecil.
+Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi, tahun bulan transaksi, username. Berikut contoh format file yang digunakan untuk import data PO Kecil.
 
-   ![Format PO](../import_po_kecil.png "Format PO Kecil") {#Figure90}
+   ![Format PO](../po_kecil_up.png "Format PO Kecil") {#Figure90}
+
+**Ketentuan data yang diinput di file:**
+
+- **Warehouse** — Warehouse tujuan, diisi dengan _Value (Search Key)_ warehouse.
+- **Document Type** — Diisi dengan _Name_ document type.
+- **Product** — Diisi dengan _Value (Search Key)_ product.
+- **Harga** — Diisi dengan _Price Actual_. Jika menggunakan UoM Conversion, Price Actual dinyatakan dalam satuan konversi.
+- **Business Partner** — Diisi dengan _Value (Search Key)_ Business Partner.
+- **Tax** — Diisi dengan _Name_ tax.
+- **UoM** — Diisi dengan _UoM Code_.
+
+UoM yang digunakan adalah **UoM Conversion** di level product yang memiliki flag **Purchasing**. Oleh karena itu, sebelum melakukan import, pastikan UoM Conversion sudah dicentang flag **Purchasing**. Jika UoM yang digunakan tidak memiliki flag tersebut, proses import tidak dapat dijalankan.
 
 Selain itu, lakukan konfigurasi **Price List** dan **Payment Term** yang akan digunakan sebagai acuan. Konfigurasi ini dilakukan di level **server**. Berikut contoh setup Price List dan Payment Term di server.
 
@@ -80,7 +92,8 @@ Sistem menentukan Price List dan Payment Term dengan ketentuan berikut:
 - Jika **Business Partner belum memiliki** konfigurasi Price List dan Payment Term, sistem menggunakan Price List dan Payment Term yang dikonfigurasi di server.
 - Jika **Business Partner sudah memiliki** konfigurasi Price List dan Payment Term, sistem mengambil data dari master Business Partner tersebut.
 
-Berikut langkah Import File PO Kecil di FileZilla:
+### Langkah Import File PO Kecil di FileZilla
+
 1. Siapkan file PO Kecil dalam format csv
 2. Import melalui FileZilla
   - Navigasi ke /home/dev-idempiere/po_import → Import PO Kecil
@@ -88,11 +101,33 @@ Berikut langkah Import File PO Kecil di FileZilla:
 
 4. Jika import berhasil, file otomatis berpindah ke folder **done**
 
-![Done Import PO](../done_po_kecil.png "Done Import PO") {#Figure89}
+![Done Import PO](../done_po.png "Done Import PO") {#Figure89}
 
 5. Sistem iDempiere akan membuat dokumen PO dengan status Draft atau In Progress, yang selanjutnya dapat di-confirm sesuai kebutuhan operasional.
 
-![Purchase Order](../po_kecil_dr.png "Hasil Import Purchase Order") {#Figure90}
+![Purchase Order](../po_kecil.png "Hasil Import Purchase Order") {#Figure90}
+
+Data pada PO hasil import mengikuti data yang ada di file — mulai dari Document Type hingga Price List.
+
+**Flag Import**
+
+Purchase Order hasil import memiliki perbedaan pada field **Import**:
+
+- **PO yang dibuat langsung di iDempiere** — Flag Import tidak tercentang.
+- **PO hasil import** — Flag Import tercentang otomatis. User tidak dapat mencentang flag ini secara manual.
+
+**Date Ordered dan Date Promised**
+
+- **Date Promised** — Diambil dari tanggal yang tercantum di file template.
+- **Date Ordered** — Diset sesuai tanggal user melakukan import.
+
+Karena kedua tanggal bersumber berbeda, **Date Ordered** dan **Date Promised** dapat memiliki nilai yang berbeda.
+
+**Identitas User Import**
+
+Nama file import memuat **User ID** sebagai identitas user yang melakukan import. Dengan demikian, setiap PO yang ter-create dapat ditelusuri siapa yang mengimportnya.
+
+### Gagal Import PO Kecil karena Template Tidak Sesuai
 
 Jika file PO Kecil yang diimport tidak sesuai format, sistem tidak akan memproses file tersebut ke iDempiere. Contoh ketidaksesuaian format yang umum terjadi antara lain penggunaan delimiter **;** atau penggunaan **Product ID** pada nama file yang seharusnya menggunakan **Product Value**.
 

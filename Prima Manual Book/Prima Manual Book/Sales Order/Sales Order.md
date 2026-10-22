@@ -251,3 +251,26 @@ Setelah Sales Invoice dicomplete, sistem akan membentuk jurnal akuntansi sesuai 
 Berikut contoh jurnal Sales Invoice apabila terdapat selisih antara Price Actual dan Price List yang dihitung sebagai diskon:
 
 ![sales](../jurnal_sales_invoice.png "Jurnal Sales Invoice") {#Figure367}
+
+## POS Order Untuk ICPL Inter Company
+
+Pada transaksi POS Order, **Price Actual** biasanya mengikuti harga aktual di showroom atau outlet, yang dapat berbeda dengan **Price List**. Ketentuan ini berlaku untuk Sales Order **offline** dan **online**.
+
+Untuk Sales Order **intercompany**, perlakuan harga berbeda. Price List yang digunakan adalah Price List intercompany, di mana harga yang ditetapkan user menjadi harga aktual sekaligus Price List, sehingga **tidak ada selisih** antara Price Actual dan Price List. Perbedaan perlakuan ini dikonfigurasi di level **Document Type Sales Order** melalui flag **Force Price List**:
+
+- **Force Price List = Y** — Price Actual otomatis sama dengan Price List.
+- **Force Price List = N** — Price Actual dapat berbeda dengan Price List.
+
+### Implementasi Sales Order dengan Force Price List
+
+1. Buka menu **Sales Order**.
+2. Pilih transaksi **POS Order** yang akan diproses.
+3. Tentukan **Warehouse**, **Target Document Type**, **Tax**, dan field lainnya.
+4. Buka tab **Order Line**.
+5. Tentukan **produk** yang akan diproses.
+6. Tentukan **quantity** produk.
+7. Klik **Save**.
+
+Saat dokumen disimpan, **Price Entered**, **Unit Price**, dan **List Price** terisi otomatis sesuai Price List.
+
+![pc](../price_list_ic.png "Price Actual dengan ICPL Intercompany") {#Figure368}

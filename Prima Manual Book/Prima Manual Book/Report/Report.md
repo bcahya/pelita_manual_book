@@ -1038,3 +1038,18 @@ Berikut contoh Print Out RDO:
 **Request Distribution Order FG PPG**
 
 ![rdo](../rdo_ppg.png "Print Out RDO") {#Figure367}
+
+## Report Listing Asset Depreciation
+
+Ikuti langkah berikut untuk mengakses Report Listing Asset Depreciation:
+
+1. Buka menu **SIS Report Listing Asset Depreciation**.
+2. Tentukan **Organisasi**.
+3. Tentukan **Periode**.
+4. Tentukan **Warehouse** — Opsional
+5. Centang Show All Data
+6. Klik **OK**.
+
+Berikut contoh Report Listing Asset Depreciation:
+
+![list](../listing_aset_depre.png "Listing Asset Depreciation") {#Figure367}

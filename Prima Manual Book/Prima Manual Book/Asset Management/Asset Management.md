@@ -295,3 +295,50 @@ Koreksi ini berlaku untuk aset yang:
 5. Klik **OK**.
 
 Setelah proses selesai, masa manfaat pada aset ter-update dan **Depreciation Amount** dikalkulasi ulang sesuai masa manfaat yang baru.
+
+## Start Depreciation
+
+Asset dapat diproses depresiasinya apabila flag **Start Depreciation** pada SIS Asset sudah tercentang. Jika flag tersebut belum tercentang, asset tidak dapat didepresiasi meskipun dokumen asset sudah berstatus Complete.
+
+Proses Start Depreciation dapat dilakukan secara manual oleh user atau secara otomatis oleh sistem melalui dua mekanisme berikut.
+
+### Start Depreciation secara Manual
+
+User dapat memulai depresiasi secara manual melalui SIS Asset dengan langkah berikut:
+
+1. Buka menu **SIS Asset**.
+2. Pilih asset yang akan mulai didepresiasi.
+3. Klik button **Start Depreciation**.
+
+Setelah button diklik, flag Start Depreciation akan tercentang dan asset dapat diproses depresiasinya.
+
+### Start Depreciation secara Otomatis
+
+Sistem dapat menjalankan Start Depreciation secara otomatis melalui dua mekanisme berikut.
+#### Melalui Inventory Move
+
+Start Depreciation akan tercentang secara otomatis ketika asset dipindahkan ke locator atau outlet tujuan yang sudah diatur untuk melakukan depresiasi dan memiliki **Start Operational Date**.
+
+Kondisi yang harus dipenuhi:
+
+- Outlet tujuan sudah diflag untuk depresiasi.
+- Start Operational Date pada outlet tujuan sudah ditentukan.
+- Tanggal Inventory Move lebih besar dari atau sama dengan Start Operational Date.
+
+Jika seluruh kondisi tersebut terpenuhi, saat dokumen Inventory Move di-complete, sistem akan otomatis mencentang Start Depreciation dan melakukan Complete pada dokumen asset.
+
+#### Melalui SIS Generate Depreciation Journal
+
+Jika dokumen asset sudah berstatus complete tetapi depresiasi belum dimulai, user dapat menjalankan proses Start Depreciation secara otomatis melalui menu SIS Generate Depreciation Journal. Langkah-langkahnya sebagai berikut:
+
+1. Buka menu **SIS Generate Depreciation Journal**.
+2. Tentukan **Organization**.
+3. Tentukan **Period** atau **Depreciation Date**.
+4. Tentukan **Document Type** jika diperlukan (opsional).
+5. Klik **OK** untuk menjalankan proses.
+
+Sistem akan memproses Start Depreciation untuk asset yang memenuhi kondisi pada periode tersebut dan mencentang flag Start Depreciation secara otomatis. Jika depresiasi asset baru dimulai pada periode yang diproses, sistem juga akan membuat jurnal depresiasi untuk asset tersebut pada periode yang sama.
+
+Dengan mekanisme ini, user dapat menjalankan Start Depreciation untuk banyak asset sekaligus tanpa harus memprosesnya satu per satu secara manual. 
+
+> **Catatan:** Start Depreciation dapat dieksekusi apabila tanggal **Period End Date** pada periode yang diproses lebih besar dari **Start Operational Date**. Jika Period End Date lebih kecil dari Start Operational Date, sistem tidak akan menjalankan Start Depreciation untuk asset tersebut.

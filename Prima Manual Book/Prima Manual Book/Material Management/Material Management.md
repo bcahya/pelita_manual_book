@@ -10,11 +10,12 @@ Stock Opname — atau dikenal sebagai **Physical Inventory** di iDempiere — ad
 - **Warehouse** — Lokasi inventory yang akan diproses.
 - **Movement Date** — Tanggal dilakukan perhitungan stok. 
 - **Cost Center** — Dimensi tambahan untuk financial report.
+- Subbrand - Opsional
+
 4. Klik **Create Inventory Count List** — Sistem otomatis men-generate line dari daftar inventory di warehouse yang dipilih, dengan filter berikut:
 - Locator — Lokasi dari warehouse yang diproses.
 - Product — Product yang akan diproses.
 - Product Category — Kategori produk yang akan diproses.
-- Subbrand — Kategori Subbrand yang akan diproses
 - Inventory Qty — **Not 0** = hanya produk yang memiliki stok di locator
 - Set Inventory Count to — Pilih **On Hand Qty** untuk mengisi quantity berdasarkan stok yang tersedia pada locator, atau **Zero** untuk mengisi quantity dengan nilai nol tanpa memperhitungkan stok yang tersedia.
 
@@ -29,7 +30,9 @@ Stock Opname — atau dikenal sebagai **Physical Inventory** di iDempiere — ad
 - **Charge** — Menentukan biaya yang akan dicatat atas selisih (plus atau minus).
 8. Klik **Complete** pada dokumen Physical Inventory.
 
-> **Catatan:** Jika ASI tidak diinput saat memproses Physical Inventory, sistem mengkalkulasi quantity berdasarkan artikel tanpa spesifikasi ke ASI atau batch/lot.
+> **Catatan:** 
+> - Jika ASI tidak diinput saat memproses Physical Inventory, sistem mengkalkulasi quantity berdasarkan artikel tanpa spesifikasi ke ASI atau batch/lot.
+> - Saat **Sub Brand** ditentukan pada header dokumen Stock Opname, sistem hanya memproses produk yang termasuk dalam Sub Brand tersebut.
 
 ### Konfigurasi Sistem
 
@@ -119,6 +122,18 @@ Sebelum melakukan Internal Use, lakukan konfigurasi pada **Document Type Interna
 ![iu](../iu_bom.png "Konfigurasi Document Type Internal Use BoM") {#Figure363}
 
 8. Klik **Save**.
+
+### Konfigurasi BoM
+
+1. Buka menu **Product**.
+2. Centang field **Bill of Material**.
+3. Masuk ke tab **BoM**.
+4. Centang field **Auto Production**.
+5. Pada field **BoM Type**, pilih **Manufacture This Product**.
+
+![produk](../prod_auto.png "Konfigurasi Bill of Material") {#Figure203}
+
+8. Klik **Save**.
 ### Langkah Internal Use Product Finished Good dengan BoM
 
 Setelah Document Type dikonfigurasi, lakukan Internal Use dengan langkah berikut:
@@ -129,7 +144,7 @@ Setelah Document Type dikonfigurasi, lakukan Internal Use dengan langkah berikut
 4. Tentukan **Document Type**.
 5. Masuk ke tab **Internal Use Special**.
 6. Input **produk** yang akan diproses.
-7. Tentukan **BoM** yang akan diproses.
+7. **BoM** akan ter-set otomatis.
 8. Tentukan **quantity** produk.
 9. Klik **Save**.
 10. Kembali ke **header**.

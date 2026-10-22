@@ -218,6 +218,33 @@ User menginput diskon dalam bentuk persentase (%) pada field **Discount %**. Sis
 
 Price List merupakan harga dasar, sedangkan diskon digunakan untuk mendapatkan harga setelah diskon (**Price Actual**). Kedua metode input diskon saling mengisi secara otomatis — jika user menginput salah satu, sistem otomatis menghitung yang lainnya.
 
+### Konfigurasi Accounting Schema
+
+Untuk transaksi yang memiliki diskon, tentukan terlebih dahulu akun yang digunakan untuk mencatat diskon tersebut. Lakukan konfigurasi dalam dua tahap berikut.
+
+#### Konfigurasi Akun Diskon di Level Product
+
+1. Buka menu **Product**.
+2. Tentukan **product** yang akan dikonfigurasi.
+3. Masuk ke tab **Accounting**.
+4. Pada field **Trade Discount Granted**, tentukan akun atas diskon.
+
+![diskon](../diskon_acc.png "Konfigurasi Account di Product") {#Figure368}
+
+5. Klik **Save**.
+
+#### Konfigurasi di Accounting Schema
+
+Setelah akun ditentukan, aktifkan pencatatan diskon pada Accounting Schema:
+
+1. Buka menu **Accounting Schema**.
+2. Centang field **Post Trade Discount**.
+
+![diskon](../diskon.png "Konfigurasi Accounting Schema") {#Figure369}
+
+3. Klik **Save**.
+
+Setelah kedua konfigurasi selesai, saat transaksi memiliki diskon, akun diskon tersebut otomatis muncul pada jurnal transaksi.
 ## Purchase Order Expense
 
 PO Expense adalah Purchase Order yang digunakan untuk mencatat pengadaan barang atau jasa yang bersifat _expense_ dan tidak memerlukan proses penerimaan barang melalui Material Receipt (MR).
