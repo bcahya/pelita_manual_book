@@ -28,7 +28,17 @@ Di SCI, terdapat 4 tipe charging untuk stock opname:
   - Perhitungan 3 — Kalikan hasil perhitungan 2 dengan 50% untuk menentukan varian selisih.
   - Perhitungan 4 — Jika hasil perhitungan 3 bernilai **minus (negatif)**, tambahkan Total Netto tertinggi. Jika bernilai **positif**, penambahan Total Netto tertinggi tidak diperlukan.
   - Nilai hilang barang diambil dari **Total Netto tertinggi**.
-  
+
+## Konfigurasi Document Type Stock Opname
+
+1. Buka menu **Document Type**.
+2. Pilih **Document Base Type** **Material Physical Inventory**.
+3. Pada field **Inv Sub Type**, pilih **Physical Inventory**.
+4. Pada field **PI Opname Period**, pilih periode opname sesuai kebutuhan: **Harian**, **Mingguan**, **Bulanan**, atau **Hot Item**.
+
+![doc type](../doc_type_so.png "Konfigurasi Document Type") {#Figure369}
+
+5. Klik **Save**.
 ## Konfigurasi API
 
 ### Harga Netto Produk
@@ -53,10 +63,11 @@ Ikuti langkah berikut untuk melakukan konfigurasi API di System Configurator:
 2. Klik **New**
 3. Input nama configurator: **SIS_INVENTORY_EXT_URL**
 4. Pada field **Configured Value**, input: http://36.95.119.12:5558
+5. Pada field **Configuration Level**, pilih **Client**
 
 ![Konfigurasi](../SIS_Tolerance.png "Konfigurasi Sistem") {#Figure90}
 
-5. Klik **save**
+6. Klik **save**
 
 Karena data quantity penjualan bersumber dari POS di luar sistem, konfigurasi ini diperlukan agar sistem dapat mengambil dan memperhitungkan data tersebut dalam kalkulasi toleransi charge stock opname.
 ## Konfigurasi Product untuk Stock Opname
@@ -100,11 +111,12 @@ Setelah Charge Category dan Charge Sub Category selesai dikonfigurasi, lakukan k
 5. Pada field **SIS Charge Sub Category** pilih sub kategori sesuai kebijakan
 6. Pada field **Charge Multiply Rate** tentukan nilai sesuai kebijakan
 7. Pada field **Charge Tolerance** tentukan nilai sesuai kebijakan
-8. Klik save
-
+8. Tentukan periode stock opname sesuai kebutuhan, yaitu **PI Harian**, **PI Mingguan**, **PI Bulanan**, atau **PI Hot Item**
+9. Klik save
 
 ![Product](../Product_Opname.png "Konfigurasi Product") {#Figure93}
 
+![Product](../period_so.png "Konfigurasi Product") {#Figure370}
 
 Product yang telah dikonfigurasi siap digunakan untuk charge stock opname sesuai kebutuhan operasional perusahaan.
 ## Proses Stock Opname di Sistem

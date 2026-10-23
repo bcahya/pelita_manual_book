@@ -309,4 +309,27 @@ POP dapat di-complete meskipun masih terdapat Inventory Move _outstanding_ yang 
 
 POP hanya dapat di-complete jika **seluruh** Inventory Move yang ter-create dari Generate MO sudah berstatus _Complete_ — termasuk perpindahan produk jadi ke gudang induk atau hingga routing berakhir.
 
-Sesuaikan konfigurasi ini dengan kebutuhan operasional perusahaan sebelum memproses POP
+Sesuaikan konfigurasi ini dengan kebutuhan operasional perusahaan sebelum memproses POP.
+
+## Penentuan Tanggal Produksi
+
+Dokumen Production akan terbentuk secara otomatis ketika Manufacturing Order (MO) diproses hingga Complete. Pembuatan Production dapat dilakukan melalui dua mekanisme, yaitu dengan mengisi Qty pada tab **Production Report Quantity** atau melalui button **SIS Generate Production From MO**.
+
+Jika Production dibuat melalui tab Production Report Quantity, tanggal produksi akan mengikuti tanggal ketika Manufacturing Order di-Complete. Sementara itu, jika Production dibuat melalui button SIS Generate Production From MO, user dapat menentukan tanggal produksi secara manual sehingga tanggal Production dapat berbeda dengan tanggal Manufacturing Order.
+
+Berikut langkah-langkah untuk menentukan tanggal produksi melalui button SIS Generate Production From MO:
+
+1. Buka menu **Manufacturing Order**.
+2. Pilih dokumen Manufacturing Order yang akan diproses. Pastikan transaksi pendukung, mulai dari Requisition hingga Inventory Move, telah selesai diproses.
+3. Klik button **SIS Generate Production From MO**.
+4. Tentukan **Qty Produce** sesuai jumlah produk yang akan dihasilkan.
+5. Tentukan **Total Batch** sesuai jumlah batch produksi.
+6. Tentukan **Production Date** sesuai tanggal produksi yang diinginkan.
+
+![tgl](../tgl_prod.png "Penentuan Tanggal Produksi") {#Figure371}
+
+7. Klik **OK**.
+
+Sistem akan membuat dokumen Production secara otomatis berdasarkan Qty Produce dan Total Batch yang telah ditentukan. Tanggal Production akan mengikuti tanggal yang diinput pada field Production Date.
+
+![prod](../production.png "Production") {#Figure372}

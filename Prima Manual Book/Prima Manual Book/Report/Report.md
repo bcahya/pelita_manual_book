@@ -865,7 +865,7 @@ Ikuti langkah berikut untuk mengakses Report Cost History:
 
 Berikut contoh Report Cost History:
 
-![cost](../report_cost_his.png "Report Cost History"){#Figure311}
+![cost](../cost_history.png "Report Cost History"){#Figure311}
 
 ## Report Rekap Pembayaran Vendor CMT
 

@@ -215,6 +215,9 @@ Sebelum transaksi Kartu Fleet dapat diproses, perlu dilakukan konfigurasi terleb
 | SIS_FLEET_DEFAULT_DOC_TYPE_ID | C_DocType_ID     |
 | SIS_FLEET_CURRENCY_ID         | C_Currency_ID    |
 | SIS_FLEET_USER_ID             | AD_User_ID       |
+Seluruh konfigurasi tersebut diatur dengan **Configuration Level = Client**, bukan System. Berikut contoh konfigurasi di sistem:
+
+![fleet](../bt_acc_fleet.png "System Configurator") {#Figure368}
 #### Konfigurasi Nomor Kartu Fleet
 
 Nomor atau akun Kartu Fleet harus dikonfigurasi pada sistem sebagai identitas kartu yang digunakan untuk melakukan transaksi.
@@ -249,6 +252,9 @@ Karena import dilakukan menggunakan server eksternal **FileZilla**, user juga pe
 | --------------------------- | ---------------- |
 | SIS_FLEET_BT_DOCTYPE_ID     | C_DocType_ID     |
 | SIS_FLEET_BT_BANKACCOUNT_ID | C_BankAccount_ID |
+Seluruh konfigurasi tersebut diatur dengan **Configuration Level = Client**, bukan System. Berikut contoh konfigurasi di sistem:
+
+![fleet](../fleet_user.png "System Configurator") {#Figure369}
 ### Proses Import Transaksi
 
 1. Siapkan file Transaksi Kartu Fleet yang menggunakan format **TXT**.

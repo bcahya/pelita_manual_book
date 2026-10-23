@@ -43,7 +43,7 @@ Field yang perlu dikonfigurasi:
 3. **MR/Shipment. Document Action Invoice AP/AR** — Menentukan status dokumen atas AP Invoice yang di-generate.
 4. **Allow Future Doc** — Jika dicentang, transaksi diizinkan diproses dengan _future date_.
 5. **Manual ASI Setup** — Jika dicentang, ASI diinput secara manual oleh user, tidak dibuat otomatis oleh sistem.
-6. **Max MR Back Dated Days** — Mengatur berapa hari transaksi diperbolehkan menggunakan tanggal mundur (_backdate_).
+6. **Maximum Back Dated Days** — Mengatur berapa hari transaksi diperbolehkan menggunakan tanggal mundur (_backdate_).
 
 ## Document Type AP Invoice
 
@@ -204,3 +204,17 @@ Field yang perlu dikonfigurasi:
 2. **POP. Document Type Movement Defect** — Menentukan document type jika terdapat artikel yang diproduksi dengan status _defect_.
 3. **POP. Movement Allowance** — Batas toleransi perpindahan artikel.
 4. **POP. Production Allowance** — Batas toleransi produksi atas artikel, sehingga quantity yang diproduksi tidak boleh melebihi nilai allowance.
+
+## Konfigurasi Back Date
+
+Beberapa transaksi di iDempiere memperbolehkan penggunaan tanggal mundur (_backdate_). Namun, penggunaan tanggal mundur dibatasi berdasarkan jumlah hari yang telah dikonfigurasi pada Document Type.
+
+Konfigurasi ini berlaku untuk transaksi dengan Document Base Type **Material Inventory, Material Movement, Material Receipt, Material Delivery,** dan **Production**.
+
+### Maximum Back Dated Days
+
+Field **Maximum Back Dated Days** pada Document Type digunakan untuk menentukan jumlah maksimal hari tanggal mundur yang diperbolehkan untuk suatu transaksi.
+
+Sebagai contoh, jika nilai Maximum Back Dated Days diatur menjadi 3 hari, transaksi hanya diperbolehkan menggunakan tanggal mundur maksimal 3 hari dari tanggal acuan yang digunakan oleh sistem. Berikut contoh konfigurasi Maximum Back Dated Days pada Document Type:
+
+![max](../max_backdate.png "Konfigurasi Maximum Back Date") {#Figure370}
