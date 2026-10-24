@@ -60,3 +60,19 @@ Ikuti langkah berikut untuk mengakses Contract Management di iDempiere:
 
 10. Jalankan **Generate GL Journal From Schedule** untuk men-generate GL Journal dengan status **Complete**.
 11. **Generate Invoice From Schedule** untuk men-generate AP Invoice secara manual di luar jadwal yang telah dikonfigurasi.
+
+## Konfigurasi Tax Access di Document Type SIS Contract Management
+
+1. Buka menu **Document Type**.
+2. Tentukan document type SIS Contract Management yang akan dikonfigurasi.
+3. Centang field **Tax Rate Access** pada header untuk mengaktifkan pembatasan tax rate.
+4. Klik **Generate Tax Rate Access**, kemudian tentukan tax rate yang akan diproses.
+
+![gen](../tax_contract.png "Generate Tax Rate Access") {#Figure375}
+
+5. Klik **SIS Generate Tax Rate Access**.
+6. Tab **Tax Rate Access** akan menampilkan daftar tax rate yang telah dikonfigurasi.
+
+![tax](../tax_cm.png "Tax Rate Access") {#Figure376}
+
+Ulangi langkah di atas untuk setiap document type lain yang memerlukan konfigurasi. Jika transaksi tidak memerlukan pembatasan tax rate, konfigurasi ini tidak perlu dilakukan.

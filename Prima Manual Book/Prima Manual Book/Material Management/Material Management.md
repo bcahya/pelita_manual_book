@@ -10,7 +10,8 @@ Stock Opname — atau dikenal sebagai **Physical Inventory** di iDempiere — ad
 - **Warehouse** — Lokasi inventory yang akan diproses.
 - **Movement Date** — Tanggal dilakukan perhitungan stok. 
 - **Cost Center** — Dimensi tambahan untuk financial report.
-- Subbrand - Opsional
+- **Sub Brand** — Opsional. Jika ditentukan, produk yang diproses difilter berdasarkan Sub Brand.
+- **MClass** — Opsional. Jika ditentukan, produk yang diproses difilter berdasarkan MClass.
 
 4. Klik **Create Inventory Count List** — Sistem otomatis men-generate line dari daftar inventory di warehouse yang dipilih, dengan filter berikut:
 - Locator — Lokasi dari warehouse yang diproses.
