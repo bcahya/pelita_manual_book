@@ -209,7 +209,7 @@ Field yang perlu dikonfigurasi:
 
 Beberapa transaksi di iDempiere memperbolehkan penggunaan tanggal mundur (_backdate_). Namun, penggunaan tanggal mundur dibatasi berdasarkan jumlah hari yang telah dikonfigurasi pada Document Type.
 
-Konfigurasi ini berlaku untuk transaksi dengan Document Base Type **Material Inventory, Material Movement, Material Receipt, Material Delivery,** dan **Production**.
+Konfigurasi ini berlaku untuk transaksi dengan Document Base Type **Material Inventory, Material Movement, Material Receipt, Material Delivery,** **Production**, dan **Bank Statement**.
 
 ### Maximum Back Dated Days
 

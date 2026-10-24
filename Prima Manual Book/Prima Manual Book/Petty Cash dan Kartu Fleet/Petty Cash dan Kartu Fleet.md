@@ -42,7 +42,7 @@ Akun bank asset untuk Petty Cash dan Kartu Fleet berbeda, sehingga perlu dilakuk
 4. Tentukan **amount** yang akan diproses.
 5. Klik **Complete**.
 
-Saat Bank/Cash Transfer di-complete, sistem membentuk dua dokumen payment dengan jurnal berikut:
+Saat Bank/Cash Transfer di-complete, sistem membentuk dokumen AP Payment (Pindah Dana) dan AR Receipt (Terima Dana) dengan jurnal berikut:
 
 ![petty](../petty_pay.png "Petty Cash") {#Figure243}
 
@@ -56,6 +56,46 @@ Saat Bank/Cash Transfer di-complete, sistem membentuk dua dokumen payment dengan
 ### Proses Matching Ayat Silang melalui Bank Statement
 
 ![bank](../bank_cash_petty.png "Bank/Cash Statement") {#Figure246}
+
+### Bank Statement atas Bank/Cash Transfer
+
+AP Payment dan AR Receipt yang terbentuk dari Bank/Cash Transfer perlu diproses lebih lanjut melalui **Bank Statement**. Bank Statement atas AP Payment (bank keluar) mengurangi saldo rekening, sedangkan Bank Statement atas AR Receipt (bank masuk) menambah saldo rekening.
+#### Konfigurasi Auto Bank Statement
+
+Agar bank keluar dan bank masuk diproses secara otomatis, konfigurasi **Auto Bank Statement** pada Document Type AP Payment dan AR Receipt. Jika dicentang, saat AP Payment atau AR Receipt di-complete, sistem otomatis membuat Bank Statement dengan status dokumen sesuai konfigurasi.
+
+1. Buka menu **Document Type**.
+2. Tentukan Document Type **AP Payment** dan **AR Receipt** yang akan dikonfigurasi.
+3. Centang field **Auto Bank Statement**.
+4. Tentukan **Bank Statement Doc Action** — _Draft_ atau _Complete_.
+
+![auto bs](../auto_bank_statement.png "Konfigurasi Auto Generate Bank Statement") {#Figure374}
+
+5. Klik **Save**.
+#### Bank Statement Manual atas AP Payment
+
+1. Buka menu **Bank/Cash Statement**.
+2. Tentukan **Bank Account** yang akan diproses.
+3. Klik **Create Lines From**.
+4. Tentukan **AP Payment** yang akan diproses.
+5. Klik **OK**.
+6. Masuk ke **Statement Line**.
+7. Verifikasi **Statement Date** dan **Statement Amount**.
+8. Klik **Save**.
+9. Klik **Complete** pada dokumen.
+#### Bank Statement Manual atas AR Receipt
+
+1. Buka menu **Bank/Cash Statement**.
+2. Tentukan **Bank Account** yang akan diproses.
+3. Klik **Create Lines From**.
+4. Tentukan **AR Receipt** yang akan diproses.
+5. Klik **OK**.
+6. Masuk ke **Statement Line**.
+7. Verifikasi **Statement Date** dan **Statement Amount**.
+8. Klik **Save**.
+9. Klik **Complete** pada dokumen.
+
+Saat Bank Statement diproses, **Current Balance** pada masing-masing akun bank otomatis ter-update — bertambah atau berkurang sesuai transaksi.
 ## Mekanisme Pindah Dana Kartu Fleet
 
 1. Buka menu **Bank/Cash Transfer**.

@@ -124,3 +124,9 @@ Untuk menghubungkan POP turunan dengan POP induk, sistem menyediakan field **POP
 ![parent subcon](../pop_parent_subcon.png "Informasi POP Parent di POP Subcon") {#Figure356}
 
 Field **POP Parent** menunjukkan dokumen POP induk yang terkait dengan POP turunan, sehingga user dapat mengetahui keterkaitan antara proses produksi induk dan turunannya. Sistem mengisi field **POP Parent** secara otomatis, sehingga user tidak perlu menginputnya secara manual.
+
+Selain itu, dokumen **POP Parent** memuat informasi **listing POP Child (turunan)** atas subcon untuk produksi barang jadi tersebut. Satu POP Parent dapat memiliki lebih dari satu POP Child, karena dalam satu kali produksi terdapat beberapa line atau produk dengan kebutuhan subcon yang berbeda-beda. Dengan listing ini, user dapat mengetahui POP turunan subcon mana saja yang ter-create.
+
+Berikut contoh POP Parent dengan dua POP Child (turunan):
+
+![child](../pop_child.png "Listing POP Child di POP Parent") {#Figure372}
