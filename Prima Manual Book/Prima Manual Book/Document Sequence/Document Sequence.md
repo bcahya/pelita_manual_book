@@ -32,7 +32,7 @@ Nomor dokumen dapat disesuaikan melalui konfigurasi **Prefix**, **Suffix**, dan 
 ![doc type](../doc_typ_match.png "Document Type") {#Figure217}
 
 5. Klik **Save**.
-## Konfigurasi Sistem
+## Konfigurasi Document Type Matched Invoiced di Sistem
 
 1. Buka menu **System Configurator**.
 2. Klik **New**.

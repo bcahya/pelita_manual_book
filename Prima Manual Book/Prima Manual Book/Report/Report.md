@@ -1053,3 +1053,17 @@ Ikuti langkah berikut untuk mengakses Report Listing Asset Depreciation:
 Berikut contoh Report Listing Asset Depreciation:
 
 ![list](../listing_aset_depre.png "Listing Asset Depreciation") {#Figure367}
+
+## Print Out Sales Order PPG
+
+Ikuti langkah berikut untuk mengakses Report Print Out Sales Order:
+
+1. Buka menu **Sales Order**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Document SO**.
+4. Pada Process Detail Report, pilih **Faktur Penjualan** 
+5. Klik **OK**.
+
+Berikut contoh Print Out Sales Order:
+
+![so](../so_ppg.png "Print Out Sales Order") {#Figure374}

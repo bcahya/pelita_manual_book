@@ -92,17 +92,23 @@ Field yang perlu dikonfigurasi:
 1. **RDO. Document Type Delivery** — Menentukan document type Inventory Move Delivery yang ter-create saat RDO di-complete.
 2. **RDO. IM. Document Type Receipt** — Menentukan document type Inventory Move Receipt yang ter-create saat RDO di-complete.
 3. **RDO Cancel Delivery Document Type** — Menentukan document type atas Inventory Move yang dibatalkan pengirimannya.
-4. **RDO. IM. Warehouse Intransit** — Menentukan warehouse intransit saat Inventory Move dari warehouse asal.
-5. **RDO. IM. Locator Intransit** — Menentukan locator intransit saat Inventory Move dari warehouse asal.
-6. **Auto Create Back Order** — Jika dicentang, sistem otomatis membuat dokumen baru untuk sisa pesanan yang belum terpenuhi.
-## Document Type Inventory Move
+4. **Auto Create Back Order** — Jika dicentang, sistem otomatis membuat dokumen baru untuk sisa pesanan yang belum terpenuhi.
+## Document Type Inventory Move Delivery
 
 Field yang perlu dikonfigurasi:
 
 1. **RDO. IM. Warehouse Intransit** — Menentukan warehouse intransit saat Inventory Move dari warehouse asal.
 2. **RDO. IM. Locator Intransit** — Menentukan locator intransit saat Inventory Move dari warehouse asal.
 3. **RDO. IM. Document Type Receipt** — Menentukan document type Inventory Move Receipt yang ter-create saat RDO di-complete.
-4. **Document Type Cancel Delivery** — Menentukan document type atas Inventory Move yang dibatalkan pengirimannya.
+4. **Manual ASI Selection** — Menentukan apakah pemilihan Attribute Set Instance (ASI) dilakukan secara manual oleh user atau secara otomatis oleh sistem berdasarkan material policy.
+5. **Document Type Cancel Delivery** — Menentukan document type atas Inventory Move yang dibatalkan pengirimannya.
+
+## Document Type Inventory Move Receipt
+
+Field yang perlu dikonfigurasi:
+
+1. **Receipt** — Dicentang untuk menandai bahwa Document Type tersebut digunakan untuk transaksi Inventory Move Receipt.
+2. **Auto Create Back Order** — Jika dicentang, sistem otomatis membuat dokumen baru untuk sisa pesanan yang belum terpenuhi.
 ## Document Type SIS Expedition
 
 Tidak ada konfigurasi khusus yang diperlukan. Isi field-field pada header sesuai kebutuhan operasional.

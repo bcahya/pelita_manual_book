@@ -333,3 +333,50 @@ Berikut langkah-langkah untuk menentukan tanggal produksi melalui button SIS Gen
 Sistem akan membuat dokumen Production secara otomatis berdasarkan Qty Produce dan Total Batch yang telah ditentukan. Tanggal Production akan mengikuti tanggal yang diinput pada field Production Date.
 
 ![prod](../production.png "Production") {#Figure372}
+
+## Nilai Hasil Produksi
+
+Dalam proses produksi, Qty hasil produksi dapat berupa bilangan bulat atau desimal. Nilai tersebut dipengaruhi oleh kebutuhan Qty komponen yang ditentukan pada Bill of Material (BoM) masing-masing produk WIP.
+
+Namun, untuk produk jadi yang menggunakan satuan Pcs, Qty hasil produksi umumnya harus berupa bilangan bulat dan tidak diperbolehkan menggunakan desimal. Oleh karena itu, sistem menyediakan konfigurasi pembulatan Qty hasil produksi pada masing-masing produk yang memiliki BoM, baik produk WIP maupun produk jadi.
+
+### Konfigurasi Nilai Hasil Produksi pada Product
+
+Berikut langkah-langkah untuk mengatur jumlah angka desimal pada Qty hasil produksi:
+
+1. Buka menu **Product**.
+2. Tentukan produk yang akan dikonfigurasi.
+3. Pada field **Decimal On Production Qty**, tentukan jumlah angka di belakang koma yang diperbolehkan untuk Qty hasil produksi. Jika Qty harus berupa bilangan bulat, isi dengan nilai **0**.
+
+![prod](../des_product.png "Konfigurasi Desimal Produksi") {#Figure376}
+
+4. Klik **Save**.
+### Production Order Planning dengan Konfigurasi Qty
+
+Setelah konfigurasi pada Product selesai, lakukan proses Production Order Planning (POP) dan produksi dengan langkah berikut:
+
+1. Buka menu **SIS Production Order Planning**.
+2. Masuk ke tab **Line**.
+3. Input data berikut:
+    
+    - **Product**: produk yang akan diproduksi.
+    - **Quantity**: jumlah produk yang akan diproduksi.
+    - **BoM**: Bill of Material yang digunakan.
+
+4. Jalankan proses **SIS Generate POP BoM** untuk menampilkan struktur BoM produk.
+5. Klik **Generate MO** untuk membuat Manufacturing Order.
+6. Masuk ke tab **Manufacture Order**.
+7. Pilih Manufacturing Order yang akan diproses.
+8. Selesaikan proses Requisition dan Inventory Move sesuai kebutuhan produksi.
+9. Klik **SIS Generate Production From MO**.
+10. Tentukan **Qty Produce** sesuai jumlah produk yang akan dihasilkan.
+11. Tentukan **Total Batch** sesuai jumlah batch produksi.
+12. Tentukan **Production Date** sesuai tanggal produksi.
+
+![prod](../gen_prod.png "Production") {#Figure377}
+
+13. Klik **OK** untuk menjalankan proses.
+
+Sistem akan membuat dokumen Production berdasarkan Qty Produce dan Total Batch yang ditentukan. Qty hasil produksi pada masing-masing batch akan dibulatkan sesuai konfigurasi **Decimal On Production Qty** pada Product.
+
+![prod](../prod_des.png "Production") {#Figure378}

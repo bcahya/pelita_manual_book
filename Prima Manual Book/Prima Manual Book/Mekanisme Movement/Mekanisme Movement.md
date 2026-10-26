@@ -438,6 +438,27 @@ Selain itu, user perlu mengatur System Configurator **SIS_USING_DOCTYPE_MANUAL_A
 
 Setelah Inventory Move selesai diproses, sistem akan mengurangi stock ASI pada Locator asal dan menambahkan stock ASI yang sama pada Locator tujuan.
 
+### Langkah Generate ASI di Inventory Move
+
+1. Buat **Inventory Move**.
+2. Tentukan **Warehouse** dan **Locator** asal serta tujuan.
+3. Tentukan **produk** dan **quantity** yang akan dipindahkan.
+4. Klik tombol **Setting (⚙)**.
+5. Klik **Generate Attributes**.
+6. Klik **Requery**.
+7. Pilih **ASI** dan **Qty** yang akan dipindahkan.
+
+![asi](../gen_asi.png "Generate Attribute Set Instance") {#Figure375}
+
+8. Klik **SIS Generate Attributes**.
+9. Klik **Save**.
+10. Klik **Complete**.
+
+Pada tab **Attribute**, sistem menampilkan ASI yang berhasil ter-generate sesuai ASI yang dipilih, dengan quantity masing-masing ASI sesuai yang telah ditentukan.
+
+![asi](../asi_gen.png "Hasil Generate Attribute Set Instance") {#Figure376}
+
+Fitur ini memudahkan proses Inventory Move saat ASI ditentukan secara manual dan jumlah produk yang dipindahkan banyak. User dapat memilih lebih dari satu ASI untuk produk yang sama dalam satu proses.
 ### Movement Receipt dengan Product ASI
 
 Inventory Move di sistem dapat dilakukan secara **manual** maupun melalui **RDO**. Proses Inventory Move juga dapat berjalan secara **direct (langsung)** atau melibatkan **intransit**. Untuk Inventory Move yang melibatkan intransit, terdapat dua proses movement — **Inventory Move Delivery** dan **Inventory Move Receipt**.
