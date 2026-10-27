@@ -124,6 +124,25 @@ Jika terdapat biaya deposit yang dapat diklaim, pastikan invoice atas biaya depo
 Sistem otomatis membentuk **Payment AR Receipt** atas klaim yang di-generate dan field **Claimed** akan tercentang secara otomatis.
 
 ![klaim](../klaimdepo_contract.png "AR Receipt") {#Figure160}
+
+## Konfigurasi NITKU pada Business Partner
+
+Pada menu Contract Management, terdapat field **NITKU** pada bagian header. Nilai NITKU diambil secara otomatis dari master data NITKU yang dikonfigurasi pada masing-masing Business Partner. Ketika Business Partner dipilih pada dokumen Contract Management, sistem akan mengisi field NITKU sesuai dengan data yang tersimpan pada Business Partner tersebut, sehingga user tidak perlu menginput atau memilih NITKU secara manual.
+
+Oleh karena itu, user perlu memastikan bahwa master data NITKU pada masing-masing Business Partner sudah dikonfigurasi. Berikut langkah-langkah untuk mengatur NITKU pada Business Partner:
+
+1. Buka menu **Business Partner**.
+2. Pilih Business Partner yang akan dikonfigurasi.
+3. Masuk ke tab **Location**.
+4. Pada field **NITKU**, input nomor NITKU yang sesuai.
+
+![bp](../nitku_bp.png "Konfigurasi NITKU di Business Partner") {#Figure377}
+
+5. Klik **Save**.
+
+Setelah konfigurasi tersimpan, ketika Business Partner tersebut dipilih pada dokumen Contract Management, field NITKU pada header akan terisi secara otomatis sesuai dengan data NITKU yang telah dikonfigurasi.
+
+![bp](../nitku_contract.png "Implementasi NITKU di Contract Management") {#Figure378}
 ## Report Contract Management
 
 Report Contract Management digunakan untuk menampilkan daftar dokumen Contract Management berdasarkan parameter pencarian yang dipilih. Gunakan report ini untuk memantau informasi kontrak yang telah dibuat tanpa perlu membuka setiap dokumen satu per satu.

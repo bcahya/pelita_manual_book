@@ -101,7 +101,7 @@ Sistem menentukan Price List dan Payment Term dengan ketentuan berikut:
 
 4. Jika import berhasil, file otomatis berpindah ke folder **done**
 
-![Done Import PO](../done_po.png "Done Import PO") {#Figure89}
+![Done Import PO](../user_name_po_kecil.png "Done Import PO") {#Figure89}
 
 5. Sistem iDempiere akan membuat dokumen PO dengan status Draft atau In Progress, yang selanjutnya dapat di-confirm sesuai kebutuhan operasional.
 
@@ -125,8 +125,9 @@ Karena kedua tanggal bersumber berbeda, **Date Ordered** dan **Date Promised** d
 
 **Identitas User Import**
 
-Nama file import memuat **User ID** sebagai identitas user yang melakukan import. Dengan demikian, setiap PO yang ter-create dapat ditelusuri siapa yang mengimportnya.
+Nama file import memuat **Username** sebagai identitas user yang melakukan import. Dengan demikian, setiap PO yang ter-create dapat ditelusuri siapa yang mengimportnya.
 
+![user](../user_created.png "User Yang Melakukan Import") {#Figure376}
 ### Gagal Import PO Kecil karena Template Tidak Sesuai
 
 Jika file PO Kecil yang diimport tidak sesuai format, sistem tidak akan memproses file tersebut ke iDempiere. Contoh ketidaksesuaian format yang umum terjadi antara lain penggunaan delimiter **;** atau penggunaan **Product ID** pada nama file yang seharusnya menggunakan **Product Value**.

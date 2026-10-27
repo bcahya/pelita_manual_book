@@ -41,6 +41,46 @@ SIS_INVENTORY_EXT_URL dan SIS_INVENTORY_CHARGE5_URL merupakan konfigurasi URL ya
 
 - SIS_INVENTORY_EXT_URL adalah URL untuk mengakses tools atau informasi eksternal yang digunakan dalam proses Stock Opname.
 - SIS_INVENTORY_CHARGE5_URL adalah URL untuk mengakses tools atau informasi yang digunakan pada proses Stock Opname dengan Charge Type 5.
+
+### Final Stock Opname
+
+Stock opname dapat dilakukan dengan beberapa frekuensi: **harian**, **mingguan**, atau **bulanan**. Frekuensi disesuaikan dengan kebutuhan operasional, tingkat perputaran barang, dan kebijakan pengendalian persediaan perusahaan. Periode pelaksanaan dikonfigurasi di level **Product** dan **Document Type Physical Inventory**.
+#### Konfigurasi di Product
+
+1. Buka menu **Product**.
+2. Tentukan **product** yang akan dikonfigurasi.
+3. Tentukan periode stock opname: **PI Harian**, **PI Mingguan**, **PI Bulanan**, atau **PI Hot Item**.
+
+![Product](../period_so.png "Konfigurasi Product") {#Figure370}
+
+4. Klik **Save**.
+#### Konfigurasi di Document Type Physical Inventory
+
+1. Buka menu **Document Type**.
+2. Pilih **Document Base Type** **Material Physical Inventory**.
+3. Pada field **Inv Sub Type**, pilih **Physical Inventory**.
+4. Pada field **PI Opname Period**, pilih periode opname sesuai kebutuhan: **Harian**, **Mingguan**, **Bulanan**, atau **Hot Item**.
+
+![doc type](../doc_type_so.png "Konfigurasi Document Type") {#Figure369}
+
+5. Klik **Save**.
+
+#### Periode Stock Opname
+
+- **Stock Opname Harian** — Dilakukan setiap hari, umumnya untuk barang dengan perputaran tinggi, bernilai tinggi, atau yang perlu diawasi ketat. Dapat dilakukan hanya untuk beberapa produk.
+- **Stock Opname Mingguan** — Dilakukan satu kali dalam seminggu untuk memeriksa persediaan secara berkala tanpa menghitung seluruh barang setiap hari.
+- **Stock Opname Bulanan** — Dilakukan pada akhir periode atau jadwal yang ditetapkan perusahaan untuk mengevaluasi persediaan secara menyeluruh. Cakupannya dapat meliputi seluruh persediaan di gudang.
+
+#### Final Stock Opname Bulanan
+
+User melakukan final stock opname setiap bulan. Data quantity stok fisik diimport dari aplikasi **POS Skye**. Jika saat final stock opname terdapat produk yang seharusnya diperiksa di akhir bulan tetapi tidak muncul di **Inventory Count Line**, user perlu men-generate produk yang memiliki _stock on hand_ dan flag **SIS_PIIsBulanan = Y** pada master product. Ikuti langkah berikut untuk men-generate produk pada Physical Inventory yang ter-create dari POS Skye:
+
+1. Buka menu **Physical Inventory**.
+2. Tentukan dokumen stock opname yang akan diproses.
+3. Pastikan **Document Type** yang digunakan memiliki periode stock opname **Bulanan**.
+4. Klik **Document Action**, lalu pilih **Prepare**.
+
+Setelah **Prepare** dijalankan, sistem otomatis men-generate produk yang sebelumnya tidak ada di Inventory Count Line. Sistem memuat produk yang memiliki **Summary M_Transaction tidak sama dengan 0** dan flag **SIS_PIIsBulanan = Y**.
 ## Adjustment Plus dan Minus
 
 Untuk mencatat penggunaan persediaan atau melakukan adjustment plus/minus tanpa melalui proses penjualan, gunakan fitur **Inventory Decrease/Increase**.
