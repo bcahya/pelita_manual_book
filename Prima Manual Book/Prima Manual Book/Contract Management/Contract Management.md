@@ -43,8 +43,11 @@ Ikuti langkah berikut untuk mengakses Contract Management di iDempiere:
 2. Isi field pada **Header**:
   - Period Type — Pilih Year (Tahun) atau Month (Bulan).
   - Cost Center — Isi sesuai outlet atau showroom.
-  - Tax — Isi pajak yang akan digunakan.
   - Business Partner — Isi rekanan yang bekerja sama dalam kontrak.
+  - **Partner Location** — Terisi otomatis sesuai konfigurasi pada Business Partner.
+  - **Partner Bank Account** — Tentukan rekening bank yang akan digunakan.
+  - **Tax ID** — Nomor NPWP yang terisi otomatis sesuai konfigurasi pada Business Partner.
+  - **NITKU** — Terisi otomatis sesuai konfigurasi NITKU pada Business Partner.
   - Project — **Opsional**, isi jika terkait pekerjaan pembangunan outlet atau showroom.
   - Informasi tambahan — Isi Luas Sewa, Harga per M2, Grace Periode, dan Harga per Tahun.
   - Period Contract — Tentukan periode selama masa kontrak
@@ -58,6 +61,7 @@ Ikuti langkah berikut untuk mengakses Contract Management di iDempiere:
   - Total Amount — Isi nilai kontrak sebelum pajak.
   - Percentage — Tentukan persentase dari total amount (jika ada)
   - UnAmortized — Centang jika biaya merupakan deposit yang dapat diklaim
+  - Tax — Tentukan tax dari product yang akan diproses
 
 ![Line](../line_contract.png "Contract Management Line") {#Figure70}
 

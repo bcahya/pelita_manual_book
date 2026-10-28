@@ -51,7 +51,7 @@ Ikuti langkah berikut untuk melakukan Asset Addition:
 8. Klik **Save**.
 9. Klik **Complete** pada dokumen.
 
-Setelah dokumen Asset Addition di-complete, sistem otomatis mengkalkulasi ulang **Gross Value** dan **Residual Value** aset dengan menambahkan Addition Amount. Nilai depresiasi juga ikut menyesuaikan dengan Gross Value yang baru.
+Setelah dokumen Asset Addition di-complete, sistem otomatis mengkalkulasi ulang **Gross Value** dan **Book Value** aset dengan menambahkan Addition Amount. Nilai depresiasi juga ikut menyesuaikan dengan Gross Value yang baru.
 
 Selain itu, sistem otomatis membentuk dokumen pendukung berikut:
 ### Cost Adjustment
@@ -89,14 +89,14 @@ Ikuti langkah berikut untuk melakukan Asset Transfer:
 5. Masuk ke tab **Line**.
 6. Pada field **Asset From**, input nomor dokumen aset asal (aset yang akan digabungkan).
 7. Pada field **Asset To**, input nomor dokumen aset tujuan (aset induk).
-8. Field **Addition Amount** terisi otomatis dengan nilai sisa (_Residual Value_) dari aset asal.
+8. Field **Addition Amount** terisi otomatis dengan nilai sisa (_Book Value_) dari aset asal.
 
 ![Transfer](../aset_tf.png "Asset Tranfer") {#Figure119}
 
 9. Klik **Save**.
 10. Klik **Complete** pada dokumen.
 
-Setelah dokumen Asset Transfer di-complete, **Residual Value** aset tujuan terkalkulasi dengan nilai dari aset asal, sedangkan **Residual Value** aset asal menjadi 0 karena nilainya telah digabungkan ke aset tujuan. Depresiasi dilanjutkan sesuai masa manfaat ekonomi pada aset tujuan.
+Setelah dokumen Asset Transfer di-complete, **Book Value** aset tujuan terkalkulasi dengan nilai dari aset asal, sedangkan **Book Value** aset asal menjadi 0 karena nilainya telah digabungkan ke aset tujuan. Depresiasi dilanjutkan sesuai masa manfaat ekonomi pada aset tujuan.
 
 Saat melakukan Asset Transfer, sistem otomatis menjalankan mekanisme berikut:
 ### GL Journal
@@ -161,7 +161,7 @@ Untuk menghindari kendala tersebut, kami menyarankan agar user mengaktifkan **Au
 Report Asset digunakan untuk memantau posisi aset tetap perusahaan, meliputi nilai perolehan, nilai buku berjalan, status penyusutan, dan lokasi fisik aset. Laporan ini umumnya digunakan untuk:
 
 - **Audit fisik aset** — Mencocokkan data locator dan Attribute Set Instance dengan kondisi fisik di lapangan.
-- **Rekonsiliasi nilai buku** — Membandingkan Gross Value dan Residual Value untuk keperluan laporan neraca.
+- **Rekonsiliasi nilai buku** — Membandingkan Gross Value dan Book Value untuk keperluan laporan neraca.
 - **Pemantauan penyusutan** — Memverifikasi kelengkapan proses depresiasi berdasarkan Depreciation Date.
 - **Penelusuran asal aset** — Menelusuri kembali aset ke dokumen pembelian terkait.
 ### Langkah Akses Report Asset
@@ -185,7 +185,7 @@ Berikut penjelasan kolom yang tercantum pada report aset:
 - **Asset dan Document** — Dokumen transaksi asal yang menjadi dasar pembentukan aset. Digunakan sebagai jejak audit untuk menelusuri asal usul perolehan aset.
 - **Product** — Produk acuan yang digunakan sebagai dasar pembentukan aset.
 - **Gross Value** — Nilai perolehan awal aset (harga beli) sebelum dikurangi akumulasi penyusutan.
-- **Residual Value** — Nilai buku saat ini setelah dikurangi penyusutan berjalan.
+- **Book Value** — Nilai buku saat ini setelah dikurangi penyusutan berjalan.
 - **Depreciation Date** — Tanggal proses penyusutan terakhir dicatat untuk aset tersebut.
 - **Locator** — Lokasi fisik penyimpanan aset, digunakan untuk pelacakan fisik saat stock opname atau audit aset.
 - **Attribute Set Instance** — Atribut spesifik unik aset, seperti nomor lot yang membedakan satu unit fisik dari unit lain meski berasal dari produk yang sama.
@@ -196,10 +196,10 @@ Report Asset memungkinkan user melihat **summary** berdasarkan **Asset Type**. I
 1. Klik **Report Wizard**.
 2. Pada tab **Sort Criteria**, pilih **Asset Type** pada field **Order By**.
 3. Pada tab **Grouping Criteria**, centang **Asset Type**.
-4. Pada tab **Summary Field**, centang informasi yang ingin ditampilkan — seperti **Gross Value**, **Residual Value**, dan informasi lainnya.
+4. Pada tab **Summary Field**, centang informasi yang ingin ditampilkan — seperti **Gross Value**, **Book Value**, dan informasi lainnya.
 5. Klik **OK**.
 
-Sistem menampilkan daftar aset beserta summary berdasarkan Asset Type. Informasi yang muncul pada report sesuai konfigurasi yang dipilih, seperti Gross Value, Residual Value, Attribute Set Instance, dan sebagainya.
+Sistem menampilkan daftar aset beserta summary berdasarkan Asset Type. Informasi yang muncul pada report sesuai konfigurasi yang dipilih, seperti Gross Value, Book Value, Attribute Set Instance, dan sebagainya.
 ## Asset Maintenance
 
 Asset Maintenance adalah proses perbaikan dan perawatan yang dilakukan perusahaan terhadap aset-aset yang sudah ada. Perbaikan ini mencakup biaya perawatan, penggantian sparepart, dan biaya lainnya. Seluruh biaya tersebut diakui langsung sebagai beban — tidak menambah nilai aset dan tidak membentuk aset baru.

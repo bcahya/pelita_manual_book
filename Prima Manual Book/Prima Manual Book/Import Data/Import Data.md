@@ -180,3 +180,33 @@ Setiap Warehouse/Outlet akan terhubung dengan Regional melalui Sales Region yang
 3. Klik **OK**.
 
 ![po kecil](../print_report_po_kecil.png "Report Rekapitulasi PO Kecil") {#Figure258}
+
+## Import PO Kecil Ice Cube (Special Mechanism)
+
+PO Kecil memiliki dua jenis mekanisme:
+
+- **PO per tanggal transaksi** — PO hasil import dibuat per tanggal transaksi.
+- **PO per minggu (Special Mechanism)** — PO hasil import dibuat per minggu, sehingga dalam satu bulan hanya terbentuk **5 PO**. **Date Promised** masing-masing PO adalah tanggal awal minggu tersebut, dan quantity dikalkulasi secara akumulatif selama satu minggu. Rincian tanggal dan quantity per hari ditampilkan pada **Description** PO Line, sehingga user tetap dapat mengetahui quantity transaksi per tanggal.
+### Konfigurasi Product
+
+Sebelum melakukan transaksi, konfigurasi product untuk Special Mechanism:
+
+1. Buka menu **Product**.
+2. Tentukan **product** yang akan dikonfigurasi.
+3. Centang field **PO Kecil Special Mechanism**.
+
+![product](../product_po_kecil.png "Konfigurasi Product") {#Figure377}
+
+4. Klik **Save**.
+
+### Proses Import
+
+Setelah product dikonfigurasi, tentukan quantity dan tanggal transaksi pada file template seperti mekanisme sebelumnya, kemudian lakukan import melalui FileZilla. Setelah import berhasil, sistem otomatis men-generate 5 PO per bulan.
+
+Berikut contoh hasil import PO per minggu:
+
+![po](../po_per_minggu.png "Hasil Generate PO") {#Figure378}
+
+Berikut contoh PO Line pada PO minggu pertama. **Quantity PO** merupakan akumulasi quantity selama satu minggu, sedangkan **Description** memuat rincian tanggal dan quantity transaksi per tanggal:
+
+![po](../desc_po_line.png "PO Line") {#Figure379}

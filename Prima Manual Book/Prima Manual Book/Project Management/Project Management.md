@@ -155,7 +155,7 @@ Ikuti langkah berikut untuk memproses PO hingga Invoice untuk artikel renovasi:
 5. Klik **Complete** pada dokumen Material Receipt.
 6. Masuk ke tab **Invoice**, lalu klik **Complete**.
 
-Di latar belakang, sistem menjalankan proses **Asset Transfer** ke aset tujuan. Residual Value aset existing bertambah sesuai nilai renovasi, dan sistem otomatis mengkalkulasi ulang nilai depresiasi.
+Di latar belakang, sistem menjalankan proses **Asset Transfer** ke aset tujuan. Book Value aset existing bertambah sesuai nilai renovasi, dan sistem otomatis mengkalkulasi ulang nilai depresiasi.
 ### Project Renovasi (Perbaikan) Asset dengan Credit Note
 
 Project dengan Credit Note hanya dapat dilakukan jika seluruh biaya atau persediaan yang dipakai sudah di-_Issue to Project_. Sistem otomatis mengkalkulasi akumulasi Issue to Project dan membentuk Credit Note, sehingga tagihan project berkurang sesuai akumulasi tersebut.
