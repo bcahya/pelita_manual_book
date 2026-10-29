@@ -252,7 +252,7 @@ Berikut contoh jurnal Sales Invoice apabila terdapat selisih antara Price Actual
 
 ![sales](../jurnal_sales_invoice.png "Jurnal Sales Invoice") {#Figure367}
 
-## POS Order Untuk ICPL Inter Company
+## POS Order dengan Force Price List
 
 Pada transaksi POS Order, **Price Actual** biasanya mengikuti harga aktual di showroom atau outlet, yang dapat berbeda dengan **Price List**. Ketentuan ini berlaku untuk Sales Order **offline** dan **online**.
 
@@ -261,6 +261,7 @@ Untuk Sales Order **intercompany**, perlakuan harga berbeda. Price List yang dig
 - **Force Price List = Y** — Price Actual otomatis sama dengan Price List.
 - **Force Price List = N** — Price Actual dapat berbeda dengan Price List.
 
+![force](../force_pl.png "Konfigurasi Force Price List di Document Type") {#Figure379}
 ### Implementasi Sales Order dengan Force Price List
 
 1. Buka menu **Sales Order**.

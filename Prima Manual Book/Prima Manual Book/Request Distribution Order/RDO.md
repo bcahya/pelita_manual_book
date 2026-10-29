@@ -225,3 +225,10 @@ Setelah menentukan kapasitas dan allowance, user perlu melakukan konfigurasi pad
 - **Check SubBrand Capacity = No** — Sistem tidak memeriksa kapasitas locator tujuan saat memproses Inventory Move Receipt.
 
 Konfigurasi kapasitas ini hanya berlaku untuk product yang memiliki **Subbrand**. Product yang tidak menggunakan Subbrand tidak mengikuti pemeriksaan kapasitas berdasarkan konfigurasi tersebut.
+
+## RDO Pusat
+
+
+
+## RDO Outlet
+

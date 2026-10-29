@@ -380,3 +380,147 @@ Setelah konfigurasi pada Product selesai, lakukan proses Production Order Planni
 Sistem akan membuat dokumen Production berdasarkan Qty Produce dan Total Batch yang ditentukan. Qty hasil produksi pada masing-masing batch akan dibulatkan sesuai konfigurasi **Decimal On Production Qty** pada Product.
 
 ![prod](../prod_des.png "Production") {#Figure378}
+
+## Event Marketing
+
+Saat membuat Production Order Planning (POP), perusahaan menentukan **Event Marketing** yang menjadi target produksi tersebut — misalnya Natal, Imlek, Lebaran, atau Liburan. Dengan demikian, setiap POP dapat dikaitkan dengan event yang dituju, dan POP untuk setiap event akan berbeda-beda.
+
+### Konfigurasi Master Event Marketing
+
+Sebelum membuat POP, buat master Event Marketing terlebih dahulu:
+
+1. Buka menu **SIS Event Marketing**.
+2. Tentukan **Name** dan **Search Key** event marketing.
+
+![event](../event_mar.png "Master Event Marketing") {#Figure380}
+
+3. Klik **Save**.
+
+### Production Order Planning dengan Event Marketing
+
+Setelah master dibuat, hubungkan POP dengan Event Marketing melalui langkah berikut:
+
+1. Buka menu **SIS Production Order Planning**.
+2. Tentukan **Document Type**.
+3. Tentukan **Document Date** dan **Estimated Date**.
+4. Pada field **Event Marketing**, tentukan event yang menjadi tujuan produksi.
+
+![event](../pop_event.png "Implementasi di POP") {#Figure381}
+
+5. Tentukan **Production Type**: _Collaboration_ atau _Full_ dikerjakan oleh CMT.
+6. Klik **Save**.
+
+Dengan adanya informasi Event Marketing, proses produksi pada POP tersebut dapat diidentifikasi sebagai produksi untuk memenuhi event yang bersangkutan.
+
+## Master QC MO
+
+Master Quality Control (QC) bertujuan untuk menstandarkan spesifikasi ukuran produk garmen yang akan diproduksi serta menjadi acuan dalam pemeriksaan kualitas hasil produksi. Master ini membantu memastikan bahwa produk yang dihasilkan sesuai dengan standar ukuran yang telah ditetapkan untuk masing-masing produk.
+
+Master QC terdiri dari tiga master yang saling berkaitan, yaitu **Size Specification, Size, dan QC**. Size Specification digunakan untuk mendefinisikan bagian atau parameter pengukuran produk, Size digunakan untuk mendefinisikan variasi ukuran produk, sedangkan QC menghubungkan keduanya dan menyimpan detail standar ukuran untuk setiap kombinasi spesifikasi dan ukuran.
+
+### Master Size Specification
+
+Master Size Specification berfungsi untuk menyimpan spesifikasi pengukuran produk garmen. Master ini mendefinisikan bagian-bagian produk yang perlu diukur dalam proses QC, seperti panjang baju, lebar dada, lebar bahu, dan lingkar pinggang.
+
+Spesifikasi pengukuran yang telah dibuat dapat digunakan kembali pada berbagai model produk yang memiliki standar pengukuran serupa.
+
+Berikut langkah-langkah untuk membuat Master Size Specification:
+
+1. Buka menu **SIS Size Spec**.
+2. Tentukan **Search Key** dan **Name**.
+
+![size](../size_spec.png "Konfigurasi Master Size Specification") {#Figure381}
+
+3. Klik **Save**.
+
+### Master Size
+
+Master Size berfungsi untuk mendefinisikan variasi ukuran produk yang digunakan dalam proses produksi, misalnya XS, S, M, L, XL, atau ukuran numerik sesuai standar perusahaan.
+
+Master ini menjadi acuan dalam menentukan variasi ukuran produk pada Production Order Planning. Dengan memisahkan master Size dari spesifikasi pengukuran, ukuran yang sama dapat digunakan kembali pada berbagai model atau jenis produk.
+
+Berikut langkah-langkah untuk membuat Master Size:
+
+1. Buka menu **SIS Size**.
+2. Tentukan **Search Key** dan **Name**.
+
+![size](../size.png "Konfigurasi Master Size") {#Figure382}
+
+3. Klik **Save**.
+
+### Master QC
+
+Master QC berfungsi untuk menghubungkan Master Size Specification dengan Master Size serta menyimpan standar nilai ukuran untuk setiap kombinasi spesifikasi dan ukuran. Data ini menjadi acuan bagi tim produksi dan QC dalam memeriksa kesesuaian hasil produksi terhadap standar ukuran yang telah ditentukan.
+
+Berikut langkah-langkah untuk membuat Master QC:
+
+1. Buka menu **SIS QC**.
+2. Tentukan **Search Key** dan **Name**.
+
+![qc](../qc.png "Konfigurasi Master QC") {#Figure383}
+
+3. Klik **Save** untuk menyimpan data.
+4. Masuk ke tab **Line**.
+5. Tentukan **Size Spec** sesuai spesifikasi pengukuran yang digunakan.
+6. Tentukan **Size** sesuai variasi ukuran produk.
+7. Input **Size Detail** sesuai standar nilai ukuran untuk kombinasi Size Spec dan Size tersebut.
+
+![qc](../qc_line.png "Konfigurasi Master QC") {#Figure384}
+
+8. Klik **Save**.
+
+### Implementasi Master QC pada Production Order Planning
+
+Setelah Master QC dibuat, user dapat menggunakannya pada dokumen Production Order Planning (POP) dengan langkah-langkah berikut:
+
+1. Buka menu **SIS Production Order Planning**.
+2. Tentukan **Document Type**.
+3. Tentukan **Document Date** dan **Estimated Date**.
+4. Pada field **QC**, pilih Master QC yang akan digunakan untuk proses produksi.
+
+![pop](../qc_pop.png "Implementasi QC di POP") {#Figure385}
+
+5. Klik **Save**.
+6. Lanjutkan proses Production Order Planning seperti biasa, mulai dari proses generate BoM hingga Manufacturing Order dan Production.
+
+Master QC yang dipilih pada Production Order Planning menjadi acuan spesifikasi ukuran produk yang akan diproduksi dan diperiksa kualitasnya.
+
+## Master MO
+
+Master MO merupakan master kode produksi yang digunakan untuk mengidentifikasi proses produksi suatu produk berdasarkan Sub Brand. Setiap Sub Brand memiliki kode produksi masing-masing sehingga proses produksi dapat dibedakan sesuai Sub Brand yang digunakan.
+
+Kode produksi untuk setiap Sub Brand selanjutnya dibedakan berdasarkan kategori produksi, yaitu Reguler, Online, Vermak, dan PRL. Oleh karena itu, setiap Sub Brand memiliki Master MO tersendiri yang berisi kategori kode produksi sesuai kebutuhan.
+
+### Membuat Master MO Reff
+
+Berikut langkah-langkah untuk membuat Master MO:
+
+1. Buka menu **SIS MO Reff**.
+2. Tentukan **Document Type** yang akan digunakan untuk Master MO tersebut.
+3. Tentukan **Sub Brand** yang terkait dengan kode produksi.
+
+![mo](../mo.png "Konfigurasi Master MO") {#Figure385}
+
+4. Masuk ke tab **MO Reff Line**.
+5. Tentukan **Search Key** dan **Name** untuk masing-masing kategori kode produksi, seperti Reguler, Online, Vermak, dan PRL.
+
+![mo](../mo_ref.png "Konfigurasi Master MO") {#Figure386}
+
+6. Klik **Save**.
+
+### Implementasi Master MO pada Production Order Planning
+
+Setelah Master MO dibuat, user dapat menggunakannya pada dokumen Production Order Planning (POP) dengan langkah-langkah berikut:
+
+1. Buka menu **SIS Production Order Planning**.
+2. Tentukan **Document Type**.
+3. Tentukan **Document Date** dan **Estimated Date**.
+4. Tentukan **Event Marketing** sesuai kebutuhan.
+5. Pada field **MO Reff Line**, pilih kode produksi yang akan digunakan untuk POP tersebut.
+
+
+![mo](../mo_pop.png "Implementasi MO Reff di POP") {#Figure387}
+
+6. Klik **Save**.
+
+>**Catatan:** Field MO Reff Line akan menampilkan pilihan kode produksi apabila Document Type pada Production Order Planning sama dengan Document Type yang dikonfigurasi pada Master MO. Selain itu, produk yang dapat diproses pada POP harus sesuai dengan Sub Brand yang telah ditentukan pada Master MO. Dengan demikian, kode produksi yang digunakan akan mengikuti Sub Brand dan kategori produksi yang dipilih.
