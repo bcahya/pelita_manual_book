@@ -108,13 +108,16 @@ Contoh 2:
 ## Proses Purchase Order Manual
 
 1. Buka menu **Purchase Order**
-2. Input **Business Partner**
-3. Input **warehouse** untuk penempatan produk
-4. Masuk ke tab **PO Line**
-5. Pilih **product** yang akan diproses
-6. Input **quantity** product
-7. Klik **save**
-8. Klik **complete** pada dokumen
+2. Tentukan **Target Document Type** yang akan diproses.
+3. Input **Business Partner**
+4. Input **warehouse** untuk penempatan produk
+5. Tentukan **Product** pada header jika diperlukan (opsional)
+6. Tentukan **Style** pada header jika diperlukan (opsional)
+7. Masuk ke tab **PO Line**
+8. Pilih **product** yang akan diproses
+9. Input **quantity** product
+10. Klik **save**
+11. Klik **complete** pada dokumen
 ## Pengelolaan Purchase Order
 ### Perubahan Business Partner pada Purchase Order
 
@@ -286,7 +289,11 @@ Sebelum membuat PO Expense, lakukan konfigurasi pada **Document Type** yang akan
 8. Klik **Save**.
 9. Klik **Complete** pada dokumen.
 
-PO Expense yang telah _Complete_ tidak menghasilkan dokumen **Material Receipt (MR)**.
+Purchase Order (PO) dengan tipe **PO Expense** yang telah berstatus _Complete_ tidak akan menghasilkan dokumen Material Receipt (MR), baik secara otomatis maupun manual.
+
+Sistem tidak mengizinkan pembuatan MR atas PO Expense. Apabila user mencoba membuat MR secara manual berdasarkan PO Expense tersebut, sistem akan menampilkan validasi bahwa PO Expense tidak diperbolehkan untuk membuat Material Receipt.
+
+![mr](../error_mr_po_ex.png "Validasi Material Receipt atas PO Expense") {#Figure387}
 ### Invoice Purchase Order Expense
 
 Invoice atas PO Expense dapat diproses melalui dua mekanisme — satu PO atau multi PO.
@@ -569,3 +576,33 @@ Informasi Cost Center ini juga otomatis tersalin ke:
 - **Purchase Invoice**
 
 Dengan demikian, seluruh transaksi tersebut dapat ditelusuri dan dikelompokkan berdasarkan **Cost Center**.
+
+## Purchase Order Project
+
+Sebelum memulai suatu project, user biasanya perlu membuat Purchase Order (PO) untuk memenuhi kebutuhan material maupun biaya lainnya yang berkaitan dengan project tersebut. Oleh karena itu, setiap PO yang berhubungan dengan project perlu memiliki relasi ke master Project yang telah dibuat sebelumnya.
+
+Pada header Purchase Order, field **Project** secara default tidak bersifat mandatory karena tidak semua transaksi PO berkaitan dengan project. Namun, kondisi tersebut memungkinkan user lupa mengisi Project pada PO yang sebenarnya digunakan untuk kebutuhan project.
+
+Untuk meminimalisir kesalahan tersebut, sistem menyediakan konfigurasi tambahan pada **Document Type Purchase Order** yang berfungsi untuk menentukan apakah field Project wajib diisi.
+
+### Konfigurasi Document Type Purchase Order Project
+
+Berikut langkah-langkah untuk mengaktifkan validasi Project pada Purchase Order:
+
+1. Buka menu **Document Type**.
+2. Pilih Document Type Purchase Order yang akan digunakan khusus untuk transaksi project.
+3. Centang field **Project**.
+
+![project](../project_po.png "Konfigurasi Document Type") {#Figure387}
+
+4. Klik **Save** untuk menyimpan konfigurasi.
+
+### Mekanisme Validasi
+
+Apabila field **Project** pada Document Type dicentang, maka field Project pada header Purchase Order akan menjadi mandatory. Dengan demikian, user wajib menentukan Project ketika membuat PO menggunakan Document Type tersebut.
+
+Jika user belum mengisi Project, sistem akan menampilkan validasi sehingga dokumen PO tidak dapat disimpan maupun di-Complete sebelum Project ditentukan.
+
+Sebaliknya, apabila field Project pada Document Type tidak dicentang, maka field Project pada header Purchase Order tetap bersifat opsional.
+
+![project](../error_po_project.png "Apabila Project Belum di Konfigurasi") {#Figure388}

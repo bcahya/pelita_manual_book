@@ -825,19 +825,6 @@ Berikut contoh report harga jual artikel per ICPL:
 
 ![report](../harga_jual_icpl.png "Report Harga Jual Artikel per ICPL") {#Figure292}
 
-## Laporan Kartu Stock Bahan
-
-Langkah Akses Laporan Kartu Stock Bahan:
-
-1. Buka menu **SIS Report Kartu Stock Bahan**.
-2. Tentukan **Transaction Date**.
-3. Tentukan **Nomor PO** atau **Material Receipt** yang akan diproses.
-4. Klik **ok**.
-
-Berikut contoh report kartu stock bahan:
-
-![bahan](../kartu_stock_bahan.png "Kartu Stock Bahan") {#Figure304}
-
 ## Report PO Project
 
 Langkah Akses Report Project yang mencakup PO Besar dan PO Kecil:

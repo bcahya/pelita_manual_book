@@ -189,9 +189,9 @@ Setiap transaksi Bank/Cash Transfer memperbarui saldo pada rekening asal dan rek
 
 Sebelum melakukan bank/cash transfer, perlu dilakukan konfigurasi untuk **Business Partner** saat proses bank/cash transfer:
 
-| Parameter                  | Configured Value                                                   |
-| -------------------------- | ------------------------------------------------------------------ |
-| SIS_BANKTRANSFER_BP_ID     | **C_BPartner_ID** yang akan digunakan sesuai kebijakan perusahaan. |
+| Parameter              | Configured Value                                                   |
+| ---------------------- | ------------------------------------------------------------------ |
+| SIS_BANKTRANSFER_BP_ID | **C_BPartner_ID** yang akan digunakan sesuai kebijakan perusahaan. |
 
 "System Configurator"{#Tabel16}
 
