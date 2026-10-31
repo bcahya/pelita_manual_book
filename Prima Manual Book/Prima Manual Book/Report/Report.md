@@ -1051,6 +1051,20 @@ Ikuti langkah berikut untuk mengakses Report Print Out Sales Order:
 4. Pada Process Detail Report, pilih **Faktur Penjualan** 
 5. Klik **OK**.
 
-Berikut contoh Print Out Sales Order:
+Berikut contoh Print Out Sales Order PPG:
 
 ![so](../so_ppg.png "Print Out Sales Order") {#Figure374}
+
+## Print Out Sales Order SCI
+
+Ikuti langkah berikut untuk mengakses Report Print Out Sales Order SCI:
+
+1. Buka menu **Sales Order**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Document SO**.
+4. Pada Process Detail Report, pilih **Faktur Putus FG** 
+5. Klik **OK**.
+
+Berikut contoh Print Out Sales Order SCI:
+
+![so](../so_sci.png "Print Out Sales Order SCI") {#Figure389}

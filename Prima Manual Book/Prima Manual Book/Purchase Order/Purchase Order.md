@@ -113,6 +113,10 @@ Contoh 2:
 4. Input **warehouse** untuk penempatan produk
 5. Tentukan **Product** pada header jika diperlukan (opsional)
 6. Tentukan **Style** pada header jika diperlukan (opsional)
+
+
+![style](../product_style.png "Konfigurasi Product dan Style") {#Figure389}
+
 7. Masuk ke tab **PO Line**
 8. Pilih **product** yang akan diproses
 9. Input **quantity** product

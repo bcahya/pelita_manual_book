@@ -14,11 +14,27 @@ Ikuti langkah berikut untuk mengakses Forecast Report:
 
 5. Klik Ok
 
-Sistem menampilkan informasi ketersediaan stok produk sesuai kriteria yang dipilih, meliputi data produk pada warehouse dan locator yang ditentukan.
+Sistem menampilkan informasi ketersediaan stok produk sesuai kriteria yang dipilih, meliputi data produk pada warehouse dan locator yang ditentukan. Forecast Report menyediakan informasi berikut untuk membantu user memantau ketersediaan material, kebutuhan pembelian, dan penggunaan material di gudang:
 
-![Forecast Report](../fore_cast.png "Forecast Report") {#Figure 95}
+![Forecast Report](../fore_minimum.png "Forecast Report") {#Figure 95}
 
-Forecast Report menyediakan informasi berikut untuk membantu user memantau ketersediaan material, kebutuhan pembelian, dan penggunaan material di gudang:
+Kolom **Minimum Stock**, **UoM**, **Manufacturing Order**, dan **Production Order Planning (POP)** perlu ditambahkan secara manual di level tenant. Ikuti langkah berikut untuk menambahkan kolom-kolom tersebut ke Forecast Report:
+
+1. Buka menu **Print Format**.
+2. Cari print format **Forecast**.
+3. Masuk ke tab **Format Item**.
+4. Klik **New**.
+5. Isi field **Name** dan **Print Text** sesuai kolom yang akan ditambahkan: **Minimum Stock**, **UoM**, **Manufacturing Order**, dan **Production Order Planning**.
+6. Pada field **Column**, pilih kolom berikut:
+
+- **SIS_POP_IDs_Production Order Plannings** untuk Production Order Planning.
+- **SIS_MO_IDs_Manufacturing Orders** untuk Manufacturing Order.
+- **C_UOM_ID_UOM** untuk UoM.
+- **Level_Min_Minimum Level** untuk Minimum Stock.
+
+7. Klik **Save**.
+
+Setelah dikonfigurasi, kolom-kolom tersebut akan muncul pada Forecast Report.
 ## Stock On Hand
 
 Stock On Hand menampilkan jumlah stok material yang tersedia di gudang secara aktual. Sistem akan memperbarui jumlah stok secara otomatis setiap kali terjadi transaksi yang memengaruhi persediaan, seperti:

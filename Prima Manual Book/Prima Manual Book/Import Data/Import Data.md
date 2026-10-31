@@ -209,4 +209,4 @@ Berikut contoh hasil import PO per minggu:
 
 Berikut contoh PO Line pada PO minggu pertama. **Quantity PO** merupakan akumulasi quantity selama satu minggu, sedangkan **Description** memuat rincian tanggal dan quantity transaksi per tanggal:
 
-![po](../desc_po_line.png "PO Line") {#Figure379}
+![po](../po_week_line.png "PO Line") {#Figure379}

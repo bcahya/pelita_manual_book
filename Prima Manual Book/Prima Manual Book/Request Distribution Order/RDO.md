@@ -32,8 +32,8 @@ Pada konfigurasi Document Type RDO, terdapat beberapa field utama yang wajib dii
 | Document type pembatalan RDO | Document type untuk mencatat pembatalan transaksi RDO                                                                                                                                                                                                            |
 | Product Access               | Apabila **Di-Centang** maka transaksi akan difilterberdasarkan produk sesuai konfigurasi                                                                                                                                                                         |
 | Check SubBrand Capacity      | Apabila **Di-Centang**, sistem akan memeriksa kapasitas locator sebelum melakukan complete RDO. Jika kapasitas masih mencukupi, sistem mengizinkan transaksi diproses. Jika kapasitas terlampaui, sistem menolak transaksi dan menampilkan error **Over Capacity |
-| RDO Type                     | ada 2 tipe yaitu outlet dan pusat.                                                                                                                                                                                                                               |
-| Multi Warehouse Tujuan       | Apabila di-centang, maka warehouse tujuan dalam satu RDO bisa lebih dari satu. Jika tidak maka warehouse tujuan hanya bisa satu.                                                                                                                                 |
+| RDO Type                     | Menentukan tipe RDO. Terdapat dua tipe: **Outlet** dan **Pusat**                                                                                                                                                                                                 |
+| Multi Warehouse Tujuan       | - Jika dicentang, satu RDO dapat memiliki lebih dari satu warehouse tujuan. Jika tidak dicentang, RDO hanya dapat memiliki satu warehouse tujuan.                                                                                                                |
 "Konfigurasi RDO"{#Tabel4}
 ## Alur Proses Request Distribution Order di Sistem
 
@@ -91,7 +91,7 @@ Berikut ketentuan pembatalan berdasarkan status dokumen Delivery:
 
 ![recipt](../receipt.png "Document Receipt Void") {#Figure247}
 
-## Generate Multi Movement Tujuan
+## RDO Multi Movement Tujuan
 
 Saat melakukan RDO, warehouse tujuan untuk setiap produk dapat berbeda-beda. Untuk mengakomodasi kondisi ini, sistem mendukung **RDO dengan multi warehouse tujuan**.
 
@@ -191,6 +191,28 @@ Setelah Enter diklik, sistem otomatis membuat **Move Line** dengan ketentuan ber
 
 > **Catatan:** Quantity yang diproses tidak boleh melebihi quantity yang dikonfigurasi di RDO Line. Jika melebihi, Inventory Move Delivery tidak dapat di-complete.
 
+### Langkah Inventory Move Delivery dengan Barcode
+
+1. Buka menu **Inventory Move**.
+2. Tentukan **Document Type** yang telah dikonfigurasi.
+3. Tentukan **Warehouse** asal dan **Warehouse** tujuan.
+4. Klik **Save**.
+
+Saat dokumen disimpan, field **Using Barcode** pada header Inventory Move otomatis tercentang.
+
+5. Input kode artikel pada field **Product Value** atau scan melalui **barcode scanner**.
+6. Tentukan **Qty Barcode**.
+
+![qty](../qty_barcode.png "Qty Barcode") {#Figure334}
+
+7. Klik **Enter** pada PC atau perangkat.
+
+Setelah Enter diklik, sistem otomatis membuat **Move Line** atas produk tersebut dengan ketentuan berikut:
+
+- **Locator asal dan tujuan** — sesuai konfigurasi di header.
+- **Quantity** — sesuai Qty Barcode yang telah diinput.
+
+![qty](../qty_up.png "Move Line") {#Figure335}
 ### Langkah Inventory Move Receipt (Penerimaan) Manual — RDO Sub Brand
 
 Setelah Inventory Move Delivery selesai diproses, lakukan penerimaan secara manual:
