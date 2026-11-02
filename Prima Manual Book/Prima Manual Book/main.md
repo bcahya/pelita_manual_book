@@ -44,10 +44,10 @@
 .include {Unit of Measure Conversion/Implementasi di Purchase Order.md}
 .include {Unit of Measure Conversion/Implementasi di Movement.md}
 .include {Routing/Routing.md}
-.include {POP, BoM dan MO/Bill of Material.md}
-.include {POP, BoM dan MO/Manufacturing Order.md}
-.include {POP, BoM dan MO/Production Order Planning.md}
-.include {POP, BoM dan MO/Production Order Planning Subcon.md}
+.include {POP BoM dan MO/Bill of Material.md}
+.include {POP BoM dan MO/Manufacturing Order.md}
+.include {POP BoM dan MO/Production Order Planning.md}
+.include {POP BoM dan MO/Production Order Planning Subcon.md}
 .include {Pelita POP Visual Data/Pelita POP Visual Data.md}
 .include {Master Production Schedule/MPS.md}
 .include {Request Distribution Order/RDO.md}
