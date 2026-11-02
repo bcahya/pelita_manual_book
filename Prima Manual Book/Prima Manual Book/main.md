@@ -1,4 +1,4 @@
-.docname {20261015 Pelita Prima Manual Book}
+.docname {20261102 Pelita Prima Manual Book}
 .doctype {paged}
 .doclang {English}
 .theme {paperwhite} layout:{latex}
@@ -11,7 +11,7 @@
 .pagemargin {bottomright}
     .currentpage
 .pagemargin {bottomleft}
-    Versi 2026-10-15
+    Versi 2026-11-02
 .pageformat margin:{2cm}
 .pageformat bordertop:{1px} borderbottom:{1px}
 
@@ -44,10 +44,10 @@
 .include {Unit of Measure Conversion/Implementasi di Purchase Order.md}
 .include {Unit of Measure Conversion/Implementasi di Movement.md}
 .include {Routing/Routing.md}
-.include {POP, BoM dan MO/Bill of Material.md}
-.include {POP, BoM dan MO/Manufacturing Order.md}
-.include {POP, BoM dan MO/Production Order Planning.md}
-.include {POP, BoM dan MO/Production Order Planning Subcon.md}
+.include {POP BoM dan MO/Bill of Material.md}
+.include {POP BoM dan MO/Manufacturing Order.md}
+.include {POP BoM dan MO/Production Order Planning.md}
+.include {POP BoM dan MO/Production Order Planning Subcon.md}
 .include {Pelita POP Visual Data/Pelita POP Visual Data.md}
 .include {Master Production Schedule/MPS.md}
 .include {Request Distribution Order/RDO.md}
