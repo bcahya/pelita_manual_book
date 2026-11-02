@@ -27,16 +27,31 @@ Pada Production Order Planning, routing melibatkan perpindahan barang dari wareh
 - **Document Type Transfer (Out)** — Digunakan untuk perpindahan dari warehouse ke intransit.
 - **Document Type Penerimaan (In)** — Digunakan untuk perpindahan dari intransit ke gudang tujuan.
 
-Konfigurasi ini dilakukan di menu **Warehouse and Locator** untuk masing-masing warehouse. Ikuti langkah berikut:
+Konfigurasi dilakukan melalui menu **Warehouse and Locator** untuk masing-masing warehouse dan locator. Berikut langkah-langkahnya:
+
+### Konfigurasi pada Warehouse
 
 1. Buka menu **Warehouse and Locator**.
-2. Tentukan **Search Key** dan **Name** warehouse tersebut.
-3. Pada field **DocType Movement Out**, pilih document type sesuai konfigurasi.
-4. Pada field **DocType Movement In**, pilih document type sesuai konfigurasi.
-5. Klik save.
+2. Tentukan **Search Key** dan **Name** untuk warehouse.
+3. Tentukan **Address** warehouse.
+4. Pada field **DocType Movement Out**, pilih Document Type sesuai konfigurasi.
+5. Pada field **DocType Movement In**, pilih Document Type sesuai konfigurasi.
 
+![wh](../wh_trf.png "Konfigurasi DocType Movement di Warehouse") {#Figure314}
 
-![wh](../wh_trf.png "Konfigurasi DocType Movement") {#Figure314}
+6. Klik **Save**.
+
+### Konfigurasi pada Locator
+
+1. Masuk ke tab **Locator**.
+2. Pilih locator yang akan dikonfigurasi.
+3. Pada field **DocType Movement Out**, pilih Document Type sesuai konfigurasi.
+4. Pada field **DocType Movement In**, pilih Document Type sesuai konfigurasi.
+
+![wh](../doc_locator.png "Konfigurasi DocType Movement di Locator") {#Figure391}
+
+5. Klik **Save**.
+6. Ulangi langkah 2–5 untuk locator lainnya yang perlu dikonfigurasi.
 
 Berikut contoh implementasi konfigurasi ini di Production Order Planning (POP):
 

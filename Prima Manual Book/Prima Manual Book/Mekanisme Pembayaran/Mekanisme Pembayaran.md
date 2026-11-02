@@ -195,6 +195,11 @@ Sebelum melakukan bank/cash transfer, perlu dilakukan konfigurasi untuk **Busine
 
 "System Configurator"{#Tabel16}
 
+Nilai **C_BPartner_ID** yang diinput harus sesuai dengan data Business Partner yang terdaftar pada master Business Partner. Jika nilai yang diinput tidak valid atau tidak ditemukan pada master Business Partner, sistem akan menampilkan error ketika dokumen **Bank/Cash Transfer** diproses.
+
+![error](../error_bt.png "Pesan Error Ketika C_BPartner_ID Tidak Sesuai") {#Figure390}
+
+Oleh karena itu, sebelum melakukan transaksi, pastikan nilai C_BPartner_ID telah sesuai dan Business Partner yang dimaksud sudah tersedia pada master data.
 ## Konfigurasi Charge Bank/Cash Transfer
 
 Transaksi Bank/Cash Transfer dapat memiliki konfigurasi **Charge** yang berbeda, yang akan berpengaruh pada jurnal ayat silang yang terbentuk. Konfigurasi Charge dilakukan di level **Document Type**.
@@ -337,3 +342,11 @@ Apabila Payment atau Receipt yang akan di-reverse sudah memiliki **Bank Statemen
 ![bank](../bank_voi.png "Bank Statement Void") {#Figure326}
 
 Dengan demikian, histori transaksi tetap tersedia, sementara transaksi dan Bank Statement yang terkait tidak lagi dianggap sebagai transaksi aktif.
+
+## Informasi Rekonsiliasi di Payment and Receipt
+
+Payment atau Receipt pada akhirnya akan diproses rekonsiliasi. Saat proses rekonsiliasi dilakukan, field **Reconciled** pada menu **Payment and Receipt** otomatis tercentang, yang menandakan bahwa payment atau receipt tersebut sudah direkonsiliasi.
+
+![rekon](../rekon1.png "Informasi Rekonsiliasi di menu Payment and Receipt") {#Figure389}
+
+Selain itu, header Payment and Receipt kini memuat informasi **Bank Statement Line**. Dengan informasi ini, user dapat langsung mengetahui payment atau receipt tersebut direkonsiliasi pada Bank Statement mana, serta apakah transaksinya berupa bank masuk atau bank keluar, tanpa perlu mencarinya di menu **Bank/Cash Statement**.

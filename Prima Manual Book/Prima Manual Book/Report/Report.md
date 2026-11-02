@@ -1068,3 +1068,17 @@ Ikuti langkah berikut untuk mengakses Report Print Out Sales Order SCI:
 Berikut contoh Print Out Sales Order SCI:
 
 ![so](../so_sci.png "Print Out Sales Order SCI") {#Figure389}
+
+## Print Out MOWO (POP)
+
+Ikuti langkah berikut untuk mengakses Print Out MOWO (POP):
+
+1. Buka menu **Production Order Planning**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Document POP**.
+4. Pada Process Detail Report, pilih **POP Sheet** 
+5. Klik **OK**.
+
+Berikut contoh Print Out MOWO (POP):
+
+![pop](../print_pop_up.png "Print Out POP") {#Figure391}
