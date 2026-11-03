@@ -1082,3 +1082,19 @@ Ikuti langkah berikut untuk mengakses Print Out MOWO (POP):
 Berikut contoh Print Out MOWO (POP):
 
 ![pop](../print_pop_up.png "Print Out POP") {#Figure391}
+
+## Print Out Bank Statement
+
+Ikuti langkah berikut untuk mengakses Print Out Bank Statement:
+
+1. Buka menu **Bank/Cash Statement**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Bank Statement**.
+4. Pada Process Detail Report, pilih **Bank Masuk** atau  **Bank Keluar**
+5. Klik **OK**.
+
+Berikut contoh Print Out Bank Statement:
+
+![bank](../print_bank_masuk.png "Print Out Bank Masuk") {#Figure392}
+
+![bank](../print_bank_keluar.png "Print Out Bank Keluar") {#Figure393}
