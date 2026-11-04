@@ -76,6 +76,35 @@ Untuk mencegah kesalahan tersebut, aktifkan konfigurasi Product Access atau Prod
 Jika produk pada Requisition berada di luar Product Access atau Product Category Access yang dikonfigurasi, Purchase Order tetap ter-generate namun PO Line tidak akan ter-create. Saat sistem mencoba membuat PO Line secara otomatis, PO juga tidak dapat diproses lebih lanjut.
 
 ![po](../po_kosong.png "PO Hasil Generate") {#Figure339}
+
+### PO From Requisition
+
+Purchase Order (PO) yang dibuat dari Requisition dapat diproses dengan quantity penuh maupun sebagian dari quantity Requisition. Namun, terdapat beberapa ketentuan yang perlu diperhatikan dalam menentukan quantity PO, yaitu:
+
+1. **Product dengan Minimum Order Quantity (MOQ)**
+    
+    - Jika Qty Requisition lebih kecil dari MOQ, Qty PO dapat diproses hingga sebesar MOQ, baik secara penuh maupun sebagian, sesuai ketentuan sistem. Dengan demikian, Qty PO dapat lebih besar dari Qty Requisition apabila Qty Requisition berada di bawah MOQ.
+    - Jika Qty Requisition lebih besar dari MOQ, Qty PO maksimal adalah Qty Requisition.
+
+2. **Product tanpa MOQ**  
+    Qty PO yang dapat diproses mengikuti Qty Requisition. Sistem tidak mengizinkan total Qty PO melebihi Qty Requisition.
+    
+3. **Product dengan MOQ dan Order Pack Quantity**  
+    Jika Qty Requisition lebih besar dari MOQ dan product memiliki konfigurasi Order Pack Quantity, sistem akan menyesuaikan Qty PO berdasarkan MOQ dan kelipatan Order Pack Quantity, dengan tetap memperhatikan batas Qty Requisition.
+    
+    **Contoh:** MOQ sebesar 100 dan Order Pack Quantity sebesar 10. Jika Qty PO diinput 102, sistem akan menyesuaikannya menjadi 110. Apabila user mengubah Qty PO menjadi 102, sistem akan kembali menyesuaikannya menjadi 110 sesuai ketentuan Order Pack Quantity.
+
+Satu Requisition dapat digenerate menjadi beberapa Purchase Order sesuai kebutuhan perusahaan. Namun, sistem akan memvalidasi total quantity PO yang telah diproses agar tidak melebihi quantity yang diperbolehkan pada Requisition.
+
+**Contoh:**  
+Satu Requisition memiliki Qty 200 tanpa konfigurasi MOQ. Requisition tersebut diproses menjadi dua PO:
+
+- PO pertama: Qty 150
+- PO kedua: Qty 70
+
+PO pertama dapat diproses karena Qty 150 masih berada dalam batas Qty Requisition. Setelah PO pertama diproses, Qty yang masih tersedia untuk digenerate menjadi PO adalah 50. Oleh karena itu, PO kedua hanya dapat diproses maksimal sebanyak 50. Jika Qty PO kedua tetap 70, sistem akan menolak proses tersebut karena total Qty PO melebihi Qty Requisition.
+
+Dengan demikian, user perlu memastikan Qty yang akan diproses pada setiap PO tidak melebihi quantity yang masih tersedia pada Requisition, dengan tetap memperhatikan ketentuan MOQ dan Order Pack Quantity jika berlaku.
 ## MOQ (Minimum Order Quantity)
 
 Sistem menggunakan **Minimum Order Quantity (MOQ)** untuk menentukan batas minimum quantity yang dapat dipesan pada Purchase Order berdasarkan quantity pada Requisition.
@@ -165,9 +194,17 @@ Sistem otomatis mencatat warehouse baru di tab **Listing PO Warehouse** pada dok
 ![Listing WH](../Listing_WH.png "Listin Warehouse") {#Figure96}
 
 **Catatan:** Perubahan Warehouse hanya dapat dilakukan pada Purchase Order yang masih berstatus **Complete** dan **Material Receipt** masih draft.
-### Menutup Purchase Order
+### Close Purchase Order
 
-Purchase Order berstatus **Complete** dapat ditutup (_Close_) jika proses pembelian telah selesai atau tidak ada transaksi lanjutan. Lakukan penutupan melalui menu **SIS Close Document PO**. Ikuti langkah berikut:
+Dalam periode pembelian bulanan maupun tahunan, perusahaan dapat memiliki banyak dokumen Purchase Order (PO). Untuk memudahkan pengelolaan dokumen, PO yang telah berstatus **Complete** dan proses pembeliannya telah selesai dapat ditutup secara otomatis oleh sistem.
+
+Proses auto close dijalankan melalui scheduler pada menu **SIS Close Document PO**. Sebelum menjalankan proses tersebut, user perlu menentukan konfigurasi **Closed In Days PO** pada Document Type Purchase Order.
+
+![close](../close_po2.png "Konfigurasi Closed In Days di Document Type Purchase Order") {#Figure394}
+
+Nilai Closed In Days PO digunakan untuk menentukan jumlah hari sejak **Date Ordered** sebelum PO dapat ditutup secara otomatis. Setelah melewati periode yang ditentukan, PO yang memenuhi kondisi akan diproses menjadi Closed oleh sistem.
+
+Proses penutupan PO dilakukan melalui menu **SIS Close Document PO**. Ikuti langkah berikut:
 
 1. Buka menu **SIS Close Document PO**
 2. Input **Date Order From** dan **To**
@@ -274,9 +311,10 @@ Sebelum membuat PO Expense, lakukan konfigurasi pada **Document Type** yang akan
 3. Pada field **Document Base Type**, pilih **Purchase Order**.
 4. Centang field **PO Expense**.
 
-![doc type](../doc_po_expense.png "Konfigurasi Document Type PO Expense") {#Figure285}
+![doc type](../doc_po_expense2.png "Konfigurasi Document Type PO Expense") {#Figure285}
 
-5. Klik **Save**.
+5. Pada field **Document Type Invoice Expense**, pilih Document Type AP Invoice yang digunakan untuk transaksi PO Expense.
+6. Klik **Save**.
 
 ### Proses Purchase Order Expense
 
@@ -304,7 +342,7 @@ Invoice atas PO Expense dapat diproses melalui dua mekanisme — satu PO atau mu
 #### Satu Purchase Order
 
 1. Buka menu **Purchase Invoice and Credit/Debit Note**.
-2. Tentukan **Target Document Type**.
+2. **Target Document Type** akan terisi otomatis sesuai konfigurasi di document type Purchase Order.
 3. Tentukan **Business Partner**.
 4. Klik **Create Lines From**.
 5. Input nomor PO yang akan diproses.
@@ -322,7 +360,8 @@ Invoice atas PO Expense dapat diproses melalui dua mekanisme — satu PO atau mu
 1. Buka menu **SIS Generate Invoice PO Expense**.
 2. Klik **Requery**.
 3. Tentukan nomor dokumen PO yang akan diproses.
-4. Klik **SIS Generate Invoice PO Expense**.
+4. **Document Type** akan terisi otomatis sesuai konfigurasi di Document Type Purchase Order.
+5. Klik **SIS Generate Invoice PO Expense**.
 
 
 ![invoice](../inv_po_expense.png "Multi PO Expense") {#Figure287}
@@ -353,12 +392,13 @@ Sebelum melakukan proses Vendor RMA, lakukan konfigurasi pada Document Type Vend
 2. Klik **New**.
 3. Isi **Name** sesuai kebutuhan operasional.
 4. Pada field **Document Base Type**, pilih **Purchase Order**.
-5. Centang field **Auto Return Material**.
-6. Tentukan **Document Type** dan **Document Action** atas return.
+5. Pada field **SO Sub Type** — Pilih **Return Material** untuk klasifikasi dokumen RMA.
+6. Centang field **Auto Return Material**.
+7. Tentukan **Document Type** dan **Document Action** atas return.
 
 ![vendor rma](../doc_rma.png "Document Type Vendor RMA") {#Figure293}
 
-7. Klik **Save**.
+8. Klik **Save**.
 
 ### Konfigurasi Document Type Return to Vendor
 

@@ -63,8 +63,11 @@ Stock opname dapat dilakukan dengan beberapa frekuensi: **harian**, **mingguan**
 
 ![doc type](../doc_type_so.png "Konfigurasi Document Type") {#Figure369}
 
-5. Klik **Save**.
+5. Field **Product Access** — Membatasi produk secara spesifik yang dapat diproses dalam transaksi stock opname.
+6. Field **Product Category Access** — Membatasi produk yang dapat diproses berdasarkan kategori produk yang dikonfigurasi di level Product Category.
+7. Klik **Save**.
 
+Jika Document Type yang digunakan pada Stock Opname dikonfigurasi dengan **Product Access** atau **Product Category Access**, sistem hanya memproses produk yang telah ditentukan pada Document Type tersebut. Produk di luar konfigurasi tidak akan muncul saat user melakukan pencarian produk.
 #### Periode Stock Opname
 
 - **Stock Opname Harian** — Dilakukan setiap hari, umumnya untuk barang dengan perputaran tinggi, bernilai tinggi, atau yang perlu diawasi ketat. Dapat dilakukan hanya untuk beberapa produk.

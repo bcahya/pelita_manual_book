@@ -189,7 +189,10 @@ Setelah Enter diklik, sistem otomatis membuat **Move Line** dengan ketentuan ber
 7. Klik **Save**.
 8. Klik **Complete** pada dokumen.
 
-> **Catatan:** Quantity yang diproses tidak boleh melebihi quantity yang dikonfigurasi di RDO Line. Jika melebihi, Inventory Move Delivery tidak dapat di-complete.
+> **Catatan:** 
+> - Quantity yang diproses tidak boleh melebihi quantity yang dikonfigurasi di RDO Line. Jika melebihi, Inventory Move Delivery tidak dapat di-complete.
+> - Jika **Product Value** yang diinput sama dengan input sebelumnya, sistem mengakumulasi quantity pada Move Line yang sudah ada.
+> - Jika **Product Value** berbeda, sistem membuat Move Line Delivery baru.
 
 ### Langkah Inventory Move Delivery dengan Barcode
 
@@ -411,3 +414,34 @@ Pada RDO Outlet, Warehouse From dapat multi, sedangkan Warehouse To hanya satu. 
 
 Saat RDO di-complete, sistem otomatis membuat dokumen **Inventory Move Delivery** dan **Inventory Move Receipt** (jika dikonfigurasi auto receipt). Proses Inventory Move Delivery dan Receipt sama seperti sebelumnya, dan Receipt dapat dibuat otomatis atau manual sesuai konfigurasi di Document Type RDO.
 
+## RDO untuk POP
+
+Pada proses Production Order Planning (POP), sistem akan membuat Inventory Move secara otomatis ketika Manufacturing Order (MO) digenerate, berdasarkan Routing yang telah ditentukan pada masing-masing produk.
+
+Namun, pada kondisi tertentu, perpindahan bahan baku untuk kebutuhan produksi dilakukan secara manual melalui RDO. Untuk menghubungkan transaksi RDO dengan POP, sistem menyediakan field **Production Order Planning** dan **Manufacturing Order** pada header RDO. Melalui field tersebut, user dapat menentukan POP dan MO yang akan dipenuhi oleh transaksi RDO. Berikut langkah-langkah untuk membuat RDO untuk POP dengan satu warehouse tujuan:
+
+1. Buka menu **SIS RDO**.
+2. Tentukan **Document Type** — pastikan RDO Type adalah **Pusat**.
+3. Tentukan **Warehouse** dan **Locator** asal.
+4. Tentukan **Warehouse To** dan **Locator To**.
+5. Pada field **Production Order Planning**, pilih dokumen POP yang akan direlasikan.
+6. Pada field **Manufacturing Order**, pilih MO yang terkait dengan POP tersebut
+
+![rdo](../rdo_pop.png "RDO atas POP") {#Figure393}
+
+7. Klik **Save**.
+8. Klik **Generate RDO Line**.
+9. Tentukan **produk** dan **quantity** yang akan diproses.
+10. Klik **SIS Generate RDO Line**.
+11. Masuk ke tab **Line**.
+12. Verifikasi **produk** dan **quantity** yang akan diproses.
+13. Klik **Save**.
+14. Klik **Complete** pada dokumen.
+
+Setelah RDO di-Complete, sistem akan membuat dokumen **Inventory Move Delivery** secara otomatis. Informasi **POP, POP Line, dan MO** pada Inventory Move Delivery akan terisi otomatis berdasarkan POP dan MO yang telah ditentukan pada header RDO.
+
+![rdo](../deliv_pop.png "Inventory Move Delivery RDO atas POP") {#Figure394}
+
+Hal yang sama berlaku pada proses penerimaan. Ketika **Inventory Move Receipt** dibuat secara manual atau terbentuk secara otomatis sesuai konfigurasi Auto Receipt pada Document Type RDO, informasi POP, POP Line, dan MO akan tersalin secara otomatis ke header Inventory Move Receipt.
+
+Dengan demikian, Inventory Move Delivery dan Inventory Move Receipt yang terbentuk dari RDO memiliki relasi dengan POP dan MO terkait, sehingga transaksi perpindahan bahan baku untuk kebutuhan produksi dapat ditelusuri berdasarkan dokumen produksinya.
