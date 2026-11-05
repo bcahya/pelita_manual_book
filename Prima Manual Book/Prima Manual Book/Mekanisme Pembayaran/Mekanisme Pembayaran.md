@@ -42,6 +42,29 @@ Untuk menentukan Document Type Bank Statement yang digunakan, lakukan langkah be
 6. Klik **Save**.
 
 Setelah konfigurasi selesai, sistem akan menggunakan Document Type yang telah ditentukan pada **Bank/Cash Account** saat membuat Bank Statement secara otomatis dari transaksi Payment.
+
+### Konfigurasi Bank Account Access
+
+Perusahaan umumnya memiliki lebih dari satu bank untuk transaksi, dan satu bank dapat memiliki lebih dari satu Bank Account. Saat melakukan transaksi pembayaran, user dapat memfilter bank yang ditampilkan melalui konfigurasi **Bank Account Access**. Filter ini berbasis Bank Account, sehingga sistem otomatis menampilkan bank yang terkait dengan Bank Account yang dikonfigurasi.
+
+Konfigurasi ini tersedia di Document Type AP Payment dan AR Receipt. Field Bank Account Access berfungsi membatasi Bank Account yang dapat diproses pada transaksi sesuai konfigurasi.
+#### Langkah Konfigurasi di Document Type AP Payment
+
+1. Buka menu **Document Type**.
+2. Tentukan Document Type **AP Payment** yang akan dikonfigurasi.
+3. Centang field **Bank Account Access**.
+
+![bank](../bank_access.png "Konfigurasi Bank Account Access") {#Figure392}
+
+4. Klik **Generate Bank Account Access**.
+5. Pilih **Bank Account** yang akan diproses pada document type tersebut.
+6. Klik **OK**.
+
+Setelah dikonfigurasi, tab **Bank Account Access** menampilkan Bank Account yang telah dipilih. Bank yang muncul pada **Payment and Receipt** akan sesuai dengan konfigurasi tersebut. 
+
+![bank](../bank_acc_access.png "Bank Account Access di Document Type") {#Figure393}
+
+Langkah konfigurasi pada Document Type AR Receipt sama dengan langkah di atas.
 ## Pembayaran Multi BP (Business Partner)
 
 Mekanisme **Multi Business Partner** digunakan ketika pembayaran dilakukan kepada Business Partner yang berbeda dengan vendor pada invoice. Kondisi ini umumnya diterapkan jika terdapat vendor induk, perusahaan afiliasi, atau pihak ketiga yang bertindak sebagai penerima pembayaran.
@@ -50,13 +73,14 @@ Untuk melakukan pembayaran Multi Business Partner, lakukan langkah-langkah berik
 
 1. Buka menu **Payment and Receipt**.
 2. Tentukan **Document Type**.
-3. Pilih **Bank Account** yang digunakan untuk pembayaran.
-4. Tentukan **Transaction Date**.
-5. Pilih **Business Partner** sebagai pihak yang melakukan atau menerima pembayaran.
-6. Buka tab **Allocate**.
-7. Input **invoice** yang akan dibayarkan — sistem hanya menampilkan invoice yang memiliki currency yang sama dengan Bank Account yang dipilih.
-8. Klik **save**.
-9. Klik **complete**.
+3. Pilih **Bank** yang digunakan untuk pembayaran.
+4. Pilih **Bank Account** yang digunakan untuk pembayaran.
+5. Tentukan **Transaction Date**.
+6. Pilih **Business Partner** sebagai pihak yang melakukan atau menerima pembayaran.
+7. Buka tab **Allocate**.
+8. Input **invoice** yang akan dibayarkan — sistem hanya menampilkan invoice yang memiliki currency yang sama dengan Bank Account yang dipilih.
+9. Klik **save**.
+10. Klik **complete**.
 
 >**Catatan:** Payment Date tidak boleh lebih awal dari Invoice Date. Jika Payment Date < Invoice Date, sistem otomatis memblokir transaksi dan menampilkan pesan bahwa Payment Date tidak boleh sebelum Invoice Date.
 
@@ -92,12 +116,13 @@ Sesuaikan konfigurasi ini dengan kebutuhan operasional perusahaan.
 ### Langkah Pre Payment dengan PO
 
 1. Buka menu **Payment and Receipt**.
-2. Tentukan **Bank Account** yang akan digunakan.
-3. Tentukan **Document Type** yang akan digunakan.
-4. Pilih **Business Partner** yang akan diproses.
-5. Pada field **Order**, input nomor PO yang akan diproses.
-6. Input payment amount
-7. Klik **Complete** pada dokumen Payment and Receipt.
+2. Pilih **Bank** yang digunakan untuk pembayaran.
+3. Tentukan **Bank Account** yang akan digunakan.
+4. Tentukan **Document Type** yang akan digunakan.
+5. Pilih **Business Partner** yang akan diproses.
+6. Pada field **Order**, input nomor PO yang akan diproses.
+7. Input payment amount
+8. Klik **Complete** pada dokumen Payment and Receipt.
 
 ![dp](../pre_payment.png "Pre Payment") {#Figure188}
 
@@ -109,15 +134,16 @@ Konfigurasi akun yang digunakan dalam transaksi dapat disesuaikan dengan kebijak
 ### Langkah Pre Payment tanpa PO
 
 1. Buka menu **Payment and Receipt**.
-2. Tentukan **Bank Account** yang akan digunakan.
-3. Tentukan **Document Type** yang akan digunakan.
-4. Pilih **Business Partner** yang akan diproses.
-5. Input **Payment Amount**.
-6. Klik **Save**.
+2. Pilih **Bank** yang digunakan untuk pembayaran.
+3. Tentukan **Bank Account** yang akan digunakan.
+4. Tentukan **Document Type** yang akan digunakan.
+5. Pilih **Business Partner** yang akan diproses.
+6. Input **Payment Amount**.
+7. Klik **Save**.
 
 ![save](../Screenshot_2026-08-26_153133.png "Pre Payment tanpa PO") {#Figure271}
 
-7. Klik **Complete** pada dokumen Payment and Receipt.
+8. Klik **Complete** pada dokumen Payment and Receipt.
 
 Saat dokumen disimpan, field **Prepayment** terisi otomatis. Berikut contoh jurnal transaksi pembayaran DP (_Pre Payment_):
 
@@ -142,19 +168,20 @@ Setelah konfigurasi selesai, lakukan pembayaran dengan langkah-langkah berikut:
 
 1. Buka menu **Payment and Receipt**.
 2. Tentukan **Document Type**.
-3. Pilih **Bank Account** yang digunakan.
-4. Tentukan **Transaction Date**.
-5. Pilih **Business Partner**.
-6. Tentukan **Currency** yang digunakan untuk pembayaran.
-7. Pilih **Currency Type** agar sistem mengambil nilai kurs sesuai konfigurasi **Currency Rate**.
-8. Jika diperlukan, aktifkan **Override Currency Conversion Rate** untuk memasukkan nilai kurs secara manual. Fitur ini bersifat opsional dan akan mengesampingkan kurs yang diperoleh dari konfigurasi sistem.
+3. Pilih **Bank** yang digunakan untuk pembayaran.
+4. Pilih **Bank Account** yang digunakan.
+5. Tentukan **Transaction Date**.
+6. Pilih **Business Partner**.
+7. Tentukan **Currency** yang digunakan untuk pembayaran.
+8. Pilih **Currency Type** agar sistem mengambil nilai kurs sesuai konfigurasi **Currency Rate**.
+9. Jika diperlukan, aktifkan **Override Currency Conversion Rate** untuk memasukkan nilai kurs secara manual. Fitur ini bersifat opsional dan akan mengesampingkan kurs yang diperoleh dari konfigurasi sistem.
 
 ![payment](../payment_valas_header.png "Header Payment") {#Figure171}
 
-9. Buka tab **Allocate**.
-10. Pilih invoice yang akan dibayarkan.
-11. Klik **save**.
-12. Klik **complete**. 
+10. Buka tab **Allocate**.
+11. Pilih invoice yang akan dibayarkan.
+12. Klik **save**.
+13. Klik **complete**. 
 
 Pada saat pembayaran dialokasikan, sistem akan membentuk jurnal pembayaran sesuai nilai kurs yang digunakan. 
 

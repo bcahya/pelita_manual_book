@@ -34,9 +34,34 @@ Berikut field yang tersedia pada Component:
 ### BoM Reference
 
 BoM referensi yang digunakan untuk artikel Semi Finished Goods yang memiliki struktur BoM dan komponen tersendiri.
-### Valid From
+### Valid From dan Valid To
 
-Periode mulai berlakunya BoM untuk produk tersebut.
+Satu produk dapat memiliki lebih dari satu Bill of Material (BoM), dengan komponen yang berbeda maupun sama. Namun, pada saat menjalankan Production Order Planning (POP), user hanya dapat menentukan satu BoM yang akan digunakan untuk proses produksi.
+
+Untuk mengatur periode berlakunya BoM, setiap BoM perlu dikonfigurasi dengan **Valid From** dan **Valid To**. Periode tersebut digunakan oleh sistem untuk menentukan apakah BoM masih berlaku pada tanggal produksi yang diproses.
+
+#### Setting Periode BoM
+
+Setiap BoM perlu memiliki tanggal **Valid From** yang sesuai dengan periode mulai berlakunya. Jika terdapat beberapa BoM untuk produk yang sama, pastikan periode validitas masing-masing BoM diatur dengan tepat.
+
+Apabila BoM yang sedang digunakan sudah tidak berlaku dan akan digantikan oleh BoM baru, lakukan langkah berikut:
+
+1. Tentukan **Valid To** pada BoM lama sesuai tanggal berakhirnya masa berlaku.
+2. Tentukan **Valid From** pada BoM baru sesuai tanggal mulai berlakunya.
+3. Pada master Product, perbarui **BoM Reference** untuk produk yang menggunakan BoM baru, termasuk produk semi-finished good jika terkait.
+4. Pastikan BoM Reference mengarah ke BoM yang masih berlaku sebelum menjalankan Production Order Planning.
+
+Jika POP diproses menggunakan BoM yang sudah tidak berlaku, sistem akan menampilkan pesan error bahwa BoM untuk produk tersebut sudah tidak valid. 
+
+![generate pop bom](../error_bom.png "Pesan Error Ketika BoM Sudah Tidak Valid")  {#Figure294}
+
+User perlu memperbarui BoM Reference ke BoM yang masih berlaku agar proses dapat dilanjutkan.
+
+### Validitas Component pada BoM
+
+Pengaturan Valid From dan Valid To juga berlaku untuk component yang terdapat pada BoM. Jika component memiliki tanggal **Valid To** dan proses produksi dilakukan setelah tanggal tersebut, component tidak akan digenerate pada BoM untuk proses produksi tersebut.
+
+Oleh karena itu, user perlu memastikan periode validitas BoM maupun setiap component telah sesuai dengan tanggal produksi yang akan diproses.
 
 **Contoh Bill of Material**
 

@@ -1098,3 +1098,17 @@ Berikut contoh Print Out Bank Statement:
 ![bank](../print_bank_masuk.png "Print Out Bank Masuk") {#Figure392}
 
 ![bank](../print_bank_keluar.png "Print Out Bank Keluar") {#Figure393}
+
+## Report Pengajuan Pembayaran ke Vendor
+
+Ikuti langkah berikut untuk mengakses Report Pengajuan Pembayaran ke Vendor:
+
+1. Buka menu **Payment and Receipt**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **Print Document Payment**.
+4. Klik **Pengajuan Pembayaran DPP**
+5. Klik **OK**.
+
+Berikut contoh Report Pengajuan Pembayaran ke Vendor:
+
+![payment](../pembayaran_vendor_dpp.png "Pengajuan Pembayaran ke Vendor") {#Figure394}
