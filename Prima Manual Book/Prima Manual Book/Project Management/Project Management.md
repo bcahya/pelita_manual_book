@@ -228,3 +228,29 @@ Saat proses Generate Credit Note From Project Issue dijalankan, sistem secara ot
 Invoice Line tersebut menggunakan nilai **CIP** dengan nilai minus untuk membalik transaksi **Issue to Project**. Dengan demikian, Credit Note mengurangi nilai tagihan Project sebesar nilai CIP yang dikompensasikan.
 
 ![cn di project](../cn_project.png "Nilai Credit Note di Project") {#Figure303}
+
+## Proses Generate AP Credit Memo Project
+
+Jika dalam suatu project terdapat kompensasi dan tagihan (invoice) sudah dibuat namun kompensasi belum ditarik, user perlu membuat **AP Credit Memo** terpisah dari tagihan tersebut. AP Credit Memo ini mengambil nilai **Project Issue** yang belum ditarik kompensasinya dan diproses otomatis dari tagihan project yang asli.
+
+Ikuti langkah berikut untuk men-generate AP Credit Memo:
+
+1. Buka menu **Project**.
+2. Masuk ke tab **Invoice Vendor**.
+3. Tentukan **invoice** yang akan diproses.
+4. Klik invoice tersebut — sistem mengarahkan ke menu **Purchase Invoice and Credit/Debit Note**.
+5. Klik tombol **SIS Generate Credit Memo From Project Issue**.
+6. Tentukan **Date Invoiced**.
+7. Klik **OK**.
+
+![ap cn](../ap_cn_project.png "AP Credit Memo") {#Figure394}
+
+Sistem otomatis membuat AP Credit Memo dan langsung mengalokasikannya ke AP Invoice sebagai pengurang tagihan.
+
+Berikut contoh jurnal AP Credit Memo:
+
+![ap cn](../jurnal_ap_cn_project.png "Jurnal AP Credit Memo") {#Figure395}
+
+Berikut contoh jurnal Allocation:
+
+![allocate](../jurnal_allocate_project.png "Jurnal Allocation") {#Figure396}
