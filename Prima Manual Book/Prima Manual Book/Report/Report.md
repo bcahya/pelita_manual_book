@@ -235,7 +235,7 @@ Ikuti langkah berikut untuk mengakses report surat jalan:
 ![aks](../sj_aks_ekspedisi.png "SJ Aksesoris ke Gudang Ekspedisi") {#Figure240}
 #### SJ Aksesoris ke CMT
 
-![aks](../sj_aks_cmt.png "SJ Aksesoris ke CMT") {#Figure241}
+![aks](../sj_aksesoris_cmt.png "SJ Aksesoris ke CMT") {#Figure241}
 #### SJ Aksesoris ke Pabrik
 
 ![aks](../sj_aks_pabrik.png "SJ Aksesoris ke Pabrik") {#Figure242}
@@ -1112,3 +1112,33 @@ Ikuti langkah berikut untuk mengakses Report Pengajuan Pembayaran ke Vendor:
 Berikut contoh Report Pengajuan Pembayaran ke Vendor:
 
 ![payment](../pembayaran_vendor_dpp.png "Pengajuan Pembayaran ke Vendor") {#Figure394}
+
+## Export View Routing POP Line
+
+Ikuti langkah berikut untuk mengakses Report View Routing POP Line:
+
+1. Buka menu **Production Order Planning**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **Export View Routing di POP Line**.
+4. Klik **OK**.
+
+Berikut contoh Report View Routing POP Line:
+
+![view routing](../view_routing_pop.png "Report View Routing di POP Line") {#Figure395}
+
+
+## Report Rekapitulasi Asset
+
+Ikuti langkah berikut untuk mengakses Report Rekapitulasi Asset:
+
+1. Buka menu **SIS Report Rekapitulasi Asset**.
+2. Tentukan **Organisasi**.
+3. Tentukan field-field filter yang dibutuhkan. Seluruh field bersifat opsional — gunakan filter sesuai kebutuhan.
+
+![rekap aset](../param_rekap_aset.png "Parameter Report Rekapitulasi Asset") {#Figure396}
+
+4. Klik **OK**.
+
+Berikut contoh Report Rekapitulasi Asset:
+
+![rekap aset](../rekap_aset.png "Report Rekapitulasi Asset") {#Figure397}

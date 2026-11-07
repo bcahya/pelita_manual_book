@@ -29,29 +29,21 @@ Pada Production Order Planning, routing melibatkan perpindahan barang dari wareh
 
 Konfigurasi dilakukan melalui menu **Warehouse and Locator** untuk masing-masing warehouse dan locator. Berikut langkah-langkahnya:
 
-### Konfigurasi pada Warehouse
+### Konfigurasi pada Warehouse Locator
 
 1. Buka menu **Warehouse and Locator**.
 2. Tentukan **Search Key** dan **Name** untuk warehouse.
 3. Tentukan **Address** warehouse.
-4. Pada field **DocType Movement Out**, pilih Document Type sesuai konfigurasi.
-5. Pada field **DocType Movement In**, pilih Document Type sesuai konfigurasi.
-
-![wh](../wh_trf.png "Konfigurasi DocType Movement di Warehouse") {#Figure314}
-
-6. Klik **Save**.
-
-### Konfigurasi pada Locator
-
-1. Masuk ke tab **Locator**.
-2. Pilih locator yang akan dikonfigurasi.
-3. Pada field **DocType Movement Out**, pilih Document Type sesuai konfigurasi.
-4. Pada field **DocType Movement In**, pilih Document Type sesuai konfigurasi.
+4. Klik **Save**.
+5. Masuk ke tab **Locator**.
+6. Pilih locator yang akan dikonfigurasi.
+7. Pada field **DocType Movement Out**, pilih Document Type sesuai konfigurasi.
+8. Pada field **DocType Movement In**, pilih Document Type sesuai konfigurasi.
 
 ![wh](../doc_locator.png "Konfigurasi DocType Movement di Locator") {#Figure391}
 
-5. Klik **Save**.
-6. Ulangi langkah 2–5 untuk locator lainnya yang perlu dikonfigurasi.
+9. Klik **Save**.
+10. Ulangi langkah 2–5 untuk locator lainnya yang perlu dikonfigurasi.
 
 Berikut contoh implementasi konfigurasi ini di Production Order Planning (POP):
 
