@@ -20,6 +20,45 @@ Sebelum mengonfigurasi User dan Role, lakukan konfigurasi parameter sistem berik
 | SIS_ActivateAccessDocBasedOnWarehouseAccess | Y                |
 
 Parameter ini mengaktifkan mekanisme pembatasan **Document Type Access** dan **Warehouse** berdasarkan konfigurasi pada Role. Dengan konfigurasi ini, setiap Role hanya dapat menggunakan Document Type dan Warehouse yang telah diberikan hak akses.
+
+## Role Template
+
+**Role Template** adalah fitur yang digunakan sebagai acuan atau template dalam pembuatan Role baru. Dengan fitur ini, administrator tidak perlu mengatur ulang seluruh hak akses secara manual setiap kali membuat Role baru.
+
+Saat administrator membuat Role baru dan menentukan Role Template, sistem otomatis menyalin konfigurasi akses dari Role Template tersebut ke Role baru. Dengan demikian, Role baru memiliki hak akses yang sama dengan Role Template yang dipilih.
+
+### Membuat Master Role Template
+
+Ikuti langkah berikut untuk membuat master Role Template:
+
+1. Buka menu **Role Template**.
+2. Tentukan **Name** Role Template.
+3. Pada tab **Window Access**, tentukan akses window untuk role tersebut.
+4. Pada tab **Process Access**, tentukan akses process.
+5. Pada tab **Form Access**, tentukan akses form.
+6. Pada tab **Workflow Access**, tentukan akses workflow.
+7. Pada tab **Task Access**, tentukan akses task.
+8. Pada tab **Document Action Access**, tentukan akses document action.
+9. Pada tab **Document Status Access**, tentukan akses document status.
+
+![role](../role_template_akses.png "Konfigurasi Role Template") {#Figure395}
+
+10. Klik **Save**.
+
+### Contoh Penggunaan
+
+- **Role Template:** Admin Operasional
+- **Role Baru:** Admin Gudang dan Admin Toko
+
+Saat Role baru dibuat dengan memilih **Admin Operasional** sebagai Role Template, sistem menyalin konfigurasi akses dari Role Admin Operasional ke Role Admin Gudang (dan Admin Toko). Konfigurasi yang disalin mencakup:
+
+- Window Access
+- Process Access
+- Form Access
+- Workflow Access
+- Task Access
+- Document Action Access
+- Document Status Access
 ## Membuat Master Data User
 
 Buat terlebih dahulu master data User sebelum membuat Role. Setiap pengguna yang akan mengakses sistem harus memiliki akun tersendiri agar hak akses dapat dikelola secara terpisah.

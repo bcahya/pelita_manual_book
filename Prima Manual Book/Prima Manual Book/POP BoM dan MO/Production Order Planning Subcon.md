@@ -77,6 +77,12 @@ Berikut contoh implementasi penyalinan Business Partner di Inventory Move artike
 
 ![bp](../bp_movement.png "Informasi Business Partner di Inventory Move") {#Figure185}
 
+Inventory Move yang terbentuk ketika PO Subcon diselesaikan (Complete) akan mereferensikan Requisition Subcon terkait. Selain referensi tersebut, sistem juga menambahkan informasi **POP, POP Line, POP Parent, dan MO** pada masing-masing header Inventory Move yang terbentuk dari purchase order Subcon.
+
+![move](../movement_subcon.png "Inventory Move Atas Requisition CMT") {#Figure396}
+
+Penambahan informasi referensi ini bertujuan untuk memudahkan user dalam mengidentifikasi keterkaitan Inventory Move dengan Production Order Planning (POP) dan Manufacturing Order (MO) terkait. Dengan demikian, user dapat mengetahui relasi setiap Inventory Move dengan proses produksi yang bersangkutan.
+
 ## Cost Adjustment Hasil CMT
 
 Product subcon dapat memiliki komponen berupa bahan baku (_raw material_) yang dibeli perusahaan dan dikirim ke vendor subcon. Saat bahan baku dipindahkan ke gudang subcon dan dokumen Movement di-complete, sistem otomatis membentuk **Internal Use** atas bahan baku tersebut.

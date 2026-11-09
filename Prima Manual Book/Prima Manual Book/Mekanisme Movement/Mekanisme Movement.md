@@ -29,9 +29,10 @@ Karena proses Delivery dan Receipt saling terhubung, lakukan konfigurasi dua **D
 4. Pada field **Document Base Type**, pilih **Material Movement**.
 5. Pada field **Internal Use Doc Type**, tentukan dokumen Internal Use yang digunakan.
 6. Centang field **Auto Create Back Order**.
-7. Centang field **Receipt**.
-8. Apabila proses 
-9. Klik **Save**.
+7. 
+8. Centang field **Receipt**.
+9. Apabila proses 
+10. Klik **Save**.
 ### Document Type Movement Pengiriman (Delivery)
 
 1. Buka menu **Document Type**.
@@ -65,7 +66,25 @@ Saat Movement di-complete, warehouse dan locator tujuan otomatis berubah menjadi
 Sistem juga otomatis membuat **Movement Receipt** dari In-Transit ke warehouse dan locator tujuan, beserta informasi **Movement Source/Target** sesuai alur perpindahan barang.
 
 ![shipment](../move_ship.png "Movement Delivery") {#Figure148}
-### Proses Penerimaan (Receipt)
+
+### Proses Penerimaan (Receipt) Secara Manual
+
+Ikuti langkah berikut untuk membuat Inventory Move Receipt secara manual yang mereferensikan Inventory Move Delivery:
+
+1. Buka menu **Inventory Move**.
+2. Klik **New**.
+3. Tentukan **Document Type Receipt**.
+4. Input dokumen **Inventory Move Delivery** pada field **Movement Reference**.
+5. Field **Warehouse From** terisi otomatis sesuai warehouse tujuan dari Inventory Move Delivery.
+6. Field **Warehouse To** terisi otomatis.
+7. Klik **Save**.
+
+Sistem otomatis menyalin Move Line dari Inventory Move Delivery, dengan **Locator tujuan** sesuai RDO Line.
+
+8. Verifikasi **produk**, **quantity**, serta **Locator** asal dan tujuan.
+9. Klik **Save**.
+10. Klik **Complete** pada dokumen.
+### Proses Penerimaan (Auto Receipt)
 
 Setelah produk berpindah ke warehouse intransit, proses Movement Receipt untuk memindahkan produk ke warehouse dan locator tujuan. Ikuti langkah berikut:
 

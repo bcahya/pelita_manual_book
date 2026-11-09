@@ -34,8 +34,8 @@ Untuk menentukan Document Type Bank Statement yang digunakan, lakukan langkah be
 1. Buka menu **Bank/Cash**.
 2. Pilih **Bank/Cash** yang akan dikonfigurasi.
 3. Buka tab **Account**.
-4. Pada field **Document Type Bank Statement**, pilih Document Type untuk **Bank Masuk**.
-5. Pada field **Document Type Bank Statement Out**, pilih Document Type untuk **Bank Keluar**.
+4. Pada field **Document Type Bank Statement**, pilih Document Type untuk **Bank Masuk**. Sistem hanya menampilkan Document Type dengan flag **IsBankMasuk = Y**.
+5. Pada field **Document Type Bank Statement Out**, pilih Document Type untuk **Bank Keluar**. Sistem hanya menampilkan Document Type dengan flag **IsBankMasuk = N**.
 
 ![bs](../doc_type_bs.png "Konfigurasi Document Type Bank/Cash Statement") {#Figure319}
 
@@ -258,7 +258,8 @@ Saat transaksi Bank atau Cash Transfer diproses, jurnal ayat silang yang terbent
 
 ![header](../header_bankcash_tf.png "Header Bank/Cash Transfer") {#Figure179}
 
-3. Klik **Complete** pada dokumen.
+3. Tentukan **BG Number** – Opsional. Informasi BG Number yang diinput akan otomatis tersalin ke transaksi Payment and Receipt serta Bank Statement.
+4. Klik **Complete** pada dokumen.
 
 Saat dokumen Bank/Cash Transfer di-complete, sistem otomatis membuat dua dokumen dengan status _Complete_:
 
