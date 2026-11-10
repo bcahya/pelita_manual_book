@@ -1142,3 +1142,19 @@ Ikuti langkah berikut untuk mengakses Report Rekapitulasi Asset:
 Berikut contoh Report Rekapitulasi Asset:
 
 ![rekap aset](../rekap_aset.png "Report Rekapitulasi Asset") {#Figure397}
+
+## Report Detail Penyusutan Asset
+
+Ikuti langkah berikut untuk mengakses Report Detail Penyusutan Asset:
+
+1. Buka menu **SIS Report Detail Penyusutan Asset**.
+2. Tentukan **Organisasi**.
+3. Tentukan field-field filter yang dibutuhkan. Seluruh field bersifat opsional — gunakan filter sesuai kebutuhan.
+
+![detail aset](../param_penyusutan.png "Parameter Report Detail Penyusutan Asset") {#Figure402}
+
+4. Klik **OK**.
+
+Berikut contoh Report Detail Penyusutan Asset:
+
+![detail aset](../detail_penyusutan_aset.png "Report Detail Penyusutan Asset") {#Figure403}

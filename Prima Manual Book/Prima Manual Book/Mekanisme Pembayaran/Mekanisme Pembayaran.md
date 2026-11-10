@@ -12,7 +12,6 @@ iDempiere mendukung beberapa mekanisme pembayaran, antara lain:
 
 ### Document Type Payment Multi BP
 
-Document Type untuk payment dapat dibedakan sesuai kebutuhan operasional. Namun sebelum digunakan, pastikan field **Payment Multi BP** pada Document Type AP Payment sudah dikonfigurasi. Berikut ketentuannya:
 
 - **Dicentang (Y)** — Pembayaran dengan document type tersebut diizinkan untuk multi BP, artinya BP Payment dan BP Invoice dapat berbeda.
 - **Tidak dicentang (N)** — Pembayaran hanya dapat dilakukan dengan BP yang sama dengan BP pada invoice. Jika BP di Payment dan Invoice berbeda, sistem otomatis memblokir transaksi tersebut.

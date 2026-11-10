@@ -199,3 +199,9 @@ Setelah Document Type dikonfigurasi, lakukan Internal Use dengan langkah berikut
 Setelah Prepare dijalankan, sistem otomatis membuat **Internal Use Line** berdasarkan komponen pada BoM yang dipilih. Quantity Internal Use terisi otomatis sesuai quantity yang diinput di Internal Use Special dikalkulasi dengan quantity di BoM. Charge juga terisi otomatis sesuai konfigurasi Charge pada document type Internal Use.
 
 > **Catatan:** Tab **Internal Use Special** hanya muncul jika field **Inventory FG BOM** pada Document Type diset **Yes**. Jika **Inventory FG BOM = False**, tab tersebut tidak muncul — yang berarti Internal Use dilakukan langsung pada product itu sendiri, bukan pada komponen-komponennya.
+
+## Informasi Cost Center di Physical Inventory dan Internal Use
+
+**Cost Center** merepresentasikan warehouse — keduanya memiliki data yang sama. Untuk mencegah user lupa menginput Cost Center saat membuat Physical Inventory dan Inventory Decrease/Increase, sistem otomatis mengisi field **Cost Center** di header Physical Inventory dan Inventory Decrease/Increase sesuai warehouse yang dipilih.
+
+![cc](../cost_center_pi.png "Informasi Cost Center di Physical Inventory") {#Figure398}

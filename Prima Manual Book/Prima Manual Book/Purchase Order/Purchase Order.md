@@ -38,6 +38,29 @@ Sebelum melakukan generate, perlu diperhatikan bahwa produk yang diproses di Req
 ![config](../std_pl.png "Konfigurasi Price List") {#Figure316}
 
 Saat PO terbentuk dari proses generate, sistem otomatis menggunakan price list yang dikonfigurasi pada **SIS_StandardPL_ID**. User masih dapat mengedit price di PO Line sesuai kebutuhan. Dengan demikian, meskipun produk belum memiliki price list, proses Generate PO From Requisition tetap dapat dijalankan.
+
+## Konfigurasi Purchasing di Product
+
+Pada saat membuat Requisition, khususnya melalui proses **Production Order Planning (POP)**, setiap product yang perlu dibeli harus memiliki konfigurasi Purchasing dan Business Partner pada master product.
+
+Dalam satu product, Business Partner yang digunakan untuk pembelian dapat lebih dari satu. Namun, konfigurasi **Current Vendor** pada master product hanya dapat menampung satu Business Partner.
+
+Apabila user belum mengonfigurasi Purchasing pada product, sistem akan menggunakan Business Partner default yang ditentukan melalui System Configurator **SIS_DEFAULT_BP_ID_ON_REQUISITION**.
+
+Untuk mengatur Business Partner default tersebut, lakukan konfigurasi dengan langkah-langkah berikut:
+
+1. Login ke tenant masing-masing perusahaan.
+2. Buka menu **System Configurator**.
+3. Klik **New**.
+4. Pada field **Name**, masukkan **SIS_DEFAULT_BP_ID_ON_REQUISITION**.
+5. Pada field **Configured Value**, masukkan **C_BPartner_ID** sesuai dengan Business Partner yang akan dijadikan default.
+6. Pada field **Configuration Level**, pilih **Client**.
+7. Pastikan konfigurasi dibuat pada tenant perusahaan yang bersangkutan, bukan pada tenant **System**.
+8. Klik **Save**.
+
+![sistem](../bp_req.png "Konfigurasi Business Partner Default Requisition") {#Figure399}
+
+Dengan konfigurasi tersebut, apabila Business Partner belum ditentukan pada tab **Purchasing** di master product, sistem akan menggunakan Business Partner default yang telah dikonfigurasi saat proses pembuatan Requisition.
 ## Generate PO From Requisition
 
 Fitur **Generate PO From Requisition** digunakan untuk membuat Purchase Order berdasarkan Requisition Line yang telah dibuat. Proses generate PO dapat dilakukan dengan memilih satu atau beberapa Requisition Line — termasuk dari satu maupun beberapa Requisition. 
@@ -142,15 +165,16 @@ Contoh 2:
 4. Input **warehouse** untuk penempatan produk
 5. Tentukan **Product** pada header jika diperlukan (opsional)
 6. Tentukan **Style** pada header jika diperlukan (opsional)
+7. Tentukan **Proses Finish** pada header jika diperlukan (opsional)
 
 
 ![style](../product_style.png "Konfigurasi Product dan Style") {#Figure389}
 
-7. Masuk ke tab **PO Line**
-8. Pilih **product** yang akan diproses
-9. Input **quantity** product
-10. Klik **save**
-11. Klik **complete** pada dokumen
+8. Masuk ke tab **PO Line**
+9. Pilih **product** yang akan diproses
+10. Input **quantity** product
+11. Klik **save**
+12. Klik **complete** pada dokumen
 ## Pengelolaan Purchase Order
 ### Perubahan Business Partner pada Purchase Order
 

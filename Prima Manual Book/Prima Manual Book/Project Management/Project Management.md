@@ -2,7 +2,6 @@
 
 Fitur Project Management digunakan untuk mencatat seluruh aktivitas dan penggunaan barang yang berlangsung dalam suatu project. Sebelum memulai transaksi, siapkan master data berikut:
 
-- **Cost Center**
 - **Project**
 - **Product/Artikel Project**
 - **Charge Project (CIP)** — Sebagai penampung atas penggunaan persediaan dan biaya tambahan.
@@ -70,7 +69,8 @@ Charge digunakan untuk menentukan charge kompensasi pada project. Ikuti langkah 
 
 ![Header](../project2.png "Header Project") {#Figure115}
 
-3. Klik save
+3. Klik Set Project Type, pilih Project Type Asset
+4. Klik save
 
 Setiap project memiliki komponen-komponen pendukung, seperti jasa kontraktor, kabel listrik, dan sebagainya. Komponen-komponen tersebut dicatat melalui **Issue to Project**. Fitur ini digunakan untuk mencatat penggunaan atau pengiriman barang ke project yang sedang dikerjakan.
 ### Langkah Purchase Order

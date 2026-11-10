@@ -508,3 +508,45 @@ Untuk membedakan akun persediaan berdasarkan warehouse atau Cost Center, jurnal 
 - **Kredit** — Akun persediaan/aset untuk **Cost Center Warehouse Asal** (pengurangan persediaan).
 
 ![cc move](../cost_center_movement.png "Informasi Cost Center di Jurnal Inventory Move") {#Figure347}
+
+## Validasi Transaksi dengan Tanggal Tutup Outlet atau Warehouse
+
+Outlet atau showroom dapat memiliki **tanggal tutup**. Setelah tanggal tutup ditentukan, transaksi mulai dari tanggal tersebut hingga seterusnya tidak dapat diproses. Jika user tetap melakukan transaksi pada tanggal tersebut, sistem menampilkan notifikasi bahwa outlet atau showroom sudah tutup.
+
+Validasi ini berlaku untuk transaksi berikut:
+
+- Purchase Order
+- Sales Order
+- Inventory Move
+- RDO
+- Physical Inventory
+### Konfigurasi Tanggal Tutup Warehouse
+
+1. Buka menu **Warehouse and Locator**.
+2. Tentukan **warehouse** yang akan dikonfigurasi.
+3. Pada field **Tanggal Showroom/Outlet Tutup**, tentukan tanggal tutup.
+
+![tutup](../tutup_toko.png "Konfigurasi Tanggal Tutup Toko") {#Figure396}
+
+4. Klik **Save**.
+
+### Contoh Validasi pada Purchase Order
+
+Berikut langkah transaksi Purchase Order yang diblokir karena tanggal transaksi bertepatan dengan tanggal tutup warehouse:
+
+1. Buka menu **Purchase Order**.
+2. Tentukan **Target Document Type** yang akan diproses.
+3. Input **Business Partner**.
+4. Input **Warehouse** untuk penempatan produk.
+5. Tentukan **Product** pada header _(opsional)_.
+6. Tentukan **Style** pada header _(opsional)_.
+7. Tentukan **Proses Finish** pada header _(opsional)_.
+8. Masuk ke tab **PO Line**.
+9. Pilih **produk** yang akan diproses.
+10. Input **quantity** produk.
+11. Klik **Save**.
+12. Klik **Complete** pada dokumen.
+
+![tutup](../error_tutup_toko.png "Validasi Transaksi") {#Figure397}
+
+Purchase Order tidak dapat di-complete karena tanggal transaksi bertepatan dengan tanggal tutup warehouse. User tetap dapat melakukan transaksi pada tanggal **sebelum** tanggal tutup warehouse.
