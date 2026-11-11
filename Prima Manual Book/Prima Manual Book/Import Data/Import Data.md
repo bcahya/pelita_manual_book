@@ -69,7 +69,7 @@ Langkah Import File MT940:
 
 Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi, tahun bulan transaksi, username. Berikut contoh format file yang digunakan untuk import data PO Kecil.
 
-   ![Format PO](../po_kecil_up.png "Format PO Kecil") {#Figure90}
+   ![Format PO](../template_po_kecil.png "Format PO Kecil") {#Figure90}
 
 **Ketentuan data yang diinput di file:**
 
@@ -80,6 +80,13 @@ Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yait
 - **Business Partner** — Diisi dengan _Value (Search Key)_ Business Partner.
 - **Tax** — Diisi dengan _Name_ tax.
 - **UoM** — Diisi dengan _UoM Code_.
+- **Description Header** — Diisi dengan description yang akan masuk ke field Description pada header PO.
+- **Description Line** — Diisi dengan description yang akan masuk ke field Description pada PO Line.
+
+Perlakuan Description berbeda untuk setiap jenis import PO Kecil:
+
+- **PO Kecil Reguler (per tanggal transaksi)** — Description mengikuti isi yang dikonfigurasi di file template yang diimport.
+- **PO Kecil Special Mechanism (generate per minggu)** — Description diinformasikan pada PO Line dan memuat rincian tanggal serta quantity transaksi per tanggal dalam satu minggu tersebut.
 
 UoM yang digunakan adalah **UoM Conversion** di level product yang memiliki flag **Purchasing**. Oleh karena itu, sebelum melakukan import, pastikan UoM Conversion sudah dicentang flag **Purchasing**. Jika UoM yang digunakan tidak memiliki flag tersebut, proses import tidak dapat dijalankan.
 
@@ -210,3 +217,55 @@ Berikut contoh hasil import PO per minggu:
 Berikut contoh PO Line pada PO minggu pertama. **Quantity PO** merupakan akumulasi quantity selama satu minggu, sedangkan **Description** memuat rincian tanggal dan quantity transaksi per tanggal:
 
 ![po](../po_week_line.png "PO Line") {#Figure379}
+
+## Import Data dan Transaksi
+
+Mekanisme import digunakan untuk memasukkan data dari file eksternal (CSV) ke dalam sistem tanpa input manual satu per satu melalui masing-masing menu. Proses import menggunakan fitur **Import Loader**, yaitu penampungan data sementara sebelum data diproses ke tabel transaksi atau master data yang sebenarnya.
+
+Mekanisme ini digunakan untuk dua kebutuhan utama:
+
+1. **Import Master Data** — Memasukkan data master seperti Product, Business Partner, Warehouse, Price List, dan sebagainya.
+2. **Import Transaction** — Memasukkan data transaksi seperti Purchase Order (PO), Sales Order (SO), Inventory Move, dan sebagainya.
+
+### Mengakses File Template
+
+1. Klik ikon **titik tiga** di sisi paling kanan pada menu terkait, lalu pilih **Export**.
+2. Centang **Export Current Row Only** dan **PO Line** (contoh).
+3. Klik **OK**.
+
+![file](../file_template.png "File Template") {#Figure403}
+
+4. Kemudian unduh template.
+5. Setelah template terunduh, pastikan format tanggal pada file CSV adalah **YYYY-MM-DD**.
+
+### Pengaturan Kolom Template
+
+1. Ubah transaksi atau master data ke mode **Grid Toggle**.
+2. Klik ikon **titik tiga** di sisi paling kanan pada menu, lalu pilih **Customize**.
+
+![file](../custom.png "Customize") {#Figure404}
+
+3. Atur kolom yang akan ditampilkan pada template di sisi kanan.
+
+![file](../custom_table.png "Customize Table") {#Figure405}
+
+4. Klik **OK**.
+
+### Mode Import
+
+- **Merge** — Jika data sudah ada, data diperbarui (_update_); jika belum ada, data ditambahkan (_insert_).
+- **Insert** — Digunakan untuk menambahkan data baru.
+- **Update** — Digunakan untuk memperbarui data yang sudah ada.
+
+### Langkah Import Data
+
+1. Klik ikon **titik tiga**, lalu pilih **Import File Loader**.
+2. Pilih **Import Mode** yang sesuai.
+3. Tentukan **file template** yang akan diupload.
+4. Klik **OK**.
+
+Data atau transaksi akan masuk ke sistem setelah proses selesai. Saat melakukan **Update** atau **Merge** data pada beberapa field, tambahkan penanda **Primary Key (/K)** pada kolom yang menjadi acuan di file template. Penanda ini menentukan data mana yang akan diperbarui, baik pada level **header** maupun **line**.
+
+![file](../update.png "Template Update atau Merge") {#Figure406}
+
+> **Catatan:** Pada import transaksi Purchase Order, jika satu PO memiliki beberapa line dan salah satu line mengalami error, seluruh PO tersebut tidak akan masuk ke sistem.

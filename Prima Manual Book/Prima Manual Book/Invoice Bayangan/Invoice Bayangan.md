@@ -58,16 +58,20 @@ Sistem menghitung nilai Invoice Bayangan secara otomatis dengan urutan berikut:
 
 Dengan mekanisme ini, seluruh perhitungan berjalan otomatis sehingga meminimalkan risiko kesalahan perhitungan manual.
 
-## Report Invoice Bayangan
+## Report Print Out Invoice Bayangan
 
 1. Klik tombol **Setting (⚙)**.
 2. Klik **SIS Printout Invoice Mirror**.
-3. Pada field **Process Detail Report**, pilih **SIS Printout Invoice Mirror**.
+3. Pada field **Process Detail Report**, pilih **SIS Printout Invoice Mirror PPG atau SCI**.
 
 ![process](../procces_print_mirr.png "Proses Printout") {#Figure212}
 
 4. Klik **OK**.
 
-Berikut contoh report Invoice Bayangan:
+Berikut contoh report Invoice Bayangan PPG:
 
 ![print](../print_inv_mirr.png "Printout Invoice Bayangan") {#Figure213}
+
+Berikut contoh report Invoice Bayangan SCI:
+
+![print](../invoice_mirror_sci.png "Printout Invoice Bayangan") {#Figure402}

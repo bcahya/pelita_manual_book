@@ -12,7 +12,6 @@ iDempiere mendukung beberapa mekanisme pembayaran, antara lain:
 
 ### Document Type Payment Multi BP
 
-
 - **Dicentang (Y)** — Pembayaran dengan document type tersebut diizinkan untuk multi BP, artinya BP Payment dan BP Invoice dapat berbeda.
 - **Tidak dicentang (N)** — Pembayaran hanya dapat dilakukan dengan BP yang sama dengan BP pada invoice. Jika BP di Payment dan Invoice berbeda, sistem otomatis memblokir transaksi tersebut.
 
@@ -147,6 +146,40 @@ Konfigurasi akun yang digunakan dalam transaksi dapat disesuaikan dengan kebijak
 Saat dokumen disimpan, field **Prepayment** terisi otomatis. Berikut contoh jurnal transaksi pembayaran DP (_Pre Payment_):
 
 ![jurnal](../Screenshot_2026-08-26_153407.png "Jurnal Pre Payment") {#Figure272}
+
+## Bank Statement atas Pre Payment
+
+Setelah Pre Payment diproses, lakukan rekonsiliasi (Bank Statement) atas Pre Payment tersebut. Rekonsiliasi harus diproses terlebih dahulu karena syarat untuk melakukan Allocation adalah Pre Payment sudah ter-rekonsiliasi. Ikuti langkah berikut untuk melakukan rekonsiliasi manual:
+
+1. Buka menu **Bank/Cash Statement**.
+2. Tentukan **Bank Account**.
+3. Tentukan **Document Type**.
+4. Klik **Create Lines From**.
+5. Tentukan **Pre Payment** yang akan diproses.
+6. Klik **OK**.
+7. Masuk ke **Statement Line**.
+8. Validasi **Statement Line Date** dan **Statement Amount**.
+9. Klik **Complete** pada dokumen.
+
+Jika Document Type AP Pre Payment dikonfigurasi dengan **Auto Bank Statement**, Bank Statement otomatis ter-create saat Pre Payment di-complete, dan informasinya tampil di header **Payment and Receipt**. Dengan demikian, Bank Statement dapat langsung diproses. Setelah Bank Statement diproses, lanjutkan ke proses Allocation.
+
+## Allocation atas Pre Payment
+
+Lakukan Allocation untuk mengalokasikan Pre Payment ke invoice yang akan diproses. Ikuti langkah berikut:
+
+1. Buka menu **Payment Allocation**.
+2. Tentukan **Business Partner**.
+3. Tentukan **Payment** yang akan diproses.
+4. Tentukan **invoice** yang akan diproses atas payment tersebut.
+5. Pada kolom **Applied Invoice**, input nilai sesuai nominal pada payment.
+
+![allocation](../payment_allo.png "Payment Allocation") {#Figure406}
+
+6. Klik **Process**.
+
+![allocation](../allo_dp.png "Allocation Pre Payment") {#Figure407}
+
+Setelah diproses, sistem membuat dokumen **Allocation**, yang ditampilkan di bagian bawah menu sebelah kanan. Setelah Pre Payment dialokasikan ke invoice tertentu, tagihan pada invoice tersebut berkurang senilai Pre Payment. Saat dilakukan payment atas invoice tersebut, sisa tagihan sudah dikurangi oleh Pre Payment.
 ## Pembayaran Valuta Asing (Valas)
 
 Sebelum melakukan pembayaran menggunakan mata uang asing, perusahaan harus mengonfigurasi **Currency Rate** sebagai dasar konversi nilai transaksi ke mata uang dasar perusahaan. Sistem akan menggunakan konfigurasi tersebut untuk menentukan kurs yang berlaku pada saat pembayaran.

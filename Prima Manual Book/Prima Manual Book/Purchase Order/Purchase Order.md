@@ -241,6 +241,20 @@ Proses penutupan PO dilakukan melalui menu **SIS Close Document PO**. Ikuti lang
 
 ![PO Close](../PO_Close.png "PO Ter-Close") {#Figure98}
 
+Proses **Close PO** juga dapat dijalankan melalui **Scheduler**. Jika menggunakan Scheduler, PO otomatis berstatus _Closed_ sesuai konfigurasi **Closed In Days** pada Document Type Purchase Order. Ikuti langkah berikut untuk mengkonfigurasi Scheduler Close PO:
+
+1. Buka menu **Scheduler**.
+2. Input **Name** dengan **SIS Close Document PO**.
+3. Pada field **Process**, input **SIS Close Document PO**.
+4. Pada field **Schedule**, tentukan jadwal eksekusi (menit, jam, atau hari).
+5. Pada field **Days to Keep Log**, tentukan berapa lama log hasil eksekusi akan disimpan oleh sistem.
+
+![plv](../sch_close_po.png "Konfigurasi Scheduler Auto Closed PO") {#Figure406}
+
+6. Klik **Save**.
+7. Klik **Not Schedule**.
+8. Klik **Ok**.
+
 Setelah berstatus **Closed**, dokumen tidak dapat digunakan untuk transaksi lanjutan dan dinyatakan selesai sesuai proses bisnis yang berlaku.
 
 > **Catatan:** Proses **Close** hanya dapat dilakukan pada Purchase Order yang  berstatus **Complete**.

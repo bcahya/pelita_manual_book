@@ -140,11 +140,13 @@ Ikuti langkah berikut untuk mengakses report Internal Use (_Inventory Decrease/I
 
 Beberapa product yang dipindahkan ke warehouse atau gudang tertentu akan otomatis membentuk **Internal Use**. Karena jumlah product yang memerlukan konfigurasi ini bisa sangat banyak, konfigurasi Auto Internal Use dapat dilakukan di level **Product Category** untuk efisiensi.
 
-Jika Auto Internal Use sudah dikonfigurasi di Product Category, seluruh product baru maupun product _existing_ yang menggunakan Product Category tersebut otomatis ter-update menjadi Auto Internal Use. Setelah konfigurasi tersalin ke product, user perlu melakukan konfigurasi **Charge Internal Use** untuk setiap product secara individual.
+Jika Auto Internal Use sudah dikonfigurasi di Product Category, seluruh product baru maupun product _existing_ yang menggunakan Product Category tersebut otomatis ter-update menjadi Auto Internal Use. 
+
+Setelah konfigurasi tersalin ke product, **Charge Internal Use** mengikuti konfigurasi akun **Product Expense** pada Product Category. Jika akun Product Expense pada master product diubah, **Charge Internal Use** juga otomatis ter-update sesuai akun Product Expense yang baru di master product tersebut.
 
 ![pc](../auto_iu_pc.png "Konfigurasi di Product Category") {#Figure278}
 
-![product](../auto_iu_p_baru.png "Tercopy di Product Baru dan Existing") {#Figure279}
+![product](../charge_iu.png "Tercopy di Product Baru dan Existing") {#Figure279}
 
 Dengan mekanisme ini, user tidak perlu mengkonfigurasi Auto Internal Use satu per satu pada setiap product.
 
