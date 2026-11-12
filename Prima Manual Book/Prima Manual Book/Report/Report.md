@@ -84,7 +84,7 @@ Pembelian kebutuhan umum PPG yang tidak termasuk dalam kategori khusus lainnya.
 
 Pembelian bahan baku atau material untuk kebutuhan proses woven. 
 
-![woven](../poo_wov.png "PO Woven") {#Figure147}
+![woven](../po_wov_up.png "PO Woven") {#Figure147}
 
 ### PO Kecil
 
@@ -235,10 +235,10 @@ Ikuti langkah berikut untuk mengakses report surat jalan:
 ![aks](../sj_aks_ekspedisi.png "SJ Aksesoris ke Gudang Ekspedisi") {#Figure240}
 #### SJ Aksesoris ke CMT
 
-![aks](../sj_aksesoris_cmt.png "SJ Aksesoris ke CMT") {#Figure241}
+![aks](../aks_cmt.png "SJ Aksesoris ke CMT") {#Figure241}
 #### SJ Aksesoris ke Pabrik
 
-![aks](../sj_aks_pabrik.png "SJ Aksesoris ke Pabrik") {#Figure242}
+![aks](../aks_pabrik.png "SJ Aksesoris ke Pabrik") {#Figure242}
 
 #### SJ Finished Goods
 
@@ -1158,3 +1158,17 @@ Ikuti langkah berikut untuk mengakses Report Detail Penyusutan Asset:
 Berikut contoh Report Detail Penyusutan Asset:
 
 ![detail aset](../detail_penyusutan_aset.png "Report Detail Penyusutan Asset") {#Figure403}
+
+## Print Out RMA Vendor
+
+Ikuti langkah berikut untuk mengakses Print Out RMA Vendor:
+
+1. Buka menu **Vendor RMA**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Document RMA**.
+4. Pilih **Vendor RMA PPG atau SCI**.
+5. Klik **OK**.
+
+Berikut contoh Print Out RMA Vendor PPG:
+
+![rma](../RMA_PPG.png "Print Out RMA Vendor PPG") {#Figure407}

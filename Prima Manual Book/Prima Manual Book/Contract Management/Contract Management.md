@@ -41,19 +41,20 @@ Sebelum menggunakan Contract Management, buat master data product untuk komponen
 Ikuti langkah berikut untuk mengakses Contract Management di iDempiere:
 1. Buka menu **SIS Contract Management**
 2. Isi field pada **Header**:
-  - Period Type — Pilih Year (Tahun) atau Month (Bulan).
-  - Cost Center — Isi sesuai outlet atau showroom.
-  - Business Partner — Isi rekanan yang bekerja sama dalam kontrak.
+  - **Period Type** — Pilih Year (Tahun) atau Month (Bulan).
+  - **Cost Center** — Isi sesuai outlet atau showroom.
+  - **Business Partner** — Isi rekanan yang bekerja sama dalam kontrak.
   - **Partner Location** — Terisi otomatis sesuai konfigurasi pada Business Partner.
+  - **Nominal MOB Konsesi** — Tentukan nominal MOB untuk konsesi.
   - **Partner Bank Account** — Tentukan rekening bank yang akan digunakan.
-  - **Tax ID** — Nomor NPWP yang terisi otomatis sesuai konfigurasi pada Business Partner.
+  - **NPWP** — Nomor NPWP yang terisi otomatis sesuai konfigurasi pada Business Partner.
   - **NITKU** — Terisi otomatis sesuai konfigurasi NITKU pada Business Partner.
-  - Project — **Opsional**, isi jika terkait pekerjaan pembangunan outlet atau showroom.
-  - Informasi tambahan — Isi Luas Sewa, Harga per M2, Grace Periode, dan Harga per Tahun.
-  - Period Contract — Tentukan periode selama masa kontrak
-  - Periode Sewa Awal — Tentukan tanggal kontrak awal
+  - **Project** — **Opsional**, isi jika terkait pekerjaan pembangunan outlet atau showroom.
+  - **Informasi tambahan** — Isi Luas Sewa, Harga per M2, Grace Periode, dan Harga per Tahun.
+  - **Period Contract** — Tentukan periode selama masa kontrak
+  - **Periode Sewa Awal** — Tentukan tanggal kontrak awal
 
-![Contract Management](../contract_header.png "Contract Management") {#Figure69}
+![Contract Management](../header_contract_manag.png "Contract Management") {#Figure69}
 
 3. Masuk ke tab **Contract Management Line**. 
 4. Klik **New**, kemudian isi field berikut:
@@ -185,3 +186,20 @@ Report menampilkan seluruh informasi yang terdapat pada **Contract Management Li
 ![report detail](../report_contract_detail.png "Report Contract Management Detail") {#Figure150}
 
 > **Catatan:** Seluruh parameter bersifat opsional. Jika parameter tidak diisi, sistem menampilkan seluruh data tanpa filter, kecuali parameter yang dikonfigurasi sebagai wajib pada implementasi.
+
+
+## Konfigurasi Tax Access di Document Type SIS Contract Management
+
+1. Buka menu **Document Type**.
+2. Tentukan document type SIS Contract Management yang akan dikonfigurasi.
+3. Centang field **Tax Rate Access** pada header untuk mengaktifkan pembatasan tax rate.
+4. Klik **Generate Tax Rate Access**, kemudian tentukan tax rate yang akan diproses.
+
+![gen](../tax_contract.png "Generate Tax Rate Access") {#Figure375}
+
+5. Klik **SIS Generate Tax Rate Access**.
+6. Tab **Tax Rate Access** akan menampilkan daftar tax rate yang telah dikonfigurasi.
+
+![tax](../tax_cm.png "Tax Rate Access") {#Figure376}
+
+Ulangi langkah di atas untuk setiap document type lain yang memerlukan konfigurasi. Jika transaksi tidak memerlukan pembatasan tax rate, konfigurasi ini tidak perlu dilakukan.

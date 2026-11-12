@@ -67,7 +67,22 @@ Berikut contoh implementasi filter Production Warehouse di Bill of Material:
 
 Di iDempiere, field **Warehouse Manager (MIC)** pada menu Warehouse and Locator digunakan untuk menetapkan **Manager in Charge (MIC)** yang bertanggung jawab terhadap suatu warehouse. Informasi ini dapat digunakan sebagai referensi dalam proses yang membutuhkan penanggung jawab warehouse, termasuk pada report atau dokumen transaksi.
 
-Ikuti langkah berikut untuk mengkonfigurasi Warehouse Manager:
+#### Membuat Master User
+
+Sebelum mengkonfigurasi Warehouse Manager, buat master user untuk masing-masing user terlebih dahulu. Ikuti langkah berikut:
+
+1. Buka menu **User**.
+2. Tentukan **Name** dan **Search Key** untuk user tersebut.
+3. Centang field **Manager** jika user berperan sebagai manager.
+4. Centang field **Supervisor** jika user berperan sebagai supervisor.
+
+![user](../wh_manager.png "User Manager atau Supervisor") {#Figure406}
+
+5. Klik **Save**.
+
+#### Konfigurasi Warehouse Manager
+
+Setelah master user dibuat, tentukan manager pada masing-masing warehouse. Ikuti langkah berikut:
 
 1. Buka menu **Warehouse and Locator**.
 2. Tentukan **warehouse** yang akan dikonfigurasi.
