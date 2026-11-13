@@ -94,3 +94,6 @@
 .include {Konfigurasi Charge/Konfigurasi Charge.md}
 .include {Tools/Tools.md}
 .include {Security di iDempiere/Security di iDempiere.md}
+.include {Konfigurasi di Server/Konfigurasi di Server.md}
+.include {Product/Product.md}
+.include {Payment Term/Payment Term.md}
