@@ -131,7 +131,9 @@ Untuk menghubungkan POP turunan dengan POP induk, sistem menyediakan field **POP
 
 Field **POP Parent** menunjukkan dokumen POP induk yang terkait dengan POP turunan, sehingga user dapat mengetahui keterkaitan antara proses produksi induk dan turunannya. Sistem mengisi field **POP Parent** secara otomatis, sehingga user tidak perlu menginputnya secara manual.
 
-Selain itu, dokumen **POP Parent** memuat informasi **listing POP Child (turunan)** atas subcon untuk produksi barang jadi tersebut. Satu POP Parent dapat memiliki lebih dari satu POP Child, karena dalam satu kali produksi terdapat beberapa line atau produk dengan kebutuhan subcon yang berbeda-beda. Dengan listing ini, user dapat mengetahui POP turunan subcon mana saja yang ter-create.
+Selain itu, dokumen **POP Parent** memuat informasi **listing POP Child (turunan)** atas subcon untuk produksi barang jadi tersebut. Satu POP Parent dapat memiliki lebih dari satu POP Child, karena dalam satu kali produksi terdapat beberapa line atau produk dengan kebutuhan subcon yang berbeda-beda. Dengan listing ini, user dapat mengetahui POP turunan subcon mana saja yang ter-create. 
+
+Pada **POP Child**, field **Quantity** di POP Line bersifat _read-only_ dan tidak dapat diubah oleh user. Quantity tersebut dikalkulasi otomatis oleh sistem berdasarkan quantity **Component** pada BoM, sehingga produksi harus dilakukan sesuai quantity yang telah ditentukan.
 
 Berikut contoh POP Parent dengan dua POP Child (turunan):
 

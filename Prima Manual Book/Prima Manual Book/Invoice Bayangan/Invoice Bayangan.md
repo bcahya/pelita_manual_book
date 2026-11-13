@@ -26,8 +26,10 @@ Berikut contoh filtering Business Partner di menu Invoice Bayangan:
 - **Tax**
 - **Business Partner** (Seller)
 - **Partner Location** (Seller)
+- Kolom **Address** akan terisi secara otomatis berdasarkan alamat yang telah dikonfigurasi pada **Location** di master **Business Partner**.
 - **Business Partner 2** (Buyer)
 - **Partner Location** (Buyer)
+- Kolom **Address** akan terisi secara otomatis berdasarkan alamat yang telah dikonfigurasi pada **Location** di master **Business Partner**.
 
 ![header](../header_inv_mirr.png "Invoice Mirror") {#Figure210}
 

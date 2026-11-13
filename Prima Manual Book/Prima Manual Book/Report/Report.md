@@ -757,20 +757,18 @@ Berikut contoh Report Outstanding Invoice:
 
 ![ots](../lap_ots_inv.png "Laporan Outstanding Invoice") {#Figure255}
 
-## Export Movement Window
+## Export Outstanding Movement
 
-Langkah Akses Export movement window:
+Langkah Akses Export Outstanding Movement:
 
-1. Buka menu **SIS Export Movement Window**.
+1. Buka menu **SIS Export Outstanding Movement**.
 2. Tentukan **Movement Date**.
-3. Tentukan **MIC**.
-4. Tentukan **Document Type** yang akan dicek.
-5. Tentukan **Document Status**.
-6. Klik **OK**.
+3. Tentukan field-field filter yang dibutuhkan. Seluruh field bersifat opsional — gunakan filter sesuai kebutuhan
+4. Klik **OK**.
 
-Berikut contoh report export movement window:
+Berikut contoh report export outstanding movement:
 
-![move window](../move_window.png "Export Movement Window") {#Figure274}
+![move window](../ots_movement.png "Export Outstanding Movement") {#Figure274}
 
 ## Export Summary Movement
 
@@ -1124,7 +1122,7 @@ Ikuti langkah berikut untuk mengakses Report View Routing POP Line:
 
 Berikut contoh Report View Routing POP Line:
 
-![view routing](../view_routing_pop.png "Report View Routing di POP Line") {#Figure395}
+![view routing](../routing_export.png "Report View Routing di POP Line") {#Figure395}
 
 
 ## Report Rekapitulasi Asset
@@ -1172,3 +1170,15 @@ Ikuti langkah berikut untuk mengakses Print Out RMA Vendor:
 Berikut contoh Print Out RMA Vendor PPG:
 
 ![rma](../RMA_PPG.png "Print Out RMA Vendor PPG") {#Figure407}
+
+
+![rma](../print_vendor_rma_sci.png "Print Out RMA Vendor SCI") {#Figure408}
+
+## Report Payment Detail
+
+Ikuti langkah berikut untuk mengakses Report Payment Detail:
+
+1. Buka menu **Payment Details**.
+2. Tentukan field-field filter yang dibutuhkan. Field bersifat opsional — gunakan filter sesuai kebutuhan.
+3. Klik **OK**.
+

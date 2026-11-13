@@ -70,6 +70,7 @@ Pada window Generate PO From Requisition, sistem menampilkan informasi Qty dan A
 - Qty menunjukkan jumlah product dalam UOM Base.
 - Applied Qty menunjukkan jumlah product dalam UOM yang digunakan pada proses purchasing, baik UOM Base maupun UOM Conversion.
 - Jika user menggunakan UOM Conversion, nilai Applied Qty mengikuti quantity dalam UOM Conversion yang digunakan pada purchasing.
+- Production Order Planning — Informasi nomor Production Order Planning atas requisition.
 
 Dengan demikian, Qty menjadi acuan jumlah product dalam UOM Base, sedangkan Applied Qty menunjukkan quantity yang digunakan pada transaksi Purchase Order sesuai UOM purchasing.
 
@@ -162,10 +163,11 @@ Contoh 2:
 1. Buka menu **Purchase Order**
 2. Tentukan **Target Document Type** yang akan diproses.
 3. Input **Business Partner**
-4. Input **warehouse** untuk penempatan produk
-5. Tentukan **Product** pada header jika diperlukan (opsional)
-6. Tentukan **Style** pada header jika diperlukan (opsional)
-7. Tentukan **Proses Finish** pada header jika diperlukan (opsional)
+4. Kolom **Address** akan terisi secara otomatis berdasarkan alamat yang telah dikonfigurasi pada **Location** di master **Business Partner**.
+5. Input **warehouse** untuk penempatan produk
+6. Tentukan **Product** pada header jika diperlukan (opsional)
+7. Tentukan **Style** pada header jika diperlukan (opsional)
+8. Tentukan **Proses Finish** pada header jika diperlukan (opsional)
 
 
 ![style](../product_style.png "Konfigurasi Product dan Style") {#Figure389}
