@@ -32,7 +32,7 @@ FileZilla adalah aplikasi transfer file open source yang digunakan untuk meminda
 
 4. Klik Connect untuk menghubungkan ke server.
 
-## Import Data MT940
+## Mekanisme Import Data MT940
 
 MT940 adalah format standar SWIFT (Society for Worldwide Interbank Financial Telecommunication) untuk rekening koran elektronik (_electronic bank statement_). File MT940 memuat informasi transaksi perbankan — mencakup saldo awal, daftar debit/kredit, dan saldo akhir — yang dikirimkan bank kepada nasabah korporat. Di iDempiere, MT940 digunakan dalam modul **Bank Statement**.
 
@@ -40,6 +40,20 @@ Format MT940 umumnya menggunakan encoding **UTF-8**. Namun, sistem iDempiere saa
 
     
    ![Format Bank Statement](../Format_MT940.png "Format MT940") {#Figure91}
+
+Fitur Import MT940 digunakan untuk memasukkan data rekening koran elektronik dari bank ke iDempiere, kemudian mencocokkannya dengan dokumen Payment yang sudah dibuat sebelumnya. Hasil pencocokan akan membentuk Bank Statement dan merekonsiliasi Payment secara otomatis, sehingga user tidak perlu melakukan rekonsiliasi satu per satu.
+
+> **Penting:** MT940 hanya berlaku untuk **bank keluar** yang berasal dari Payment. Fitur ini tidak digunakan untuk bank masuk.
+
+### Konfigurasi Sebelum Import MT940
+
+Sebelum melakukan import MT940, pastikan kondisi berikut sudah terpenuhi:
+
+1. **Dokumen Payment sudah tersedia.** MT940 merepresentasikan transaksi bank keluar yang berasal dari Payment. Informasi Payment atas setiap transaksi pada file MT940 harus sudah ada di sistem sebelum file diimport. Jika Payment belum dibuat, sistem tidak dapat melakukan pencocokan.
+2. **BG Number terisi pada Payment.** Proses pencocokan dilakukan berdasarkan **BG Number**, sehingga nomor BG pada Payment harus sesuai dengan nomor BG yang tercantum di file MT940.
+3. **Document Type Payment dikonfigurasi tanpa Auto Bank Statement.** Pada Document Type Payment yang digunakan untuk transaksi MT940, field **Auto Bank Statement** tidak boleh dicentang. Hal ini bertujuan agar Bank Statement tidak terbentuk ganda — Bank Statement akan dibuat oleh proses **Generate Bank Statement from MT940**, bukan saat Payment di-complete.
+
+## Langkah Import MT940
 
 Langkah Import File MT940:
 1. Siapkan file MT940 dari bank. File MT940 menggunakan format **TXT**.
@@ -61,10 +75,74 @@ Langkah Import File MT940:
 
 ![Done Import Data MT940](../Import_Bank_Done.png "Done Import Data MT940") {#Figure87}
 
-5. Dokumen **Bank Statement** akan menampilkan bank tersebut sebagai pilihan pada field **Bank Account**.
+5. Jika import berhasil, data hasil import otomatis ter-generate dan dapat dilihat pada menu **SIS MT940**.
 
-![Bank Statement](../Deliver_Bank.png "Bank Statement") {#Figure88}
+Pada tahap ini data MT940 sudah masuk ke sistem, namun belum dicocokkan dengan Payment dan belum membentuk Bank Statement.
 
+### Proses Generate Bank Statement from MT940
+
+Setelah data MT940 tampil di menu **SIS MT940**, jalankan proses pencocokan dengan langkah berikut:
+
+1. Buka menu **SIS MT940**.
+2. Pilih data MT940 yang akan diproses.
+3. Jalankan proses **Generate Bank Statement from MT940**.
+4. Klik **OK**.
+
+Saat proses dijalankan, sistem melakukan hal berikut:
+
+1. **Matching Payment dengan BG Number.** Sistem membandingkan BG Number pada data MT940 dengan BG Number pada dokumen Payment.
+2. **Pembentukan Bank Statement.** Untuk data yang matched, sistem membuat Bank Statement berdasarkan Payment tersebut.
+3. **Update data MT940.** Data pada SIS MT940 diperbarui dengan informasi Payment yang matched.
+4. **Rekonsiliasi otomatis.** Payment dan data MT940 yang matched otomatis ter-rekonsiliasi. Field **Reconciled** pada Payment tercentang secara otomatis.
+
+### Clean Up Data MT940
+
+File MT940 memuat seluruh transaksi bank, dan satu file bisa berisi ratusan hingga ribuan transaksi. Tidak semua transaksi tersebut diproses di sistem. Agar data tidak menumpuk, user dapat menghapus data MT940 yang tidak diperlukan melalui proses **Clean Up Data MT940**.
+
+Ketentuan penghapusan:
+
+- Data yang dapat dihapus hanya data yang **belum ter-rekonsiliasi**.
+- Data yang **sudah ter-rekonsiliasi** tidak dapat dihapus.
+- Penghapusan didasarkan pada selisih hari antara **Document Date** MT940 dan batas hari yang dikonfigurasi di sistem.
+
+### Konfigurasi System Configurator
+
+Sebelum melakukan penghapusan, tentukan batas usia data yang akan dihapus:
+
+1. Buka menu **System Configurator**.
+2. Klik **New**.
+3. Isi field **Name** dengan **SIS_CLEAN_UP_MT940_DAYS**.
+4. Isi field **Configured Value** dengan jumlah hari sesuai kebijakan perusahaan.
+5. Pilih **Configuration Level** = **Client**.
+
+![mt940](../sis_clean_mt940.png "Konfigurasi Clean Up MT940 Days") {#Figure410}
+
+6. Klik **Save**.
+
+Nilai default di sistem adalah **90 hari**. Jika dikonfigurasi dengan nilai yang lebih kecil, misalnya **60 hari**, maka proses clean up dilakukan untuk data dengan Document Date yang berumur 60 hari atau lebih.
+
+### Konfigurasi Proses di Level System
+
+Selain System Configurator, proses clean up perlu dikonfigurasi di level system:
+
+1. Login sebagai **System Administrator**.
+2. Buka menu **Report & Process**.
+3. Klik **New**.
+4. Input **Search Key** dan **Name** dengan **SIS Clean MT940**.
+5. Pada field **Data Access Level**, pilih **Client+Organization**.
+6. Pada field **Allow Concurrent Execution**, pilih **Not from same user and parameters**.
+7. Pada field **Classname**, input nama class dengan **id.sistematika.base.process.SIS_CleanMT940**.
+
+![mt940](../process_clean_mt940.png "Konfigurasi Proses Clean Up MT940") {#Figure411}
+
+8. Klik **Save**.
+
+### Menjalankan Proses Clean Up Data MT940
+
+1. Buka menu **SIS Clean MT940**.
+2. Klik **OK**.
+
+Sistem menghapus data MT940 yang memenuhi dua kriteria: **Document Date** sesuai batas hari yang dikonfigurasi, dan data tersebut **belum ter-rekonsiliasi**.
 ## Import Data PO Kecil
 
 Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yaitu: organisasi, tahun bulan transaksi, username. Berikut contoh format file yang digunakan untuk import data PO Kecil.

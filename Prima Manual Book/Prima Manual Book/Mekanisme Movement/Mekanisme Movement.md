@@ -29,7 +29,7 @@ Karena proses Delivery dan Receipt saling terhubung, lakukan konfigurasi dua **D
 4. Pada field **Document Base Type**, pilih **Material Movement**.
 5. Pada field **Internal Use Doc Type**, tentukan dokumen Internal Use yang digunakan.
 6. Centang field **Auto Create Back Order**.
-7. 
+7. **Auto Create Receipt Movement Doc** — Menentukan apakah sistem otomatis membuat dokumen Inventory Move Receipt saat RDO di-complete.
 8. Centang field **Receipt**.
 9. Apabila proses 
 10. Klik **Save**.
@@ -59,11 +59,13 @@ Karena proses Delivery dan Receipt saling terhubung, lakukan konfigurasi dua **D
 9. Klik **Save**.
 10. Klik **Complete** pada dokumen Movement.
 
-Saat Movement di-complete, warehouse dan locator tujuan otomatis berubah menjadi warehouse dan locator **In-Transit** sesuai konfigurasi document type. Selain itu, field **Warehouse Target** — yaitu warehouse tujuan movement — akan muncul secara otomatis.
+Saat Movement di-complete, warehouse dan locator tujuan otomatis berubah menjadi warehouse dan locator **In-Transit** sesuai konfigurasi document type. Selain itu, field **Warehouse Reference** — yaitu warehouse tujuan movement — akan muncul secara otomatis.
 
-![shipment](../wh_target.png "Movement Delivery") {#Figure258}
+![shipment](../wh_ref.png "Movement Delivery") {#Figure258}
 
 Sistem juga otomatis membuat **Movement Receipt** dari In-Transit ke warehouse dan locator tujuan, beserta informasi **Movement Source/Target** sesuai alur perpindahan barang.
+
+Selain itu, Inventory Move Receipt memuat informasi **Warehouse Reference**, yaitu warehouse asal dari dokumen Delivery. Dengan informasi ini, user dapat langsung mengetahui asal warehouse dari Inventory Move tersebut.
 
 ![shipment](../move_ship.png "Movement Delivery") {#Figure148}
 
@@ -478,6 +480,11 @@ Pada tab **Attribute**, sistem menampilkan ASI yang berhasil ter-generate sesuai
 ![asi](../asi_gen.png "Hasil Generate Attribute Set Instance") {#Figure376}
 
 Fitur ini memudahkan proses Inventory Move saat ASI ditentukan secara manual dan jumlah produk yang dipindahkan banyak. User dapat memilih lebih dari satu ASI untuk produk yang sama dalam satu proses.
+
+Sistem otomatis menghitung selisih antara total quantity ASI yang di-generate dan quantity pada Move Line. Saat membuat ASI baru, sistem mengisi field **Remaining Qty** sesuai dengan quantity yang belum dialokasikan untuk menampung sisa quantity tersebut.
+
+![qty](../qty_remaining.png "Qty Remaining") {#Figure411}
+
 ### Movement Receipt dengan Product ASI
 
 Inventory Move di sistem dapat dilakukan secara **manual** maupun melalui **RDO**. Proses Inventory Move juga dapat berjalan secara **direct (langsung)** atau melibatkan **intransit**. Untuk Inventory Move yang melibatkan intransit, terdapat dua proses movement — **Inventory Move Delivery** dan **Inventory Move Receipt**.

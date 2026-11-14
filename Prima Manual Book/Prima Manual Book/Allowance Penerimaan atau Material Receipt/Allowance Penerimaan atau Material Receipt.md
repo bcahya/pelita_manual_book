@@ -51,3 +51,7 @@ Allowance dikonfigurasi di level master produk. Saat produk tersebut dibeli mela
 13. Klik **Complete** pada dokumen Material Receipt.
 
 >**Catatan:** Jika PIC yang berwenang belum melakukan approval, dokumen Material Receipt tidak dapat di-complete dan tidak dapat diproses lebih lanjut.
+
+Jika quantity MR yang diinput melebihi quantity PO namun masih dalam batas **Allowance**, proses MR/BPB tidak memerlukan approval.
+
+Approval baru diperlukan ketika quantity MR melebihi batas Allowance. Dalam kondisi ini, **PIC yang berwenang** harus memberikan approval pada MR tersebut. Selama approval belum diberikan, MR/BPB tidak dapat diproses.

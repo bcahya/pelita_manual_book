@@ -78,6 +78,12 @@ Pada menu **Inventory Move**, terdapat penambahan field **POP Parent** yang menu
 ![move](../pop_parent.png "POP Parent di Header Inventory Move") {#Figure355}
 
 Dengan adanya field **POP Parent**, user dapat mengetahui POP induk yang terkait dengan Inventory Move pada setiap POP turunan, sehingga hubungan antara proses produksi induk dan turunannya dapat ditelusuri dengan lebih mudah.
+
+Inventory Move yang dihasilkan melalui proses Generate POP tidak dapat dihapus. Jika user mencoba menghapus Inventory Move tersebut, sistem akan menampilkan notifikasi bahwa dokumen berasal dari POP.
+
+![error](../error_move_pop.png "Delete Inventory Move dari Generate POP") {#Figure412}
+
+Apabila Inventory Move sudah tidak digunakan, user dapat melakukan proses Void untuk membatalkan dokumen tersebut.
 ### Inventory Move POP Manual
 
 Dalam proses Production Order Planning, terdapat kondisi di mana user perlu membuat **Inventory Move secara manual**. Karena Inventory Move ini berkaitan dengan Production Order Planning, dokumen yang dibuat harus terhubung ke **POP** dan **MO** terkait. Oleh karena itu, user wajib menginput nomor dokumen POP dan MO yang akan diproses.

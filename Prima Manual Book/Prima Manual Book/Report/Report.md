@@ -1172,6 +1172,8 @@ Berikut contoh Print Out RMA Vendor PPG:
 ![rma](../RMA_PPG.png "Print Out RMA Vendor PPG") {#Figure407}
 
 
+Berikut contoh Print Out RMA Vendor SCI:
+
 ![rma](../print_vendor_rma_sci.png "Print Out RMA Vendor SCI") {#Figure408}
 
 ## Report Payment Detail
@@ -1182,3 +1184,6 @@ Ikuti langkah berikut untuk mengakses Report Payment Detail:
 2. Tentukan field-field filter yang dibutuhkan. Field bersifat opsional — gunakan filter sesuai kebutuhan.
 3. Klik **OK**.
 
+Berikut contoh Report Payment Details:
+
+![PAY](../payment_detail.png "Report Payment Details") {#Figure409}
