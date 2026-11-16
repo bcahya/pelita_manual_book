@@ -33,12 +33,12 @@
 .include {Item Type Product/Product Segment.md}
 .include {Item Type Product/Item Type Product.md}
 .include {Item Type Product/Implementasi Item Type di Product.md}
-.include {Product/Product.md}
 .include {Product Varian/Product Template.md}
 .include {Product Varian/Fitur Product Varian.md}
 .include {Product Varian/Konfigurasi Sebelum Menentukan Product Varian.md}
 .include {Product Varian/Generate Product Varian.md}
 .include {Product Varian/Regenerate Product Varian.md}
+.include {Product/Product.md}
 .include {Unit of Measure Conversion/Unit of Measure.md}
 .include {Unit of Measure Conversion/UoM Conversion.md}
 .include {Unit of Measure Conversion/Implementasi di Requisition.md}
