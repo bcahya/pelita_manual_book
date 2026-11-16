@@ -59,6 +59,7 @@ Konfigurasi berikut dilakukan pada tenant **PT Sebastian Citra Indonesia** dan *
 | SIS_TAX_EXEMPT_ID                                   | C_Tax_ID                                                                                                                          | Client              |
 | SIS_USING_DOCTYPE_MANUAL_ASI                        | Y                                                                                                                                 | Client              |
 | SIS_WAITING_QUEUE_DOCNO_SEC                         | 5                                                                                                                                 | Client              |
+| SIS_CLEAN_UP_MT940_DAYS                             | Jumlah hari yang menentukan batas usia data MT940 yang akan dihapus, sesuai kebijakan perusahaan                                  | Client              |
 
 
 ## Scheduler

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prima Manual Book/POP BoM dan MO/Requisition POP.md",
+                "file": "Prima Manual Book/Konfigurasi di Server/Konfigurasi di Server.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Requisition POP"
+              "title": "Konfigurasi di Server"
             }
           }
         ]
@@ -196,11 +196,12 @@
   },
   "active": "069fb2af657edcc7",
   "lastOpenFiles": [
+    "Prima Manual Book/Import Data/Import Data.md",
+    "Prima Manual Book/POP BoM dan MO/Requisition POP.md",
     "Prima Manual Book/mo_reff_po.png",
     "sis_gen_po.png",
     "Prima Manual Book/sis_gen_po.png",
     "Prima Manual Book/Purchase Order/Purchase Order.md",
-    "Prima Manual Book/POP BoM dan MO/Requisition POP.md",
     "Prima Manual Book/POP BoM dan MO/Manufacturing Order.md",
     "Prima Manual Book/POP BoM dan MO/Production Order Planning Subcon.md",
     "Prima Manual Book/Mekanisme Pembayaran/Mekanisme Pembayaran.md",
@@ -212,9 +213,7 @@
     "Prima Manual Book/Mekanisme Movement/Mekanisme Movement.md",
     "qty_remaining.png",
     "Prima Manual Book/qty_remaining.png",
-    "Prima Manual Book/Import Data/Import Data.md",
     "Prima Manual Book/process_clean_mt940.png",
-    "Prima Manual Book/sis_clean_mt940.png",
     "Prima Manual Book/Format Report/Format Report.md",
     "Prima Manual Book/Asset Management/Asset Management.md",
     "Prima Manual Book/Konfigurasi di Server/Konfigurasi di Server.md",
