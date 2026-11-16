@@ -775,7 +775,10 @@ Berikut contoh report export outstanding movement:
 Langkah Akses Export summary movement:
 
 1. Buka menu **SIS Export Summary Movement**.
-2. Tentukan **Movement Date**.
+2. Tentukan field-field filter yang dibutuhkan. Field bersifat opsional — gunakan filter sesuai kebutuhan
+
+![move](../parameter_sum_move.png "Parameter SIS Export Summary Movement") {#Figure411}
+
 3. Klik **OK**.
 
 Berikut contoh report export summary movement:
@@ -1187,3 +1190,41 @@ Ikuti langkah berikut untuk mengakses Report Payment Detail:
 Berikut contoh Report Payment Details:
 
 ![PAY](../payment_detail.png "Report Payment Details") {#Figure409}
+
+## Report Pembelian Bahan PPG
+
+Report Pembelian Bahan PPG tersedia dalam dua format, yaitu **PDF** dan **Excel**. Kedua report diakses melalui menu yang berbeda.
+
+### Report Pembelian Bahan PPG (PDF)
+
+Ikuti langkah berikut untuk mengakses Report Pembelian Bahan PPG:
+
+1. Buka menu **SIS Print Report Pembelian Bahan PPG**.
+2. Tentukan **Date Ordered** dan **Business Partner**.
+3. Klik **OK**.
+
+Berikut contoh Report Pembelian Bahan PPG:
+
+![pembelian](../pembelian_bahan_ppg.png "Report Report Pembelian Bahan PPG") {#Figure410}
+### Report Pembelian Bahan PPG (Excel)
+
+Ikuti langkah berikut untuk mengakses Report Excel Pembelian Bahan PPG:
+
+1. Buka menu **SIS Print Report Excel Pembelian Bahan PPG**.
+2. Tentukan **Date Ordered** dan **Business Partner**.
+3. Klik **OK**.
+
+Berikut contoh Report Excel Pembelian Bahan PPG:
+
+![pembelian](../excel_pembelian_bahan_ppg.png "Report Report Pembelian Bahan PPG (Excel)") {#Figure411}
+## Report Pembelian Bahan SCI
+
+Ikuti langkah berikut untuk mengakses Report Pembelian Bahan SCI:
+
+1. Buka menu **SIS Print Report Pembelian Bahan SCI**.
+2. Tentukan **filter** yang dibutuhkan. Gunakan filter sesuai kebutuhan.
+3. Klik **OK**.
+
+Berikut contoh Report Pembelian Bahan SCI:
+
+![order](../pembelian_bahan_sci.png "Report Pembelian Bahan SCI") {#Figure412}

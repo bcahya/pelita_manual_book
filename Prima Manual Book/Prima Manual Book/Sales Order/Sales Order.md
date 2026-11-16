@@ -65,6 +65,41 @@ Allow Future Doc merupakan fitur yang digunakan untuk menentukan apakah Date Ord
 9. Klik **Complete** dokumen.
 
 Setelah Sales Order di-complete, sistem akan membentuk **Shipment** secara otomatis apabila konfigurasi **PO/SO Generate MR/Shipment** telah diaktifkan pada Document Type Sales Order.
+
+### Sales Order dengan Product ASI
+
+Untuk transaksi Sales Order pada produk yang menggunakan **ASI**, lakukan konfigurasi pada Document Type terlebih dahulu.
+
+#### Konfigurasi Document Type
+
+1. Buka menu **Document Type**.
+2. Pilih **MM Shipment** yang digunakan untuk transaksi Sales Order.
+3. Centang **Auto Invoice AP/AR** untuk mengaktifkan proses auto generate invoice.
+4. Pada field **Document Type Invoice AP/AR**, pilih document type invoice yang akan digunakan.
+5. Pada field **Document Action Invoice AP/AR**, tentukan status invoice yang dihasilkan secara otomatis: _Prepare_ atau _Complete_.
+6. Centang field **Using Attribute**.
+7. Klik **Save**.
+
+#### Langkah Sales Order dengan Product ASI
+
+Setelah Document Type dikonfigurasi, ikuti langkah berikut:
+
+1. Buka menu **Sales Order**.
+2. Pilih **Document Type** sesuai kebutuhan transaksi.
+3. Input informasi pada bagian **Header**.
+4. Pilih **Warehouse** yang digunakan untuk transaksi.
+5. Sistem otomatis mengisi **ICPL** dan **Price List** berdasarkan konfigurasi Warehouse.
+6. Buka tab **Order Line**.
+7. Input **Product** dan **Quantity**.
+8. Masuk ke tab **Attributes**.
+9. Klik kolom **Attribute Set Instance**.
+10. Klik **Select Existing Record**.
+11. Pilih **ASI** yang akan dijual.
+12. Klik **OK**.
+13. Klik **Save**.
+14. Klik **Complete** pada dokumen.
+
+Informasi ASI otomatis tersalin ke **Shipment**, sehingga user tidak perlu menentukan ASI kembali saat proses Shipment.
 ## Proses Shipment
 
 Shipment merupakan dokumen yang digunakan untuk mencatat proses pengiriman barang kepada customer. Informasi Shipment yang terbentuk secara otomatis akan mengacu pada Sales Order, termasuk **Product, Quantity, Price**, dan informasi terkait lainnya. Proses Shipment:

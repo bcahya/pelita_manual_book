@@ -308,6 +308,8 @@ Pada mekanisme ini, user menentukan warehouse tujuan di RDO Line untuk masing-ma
 11. Klik **Complete**.
 
 Saat RDO di-complete, sistem otomatis membuat dokumen **Inventory Move Delivery** dan **Inventory Move Receipt** (jika dikonfigurasi auto receipt).
+
+> **Catatan:** Warehouse dan Locator tujuan wajib diisi. Jika belum ditentukan, RDO Line tidak dapat disimpan dan dokumen RDO tidak dapat di-complete.
 #### Proses Inventory Move Delivery
 
 1. Buka menu **SIS RDO**.
