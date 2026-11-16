@@ -1,4 +1,4 @@
-.docname {20261102 Pelita Prima Manual Book}
+.docname {20261116 Pelita Prima Manual Book}
 .doctype {paged}
 .doclang {English}
 .theme {paperwhite} layout:{latex}
@@ -11,7 +11,7 @@
 .pagemargin {bottomright}
     .currentpage
 .pagemargin {bottomleft}
-    Versi 2026-11-02
+    Versi 2026-11-16
 .pageformat margin:{2cm}
 .pageformat bordertop:{1px} borderbottom:{1px}
 
@@ -33,6 +33,7 @@
 .include {Item Type Product/Product Segment.md}
 .include {Item Type Product/Item Type Product.md}
 .include {Item Type Product/Implementasi Item Type di Product.md}
+.include {Product/Product.md}
 .include {Product Varian/Product Template.md}
 .include {Product Varian/Fitur Product Varian.md}
 .include {Product Varian/Konfigurasi Sebelum Menentukan Product Varian.md}
@@ -65,6 +66,7 @@
 .include {Tax/Tax.md}
 .include {Attribute Set Instance/Attribute Set Instance.md}
 .include {Purchase Order/Purchase Order.md}
+.include {Payment Term/Payment Term.md}
 .include {Material Receipt/Material Receipt.md}
 .include {Estimated Landed Cost/Estimated Landed Cost.md}
 .include {AP dan AR Manual/AP dan AR Manual.md}
@@ -92,8 +94,6 @@
 .include {Kontra Bon/Kontra Bon.md}
 .include {Konfigurasi Document Type/Konfigurasi Document Type.md}
 .include {Konfigurasi Charge/Konfigurasi Charge.md}
+.include {Konfigurasi di Server/Konfigurasi di Server.md}
 .include {Tools/Tools.md}
 .include {Security di iDempiere/Security di iDempiere.md}
-.include {Konfigurasi di Server/Konfigurasi di Server.md}
-.include {Product/Product.md}
-.include {Payment Term/Payment Term.md}
