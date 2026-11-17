@@ -152,6 +152,8 @@ Sistem otomatis menyalin Move Line dari Inventory Move Delivery, dengan **Locato
 11. Klik **Complete** pada dokumen.
 
 Untuk memproses Inventory Move Receipt dari Generate RDO, user dapat memproses Inventory Move seperti mekanisme sebelumnya — seluruh informasi pada Inventory Move bersumber dari RDO dan RDO Line.
+
+> **Catatan:** Inventory Move yang sudah digunakan sebagai **Movement Source** pada dokumen berstatus _Draft_, _Complete_, atau _Closed_ tidak dapat digunakan kembali sebagai Movement Source pada dokumen lain.
 ## RDO Sub Brand
 
 Pada proses Inventory Move, terdapat kebutuhan untuk mendistribusikan produk berdasarkan kategori **Sub Brand** tanpa perlu menentukan produk satu per satu. Setiap produk sudah memiliki kategori Sub Brand yang telah diidentifikasi oleh perusahaan, sehingga user cukup menentukan Sub Brand yang akan diproses.

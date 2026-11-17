@@ -175,6 +175,7 @@ Lakukan Allocation untuk mengalokasikan Pre Payment ke invoice yang akan diprose
 3. Tentukan **Payment** yang akan diproses.
 4. Tentukan **invoice** yang akan diproses atas payment tersebut.
 5. Pada kolom **Applied Invoice**, input nilai sesuai nominal pada payment.
+6. Field **Trade Discount** tidak perlu diinput. Field ini bersifat _read-only_ dan terisi otomatis oleh sistem.
 
 ![allocation](../payment_allo.png "Payment Allocation") {#Figure406}
 

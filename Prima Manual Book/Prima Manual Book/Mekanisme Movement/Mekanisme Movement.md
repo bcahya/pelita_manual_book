@@ -86,6 +86,9 @@ Sistem otomatis menyalin Move Line dari Inventory Move Delivery, dengan **Locato
 8. Verifikasi **produk**, **quantity**, serta **Locator** asal dan tujuan.
 9. Klik **Save**.
 10. Klik **Complete** pada dokumen.
+
+
+> **Catatan:** Inventory Move yang sudah digunakan sebagai **Movement Source** pada dokumen berstatus _Draft_, _Complete_, atau _Closed_ tidak dapat digunakan kembali sebagai Movement Source pada dokumen lain.
 ### Proses Penerimaan (Auto Receipt)
 
 Setelah produk berpindah ke warehouse intransit, proses Movement Receipt untuk memindahkan produk ke warehouse dan locator tujuan. Ikuti langkah berikut:
