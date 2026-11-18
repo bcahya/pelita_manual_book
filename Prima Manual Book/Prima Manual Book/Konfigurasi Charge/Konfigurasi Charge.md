@@ -62,4 +62,8 @@ Saat membuat master Charge, user juga menentukan akun atas charge tersebut. Akun
 
 ![acc](../ar_charge.png "Transaksi dengan Charge Document Controlled") {#Figure356}
 
-Pastikan charge yang digunakan memiliki akun dengan **Document Controlled tidak dicentang** agar transaksi dapat berjalan lancar.
+Pastikan charge yang digunakan memiliki akun dengan **Document Controlled tidak dicentang** agar transaksi dapat berjalan lancar. 
+
+Validasi **Document Controlled** pada akun charge berlaku untuk **AP Invoice** maupun **AR Invoice** yang Document Type-nya dikonfigurasi dengan field **Manual** dicentang, yang berarti invoice tersebut boleh dibuat secara manual.
+
+Jika field **Manual** pada Document Type **tidak dicentang**, invoice yang menggunakan charge dengan akun **Document Controlled** dicentang tetap dapat diproses.
