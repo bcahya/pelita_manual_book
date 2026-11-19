@@ -23,8 +23,9 @@ Untuk mengatur mekanisme tersebut, user perlu melakukan konfigurasi pada **Syste
 
 Berikut merupakan contoh Requisition yang terbentuk secara terpisah berdasarkan masing-masing POP. Meskipun memiliki Business Partner, Product, dan Warehouse yang sama, Requisition dari satu POP tidak dikonsolidasikan dengan Requisition dari POP lainnya.
 
-![req](../req_cmt.png "Requisition Per POP") {#Figure401}
+![req](../req_pop.png "Requisition Per POP") {#Figure401}
 
+Requisition yang dihasilkan melalui proses Generate MO akan memiliki penanda berupa flag **Generated** pada Requisition Header. Sistem secara otomatis mencentang flag tersebut untuk Requisition yang dibuat melalui proses Generate MO dari POP. Sementara itu, Requisition yang dibuat secara manual tidak akan memiliki tanda centang pada flag **Generated**.
 ## Generate PO From Requisition
 
 1. Buka menu **SIS Generate PO From Requisition**.

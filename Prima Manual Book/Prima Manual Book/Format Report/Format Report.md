@@ -49,3 +49,6 @@ Pembatasan akses report berdasarkan document type ini bertujuan untuk:
 
 - Memastikan setiap user hanya dapat mengakses report sesuai haknya.
 - Menghindari kesalahan pemilihan report — misalnya, memproses PO Bahan Baku namun mencetak printout PO ATK yang tidak sesuai.
+
+### Listing Proses Report Setiap Menu
+

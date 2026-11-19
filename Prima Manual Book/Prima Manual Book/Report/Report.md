@@ -742,7 +742,7 @@ Report Payment digunakan untuk menampilkan dan memantau transaksi pembayaran dan
 
 Berikut contoh Report Printout Payment:
 
-![payment](../printout_pay.png "Printout Payment") {#Figure221}
+![payment](../payment_vendor.png "Printout Payment") {#Figure221}
 
 ## Laporan Outstanding Invoice Supplier SCI
 
@@ -1228,3 +1228,17 @@ Ikuti langkah berikut untuk mengakses Report Pembelian Bahan SCI:
 Berikut contoh Report Pembelian Bahan SCI:
 
 ![order](../pembelian_bahan_sci.png "Report Pembelian Bahan SCI") {#Figure412}
+
+## Report Kontra Bon
+
+Ikuti langkah berikut untuk mengakses Report Kontra Bon:
+
+1. Buka menu **SIS Report Kontra Bon**.
+2. Tentukan **Document Date**.
+3. Tentukan **Business Partner**.
+4. Tentukan **Document Status**.
+5. Klik **OK**.
+
+Berikut contoh Report Kontra Bon:
+
+![kontra](../report_kontra_bon.png "Report Kontra Bon") {#Figure413}

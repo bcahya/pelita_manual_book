@@ -84,6 +84,14 @@ Inventory Move yang dihasilkan melalui proses Generate POP tidak dapat dihapus. 
 ![error](../error_move_pop.png "Delete Inventory Move dari Generate POP") {#Figure412}
 
 Apabila Inventory Move sudah tidak digunakan, user dapat melakukan proses Void untuk membatalkan dokumen tersebut.
+
+Inventory Move yang dihasilkan melalui proses Generate MO akan memiliki penanda berupa flag **Generated** pada Inventory Move Header. Sistem secara otomatis mencentang flag tersebut untuk Inventory Move yang dibuat melalui proses Generate MO dari POP. 
+
+![move](../move_pop.png "Inventory Move dari Generate MO") {#Figure414}
+
+Sementara itu, Inventory Move yang dibuat secara manual tidak akan memiliki tanda centang pada flag **Generated**. Hal ini tetap berlaku meskipun Inventory Move tersebut telah direlasikan dengan POP dan MO, karena proses pembuatannya tidak mengikuti routing yang telah ditentukan oleh sistem.
+
+![move](../move_manual_pop.png "Inventory Move Manual dengan Relasi POP") {#Figure415}
 ### Inventory Move POP Manual
 
 Dalam proses Production Order Planning, terdapat kondisi di mana user perlu membuat **Inventory Move secara manual**. Karena Inventory Move ini berkaitan dengan Production Order Planning, dokumen yang dibuat harus terhubung ke **POP** dan **MO** terkait. Oleh karena itu, user wajib menginput nomor dokumen POP dan MO yang akan diproses.

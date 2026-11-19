@@ -148,3 +148,29 @@ Setelah user mengatur **Last Reconciliation Date**, sistem akan memvalidasi tang
 Sistem membandingkan **Statement Date** dengan **Last Reconciliation Date**. Jika Statement Date lebih awal daripada Last Reconciliation Date, sistem akan menampilkan pesan error dan menolak proses void.
 
 Dengan demikian, user tidak dapat melakukan void pada Bank Statement yang tanggal transaksinya masih termasuk dalam periode rekonsiliasi yang telah ditentukan.
+
+## Bank Statement Manual
+
+Bank Statement Manual adalah pencatatan transaksi rekening koran bank yang diinput secara manual oleh user. Transaksi yang dicatat dapat berupa penerimaan uang, pengeluaran uang, biaya administrasi bank, bunga bank, atau transaksi lain pada rekening perusahaan yang **tidak memiliki relasi ke Payment maupun Receipt**.
+
+Saat membuat Bank Statement Manual, user menentukan **Charge** atas transaksi tersebut. Pihak yang menerima atau membayarkan transaksi ditentukan melalui **Business Partner** pada Statement Line. Field Business Partner **wajib diinput**.
+
+### Langkah Bank Statement Manual
+
+1. Buka menu **Bank/Cash Statement**.
+2. Tentukan **Bank** yang akan diproses.
+3. Tentukan **Bank Account** yang akan diproses.
+4. Tentukan **Document Type**.
+5. Klik **Save**.
+6. Masuk ke tab **Statement Line**.
+7. Tentukan **Statement Line Date**.
+8. Input **Statement Amount**.
+9. Tentukan **Charge**.
+10. Tentukan **Business Partner**.
+
+![bs](../bs_line.png "Bank Statement Line") {#Figure410}
+
+11. Klik **Save**.
+12. Klik **Complete** pada dokumen.
+
+> **Catatan:** Untuk Bank Statement yang ter-create otomatis dari Payment atau Receipt, informasi Business Partner mengikuti konfigurasi pada **Payment and Receipt**, sehingga user tidak perlu menentukannya secara manual.
