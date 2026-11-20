@@ -207,13 +207,13 @@ Ikuti langkah berikut untuk mengakses report surat jalan:
 
 #### SJ Bahan Knitting ke Gudang Titip
 
-![knit](../sj_knit_titip.png "SJ Knitting ke Gudang Titip") {#Figure232}
+![knit](../sj_knit.png "SJ Knitting ke Gudang Titip") {#Figure232}
 #### SJ Bahan Knitting ke CMT
 
-![knit](../sj_knit_cmt.png "SJ Knitting ke CMT") {#Figure233}
+![knit](../sj_knit.png "SJ Knitting ke CMT") {#Figure233}
 #### SJ Bahan Knitting ke Pabrik
 
-![knit](../sj_knit_pab.png "SJ Knitting ke Pabrik") {#Figure234}
+![knit](../sj_knit.png "SJ Knitting ke Pabrik") {#Figure234}
 #### SJ Bahan Knitting ke Gudang Bahan
 
 ![knit](../sj_knit_bahan.png "SJ Knitting ke Gudang Bahan") {#Figure235}
@@ -222,7 +222,7 @@ Ikuti langkah berikut untuk mengakses report surat jalan:
 ![woven](../sj_wov_bahan.png "SJ Woven ke Gudang Bahan") {#Figure236}
 #### SJ Bahan Woven ke CMT
 
-![wov](../sj_wov_titip.png "SJ Woven ke CMT") {#Figure237}
+![wov](../sj_woven.png "SJ Woven ke CMT") {#Figure237}
 #### SJ Bahan Woven ke Gudang Bahan
 
 ![WOV](../sj_wov_cmt.png "SJ Woven ke Gudang Bahan") {#Figure238}
@@ -380,7 +380,7 @@ Report ini menampilkan seluruh transaksi invoice pembelian dari vendor yang mena
 
 1. Buka menu **Purchase Invoice and Credit/Debit Note**.
 2. Klik tombol **Setting (⚙)**.
-3. Klik **Print Invoice Lain-Lain**.
+3. Klik **Print Invoice**.
 4. Klik **OK**.
 
 ![vendor](../inv_vll.png "Invoice Vendor Lain-Lain") {#Figure167}
@@ -398,7 +398,7 @@ Ikuti langkah berikut untuk mencetak Invoice Vendor Credit Note Lain-Lain:
 
 1. Buka menu **Purchase Invoice and Credit/Debit Note**.
 2. Klik tombol **Setting (⚙)**.
-3. Klik **Print Invoice Credit Note**.
+3. Klik **Print Invoice**.
 4. Klik **OK**.
 
 ![vendor](../inv_vcn.png "Invoice Vendor Credit Note Lain-Lain") {#Figure168}
@@ -415,7 +415,7 @@ Ikuti langkah berikut untuk mengaksesnya:
 
 1. Buka menu **Purchase Invoice and Credit/Debit Note**.
 2. Klik tombol **Setting (⚙)**.
-3. Klik **SIS Printout Invoice Buyer Lain-Lain**.
+3. Klik **Print Invoice**.
 4. Klik **OK**.
 
 ![buyer lain-lain](../inv_bll.png "Invoice Buyer Lain-Lain") {#Figure198}
@@ -427,7 +427,7 @@ Ikuti langkah berikut untuk mencetak Invoice Buyer Credit Note:
 
 1. Buka menu **Purchase Invoice and Credit/Debit Note**.
 2. Klik tombol **Setting (⚙)**.
-3. Klik **SIS Printout Invoice Credit Note Buyer Lain-Lain**.
+3. Klik **Print Invoice**.
 4. Klik **OK**.
 
 ![credit memo](../inv_bcn.png "Invoice Buyer Credit Note"){#Figure199}

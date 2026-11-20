@@ -59,17 +59,18 @@ Bank Statement Manual adalah transaksi pencatatan mutasi bank yang diinput secar
 Di iDempiere, Charge digunakan untuk mencatat biaya atau pendapatan tambahan yang berkaitan dengan transaksi bank — misalnya biaya administrasi bank. Charge yang dipilih memengaruhi pencatatan akuntansi sesuai konfigurasi akun pada Charge. Ikuti langkah berikut untuk membuat Bank Statement Manual:
 
 1. Buka menu **Bank/Cash Statement**.
-2. Tentukan **Bank Account**.
-3. Tentukan **Document Type**.
-4. Masuk ke **Statement Line**.
-5. Tentukan **Statement Line Date**.
-6. Input **Statement Amount**.
-7. Tentukan **Charge**.
+2. Tentukan **Bank**.
+3. Tentukan **Bank Account**. Sistem hanya menampilkan Bank Account yang terkait dengan **Bank** yang telah dipilih.
+4. Tentukan **Document Type**.
+5. Masuk ke **Statement Line**.
+6. Tentukan **Statement Line Date**.
+7. Input **Statement Amount**.
+8. Tentukan **Charge**.
 
 ![st](../statement_amount.png "Statement Line") {#Figure349}
 
-8. Klik **Save**.
-9. Klik **Complete** pada dokumen.
+9. Klik **Save**.
+10. Klik **Complete** pada dokumen.
 
 Saat membuat Statement Line, user cukup menginput **Statement Amount**. Field lain seperti **Transaction Amount**, **Charge Amount**, dan **Interest Amount** tidak perlu diinput secara manual — saat Charge ditentukan, sistem otomatis mengisi **Charge Amount** sesuai Statement Amount yang diinput.
 ## Revaluasi Bank/Cash Statement Valas

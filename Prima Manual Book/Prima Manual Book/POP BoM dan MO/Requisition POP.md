@@ -39,3 +39,9 @@ Requisition yang dihasilkan melalui proses Generate MO akan memiliki penanda ber
 Sistem akan membuat Purchase Order (PO) berdasarkan data Requisition yang dipilih. Jika POP memiliki informasi **MO Reff Line**, sistem akan menyalin informasi tersebut ke kolom **MO Reff Line** pada PO Header. Apabila PO merupakan hasil konsolidasi dari beberapa POP, kolom MO Reff Line akan menampilkan seluruh informasi Manufacturing Order yang terkait dengan POP tersebut.
 
 ![gen](../mo_reff_po.png "Informasi MO Reff Line di Purchase Order") {#Figure414}
+
+Purchase Order (PO) yang dibuat berdasarkan Requisition hasil proses Generate MO akan secara otomatis menampilkan informasi POP pada kolom **POP** di Purchase Order Header. Sistem mengambil informasi tersebut dari POP yang tertera pada Requisition terkait, sehingga user dapat mengetahui hubungan antara PO dan POP yang menjadi sumbernya.
+
+![POP](../pop_po.png "Informasi POP di Purchase Order") {#Figure415}
+
+Selain terisi secara otomatis, kolom **POP** juga dapat diinput secara manual. Dengan demikian, user dapat menghubungkan Purchase Order dengan POP tertentu melalui pengisian nomor POP pada kolom tersebut.

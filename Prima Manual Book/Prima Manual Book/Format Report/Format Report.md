@@ -24,7 +24,7 @@ Untuk referensi print Jasper pada dokumen PO, gunakan dua parameter berikut:
 
 ![Process Detail](../Process_Detail.png "Process Detail Report") {#Figure100}
 
-Pastikan field **Report** pada menu **Report & Process** sudah dicentang agar report tersebut muncul di tenant dan sistem.
+Pastikan field **Report** masing-masing process pada menu **Report & Process** sudah dicentang agar report tersebut muncul di tenant dan sistem.
 ## Akses Report Berdasarkan Document Type
 
 Ikuti langkah berikut untuk melakukan konfigurasi report print pada masing-masing document type:
@@ -51,4 +51,32 @@ Pembatasan akses report berdasarkan document type ini bertujuan untuk:
 - Menghindari kesalahan pemilihan report — misalnya, memproses PO Bahan Baku namun mencetak printout PO ATK yang tidak sesuai.
 
 ### Listing Proses Report Setiap Menu
+
+Setiap window atau menu memiliki Process Report yang berbeda sesuai dengan jenis transaksi dan kebutuhan dokumennya. Sebagai contoh, Purchase Order dan Material Receipt memiliki format print out yang berbeda.
+
+Berikut adalah daftar nama Process Detail Report yang digunakan pada masing-masing window atau menu:
+
+| Nama Process Report                 | Nama Window                            |
+| ----------------------------------- | -------------------------------------- |
+| Print Document PO                   | Purchase Order                         |
+| Print Material Receipt BPB          | Material Receipt                       |
+| Print Invoice                       | Purchase Invoice and Credit/Debit Note |
+| Print Document Payment              | Payment and Receipt                    |
+| SIS Print Bank Statement            | Bank/Cash Statement                    |
+| SIS Print Kontra Bon                | SIS Kontra Bon                         |
+| SIS Printout Invoice Mirror         | SIS Invoice Mirror                     |
+| SIS Printout Invoice Mirror Thermal | SIS Invoice Mirror                     |
+| Print Document Movement             | Inventory Move                         |
+| Print Nota Retur Transfer           | Inventory Move                         |
+| SIS Print Document SO               | Sales Order                            |
+| Print Document Internal Use         | Inventory Decrease/Increase            |
+| SIS Print Document Phyisical Inv    | Physical Inventory                     |
+| SIS Print Document POP              | Production Order Planning              |
+| Generate Listing Document POP       | Production Order Planning              |
+| Export View Routing di POP Line     | Production Order Planning              |
+| SIS Print Document Requisition      | Requisition                            |
+| SIS Printout PO Project             | Project                                |
+| SIS Print Document Expedition       | SIS Expedition                         |
+| SIS Print Document RDO              | SIS RDO                                |
+| SIS Print Document RMA              | Vendor RMA                             |
 
