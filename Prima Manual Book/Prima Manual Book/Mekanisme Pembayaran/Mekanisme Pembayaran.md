@@ -414,3 +414,56 @@ Payment atau Receipt pada akhirnya akan diproses rekonsiliasi. Saat proses rekon
 ![rekon](../rekon1.png "Informasi Rekonsiliasi di menu Payment and Receipt") {#Figure389}
 
 Selain itu, header Payment and Receipt kini memuat informasi **Bank Statement Line**. Dengan informasi ini, user dapat langsung mengetahui payment atau receipt tersebut direkonsiliasi pada Bank Statement mana, serta apakah transaksinya berupa bank masuk atau bank keluar, tanpa perlu mencarinya di menu **Bank/Cash Statement**.
+
+## Pelunasan Lebih dari Tagihan
+
+Dalam transaksi Purchase Order, perusahaan dapat melakukan **Down Payment (DP)**. DP dapat dibuat sebelum maupun sesudah Purchase Order terbentuk, dan saat membuat Payment DP, user dapat merelasikannya ke Purchase Order atau tidak. Setelah DP dibuat, pelunasan dilakukan sebesar nilai Purchase Order dikurangi DP.
+
+Namun, saat barang diterima, nilai tagihan (invoice) yang datang bisa berbeda dari nilai Purchase Order. Akibatnya, total DP dan pelunasan dapat melebihi nilai invoice sehingga muncul **kelebihan bayar**.
+
+Di iDempiere, selisih ini diselesaikan melalui proses **refund (bank masuk)** menggunakan **Receipt**, kemudian dilakukan **Payment Allocation manual** untuk menutup outstanding. Setelah proses selesai, tidak ada lagi outstanding pada invoice maupun payment.
+
+### Contoh Simulasi
+
+Data transaksi:
+
+- Nilai Purchase Order: **Rp200.000**
+- DP: **Rp20.000**
+- Pelunasan setelah PO diproses: **Rp180.000**
+- Nilai invoice yang diterima: **Rp190.000**
+
+![dp](../po_dp.png "Purchase Order") {#Figure415}
+
+![dp](../invoice_dp.png "Purchase Invoice") {#Figure416}
+
+Karena invoice hanya Rp190.000, terdapat kelebihan bayar sebesar **Rp10.000** (DP + Pelunasan = Rp200.000, dikurangi invoice Rp190.000).
+
+### Langkah Penyelesaian
+
+**1. Allocation Payment DP dan Pelunasan ke Invoice**
+
+Lakukan **Payment Allocation manual** dengan menyesuaikan nilai tagihan: **DP + Pelunasan − Selisih**. Karena invoice hanya Rp190.000, nilai yang dialokasikan dari Payment Pelunasan adalah **Rp170.000** (Rp20.000 DP + Rp170.000 = Rp190.000). Selisih Rp10.000 akan di-refund.
+
+![dp](../allocation_invoice.png "Payment Allocation DP dan Pelunasan") {#Figure417}
+
+**2. Cek Outstanding pada Payment Pelunasan**
+
+Setelah allocation diproses, Payment Pelunasan memiliki **outstanding Rp10.000**.
+
+![dp](../ots_pelunasan.png "Outstanding Payment") {#Figure418}
+
+**3. Buat Receipt (Bank Masuk) atas Refund**
+
+Buat dokumen **Receipt (bank masuk)** sebesar **Rp10.000** sebagai refund atas kelebihan bayar.
+
+![dp](../receipt_ots.png "AR Receipt atas Kelebihan Bayar") {#Figure419}
+
+**4. Closing Outstanding dengan Payment Allocation**
+
+Lakukan **Payment Allocation** dengan mencocokkan Payment Pelunasan yang masih outstanding dengan Receipt refund tersebut. Allocation ini menutup outstanding kelebihan bayar dan refund.
+
+![dp](../closing_ots.png "Closing Outstanding") {#Figure420}
+
+![dp](../allocation_ots2.png "AR Receipt atas Kelebihan Bayar") {#Figure421}
+
+Setelah allocation terbentuk, dokumen Payment yang outstanding dan Receipt refund dinyatakan selesai dan tidak muncul lagi pada daftar outstanding. Dengan demikian, tidak ada outstanding pada invoice maupun payment tersebut.

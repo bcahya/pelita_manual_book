@@ -458,7 +458,8 @@ Selain itu, user perlu mengatur System Configurator **SIS_USING_DOCTYPE_MANUAL_A
 
 9. Klik **Ok**.
 10. Klik **Save**.
-11. Klik **Complete**.
+11. Field **Qty ASI** terisi otomatis sesuai **Movement Qty** pada masing-masing ASI. Field ini menampilkan total quantity dari seluruh ASI yang ada.
+12. Klik **Complete**.
 
 Setelah Inventory Move selesai diproses, sistem akan mengurangi stock ASI pada Locator asal dan menambahkan stock ASI yang sama pada Locator tujuan.
 
@@ -476,7 +477,8 @@ Setelah Inventory Move selesai diproses, sistem akan mengurangi stock ASI pada L
 
 8. Klik **SIS Generate Attributes**.
 9. Klik **Save**.
-10. Klik **Complete**.
+10. Field **Qty ASI** terisi otomatis sesuai **Movement Qty** pada masing-masing ASI. Field ini menampilkan total quantity dari seluruh ASI yang ada.
+11. Klik **Complete**.
 
 Pada tab **Attribute**, sistem menampilkan ASI yang berhasil ter-generate sesuai ASI yang dipilih, dengan quantity masing-masing ASI sesuai yang telah ditentukan.
 

@@ -77,6 +77,9 @@ Konfigurasi berikut dilakukan pada tenant **PT Sebastian Citra Indonesia** dan *
 | SIS Close Document PO                 | SIS Close Document PO                 |
 | SIS Generate GL Amortization Schedule | SIS Generate GL Amortization Schedule |
 | SIS Generate Invoice From Schedule    | SIS Generate Invoice From Schedule    |
+| SIS Clean MT940                       | SIS Clean MT940                       |
+| SIS Generate GL Journal From Schedule | SIS Generate GL Journal From Schedule |
+
 
 Ikuti langkah berikut untuk mengkonfigurasi Scheduler masing-masing proses:
 

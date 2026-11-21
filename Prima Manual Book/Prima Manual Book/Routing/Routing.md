@@ -12,7 +12,9 @@ Warehouse merepresentasikan area penyimpanan fisik produk atau gudang. Di dalam 
 
 1. Buka Menu **Warehouse & Locator**
 2. Klik **New**
-3. Isi data Warehouse:
+3. Centang field **Disallow Negative Inventory** jika warehouse tersebut tidak diizinkan memiliki stok negatif.
+4. Centang field **Disable Insufficient Inventory Popup**, untuk menonaktifkan popup peringatan saat stok tidak mencukupi.
+5. Isi data Warehouse:
   - **Nama Warehouse**, contoh: WH-Bahan Baku
   - **Alamat Warehouse**, contoh: Jakarta
 
@@ -25,7 +27,7 @@ Di dalam warehouse terdapat line bernama Locator. Locator harus dibuat terlebih 
     * X untuk kolom rak
     * Y untuk baris rak
     * Z untuk slot dalam satu baris
-  - Centang **Default** untuk locator utama gudang
+  - Centang field **Default** untuk menetapkan locator utama gudang. Setiap warehouse hanya dapat memiliki **satu locator default**. Jika user mencoba menetapkan locator lain sebagai default, sistem menampilkan pesan error.
 
 4. Isi field berikut sesuai locator yang digunakan
   - Locator Stock
@@ -36,6 +38,7 @@ Di dalam warehouse terdapat line bernama Locator. Locator harus dibuat terlebih 
 
 Jika satu produk diproduksi di lebih dari satu gudang, misalnya Jakarta dan Surabaya, buat konfigurasi BoM (Bill of Material) terpisah sesuai lokasi produksi masing-masing. Routing nantinya akan mengikuti konfigurasi BoM tersebut.
 
+> **Catatan:** Jika warehouse sudah memiliki transaksi, konfigurasi Disallow Negative Inventory tidak dapat diubah menjadi tidak dicentang. Sistem akan menampilkan pesan error bahwa warehouse sudah digunakan dalam transaksi.
 ### Production Warehouse
 
 Perusahaan memiliki banyak warehouse, namun tidak semua digunakan untuk proses produksi. Untuk mempermudah pemilihan warehouse saat produksi, lakukan konfigurasi **Production Warehouse** di menu Warehouse and Locator.
