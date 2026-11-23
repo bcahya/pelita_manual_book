@@ -37,7 +37,7 @@ Pembelian yang bersifat jasa atau biaya non-barang, misalnya jasa service, sewa,
 
 Pembelian aset atau inventaris kantor/pabrik seperti peralatan kerja dan perlengkapan tetap.
 
-![inventaris](../po_inventaris_sci.png "PO Inventaris") {#Figure140}
+![inventaris](../po_umum.png "PO Inventaris") {#Figure140}
 #### PO Barang Kemas
 
 Pembelian bahan/material kemasan (_packaging_) untuk pengemasan produk.
@@ -79,7 +79,7 @@ Pembelian bahan baku, benang, atau suku cadang mesin untuk kebutuhan proses knit
 
 Pembelian kebutuhan umum PPG yang tidak termasuk dalam kategori khusus lainnya.
 
-![umum](../po_umum_ppg.png "PO Umum") {#Figure146}
+![umum](../po_umum.png "PO Umum") {#Figure146}
 #### PO Woven
 
 Pembelian bahan baku atau material untuk kebutuhan proses woven. 
