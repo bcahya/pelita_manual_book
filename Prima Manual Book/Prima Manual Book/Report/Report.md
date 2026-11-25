@@ -54,7 +54,7 @@ Pembelian perlengkapan penunjang operasional di luar kategori ATK dan inventaris
 
 Pembelian Alat Tulis Kantor untuk kebutuhan administrasi tim PPG.
 
-![atk ppg](../po_atk_ppg.png "PO ATK PPG") {#Figure143}
+![atk ppg](../po_atk.png "PO ATK PPG") {#Figure143}
 #### PO Aksesoris
 
 Pembelian aksesoris produksi garment seperti kancing, resleting, label, dan material pelengkap lainnya.
@@ -64,12 +64,12 @@ Pembelian aksesoris produksi garment seperti kancing, resleting, label, dan mate
 
 Pembelian aset atau inventaris yang digunakan pada area produksi PPG.
 
-![inventaris](../po_inventaris_ppg.png "PO Inventaris") {#Figure145}
+![inventaris](../po_atk.png "PO Inventaris") {#Figure145}
 #### PO Kendaraan
 
 Pembelian yang berkaitan dengan kendaraan operasional, misalnya suku cadang, bahan bakar, dan perawatan kendaraan.
 
-![kendaraan](../po_kendaraan_ppg.png "PO Kendaraan") {#Figure145}
+![kendaraan](../po_atk.png "PO Kendaraan") {#Figure145}
 #### PO Knitting
 
 Pembelian bahan baku, benang, atau suku cadang mesin untuk kebutuhan proses knitting.
@@ -369,7 +369,7 @@ Sistem menampilkan informasi berikut pada laporan:
 - Organization
 
 Laporan Crosscheck Ayat Silang adalah laporan kontrol akuntansi yang memverifikasi hubungan antar akun dalam jurnal, memastikan keseimbangan debet dan kredit, serta membantu analisis asal-usul transaksi sehingga proses rekonsiliasi dan audit dapat dilakukan lebih cepat dan akurat.
-## Report Invoice Vendor
+## Report Invoice Vendor (Purchase Invoice)
 
 Report Invoice Vendor digunakan untuk menampilkan daftar dokumen Invoice Vendor (_Accounts Payable Invoice_) yang telah dibuat di iDempiere. Gunakan report ini untuk memantau transaksi tagihan dari vendor serta memudahkan proses rekonsiliasi dengan Purchase Order, Material Receipt, maupun pembayaran.
 
@@ -402,7 +402,7 @@ Ikuti langkah berikut untuk mencetak Invoice Vendor Credit Note Lain-Lain:
 4. Klik **OK**.
 
 ![vendor](../inv_vcn.png "Invoice Vendor Credit Note Lain-Lain") {#Figure168}
-## Report Invoice Buyer
+## Report Invoice Buyer (Sales Invoice)
 
 Report Invoice Buyer digunakan untuk menampilkan seluruh transaksi Invoice Penjualan (_Accounts Receivable Invoice_) yang dibuat kepada buyer atau pelanggan. Gunakan report ini untuk memantau transaksi penjualan yang telah ditagihkan, baik berupa invoice penjualan maupun credit note.
 
@@ -1242,3 +1242,31 @@ Ikuti langkah berikut untuk mengakses Report Kontra Bon:
 Berikut contoh Report Kontra Bon:
 
 ![kontra](../report_kontra_bon.png "Report Kontra Bon") {#Figure413}
+
+## Print Out Pembayaran Dari Buyer (Cash)
+
+Ikuti langkah berikut untuk mengakses Printout Pembayaran dari Buyer (Cash):
+
+1. Buka menu **Payment and Receipt**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **Print Document Payment**.
+4. Klik **Pembayaran dari Buyer Cash**
+5. Klik **OK**.
+
+Berikut contoh Printout Pembayaran dari Buyer (Cash):
+
+![pay](../pembayaran_dari_buyer.png "Printout Pembayaran dari Buyer Cash") {#Figure414}
+
+## Print Out Kas Keluar
+
+Ikuti langkah berikut untuk mengakses Printout Kas Keluar:
+
+1. Buka menu **Bank/Cash Statement**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Bank Statement**.
+4. Pada Process Detail Report, pilih **Cash Keluar**.
+5. Klik **OK**.
+
+Berikut contoh Printout Kas Keluar:
+
+![bs](../kas_keluar.png "Printout Kas Keluar") {#Figure415}

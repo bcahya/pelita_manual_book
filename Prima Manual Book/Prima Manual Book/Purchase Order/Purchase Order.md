@@ -61,6 +61,7 @@ Untuk mengatur Business Partner default tersebut, lakukan konfigurasi dengan lan
 ![sistem](../bp_req.png "Konfigurasi Business Partner Default Requisition") {#Figure399}
 
 Dengan konfigurasi tersebut, apabila Business Partner belum ditentukan pada tab **Purchasing** di master product, sistem akan menggunakan Business Partner default yang telah dikonfigurasi saat proses pembuatan Requisition.
+
 ## Generate PO From Requisition
 
 Fitur **Generate PO From Requisition** digunakan untuk membuat Purchase Order berdasarkan Requisition Line yang telah dibuat. Proses generate PO dapat dilakukan dengan memilih satu atau beberapa Requisition Line — termasuk dari satu maupun beberapa Requisition. 
