@@ -16,6 +16,24 @@ Berikut contoh filtering Business Partner di menu Invoice Bayangan:
 ![vendor](../bp_vendor.png "Business Partner - Vendor") {#Figure222}
 
 ![cs](../bp_cs.png "Business Partner - Customer") {#Figure223}
+
+### Konfigurasi Bank Account pada Business Partner
+
+Setiap Business Partner dapat memiliki satu atau lebih Bank Account sesuai dengan kebutuhan transaksi. Informasi Bank Account ini digunakan untuk menyimpan data rekening bank milik masing-masing Business Partner.
+
+Berikut langkah-langkah untuk mengonfigurasi Bank Account pada Business Partner:
+
+1. Buka menu **Business Partner**.
+2. Pilih Business Partner yang akan dikonfigurasi.
+3. Masuk ke tab **Bank Account**.
+4. Centang field **ACH**.
+5. Pilih **Bank** yang digunakan.
+6. Tentukan **Bank Account Type**.
+7. Masukkan **Account Number**.
+8. Masukkan **Account Name**.
+9. Klik **Save**.
+
+Langkah konfigurasi tersebut berlaku untuk seluruh Business Partner. Jika Business Partner memiliki lebih dari satu rekening bank, user dapat menambahkan beberapa data Bank Account pada tab yang sama.
 ## Mekanisme Invoice Bayangan
 
 1. Buka menu **SIS Invoice Mirror**.

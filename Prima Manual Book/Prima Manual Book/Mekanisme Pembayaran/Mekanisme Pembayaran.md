@@ -282,10 +282,12 @@ Saat transaksi Bank atau Cash Transfer diproses, jurnal ayat silang yang terbent
 
 1. Buka menu **Bank/Cash Transfer**.
 2. Input field pada header:
-- **From Bank Account** — Bank sumber dana.
+- **Bank From** — Bank sumber dana.
+- **From Bank Account** — Rekening bank sumber dana.
 - **From Bank Currency** — Terisi otomatis mengikuti currency pada master Bank Account.
 - **Amount** — Nominal yang akan dipindahkan berdasarkan currency.
-- **To Bank Account** — Bank tujuan transfer.
+- **Bank To** — Bank tujuan transfer.
+- **To Bank Account** — Rekening bank tujuan transfer.
 - **To Bank Currency** — Terisi otomatis mengikuti currency pada master Bank Account.
 - **Currency Type** — Rate currency yang digunakan _(field muncul jika transfer lintas currency)_.
 - **Override Currency Conversion Rate** — Menentukan kurs secara manual _(field muncul jika transfer lintas currency)_.

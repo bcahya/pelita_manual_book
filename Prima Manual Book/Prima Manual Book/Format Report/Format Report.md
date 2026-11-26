@@ -79,4 +79,6 @@ Berikut adalah daftar nama Process Detail Report yang digunakan pada masing-masi
 | SIS Print Document Expedition       | SIS Expedition                         |
 | SIS Print Document RDO              | SIS RDO                                |
 | SIS Print Document RMA              | Vendor RMA                             |
+| SIS Print Document Return Vendor    | Return to Vendor                       |
+
 

@@ -163,7 +163,7 @@ Dokumen Inventory Move ini digunakan sebagai acuan oleh pihak gudang untuk mempr
 7. Klik **Save**.
 8. Klik **Complete** pada dokumen.
 
-Saat nomor Inventory Move diinput, field **Warehouse** terisi otomatis sesuai warehouse tujuan di Inventory Move tersebut — user tidak dapat menginput warehouse tujuan secara manual di dokumen ekspedisi.
+Saat nomor Inventory Move diinput, field **Warehouse** terisi otomatis sesuai warehouse tujuan awal (warehouse target) di Inventory Move tersebut — user tidak dapat menginput warehouse tujuan secara manual di dokumen ekspedisi.
 
 Setelah dokumen di-complete, sistem otomatis menandai dokumen Inventory Move terkait dengan flag **SIS_Expedition = Y**, yang berarti dokumen tersebut tidak dapat digunakan untuk proses pengiriman ekspedisi lain. Field **Active** pada Line SIS Expedition juga tercentang secara otomatis.
 #### Pembatalan Ekspedisi

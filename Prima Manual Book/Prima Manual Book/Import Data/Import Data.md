@@ -161,6 +161,13 @@ Sebelum melakukan import, pastikan nama file sesuai format yang ditentukan, yait
 - **Description Header** — Diisi dengan description yang akan masuk ke field Description pada header PO.
 - **Description Line** — Diisi dengan description yang akan masuk ke field Description pada PO Line.
 
+
+> **Catatan:** Data pada file CSV tidak boleh mengandung **tanda koma (,)** maupun **enter (baris baru)** di dalam isi sel.
+> 
+> - **Tanda koma (,)** — File CSV menggunakan koma sebagai delimiter, sehingga koma di dalam data akan dibaca sebagai pemisah kolom. Gunakan **titik koma (;)** sebagai pengganti.
+> - **Enter (baris baru)** — Sistem membaca enter sebagai row baru yang tidak memiliki data, sehingga proses import dapat gagal atau menghasilkan data tidak valid.
+
+
 Perlakuan Description berbeda untuk setiap jenis import PO Kecil:
 
 - **PO Kecil Reguler (per tanggal transaksi)** — Description mengikuti isi yang dikonfigurasi di file template yang diimport.
