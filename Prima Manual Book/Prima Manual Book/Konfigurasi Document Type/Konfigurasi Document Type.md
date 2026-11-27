@@ -101,7 +101,8 @@ Field yang perlu dikonfigurasi:
 2. **RDO. IM. Locator Intransit** — Menentukan locator intransit saat Inventory Move dari warehouse asal.
 3. **RDO. IM. Document Type Receipt** — Menentukan document type Inventory Move Receipt yang ter-create saat RDO di-complete.
 4. **Manual ASI Selection** — Menentukan apakah pemilihan Attribute Set Instance (ASI) dilakukan secara manual oleh user atau secara otomatis oleh sistem berdasarkan material policy.
-5. **Document Type Cancel Delivery** — Menentukan document type atas Inventory Move yang dibatalkan pengirimannya.
+5. **Mandatory POP** – Menentukan apakah Document Type mewajibkan Inventory Move memiliki relasi dengan POP. Jika flag ini dicentang, user wajib mengisi field **POP** pada Inventory Move. Jika flag tidak dicentang, Inventory Move dapat dibuat tanpa relasi ke POP.
+6. **Document Type Cancel Delivery** — Menentukan document type atas Inventory Move yang dibatalkan pengirimannya.
 
 ## Document Type Inventory Move Receipt
 
@@ -224,3 +225,7 @@ Field **Maximum Back Dated Days** pada Document Type digunakan untuk menentukan 
 Sebagai contoh, jika nilai Maximum Back Dated Days diatur menjadi 3 hari, transaksi hanya diperbolehkan menggunakan tanggal mundur maksimal 3 hari dari tanggal acuan yang digunakan oleh sistem. Berikut contoh konfigurasi Maximum Back Dated Days pada Document Type:
 
 ![max](../max_backdate.png "Konfigurasi Maximum Back Date") {#Figure370}
+
+## Document Type SIS Invoice Mirror
+
+Tidak ada konfigurasi khusus yang diperlukan. Isi field-field pada header sesuai kebutuhan operasional.

@@ -456,16 +456,26 @@ Setelah allocation diproses, Payment Pelunasan memiliki **outstanding Rp10.000**
 
 **3. Buat Receipt (Bank Masuk) atas Refund**
 
-Buat dokumen **Receipt (bank masuk)** sebesar **Rp10.000** sebagai refund atas kelebihan bayar.
+User perlu membuat dokumen **Receipt (Bank Masuk)** untuk memproses refund atas kelebihan pembayaran dengan mereferensikan Payment DP yang sebelumnya telah dibuat.
 
-![dp](../receipt_ots.png "AR Receipt atas Kelebihan Bayar") {#Figure419}
+Berikut langkah-langkah untuk membuat Receipt:
 
-**4. Closing Outstanding dengan Payment Allocation**
+1. Buka menu **Payment and Receipt**.
+2. Tentukan **Document Type** sesuai dengan jenis transaksi Receipt.
+3. Pilih **Bank** dan **Bank Account** yang digunakan.
+4. Input nomor dokumen Payment DP pada field **DP Reference**.
+5. Sistem akan otomatis mengisi **Payment Amount** sesuai dengan nominal selisih kelebihan pembayaran yang akan di-refund.
 
-Lakukan **Payment Allocation** dengan mencocokkan Payment Pelunasan yang masih outstanding dengan Receipt refund tersebut. Allocation ini menutup outstanding kelebihan bayar dan refund.
+![dp](../dp_reff.png "AR Receipt atas Kelebihan Bayar") {#Figure419}
 
-![dp](../closing_ots.png "Closing Outstanding") {#Figure420}
+6. Klik **Save**.
+7. Klik **Complete**.
 
-![dp](../allocation_ots2.png "AR Receipt atas Kelebihan Bayar") {#Figure421}
+Setelah dokumen Receipt berstatus Complete, sistem akan otomatis membuat dokumen **Allocation** dengan mencocokkan Payment DP yang masih memiliki outstanding dengan Receipt refund. Proses Allocation ini akan mengalokasikan kelebihan pembayaran terhadap nilai refund sehingga outstanding pada Payment DP dan Receipt dapat terselesaikan.
+
+![dp](../allocation_dp.png "Allocation atas AR Receipt dan DP Payment") {#Figure420}
+
+
+![dp](../allocate_dp.png "Closing Outstanding") {#Figure421}
 
 Setelah allocation terbentuk, dokumen Payment yang outstanding dan Receipt refund dinyatakan selesai dan tidak muncul lagi pada daftar outstanding. Dengan demikian, tidak ada outstanding pada invoice maupun payment tersebut.

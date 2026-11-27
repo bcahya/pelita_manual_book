@@ -233,8 +233,10 @@ Transaksi **Kartu Fleet** pada sistem iDempiere direpresentasikan sebagai **AP I
 
 Dalam prosesnya, transaksi Kartu Fleet dapat terdiri dari beberapa jenis transaksi. Namun, dari sisi pembebanan biaya, transaksi tersebut akan dikelompokkan menjadi dua kategori utama, yaitu:
 
-- **BBM**, untuk transaksi yang berkaitan dengan pembelian bahan bakar.
-- **Non-BBM**, untuk transaksi selain BBM, seperti **Tol, Parkir**, atau charge lainnya.
+- **BBM**, untuk transaksi yang berkaitan dengan pembelian bahan bakar. Transaksi dengan kode berikut akan dikategorikan sebagai biaya SPBU yaitu E2I, EX1, E0F, E2E.
+- **Non-BBM**, untuk transaksi selain BBM, seperti **Tol, Parkir**, atau charge lainnya. Kategori ini mencakup kode transaksi yaitu **Tol**: EPJ dan EPH dan **Parkir**: EPP, ESP, ENP, EPS, dan EPL.
+
+Sistem menggunakan kode transaksi tersebut sebagai acuan untuk menentukan kategori biaya BBM atau Non-BBM.
 
 Data transaksi Kartu Fleet diperoleh dalam bentuk file dan akan diimport ke sistem menggunakan **FileZilla**.
 

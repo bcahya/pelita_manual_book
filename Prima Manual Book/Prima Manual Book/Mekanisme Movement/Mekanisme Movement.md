@@ -471,7 +471,7 @@ Setelah Inventory Move selesai diproses, sistem akan mengurangi stock ASI pada L
 4. Klik tombol **Setting (⚙)**.
 5. Klik **Generate Attributes**.
 6. Klik **Requery**.
-7. Pilih **ASI** dan **Qty** yang akan dipindahkan.
+7. Pilih **ASI** dan **Qty** yang akan dipindahkan. Untuk memfilter ASI berdasarkan Purchase Order, input nomor dokumen PO pada field **ASI Description**.
 
 ![asi](../gen_asi.png "Generate Attribute Set Instance") {#Figure375}
 

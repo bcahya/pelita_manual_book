@@ -19,9 +19,7 @@ Berikut contoh filtering Business Partner di menu Invoice Bayangan:
 
 ### Konfigurasi Bank Account pada Business Partner
 
-Setiap Business Partner dapat memiliki satu atau lebih Bank Account sesuai dengan kebutuhan transaksi. Informasi Bank Account ini digunakan untuk menyimpan data rekening bank milik masing-masing Business Partner.
-
-Berikut langkah-langkah untuk mengonfigurasi Bank Account pada Business Partner:
+Setiap Business Partner dapat memiliki satu atau lebih Bank Account sesuai dengan kebutuhan transaksi. Informasi Bank Account ini digunakan untuk menyimpan data rekening bank milik masing-masing Business Partner. Berikut langkah-langkah untuk mengonfigurasi Bank Account pada Business Partner:
 
 1. Buka menu **Business Partner**.
 2. Pilih Business Partner yang akan dikonfigurasi.
@@ -34,6 +32,30 @@ Berikut langkah-langkah untuk mengonfigurasi Bank Account pada Business Partner:
 9. Klik **Save**.
 
 Langkah konfigurasi tersebut berlaku untuk seluruh Business Partner. Jika Business Partner memiliki lebih dari satu rekening bank, user dapat menambahkan beberapa data Bank Account pada tab yang sama.
+
+### Konfigurasi Alamat pada Business Partner
+
+Setiap Business Partner dapat memiliki satu atau lebih alamat sesuai dengan kebutuhan transaksi. User dapat mengatur fungsi masing-masing alamat, seperti alamat penagihan, pengiriman, dan pembayaran. Berikut langkah-langkah untuk mengonfigurasi alamat pada Business Partner:
+
+1. Buka menu **Business Partner**
+2. Pilih Business Partner yang akan dikonfigurasi.
+3. Masuk ke tab **Location**.
+4. Masukkan nama lokasi pada field **Name Location**.
+5. Tentukan alamat pada field **Address**.
+6. Masukkan detail alamat pada field **Address 1**.
+7. Pilih **City** sesuai lokasi alamat.
+8. Masukkan kode pos pada field **ZIP**.
+9. Pilih **Country** sesuai negara alamat.
+10. Klik **OK**.
+11. Masukkan nomor telepon pada field **Phone**.
+12. Centang **Invoice Address** jika alamat digunakan untuk penagihan.
+13. Centang **Ship Address** jika alamat digunakan untuk pengiriman.
+14. Centang **Pay-From** jika alamat digunakan sebagai alamat pembayaran.
+15. Centang **Remit-To Address** jika alamat digunakan sebagai alamat penerima pembayaran.
+16. Masukkan **NITKU** apabila tersedia.
+17. Klik **Save**.
+
+User dapat mengaktifkan satu atau beberapa fungsi alamat sesuai dengan kebutuhan masing-masing Business Partner.
 ## Mekanisme Invoice Bayangan
 
 1. Buka menu **SIS Invoice Mirror**.
