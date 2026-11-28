@@ -332,7 +332,7 @@ Sistem menampilkan pop-up hasil export dalam format **Excel**. Klik dokumen ters
 | **Date Account**  | Tanggal akuntansi                                                |
 | **Posted**        | Status posting jurnal                                            |
 | **Processing**    | Status proses dokumen                                            |
-## Laporan Crosscheck Ayat Silang
+## Laporan Cross Check Selisih Ayat Silang
 
 Laporan Crosscheck Ayat Silang digunakan untuk memverifikasi keseimbangan jurnal akuntansi di iDempiere. Laporan ini memastikan setiap transaksi yang telah diposting ke **General Ledger (GL)** membentuk pasangan ayat jurnal (debet dan kredit) yang benar dan seimbang.
 
@@ -343,18 +343,15 @@ Laporan Crosscheck Ayat Silang digunakan untuk memverifikasi keseimbangan jurnal
 - Membantu proses rekonsiliasi sebelum penutupan periode (_Period Closing_).
 - Memudahkan auditor atau tim Finance menelusuri asal jurnal jika ditemukan selisih atau ketidaksesuaian.
 
-### Langkah Akses Laporan Cross Check Ayat Silang
+### Langkah Akses Laporan Cross Check Selisih Ayat Silang
 
-1. Buka menu **SIS Laporan Kros Cek Ayat Silang**.
-2. Input parameter berikut sesuai kebutuhan:
-- **Process Detail Report** — Report yang akan diproses.
-- **Tenant** — Tenant yang akan dilakukan pengecekan.
-- **Account** — Akun yang akan dicek.
-- **Transaction Date** — Tanggal transaksi.
+1. Buka menu **SIS Laporan Kros Cek Selisih Ayat Silang**.
+2. Input **Account** — Pilih akun yang akan dicek. Sistem hanya menampilkan akun dengan konfigurasi **Reconcile Account** yang dicentang.
+3. Input **Transaction Date** — Tanggal transaksi.
 
 ![parameter](../par_ayat_silang.png "Parameter Laporan Cross Check Ayat Silang") {#Figure166}
 
-3. Klik **start**.
+4. Klik **start**.
 
 ![report](../ayat_sila.png "Laporan Ayat Silang") {#Figure167}
 
@@ -927,18 +924,30 @@ Berikut contoh Laporan Bank Statement Detail:
 
 ![bs](../bs_detail.png "Report Bank Statement Detail") {#Figure332}
 
-## Report Penyelesaian Invoice
+## Report View Penyelesaian Invoice
 
-Ikuti langkah berikut untuk mengakses Laporan Penyelesaian Invoice:
+Ikuti langkah berikut untuk mengakses View Penyelesaian Invoice:
 
-1. Buka menu **SIS Report Penyelesaian Invoice**.
+1. Buka menu **View Penyelesaian Invoice**.
 2. Tentukan **Invoice** yang akan dicek.
 3. Tentukan **Organisasi**.
 4. Klik **OK**.
 
 Berikut contoh Laporan Penyelesaian Invoice:
 
-![cash](../cash.png "Report Penyelesaian Invoice") {#Figure336}
+![invoice](../view_penyelesaian_inv.png "Report View Penyelesaian Invoice") {#Figure336}
+
+## Laporan Listing Invoice
+
+Ikuti langkah berikut untuk mengakses Laporan Listing Invoice:
+
+1. Buka menu **Laporan Listing Invoice**.
+2. Tentukan **sumber transaksi** yang akan dicek: **Bank Statement** atau **Payment and Receipt**.
+3. Klik **OK**.
+
+Berikut contoh Laporan Listing Invoice:
+
+![listing](../listing_invoice.png "Laporan Listing Invoice") {#Figure415}
 
 ## Report Monitoring Production
 
@@ -1270,3 +1279,45 @@ Ikuti langkah berikut untuk mengakses Printout Kas Keluar:
 Berikut contoh Printout Kas Keluar:
 
 ![bs](../kas_keluar.png "Printout Kas Keluar") {#Figure415}
+
+## Print Out HPP (Harga Pokok Penjualan)
+
+Ikuti langkah berikut untuk mengakses Printout HPP:
+
+1. Buka menu **Production Order Planning**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Document POP**.
+4. Pilih **POP HPP**.
+5. Klik **OK**.
+
+Berikut contoh Printout HPP:
+
+![hpp](../hpp_pop.png "Printout HPP") {#Figure416}
+
+## Print Out Return to Vendor
+
+Ikuti langkah berikut untuk mengakses Printout Return to Vendor:
+
+1. Buka menu **Return to Vendor**.
+2. Klik tombol **Setting (⚙)**.
+3. Klik **SIS Print Document Return Vendor**.
+4. Pilih **Retur Vendor**.
+5. Klik **OK**.
+
+Berikut contoh Printout Retur Vendor:
+
+![hpp](../print_rtv.png "Printout Return to Vendor") {#Figure417}
+
+## Laporan Harga Vendor Termurah (6) Bulan
+
+Ikuti langkah berikut untuk mengakses Laporan Harga Vendor Termurah:
+
+1. Buka menu **SIS Harga Vendor Termurah**.
+2. Tentukan **Artikel/Product** yang akan dicek.
+3. Tentukan **Supplier/Business Partner**.
+4. Tentukan **periode listing harga** yang akan dicek dalam format **bulan (Month)**.
+5. Klik **OK**.
+
+Berikut contoh Laporan Harga Vendor Termurah:
+
+![harga](../harga_termurah.png "Laporan Harga Vendor Termurah") {#Figure418}
